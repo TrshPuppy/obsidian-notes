@@ -1,3 +1,7 @@
+---
+aliases: [container, containers]
+---
+  
   https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504
 
 Containers are "sand-boxed" processes on a machine which are isolated from other processes.
