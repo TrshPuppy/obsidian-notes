@@ -1,2 +1,2 @@
-[[hardware]]
-[[operating-system]]
+- [[hardware]]
+- [[operating-system]]

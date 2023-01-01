@@ -1,1 +1,1 @@
-# #integrated-gpu vs. #graphics-card
+#integrated-gpu vs. #graphics-card
