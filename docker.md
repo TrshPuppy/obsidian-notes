@@ -3,14 +3,13 @@ https://www.youtube.com/watch?v=rOTqprHv1YE
 https://www.youtube.com/watch?v=3c-iBn73dDE
 
 Docker [[containers]] sit on top of the host [[operating-system]]:
-	- A #docker-container uses the host [[operating-system]]
-		- prefers [[linux]]-based OS's
-		- lighter than a [[virtual-machine]] because it piggy-backs on the pre-existing OS
-		- #boot s faster
-		- Occupies less [[memory]]
-		- data volumes can be shared between [[containers]]
-	- the [[containers]] also include all of the dependencies required for the #application to run.
-- 
+- A #docker-container uses the host [[operating-system]]
+	- prefers [[linux]]-based OS's
+	- lighter than a [[virtual-machine]] because it piggy-backs on the pre-existing OS
+	- #boot s faster
+	- Occupies less [[memory]]
+	- data volumes can be shared between [[containers]]
+- the [[containers]] also include all of the dependencies required for the #application to run.
 
 Docker vs [[virtual-machine]]s:
 - [[operating-system]]s have two components:
@@ -22,11 +21,11 @@ Docker vs [[virtual-machine]]s:
 	- [[virtual-machine]]s virtualize the complete [[operating-system]] (including the #kernel and #applications )
 
 The #docker-engine is installed on the #host machine and allows the #docker-container s to be built and run using Docker services.
-	- Can be accessed from the #host -side [[command-line-interface]]
-	- uses a #client-server-architecture:
-		- installed on the #host [[hardware]] and containers the docker-server ( #daemon )
-		- controls how the #client is created
-		- #client and #server communitcate using #REST-API
+- Can be accessed from the #host -side [[command-line-interface]]
+- uses a #client-server-architecture:
+	- installed on the #host [[hardware]] and containers the docker-server ( #daemon )
+	- controls how the #client is created
+	- #client and #server communitcate using #REST-API
 
 Components of Docker:
 1. #client:
