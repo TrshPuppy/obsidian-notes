@@ -1,4 +1,7 @@
 {
   "accentColor": "",
-  "cssTheme": "SynthWave"
+  "cssTheme": "",
+  "interfaceFontFamily": "Ubuntu Mono",
+  "textFontFamily": "Noto Mono",
+  "monospaceFontFamily": "Source Code Pro"
 }
