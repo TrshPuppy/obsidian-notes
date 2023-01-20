@@ -13,7 +13,7 @@ Pyramid of Pain
 		6. [[Virus-Total]] 
 		7. [[OPSWAT]]  
 		8. [[Cyber-Chef]]
-		9. #Conti 
+		9. [[Conti]]
 	2. #IP-addresses 
 		1. [[Akamai]]
 		2. [[Fast-Flux]]
