@@ -1,9 +1,11 @@
 ---
 aliases: [ASN, Autonomous-System, Autonomous-System-Number]
 ---
-#RFC-1930
+>[!related]
+> #RFC-1930
 
-https://datatracker.ietf.org/doc/rfc1930/
+>[!links]
+>https://datatracker.ietf.org/doc/rfc1930/
 
 # Autonomous System Number
 - An #autonomous-system is a "set of routers under a single technical administration, using an interior gateway protocol and common metrics to route packets to other ASes."
@@ -38,7 +40,9 @@ NET1 ......  ASX  <--->  ASY  ....... NET2
    ASX...
 ```
 
-https://neosnetworks.com/products-services/business-internet-services/what-are-autonomous-system-numbers/
+>[!link]
+>https://neosnetworks.com/products-services/business-internet-services/what-are-autonomous-system-numbers/
+
 An #ASN is a unique identifier which two organizations can use to connect to each and be able to send and receive #IP-addresses  which can further be distributed
 	- can be publci or private
 		- #public-ASNs are required for systems to exchange info over the internet

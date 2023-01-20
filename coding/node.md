@@ -1,5 +1,5 @@
 ---
 aliases: [node.js, node]
 ---
-
-[[fs]]
+>[!related]
+> [[fs]]

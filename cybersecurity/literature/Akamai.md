@@ -1,1 +1,4 @@
-https://www.akamai.com/blog
+
+>[!links]
+>https://www.akamai.com/blog
+

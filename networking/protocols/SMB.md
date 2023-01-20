@@ -1,7 +1,9 @@
-[[smbclient]] 
+
+>[!related]
+> [[smbclient]] 
 #port-445 
 
-Server Message Block
+# Server Message Block
 - #client/server network protocol which allows users to communicate w/ remote servers and/or computers.
 	- Allows for file sharing/ reading/ writing
 	- SMB uses port 445 and the [[TCP-IP]] network protocol to “talk” to other computers over the internet.
@@ -10,8 +12,9 @@ Server Message Block
 	- #Samba developed in 1992 as an #open-source implementation of SMB
 		- released for #Unix and #Linux devices
 
-Security:
-https://cybersophia.net/articles/what-is/what-is-smb-protocol-and-why-is-it-a-security-concern/
+## Security:
+>[!link]
+>https://cybersophia.net/articles/what-is/what-is-smb-protocol-and-why-is-it-a-security-concern/
 
 
 

@@ -1,12 +1,16 @@
-https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network
 
-https://unit42.paloaltonetworks.com/fast-flux-101/
+>[!links]
+> https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network
+> 
+> https://unit42.paloaltonetworks.com/fast-flux-101/
 
+# Fast Flux
 Used by a threat actor to hide malicious activity using compromised hosts on a #botnet
-	- [[Storm-Worm]]
-		- first introduced by #Storm-Worm in 2006
+	- first introduced by [[Storm-Worm]] in 2006
 - usually used to make the connection between #malware and its #command-and-control center harder to discover.![[Pasted image 20230118203229.png]]
-"To understand the boundaries and relations between the network entities, an undirected network graph was created (Figure 2). The graph represents the following entities and relations between them: domains (shown in red), IP addresses (purple), and nameservers (green). The inspected network is composed of two subnetworks sharing a strong relation. These subnetworks are connected based on the similarity between their shared IP addresses associated with different nameservers." -[[Akamai]]
+>"To understand the boundaries and relations between the network entities, an undirected network graph was created (Figure 2). The graph represents the following entities and relations between them: domains (shown in red), IP addresses (purple), and nameservers (green). The inspected network is composed of two subnetworks sharing a strong relation. These subnetworks are connected based on the similarity between their shared IP addresses associated with different nameservers." 
+
+\- [[Akamai]]
 
 ### Primary Characteristics:
 1. a #fast-flux network constantly changes its #domain s, #IP-addresses and #nameservers 
@@ -34,4 +38,6 @@ Used by a threat actor to hide malicious activity using compromised hosts on a #
 ### #C2 network vs #hosting-network:
 
 ![[Pasted image 20230118205346.png]] 
-"To further investigate the initial assumption of having two different subnetworks as observed in “Fast Flux network — overview”, we created a network graph, but this time without showing the relation to the nameserver. Doing that showed us that we can see two distinct subnetworks segregated in terms of associated IP addresses." -[[Akamai]] 
+>"To further investigate the initial assumption of having two different subnetworks as observed in “Fast Flux network — overview”, we created a network graph, but this time without showing the relation to the nameserver. Doing that showed us that we can see two distinct subnetworks segregated in terms of associated IP addresses." 
+
+\-[[Akamai]] 

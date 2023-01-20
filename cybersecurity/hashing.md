@@ -1,19 +1,24 @@
-tools:
-[[Cyber-Chef]] [[OPSWAT]] [[Virus-Total]]
 
-CLI:
+>[!Tools]
+> [[Cyber-Chef]]
+> [[OPSWAT]] 
+> [[Virus-Total]]
 
+> [!Command Line]
+> 
+
+# Hashing
 A #hash-value is the result of a #hashing-algorithm 
 	A #hash-value is a *numeric* value of fixed length which uniquely identifies data
 		- can be any type of data (file, photo, video, etc)
 	- A #hash-value is *not cryptographically secure* if two values create the same hash
 
-Common #hashing-algorithm s:
-1. #MD5 (Message Digest)
-	1. defined by #RFC-1321
-	2. a #cryptographic has function which produces a #128-bit-hash value
-	3. **NOT CONSIDERED CRYPTOGRAPHICALLY SECURE**
-	4. updated by #RFC-6151 
+### Common #hashing-algorithm s:
+1.  #MD5 (Message Digest)
+	- defined by #RFC-1321
+	- a #cryptographic has function which produces a #128-bit-hash value
+	- **NOT CONSIDERED CRYPTOGRAPHICALLY SECURE**
+	- updated by #RFC-6151 
 		- describe multiple attackes against #MD5 hasing including #hash-collision 
 2. #SHA-1 
 	- definded by #RFC-3174 

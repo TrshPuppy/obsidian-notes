@@ -1,1 +1,3 @@
-https://www.virustotal.com/gui/home/upload
+
+>[!links]
+>https://www.virustotal.com/gui/home/upload

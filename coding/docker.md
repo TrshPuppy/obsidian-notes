@@ -1,7 +1,12 @@
-https://docs.docker.com/get-started/
-https://www.youtube.com/watch?v=rOTqprHv1YE
-https://www.youtube.com/watch?v=3c-iBn73dDE
 
+>[!links]
+>https://docs.docker.com/get-started/
+>
+>https://www.youtube.com/watch?v=rOTqprHv1YE
+>
+>https://www.youtube.com/watch?v=3c-iBn73dDE
+
+# Docker
 Docker [[containers]] sit on top of the host [[operating-system]]:
 - A #docker-container uses the host [[operating-system]]
 	- prefers [[linux]]-based OS's
@@ -11,7 +16,7 @@ Docker [[containers]] sit on top of the host [[operating-system]]:
 	- data volumes can be shared between [[containers]]
 - the [[containers]] also include all of the dependencies required for the #application to run.
 
-Docker vs [[virtual-machine]]s:
+## Docker vs [[virtual-machine]]s:
 - [[operating-system]]s have two components:
 	- #kernel
 	- #applications 
@@ -20,6 +25,7 @@ Docker vs [[virtual-machine]]s:
 		- needs to use the #host 's #kernel
 	- [[virtual-machine]]s virtualize the complete [[operating-system]] (including the #kernel and #applications )
 
+## Docker Engine
 The #docker-engine is installed on the #host machine and allows the #docker-container s to be built and run using Docker services.
 - Can be accessed from the #host -side [[command-line-interface]]
 - uses a #client-server-architecture:
@@ -27,7 +33,7 @@ The #docker-engine is installed on the #host machine and allows the #docker-cont
 	- controls how the #client is created
 	- #client and #server communitcate using #REST-API
 
-Components of Docker:
+## Components of Docker:
 1. #client:
 	1. accessed from host [[command-line-interface]]
 	2. where the #daemon and #registry-service are run from

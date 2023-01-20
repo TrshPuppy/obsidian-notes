@@ -1,15 +1,17 @@
 ---
 aliases: [CIDR, classless inter-domain routing]
 ---
-https://www.educba.com/what-is-cidr/
+>[!links]
+> https://www.educba.com/what-is-cidr/
 
+# Classless Inter-domain Routing
 Method for allocating #IP-addresses and IP routing.
 
 [[TCP-IP]] (Internet Protocol)
 - #CIDR = a collection of Internet Protocol standards used to create unique identifiers for networks and individual devices
 	- facilitate unique #packet transmission to specific devices
 
-Traditional subnetting:
+## Traditional subnetting:
 Five classes in #IPV4-addressing :
 1. #Class-A addresses
 	- first bit is considered and *always set to zero*
@@ -29,7 +31,7 @@ Five classes in #IPV4-addressing :
 	- 240.0.0.0 to 255.255.255.254
 *Classes aren't used anymore because they 'waste a lot of 32-bit address space'*
 
-[[CIDR]] is an alternative to traditional subnetting*
+## [[CIDR]] is an alternative to traditional subnetting*
 - consists of #CIDR-blocks
 	- allows #IP-addresses to be *dynamically allocated* 
 		- allocated based on the requirement of the user and on certain rules
@@ -41,7 +43,7 @@ Five classes in #IPV4-addressing :
 	2. the size of the block should be to the power of 2 and be equal to the total number of IP addresses
 	3. the size of the block mustt be divisible by the first IP address oif the block
 
-#CIDR-notation
+## #CIDR-notation
 - CIDR IP address notation: ```X.X.X.X/n```
 	where ```X.X.X.X``` is the IP address and ```/n``` is the number of network bits
 - Example:
@@ -62,5 +64,4 @@ Five classes in #IPV4-addressing :
 				- the remaining *8 bits* belong to the host
 			- SO:
 				- the network address = ``172.16.23.0``
-				- and the host address = ``0.0.0.1``
-	- 
+				- and the host address = ``0.0.0.1`` 

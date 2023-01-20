@@ -1,16 +1,19 @@
 ---
 aliases: [fs, node fs, node filesystem]
 ---
-https://nodejs.org/api/fs.html#file-system
-https://www.geeksforgeeks.org/node-js-fs-write-method/
+>[!links]
+>https://nodejs.org/api/fs.html#file-system
+>
+>https://www.geeksforgeeks.org/node-js-fs-write-method/
 
+# Node File System
 "node:fs enables interacting w/ the file system..."
 - #promise -based #API 
 	- import syntax: ```import * as fs from 'node:fs/promises';*```
 
-Open/read/write a file:
-	part of the #Callback-API:
-		#Callback-API performs actions #asyncronous ly (**take care when performing multiple changes to a file bc it may corrup the file's data).
+## Open/read/write a file:
+part of the #Callback-API:
+- #Callback-API performs actions #asyncronous ly (**take care when performing multiple changes to a file bc it may corrup the file's data).
 - syntax:
 	- ```fs.write(fd, buffer/string, offset/position, position/encoding, callback)```
 		- parameters:

@@ -1,4 +1,6 @@
-https://www.youtube.com/watch?v=V49i_LM8B0E
+
+>[!links]
+>https://www.youtube.com/watch?v=V49i_LM8B0E
 
 The flow of theses lectures:
 1. [[logic]]

@@ -1,2 +1,4 @@
-- [[gpu]]
-- [[cpu]] 
+
+>[!neurons]
+>[[gpu]]
+>[[cpu]] 

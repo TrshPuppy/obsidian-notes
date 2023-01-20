@@ -1,7 +1,8 @@
 ---
 aliases: []
 ---
-https://www.youtube.com/watch?v=78J6A8irz3M&ab_channel=RUNCMD
+>[!links]
+>https://www.youtube.com/watch?v=78J6A8irz3M&ab_channel=RUNCMD
 
 - [[pen-testing]] heavy
 

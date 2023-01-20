@@ -1,6 +1,10 @@
-https://www.geeksforgeeks.org/what-is-a-loopback-address/
-The loopback CIDR block, *127.0.0.0/8* is a reserved collection of addresses.
-- It mocks the TCP/IP server or TCP/IP client on the same system.
+
+>[!links]
+>https://www.geeksforgeeks.org/what-is-a-loopback-address/
+
+# Loopback IP Addresses
+The loopback #CIDR-block, *127.0.0.0/8* is a reserved collection of addresses.
+- It mocks the #TCP/IP server or TCP/IP client on the same system.
 - ex: 127.0.0.1 is the commonly used address for a machine and is a network address which can be used to refer to the current machine you're on
 	- ex: if you're on your desktop, 127.0.0.1 refers to your desktop
 
@@ -13,11 +17,11 @@ Steve:
 			- ex: 192.168.0.5/24
 			- Also knows its own MAC address (of the physical card)
 				- ex: 00:00:00"00:00:01
-			- [[VPN]]:* creates a virtual network interface (w/ virtual IP and #MAC-addresses )
+			- [[VPN]]: *creates a virtual network interface (w/ virtual IP and #MAC-addresses )
 				- ex 10.0.0.12/8
 				- default route: 10.0.0.1
 	- computer knows routes:
-		- subnet mask: 
+		- #subnet-mask
 		- #routing-table
 			- Network: 192.168.0/24
 				- Interface: 192.168.0.5 (how it can route to that IP)

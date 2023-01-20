@@ -1,6 +1,8 @@
+
+>[!related]
+>
 [[SMB]] 
 [[VPN]]
-
 [[CIDR]]
 
 x68 Jan 16:

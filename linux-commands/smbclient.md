@@ -1,7 +1,13 @@
+
+>[!related]
 [[SMB]]
 
-Usage: ``smbclient [OPTIONS] service <password>``
-Useful options:
+## Usage: 
+```
+smbclient [OPTIONS] service <password>
+```
+
+## Useful options:
 	#smbclient-L
 		- gets a list of available #smb-shares  on the host
 		- syntax: ``smbclient -L [HOST IP]``
@@ -15,4 +21,3 @@ Useful options:
 		- downloads file to home directory
 		- syntax: ``<REMOTE_FILE_PATH>/<REMOTE_FILE_NAME> <LOCAL_FILE_PATH>/<LOCAL_FILE_NAME>``
 			- (tells get where to put downloaded file)
-- 

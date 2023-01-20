@@ -1,8 +1,11 @@
-https://en.wikipedia.org/wiki/Virtual_private_network
 
+>[!links]
+>https://en.wikipedia.org/wiki/Virtual_private_network
+
+# Virtual Private Network
 *connects a device from the outside to a private network*
 
-TYPES:
+## TYPES:
 - #remote-access:
 	- Connecting a device to a LAN (local area network)
 	- externally
@@ -11,7 +14,7 @@ TYPES:
 	- #extranet-based : 
 		- two networks connect, which are not part of the same organization
 
-Security:
+## Security:
 - remote access is authenticated and uses encryption
 	- confidentiality: VPN connections ensure that data even at packet level is encrypted (packet sniffing)
 		- not all VPN protocols provide encryption

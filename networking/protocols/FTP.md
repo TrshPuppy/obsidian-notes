@@ -1,10 +1,18 @@
 ---
 aliases: [FTP, file-transfer-protocol, ftp]
 ---
-#port-21
-[[ftp-command]]
+>[!related]
+> #port-21
+ [[ftp-command]]
 
-https://www.hostinger.com/tutorials/what-is-ftp
+>[!links]
+>https://www.hostinger.com/tutorials/what-is-ftp
+>
+>https://www.geeksforgeeks.org/file-transfer-protocol-ftp/
+>
+>https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol
+
+# File Transfer Protocol
 #client/server protocol used to communicate and transfer files using [[TCP-IP]] between computers on a network.
 	- users who wish to use an FTP connection need to have permission
 		- permission is gained by providing credentials to the #FTP-server
@@ -18,9 +26,6 @@ https://www.hostinger.com/tutorials/what-is-ftp
 	- users can acces the files w/o a password and with the username ``anonymous``
 	- *Access is limited to copying files* anonymous ftp does not allow the user to navigate through directories
 
-https://www.geeksforgeeks.org/file-transfer-protocol-ftp/
-
 #SFTP: Secure FTP or SSH FTP:
-	https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol
 	- Extension of [[SSH]]
 	- 

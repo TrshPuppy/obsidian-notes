@@ -1,4 +1,6 @@
-#domains 
+
+>[!related]
+> #domains 
 
 # DNS lookup utility
 
