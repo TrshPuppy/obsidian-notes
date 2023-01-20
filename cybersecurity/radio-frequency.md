@@ -53,27 +53,27 @@ A capacitor stores electrical energy in an electric field.
 
 ### #inductor
 An inductor is another way to store energy (ex: electrons)
-	- Passing an electric current through a wire:
-		- will create an #electromagnetic-field:
-		- If a wire is coiled:
-			- each coil creates its own EM-field when a current passes through it.
-			- Due to proximity of the coils, their EM-fields will combine into a larger, more powerful field.
-	- Usually a curled coil in the circuit
-		- In a circuit, inductors are high-resistance, meaning when a current is going through the circuit, the current will prefer other paths than through the inductor.
-		- Despite being high resistance, some current will flow through the inductor
-			- Over time, as more current goes through the coil, an electromagnetic field builds between the coils
-				- inductors *store energy in the electromagnetic field they create*
+- Passing an electric current through a wire:
+	- will create an #electromagnetic-field:
+	- If a wire is coiled:
+		- each coil creates its own EM-field when a current passes through it.
+		- Due to proximity of the coils, their EM-fields will combine into a larger, more powerful field.
+- Usually a curled coil in the circuit
+	- In a circuit, inductors are high-resistance, meaning when a current is going through the circuit, the current will prefer other paths than through the inductor.
+	- Despite being high resistance, some current will flow through the inductor
+		- Over time, as more current goes through the coil, an electromagnetic field builds between the coils
+			- inductors *store energy in the electromagnetic field they create*
 				- the inductor is "charging up"
-			- As the electormagnetic field gets stronger, the resistance of the inductor decreases
-				- Eventually, the resistance is so low that a current can flow through it easily.
-	- When the EM-field in the coil is at its maximum and the OG power supply is shut off:
-		- *the EM-field will collapse and release all of the energy it was storing into the circuit*
-	- **Inductors Don't Like Change**
-		- When a circuit goes from off to on:
-			- the current increases
-			- the inductor **opposes this change** (resistance)
-		- When the circuit turns off again, and the inductor is charged (has an EM-field)
-			- It will release its energy in an opposing force called #back-EMF
+		- As the electormagnetic field gets stronger, the resistance of the inductor decreases
+			- Eventually, the resistance is so low that a current can flow through it easily.
+- When the EM-field in the coil is at its maximum and the OG power supply is shut off:
+	- *the EM-field will collapse and release all of the energy it was storing into the circuit*
+- **Inductors Don't Like Change**
+	- When a circuit goes from off to on:
+		- the current increases
+		- the inductor **opposes this change** (resistance)
+	- When the circuit turns off again, and the inductor is charged (has an EM-field)
+		- It will release its energy in an opposing force called #back-EMF
 
 
 ## #flipper-zero:
