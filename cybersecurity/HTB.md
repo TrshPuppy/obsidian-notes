@@ -29,6 +29,4 @@ Machines:
 4. Redeemer
 	1. [[TCP-IP]]
 	2. [[redis]]
-	3. [[redis-cli]]
-	4. 
-	5. 
+	3. [[redis-cli]] 

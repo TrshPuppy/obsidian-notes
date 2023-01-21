@@ -1,10 +1,10 @@
 
->[!related]
+>[!neurons]
 >
 [[SMB]] 
 [[VPN]]
 [[CIDR]]
-
+  
 x68 Jan 16:
 
 [[OSI-reference-model]]:
