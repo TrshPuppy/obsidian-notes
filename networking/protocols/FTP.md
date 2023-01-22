@@ -1,17 +1,6 @@
 ---
 aliases: [FTP, file-transfer-protocol, ftp]
 ---
->[!related]
-> #port-21
- [[ftp-command]]
-
->[!links]
->https://www.hostinger.com/tutorials/what-is-ftp
->
->https://www.geeksforgeeks.org/file-transfer-protocol-ftp/
->
->https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol
-
 # File Transfer Protocol
 #client/server protocol used to communicate and transfer files using [[TCP-IP]] between computers on a network.
 - users who wish to use an FTP connection need to have permission
@@ -28,3 +17,15 @@ aliases: [FTP, file-transfer-protocol, ftp]
 
 #SFTP: Secure FTP or SSH FTP:
 - Extension of [[SSH]]
+
+>[!related]
+> #port-21
+ [[ftp-command]]
+
+>[!links]
+>https://www.hostinger.com/tutorials/what-is-ftp
+>
+>https://www.geeksforgeeks.org/file-transfer-protocol-ftp/
+>
+>https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol
+

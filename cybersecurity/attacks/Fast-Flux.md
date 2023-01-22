@@ -1,9 +1,4 @@
 
->[!links]
-> https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network
-> 
-> https://unit42.paloaltonetworks.com/fast-flux-101/
-
 # Fast Flux
 Used by a threat actor to hide malicious activity using compromised hosts on a #botnet
 	- first introduced by [[Storm-Worm]] in 2006
@@ -41,3 +36,8 @@ Used by a threat actor to hide malicious activity using compromised hosts on a #
 >"To further investigate the initial assumption of having two different subnetworks as observed in “Fast Flux network — overview”, we created a network graph, but this time without showing the relation to the nameserver. Doing that showed us that we can see two distinct subnetworks segregated in terms of associated IP addresses." 
 
 \-[[Akamai]] 
+
+>[!links]
+> https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network
+> 
+> https://unit42.paloaltonetworks.com/fast-flux-101/

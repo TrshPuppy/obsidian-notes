@@ -1,7 +1,4 @@
 
->[!related]
->[[FTP]]
-
 ## Usage: 
 
 ## Useful options:
@@ -14,3 +11,6 @@
 - ``dir`` or ``ls`` to list directories on the [[FTP]] server ( #FTP-server )
 - ``get`` to download/receive file in server
 	- default downloads file to home directory
+
+>[!related]
+>[[FTP]]

@@ -1,7 +1,4 @@
 
->[!links]
->https://www.geeksforgeeks.org/what-is-a-loopback-address/
-
 # Loopback IP Addresses
 The loopback #CIDR-block, *127.0.0.0/8* is a reserved collection of addresses.
 - It mocks the #TCP/IP server or TCP/IP client on the same system.
@@ -92,3 +89,6 @@ Steve:
 ![[IP-routing-steve.png]] 
 
 ![[IP-routing-with-steve-2.png]]
+
+>[!links]
+>https://www.geeksforgeeks.org/what-is-a-loopback-address/

@@ -1,7 +1,4 @@
 
-> [!links]
-> https://www.sans.org/tools/the-pyramid-of-pain/
-
 # Pyramid of Pain
 Cyber threat intelligence model designed by #David-Bianco
 	- A pyramid of the types of Indicators of Compromise ( #IOC s) you will see and how much it will *hurt the threat actor* for you to deny them these indicators.
@@ -36,3 +33,6 @@ Network artifacts
 - #user-agent-string
 	- wireshark
 	- #tshark (command)
+
+> [!links]
+> https://www.sans.org/tools/the-pyramid-of-pain/

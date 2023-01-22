@@ -1,25 +1,6 @@
 ---
 aliases: [radio, RF, radio-frequency]
 ---
->[!links]
->Capacitors:
-> https://en.wikipedia.org/wiki/Capacitor
-> 
-> https://www.youtube.com/watch?v=5hFC9ugTGLs&ab_channel=NationalMagLab
-> 
-> Inductors:
-> https://www.youtube.com/watch?v=NgwXkUt3XxQ&ab_channel=Afrotechmods
->  
-> https://www.youtube.com/watch?v=KSylo01n5FY&ab_channel=TheEngineeringMindset
-> 
-> Flipper Zero:
-> https://flipperzero.one/
-> 
-> https://docs.flipperzero.one/sub-ghz/read
-> 
-> Other:
-> https://www.youtube.com/watch?v=lQUC6d6_r38&ab_channel=HamRadioCrashCourse
-
 # Radio Frequency:
 
 ## *Basic Premise:*
@@ -80,4 +61,21 @@ An inductor is another way to store energy (ex: electrons)
 #sub-GHz
 
 
-
+>[!links]
+>Capacitors:
+> https://en.wikipedia.org/wiki/Capacitor
+> 
+> https://www.youtube.com/watch?v=5hFC9ugTGLs&ab_channel=NationalMagLab
+> 
+> Inductors:
+> https://www.youtube.com/watch?v=NgwXkUt3XxQ&ab_channel=Afrotechmods
+>  
+> https://www.youtube.com/watch?v=KSylo01n5FY&ab_channel=TheEngineeringMindset
+> 
+> Flipper Zero:
+> https://flipperzero.one/
+> 
+> https://docs.flipperzero.one/sub-ghz/read
+> 
+> Other:
+> https://www.youtube.com/watch?v=lQUC6d6_r38&ab_channel=HamRadioCrashCourse

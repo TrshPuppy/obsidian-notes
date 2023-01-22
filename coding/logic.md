@@ -1,7 +1,4 @@
 
->[!links]
->https://www.youtube.com/watch?v=V49i_LM8B0E
-
 # Logic
 #propositional-logic: a #proposition p is a variable that can take values "true" or "false" and no other
 	- #proposition :
@@ -20,3 +17,6 @@
 		- false independent of what #p is
 #binary-operators
 - starts with two #proposition s #p and #q 
+
+>[!links]
+>https://www.youtube.com/watch?v=V49i_LM8B0E

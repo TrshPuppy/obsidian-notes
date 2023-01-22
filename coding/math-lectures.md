@@ -1,7 +1,4 @@
 
->[!links]
->https://www.youtube.com/watch?v=V49i_LM8B0E
-
 The flow of theses lectures:
 1. [[logic]]
 2. [[set-theory]]
@@ -11,3 +8,6 @@ The flow of theses lectures:
 6. [[bundles]]
 7. [[geometry]]
 
+
+>[!links]
+>https://www.youtube.com/watch?v=V49i_LM8B0E

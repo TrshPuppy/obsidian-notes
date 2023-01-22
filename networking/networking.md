@@ -1,10 +1,4 @@
 
->[!neurons]
->
-[[SMB]] 
-[[VPN]]
-[[CIDR]]
-  
 x68 Jan 16:
 
 [[OSI-reference-model]]:
@@ -14,7 +8,7 @@ Data moves up and down these layers from physical to application and vice versa
 - #Data-link-layer
 	- "Media Access Control"
 	- flat topology
-	- #switches (L2 switches)
+	- [[ethernet-switching]] (L2 switches)
 		- have tables of ports w/ associated MAC-addresses
 			- only one device per port (can be another switch)
 		- assigns unique #MAC-addresses to devices
@@ -93,3 +87,11 @@ IPs to remember:
 			- MTU on local network = 9000
 			- MTU on loopback devices = 65535
 			- https://www.techtarget.com/searchnetworking/definition/maximum-transmission-unit ([[MTU]])
+
+
+>[!neurons]
+>
+[[SMB]] 
+[[VPN]]
+[[CIDR]]
+  

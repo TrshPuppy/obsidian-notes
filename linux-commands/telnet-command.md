@@ -1,7 +1,4 @@
 
->[!related]
->[[telnet]]
-
 # Usage: 
 ```
 telnet [OPTIONS...] [HOST [PORT]]
@@ -16,3 +13,6 @@ telnet [OPTIONS...] [HOST [PORT]]
 	- ``help`` gives list of commands
 	- ``ls`` lists present files/directories
 	- ``cat [filename]`` prints content of file to terminal
+
+>[!related]
+>[[telnet]]

@@ -1,12 +1,4 @@
 
->[!Tools]
-> [[Cyber-Chef]]
-> [[OPSWAT]] 
-> [[Virus-Total]]
-
-> [!Command Line]
-> 
-
 # Hashing
 A #hash-value is the result of a #hashing-algorithm 
 	A #hash-value is a *numeric* value of fixed length which uniquely identifies data
@@ -32,4 +24,11 @@ A #hash-value is the result of a #hashing-algorithm
 	- Has multiple variants
 		- most common = #SHA-256
 			- #SHA-256 returns an output which is a #256-bit-hash as a 64 digit #hexadecimal number
-		
+
+>[!Tools]
+> [[Cyber-Chef]]
+> [[OPSWAT]] 
+> [[Virus-Total]]
+
+> [!Command Line]
+> 

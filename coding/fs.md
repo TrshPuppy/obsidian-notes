@@ -1,11 +1,6 @@
 ---
 aliases: [fs, node fs, node filesystem]
 ---
->[!links]
->https://nodejs.org/api/fs.html#file-system
->
->https://www.geeksforgeeks.org/node-js-fs-write-method/
-
 # Node File System
 "node:fs enables interacting w/ the file system..."
 - #promise -based #API 
@@ -31,3 +26,8 @@ part of the #Callback-API:
 			- A string can be used instead of a buffer to write to the file
 			- syntax:
 				- ```fs.write(fd, string, position, encoding, callback)``` 
+
+>[!links]
+>https://nodejs.org/api/fs.html#file-system
+>
+>https://www.geeksforgeeks.org/node-js-fs-write-method/

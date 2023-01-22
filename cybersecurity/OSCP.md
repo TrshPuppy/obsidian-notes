@@ -1,9 +1,6 @@
 ---
 aliases: []
 ---
->[!links]
->https://www.youtube.com/watch?v=78J6A8irz3M&ab_channel=RUNCMD
-
 - [[pen-testing]] heavy
 
 Pre-Reqs:
@@ -11,3 +8,6 @@ Pre-Reqs:
 - Understand TCP/IP networking
 - Bash Scripting w/ Python/ Perl
 - Understand Linux
+
+>[!links]
+>https://www.youtube.com/watch?v=78J6A8irz3M&ab_channel=RUNCMD

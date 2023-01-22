@@ -1,7 +1,4 @@
 
->[!links]
->https://en.wikipedia.org/wiki/Virtual_private_network
-
 # Virtual Private Network
 *connects a device from the outside to a private network*
 
@@ -20,3 +17,6 @@
 		- not all VPN protocols provide encryption
 	- authentication: sender is authenticated
 	- integrity: prevents tampering w/ transmitted data
+
+>[!links]
+>https://en.wikipedia.org/wiki/Virtual_private_network

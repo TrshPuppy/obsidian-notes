@@ -2,12 +2,6 @@
 aliases: [redis, remote-dictionary-server]
 ---
 
->[!related]
->[[redis-cli]] 
-
->[!links]
->https://en.wikipedia.org/wiki/Redis
-
 # Remote Dictionary Server
 An #in-memory-database
 - the data is stored in the physical memory of the computer
@@ -16,3 +10,9 @@ An #in-memory-database
 - Is a #store and a #cache at the same time
 	- data is read/modified from the main computer memory
 	- stored on disk in a form that is unsuitable for random data access
+
+>[!related]
+>[[redis-cli]] 
+
+>[!links]
+>https://en.wikipedia.org/wiki/Redis

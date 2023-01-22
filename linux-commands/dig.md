@@ -1,7 +1,4 @@
 
->[!related]
-> #domains 
-
 # DNS lookup utility
 
 ### Usage: 
@@ -12,3 +9,6 @@ dig  [@server] [-b address] [-c class] [-f filename] [-k filename] [-m]
 
 ```  
 
+
+>[!related]
+> #domains 

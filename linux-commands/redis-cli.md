@@ -1,7 +1,4 @@
 
->[!related]
->[[redis]] 
-
 ## Usage:
 ```
 redis-cli -h [IP ADDRESS]
@@ -11,3 +8,6 @@ redis-cli -h [IP ADDRESS]
 - ``info``
 - ``keys``
 - ``get [key/s]
+
+>[!related]
+>[[redis]] 

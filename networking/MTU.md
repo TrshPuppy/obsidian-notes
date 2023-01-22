@@ -1,9 +1,6 @@
 ---
 aliases: [MTU, maximum-transmission-unit]
 ---
->[!links]
->https://www.techtarget.com/searchnetworking/definition/maximum-transmission-unit
-
 # Maximum Transmission Unit
 The largest size #frame or #packet (in bytes) which can be transmitted acriss a data-link
 - Most often used in reference to packet size across an Ethernet connection using #IP (internet protocol)
@@ -17,3 +14,7 @@ ea device in a network has an MTU size it can receive and transmit.
 	- #IPV4 allows for #packet-fragmentation unless the #do-not-fragment-flag is set
 	- #IPV6 does *NOT* allow fragmentaion
 		- if a packet size exceeds its #MTU it will be dropped
+
+
+>[!links]
+>https://www.techtarget.com/searchnetworking/definition/maximum-transmission-unit

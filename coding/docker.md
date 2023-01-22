@@ -1,11 +1,4 @@
 
->[!links]
->https://docs.docker.com/get-started/
->
->https://www.youtube.com/watch?v=rOTqprHv1YE
->
->https://www.youtube.com/watch?v=3c-iBn73dDE
-
 # Docker
 Docker [[containers]] sit on top of the host [[operating-system]]:
 - A #docker-container uses the host [[operating-system]]
@@ -65,3 +58,10 @@ The #docker-engine is installed on the #host machine and allows the #docker-cont
 		2. to update a repo:
 			1. `Docker push <image>:<tags>`
 
+
+>[!links]
+>https://docs.docker.com/get-started/
+>
+>https://www.youtube.com/watch?v=rOTqprHv1YE
+>
+>https://www.youtube.com/watch?v=3c-iBn73dDE

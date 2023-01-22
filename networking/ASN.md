@@ -1,12 +1,6 @@
 ---
 aliases: [ASN, Autonomous-System, Autonomous-System-Number]
 ---
->[!related]
-> #RFC-1930
-
->[!links]
->https://datatracker.ietf.org/doc/rfc1930/
-
 # Autonomous System Number
 - An #autonomous-system is a "set of routers under a single technical administration, using an interior gateway protocol and common metrics to route packets to other ASes."
 	- it is a "connected group of one or more #IP-prefixes run by one or more network operators which has a SINGLE and CLEARLY DEFINED #routing-policy"
@@ -51,3 +45,10 @@ An #ASN is a unique identifier which two organizations can use to connect to eac
 	- how internal communication nodes (like w/i a business) connect to the global internet at one common point, using an #ASN 
 	- #internal-nodes each have their own #IP-address are connected through and [[IGP]] (Internal Gateway Protocol)
 	- the internal grouping of nodes is then connected to the larger internet using #BGP 
+
+
+>[!related]
+> #RFC-1930
+
+>[!links]
+>https://datatracker.ietf.org/doc/rfc1930/

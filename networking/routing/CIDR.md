@@ -1,9 +1,6 @@
 ---
 aliases: [CIDR, classless inter-domain routing]
 ---
->[!links]
-> https://www.educba.com/what-is-cidr/
-
 # Classless Inter-domain Routing
 Method for allocating #IP-addresses and IP routing.
 
@@ -65,3 +62,6 @@ Five classes in #IPV4-addressing :
 			- SO:
 				- the network address = ``172.16.23.0``
 				- and the host address = ``0.0.0.1`` 
+>[!links]
+> https://www.educba.com/what-is-cidr/
+

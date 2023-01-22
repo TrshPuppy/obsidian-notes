@@ -1,14 +1,4 @@
 
->[!related]
-> #port-23
-#RFC-15 & #RFC-855
-[[telnet-command]]
-
->[!links]
-> https://en.wikipedia.org/wiki/Telnet
-> 
-> https://www.lifewire.com/what-does-telnet-do-2483642
-
 # Telnet
 A server/client application protocol.
 - provides access to virtual terminals of remote systems on #local-area-networks on the internet
@@ -27,6 +17,17 @@ A server/client application protocol.
 - SSH: telnet evolved into [[SSH]] which was a more secure network protocol
 	- strong authentication
 	- secures encrypted data communiucation b/w womputers over an insecure network
+
+>[!related]
+> #port-23
+#RFC-15 & #RFC-855
+[[telnet-command]]
+
+>[!links]
+> https://en.wikipedia.org/wiki/Telnet
+> 
+> https://www.lifewire.com/what-does-telnet-do-2483642
+
 
 
 

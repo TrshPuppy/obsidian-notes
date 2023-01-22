@@ -1,8 +1,4 @@
 
->[!related]
-> [[smbclient]] 
-#port-445 
-
 # Server Message Block
 - #client/server network protocol which allows users to communicate w/ remote servers and/or computers.
 	- Allows for file sharing/ reading/ writing
@@ -16,5 +12,7 @@
 >[!link]
 >https://cybersophia.net/articles/what-is/what-is-smb-protocol-and-why-is-it-a-security-concern/
 
-
+>[!related]
+> command: [[smbclient]] 
+#port-445 
 
