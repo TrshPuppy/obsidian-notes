@@ -14,14 +14,20 @@ Cyber threat intelligence model designed by #David-Bianco
 		- not always bulletproof
 		- *easy* for a threat actor to recover from
 	- ==ex: [[Fast-Flux]]==
- 
+3. #domain-names 
+	- Harder for an attacker to recover from/ change because they have to re-register, modify [[DNS]] records and purchase new domains
+		- However, DNS providers have #APIs which make it easy to purchase/register domains
+	- [[punycode]]
+		- using Unicode to encode non-ASCII characters
+	- [[URL-shorteners]]
+4. #host-artifacts 
+	- More annoying for a hacker if you're able to detect the observable traces they've left on a victimized system.
+	- may include: #registry-values, suspicious process execution, attack patterns/ #IOC s, files left by malicious applications.
+5. #network-artifacts 
 
 - #zsh
 	- zshrc file
-- ``curL -L -I $URL``
-	- follows redirect 
-	- ``-I`` = only show headers
-	- So if there is a redirect, you should see an HTTP/3xx. If you see that you'll get the expanded URL
+
 
 host Artifacts
 - #emotet

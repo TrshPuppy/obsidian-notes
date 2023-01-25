@@ -1,7 +1,7 @@
 
 # Fast Flux
 Used by a threat actor to hide malicious activity using compromised hosts on a #botnet
-	- first introduced by [[Storm-Worm]] in 2006
+	- first introduced by [[storm-worm]] in 2006
 - usually used to make the connection between #malware and its #command-and-control center harder to discover.![[Pasted image 20230118203229.png]]
 >"To understand the boundaries and relations between the network entities, an undirected network graph was created (Figure 2). The graph represents the following entities and relations between them: domains (shown in red), IP addresses (purple), and nameservers (green). The inspected network is composed of two subnetworks sharing a strong relation. These subnetworks are connected based on the similarity between their shared IP addresses associated with different nameservers." 
 

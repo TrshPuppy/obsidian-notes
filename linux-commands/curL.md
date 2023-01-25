@@ -20,5 +20,5 @@ A cli tool for transferring data from or to a server
 	- location!
 		- with #HTTP:
 			- if the requested page has moved to a different location, (indicated w/ a ``Location`` header and #3xx response code)
-				- cul will redo the request to the new place
+				- curl will redo the request to the new place
 			- If used w/ ``-I`` (headers only) curl will return headers from all requested pages
