@@ -1,5 +1,5 @@
 # Obsidian Notes
-## This is a public repo of my notes using Obsidian https://obsidian.md/
+## This is a public repo of my notes using [Obsidian](https://obsidian.md/).
 
 ### Viewing this Repo:
 The best way to view this collection of notes is with the Obsidian desktop app. The app shows connections, links between topics, and other formatting which can't be appreciated in the markdown alone.
