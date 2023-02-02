@@ -37,4 +37,3 @@ Run CMD:
 			- Python
 		- Programming
 		- Cloud
-		- 

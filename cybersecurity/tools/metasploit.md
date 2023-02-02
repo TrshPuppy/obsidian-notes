@@ -48,4 +48,3 @@ In msfconsole, under ``payloads`` there are 3 different directories:
 - Stand-alone tools which help w/ vulnerability finding/ research/ assessment and penetration testing
 	- ex: #mfsvenom
 	- #pattern_create, and #pattern_offset
-- 

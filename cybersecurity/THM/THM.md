@@ -75,6 +75,24 @@ aliases: [THM, try-hack-me]
 - [[eternal-blue]]
 	- #SMB  
 
+# Nmap/ [[nmap]] 
+- #Syn-Scan
+- #UDP-scan
+- #TCP-scan
+- #NULL-scan
+- #FIN-scan
+- #Xmas-scan
+- output
+- ports
+- scripts
+	- vuln scripts
+- #TCP/IP 
+	- https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Protocol_operation
+	- #3-way-handshake 
+- #UDP
+	- https://en.wikipedia.org/wiki/User_Datagram_Protocol#Comparison_of_UDP_and_TCP
+
+
 my first targets on a machine: ~/.${SHELL}rc, ~/.${SHELL}_profile, ~/.${SHELL}_logout, ~/.${SHELL}_history, ~/.ssh and ~/.aws and a such. I really love IDE scratch files as well.
 
 ~/.bashrc for example, if $SHELL is bash, ~/.bashrc is gonna tell you about the user environment. Code monkeys often will hard code secrets in there
