@@ -22,6 +22,7 @@ Considered the most complex layer of the OSI (abstracts the interaction w/ the h
 3. #error-control:
 	- If data becomes corrupted (d/t noise, attenuation, etc) the DLL detecs the error and corrects it using #error-detection and #error-correction
 	- Adds error-detection bits in the frame's header so the receiver can check for errors in the received data.
+	- ex: corrupted data
 4. #flow-control:
 	- If there is a mismatch in speed between the #receiving-speed and the #sending-speed then a #buffer-overflow can occur, causing frames to be lost
 	- the DLL synchronizes the speed between the sender and receiver to establish flow-control between them.

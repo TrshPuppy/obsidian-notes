@@ -2,6 +2,43 @@
 aliases: [THM, try-hack-me]
 ---
 
+# Introductory Networking
+1. [[OSI-reference-model]]
+	1. [[application-layer]]
+	2. "translation services"
+	3. [[presentation-layer]]
+	4. [[physical-layer]]
+		1. binary --> electrical 
+		2. electrical --> binary
+	5. [[data-link-layer]]
+		1. #network-card 
+		2. [[MAC-addresses]]
+	6. [[network-layer]]
+		1. #IPV4 
+		2. #IP-address 
+		3. Addressing
+		4. TCP
+			1. #segment
+		5. UDP
+			1. #datagram
+	7. ==layer protocols==
+2. #encapsulation 
+3. #TCP/IP 
+4. Networking Tools:
+	1. Ping:
+		1. [[ping]]
+	2. Traceroute:
+		1. [[traceroute]]
+	3. WHOIS
+		1. [[whois]]
+	4. Dig
+		1. [[dig]]
+		2. [[DNS]] 
+5. Further reading:
+	1. https://www.amazon.co.uk/Interconnecting-Cisco-Network-Devices-ICND1/dp/1587054620/ref=sr_1_1?keywords=Interconnecting+Cisco+Network+Devices%2C+Part+1&qid=1583683766&sr=8-1
+
+# What is Networking:
+
 # Pyramid of Pain
 [[pyramid-of-pain]] 
 1. [[hashing]]
