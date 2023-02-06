@@ -30,6 +30,14 @@ aliases: [HTB, hack-the-box]
 		1. [[TCP-IP]]
 		2. [[redis]]
 		3. [[redis-cli]]
+	4. Explosion
+		1. [[RDP]]
+		2. [[xfreerdp]]
+		3. [[BlueKeep]]
+		4. [[DejaBlue]]
+		5. #port-3389 
+
+
 2. Tier One:
 	1. Appointment
 		1. [[SQL]]
