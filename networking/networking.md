@@ -45,7 +45,7 @@ Data moves up and down these layers from physical to application and vice versa
 						- (perspective = Google)
 		- 
 - #transport-layer
-	- [[UDP]] or [[TCP-IP]] 
+	- [[UDP]] or [[TCP]] 
 		- (there are others)
 			- (can also handle IP)
 - #session-layer 

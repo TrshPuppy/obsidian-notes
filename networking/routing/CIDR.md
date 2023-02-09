@@ -4,7 +4,7 @@ aliases: [CIDR, classless inter-domain routing]
 # Classless Inter-domain Routing
 Method for allocating #IP-addresses and IP routing.
 
-[[TCP-IP]] (Internet Protocol)
+[[TCP]] (Internet Protocol)
 - #CIDR = a collection of Internet Protocol standards used to create unique identifiers for networks and individual devices
 	- facilitate unique #packet transmission to specific devices
 

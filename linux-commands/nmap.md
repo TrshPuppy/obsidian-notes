@@ -6,7 +6,7 @@ nmap [Scan Type(s)] [Options] {target sppecification}
 
 ## useful options:
 TCP connect scan: #nmap-sT
-- Scanning for [[TCP-IP]] 
+- Scanning for [[TCP]] 
 - syntax: for TCP: ``nmap -sT {target}``
 SYN connect scan #nmap-sS
 - scan for SYN connects
@@ -16,6 +16,7 @@ Service/Version #nmap-sV
 OS detection #nmap-O
 - enable OS detection
 	- **needs root/sudo**
+Limit number of ports scanned: `-p <number or range>`
 
 ## Types of scans:
 1. TCP connect scans (`-sT`)

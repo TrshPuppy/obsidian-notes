@@ -6,7 +6,7 @@ The loopback #CIDR-block, *127.0.0.0/8* is a reserved collection of addresses.
 	- ex: if you're on your desktop, 127.0.0.1 refers to your desktop
 
 Steve:
-- computer [[operating-system]] ships w/ a #TCP-IP-stack which understands [[TCP-IP]] 
+- computer [[operating-system]] ships w/ a #TCP-IP-stack which understands [[TCP]] 
 	- when anything in computer wants to access a network resource via TCP/IP it goes through the IP stack
 	- computer also has a #network-card / interface (ex: ethernet/wifi)
 		- knows how to physically connect to the network

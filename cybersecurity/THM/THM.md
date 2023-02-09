@@ -38,6 +38,12 @@ aliases: [THM, try-hack-me]
 	1. https://www.amazon.co.uk/Interconnecting-Cisco-Network-Devices-ICND1/dp/1587054620/ref=sr_1_1?keywords=Interconnecting+Cisco+Network+Devices%2C+Part+1&qid=1583683766&sr=8-1
 
 # What is Networking:
+1.[[network-fundamentals]]
+
+# Local Area Network Technologies
+1. [[LAN]]
+2. 
+
 
 # Pyramid of Pain
 [[pyramid-of-pain]] 

@@ -12,7 +12,7 @@ aliases: [HTB, hack-the-box]
 		5. [[VPN]]
 		6. [[ICMP]]
 		7. [[nmap]] 
-		8. [[TCP-IP]]
+		8. [[TCP]]
 	2. Fawn
 		1. [[FTP]]
 		2. [[ftp-command]]
@@ -27,7 +27,7 @@ aliases: [HTB, hack-the-box]
 		5. #smbclient-L 
 		6. #smbclient//fileserver/Backup 
 	3. Redeemer
-		1. [[TCP-IP]]
+		1. [[TCP]]
 		2. [[redis]]
 		3. [[redis-cli]]
 	4. Explosion
@@ -36,6 +36,28 @@ aliases: [HTB, hack-the-box]
 		3. [[BlueKeep]]
 		4. [[DejaBlue]]
 		5. #port-3389 
+	5. Preignition
+		1. #nginx
+			- HTTP reverse proxy server
+		2. [[HTTP]]
+		3. #port-80 
+		4. [[gobuster]] 
+			1. #URI
+			2. seclists
+			3. wordlists
+	6. Mongod
+		1. [[MongoDB]]
+		2. #noSQL
+			1. relational vs non-tabular
+				1. #RDBMS 
+				2. #noSQL 
+				3. #column-store / #C-store
+		3. [[mongo]]
+			1. #mongosh
+			2. **mongo shell javascript code?
+		4. [[rsync]]
+			1. #port-873
+			2. 
 
 
 2. Tier One:
@@ -45,5 +67,5 @@ aliases: [HTB, hack-the-box]
 		3. [[PII]]
 		4. #OWASP
 		5. [[TTPS]]
-		6. [[Gobuster]]
+		6. [[gobuster]]
 		7. 

@@ -29,6 +29,10 @@ CC:46:D6 - Cisco
 - #Network-Interface-Controller (last 6 digits)
 	- also assigned by the manfacturer
 
+## MAC Spoofing / #MAC-spoofing:
+When a networked device pretends to identify as a different one by using its MAC address.
+- Can break poorly-maintained security designs
+	- ex: if a network firewall is configured to trust any and all traffic coming from the MAC address of the administrator
 >[!Command line]
 >[[ifconfig]]
 >[[ip-command]]

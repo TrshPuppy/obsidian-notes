@@ -2,7 +2,7 @@
 # Server Message Block
 - #client/server network protocol which allows users to communicate w/ remote servers and/or computers.
 	- Allows for file sharing/ reading/ writing
-	- SMB uses port 445 and the [[TCP-IP]] network protocol to “talk” to other computers over the internet.
+	- SMB uses port 445 and the [[TCP]] network protocol to “talk” to other computers over the internet.
 	- #smb-shares are shared resources (usually a directories)
 - mostly used w/ #Windows machines
 	- #Samba developed in 1992 as an #open-source implementation of SMB

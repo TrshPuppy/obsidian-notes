@@ -5,7 +5,7 @@ A server/client application protocol.
 - Components:
 	1. the protocol iotself which specifies how two parties communicate
 	2. the softrware application which provides the service
-- Connection between parties made w/ [[TCP-IP]] 
+- Connection between parties made w/ [[TCP]] 
 
 ## Security:
 - #telnet transfers all informations in plaintext (including usernames/passwords)

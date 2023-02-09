@@ -2,7 +2,7 @@
 aliases: [FTP, file-transfer-protocol, ftp]
 ---
 # File Transfer Protocol
-#client/server protocol used to communicate and transfer files using [[TCP-IP]] between computers on a network.
+#client/server protocol used to communicate and transfer files using [[TCP]] between computers on a network.
 - users who wish to use an FTP connection need to have permission
 	- permission is gained by providing credentials to the #FTP-server
 		- some *public* #FTP-server s don't require credentials which is called #anonymous-ftp
