@@ -1,0 +1,79 @@
+
+# CompTIA Security+
+
+## Outline:
+### 1.0 Threats, Attacks, and Vulnerabilities
+- 1.1 Compare and contrast different types of social engineering tactics
+	- Phishing (vishing, whaling, smishing, spear phishing)
+	- [[phishing]]
+		- https://tryhackme.com/module/phishing
+	- Spam, SPIM
+	- dumpster diving
+	- shoulder surfing
+	- pharming
+	- tailgating
+	- eliciting info
+	- prepending
+	- identity fraud
+	- invoice scam
+	- credential harvesting
+	- recon
+	- hoax
+	- impersonation
+	- watering hole
+	- typosquating
+	- pretexting
+	- influence campaigns
+		- hybrid warfare
+		- social media
+	- Principles/ reasons for effectiveness
+		- authority
+		- intimidation
+		- consensus
+		- scarcity
+		- familiarity
+		- trust
+		- urgency
+- 1.2 Analyze potential indicators to determine the type of attack
+	- Malware
+	- https://tryhackme.com/room/commonattacks
+	- https://tryhackme.com/room/malremnuxv2
+	- https://tryhackme.com/module/malware-analysis
+		- Ransomware  
+		- Trojans  
+		- Worms  
+		- Potentially unwanted programs (PUPs)  
+		- Fileless virus  
+		- Command and control  
+		- Bots  
+		- Cryptomalware  
+		- Logic bombs  
+		- Spyware  
+		- Keyloggers  
+		- Remote access Trojan (RAT)  
+		- Rootkit  
+		- Backdoor
+	- Password Attacks
+	- https://tryhackme.com/room/passwordattacks
+		- spraying
+		- dictionary
+		- brute force
+			- offline
+			- online
+		- [[rainbow-table]]
+		- plaintext /encrypted
+	- Physical attacks
+		- malicious USB
+		- malisious flash drive
+		- card cloning
+		- skimming
+	- Adversarial artificial intelligence
+		- tainted training data for ML
+		- security of machine learning algorithms
+	- Supply chain attacks
+	- cloud based vs on premise
+	- cryptographic
+	- https://tryhackme.com/module/cryptography
+		- birthday
+		- collision
+		- downgrade

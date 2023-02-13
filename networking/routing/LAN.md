@@ -10,12 +10,31 @@ a #switch is a dedicated device in a network designed to aggregate other devices
 	- when they receive a packet, they send it to the right device
 		- reduces network traffic
 		- repeaters and hubs: repeat the packet to every port
-- Switches can be connected to routers which ==increases increases network redundancy==
+- Switches can be connected to routers which ==increases network redundancy==
+- Can operate on [[data-link-layer]] OR L3 but cannot do both (the switch has to be one or the other)
+
+Below: This L2 switch can only forward #in-memory-database frames to the connected devices using their #MAC-addresses 
+![[Pasted image 20230212104825.png]]
+-TryHackMe.com
+
+- Layer 3 switches:
+	- ==can do some of the things a router can do==
+		- will send frames to connected L2 devices, and will use #IP protocol to route packets to L3 devices
+Below: This L3 switch can route packets to the two connected #VLANs (Virtual Local Area Networks)
+![[Pasted image 20230212105329.png]] 
+-TryHackMe.com
 
 #### Routers:
 a #router connects networks so data can be passed between them.
 - uses #routing 
 	- data traveling across networks
+	- data is given a label as it travels
+	- path taken is decided base on:
+		- what path is shortest?
+		- what path is most reliable?
+		- what has the fastest physical medium?
+- routers = [[network-layer]] (L3)
+	- usually have a GUI which allows for configuring #port-forwarding. #firewalls, etc.
 
 ## Topologies:
 1. Star Topology/ #star-topology:
@@ -51,4 +70,3 @@ a #router connects networks so data can be passed between them.
 	- ==Disadvantages==
 		- a fault along the cable will cause entire network to crash
 		- not efficient way of sending data
-		- 

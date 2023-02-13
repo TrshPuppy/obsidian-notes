@@ -57,5 +57,20 @@ Networking nerd badge
 	7. #RST-flag 
 3. UDP/IP
 4. [[ports]]
+	1. #Common-ports 
 
 # Extending your Network
+1. Intro to Port Forwarding
+	1. #port-forwarding 
+2. Firewalls 101
+	1. [[firewalls]]
+	2. #stateful-firewall 
+		1. #stateful-packet-inspection 
+	3. #stateless-firewall 
+3. VPN basics
+	1. [[VPN]]
+	2. #PPTP 
+	3. #PPP 
+	4. #IPSec 
+4. LAN networking devices
+	1. 
