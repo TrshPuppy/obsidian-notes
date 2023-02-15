@@ -47,7 +47,6 @@ Gathering information on the victim.
 		- promises the possibility of a large catch/ gain for attacker
 			- victim has more access to critical resources and credentials
 
-
 ## Emails:
 [[email]] phishing is very common
 
@@ -61,7 +60,22 @@ Gathering information on the victim.
 - includes hyperlinks (especially #URL-shortener )
 - malicious attachment
 
-
+## Phishing Analysis Tools:
+1. Google Messageheader:
+	- "analyzes SMTP message headers which help identify the root cause of delivery delays... Can detect misconfigured servers and mail-routing problems."
+> https://toolbox.googleapps.com/apps/messageheader/analyzeheader
+2. Message Header Analyzer:
+> https://mha.azurewebsites.net/ 
+3. Mail Header
+> https://mailheader.org/
+4. IPinfo.io
+>  https://ipinfo.io/
+5. Talos Reputation Center:
+> https://talosintelligence.com/reputation
+- Can be used to lookup reputations of the #hash-value of a file, etc.
+6. [[malware-sandboxes]] 
+7. [[phish-tool]]:
+> 
 
 
 >[!links]

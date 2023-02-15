@@ -4,16 +4,29 @@
 ## Outline:
 ### 1.0 Threats, Attacks, and Vulnerabilities
 - 1.1 Compare and contrast different types of social engineering tactics
-	- Phishing (vishing, whaling, smishing, spear phishing)
-	- [[phishing]]
-		- https://tryhackme.com/module/phishing
-	- Spam, SPIM
-	- dumpster diving
-	- shoulder surfing
-	- pharming
-	- tailgating
-	- eliciting info
-	- prepending
+	- TryHackMe Phishing Module : https://tryhackme.com/module/phishing
+		- [[phishing]]
+			- https://tryhackme.com/module/phishing
+			- #phishing 
+			- #smishing 
+			- #vishing 
+			- #spam 
+			- #SPIM
+			- #spearfishing 
+			- #pharming 
+			- #whaling 
+			- #prepending 
+			- #credential-harvesting
+			- #typosquating 
+			- urgency
+			- #pretexting 
+			
+		- dumpster diving
+		- shoulder surfing
+		- pharming
+		- tailgating
+		- eliciting info
+		- prepending
 	- identity fraud
 	- invoice scam
 	- credential harvesting
