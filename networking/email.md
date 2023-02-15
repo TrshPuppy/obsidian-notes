@@ -6,6 +6,25 @@ First invented in the 1970s during #ARPANET by #Ray-Tomlinson
 - Email address format:
 	- `<user mailbox>@<domain>`
 
+## Formatting and Headers:
+Internet Message Format ( #IMF): how email messages are formatted
+
+#### Headers:
+- X-Originating IP/ #X-header:
+	- the IP the email was sent from
+- smtp.mailfrom/header.from: the domain it was sent from 
+- Reply-to: the email address a reply will be sent to
+- https://mediatemple.net/community/products/all/204643950/understanding-an-email-header
+- https://www.arin.net/
+
+#### Body:
+- #JSON_tokens
+- #base-64
+	- sed command
+	- base64 --> pdf
+- HTML
+- 
+
 ## Delivery:
 Uses 3 main protocols:
 1. [[SMTP]]: Simple Mail Transfer Protocol
@@ -57,7 +76,7 @@ Mail clients connect to #mail-servers using either POP3 or IMAP
 	- #port-465: (Secure) - SSL enabled
 	- #port-587: (Insecure)
 - Others:
-	- #port-25: SMPT ==outdated/ not recommended==
+	- #port-25: SMTP ==outdated/ not recommended==
 
 #### Securing ports with #TLS/SSL:
 - login information and messages are encrypted

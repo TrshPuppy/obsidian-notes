@@ -51,6 +51,17 @@ Gathering information on the victim.
 ## Emails:
 [[email]] phishing is very common
 
+#### Characteristics of phishing emails:
+- the sender email masquerades as a trusted entity #email-spoofing
+- subject line will see legitimate
+	- may use keywords like "invoice"
+- body/ message looks trusted
+	- HTML may be poorly formatted
+	- generic
+- includes hyperlinks (especially #URL-shortener )
+- malicious attachment
+
+
 
 
 >[!links]

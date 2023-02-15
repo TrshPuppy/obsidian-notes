@@ -1,6 +1,6 @@
 
 # Punycode Attack:
-When an attacker redirects a user to a malicious domain that appears legitamate at first glance.
+When an attacker redirects a user to a malicious domain that appears legitimate at first glance.
 - Converting words/ letters which cannot be written in #ASCII into #unicode ASCII #encoding
 
 ## ASCII vs. Unicode:
