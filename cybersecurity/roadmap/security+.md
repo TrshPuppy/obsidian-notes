@@ -1,11 +1,13 @@
 
 # CompTIA Security+
 
-## Outline:
-### 1.0 Threats, Attacks, and Vulnerabilities
-- 1.1 Compare and contrast different types of social engineering tactics
-	- TryHackMe Phishing Module : https://tryhackme.com/module/phishing
-		- [[phishing]]
+## Outline: 
+https://comptiacdn.azureedge.net/webcontent/docs/default-source/exam-objectives/comptia-security-sy0-601-exam-objectives-(2-0).pdf
+
+## ==1.0 Threats, Attacks, and Vulnerabilities==
+- [ ] ==1.1== Compare and contrast different types of social engineering tactics
+	- [ ] TryHackMe Phishing Module : https://tryhackme.com/module/phishing
+		- [ ] [[phishing]]
 			- https://tryhackme.com/module/phishing
 			- #phishing 
 			- #smishing 
@@ -20,7 +22,6 @@
 			- #typosquating 
 			- urgency
 			- #pretexting 
-			
 		- dumpster diving
 		- shoulder surfing
 		- pharming
@@ -39,7 +40,7 @@
 	- influence campaigns
 		- hybrid warfare
 		- social media
-	- Principles/ reasons for effectiveness
+	- [ ] Principles/ reasons for effectiveness
 		- authority
 		- intimidation
 		- consensus
@@ -47,11 +48,11 @@
 		- familiarity
 		- trust
 		- urgency
-- 1.2 Analyze potential indicators to determine the type of attack
-	- Malware
-	- https://tryhackme.com/room/commonattacks
-	- https://tryhackme.com/room/malremnuxv2
-	- https://tryhackme.com/module/malware-analysis
+- [ ] ==1.2== Analyze potential indicators to determine the type of attack
+	- [ ] Malware
+		- [ ] TryHackMe: https://tryhackme.com/room/commonattacks
+		- [ ] THM: https://tryhackme.com/room/malremnuxv2
+		- [ ] THM:https://tryhackme.com/module/malware-analysis
 		- Ransomware  
 		- Trojans  
 		- Worms  
@@ -66,8 +67,9 @@
 		- Remote access Trojan (RAT)  
 		- Rootkit  
 		- Backdoor
-	- Password Attacks
-	- https://tryhackme.com/room/passwordattacks
+	- [ ] Password Attacks
+		- [ ] THM: https://tryhackme.com/room/passwordattacks
+		- [ ] HTBA: https://academy.hackthebox.com/module/details/20
 		- spraying
 		- dictionary
 		- brute force
@@ -75,18 +77,206 @@
 			- online
 		- [[rainbow-table]]
 		- plaintext /encrypted
-	- Physical attacks
+	- [ ] Physical attacks
 		- malicious USB
 		- malisious flash drive
 		- card cloning
 		- skimming
-	- Adversarial artificial intelligence
+	- [ ] Adversarial artificial intelligence
 		- tainted training data for ML
 		- security of machine learning algorithms
-	- Supply chain attacks
-	- cloud based vs on premise
-	- cryptographic
-	- https://tryhackme.com/module/cryptography
+	- [ ] Supply chain attacks
+	- [ ] cloud based vs on premise
+	- [ ] cryptographic
+		- [ ] THM: https://tryhackme.com/module/cryptography
 		- birthday
 		- collision
 		- downgrade
+- [ ] ==1.3== Given a Scenario, Analyze Potential Indicators associated w/ Application Attacks
+	- [ ] Privilege Escalation:
+	- [ ] Cross-site scripting:
+	- [ ] Injections:
+		- [ ] SQL Injections:
+			- [ ] HTB Academy module: https://academy.hackthebox.com/module/details/33
+			- [ ] THM SQL Injection: https://tryhackme.com/room/sqlinjectionlm
+	- [ ] Pointer/ object deference:
+	- [ ] Directory Traversal:
+	- [ ] Buffer Overflows:
+	- [ ] Race Conditions:
+	- [ ] Error Handling:
+	- [ ] Improper Input Handling:
+	- [ ] Replay Attack:
+	- [ ] Integer Overflow:
+	- [ ] Request Forgeries:
+	- [ ] API attacks:
+	- [ ] Resource Exhaustion:
+	- [ ] Memory Leak:
+	- [ ] SSL stripping:
+	- [ ] Driver Manipulation:
+	- [ ] Pass the Hash:
+- [ ] ==1.4== Analyze Attack Indicators Associated w/ Network Attacks:
+	- [ ] Wireless:
+	- [ ] On-path attack: (MITM)
+	- [ ] Layer 2 Attacks:
+	- [ ] DNS:
+	- [ ] DDoS:
+	- [ ] Malicious code or Script Execution:
+- [ ] ==1.5== Explain Different Threat Actors, Vectors, and Int. Sources:
+	- [ ] Actors and threats:
+	- [ ] Attributes of actors:
+	- [ ] Vectors:
+	- [ ] Threat Intelligence Sources:
+	- [ ] Research Sources:
+- [ ] ==1.6== Explain security concerns associated w/ various vulnerabilities:
+	- [ ] Cloud based vs. On-premise
+	- [ ] Zero-Day
+	- [ ] Weak Configurations
+	- [ ] Third-party Risks
+	- [ ] Improper/ weak Patch management:
+	- [ ] Legacy Platforms:
+	- [ ] Impacts:
+- [ ] ==1.7== Summarize the techniques used in security assessments:
+	- [ ] Threat Hunting
+	- [ ] Vulnerability Scans
+	- [ ] SIEM
+	- [ ] SOAR
+- [ ] ==1.8== Explain the techniques used in penetration testing:
+
+## ==2.0 Architecture and Design==
+- [ ] ==2.1== Explain importance of Security Topics in an Enterprise Environment:
+	- [ ] Configuration Management:
+	- [ ] Data Sovereignty:
+	- [ ] Data Protection:
+	- [ ] Geographical Considerations:
+	- [ ] Response and Recovery Controls:
+	- [ ] SSL/TLS Inspection:
+	- [ ] Hashing:
+	- [ ] API Considerations:
+	- [ ] Site Resiliency:
+	- [ ] Deception & Disruption:
+- [ ] ==2.2== Summarize virtualization and cloud computing concepts:
+	- [ ] Cloud models:
+	- [ ] Cloud Service Providers:
+	- [ ] MSP/ MSSP:
+	- [ ] On-premise vs off-premise
+	- [ ] For Computing:
+	- [ ] Edge Computing:
+	- [ ] Thin Client:
+	- [ ] Containers:
+	- [ ] Microservices/ API:
+	- [ ] Infrastructure as code:
+	- [ ] Serverless architecture:
+	- [ ] Services integration:
+	- [ ] Resource policies:
+	- [ ] Transit gateway:
+	- [ ] Virtualization:
+- [ ] ==2.3== Summarize secure application development, deployment, and automation concepts:
+	- [ ] Environment:
+	- [ ] Provisioning and deprovisioning:
+	- [ ] Integrity measurements:
+	- [ ] Secure coding techniques:
+	- [ ] OWASP:
+	- [ ] Software diversity:
+	- [ ] Automation/ scripting:
+	- [ ] Elasticity:
+	- [ ] Scalability:
+	- [ ] Version control:
+- [ ] ==2.4== Summarize authentication and authorization design concepts:
+	- [ ] Authentication methods:
+	- [ ] Biometrics:
+	- [ ] MFA:
+	- [ ] AAA:
+	- [ ] Cloud vs on-premise requirements:
+- [ ] ==2.5== Given a scenario, implement cybersecurity resilience:
+	- [ ] Redundancy:
+	- [ ] Replication:
+	- [ ] On-premise vs. Cloud:
+	- [ ] Backup types:
+	- [ ] Non-presistence:
+	- [ ] High availability:
+	- [ ] Restoration order:
+	- [ ] Diversity
+- [ ] ==2.6== Explain the security implications of embedded and specialized systems:
+	- [ ] Embedded Systems:
+	- [ ] SCADA/ ICS
+	- [ ] IoT:
+	- [ ] Specialized:
+	- [ ] VoIP:
+	- [ ] HVAC:
+	- [ ] Drones:
+	- [ ] MFP:
+	- [ ] RTOS:
+	- [ ] System on Chip:
+	- [ ] Communication standards:
+	- [ ] Constraints:
+- [ ] ==2.7== Explain the importance of physical security controls:
+	- [ ] Bollards/ barricades:
+	- [ ] Access control vestibules:
+	- [ ] Badges:
+	- [ ] Alarms:
+	- [ ] Signage:
+	- [ ] Cameras:
+	- [ ] CCTV:
+	- [ ] Industrial camouflage:
+	- [ ] Personnel:
+	- [ ] Locks:
+	- [ ] USB data blocker:
+	- [ ] Lighting:
+	- [ ] Fencing:
+	- [ ] Fire suppression:
+	- [ ] Sensors:
+	- [ ] Drones:
+	- [ ] Visitor logs:
+	- [ ] Faraday cages:
+	- [ ] Air gap:
+	- [ ] Screened subnet/ demilitarized zone:
+	- [ ] Protected cable distribution:
+	- [ ] Secure areas:
+	- [ ] Secure data destruction:
+- [ ] ==2.8== Summarize the basics of cryptographic concepts:
+	- [ ] Digital signatures:
+	- [ ] Key length:
+	- [ ] key stretching:
+	- [ ] Salting:
+	- [ ] Hashing:
+	- [ ] Key exchange:
+	- [ ] Elliptic-curve cryptography:
+	- [ ] Perfect forward secrecy:
+	- [ ] Quantum:
+	- [ ] Post-quantum:
+	- [ ] Ephemeral:
+	- [ ] Modes of operation:
+	- [ ] Blockchain:
+	- [ ] Cipher suites:
+	- [ ] Symmetric vs. asymmetric:
+	- [ ] Lightweight cryptography:
+	- [ ] Stenography:
+	- [ ] Homomorphic encryption:
+	- [ ] Common use cases:
+	- [ ] Limitations:
+
+## 3.0 Implementation
+- [ ] ==3.1== Given a scenario, implement secure protocols:
+- [ ] ==3.2== Given a scenario, implement host or application security solutions:
+- [ ] ==3.3== Implement secure network designs:
+- [ ] ==3.4== Given a scenario, install and configure wireless security settings:
+- [ ] ==3.5== Given a scenario, implement secure mobile solutions:
+- [ ] ==3.6== Given a scenario, apply cybersecurity solutions to the cloud:
+- [ ] ==3.7== Implement identity and account management controls:
+- [ ] ==3.8== Implement authentication and authorization solutions:
+- [ ] ==3.9== Implement public key infrastructure:
+
+## 4.0 Operations and Incident Response
+- [ ] ==4.1== Use the appropriate tool to assess organizational security:
+- [ ] ==4.2== Summarize the importance of policies, processes,and procedures for incident response:
+- [ ] ==4.3== Utilize appropriate data sources to support an investigation:
+- [ ] ==4.4== Apply mitigation techniques or controls to secure an environment:
+- [ ] ==4.5== Explain the key aspects of digital forensics:
+
+## 5.0 Governance, Risk, and Compliance
+- [ ] ==5.0== Compare and contrast various types of controls:
+- [ ] ==5.1== Explain the importance of applicable regulations, standards, or frameworks that impact organizational security posture:
+- [ ] ==5.3== Explain the importance of policies to organizational security:
+- [ ] ==5.4== Summarize risk management processes and concepts:
+- [ ] ==5.5== Explain privacy and sensitive data concepts in relation to security:
+

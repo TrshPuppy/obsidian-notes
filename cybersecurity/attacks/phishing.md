@@ -1,4 +1,6 @@
-
+---
+aliases: [phishing, Phishing]
+---
 # Phishing
 A type of attack using #social-engineering as well as spoofing in order to trick somebody into clicking a malicious link or giving up access credentials.
 - URL and/or something in the email usually has something off
@@ -74,8 +76,10 @@ Gathering information on the victim.
 > https://talosintelligence.com/reputation
 - Can be used to lookup reputations of the #hash-value of a file, etc.
 6. [[malware-sandboxes]] 
-7. [[phish-tool]]:
-> 
+7. [[phish-tool]]
+
+## Defense:
+> See: [[phishing-defense]]
 
 
 >[!links]

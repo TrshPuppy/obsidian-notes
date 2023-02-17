@@ -42,8 +42,9 @@ aliases: [THM, try-hack-me]
 
 # Local Area Network Technologies
 1. [[LAN]]
-2. 
 
+# Phishing Analysis Tools
+See [[phishing]]
 
 # Pyramid of Pain
 [[pyramid-of-pain]] 
