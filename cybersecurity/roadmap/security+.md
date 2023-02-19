@@ -7,7 +7,7 @@ https://comptiacdn.azureedge.net/webcontent/docs/default-source/exam-objectives/
 ## ==1.0 Threats, Attacks, and Vulnerabilities==
 - [ ] ==1.1== Compare and contrast different types of social engineering tactics
 	- [ ] TryHackMe Phishing Module : https://tryhackme.com/module/phishing
-		- [ ] [[phishing]]
+		- [x] [[phishing]]
 			- https://tryhackme.com/module/phishing
 			- #phishing 
 			- #smishing 
@@ -176,6 +176,8 @@ https://comptiacdn.azureedge.net/webcontent/docs/default-source/exam-objectives/
 	- [ ] Integrity measurements:
 	- [ ] Secure coding techniques:
 	- [ ] OWASP:
+		- [ ] [[OWASP]]
+		- [ ] 
 	- [ ] Software diversity:
 	- [ ] Automation/ scripting:
 	- [ ] Elasticity:

@@ -111,6 +111,7 @@ Mail clients connect to #mail-servers using either POP3 or IMAP
 
 ## Security:
 
+See: [[phishing-defense]]
 - Using #BCC / Blind Carbon Copy:
 	- Protects the privacy of email addresses form the original email (recipients unable to see email addresses listed in the BCC field)
 	- 

@@ -28,7 +28,7 @@ Limit number of ports scanned: `-p <number or range>`
 		- ==unless== the firewall is configured to response with a fabricated RST flag
 2. SYN ("half open", "stealth") ( #nmap-sS)
 	- ==This is the default== when running nmap w/ `sudo`
-	- When the target sents the #SYN/ACK-flag, client then sends #RST-flag to prevent the target from repeatedly sending requests.
+	- When the target sends the #SYN/ACK-flag, client then sends #RST-flag to prevent the target from repeatedly sending requests.
 		- Can bypass older #IDS which only scan for a full 3 way handshake
 		- Prevents looging of the connection b/c most apps listening to the port only log fully-established connections.
 		- ==faster than TCP connect scan==

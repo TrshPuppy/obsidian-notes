@@ -2,7 +2,7 @@
 aliases: [SQL-injection, SQLi]
 ---
 # SQL Injection Attack (SQLi)
-A vulnerability in web-security in which the queries sent by an application to its database is exploited by a threat actor.
+A vulnerability in web-security in which the queries sent by an application to its database are exploited by a threat actor.
 - Usually for the purpose of viewing protected data.
 - Data can be modified or deleted by the attacker which can effect the applications content and/or behavior.
 - #SQLi can also be used to compromise the underlying server or back-end infrastructure, or perform a [[denial-of-service]] attack.

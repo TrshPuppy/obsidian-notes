@@ -65,7 +65,7 @@ aliases: [HTB, hack-the-box]
 		1. [[SQL]]
 		2. [[SQL-injection]]
 		3. [[PII]]
-		4. #OWASP
+		4. [[OWASP]]
 		5. [[TTPS]]
 		6. [[gobuster]]
 		7. 
