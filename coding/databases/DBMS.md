@@ -5,13 +5,13 @@ aliases:[DBMS, database-management-systems]
 Create, define, host, and manage databases.
 
 ## Essential Features:
-#Concurrency:
+Concurrency:
 > When multiple users are interacting with the DB simultaneously, #DBMS makes sure the concurrent interactions succeed and not cause data to be corrupted or lost.
 
-#Consistency:
+Consistency:
 > W/ increased concurrent interactions, the data needs to remain consistent and valid throughout the database
 
-#Security:
+Security:
 > Provides "fine-grained" user authentication and permissions to prevent unauthorized viewing or changing of data.
 
 ## Architecture:
@@ -46,6 +46,7 @@ Image:
 
 #### Languages:
 [[SQL]]
+[mysql](/linux-commands/mysql.md)
 
 ### Non-Relational Databases:
 Also called #NoSQL, does not use tables, rows, columns, keys, relationships, or schemas.
