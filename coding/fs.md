@@ -7,8 +7,8 @@ aliases: [fs, node fs, node filesystem]
 	- import syntax: ```import * as fs from 'node:fs/promises';*```
 
 ## Open/read/write a file:
-part of the #Callback-API:
-- #Callback-API performs actions #asyncronous ly (**take care when performing multiple changes to a file bc it may corrup the file's data).
+part of the Callback-API:
+- #Callback-API performs actions #asynchronously (**take care when performing multiple changes to a file bc it may corrupt the file's data**).
 - syntax:
 	- ```fs.write(fd, buffer/string, offset/position, position/encoding, callback)```
 		- parameters:

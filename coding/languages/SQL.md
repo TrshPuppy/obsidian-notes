@@ -25,9 +25,36 @@ The language is considered:
 	- deals with user authentication/ authorization and security
 		- ex: ``GRANT`` or ``REVOKE``
 
-### Command Line:
-[[mysql]] is a command line utility used to authenticate to and interact with a #MySQL / #MariaDB database.
+### Creating a table:
+``` sql
+CREATE TABLE logins (
+    id INT,
+    username VARCHAR(100),
+    password VARCHAR(100),
+    date_of_joining DATETIME
+    );
+```
+##### Table Properties:
+With `CREATE TABLE` there are multiple *properties* which can be set for a table and each of its columns:
+*example:* `AUTO_INCREMENT` keyword can be set on int type columns (+1 every time a new item is added)
+```sql
+ id INT NOT NULL AUTO_INCREMENT,
+```
+> `NOT NULL` will ensure that a column ==is never left empty==
 
+```sql
+    username VARCHAR(100) UNIQUE NOT NULL,
+```
+> `UNIQUE` ensures that every inserted item is unique
+
+```sql
+    date_of_joining DATETIME DEFAULT NOW(),
+```
+> `DEFAULT` specifies the default value (in this example setting the default to `NOW()` will return the current date and time)
+> 
+
+### Command Line:
+[mysql](/linux-commands/mysql.md) is a command line utility used to authenticate to and interact with a #MySQL / #MariaDB database.
 
 ### SQL Standard:
 - The first #SQL-standard was implemented in 1986 to standardize use among vendors
@@ -38,4 +65,7 @@ The language is considered:
 
 >[!links]
 >https://www.sqltutorial.org/
+>
+>Hack the Box Academy, SQL Injection Module:
+>https://academy.hackthebox.com/module/33/section/177
 

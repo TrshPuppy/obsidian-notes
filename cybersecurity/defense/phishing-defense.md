@@ -1,6 +1,6 @@
 
 # Defense Against [[Phishing]] 
-Per the [[MITRE-ATT&CK]] matrix, there are two techniques for mitigating #phishing attacks:
+Per the [MITRE-ATT&CK]() matrix, there are two techniques for mitigating #phishing attacks:
 
 > Playbook: https://www.incidentresponse.org/playbooks/phishing
 
@@ -10,21 +10,21 @@ Per the [[MITRE-ATT&CK]] matrix, there are two techniques for mitigating #phishi
 	- `Users can be trained to identify social engineering techniques and spearfishing attempts.`
 
 ## Domain Configuration:
-#### [[sender-policy-framework]] (SPF)
+#### [sender-policy-framework](/cybersecurity/defense/sender-policy-framework.md) (SPF)
 - Allows a domain to only allow emails from specified IP addresses:
 - Incoming email from an unlisted IP will either be:
 	1. Blocked and dropped (fail)
 	2. Accepted but marked as non-trusted (softfail)
 	3. Accepted (no IPs specified as trusted in the SPF record)
 
-#### [[domainkeys-identified-mail]] (DKIM)
+#### [domainkeys-identified-mail](/cybersecurity/defense/domainkeys-identified-mail.md) (DKIM)
 - Authenticates the origin of an email by using #RSA encryption and matching public and private key pairs.
 
-#### Domain-based Message Authentication Reporting & Conformance ([[DMARC]])
+#### Domain-based Message Authentication Reporting & Conformance ([DMARC](/cybersecurity/defense/DMARC.md))
 - Emails can pass DMARC if they "Align"
 - to align the address in the #from-header of the email must match the domains listed in the SPF and DKIM records
 
-## Secure/Multipurpose Internet Mail Extensions ([[SMIME]])
+## Secure/Multipurpose Internet Mail Extensions ([SMIME](/cybersecurity/defense/SMIME.md))
 Protocol for sending digitally signed and encrypted messages using #public-key-cryptography.
 - Guarantees data integrity and #nonrepudiation 
 - Ex: If Bob wants to send an email to Mary:

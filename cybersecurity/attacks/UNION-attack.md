@@ -1,3 +1,4 @@
+
 # MySQL UNION Attack:
 When an attacker uses the #SQL `UNION` keyword to retrieve data from more than one table in the database.
 
@@ -14,7 +15,7 @@ Example:
 2. The data types of the columns must be the same or compatible
 
 Sample tables:
-```
+```sql
 DROP TABLE IF EXISTS t1;
 DROP TABLE IF EXISTS t2;
 
@@ -31,7 +32,7 @@ INSERT INTO t2 VALUES (2),(3),(4);
 ```
 
 This statement combines result sets returned from `t1` and `t2`:
-```
+```sql
 SELECT id
 FROM t1
 UNION
@@ -40,7 +41,7 @@ FROM t2;
 ```
 
 Final result- contains values from separate result sets returned from the queries:
-```
+``` shell-session
 +----+
 | id |
 +----+

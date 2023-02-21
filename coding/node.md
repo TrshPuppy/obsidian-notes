@@ -2,4 +2,6 @@
 aliases: [node.js, node]
 ---
 >[!related]
-> [[fs]]
+> [fs](/coding/fs.md)
+
+

@@ -2,7 +2,7 @@
 aliases: [SPF, sender-policy-framework]
 ---
 # Sender Policy Framework/ #SPF:
-Used to authenticate the send of an [[email]] by verifying that the IP address of a mail server is authorized to send email from that specific domain.
+Used to authenticate the send of an [email](/networking/email.md) by verifying that the IP address of a mail server is authorized to send email from that specific domain.
 - Similar to #DMARC, an #SPF-TXT record is a list of IP addresses with care permitted to send email on behalf of your #domain 
 	- When a sender tries to send an email to an email receiving server for delivery, the server checks to see ==if the sending IP is on the domain's list of allowed senders==
 		- If it is: a link can be established b/w the email and the domain
@@ -13,7 +13,7 @@ Used to authenticate the send of an [[email]] by verifying that the IP address o
 -THM
 
 ## SPF record format:
-> SPF syntax: https://dmarcian.com/spf-syntax-table/
+> [SPF syntax:](https://dmarcian.com/spf-syntax-table/)
 - `` v=spf ip4:127.0.0.1 include:_spf.google.com -all``
 	- `vspf1`: the start of the record
 	- `ip4:127.0.0.1`: which IP (and version) can send mail
@@ -38,7 +38,7 @@ v=spf1 ip4:40.113.200.201 ip6:2001:db8:85a3:8d3:1319:8a2e:370:7348 include:third
 	- `~all`: (softfail)- non-authorized emails will be accepted ==but marked==
 	- `+all`: ==not secure:== allows any server to send email from your domain 
 
-## [[SPF-surveyor]]:
+## [SPF-surveyor](/cybersecurity/tools/SPF-surveyor.md):
 Diagnostic tool from [dmarcian](https://dmarcian.com) which shows a graphical SPF record
 
 >[!Links]

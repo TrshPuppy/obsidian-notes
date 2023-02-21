@@ -30,7 +30,7 @@ Limit number of ports scanned: `-p <number or range>`
 	- ==This is the default== when running nmap w/ `sudo`
 	- When the target sends the #SYN/ACK-flag, client then sends #RST-flag to prevent the target from repeatedly sending requests.
 		- Can bypass older #IDS which only scan for a full 3 way handshake
-		- Prevents looging of the connection b/c most apps listening to the port only log fully-established connections.
+		- Prevents logging of the connection b/c most apps listening to the port only log fully-established connections.
 		- ==faster than TCP connect scan==
 	- Disadvantages:
 		- requires root privileges
@@ -41,7 +41,7 @@ Limit number of ports scanned: `-p <number or range>`
 	- more difficult to scan for:
 		- When there is no response when a packet is sent to an ==open== UDP port:
 			- nmap marks response as "`open|filtered`"
-		- ==closed port== : nmap recieves an [[ICMP]] "ping" packet which nmap marks as closed
+		- ==closed port== : nmap receives an [[ICMP]] "ping" packet which nmap marks as closed
 	- Disadvantages:
 		- scans take longer
 			- ==tip== if scanning with `-sU` use `top-ports` so it only scans the top 1000 ports
@@ -49,7 +49,7 @@ Limit number of ports scanned: `-p <number or range>`
 	- These scans are stealthier because they send ==malformed packets==
 		- Most firewalls automatically block incoming requests w/ the SYN flag but don't block packets ==without== the SYN flag
 	1. NULL scan ( #nmap-sN)
-		- a TCP request sent without any flags set (pakcet is empty)
+		- a TCP request sent without any flags set (packet is empty)
 		- closed port: responds w/ "RST"
 	2. FIN ( #nmap-sF)
 		- sends request w/ the #FIN-flag set

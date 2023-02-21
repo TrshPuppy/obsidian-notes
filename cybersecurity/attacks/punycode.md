@@ -11,7 +11,7 @@ When an attacker redirects a user to a malicious domain that appears legitimate 
 
 ## Punycode and ASCII:
 Punycode works by converting words which cannot be written in ASCII into a #unicode-ascii-encoding.
-- [[DNS]] is limited to ASCII characters
+- [DNS](/networking/routing/DNS.md) is limited to ASCII characters
 - punycode works by including non-ASCII characters into a #domain-name by creating #bootstring-encoding of Unicode 
 	- (complex encoding process)
 	- #RFC-3492

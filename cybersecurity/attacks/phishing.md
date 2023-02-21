@@ -50,9 +50,9 @@ Gathering information on the victim.
 			- victim has more access to critical resources and credentials
 
 ## Emails:
-[[email]] phishing is very common
+[email](/networking/email.md) phishing is very common
 
-#### Characteristics of phishing emails:
+### Characteristics of phishing emails:
 - the sender email masquerades as a trusted entity #email-spoofing
 - subject line will see legitimate
 	- may use keywords like "invoice"
@@ -75,12 +75,11 @@ Gathering information on the victim.
 5. Talos Reputation Center:
 > https://talosintelligence.com/reputation
 - Can be used to lookup reputations of the #hash-value of a file, etc.
-6. [[malware-sandboxes]] 
-7. [[phish-tool]]
+6. [malware-sandboxes](/cybersecurity/tools/malware-sandboxes.md) 
+7. [phish-tool](/cybersecurity/tools/phish-tool.md)
 
 ## Defense:
-> See: [[phishing-defense]]
-
+> See: [phishing-defense](/cybersecurity/defense/phishing-defense.md)
 
 >[!links]
 >Professor Messer Sec+

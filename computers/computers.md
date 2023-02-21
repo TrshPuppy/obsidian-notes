@@ -1,4 +1,2 @@
 
->[!neurons]
->[[hardware]]
->[[operating-system]]
+

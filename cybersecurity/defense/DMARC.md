@@ -3,7 +3,7 @@ aliases: [DMARC, domain-based-message-authentication-reporting-and-conformance]
 ---
 # DMARC
 (I'm not typing this sh-t out again)
-An open source standard which ties together the results of [[domainkeys-identified-mail|DKIM]] and [[sender-policy-framework|SPF]] through a process called "alignment".
+An open source standard which ties together the results of [DKIM](/cybersecurity/defense/domainkeys-identified-mail.md) and [SPF](/cybersecurity/defense/sender-policy-framework.md) through a process called "alignment".
 - DKIM (a tamper-evident domain seal associated with an email)
 - SPF (a published list of servers which are authorized to send [[email]] on behalf of a domain)
 

@@ -1,4 +1,3 @@
 
->[!neurons]
->[[rainbow-table]] 
+
 

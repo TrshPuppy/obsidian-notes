@@ -1,36 +1,37 @@
 
 # Docker
-Docker [[containers]] sit on top of the host [[operating-system]]:
-- A #docker-container uses the host [[operating-system]]
+Docker [containers](/computers/containers.md)
+) sit on top of the host [operating-system](/computers/operating-system.md):
+- A #docker-container uses the host #operating-system
 	- prefers [[linux]]-based OS's
-	- lighter than a [[virtual-machine]] because it piggy-backs on the pre-existing OS
+	- lighter than a #virtual-machine because it piggy-backs on the pre-existing OS
 	- #boot s faster
-	- Occupies less [[memory]]
-	- data volumes can be shared between [[containers]]
-- the [[containers]] also include all of the dependencies required for the #application to run.
+	- Occupies less memory
+	- data volumes can be shared between containers
+- the containers also include all of the dependencies required for the #application to run.
 
-## Docker vs [[virtual-machine]]s:
-- [[operating-system]]s have two components:
+## Docker vs virtual-machines:
+- operating-systems have two components:
 	- #kernel
 	- #applications 
-- [[virtual-machine]]s and Docker virtualize different parts of the OS
+- virtual-machines and Docker virtualize different parts of the OS
 	- Docker: virtualizes the #applications layer
 		- needs to use the #host 's #kernel
-	- [[virtual-machine]]s virtualize the complete [[operating-system]] (including the #kernel and #applications )
+	- virtual-machines virtualize the complete operating-system (including the #kernel and #applications)
 
 ## Docker Engine
 The #docker-engine is installed on the #host machine and allows the #docker-container s to be built and run using Docker services.
-- Can be accessed from the #host -side [[command-line-interface]]
+- Can be accessed from the #host -side command-line-interface
 - uses a #client-server-architecture:
-	- installed on the #host [[hardware]] and containers the docker-server ( #daemon )
+	- installed on the #host [hardware](/computers/hardware.md) and containers the docker-server ( #daemon )
 	- controls how the #client is created
-	- #client and #server communitcate using #REST-API
+	- #client and #server communicate using #REST-API
 
 ## Components of Docker:
 1. #client:
-	1. accessed from host [[command-line-interface]]
+	1. accessed from host command-line-interface
 	2. where the #daemon and #registry-service are run from
-	3. from the [[command-line-interface]] the #user can build #docker-image s and run #docker-container s by sending commands from the CLI to the #server 
+	3. from the command-line-interface the #user can build #docker-image s and run #docker-container s by sending commands from the CLI to the #server 
 2. #docker-image :
 	1. a template with instructions which is used to build #docker-container s 
 		1. built using the #docker-file which is a text file w/ commands for building the image
@@ -44,10 +45,10 @@ The #docker-engine is installed on the #host machine and allows the #docker-cont
 3. #docker-container :
 	1. runtime of the image
 	2. . standalone executable software package which includes #applications and their dependencies
-		1. multiple #docker-container s can run on the same infrastructure and share [[operating-system]]s with other containters
-		2. isolared
+		1. multiple #docker-container s can run on the same infrastructure and share operating-systems with other containers
+		2. isolated
 	3. bound to a port
-	4. has a virtual filesystem abstracted from the [[operating-system]]
+	4. has a virtual file system abstracted from the operating-system
 4. #docker-registry
 	1. open-source, #server -side service which hosts #docker-image s which can be shared easily (amongst team members)
 	2. Docker has a default registry called #docker-hub 

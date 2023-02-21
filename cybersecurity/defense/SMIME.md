@@ -2,7 +2,7 @@
 aliases:[SMIME, S/MIME]
 ---
 # Secure/ Multipurpose Internet Mail Exchange
-A protocol for digitally signing and encrypting [[email]] which provides the following services:
+A protocol for digitally signing and encrypting [email](/networking/email.md) which provides the following services:
 - #encryption: to protect the content of the email
 - #digital-signatures: to verify the identity of the sender of the email
 

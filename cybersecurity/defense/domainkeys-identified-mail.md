@@ -2,7 +2,7 @@
 aliases: [domainkeys-identified-mail, DKIM]
 ---
 # DomainKeys Identified Mail ( #DKIM)
-Used to authenticate [[email]] which is being sent. #DKIM-record(s) exist in the #DNS and can survive forwarding (unlike #SPF).
+Used to authenticate [email](/networking/email.md) which is being sent. #DKIM-record(s) exist in the #DNS and can survive forwarding (unlike #SPF).
 
 ## DKIM Record format:
 ```

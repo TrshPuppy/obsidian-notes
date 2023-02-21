@@ -15,11 +15,11 @@ Cyber threat intelligence model designed by #David-Bianco
 		- *easy* for a threat actor to recover from
 	- ==ex: [[Fast-Flux]]==
 3. #domain-names 
-	- Harder for an attacker to recover from/ change because they have to re-register, modify [[DNS]] records and purchase new domains
+	- Harder for an attacker to recover from/ change because they have to re-register, modify [DNS](/networking/routing/DNS.md) records and purchase new domains
 		- However, DNS providers have #APIs which make it easy to purchase/register domains
-	- [[punycode]]
+	- [punycode](/cybersecurity/attacks/punycode.md)
 		- using Unicode to encode non-ASCII characters
-	- [[URL-shorteners]]
+	- [URL-shorteners](/cybersecurity/attacks/URL-shorteners.md)
 4. #host-artifacts 
 	- More annoying for a hacker if you're able to detect the observable traces they've left on a victimized system.
 	- may include: #registry-values, suspicious process execution, attack patterns/ #IOC s, files left by malicious applications.
@@ -27,7 +27,6 @@ Cyber threat intelligence model designed by #David-Bianco
 
 - #zsh
 	- zshrc file
-
 
 host Artifacts
 - #emotet

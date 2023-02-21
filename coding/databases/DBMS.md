@@ -45,7 +45,7 @@ Image:
 > the `id` related to users in the `users` table is the same as `user_id` used to relate to user posts in the `posts` table. This type of relationship is more efficient because, for example, not all data related to each user has to be stored with their posts.
 
 #### Languages:
-[[SQL]]
+[SQL](/coding/languages/SQL.md) 
 [mysql](/linux-commands/mysql.md)
 
 ### Non-Relational Databases:
@@ -60,4 +60,4 @@ Also called #NoSQL, does not use tables, rows, columns, keys, relationships, or 
 	4. #graph-DB
 
 #### Languages:
-[[MongoDB]] is the most common type of NoSQL database.
+[MongoDB](/coding/databases/MongoDB.md) is the most common type of NoSQL database.
