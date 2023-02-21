@@ -29,8 +29,8 @@ Steve:
 	- ex: want to access Google.com
 		- First: [[DNS]] servers (same IP as the router)
 			- IP: 192.168.0.1
-			- Browser asks IP stack in OS for IP address wich corresponds to Google.com
-				- neeeds to find the DNS server
+			- Browser asks IP stack in OS for IP address which corresponds to Google.com
+				- needs to find the DNS server
 					- looks at  routing table
 						-  the DNS is 192.168.0.1
 			- [[ARP]] request sent:
@@ -67,7 +67,7 @@ Steve:
 						- once a router knows the answer, it will send the info back to the original router
 							- route can then be saved in the routers routing table
 			- router has a public IP (from ISP) and its own IP w/i your network
-- Localhost:
+- #Localhost:
 	- The web server can talk to the computers IP stack
 		- listens to HTTP request etc.
 	- web browser wants to talk to 127.0.0.1
