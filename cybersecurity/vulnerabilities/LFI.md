@@ -1,5 +1,5 @@
 ---
-aliases:[LFI, local-file-include]
+aliases: [LFI, local-file-include]
 ---
 # Local File Include Vulnerability
 Type of #file-inclusion-vulnerability. Takes advantage of server side #scripting-languages like JavaScript and PHP which allow web applications to read files from file systems as they execute code.
