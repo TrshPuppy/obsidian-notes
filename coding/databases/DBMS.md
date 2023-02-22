@@ -1,5 +1,5 @@
 ---
-aliases:[DBMS, database-management-systems]
+aliases: [DBMS, database-management-systems]
 ---
 # Database Management Systems
 Create, define, host, and manage databases.

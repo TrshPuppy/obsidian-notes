@@ -14,8 +14,8 @@ Networking nerd badge
 		- unique, static/ can't be changed
 		- simialr to a #MAC-addresses 
 			- (other than #MAC-spoofing)
-4. [IP addresses](/networking/OSI-reference-model/IP-addresses.md)
-5. [MAC-addresses](/networking/OSI-reference-model/MAC-addresses.md)
+4. [IP addresses](IP-addresses.md)
+5. [MAC-addresses](MAC-addresses.md)
 6. [ping](/linux-commands/ping.md)
 
 # Intro to LAN
@@ -27,7 +27,7 @@ Networking nerd badge
 6. #switch 
 
 # OSI Model
-1. [OSI-reference-model](/networking/OSI-reference-model/OSI-reference-model.md)
+1. [OSI-reference-model](OSI-reference-model.md)
 	1. #application-layer 
 	2. #presentation-layer 
 	3. #session-layer 
@@ -38,7 +38,7 @@ Networking nerd badge
 		1. #routing 
 		2. #OSPF
 		3. #RIP
-	6. [data-link-layer](/networking/OSI-reference-model/data-link-layer.md)
+	6. [data-link-layer](data-link-layer.md)
 		1. MAC-addresses
 		2. #network-interface-card 
 	7. #physical-layer 

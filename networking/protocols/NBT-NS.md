@@ -1,6 +1,6 @@
 
 # NetBIOS Name Service
-A Windows protocol used to translate #NetBIOS names to [IP Addresses](/networking/OSI-reference-model/IP-addresses.md) on a local network. Is the predecessor to [LLMNR](/networking/protocols/LLMNR.md).
+A Windows protocol used to translate #NetBIOS names to [IP Addresses](IP-addresses.md) on a local network. Is the predecessor to [LLMNR](/networking/protocols/LLMNR.md).
 
 ## Mechanism:
 Each machine on the network is assigned a #NetBIOS-name by the NBT-NS service. 

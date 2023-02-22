@@ -1,7 +1,7 @@
 
 # BlueKeep Vulnerability
 #### #CVE-2019-0708 
-Vulnerability in Windows OSs using [[RDP]]
+Vulnerability in Windows OSs using [RDP](/networking/protocols/RDP.md)
 
 ## Description:
 This vulnerability exists in the #RDP used by the listed vulnerable OSs.
@@ -14,7 +14,7 @@ This vulnerability exists in the #RDP used by the listed vulnerable OSs.
 1. Vulnerable Windows OSs:
 	- Windows 2000
 	- Vista
-	- XP fhdjkhdjfhdkjah
+	- XP 
 	- 7
 	- 2003, 2003 R2
 	- 2008, 2008 R2
