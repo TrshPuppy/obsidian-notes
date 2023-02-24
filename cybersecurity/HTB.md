@@ -62,10 +62,50 @@ aliases: [HTB, hack-the-box]
 
 2. Tier One:
 	1. Appointment
-		1. [[SQL]]
+		1. [SQL](/coding/languages/SQL.md)
 		2. [[SQL-injection]]
 		3. [[PII]]
 		4. [[OWASP]]
 		5. [[TTPS]]
 		6. [[gobuster]]
-		7. 
+	2. Sequel
+		1. [mysql](/linux-commands/mysql.md)
+			1. USE
+			2. DESCRIBE
+			3. SHOW TABLES
+		2. mariaDB
+	3. Crocodile 
+		1. nmap
+			1. -sC (scripts)
+		2. ftp
+			1. get
+			2. anonymous
+			3. codes
+		3. http/gobuster
+	4. Responder
+		1. [LFI Vulnerability](/cybersecurity/vulnerabilities/LFI.md)
+		2. [RFI Vulnerability](/cybersecurity/vulnerabilities/RFI.md)
+		3. [NTLM](/networking/protocols/NTLM.md)
+			1. #Kerberos 
+		4. [Responder](/cybersecurity/tools/responder.md)
+		5. [LLMNR](/networking/protocols/LLMNR.md)
+		6. [john the ripper](/cybersecurity/tools/john.md)
+		7. evil-winrm
+	5. Three
+		1. 
+
+CTF stuff w/ codecore https://ctftime.org/
+- past write ups: archive
+- VM
+
+#virtual-hosting:  one server can server several virtual hosts
+![[Pasted image 20230221191650.png]]
+#DNS-enumeration
+HTTP request #host-header 
+#etc-host
+#resolving
+WHAT IS THE HOST FILE ("always know where the host file is")
+
+curl -L (layers?)
+- curl cant execute code like your browser will
+- "index of" --> directory traversal

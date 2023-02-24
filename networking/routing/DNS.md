@@ -2,7 +2,25 @@
 # Domain Name System
 a #TCP/IP protocol which allows a device to ask a #DNS server for the #IP-address attached to a #domain-name.
 
-# Steps w/ example:
+## Domain Hierarchy:
+![[Pasted image 20230223211444.png]]
+-[Try Hack Me](https://tryhackme.com/room/dnsindetail)
+### Top Level Domain:
+Most right-hand part of the domain name (`.com` is the #TLD of `tryhackme.com`)
+
+##### #gTLD:
+A Generic Top Level Domain is meant to tell the user the domain name's purpose (like .com for commercial, .edu for education)
+
+##### #ccTLD:
+Used for geographical purposes (`.ca` for Canada)
+
+### Second Level Domain:
+The second level domain in `tryhackme.com` would be `tryhackme`. It's limited to 63 characters + the TLD and can only use a-z and 0-9. Also cannot start or end with hyphens or have consecutive hyphens.
+
+### Subdomain:
+
+
+## Steps w/ example:
 You type `www.twitch.com` into your browser:
 1. computer checks its local #cache to see if it already knows the IP address stored for that website
 	- if it does: great
