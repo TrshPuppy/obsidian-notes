@@ -5,7 +5,6 @@ aliases: [HTB, hack-the-box]
 
 1. Tier Zero:
 	1. Meow
-		1. [[virtual-machine]]s
 		2. [[telnet]] 
 		3. #port-23 
 		4. [[telnet-command]]
