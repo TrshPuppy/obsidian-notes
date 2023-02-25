@@ -1,98 +1,62 @@
 ---
 aliases: [THM, try-hack-me]
 ---
-
 # Introductory Networking
-1. [[OSI-reference-model]]
-	1. [[application-layer]]
-	2. "translation services"
-	3. [[presentation-layer]]
-	4. [[physical-layer]]
-		1. binary --> electrical 
-		2. electrical --> binary
-	5. [[data-link-layer]]
-		1. #network-card 
-		2. [[MAC-addresses]]
-	6. [[network-layer]]
-		1. #IPV4 
-		2. #IP-address 
-		3. Addressing
-		4. TCP
-			1. #segment
-		5. UDP
-			1. #datagram
-	7. ==layer protocols==
-2. #encapsulation 
-3. #TCP/IP 
-4. Networking Tools:
-	1. Ping:
-		1. [[ping]]
-	2. Traceroute:
-		1. [[traceroute]]
-	3. WHOIS
-		1. [[whois]]
-	4. Dig
-		1. [[dig]]
-		2. [[DNS]] 
-5. Further reading:
-	1. https://www.amazon.co.uk/Interconnecting-Cisco-Network-Devices-ICND1/dp/1587054620/ref=sr_1_1?keywords=Interconnecting+Cisco+Network+Devices%2C+Part+1&qid=1583683766&sr=8-1
+1. [OSI-reference-model](/networking/OSI/OSI-reference-model.md)
+2. Networking Tools:
+	1. [Ping command](ping.md)
+	2. [Traceroute](traceroute.md)
+	3. [Who Is Lookup](whois.md)
+	4. [Dig](/linux-commands/dig,md)
+		2. [DNS](/networking/protocols/DNS.md) 
 
 # What is Networking:
-1.[[network-fundamentals]]
+1. [Networking Fundamentals](/cybersecurity/THM/networking-fundamentals.md)
 
 # Local Area Network Technologies
-1. [[LAN]]
+1. [LAN](/networking/routing/LAN.md)
 
 # Phishing Analysis Tools
-See [[phishing]]
+See: [Phishing](/cybersecurity/attacks/phishing.md) and [Phishing Defense](/cybersecurity/defense/phishing-defense.md)
 
 # Pyramid of Pain
-[[pyramid-of-pain]] 
-1. [[hashing]]
+[pyramid-of-pain](/cybersecurity/THM/pyramid-of-pain.md)
+1. [hashing](/cybersecurity/hashing.md)
 	1. #MD5
 	2. #SHA-1 
 	3. #SHA-2 
-	4. [[DIFR-Report]]
-	5. [[FireEye-Threat-Research]]
-	6. [[Virus-Total]] 
-	7. [[OPSWAT]]  
-	8. [[Cyber-Chef]]
-	9. [[conti]]
+	4. [DIFR-Report](/cybersecurity/literature/DIFR-report.md)
+	5. [FireEye-Threat-Research](/cybersecurity/literature/FireEye-Threat-Research.md)
+	6. [Virus-Total](/cybersecurity/tools/virus-total.md) 
+	7. [OPSWAT](/cybersecurity/tools/OPSWAT.md)  
+	8. [Cyber-Chef](/cybersecurity/tools/Cyber-Chef.md)
+	9. [Conti Malware](/cybersecurity/malware/conti.md)
 2. #IP-addresses 
-	1. [[Akamai]]
-	2. [[Fast-Flux]]
-	3. [[ASN]] 
-	4. [[dig]]
-	5. [[curL]]
-	6. #curl-I 
-	7. #curl-L 
+	1. [Akamai](/cybersecurity/literature/Akamai.md)
+	2. [Fast-Flux](cybersecurity/attacks/Fast-Flux.md)
+	3. [ASN](/networking/ASN.md) 
+	4. [curL](curL.md)
+		1. #curl-I 
+		2. #curl-L 
 3. #domain-names
 	1. #sub-domain
 	2. #top-level-domain
-	3. [[DNS]]
-	4. [[punycode]]
-	5. [[URL-shorteners]]
+	3. [DNS](/networking/routing/DNS.md)
+	4. [punycode](/cybersecurity/attacks/punycode.md)
+	5. [URL-shorteners](/cybersecurity/attacks/URL-shorteners.md)
 4. #host-artifacts
 	1. #IOC 
 	2. #user-agent-string 
-	3. [[emotet]]
-	4. 
+	3. [Emotet malware](/cybersecurity/malware/emotet.md)
 5. #network-artifacts
-6. [[TTPS]]
-	1. [[Mitre-attack-matrix]]
+6. [TTPS](TTPS.md)
+	1. [MITRE-ATT&CK Matrix](/cybersecurity/literature/MITRE-ATT&CK.md)
 	2. #APT
-	3. [[Chimera]]
-	4. [[cobalt-strike]]
-	5. #muling
-	6. [[APT-40]]
-	7. #dev/stg
-
-# Junior Sec Analyst Intro
-1. [[SOC-analyst]] 
-2. [[CISA]]
+	3. [APT-40](APT-40.md)
+	4. #dev/stg
 
 # Cyber Kill Chain
-1. [[cyber-kill-chain]] 
+1. [Cyber Kill Chain](/cybersecurity/THM/cyber-kill-chain.md)
 	1. #reconnaissance
 		1. #OSINT
 		2. #email-harvesting
@@ -104,22 +68,20 @@ See [[phishing]]
 			1. #macros
 				1. ex: docm vs docx (file extention)
 				2. macros have to be enabled except in "trueste contexts"
-				3. [[candy-drop]]
+				3. [Candy Drop](/cybersecurity/attacks/candy-drop.md)
 			2. #C2 
 			3. #backdoor
-			4. [[watering-hole]]
-			5. reflections on trusting trust thompson
-			6. TCM trusted computing base, trusted execution model
+			4. [Watering Hole Attack](/cybersecurity/attacks/watering-hole.md)
 
 # Metasploit
 - #singles
 - #stagers
-- [[metasploit]]
+- [Metasploit](/cybersecurity/tools/metasploit.md)
 - #stages
-- [[eternal-blue]]
-	- #SMB  
+	- [SMB](/networking/protocols/SMB.md)
 
 # Nmap/ [[nmap]] 
+[Nmap CLI tool](nmap.md)
 - #Syn-Scan
 - #UDP-scan
 - #TCP-scan
@@ -129,12 +91,7 @@ See [[phishing]]
 - output
 - ports
 - scripts
-	- vuln scripts
-- #TCP/IP 
-	- https://en.wikipedia.org/wiki/Transmission_Control_Protocol#Protocol_operation
-	- #3-way-handshake 
-- #UDP
-	- https://en.wikipedia.org/wiki/User_Datagram_Protocol#Comparison_of_UDP_and_TCP
+	- vuln script
 
 
 my first targets on a machine: ~/.${SHELL}rc, ~/.${SHELL}_profile, ~/.${SHELL}_logout, ~/.${SHELL}_history, ~/.ssh and ~/.aws and a such. I really love IDE scratch files as well.

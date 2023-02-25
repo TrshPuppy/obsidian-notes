@@ -54,7 +54,7 @@ With `CREATE TABLE` there are multiple *properties* which can be set for a table
 > 
 
 ### Command Line:
-[mysql](/linux-commands/mysql.md) is a command line utility used to authenticate to and interact with a #MySQL / #MariaDB database.
+[mysql](mysql.md) is a command line utility used to authenticate to and interact with a #MySQL / #MariaDB database.
 
 ### SQL Standard:
 - The first #SQL-standard was implemented in 1986 to standardize use among vendors

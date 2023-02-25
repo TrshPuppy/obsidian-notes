@@ -1,7 +1,6 @@
 
 # Gobuster
-Gobuster is a tool used to #brute-force #URIs including directories and files as well as #DNS subdomains.
-- Enumerates hidden directories and files
+Gobuster is a tool used to #brute-force #URIs including directories and files as well as #DNS subdomains. It does so by enumerating hidden directories and files.
 
 ## Usage:
 ```
@@ -37,3 +36,7 @@ This example scans an IP address for directory busting using a wordlist
 - To get a list of options specific to a mode use `gobuster <mode> -h`
 - Gobuster is written in  #golang which makes it faster than similar tools
 - ==Disadvantage:== Can't do recursive enumeration (if you want to enumerate on directories below the outer directory, you have to run it again with the next directory deep as the target)
+
+>[!Links]
+>[Gobuster Homepage Kali Linux](https://www.kali.org/tools/gobuster/)
+

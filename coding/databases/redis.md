@@ -12,7 +12,7 @@ An #in-memory-database
 	- stored on disk in a form that is unsuitable for random data access
 
 >[!related]
->[redis-cli](/linux-commands/redis-cli.md)
+>[redis-cli](redis-cli.md)
 
 >[!links]
 >https://en.wikipedia.org/wiki/Redis

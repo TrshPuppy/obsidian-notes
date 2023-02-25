@@ -69,7 +69,7 @@ aliases: [HTB, hack-the-box]
 		5. [[TTPS]]
 		6. [[gobuster]]
 	2. Sequel
-		1. [mysql](/linux-commands/mysql.md)
+		1. [mysql](mysql.md)
 			1. USE
 			2. DESCRIBE
 			3. SHOW TABLES
