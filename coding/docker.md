@@ -1,7 +1,6 @@
 
 # Docker
-Docker [containers](/computers/containers.md)
-) sit on top of the host [operating-system](/computers/operating-system.md):
+Docker [containers](/computers/containers.md) sit on top of the host [operating-system](/computers/operating-system.md):
 - A #docker-container uses the host #operating-system
 	- prefers [[linux]]-based OS's
 	- lighter than a #virtual-machine because it piggy-backs on the pre-existing OS
@@ -23,7 +22,7 @@ Docker [containers](/computers/containers.md)
 The #docker-engine is installed on the #host machine and allows the #docker-container s to be built and run using Docker services.
 - Can be accessed from the #host -side command-line-interface
 - uses a #client-server-architecture:
-	- installed on the #host [hardware](/computers/hardware.md) and containers the docker-server ( #daemon )
+	- installed on the #host [hardware](/computers/hardware.md) and contain the docker-server ( #daemon )
 	- controls how the #client is created
 	- #client and #server communicate using #REST-API
 
@@ -36,7 +35,7 @@ The #docker-engine is installed on the #host machine and allows the #docker-cont
 	1. a template with instructions which is used to build #docker-container s 
 		1. built using the #docker-file which is a text file w/ commands for building the image
 		2. once the #docker-file is made, it is stored in 
-		3. oncce the #docker-file is made, it is stored in a #repository ( #docker-hub)
+		3. once the #docker-file is made, it is stored in a #repository ( #docker-hub)
 			1. registry.hub.docker.com
 	2. Can be pulled from the hub
 		1. has versioning

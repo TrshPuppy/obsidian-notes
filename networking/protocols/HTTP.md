@@ -1,8 +1,6 @@
 
 # Hypertext Transfer Protocol
 
-
-
 #port-80 
 
 
