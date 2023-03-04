@@ -6,9 +6,9 @@ Junior SOC Analysts/ Tier 1 SOC analysts are responsible for #triage
 ### Responsibilities:
 - monitor and investigate security alerts
 - configure and manage security tools
-- develope/ implement basic #IDS (intrustion detection system) signatures
+- develop/ implement basic #IDS (intrusion detection system) signatures
 - participate in SOC working groups/ meetings
-- create tickets and escelate security incidents to #tier-2 / team lead
+- create tickets and escalate security incidents to #tier-2 / team lead
 
 ## Required Qualifications:
 - 0-2 years security experience
@@ -23,7 +23,7 @@ Junior SOC Analysts/ Tier 1 SOC analysts are responsible for #triage
 - stay informed of current cybersecurity thretes
 	- gathering intelligence data on latest threats & threat actors
 		- #TTPs 
-		- ex: good place to look for TTPs etc is [[CISA]]
+		- ex: good place to look for TTPs etc is [CISA](https://www.cisa.gov/)
 - maintenance (updating firewalls, patching vulnerabilities, black-listing, etc.)
 
 ## Monitoring and Investigation:
@@ -33,4 +33,8 @@ Junior SOC Analysts/ Tier 1 SOC analysts are responsible for #triage
 - Investigation:
 	- performing triage on ongoing alerts
 	- exploring and trying to understand how an attack works
-	- preventing bad things from happpening if possible
+	- preventing bad things from happening if possible
+
+>[!Links]
+>[Try Hack Me: SOC Analyst](https://tryhackme.com/room/jrsecanalystintrouxo)
+

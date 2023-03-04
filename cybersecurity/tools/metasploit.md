@@ -4,8 +4,8 @@
 - Primary use is for ethical hacking/ #penetration-testing
 
 ## Main components:
-### [[msfconsole]]
-- main CL interface
+### [msfconsole](/CLI-tools/msfconsole.md)
+Main CL interface.
 
 ### Modules:
 anything which is packaged up and can be used to perform a specific task
@@ -13,7 +13,7 @@ anything which is packaged up and can be used to perform a specific task
 	- #exploits: piece of code which uses a vulnerability in a target system
 	- #payload: the code which runs on a target system once it has been accessed maliciously (via an exploit)
 	- #evasions: these modules attempt to evade antivirus software.
-	- #post: Post modules are useful on the final stage of a penetration test b/c they help cleanup any leftowver evidence from the exploit/ payload/ etc.
+	- #post: Post modules are useful on the final stage of a penetration test b/c they help cleanup any leftover evidence from the exploit/ payload/ etc.
 
 ### Auxiliary:
 Any supporting modules like scanners, crawlers, fuzzers, etc.
@@ -25,11 +25,11 @@ Allow you to encode an exploit and payload so that it won't be detected by a sig
 - #encoders sometimes have a limited success rate b/c antivirus software can use other checks to detect malicious software.
 
 ### NOPs (No Operations)
-#nops literally do nothing and are used as buffers to acheive consistent payload sizes.
-- represented byt Intel #x86 CPU family
+#nops literally do nothing and are used as buffers to achieve consistent payload sizes.
+- represented by Intel #x86 CPU family
 
 ## Creating a #shell:
-A shell is a persistent, interactive connection b/w an "attacker" (or metasploit/ msfconsole) and the target machine which allows for the execution of commands on the target system.
+A shell is a persistent, interactive connection b/w an "attacker" (or Metasploit/ msfconsole) and the target machine which allows for the execution of commands on the target system.
 - Metasploit offers payloads which can open shells on a target system
 
 ## Types of Payloads:

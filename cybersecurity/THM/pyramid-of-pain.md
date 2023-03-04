@@ -23,21 +23,17 @@ Cyber threat intelligence model designed by #David-Bianco
 4. #host-artifacts 
 	- More annoying for a hacker if you're able to detect the observable traces they've left on a victimized system.
 	- may include: #registry-values, suspicious process execution, attack patterns/ #IOC s, files left by malicious applications.
+	- ex: [Emotet malware](/cybersecurity/malware/emotet.md)
+	- [Lochard's Exchange Principle](https://en.wikipedia.org//wiki/Locard's_exchange_principle)  
+		- A criminal will always leave something behind at the crime scene
 5. #network-artifacts 
+	1. #user-agent-string
+		- [Wireshark](/cybersecurity/tools/wireshark.md)
+		- #tshark (command)
 
-- #zsh
-	- zshrc file
 
-host Artifacts
-- #emotet
-- https://en.wikipedia.org//wiki/Locard's_exchange_principle
-- Dynamic Binary Instrumentation (DBI) frameworks
-	- https://criticaldefence.com/malware-analysis-part-1/
-
-Network artifacts
-- #user-agent-string
-	- wireshark
-	- #tshark (command)
-
-> [!links]
-> https://www.sans.org/tools/the-pyramid-of-pain/
+> [!Links]
+> [Try Hack Me: Pyramid of Pain](https://tryhackme.com/room/pyramidofpainax?trk=public_post_feed-article-content)
+>  [Sans: Pyramid of Pain](https://www.sans.org/tools/the-pyramid-of-pain/)
+> Malware Analysis:
+> [Dynamic Binary Instrumentation frameworks](https://criticaldefence.com/malware-analysis-part-1/)

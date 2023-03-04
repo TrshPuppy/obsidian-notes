@@ -46,7 +46,7 @@ Image:
 
 #### Languages:
 [SQL](/coding/languages/SQL.md) 
-[mysql](/linux-commands/mysql.md)
+[mysql](mysql.md)
 
 ### Non-Relational Databases:
 Also called #NoSQL, does not use tables, rows, columns, keys, relationships, or schemas.

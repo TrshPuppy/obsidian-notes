@@ -2,12 +2,13 @@
 # Responder CLI Utility:
 A CLI utility which can perform #DNS-poisoning of multiple protocols.
 
+## Related Protocols:
+### [LLMNR](/networking/protocols/LLMNR.md)
+### [NBT-NS](NBT-NS.md)
+### [MDNS](/networking/protocols/MDNS.md)
 
-[LLMNR](/networking/protocols/LLMNR.md)
-[NBT-NS](NBT-NS.md)
-[MDNS](/networking/protocols/MDNS.md)
-
-[LLMNR/ NBT-NS Poisoning](/cybersecurity/attacks/LLMNR-poisoning.md)
+## DNS Poisoning:
+### [LLMNR/ NBT-NS Poisoning](/cybersecurity/attacks/LLMNR-poisoning.md)
 
 
 >[!Links]
