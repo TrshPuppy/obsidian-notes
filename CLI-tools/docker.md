@@ -58,6 +58,57 @@ The #docker-engine is installed on the #host machine and allows the #docker-cont
 		2. to update a repo:
 			1. `Docker push <image>:<tags>`
 
+## Usage:
+To set up an application with Docker:
+
+### Create Dockerfile:
+Add the following:
+```dockerfile
+FROM <image>:<tag> # The base image for the container ex: ubuntu:latest
+
+WORKDIR /app #Docker will create this directory to work from
+COPY . . # This will copy everything in the current directory into the image
+
+ENTRYPOINT ["/bin/bash"] # This designates bash as the interface when live
+
+# Alternative to ENTRYPOINT:
+CMD ["node", "example.js"] # This command will execute on runtime
+```
+
+### Build and Run the Image:
+```bash
+sudo docker build -t <container name> 
+# -t sets the name from a string/array
+sudo docker run -it <container name> 
+# -it allows you to interact w/ the container when it is running
+```
+
+#### Mounting host directories into container:
+```bash
+# in the run command:
+sudo docker run --mount type=bind,source="$(pwd)/dir",target=/app/dir --name <container name> <container name>
+# $(pwd) is the current host directory
+# dir is the example directory which will be mounted from the host
+# /app/dir is the target directory when the container runs
+```
+
+### Manipulating running containers:
+#### List all containers:
+```bash
+sudo docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+```
+
+#### Kill specific container:
+```bash
+# kill using the container's name set in the run command
+sudo docker kill <container name>
+```
+
+#### Kill all container processes:
+```bash
+sudo docker system prune -a
+```
 
 >[!links]
 >https://docs.docker.com/get-started/
