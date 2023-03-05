@@ -19,7 +19,7 @@ Example:
 In response:
 - `ANSWER` section: contains the IP address you're looking for.
 - `TTL` : #time-to-live:
-	- When your computer queries a domain name, it stores the result in local #cachhse.
+	- When your computer queries a domain name, it stores the result in local #cache.
 	- #TTL tells your computer ==when to stop considering the record as valid== (when it should request the data again)
 	- Found in the second column of the answer section:
 	- ![[Pasted image 20230203210355.png]]
