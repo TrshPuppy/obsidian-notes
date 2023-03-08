@@ -18,7 +18,17 @@ Used for geographical purposes (`.ca` for Canada)
 The second level domain in `tryhackme.com` would be `tryhackme`. It's limited to 63 characters + the TLD and can only use a-z and 0-9. Also cannot start or end with hyphens or have consecutive hyphens.
 
 ### Subdomain:
+A #subdomain is additional info added to the beginning of a website's domain name. It allows the site to be separated and organized into specific contents and functions.
 
+Ex: `hackthebox.com` vs `ctf.hackthebox.com`. -->`ctf` is the subdomain and it still under `hackthebox`'s domain.
+
+*Subdomains can have different IP addresses* and all of the subdomains of one domain can be handled by one server using #virtual-host-routing where the servers uses the #host-header in the HTTP request to determine which app is meant to handle which request.
+
+#### Subdomain Enumeration:
+In order to find all the subdomains on a virtual host, tools like [Gobuster](/cybersecurity/tools/gobuster.md) can perform #subdomain-enumeration. Using a wordlist of possible subdomains, Gobuster will send out an HTTP request with a host header (of the vhost) to all the addresses w/ the possible subdomains appended.
+```
+Host: [word].thetoppers.htb
+```
 
 ## Steps w/ example:
 You type `www.twitch.com` into your browser:

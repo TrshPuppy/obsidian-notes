@@ -77,7 +77,7 @@ CMD ["node", "example.js"] # This command will execute on runtime
 
 ### Build and Run the Image:
 ```bash
-sudo docker build -t <container name> 
+sudo docker build -t <container name> .
 # -t sets the name from a string/array
 sudo docker run -it <container name> 
 # -it allows you to interact w/ the container when it is running

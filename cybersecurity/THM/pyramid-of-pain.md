@@ -15,7 +15,7 @@ Cyber threat intelligence model designed by #David-Bianco
 		- *easy* for a threat actor to recover from
 	- ==ex: [[Fast-Flux]]==
 3. #domain-names 
-	- Harder for an attacker to recover from/ change because they have to re-register, modify [DNS](/networking/routing/DNS.md) records and purchase new domains
+	- Harder for an attacker to recover from/ change because they have to re-register, modify [DNS](DNS.md) records and purchase new domains
 		- However, DNS providers have #APIs which make it easy to purchase/register domains
 	- [punycode](/cybersecurity/attacks/punycode.md)
 		- using Unicode to encode non-ASCII characters
