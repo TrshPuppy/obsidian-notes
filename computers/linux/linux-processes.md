@@ -2,6 +2,20 @@
 # Linux Processes
 The programs running on the machine. Managed by the kernel which gives each #process a PID. The PID *increments for the order of which the process was started* (60th process PID = 60).
 
+## How do Processes Start:
+### Namespaces:
+#Namespaces are how the operating system splits up available resources and isolates them. Processes within the same namespace will have access to a delegated amount of computing power which is small compared to what is available overall.
+
+Namespaces are *more secure* because they isolate processes from one another. Only processes w/i the same namespace can "see" each other.
+
+### systemd
+When Ubuntu boots the first process to start (with a PID of 0) is *systemd*. #systemd is the systems init process and sits in between the operating system and the user.
+
+Any program that we want to start on boot will likely start as a "child process" of systemd, which means systemd controls it. The child processes of systemd will share the same resources as it, but will still run as their own process.
+
+### Starting processes on boot:
+
+
 ## Viewing Processes:
 The `ps` command will list all of the running processes on the current user's session, plus additional information like the status code, usage time, CPU usage, and the name or the program or command being executed.
 
@@ -53,9 +67,10 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   1634.3 avail Mem
 ```
 
 ## Managing Processes:
-You can send signals to terminate processes which changed based on how cleanly you want the process to be killed.
+You can send signals to terminate processes which change based on how cleanly you want the process to be killed.
+
 ### kill
-the `kill` command takes the PID as an arg and kill a process outright. The kill command can also be given #signals to decide how the process is killed:
+the `kill` command takes the PID as an arg and kills a process outright. The kill command can also be given #signals to decide how the process is killed:
 - `SIGTERM`: (-15) will give the process the chance to handle the signal internally (or ignore it)
 	- `kill -15 <PID>`
 - `SIGKILL`:(-9) kill the process outright
