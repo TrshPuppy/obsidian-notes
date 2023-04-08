@@ -110,6 +110,18 @@ sudo docker kill <container name>
 sudo docker system prune -a
 ```
 
+#### Create a shell into a running container:
+```bash
+sudo docker exec -it <container name> sh
+# -it is interactive mode
+```
+
+#### See the logs of a running container:
+```bash
+sudo docker logs <container name> -f
+# -f stands for "--follow" / follow log output
+```
+
 >[!links]
 >https://docs.docker.com/get-started/
 >
