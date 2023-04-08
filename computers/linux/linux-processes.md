@@ -9,12 +9,64 @@ The programs running on the machine. Managed by the kernel which gives each #pro
 Namespaces are *more secure* because they isolate processes from one another. Only processes w/i the same namespace can "see" each other.
 
 ### systemd
-When Ubuntu boots the first process to start (with a PID of 0) is *systemd*. #systemd is the systems init process and sits in between the operating system and the user.
+systemd is a service manager for Linux OS's. When it is started on boot as the first process (PID 1) it acts as an *initialization system* which brings up and maintains userspace services.
 
-Any program that we want to start on boot will likely start as a "child process" of systemd, which means systemd controls it. The child processes of systemd will share the same resources as it, but will still run as their own process.
+#systemd is the systems init process and sits in between the operating system and the user.
+
+Any program that we want to start on boot will likely start as a *child process* of systemd, which means systemd controls it. The child processes of systemd will share the same resources as it, but will still run as their own process.
+
+#### Configuration:
+When systemd is ran as a *system instance* it interprets the configuration file `system.conf` and files in `system.conf.d` directories.
+
+When ran as a *user instance*, systemd interprets the configuration file `user.conf` and the files in `user.conf.d`.
+
+#### Units:
+systemd provides a dependency system between 11 different entities called *"units"*. These units encapsulate various objects which are necessary for system boot-up and maintenance.
+
+Most of the 11 units are configured and set up via configuration files, but some are created from other configuration, dynamically from system state, or programmatically at runtime.
+
+Units can be in active, inactive, activating (b/w inactive and active), deactivating (vice versa), or a special state of *failed* (entered when the service failed in some way).
+
+systemd only keeps a minimal number of units loaded into memory. Any unit that does *NOT* have the *inactive* state is kept in memory (active, activating, deactivating, failed). Units will only be kept loaded in memory if *one of the following is true*:
+1. state = active, activating, deactivating, or failed
+2. the unit has a job queued for it
+3. the unit is a *dependency* of at least one other unit that *is currently also loaded into memory*
+4. it still has a form of resource allocated to it (like a service unit who's state is inactive but still has a process lingering which ignored the termination request)
+5. it has been pinned into memory programmatically via a *"D-Bus call"*.
+
+==Currently loaded units are invisible to the client.==
+- can use `systemctl list-units --all` to list all currently-loaded units.
+
+##### List of units:
+Units are named for their configuration files. Some have special semantics (see `systemd.special(7)`):
+1. Service Units: start and control daemons and processes they consist of (`systemd.service(5)`)
+2. Socket units: encapsulate local IPC or network sockets, useful for socket-based activation (see `systemd.socket(5)` & `daemon(7)`)
+3. Target units: group units or provide synchronization-points during boot-up (`systemd.target(5)`)
+4. Device units: expose kernel devices and can be used for device-based activation (`systemd.device(5)`)
+5. Mount units: control mount points in the file system (`systemd.mount(5)`)
+6. Automount units: for on-demand mounting of file systems and parallelized boot-up (`systemd.automount(5)`)
+7. Timer units: for triggering activation of other units based on timers (`systemd.timer(5)`)
+8. Swap units: encapsulate memory swap partitions or OS files (`systemd.swap(5)`)
+9. Path units: activates other services when file system objects are changed or modified (`systemd.path(5)`)
+10. Slice units: group units which manage system processes in hierarchical tree (`systemd.slice(5)`)
+11. Scope units: manage foreign processes instead of starting them as well (`systemd.scope(5)`)
 
 ### Starting processes on boot:
+Processes told to start on boot are usually critical and configured by an administrator. 
 
+##### systemctl
+#systemctl is a command which allows you to interact withe the systemd process/ daemon.
+```bash
+systemctl [options] [service]
+```
+
+There are four options which can be given to systemctl:
+1. start: start one or more units (must already be loaded in memory)
+2. stop: deactivate one or more units
+3. enable: enable one or more units/ unit instances. Creates a set of *"symlinks"* as encoded in the "[Install]" section of the indicated unit files.
+4. disable: disables one or more units and removes all symlinks to the unit files from the unit configuration directory.
+
+To [start a process on boot](https://tryhackme.com/room/linuxfundamentalspart3#) use: `systemctl enable <target service>`.
 
 ## Viewing Processes:
 The `ps` command will list all of the running processes on the current user's session, plus additional information like the status code, usage time, CPU usage, and the name or the program or command being executed.
@@ -93,10 +145,70 @@ trshpuppy@trshpile:/etc$ echo $?
 
 ```
 
+### Backgrounding and Foregrounding
+Processes can be run in either of two states: the background or the foreground.
+
+#### Backgrounding:
+```shell
+# echo defaults to foreground:
+echo "hello"
+hello
+
+# running echo in the background using '&':
+echo "hello" &
+[1] 1264
+tryhackme@linux3:~$ hello
+
+[1]+  Done                    echo "hello"
+# when ran in the background unsing '&' we are given the PID instead
+```
+*Using `Ctrl Z` also backgrounds and suspends a process* (`SIGSTP`)
+
+#### Foregrounding:
+When a process is backgrounded, use `fg` to bring it back to the foreground so the output of the script is returned in the terminal.
+```shell
+tryhackme@linux3:~$ python3 -m http.server
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+^Z
+[1]+  Stopped                 python3 -m http.server
+tryhackme@linux3:~$ ps
+    PID TTY          TIME CMD
+   1007 pts/0    00:00:00 bash
+   1286 pts/0    00:00:00 python3
+   1290 pts/0    00:00:00 ps
+tryhackme@linux3:~$ fg 1286
+-bash: fg: 1286: no such job
+tryhackme@linux3:~$ fg python3
+python3 -m http.server
+
+```
+
+## Process Automation
+### cron
+`cron` is a process which is started on boot and can be interacted with via `crontab`. #Crontab is responsible for facilitating and managing *cron jobs*.
+
+A crontab is a special file with *formatting recognized by the `cron` process*. Crontabs require 6 specific values:
+|value|description|
+|-|-|
+|MIN|What minute to execute at|
+|HOUR| What hour to execute at|
+|DOM|What day of the month to execute at|
+|MON|What month of the year to execute at|
+|DOW|What day of the week...|
+|CMD|The actual command to execute|
+
+#### Example: backing up files:
+If you wanted to backup files in `Documents` q12 hours:
+```shell
+0 */12 * * * cp -R /home/trshpuppy/Documents /var/backups/ >/dev/null 2>&1
+```
 
 
 >[!links]
 >[THM Linux Fundamentals pt. 3](https://tryhackme.com/room/linuxfundamentalspart3)
 >[Linux Signals](https://www.howtogeek.com/devops/linux-signals-hacks-definition-and-more/)
+>[Crontab generator tool](https://crontab-generator.org/)
+
+
 
 
