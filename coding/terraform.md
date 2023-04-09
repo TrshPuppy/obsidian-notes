@@ -33,16 +33,16 @@ The main job of the language is to declare resources, which are used to represen
 ### Terraform Configuration
 A terraform configuration is a .tf document that tells Terraform how to manage a collection of infrastructure resources. It can be made up of multiple files and directories.
 
-The language is "declarative" meaning the order of blocks are files are not meaningful. The only meaning which is relevant to terraform is the implicit and explicit relationships between resources (used to determine the order of operations).
+The language is "declarative" meaning the order of blocks and files are not meaningful. The only meaning which is relevant to terraform is the implicit and explicit relationships between resources (used to determine the order of operations).
 
 #### Blocks
-Blocks are containers for content and usually represent configuration of an object, like a resource. Blocks can have a *block type*, zero or more *labels*, and a *body* which contains arguments and nested blocks.
+Blocks are containers for content and usually represent configuration for an object, like a resource. Blocks can have a *block type*, zero or more *labels*, and a *body* which contains arguments and nested blocks.
 
 #### Arguments:
 Appear w/i blocks and assign a value to a name.
 
 #### Expressions:
-Represent a value, literally or by referencing/combining other values. They can be placed as values to arguments or w/i other expressions.
+Represent a value, literally or by referencing/ combining other values. They can be placed as values to arguments or w/i other expressions.
 
 ### Providers:
 According to [Terraform](https://developer.hashicorp.com/terraform/language/providers/configuration) Providers allow Terraform to interact with APIs. Each Provider has specific configuration requirements/ settings which you can set in the root module of a terraform configuration.
@@ -77,7 +77,7 @@ Terraform does a "dry run" of your current infrastructure and will return any er
 ### Plan
 Once the infrastructure has been initialized, use `terraform plan`:
 ```shell
-trshpuppy@trshpile:~/repos/terraform-test$ terraform plan
+terraform plan
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
   + create

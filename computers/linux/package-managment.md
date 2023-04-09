@@ -1,17 +1,17 @@
 
 # Linux Package Management
 ## apt
-Because Linux is open source developers can submit software to an *apt* repository. If the software is approved, it then can be accessed by anyone using Linux via the CLI etc.
+Because Linux is open source, developers can submit software to an *apt* repository. If the software is approved, it then can be accessed by anyone using Linux via the CLI etc.
 
 In `/etc/apt` the files listed with `ls` serve as the gateway/ registry (when on an Ubuntu machine):
 ```shell
-tryhackme@linux3:/etc/apt$ ls
+ls
 apt.conf.d  auth.conf.d  preferences.d  sources.list  sources.list.d  trusted.gpg.d
 ```
 
 To see all of the repositories added to your source list:
 ```shell
-tryhackme@linux3:/etc/apt$ cat sources.list
+cat sources.list
 ## Note, this file is written by cloud-init on first boot of an instance
 ## modifications made here will not survive a re-bundle.
 ## if you wish to make changes you can:
@@ -56,7 +56,7 @@ GNU nano:
 deb https://download.sublimetext.com/ apt/stable
 ```
 
-3. Update apt so recognize the new entry with `apt update`
+3. Update apt so it recognizes the new entry with `apt update`
 4. Install the software we have trusted and added to apt with `apt install sublime-text`
 
 ### Removing Repos:

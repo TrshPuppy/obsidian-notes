@@ -18,7 +18,7 @@ A quick reference for Linux commands:
 #### /etc
 common storage place for system files used by the OS. Contains *passwd*, *sudoers*, *shadow*, etc.
 
-##### shadow
+##### .shadow
 is a hidden file in `/etc` which contains users and their passwords, stored with sha512 encryption.
 
 #### /var
@@ -28,10 +28,10 @@ short for "variable" is a directory which is accessed and written by application
 Home for the "root" system user (instead of the root user's home directory being in `/home/root` like other users).
 
 #### /tmp
-A "volatile" directory which only stores data which needs to be accessed one or two times. One the computer is restarted *the contents of this folder are cleared*.
+A "volatile" directory which only stores data which needs to be accessed one or two times. Once the computer is restarted *the contents of this folder are cleared*.
 
 ##### For pentesting:
-this folder is useful because any user has access to it, so it is an easy place to store things like scripts, etc. which you need during a pentest.
+This folder is useful because any user has access to it, so it is an easy place to store things like scripts, etc. which you need during a pentest.
 
 ## Users & Permissions:
 |cmd|purpose|notes|
@@ -46,7 +46,7 @@ this folder is useful because any user has access to it, so it is an easy place 
 ```bash
 nano <filename>
 ```
-Will create a file by the filename launch nano with the file open, ready to be modified.
+Creates a file with the `<filename>` name and launches nano with the file, opened and ready to be modified.
 
 #### Supported features:
 These features can be used w/i nano by pressing the `Ctrl` key + the desired switch:
@@ -76,4 +76,7 @@ scp important.txt ubuntu@192.168.1.30:/home/unbuntu/transferred.txt
 # copy a file from target machine to host machine:
 scp ubuntu@192.168.1.30:/home/ubuntu/documents.txt notes.txt
 ```
+
+> [!Links:]
+> [THM Linux Fundamentals pt. 3](https://tryhackme.com/room/linuxfundamentalspart3)
 

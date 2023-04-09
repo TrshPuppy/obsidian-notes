@@ -11,7 +11,7 @@ Namespaces are *more secure* because they isolate processes from one another. On
 ### systemd
 systemd is a service manager for Linux OS's. When it is started on boot as the first process (PID 1) it acts as an *initialization system* which brings up and maintains userspace services.
 
-#systemd is the systems init process and sits in between the operating system and the user.
+#systemd is the system's init process and sits in between the operating system and the user.
 
 Any program that we want to start on boot will likely start as a *child process* of systemd, which means systemd controls it. The child processes of systemd will share the same resources as it, but will still run as their own process.
 
@@ -25,7 +25,7 @@ systemd provides a dependency system between 11 different entities called *"unit
 
 Most of the 11 units are configured and set up via configuration files, but some are created from other configuration, dynamically from system state, or programmatically at runtime.
 
-Units can be in active, inactive, activating (b/w inactive and active), deactivating (vice versa), or a special state of *failed* (entered when the service failed in some way).
+Units can be active, inactive, activating (b/w inactive and active), deactivating (vice versa), or a special state of *failed* (entered when the service failed in some way).
 
 systemd only keeps a minimal number of units loaded into memory. Any unit that does *NOT* have the *inactive* state is kept in memory (active, activating, deactivating, failed). Units will only be kept loaded in memory if *one of the following is true*:
 1. state = active, activating, deactivating, or failed
@@ -55,7 +55,7 @@ Units are named for their configuration files. Some have special semantics (see 
 Processes told to start on boot are usually critical and configured by an administrator. 
 
 ##### systemctl
-#systemctl is a command which allows you to interact withe the systemd process/ daemon.
+#systemctl is a command/ service which allows you to interact with the systemd process/ daemon.
 ```bash
 systemctl [options] [service]
 ```
@@ -73,7 +73,7 @@ The `ps` command will list all of the running processes on the current user's se
 
 To see processes run by other users and/or *system processes* use the switch `aux` with the `ps` command:
 ```shell
-tryhackme@linux3:~$ ps aux
+ ps aux
 USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root           1  0.0  0.5 102672 11116 ?        Ss   00:20   0:04 /sbin/init
 root           2  0.0  0.0      0     0 ?        S    00:20   0:00 [kthreadd]
@@ -132,7 +132,7 @@ the `kill` command takes the PID as an arg and kills a process outright. The kil
 ### Exit Codes:
 The exit code of the last terminated process can be accessed by typing `echo $?`, the variable which the exit code is saved in immediately after termination.
 ```bash
-trshpuppy@trshpile:/etc$ sleep 30 & ps
+sleep 30 & ps
 [1] 41506
     PID TTY          TIME CMD
    6790 pts/0    00:00:00 bash
@@ -157,7 +157,7 @@ hello
 # running echo in the background using '&':
 echo "hello" &
 [1] 1264
-tryhackme@linux3:~$ hello
+$ hello
 
 [1]+  Done                    echo "hello"
 # when ran in the background unsing '&' we are given the PID instead
@@ -167,20 +167,19 @@ tryhackme@linux3:~$ hello
 #### Foregrounding:
 When a process is backgrounded, use `fg` to bring it back to the foreground so the output of the script is returned in the terminal.
 ```shell
-tryhackme@linux3:~$ python3 -m http.server
+python3 -m http.server
 Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 ^Z
 [1]+  Stopped                 python3 -m http.server
-tryhackme@linux3:~$ ps
+ps
     PID TTY          TIME CMD
    1007 pts/0    00:00:00 bash
    1286 pts/0    00:00:00 python3
    1290 pts/0    00:00:00 ps
-tryhackme@linux3:~$ fg 1286
+fg 1286
 -bash: fg: 1286: no such job
-tryhackme@linux3:~$ fg python3
+fg python3
 python3 -m http.server
-
 ```
 
 ## Process Automation
@@ -204,10 +203,10 @@ If you wanted to backup files in `Documents` q12 hours:
 ```
 
 
->[!links]
->[THM Linux Fundamentals pt. 3](https://tryhackme.com/room/linuxfundamentalspart3)
->[Linux Signals](https://www.howtogeek.com/devops/linux-signals-hacks-definition-and-more/)
->[Crontab generator tool](https://crontab-generator.org/)
+> [!links]
+> [THM Linux Fundamentals pt. 3](https://tryhackme.com/room/linuxfundamentalspart3)
+> [Linux Signals](https://www.howtogeek.com/devops/linux-signals-hacks-definition-and-more/)
+> [Crontab generator tool](https://crontab-generator.org/)
 
 
 
