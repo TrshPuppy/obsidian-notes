@@ -14,7 +14,7 @@ A system on which ansible is installed. Commands r/t to ansible can be run on a 
 A remote system or host which ansible controls.
 
 ### Inventory:
-A list of managed notes that are logically organized. An inventory can be created on the control node to describe host deployments to ansible.
+A list of managed nodes which are logically organized. An inventory can be created on the control node to describe host deployments to ansible.
 
 ## [Install:](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 For a control node machine, you can use any Unix-based OS with Python 3.9+ installed.
@@ -25,16 +25,16 @@ For managed nodes, Ansible does not need to be installed, but the node does requ
 Once Ansible is installed, find the ansible directory on the control node:
 ```shell
 $ cd /etc/ansible
-ansible $ ls
+$ ls
 ansible.cfg hosts roles
 ```
 - `ansible.cfg` is the configuration file
 - `hosts` is a list of managed nodes
 
 ### `hosts` file:
-Also called the "Inventory." Lists all of the machine/ things the control node controls including linux machines, routers, switches, etc.
+Also called the "Inventory." Lists all of the machines/ things the control node controls including linux machines, routers, switches, etc.
 ```shell
-sudo nano hosts
+$ sudo nano hosts
 ```
 
 Once w/i the hosts file via nano/ vim:
@@ -125,13 +125,13 @@ changed: [69.69.69.6]
 changed: [69.69.69.9]
 
 PLAY RECAP ********
-69.69.69.6             : ok=2 changed=1 unreachable=0 failed=0 skipped=0
-	rescued=0 ignored=0
-69.69.69.9             : ok=2 changed=1 unreachable=0 failed=0 skipped=0
-	rescued=0 ignored=0
+69.69.69.6             : ok=2  changed=1  unreachable=0  failed=0  skipped=0
+	rescued=0  ignored=0
+69.69.69.9             : ok=2  changed=1  unreachable=0  failed=0  skipped=0
+	rescued=0  ignored=0
 $
 ```
-*Ansible will not make a change if it is already in place* (for example, we run this command again w/o changing the playbook)
+*Ansible will not make a change if it is already in place* (for example, if we run this command again w/o changing the playbook)
 
 > [!links]
 > [Ansible: Network Chuck](https://www.youtube.com/watch?v=5hycyr-8EKs&ab_channel=NetworkChuck)
