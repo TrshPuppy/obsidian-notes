@@ -24,14 +24,5 @@ Which generates the following page:
 ```
 A 'bad' #XSS filter on a web application may not see `script/xss` as a script tag. However Firefox's HTML parser will *treat the slash as whitespace* which enables the attack.
 
-
 > [!Links]
 > [hacker 101: The Web in Depth](https://www.hacker101.com/sessions/web_in_depth.html)
-
-```
-[@trshpuppy](https://twitter.com/trshpuppy)
-
-[https://creative-florentine-747c0e.netlify.app](https://t.co/djYfw9seRp)
-
-at [23:07](https://www.youtube.com/watch?v=beX7J6xCqIM&t=1387s) is wha
-```
