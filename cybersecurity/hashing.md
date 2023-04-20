@@ -12,9 +12,9 @@ Any type of data can be hashed including passwords, photos, entire applications,
 	- a #cryptographic has function which produces a #128-bit-hash value
 	- **NOT CONSIDERED CRYPTOGRAPHICALLY SECURE**
 	- updated by #RFC-6151 
-		- describe multiple attackes against #MD5 hasing including #hash-collision 
+		- describe multiple attacks against #MD5 hashing including #hash-collision 
 2. #SHA-1 
-	- definded by #RFC-3174 
+	- defined by #RFC-3174 
 		- developed by the #NSA in 1995
 	- #SHA-1 takes inpput and creates a #160-bit-hash value string as a 40 digit #hexadecimal number
 	- **BANNED and DEPRECATED 2011-2014**

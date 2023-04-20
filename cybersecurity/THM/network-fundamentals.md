@@ -39,7 +39,7 @@ Networking nerd badge
 		2. #OSPF
 		3. #RIP
 	6. [data-link-layer](/networking/OSI/data-link-layer.md)
-		1. MAC-addresses
+		1. [MAC-addresses](/networking/OSI/MAC-addresses.md)
 		2. #network-interface-card 
 	7. #physical-layer 
 

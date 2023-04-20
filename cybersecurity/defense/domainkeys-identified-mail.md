@@ -1,7 +1,7 @@
 ---
 aliases: [domainkeys-identified-mail, DKIM]
 ---
-# DomainKeys Identified Mail ( #DKIM)
+# DomainKeys Identified Mail (DKIM)
 Used to authenticate [email](/networking/email.md) which is being sent. #DKIM-record(s) exist in the #DNS and can survive forwarding (unlike #SPF).
 
 ## DKIM Record format:
@@ -37,10 +37,8 @@ The DKIM-signature and selectors can be found in the "source code" or raw header
 In this image, the DKIM selector is indicated by the `s=` attribute (the selector is `s2048g1`)
 
 >[!Tools]
->DKIM Record Checker:
->https://dmarcian.com/dkim-inspector/ (use to validate the correct configuration and syntax of a DKIM signature)
+> [DKIM Record Checker](>https://dmarcian.com/dkim-inspector/) (use to validate the correct configuration and syntax of a DKIM signature)
 
 >[!links]
->dmarcian:
->https://dmarcian.com/dkim-selectors/
+> [dmarcian](https://dmarcian.com/dkim-selectors/)
 

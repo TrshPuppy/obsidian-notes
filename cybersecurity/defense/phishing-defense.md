@@ -2,7 +2,7 @@
 # Defense Against [[Phishing]] 
 Per the [MITRE-ATT&CK](/cybersecurity/literature/MITRE-ATT&CK.md) matrix, there are two techniques for mitigating #phishing attacks:
 
-> Playbook: https://www.incidentresponse.org/playbooks/phishing
+> [Playbook](https://www.incidentresponse.org/playbooks/phishing)
 
 1. Software Configuration:
 	- `` 'Use anti-spoofing and email authentication mechanisms to filter messages based on validity checks of the sender domain (using SPF) and integrity of messages (using DKIM). Enabling these mechanisms within an organization (through policies such as DMARC) may enable recipients (intra-org and cross domain) to perform similar message filtering and validation.'``	

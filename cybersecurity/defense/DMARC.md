@@ -5,7 +5,7 @@ aliases: [DMARC, domain-based-message-authentication-reporting-and-conformance]
 (I'm not typing this sh-t out again)
 An open source standard which ties together the results of [DKIM](/cybersecurity/defense/domainkeys-identified-mail.md) and [SPF](/cybersecurity/defense/sender-policy-framework.md) through a process called "alignment".
 - DKIM (a tamper-evident domain seal associated with an email)
-- SPF (a published list of servers which are authorized to send [[email]] on behalf of a domain)
+- SPF (a published list of servers which are authorized to send [email](/networking/email.md) on behalf of a domain)
 
 A DMARC record is a text record w/t the #DNS which indicates the domains email policy r/t checking if a SPF or DKIM has passed or failed.
 
@@ -35,8 +35,6 @@ V=DMARC1; p=quarantine; rua=mailto:postmaster@website.com
 - mismatch in domains results in a #DMARC-fail
 
 >[!Links]
->dmarcian:
->https://dmarcian.com/what-is-a-dmarc-record/
+> [dmarcian](https://dmarcian.com/what-is-a-dmarc-record/)
 >
->DMARC Alignment:
->https://dmarcian.com/alignment/
+> [DMARC Alignment:](https://dmarcian.com/alignment/)

@@ -3,7 +3,7 @@
 
 Considered the most complex layer of the OSI (abstracts the interaction w/ the hardware from other layers)
 - communication b/w end devices and #network-interface cards
-- Divides packets from the [[network-layer]] into frames
+- Divides packets from the [network-layer](/networking/OSI/network-layer.md) into frames
 - Ensures the *error-free* transmission of data.
 - #encode, #decode and organize incoming and outgoing data.
 
@@ -35,11 +35,11 @@ Considered the most complex layer of the OSI (abstracts the interaction w/ the h
 	- the #LLC acts as an interface between the MAC-sublayer and the #network-layer (OSI layer 3)
 	- error messages and acknowledgement
 2. "Medium Access Control" ( #MAC)
-	- the sublayer responsible for controling the hardware which intercts w/ wired or #optical-wireless transmission medium.
+	- the sub-layer responsible for controlling the hardware which interacts w/ wired or #optical-wireless transmission medium.
 	- addressing #frames 
 	- control access to physical media
-		- [[MAC-addresses]] 
-- The #LLC-sublayer provides #flow-control and [[multiplexing]] for the #logical-link, while the #MAC provides flow control/muyltiplexing for the transmission medium
+		- [MAC-addresses](/networking/OSI/MAC-addresses.md) 
+- The #LLC-sublayer provides #flow-control and [multiplexing](/networking/OSI/multiplexing.md) for the #logical-link, while the #MAC provides flow control/ multiplexing for the transmission medium
 
 The Data-Link layer has a "flat-topology"
 - No layering between devices
