@@ -10,15 +10,15 @@ Used by a threat actor to hide malicious activity using compromised hosts on a #
 ### Primary Characteristics:
 1. a #fast-flux network constantly changes its #domain s, #IP-addresses and #nameservers 
 	- hides the true nature of the network making it harder to study and defend against
-	- #### #IP-addresses :
+	- #### IP-addresses:
 		- the amount of #IP-addresses associated w/ a #fast-flux network change rapidly.
 			- Also called #single-flux
 			- ![[Pasted image 20230118203718.png]] 
-			- This image shows the avg number of times #IP-addresses associated a single #DNS-name changed in one day (over 2 months) - [[Akamai]]
-	- #### #Domains :
+			- This image shows the avg number of times #IP-addresses associated a single #DNS-name changed in one day (over 2 months) - [Akamai](/cybersecurity/literature/Akamai.md)
+	- #### Domains:
 		- threat actors cycle between making #domains in the network active vs inactive 
 			- considered inactive when a #DNS-query returned w/ "NXDOMAIN"
-		- #domains stay active for a limited time while malicious activiy is taking place. 
+		- #domains stay active for a limited time while malicious activity is taking place. 
 			- once the malicious activity associated w/ that #domain ended, it would be inactivated and a new domain would be activated to ensure network services remained intact
 				- this is called #double-flux
 			- ![[Pasted image 20230118204222.png]] 
@@ -30,14 +30,14 @@ Used by a threat actor to hide malicious activity using compromised hosts on a #
 		- ![[Pasted image 20230118204808.png]] 
 		- even though the faked-personal information of the alleged owners of different #nameservers seem unrelated (different countries, etc) analysis of their #IP-addresses prove they are actually *closely related* #nameservers 
 
-### #C2 network vs #hosting-network:
+### C2 network vs hosting-network:
 
 ![[Pasted image 20230118205346.png]] 
->"To further investigate the initial assumption of having two different subnetworks as observed in “Fast Flux network — overview”, we created a network graph, but this time without showing the relation to the nameserver. Doing that showed us that we can see two distinct subnetworks segregated in terms of associated IP addresses." 
+>"To further investigate the initial assumption of having two different subnetworks as observed in “Fast Flux network — overview”, we created a network graph, but this time without showing the relation to the name-server. Doing that showed us that we can see two distinct subnetworks segregated in terms of associated IP addresses." 
 
 \-[Akamai](https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network) 
 
 >[!links]
-> https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network
+> [Akamai: Fast-Flux](https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network)
 > 
-> https://unit42.paloaltonetworks.com/fast-flux-101/
+> [Fast Flux 101](https://unit42.paloaltonetworks.com/fast-flux-101/)
