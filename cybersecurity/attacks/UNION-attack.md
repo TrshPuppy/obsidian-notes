@@ -54,6 +54,6 @@ Final result- contains values from separate result sets returned from the querie
 ```
 
 >[!Links]
-> https://www.mysqltutorial.org/sql-union-mysql.aspx/
-> https://portswigger.net/web-security/sql-injection/union-attacks
+> [My SQL Tutorial: Union Attacks](https://www.mysqltutorial.org/sql-union-mysql.aspx/)
+> [Port Swigger](https://portswigger.net/web-security/sql-injection/union-attacks)
 
