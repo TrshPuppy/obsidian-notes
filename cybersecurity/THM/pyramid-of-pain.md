@@ -3,7 +3,7 @@
 Cyber threat intelligence model designed by #David-Bianco
 	- A pyramid of the types of Indicators of Compromise ( #IOC s) you will see and how much it will *hurt the threat actor* for you to deny them these indicators.
 
-![](/cybersecurity/THM/pyramid.png)
+![](/cybersecurity/THM-pics/pyramid.png)
 
 ### Types of Indicators
 1. #hash-values 
