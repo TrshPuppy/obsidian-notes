@@ -18,9 +18,9 @@ traceroute <destination> [OPTIONS]
 ## About:
 Windows:
 - `tracert`
-- uses #ICMP protocol (like [[ping]])
+- uses [ICMP](/networking/protocols/ICMP.md) protocol (like [ping](/CLI-tools/ping.md))
 
 Linux:
-- operates over [[UDP]]
+- operates over [UDP](/networking/protocols/UDP.md)
 ==Can be altered w/ switches in both contexts==
 

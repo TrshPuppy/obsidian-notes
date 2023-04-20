@@ -31,5 +31,4 @@ In response:
 ## About:
 ==helpful for network troubleshooting==
 
->[!related]
-> #domains 
+

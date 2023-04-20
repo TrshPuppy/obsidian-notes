@@ -62,7 +62,6 @@ With `CREATE TABLE` there are multiple *properties* which can be set for a table
 - Latest release standard = #SQL/2011
 - Even though there are standards, #SQL-dialects have been created in their use spaces when consumers want features or capabilities which SQL doesn't yet have.
 
-
 >[!links]
 >https://www.sqltutorial.org/
 >

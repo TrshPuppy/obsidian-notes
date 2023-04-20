@@ -8,9 +8,10 @@
 	- successful login =  ``230 Login successful``
 
 ## Once in #FTP-server 
-- ``dir`` or ``ls`` to list directories on the [[FTP]] server ( #FTP-server )
+- ``dir`` or ``ls`` to list directories on the [FTP](/networking/protocols/FTP.md) server ( #FTP-server )
 - ``get`` to download/receive file in server
 	- default downloads file to home directory
 
 >[!related]
->[[FTP]]
+> [FTP](/networking/protocols/FTP.md)
+

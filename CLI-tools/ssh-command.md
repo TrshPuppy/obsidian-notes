@@ -28,7 +28,6 @@ Welcome to Ubuntu 20.04.2 LTS (GNU/Linux 5.4.0-1047-aws x86_64)
 The list of available updates is more than a week old.
 To check for new updates run: sudo apt update
 
-
 The programs included with the Ubuntu system are free software;
 the exact distribution terms for each program are described in the
 individual files in /usr/share/doc/*/copyright.

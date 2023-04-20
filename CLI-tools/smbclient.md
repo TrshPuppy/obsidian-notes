@@ -19,5 +19,5 @@ smbclient [OPTIONS] service <password>
 		- syntax: ``<REMOTE_FILE_PATH>/<REMOTE_FILE_NAME> <LOCAL_FILE_PATH>/<LOCAL_FILE_NAME>``
 			- (tells get where to put downloaded file)
 
->[!related]
-[[SMB]]
+> [!related]
+ [SMB](/networking/protocols/SMB.md)

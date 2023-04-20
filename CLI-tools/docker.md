@@ -2,7 +2,7 @@
 # Docker
 Docker [containers](/computers/containers.md) sit on top of the host [operating-system](/computers/operating-system.md):
 - A #docker-container uses the host #operating-system
-	- prefers [[linux]]-based OS's
+	- prefers [linux](/computers/linux)-based OS's
 	- lighter than a #virtual-machine because it piggy-backs on the pre-existing OS
 	- #boot s faster
 	- Occupies less memory
