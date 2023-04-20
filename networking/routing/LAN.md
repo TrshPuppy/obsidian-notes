@@ -11,7 +11,7 @@ a #switch is a dedicated device in a network designed to aggregate other devices
 		- reduces network traffic
 		- repeaters and hubs: repeat the packet to every port
 - Switches can be connected to routers which ==increases network redundancy==
-- Can operate on [[data-link-layer]] OR L3 but cannot do both (the switch has to be one or the other)
+- Can operate on [data-link-layer](/networking/OSI/data-link-layer.md) OR L3 but cannot do both (the switch has to be one or the other)
 
 Below: This L2 switch can only forward #in-memory-database frames to the connected devices using their #MAC-addresses 
 ![[Pasted image 20230212104825.png]]
@@ -33,7 +33,7 @@ a #router connects networks so data can be passed between them.
 		- what path is shortest?
 		- what path is most reliable?
 		- what has the fastest physical medium?
-- routers = [[network-layer]] (L3)
+- routers = [network-layer](/networking/OSI/network-layer.md) (L3)
 	- usually have a GUI which allows for configuring #port-forwarding. #firewalls, etc.
 
 ## Topologies:

@@ -86,10 +86,8 @@ Standard vs Enhanced:
 		- #RDSTLS
 
 ### Recent exploits:
-- [[BlueKeep]] (CVE-2019-0708)/ #BlueKeep:
-- [[DejaBlue]] (CVE-2019-1181 & CVE-2019-1182)/ #DejaBlue
-
-
+- [BlueKeep](/cybersecurity/vulnerabilities/BlueKeep.md) (CVE-2019-0708)/ #BlueKeep:
+- [DejaBlue](/cybersecurity/vulnerabilities/DejaBlue.md) (CVE-2019-1181 & CVE-2019-1182)/ #DejaBlue
 
 >[!links]
 >https://www.cyberark.com/resources/threat-research-blog/explain-like-i-m-5-remote-desktop-protocol-rdp

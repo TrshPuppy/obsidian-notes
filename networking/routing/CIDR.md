@@ -4,7 +4,7 @@ aliases: [CIDR, classless inter-domain routing]
 # Classless Inter-domain Routing
 Method for allocating #IP-addresses and IP routing.
 
-[[TCP]] (Internet Protocol)
+[TCP](/networking/protocols/TCP.md) (Internet Protocol)
 - #CIDR = a collection of Internet Protocol standards used to create unique identifiers for networks and individual devices
 	- facilitate unique #packet transmission to specific devices
 
@@ -22,13 +22,13 @@ Five classes in #IPV4-addressing :
 4. #Class-D addresses
 	- first four bits
 	- 224.0.0.0 to 239.255.255.255
-	- used for [[multicasting]]
+	- used for multicasting
 5. #Class-E addresses
 	- reserved for research and development
 	- 240.0.0.0 to 255.255.255.254
 *Classes aren't used anymore because they 'waste a lot of 32-bit address space'*
 
-## [[CIDR]] is an alternative to traditional subnetting*
+## CIDR is an alternative to traditional subnetting*
 - consists of #CIDR-blocks
 	- allows #IP-addresses to be *dynamically allocated* 
 		- allocated based on the requirement of the user and on certain rules
@@ -38,7 +38,7 @@ Five classes in #IPV4-addressing :
 - Contains IP addresses based on 3 simple rules:
 	1. w/i the block, IP addresses allocated to the hosts should be *continuous*
 	2. the size of the block should be to the power of 2 and be equal to the total number of IP addresses
-	3. the size of the block mustt be divisible by the first IP address oif the block
+	3. the size of the block mustt be divisible by the first IP address of the block
 
 ## #CIDR-notation
 - CIDR IP address notation: ```X.X.X.X/n```
@@ -48,7 +48,7 @@ Five classes in #IPV4-addressing :
 		1st IP address is ```21.19.35.0```
 		last is ```21.19.35.255```
 		total cost is 256
-		netmask is ``255.255.255.0``
+		net mask is ``255.255.255.0``
 - x68:
 	- Every #IPV4 address has four octets of bits, separated by a period for a *total of 32 bits*
 		- The left side of an address = the "network side"

@@ -26,7 +26,7 @@ The devices connected via VPN on network 3 are still part of network 1 and netwo
 
 ## Technologies:
 1. #PPTP / Point to Point Tunneling Protocol
-	- Uses [[TCP]] #port-1723 for remote access over the internet
+	- Uses [TCP](/networking/protocols/TCP.md) #port-1723 for remote access over the internet
 	- Doesn't require a router if initiated by the #client 
 	- Fastest of the protocols 
 	- easy to set up

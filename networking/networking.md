@@ -1,14 +1,14 @@
 
 x68 Jan 16:
 
-[[OSI-reference-model]]:
+## [OSI Reference Model](/networking/OSI/OSI-reference-model.md):
 Data moves up and down these layers from physical to application and vice versa
 - #physical-layer 
 	- device
 - #Data-link-layer
 	- "Media Access Control"
 	- flat topology
-	- [[ethernet-switching]] (L2 switches)
+	- [ethernet-switching](/networking/OSI/ethernet-switching.md) (L2 switches)
 		- have tables of ports w/ associated MAC-addresses
 			- only one device per port (can be another switch)
 		- assigns unique #MAC-addresses to devices
@@ -20,7 +20,7 @@ Data moves up and down these layers from physical to application and vice versa
 				- creates a flat network (can only grow horizontally)
 				- As the tables get bigger (more devices attached) becomes less efficient
 					- *Need to expand network in a different way* 
-	- [[ARP]] : address resolution protocol
+	- [ARP](/networking/protocols/APR.md): address resolution protocol
 - #network-layer
 	- handles IP addresses
 	- Ex: 192.168.1.1

@@ -38,14 +38,13 @@ NET1 ......  ASX  <--->  ASY  ....... NET2
 >https://neosnetworks.com/products-services/business-internet-services/what-are-autonomous-system-numbers/
 
 An #ASN is a unique identifier which two organizations can use to connect to each and be able to send and receive #IP-addresses  which can further be distributed
-- can be publci or private
+- can be public or private
 	- #public-ASNs are required for systems to exchange info over the internet
-	- #private-ASNs can be used instead if a system is communicating solely w/ a single provider via [[BGP]] (Border GateWay Protocol).
+	- #private-ASNs can be used instead if a system is communicating solely w/ a single provider via [BGP](/networking/protocols/BGP.md) (Border GateWay Protocol).
 - #ASN-gateway:
 	- how internal communication nodes (like w/i a business) connect to the global internet at one common point, using an #ASN 
-	- #internal-nodes each have their own #IP-address are connected through and [[IGP]] (Internal Gateway Protocol)
+	- #internal-nodes each have their own #IP-address are connected through and [IGP](/networking/protocols/IGP.md) (Internal Gateway Protocol)
 	- the internal grouping of nodes is then connected to the larger internet using #BGP 
-
 
 >[!related]
 > #RFC-1930

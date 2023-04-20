@@ -2,7 +2,7 @@
 aliases: [SMTP, simple-mail-transfer-protocol]
 ---
 # Simple Mail Transfer Protocol
-Standard protocol for communication via [[email]]. To start using SMTP, you simply provide a server name, #SMTP-port, username, and password. The #SMTP-server then sends emails on your behalf.
+Standard protocol for communication via [email](/networking/email.md). To start using SMTP, you simply provide a server name, #SMTP-port, username, and password. The #SMTP-server then sends emails on your behalf.
 
 >[!Related]
 > #RFC-5321: https://datatracker.ietf.org/doc/html/rfc5321#section-2.3.7
@@ -48,7 +48,7 @@ Standard protocol for communication via [[email]]. To start using SMTP, you simp
 > Task 8: SMTP and C&C Communication: https://tryhackme.com/room/phishingemails4gkxh
 
 Per the #MITRE-ATTACK:
-- #technique-1071> [sub-technique 3](https://attack.mitre.org/techniques/T1071/003/): Adversaries can use [[application-layer]] protocols w/ email delivery to avoid detection/ network filtering by blending in w/ existing traffic.
+- #technique-1071> [sub-technique 3](https://attack.mitre.org/techniques/T1071/003/): Adversaries can use [application-layer](/networking/OSI/application-layer.md) protocols w/ email delivery to avoid detection/ network filtering by blending in w/ existing traffic.
 	- Commands to the remote #C2 will be embedded in protocol traffic between the client and server.
 	- SMTP, #POP3, and #IMAP are very common mail protocols in network environments.
 		- Include many fields and headers where data can be concealed
@@ -61,12 +61,9 @@ Network intrusion detection and prevention systems which use #signatures to iden
 Monitor network traffic patterns:
 - Use #TLS/SSL inspection for encrypted traffic which doesn't follow expected protocols/ standards and traffic flow
 - Watch for correlation b/w process monitoring and traffic patterns
-- 
 
-
-
->[!Links]
-> [[Wireshark]] SMTP traffic analysis:
+> [!Links]
+> [Wireshark]() SMTP traffic analysis:
 > SMTP: https://www.wireshark.org/docs/dfref/s/smtp.html
 > IMF: https://www.wireshark.org/docs/dfref/i/imf.html
 > 

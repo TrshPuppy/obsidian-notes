@@ -14,12 +14,12 @@ Ports enforce what data can come in or leave from them and how.
 Some common ports:
 |port|protocol|description|
 |-|-|-|
-|21| #FTP | see [[FTP]], #port-21 |
+|21| #FTP | see [FTP](/networking/protocols/FTP.md), #port-21 |
 |22| #SSH | securely log into systems via text-interface, see #port-22 |
-|80| #HTTP | for browsers and the #World-Wide-Web, see [[HTTP]], #port-80 |
+|80| #HTTP | for browsers and the #World-Wide-Web, see [HTTP](/networking/protocols/HTTP.md), #port-80 |
 |443| #HTTPS|same as port 80 but traffic is encrypted, see #port-443 |
-|445| #SMB|similar to FTP, see [[SMB]], #port-445 |
-|3389| #RDP| see [[RDP]], #port-3389 |
+|445| #SMB|similar to FTP, see [SMB](/networking/protocols/SMB.md), #port-445 |
+|3389| #RDP| see [RDP](/networking/protocols/RDP.md), #port-3389 |
 
 These ports follow standards, which means ==you can administer applications which interact with these protocols on different, non-standard ports==
 - Have to provide a `:` w/ the port number bc applications will assume you are using standard ports

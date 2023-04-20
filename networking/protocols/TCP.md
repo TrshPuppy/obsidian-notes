@@ -67,8 +67,6 @@ Contain headers added by #encapsulation :
 	- #flag-header: determines how the packet should be handled by either device during the handshake
 		- specific flags = specific behaviors
 
-
-
 >[!related]
 > #RFC-793 
 
