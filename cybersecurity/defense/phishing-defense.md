@@ -1,5 +1,5 @@
 
-# Defense Against [[Phishing]] 
+# Defense Against [Phishing](/cybersecurity/attacks/phishing.md) 
 Per the [MITRE-ATT&CK](/cybersecurity/literature/MITRE-ATT&CK.md) matrix, there are two techniques for mitigating #phishing attacks:
 
 > [Playbook](https://www.incidentresponse.org/playbooks/phishing)
