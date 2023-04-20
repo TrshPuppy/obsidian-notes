@@ -25,10 +25,10 @@
 		1. CVEs
 	3. email addresses
 	4. domain names
-2. scan/ watch for hjistorical common IOCs/TTPs
+2. scan/ watch for historical common IOCs/TTPs
 	1. spearphishing
 		1. posing as important individuals/ organizations
-			1. journnalists
+			1. journalists
 	2. protect/ monitor assets/data which involve:
 		1. naval/maritime whatever
 		2. belt and road
@@ -38,9 +38,9 @@
 3. Response:
 	1. forensics
 		1. get that shit malware and look at it, and figure out what it do
-		2. how did they ffucking get in here
+		2. how did they get in here
 			1. can we close that door?
 		3. how long they been here?
-		4. did they manage to exfiltrate some data?
+		4. did they manage to ex-filtrate some data?
 	2. become a double crossing spy
-	3. patch that shit/ report it and patch itshare it with ur friends
+	3. patch that shit/ report it share it with ur friends
