@@ -13,7 +13,7 @@ dig <domain> @<dns-server-ip>
 ```
 
 Example:
-![[Pasted image 20230203203314.png]] 
+![](/CLI-tools/CLI-tools-pics/dig-1.png) 
 -tryhackme.com
 
 In response:
@@ -22,7 +22,7 @@ In response:
 	- When your computer queries a domain name, it stores the result in local #cache.
 	- #TTL tells your computer ==when to stop considering the record as valid== (when it should request the data again)
 	- Found in the second column of the answer section:
-	- ![[Pasted image 20230203210355.png]]
+	- ![](/CLI-tools/CLI-tools-pics/dig-2.png)
 	- Measured in seconds
 		- For this example, the record exppires in 2 minutes and 30 seconds
 
