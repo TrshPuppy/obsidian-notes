@@ -1,7 +1,7 @@
 
 # Open System Interconnection Model
 
-A layered networking framework developed by the International Standards Organization ( #ISO) to conceptualize how communication and networking should be done between devices/ entities/ heterogenous systems.
+A layered networking framework developed by the International Standards Organization ( #ISO) to conceptualize how communication and networking should be done between devices/ entities/ heterogeneous systems.
 
 ## ==Advantages:==
 - Allows devices w/ different functions and designs to communicate on one network b/c they all conform to OSI.
@@ -36,11 +36,11 @@ When data is sent between devices, it follows one of two protocols:
 Where ==routing and reassembly== take place
 - deals with #packets
 	- efficient way to transfer data across networked devices
-		- exchanged in small pieces ==less bottlenecking==
+		- exchanged in small pieces ==less bottle-necking==
 - #routing = the most optimal path that data should take to a device
 	- shortest = has the least amount of devices along path
 	- reliable = have packets been lost on this path before?
-	- fastest physical connection = is one path using copper (slow) vs fibre?
+	- fastest physical connection = is one path using copper (slow) vs fiber?
 - Protocols:
 	- [[OSPF]] Open Shortest Path First
 	- [[RIP]] Routing Information Protocol
@@ -55,7 +55,6 @@ Focuses on ==physical addressing== or transmission.
 
 ### Physical layer (1):
 references the physical components/ medium making up a network which propagates electrical signals which represent data being sent b/w devices.
-
 
 # Encapsulation:
 #Encapsulation: At each layer, pieces of information are added to the data.

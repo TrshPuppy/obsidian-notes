@@ -139,7 +139,6 @@ Fields which are unknown will be applied once terraform actually gets run for th
 ### Apply
 Use `terraform apply` to run the code based on the plan terraform laid out with the `plan` command. Terraform will give you the chance to review the runtime before it happens:
 
-
 >[!links:]
 >[Terraform Docs](https://developer.hashicorp.com/terraform/intro)
 >[Terraform Registry](https://registry.terraform.io/)

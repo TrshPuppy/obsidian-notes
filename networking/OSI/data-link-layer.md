@@ -20,7 +20,7 @@ Considered the most complex layer of the OSI (abstracts the interaction w/ the h
 	- A FRAME is the encapsulation of the header and trailer information of a packet
 		- header includes source and destination MAC addresses
 3. #error-control:
-	- If data becomes corrupted (d/t noise, attenuation, etc) the DLL detecs the error and corrects it using #error-detection and #error-correction
+	- If data becomes corrupted (d/t noise, attenuation, etc) the DLL detects the error and corrects it using #error-detection and #error-correction
 	- Adds error-detection bits in the frame's header so the receiver can check for errors in the received data.
 	- ex: corrupted data
 4. #flow-control:
@@ -30,7 +30,7 @@ Considered the most complex layer of the OSI (abstracts the interaction w/ the h
 5. #access-control
 	- (media access control)
 
-## *Has 2 sublayers:*
+## *Has 2 sub-layers:*
 1. "Logical Link Control" ( #LLC-sublayer)
 	- the #LLC acts as an interface between the MAC-sublayer and the #network-layer (OSI layer 3)
 	- error messages and acknowledgement
@@ -56,6 +56,5 @@ The Data-Link layer has a "flat-topology"
 > https://en.wikipedia.org/wiki/Medium_access_control
 > https://en.wikipedia.org/wiki/Logical_link_control]
 
->[!neurons]
-> [[ethernet-switching]]
+
 
