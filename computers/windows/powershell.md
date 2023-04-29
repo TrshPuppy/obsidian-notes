@@ -223,6 +223,16 @@ Minimum  :
 Property :
 ```
 
+### 8. Add to or Remove From $PATH
+#### Add to `$ENV:PATH`
+```powershell
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";R:\a-trshp-does-windows\Microsoft VS Code\bin\code.exe", "Machine") 
+```
+
+#### Remove from `$ENV:PATH`:
+```powershell
+foreach($path in ($env:path).split(";")){if($path -like "R:\CS50\Microsoft VS Code\bin"){$new_path = $env:path.replace($path, "")};[System.Environment]::SetEnvironmentVariable("Path",$new_path,"Machine")}
+```
 
 >[!Links:]
 > [THM PowerShell Room](https://tryhackme.com/room/powershell)
