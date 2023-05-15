@@ -10,7 +10,7 @@ Allows devices on separate networks to communicate securely.
 Below:
 The devices connected via VPN on network 3 are still part of network 1 and network 2 respectively.
 - network 3 is a private network b/w them which only devices connected to the VPN can communicate through
-![[Pasted image 20230211180034.png]]
+![](/networking/networking-pics/VPN-1.png)
 -TryHackMe.com
 
 ## Benefits:

@@ -5,16 +5,16 @@ aliases: [RPD, remote-desktop, remote-desktop-protocol]
 Popular protocol which allows remote access to ==Windows== machines.
 - Allows users to control their remote Windows machines
 - Brings up a GUI desktop w/ access to mouse/keyboard, etc.
-- ![[Pasted image 20230205115203.png]]
+- ![](/networking/networking-pics/RDP-1.png)
 -CyberArk.com
 - communication b/w the client and server is #encrypted w/ #RC4-block-cypher (as default) 
 - communication us *asymetric*:
 	- most of the data goes from the server to the client
-	- ![[Pasted image 20230205115430.png]]
+	- ![](/networking/networking-pics/RDP-2.png)
 	-CyberArk.com
 
 ## Protocol Stack:
-![[Pasted image 20230205115520.png]]
+![](/networking/networking-pics/RDP-3.png)
 -CyberArk.com
 
 Sending/ receiving data through RDP is akin to the #OSI-model. The transmitted data is sectioned, sent to a channel, encrypted, wrapped, framed, and packaged before being sent. Then goes through the same process in reverse once received.

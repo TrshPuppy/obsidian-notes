@@ -67,7 +67,7 @@ Uses 3 main protocols:
 			- available on different devices
 				- the device just needs to be able to connect to the mail server where the emails are stored to access them.
 
-![[Pasted image 20230212204019.png]]
+![](/networking/networking-pics/email-1.png)
 -TryHackMe.com
 
 ### Steps:

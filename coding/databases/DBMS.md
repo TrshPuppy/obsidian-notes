@@ -39,7 +39,7 @@ Two tiered structure:
 	- Associated with #keys which provide access to a specific row or column.
 	- tables or #entities are all related to each other
 		- a change in one will effect others but only in a predictable way
-![](DBMS-2.png)
+![](/coding/coding-pics/DBMS-2.png)
 -Hack the Box
 Image:
 > the `id` related to users in the `users` table is the same as `user_id` used to relate to user posts in the `posts` table. This type of relationship is more efficient because, for example, not all data related to each user has to be stored with their posts.

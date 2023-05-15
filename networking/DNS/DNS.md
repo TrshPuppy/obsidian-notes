@@ -3,7 +3,7 @@
 a #TCP/IP protocol which allows a device to ask a #DNS server for the #IP-address attached to a #domain-name.
 
 ## Domain Hierarchy:
-![[Pasted image 20230223211444.png]]
+![](/networking/networking-pics/DNS-1.png)
 -[Try Hack Me](https://tryhackme.com/room/dnsindetail)
 
 ### Top Level Domain:

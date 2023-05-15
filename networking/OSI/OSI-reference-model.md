@@ -63,7 +63,6 @@ references the physical components/ medium making up a network which propagates 
 	- packets sent one at a time
 	- when connection is lost ==only the packets that weren't sent== have to be re-sent instead of the entire piece of data.
 
-
 >[!neurons]
 >[[networking]]
 
