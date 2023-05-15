@@ -98,7 +98,7 @@ ID="centos"
 A playbook is a #YAML (data serialization language) file. The YAML Playbook file contains tasks that you want to run on managed nodes:
 
 ### Create a Playbook:
-*Example:* create a YAML Playbook file called "iluvnano.yml"
+*Example:* create a [YAML](/coding/languages/YAML.md) Playbook file called "iluvnano.yml"
 ```YAML
 --- # these dashes denote a YAML file
 	- name: iluvnano # this is a "play"
