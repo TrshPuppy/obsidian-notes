@@ -11,8 +11,7 @@
 - Vectors:
 	- #spearphishing
 		- w/ previously compromised email addresses
-		- journalists,military orgs, NGOs
-
+		- journalists, military orgs, NGOs
 
 *Naval modernization for China*
 #belt-and-road

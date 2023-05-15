@@ -9,7 +9,7 @@ Used to authenticate the send of an [email](/networking/email.md) by verifying t
 		- Email is protected from #email-spoofing and #phishing 
 			- lets the world know which servers are allowed to send emails on your behalf
 - an SPF record is a #DNS-TXT record which contains a list of #IP-addresses which are allowed to send #email on behalf of the domain.
-![[Pasted image 20230216183432.png]]
+![](/cybersecurity/cybersecurity-pics/SPF-1.png)
 -THM
 
 ## SPF record format:
@@ -19,7 +19,6 @@ Used to authenticate the send of an [email](/networking/email.md) by verifying t
 	- `ip4:127.0.0.1`: which IP (and version) can send mail
 	- `include:_spf.google.com`: which domain can send email
 	- `-all`: non-authorized emails will be rejected
-
 
 ## How to make an SPF Record:
 ```

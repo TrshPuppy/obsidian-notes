@@ -12,7 +12,7 @@ Standard protocol for communication via [email](/networking/email.md). To start 
 - Sent in response to commands sent by the #SMTP-client
 - Numerical codes regarding the status or an error r/t transmission of the message.
 	- allows for troubleshooting errors.
-![[Pasted image 20230219112529.png]]
+![](/networking/networking-pics/SMTP-1.png)
 -[mailersend](https://www.mailersend.com/blog/smtp-codes)
 
 ### Common Codes and meanings:

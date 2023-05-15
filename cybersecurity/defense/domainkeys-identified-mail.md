@@ -31,7 +31,7 @@ The #DKIM-selectors are specified in the DKIM-signature header and indicates whe
 
 The DKIM-signature and selectors can be found in the "source code" or raw headers of the email:
 
-![[Pasted image 20230218210338.png]]
+![](/cybersecurity/cybersecurity-pics/DKIM-1.png)
 -[dmarcian](https://dmarcian.com/dkim-selectors/)
 
 In this image, the DKIM selector is indicated by the `s=` attribute (the selector is `s2048g1`)

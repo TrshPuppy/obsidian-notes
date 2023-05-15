@@ -84,9 +84,9 @@ Steve:
 						- web server is listening on port 80
 				- No packets or any interfaces on the actual network were involved 
 
-![[IP-routing-steve.png]] 
+![](/networking/networking-pics/IP-routing-steve.png)
 
-![[IP-routing-with-steve-2.png]]
+![](/networking/networking-pics/IP-routing-steve-2.png)
 
 >[!links]
 >https://www.geeksforgeeks.org/what-is-a-loopback-address/

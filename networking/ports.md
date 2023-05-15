@@ -30,8 +30,8 @@ If a device running a service on a port inside the #intranet of a network wants 
 - 
 
 Below: the device at `192.168.1.10` is running a service on port 80. Only the other devices w/i the same intranet can access it:
-![[Pasted image 20230211175427.png]]
+![](/networking/networking-pics/ports-1.png)
 
 Port forwarding:
-![[Pasted image 20230211175531.png]]
+![](/networking/networking-pics/ports-2.png)
 -TryHackMe.com

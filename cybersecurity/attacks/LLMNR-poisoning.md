@@ -3,7 +3,7 @@
 An attacker can take advantage of [LLMNR](/networking/protocols/LLMNR.md) by spoofing as an authoritative source for name resolution.
 
 ## Mechanism:
-![[Pasted image 20230222085032.png]]
+![](/cybersecurity/cybersecurity-pics/LLMNR-poisoning-1.png)
 -[Hacking Articles: Detailed Guide on Responder](https://www.hackingarticles.in/a-detailed-guide-on-responder-llmnr-poisoning/)
 If a victim wants to connect to a shared drive w/i a network or system called `\\lemons` they send a request to the #DNS server. If the DNS server doesn't know how to resolve `\\lemons` (because it doesn't exist), the the victim will resort to sending #multicast request using #LLMNR instead.
 

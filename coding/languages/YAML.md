@@ -108,8 +108,7 @@ picture: !!binary |
 ```
 
 ##### User-defined:
-YAML allows users to extend data type definitions locally into their own  classes, structures, or primitives. One example is *quad-precision floats*.
-
+YAML allows users to extend data type definitions locally into their own  classes, structures, or primitives. One example is *quad-precision floats.*
 
 > [!Links:]
 > [Wikipedia: YAML](https://en.wikipedia.org/wiki/YAML)
