@@ -17,6 +17,9 @@ IoT Pentest: [1](/practical-ethical-hacking/intro.md#iot-pentest)
 ## M
 Mobile Pentest: [1](/practical-ethical-hacking/intro.md#mobile-pentest)
 
+## O
+OSINT: [1](/practical-ethical-hacking/intro.md#OSINT)
+
 ## P
 Phishing: [1](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/attacks/phishing.md)
 Physical Pentest: [1](/practical-ethical-hacking/intro.md#physical-pentest)
