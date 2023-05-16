@@ -14,7 +14,7 @@ Networking nerd badge
 		- unique, static/ can't be changed
 		- simialr to a #MAC-addresses 
 			- (other than #MAC-spoofing)
-4. [IP addresses](IP-addresses.md)
+4. [IP addresses](networking/OSI/IP-addresses.md)
 5. [MAC-addresses](MAC-addresses.md)
 6. [ping](ping.md)
 
