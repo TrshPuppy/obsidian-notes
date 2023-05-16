@@ -39,7 +39,7 @@ Focused on web-based attacks and testing guidelines dictated by [OWASP](https://
 
 Usually lasts *at least 40 hours* in order to cover a thorough checklist of what needs to be tested against the web app. 8-16 hours for report writing.
 
-### Wireless Pentest
+### Wireless Pentest:
 Assessing the organization's wireless security specifically.
 
 #### Methodology:
@@ -58,4 +58,25 @@ Depends on the task at hand and the client's goals. Some organizations just want
 Usually takes 16-40 hours depending on the task, w/ 4-8 hours for report writing.
 
 ##### Social Engineering:
+*The weakest element in an organization's security is the human element*!
+
 Social engineering is using manipulation to gain access to or gather restricted information on a target. A common example of a social engineering tactic is [phishing](/cybersecurity/attacks/phishing.md).
+
+Social engineering and physical pentesting tend to go hand in hand. 
+
+### Other Assessments:
+#### Mobile Pentest:
+Basically web-app pentesting but on a mobile app. Each operating system comes with its own pentesting techniques (Android, iOS, etc.).
+
+#### IoT Pentest:
+Usually involves IoT devices which have wireless capabilities but are not traditional user-interfaced computers like laptops/ desktops/ mobile phones, etc.
+
+#### Red Team Engagement:
+When an organization asks for a pentest but not for details regarding when or how. Methodology can include anything defined in the scope or the engagement.
+
+#### Purple Team Engagement:
+When a Red Team and Blue Team run an engagement together to determine a baseline for the current security/ detection measures. I.E. the red team may attempt an attack and the Blue Team will report on how the network/ target changed or didn't change (including detection measures, network traffic, etc.).
+
+Not commonly requested by organizations who are newer to pentesting engagements.
+
+

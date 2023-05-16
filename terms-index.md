@@ -1,16 +1,53 @@
+
+# Index of Terms:
 Path syntax: `/parent-dir/file.md#header-in-file`
->	outside paths should be formatted for GitHub use: `https://github.com/TrshPuppy/obsidian-notes/blob/main/dir-in-obsidian-notes`
+>	Outside paths should be formatted for GitHub use: `https://github.com/TrshPuppy/obsidian-notes/blob/main/dir-in-obsidian-notes`
 
-[wireless pentest](/practical-ethical-hacking/intro.md#wireless-pentest)
+## E
+External Pentest: [1](/practical-ethical-hacking/intro.md#external-network-pentest)
 
-[external pentest](/practical-ethical-hacking/intro.md#external-network-pentest)
+## I
+Internal Pentest: [1](/practical-ethical-hacking/intro.md#internal-network-pentest)
+IoT Pentest: [1](/practical-ethical-hacking/intro.md#iot-pentest)
 
-[internal pentest](/practical-ethical-hacking/intro.md#internal-network-pentest)
+## M
+Mobile Pentest: [1](/practical-ethical-hacking/intro.md#mobile-pentest)
 
-[web application pentest](/practical-ethical-hacking/intro.md#web-application-pentest)
+## P
+Phishing: [1](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/attacks/phishing.md)
+Physical Pentest: [1](/practical-ethical-hacking/intro.md#physical-pentest)
+Purple Team Engagement: [1](/practical-ethical-hacking/intro.md#purple-team-engagement)
 
-[physical pentest](/practical-ethical-hacking/intro.md#physical-pentest)
+## R
+Red Team Engagement: [1](/practical-ethical-hacking/intro.md#red-team-engagement)
 
-[social engineering](/practical-ethical-hacking/intro.md#social-engineering)
+## S
+Social Engineering: [1](/practical-ethical-hacking/intro.md#social-engineering)
 
-[phishing](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/attacks/phishing.md)
+## W
+Web Application Pentest: [1](/practical-ethical-hacking/intro.md#web-application-pentest)
+Wireless Pentest: [1](/practical-ethical-hacking/intro.md#wireless-pentest)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
