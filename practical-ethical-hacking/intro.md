@@ -79,4 +79,18 @@ When a Red Team and Blue Team run an engagement together to determine a baseline
 
 Not commonly requested by organizations who are newer to pentesting engagements.
 
+### Report Writing:
+Successful consultants need to be able to write professional reports which can be understood by both technical and non-technical audiences. Usually delivered w/i a week of the engagement.
 
+#### Executive Summary:
+The portion of the report catered to a non-technical audience. Should be *crystal clear* when communicating what issues were found and how to fix them.
+
+#### Technical Findings Section:
+For people in the organization who are responsible for technical work including devs, IT personnel, security engineer, etc.. This section should include descriptions of the tools used on the engagement as well as *high-level* recommendations *and technical recommendations*.
+
+#### Debrief:
+Designed to walk technical and non-technical audiences through your findings during the engagement (may be presented in front of technical and non-technical people alike).
+
+You should be prepared to give a technical *and* high-level explanation of your findings.
+
+The Debrief also allows the client to ask questions about or challenge your findings before a final report is written (the initial report is always a *draft*).

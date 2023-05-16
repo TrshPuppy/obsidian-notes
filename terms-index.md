@@ -3,8 +3,12 @@
 Path syntax: `/parent-dir/file.md#header-in-file`
 >	Outside paths should be formatted for GitHub use: `https://github.com/TrshPuppy/obsidian-notes/blob/main/dir-in-obsidian-notes`
 
+## D
+Debrief: [1](/practical-ethical-hacking/intro.md#debrief)
+
 ## E
 External Pentest: [1](/practical-ethical-hacking/intro.md#external-network-pentest)
+Executive Summary: [1](/practical-ethical-hacking/intro.md#executive-summary)
 
 ## I
 Internal Pentest: [1](/practical-ethical-hacking/intro.md#internal-network-pentest)
@@ -23,6 +27,9 @@ Red Team Engagement: [1](/practical-ethical-hacking/intro.md#red-team-engagement
 
 ## S
 Social Engineering: [1](/practical-ethical-hacking/intro.md#social-engineering)
+
+## T
+Technical Findings Report Section: [1](/practical-ethical-hacking/intro.md#technical-findings-section)
 
 ## W
 Web Application Pentest: [1](/practical-ethical-hacking/intro.md#web-application-pentest)
