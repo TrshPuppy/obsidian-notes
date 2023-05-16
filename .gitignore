@@ -1,0 +1,18 @@
+/PNPT-hidden
+
+## parent repo
+.obsidian/cache
+.trash/
+.DS_Store
+.obsidian/workspace.json
+vid.md
+cybersecurity/security-roadmap.md
+networking/open-source/odin-project-API-keys.md
+/cybersecurity/roadmap
+/cybersecurity/THM/THM.md
+/cybersecurity/HTB/HTB.md
+/hidden
+/networking/networking.md
+/roadmap
+move-pics.sh
+.move-pics.sh.swp
