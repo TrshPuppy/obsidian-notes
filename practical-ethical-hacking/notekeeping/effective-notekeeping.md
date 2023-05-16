@@ -22,7 +22,7 @@ Taking detailed notes on an assessment is important for report writing but also 
 
 ## Considerations
 
->     *NOTE:* The following are personal thoughts and have no basis in any of the material in the PNPT course from TCM.
+>	*NOTE:* The following are personal thoughts and have no basis in any of the material in the PNPT course from TCM.
 
 ### Security:
 
