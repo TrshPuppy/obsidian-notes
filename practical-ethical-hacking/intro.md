@@ -14,7 +14,7 @@ Most common type performed, assessing and testing an organization's security fro
 They also tend to be cheaper than other types of pentesting. This makes it easier for companies to start adopting pentesting as a practice for their security.
 
 #### Methodology:
-Focuses heavily on [OSINT](OSINT-fundamentals/OSINT-overview.md), gathering open-source information on the company and its employees. Usually takes ~32-40 hours + 8-16 for report writing.
+Focuses heavily on [OSINT](../PNPT-study-guide/OSINT-fundamentals/OSINT-overview.md), gathering open-source information on the company and its employees. Usually takes ~32-40 hours + 8-16 for report writing.
 
 ##### OSINT:
 What data can be gathered (which is public) to aid breaking in/ exploiting the organization's network and gaining access to restricted spaces/ information?
