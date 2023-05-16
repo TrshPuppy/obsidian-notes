@@ -21,10 +21,13 @@ IPv4 Exhaustion: [1](https://github.com/TrshPuppy/obsidian-notes/blob/main/netwo
 IPv6: [1](/practical-ethical-hacking/networking-refresher/IP-addresses.md#ipv4-vs-ipv6)
 
 ## M
+MAC Addresses: [1](/practical-ethical-hacking/networking-refresher/MAC-addresses.md#mac-addresses) [2](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/MAC-addresses.md) 
+MAC Address Lookup: [1](/practical-ethical-hacking/networking-refresher/MAC-addresses.md#mac-address-lookup)
 Mobile Pentest: [1](/practical-ethical-hacking/intro.md#mobile-pentest)
 
 ## N
 Network Address Translation: [1](/practical-ethical-hacking/networking-refresher/IP-addresses.md#network-address-translation)
+Network Interface Card: [1](/practical-ethical-hacking/networking-refresher/MAC-addresses.md#network-interface-card)
 
 ## O
 OSINT: [1](/practical-ethical-hacking/intro.md#OSINT)
