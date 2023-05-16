@@ -36,6 +36,15 @@ Notes should also be stripped of all P.I.I. so that, in the case that they fall 
 >
 > Additionally, I know that so many managers are [redacted] when it comes to blame-game. I never want to throw someone under the bus. If, for example, I find credit card data on Trash P's computer which is not supposed to be there and the finding indicates that the data is there because of a systemic or procedural failure, I'm not going to identify Trash P or the specific computer. I'm going to report that I found evidence of the information (and enough information to prove this) without throwing Trash under the bus."
 
+#### Advice from another friend:
+
+>"Usually companies require that you have hard disk encryption (like BitLocker for Windows).
+>
+>On top of that, most companies usually request that you purge all data besides the report after x amount of days (usually 30-90 days after the test). Each company / consultancy you work for is a bit different.
+>
+>Some companies you end up working for will provision you a device that has device management software that enforces those things, like updates, encryption, etc.
+>
+>But usually, the actual notes on testing is either standardized at each org you work for, or you're kinda left to your own devices. One company I worked for, as an example, required encrypting the Burp State, Notes, and Report using PGP encryption stored on their servers, then deleted on your end."
 
 > Outside resources:
 >     [HTB Academy: Pentesting Reports Template](https://www.hackthebox.com/blog/penetration-testing-reports-template-and-guide)

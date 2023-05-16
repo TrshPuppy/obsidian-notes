@@ -3,6 +3,9 @@
 Path syntax: `/parent-dir/file.md#header-in-file`
 >	Outside paths should be formatted for GitHub use: `https://github.com/TrshPuppy/obsidian-notes/blob/main/dir-in-obsidian-notes`
 
+## C
+Classless Inter-Domain Routing (CIDR): [1](/practical-ethical-hacking/networking-refresher/IP-addresses.md#cidr)
+
 ## D
 Debrief: [1](/practical-ethical-hacking/intro.md#debrief)
 
@@ -13,9 +16,15 @@ Executive Summary: [1](/practical-ethical-hacking/intro.md#executive-summary)
 ## I
 Internal Pentest: [1](/practical-ethical-hacking/intro.md#internal-network-pentest)
 IoT Pentest: [1](/practical-ethical-hacking/intro.md#iot-pentest)
+IPv4: [1](/practical-ethical-hacking/networking-refresher/IP-addresses.md#ipv4-vs-ipv6)
+IPv4 Exhaustion: [1](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/routing/CIDR.md)
+IPv6: [1](/practical-ethical-hacking/networking-refresher/IP-addresses.md#ipv4-vs-ipv6)
 
 ## M
 Mobile Pentest: [1](/practical-ethical-hacking/intro.md#mobile-pentest)
+
+## N
+Network Address Translation: [1](/practical-ethical-hacking/networking-refresher/IP-addresses.md#network-address-translation)
 
 ## O
 OSINT: [1](/practical-ethical-hacking/intro.md#OSINT)
