@@ -17,6 +17,7 @@ The process of re-mapping an IP address space into another by modifying the addr
 Example: Think of your public IP on your router. It is your public-facing IP address, yet every device on your network has its own individual address as well. 
 
 ![](PNPT-study-guide/PNPT-pics/IP-addresses-1.png)
+![](/PNPT-study-guide/PNPT-pics/IP-addresses-1.png)
 -[Wikipedia](https://en.wikipedia.org/wiki/Network_address_translation)
 
 ### CIDR:
