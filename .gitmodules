@@ -1,0 +1,3 @@
+[submodule "PNPT-study-guide"]
+	path = nested-repos/PNPT-study-guide
+	url = git@github.com:TrshPuppy/PNPT-study-guide.git
