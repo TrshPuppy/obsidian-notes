@@ -1,5 +1,5 @@
 Path syntax: `/parent-dir/file.md#header-in-file`
->	outside paths should be formatted for GitHub use
+>	outside paths should be formatted for GitHub use: `https://github.com/TrshPuppy/obsidian-notes/blob/main/dir-in-obsidian-notes`
 
 [wireless pentest](/practical-ethical-hacking/intro.md#wireless-pentest)
 
@@ -13,4 +13,4 @@ Path syntax: `/parent-dir/file.md#header-in-file`
 
 [social engineering](/practical-ethical-hacking/intro.md#social-engineering)
 
-[phishing](/TrshPuppy/obsidian-notes/cybersecurity/attacks/phishing.md)
+[phishing](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/attacks/phishing.md)
