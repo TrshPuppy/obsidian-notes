@@ -36,6 +36,6 @@ Notes should also be stripped of all P.I.I. so that, in the case that they fall 
 >
 > Additionally, I know that so many managers are [redacted] when it comes to blame-game. I never want to throw someone under the bus. If, for example, I find credit card data on Trash P's computer which is not supposed to be there and the finding indicates that the data is there because of a systemic or procedural failure, I'm not going to identify Trash P or the specific computer. I'm going to report that I found evidence of the information (and enough information to prove this) without throwing Trash under the bus."
 
+
 > Outside resources:
->
-> >     [HTB Academy: Pentesting Reports Template](https://www.hackthebox.com/blog/penetration-testing-reports-template-and-guide)
+>     [HTB Academy: Pentesting Reports Template](https://www.hackthebox.com/blog/penetration-testing-reports-template-and-guide)
