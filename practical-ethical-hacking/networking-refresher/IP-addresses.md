@@ -12,9 +12,6 @@ Possible amount of IP addresses = 32 bits (2^32) = about 4 billion addresses. _W
 Instead of using 32 bits to create IP addresses, we use hexadecimal notation to create 128 bits (2^128) for addresses (a much larger amount which we will likely never use up).
 
 ### Network Address Translation:
-
->     *NOTE:* My notes deviate from the information given in this section of the TCM Practical Ethical Hacking course.
-
 The process of re-mapping an IP address space into another by modifying the address information in the IP Header of packets while they are still in transit. NAT has been a solution to conserving address space in [IPv4 Exhaustion](/networking/routing/CIDR.md). This is because one IP address of a NAT Gateway can be used for entire _private network._
 
 Example: Think of your public IP on your router. It is your public-facing IP address, yet every device on your network has its own individual address as well.
