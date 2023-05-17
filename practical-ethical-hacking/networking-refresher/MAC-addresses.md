@@ -13,6 +13,6 @@ MAC addresses are formatted into a 12 digit hexadecimal number. The bytes in the
 
 The first six digits of the number *identifies the manufacturer* of the device. A MAC Address Lookup tool can be used to figure out who manufactured the device.
 
-Example: `00:0C:29` resolves to the manufacturer VMware, Inc.
+Example: `00:0C:29` resolves to the manufacturer VMware, Inc
 
 

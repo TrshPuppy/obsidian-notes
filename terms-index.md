@@ -3,6 +3,9 @@
 Path syntax: `/parent-dir/file.md#header-in-file`
 >	Outside paths should be formatted for GitHub use: `https://github.com/TrshPuppy/obsidian-notes/blob/main/dir-in-obsidian-notes`
 
+## A
+ACK flag: [1](practical-ethical-hacking/networking-refresher/tcp-udp.md#ack)
+
 ## C
 Classless Inter-Domain Routing (CIDR): [1](/practical-ethical-hacking/networking-refresher/IP-addresses.md#cidr)
 
@@ -42,9 +45,16 @@ Red Team Engagement: [1](/practical-ethical-hacking/intro.md#red-team-engagement
 
 ## S
 Social Engineering: [1](/practical-ethical-hacking/intro.md#social-engineering)
+SYN flag: [1](/practical-ethical-hacking/networking-refresher/tcp-udp.md#syn)
+SYN ACK flag: [1](practical-ethical-hacking/networking-refresher/tcp-udp.md#syn-ack)
 
 ## T
+TCP (Transmission Control Protocol): [1](/practical-ethical-hacking/networking-refresher/tcp-udp.md) [2](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/protocols/TCP.md)
 Technical Findings Report Section: [1](/practical-ethical-hacking/intro.md#technical-findings-section)
+Three Way Handshake: [1](practical-ethical-hacking/networking-refresher/tcp-udp.md#three-way-handshake)
+
+## U 
+UDP (User Datagram Protocol): [1](/practical-ethical-hacking/networking-refresher/tcp-udp.md) [2](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/protocols/UDP.md)
 
 ## W
 Web Application Pentest: [1](/practical-ethical-hacking/intro.md#web-application-pentest)
