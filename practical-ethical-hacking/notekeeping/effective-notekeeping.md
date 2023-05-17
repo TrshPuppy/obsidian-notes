@@ -6,7 +6,6 @@ Taking and saving screenshots from client engagements is an easy way to include 
 Taking detailed notes on an assessment is important for report writing but also for _historical records_. For example: a client may return to you months or years later asking for information about their assessment.
 
 ## Resources:
-
 ### Windows:
 [KeepNote](https://keepnote.org/)
 
@@ -17,7 +16,6 @@ Taking detailed notes on an assessment is important for report writing but also 
 [Joplin](https://github.com/laurent22/joplin)
 
 ## Considerations:
-
 ### Security:
 Notes you take on an engagement should be secured. These notes likely include sensitive information about the client's network and details which could be used against them.
 

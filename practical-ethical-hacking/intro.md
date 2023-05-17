@@ -1,13 +1,7 @@
 
 # Practical Ethical Hacking Intro:
 
-## Course Requirements/ Pre-reqs:
-1. [ ] Basic IT knowledge
-2. [ ] Mid Course Capstone: 12BG RAM
-3. [ ] Wireless Hacking: wireless adapter with monitor mode
-4. [ ] Active Directory lab build: 16GB RAM
-
-## Day in the Life:
+## Types of Pentests:
 ### External Network Pentest:
 Most common type performed, assessing and testing an organization's security from the outside, usually from a remote location. This type of pentest is *most common* because compliance organizations require external network pentests annually.
 
