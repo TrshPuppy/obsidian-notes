@@ -5,7 +5,7 @@ Ports enforce what data can come in or leave from them and how.
 - Can also be used by networking devices to enforce strict rules on communication b/w one another.
 
 ## Port examples:
-==There are 0 - 65,635 ports==
+*There are 0 - 65,535 ports*
 - Because there are so many, it's easy to lose track of which apps are running on which ports.
 	- Applications/ software held to a standard of rules
 		- ex: web browsers have to send data over #port-80 ( #HTTP)

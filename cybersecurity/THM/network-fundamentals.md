@@ -15,7 +15,7 @@ Networking nerd badge
 		- simialr to a #MAC-addresses 
 			- (other than #MAC-spoofing)
 4. [IP addresses](networking/OSI/IP-addresses.md)
-5. [MAC-addresses](MAC-addresses.md)
+5. [MAC-addresses](networking/OSI/MAC-addresses.md)
 6. [ping](ping.md)
 
 # Intro to LAN
