@@ -48,8 +48,16 @@ Resources shared via SMB on a network are referred to as "shares" (`$ipc`). SMB 
 >	*Bonus:* Major SMB vulnerabilities like the [Eternal Blue](/cybersecurity/vulnerabilities/eternal-blue.md) family (CVE-2017-0143 thru -0148) have been used in recent (2017), critical attacks including [WannaCry](/cybersecurity/attacks/wannacry.md) and [NotPetya](/cybersecurity/attacks/notpetya.md).
 
 ## Common UDP Ports:
+### DNS (UDP = port 53)
 
+### [DHCP](/networking/protocols/DHCP.md):
+*Port 67, 68*. Protocol used to associate devices on a network to IP addresses "at random" usually from a specified range and for a specific amount of time.
 
+### TFTP (Trivial FTP):
+*Port 69*. FTP using UDP instead of TCP.
+
+### [SNMP](/networking/protocols/SNMP.md) (Simple Network Management Protocol):
+*Port 161.* 
 
 >	Resources:
 >	[Wikipedia: Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System)
