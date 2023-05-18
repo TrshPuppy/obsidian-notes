@@ -21,7 +21,7 @@ Combining an #exploit and #malware into a deliverable #payload
 1. How the weapon gets delivered
 2. ex:
 	1. [watering-hole]()
-	2. [phishing](/cybersecurity/attacks/phishing.md)
+	2. [phishing](phishing.md)
 	3. [candy-drop]()
 
 #### Exploitation
