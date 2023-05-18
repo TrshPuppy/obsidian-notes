@@ -41,9 +41,11 @@ HTTP and HTTPS were developed in order to standardize how a web browser and a we
 The difference b/w HTTP and HTTPS is that HTTPS is encrypted.
 
 ### [SMB](/networking/protocols/SMB.md) (Server Message Block):
-SMB (ports 445 and 139) is a protocol which allows devices on a network to share and access files and programs (mostly printing programs), as well as provides inter-process-communication among processes running on remote computers.
+SMB (ports 445 and 139) is a protocol which allows devices on a network to share and access the same files and printing services, as well as provides inter-process-communication among processes running on remote computers.
 
 Resources shared via SMB on a network are referred to as "shares" (`$ipc`). SMB was mainly designed to allow users on remote computers to share files and print documents via shared printers on the network. SMB also allows for *file reading and writing*.
+
+>	*Bonus:* Major SMB vulnerabilities like the [Eternal Blue](/cybersecurity/vulnerabilities/eternal-blue.md) family (CVE-2017-0143 thru -0148) have been used in recent (2017), critical attacks including [WannaCry](/cybersecurity/attacks/wannacry.md) and [NotPetya](/cybersecurity/attacks/notpetya.md).
 
 ## Common UDP Ports:
 
@@ -52,4 +54,6 @@ Resources shared via SMB on a network are referred to as "shares" (`$ipc`). SMB 
 >	Resources:
 >	[Wikipedia: Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System)
 >	[CyberSophia: What is SMB and Why is it a Security Concern?](https://cybersophia.net/articles/what-is/what-is-smb-protocol-and-why-is-it-a-security-concern/)
+>	[SentinelOne: EternalBlue Exploit: What it is and How it Works](https://www.sentinelone.com/blog/eternalblue-nsa-developed-exploit-just-wont-die/)
+>	
 
