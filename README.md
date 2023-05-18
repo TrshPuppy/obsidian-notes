@@ -11,7 +11,7 @@ The best way to view this collection of notes is with the Obsidian desktop app. 
 </picture>
 <br>
 
-> This is how my notes on [Fast Flux](/cybersecurity/attacks/Fast-Flux.md) will look on Obsidian Desktop.
+> This is how my notes on [Fast Flux](Fast-Flux.md) will look on Obsidian Desktop.
 
 If you prefer to browse my notes w/o the help of Obsidian, just know that some markdown formatting will not make sense and will make the notes harder to read.
 

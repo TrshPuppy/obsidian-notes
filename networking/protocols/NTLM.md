@@ -21,7 +21,7 @@ The server then verifies the users identity by making sure that the *challenge* 
 
 ## Security:
 NTLM is vulnerable to a few different attack vectors:
-### ![Pass the Hash](/cybersecurity/attacks/pass-the-hash)
+### ![Pass the Hash](pass-the-hash.md)
 ### Brute Force Attack:
 NTLM is vulnerable to #brute-force attacks b/c the hashing algorithm ( #DES) does not use a #salt.
 - A salt adds random characters to a password before it's hashed, making it more difficult to de-obfuscate.
@@ -29,7 +29,7 @@ NTLM is vulnerable to #brute-force attacks b/c the hashing algorithm ( #DES) doe
 		1. xxxxxxxxx (password)
 		2. sha256([salt]password[pepper])
 
-B/c there is no salting of the hashed passwords an attacker can use a [rainbow table](/cybersecurity/passwords/rainbow-table.md) to brute force the hash using pre-calculated hashes of standard passwords.
+B/c there is no salting of the hashed passwords an attacker can use a [rainbow table](rainbow-table.md) to brute force the hash using pre-calculated hashes of standard passwords.
 - This method is less effective on passwords which are more complex and longer (> 15 characters).
 
 ### NTLM Relay Attack

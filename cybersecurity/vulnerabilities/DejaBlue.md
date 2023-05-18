@@ -12,7 +12,6 @@ Vulnerability in Windows 7 - Windows 10 using [[RDP]]
 ## Analysis:
 See links
 
-
 >[!links]
 >https://www.rapid7.com/blog/post/2019/11/07/the-anatomy-of-rdp-exploits-lessons-learned-from-bluekeep-and-dejablue/
 >
