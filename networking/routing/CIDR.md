@@ -45,7 +45,7 @@ In 1993 Classful IP Addressing was replaced with Classless Inter-Domain Routing 
 - Contains IP addresses based on 3 simple rules:
 	1. w/i the block, IP addresses allocated to the hosts should be *continuous*
 	2. the size of the block should be to the power of 2 and be equal to the total number of IP addresses
-	3. the size of the block mustt be divisible by the first IP address of the block
+	3. the size of the block must be divisible by the first IP address of the block
 
 ## CIDR Notation
 - CIDR IP address notation: ```X.X.X.X/n```

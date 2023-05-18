@@ -1,6 +1,6 @@
 
 # Multiplexing
-A method to combine multiple analog and digital signals into one signal to be trasnmitted through a shared medium.
+A method to combine multiple analog and digital signals into one signal to be transmitted through a shared medium.
 - Aim: to share a scarce resource (physical transmission medium)
 - Example: multiple phone calls being carried using one wire
 
