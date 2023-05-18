@@ -5,7 +5,7 @@
 A MAC address is a 48 bit hardware number which is *unique* to the device its attached to.
 - usually embedded w/i a device's #network-card / #network-interface-card when the device is manufactured.
 
-Used by the #MAC-sublayer of the [[data-link-layer]].
+Used by the #MAC-sublayer of the [data-link-layer](/networking/OSI/data-link-layer.md).
 
 ## Format:
 ```
@@ -34,6 +34,6 @@ When a networked device pretends to identify as a different one by using its MAC
 - Can break poorly-maintained security designs
 	- ex: if a network firewall is configured to trust any and all traffic coming from the MAC address of the administrator
 >[!Command line]
->[[ifconfig]]
->[[ip-command]]
->
+> [ifconfig](/CLI-tools/ifconfig.md)
+> [ip-command](/CLI-tools/ip-command.md)
+

@@ -12,11 +12,11 @@ aliases: [FTP, file-transfer-protocol, ftp]
 
 #anonymous-ftp :
 - sites can enable #anonymous-ftp so files are available to the public.
-- users can acces the files w/o a password and with the username ``anonymous``
+- users can access the files w/o a password and with the username ``anonymous``
 - *Access is limited to copying files* anonymous ftp does not allow the user to navigate through directories
 
 #SFTP: Secure FTP or SSH FTP:
-- Extension of [[SSH]]
+- Extension of [SSH](/networking/protocols/SSH.md)
 
 >[!related]
 > #port-21

@@ -1,11 +1,13 @@
 
+# curL Command:
+
 ### Usage:
 ```
 curl [options/null]
 ```
 
 A cli tool for transferring data from or to a server
-	supports many various protocols (ex: #HTTP, #HTTPS, #FTP, #SMBm #TELNET)
+	supports many various protocols (ex: #HTTP, #HTTPS, #FTP, #SMB #TELNET)
 
 #### Useful options:
 - #curl-I

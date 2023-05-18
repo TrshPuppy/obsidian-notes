@@ -1,9 +1,8 @@
 
 # Docker
-Docker [containers](/computers/containers.md)
-) sit on top of the host [operating-system](/computers/operating-system.md):
+Docker [containers](/computers/containers.md) sit on top of the host [operating-system](/computers/operating-system.md):
 - A #docker-container uses the host #operating-system
-	- prefers [[linux]]-based OS's
+	- prefers [linux](/computers/linux)-based OS's
 	- lighter than a #virtual-machine because it piggy-backs on the pre-existing OS
 	- #boot s faster
 	- Occupies less memory
@@ -23,7 +22,7 @@ Docker [containers](/computers/containers.md)
 The #docker-engine is installed on the #host machine and allows the #docker-container s to be built and run using Docker services.
 - Can be accessed from the #host -side command-line-interface
 - uses a #client-server-architecture:
-	- installed on the #host [hardware](/computers/hardware.md) and containers the docker-server ( #daemon )
+	- installed on the #host [hardware](/computers/hardware.md) and contain the docker-server ( #daemon )
 	- controls how the #client is created
 	- #client and #server communicate using #REST-API
 
@@ -36,7 +35,7 @@ The #docker-engine is installed on the #host machine and allows the #docker-cont
 	1. a template with instructions which is used to build #docker-container s 
 		1. built using the #docker-file which is a text file w/ commands for building the image
 		2. once the #docker-file is made, it is stored in 
-		3. oncce the #docker-file is made, it is stored in a #repository ( #docker-hub)
+		3. once the #docker-file is made, it is stored in a #repository ( #docker-hub)
 			1. registry.hub.docker.com
 	2. Can be pulled from the hub
 		1. has versioning
@@ -59,6 +58,69 @@ The #docker-engine is installed on the #host machine and allows the #docker-cont
 		2. to update a repo:
 			1. `Docker push <image>:<tags>`
 
+## Usage:
+To set up an application with Docker:
+
+### Create Dockerfile:
+Add the following:
+```dockerfile
+FROM <image>:<tag> # The base image for the container ex: ubuntu:latest
+
+WORKDIR /app #Docker will create this directory to work from
+COPY . . # This will copy everything in the current directory into the image
+
+ENTRYPOINT ["/bin/bash"] # This designates bash as the interface when live
+
+# Alternative to ENTRYPOINT:
+CMD ["node", "example.js"] # This command will execute on runtime
+```
+
+### Build and Run the Image:
+```bash
+sudo docker build -t <container name> .
+# -t sets the name from a string/array
+sudo docker run -it <container name> 
+# -it allows you to interact w/ the container when it is running
+```
+
+#### Mounting host directories into container:
+```bash
+# in the run command:
+sudo docker run --mount type=bind,source="$(pwd)/dir",target=/app/dir --name <container name> <container name>
+# $(pwd) is the current host directory
+# dir is the example directory which will be mounted from the host
+# /app/dir is the target directory when the container runs
+```
+
+### Manipulating running containers:
+#### List all containers:
+```bash
+sudo docker container ls
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+```
+
+#### Kill specific container:
+```bash
+# kill using the container's name set in the run command
+sudo docker kill <container name>
+```
+
+#### Kill all container processes:
+```bash
+sudo docker system prune -a
+```
+
+#### Create a shell into a running container:
+```bash
+sudo docker exec -it <container name> sh
+# -it is interactive mode
+```
+
+#### See the logs of a running container:
+```bash
+sudo docker logs <container name> -f
+# -f stands for "--follow" / follow log output
+```
 
 >[!links]
 >https://docs.docker.com/get-started/

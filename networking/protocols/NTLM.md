@@ -3,7 +3,7 @@
 A suite of protocols from Microsoft used to authenticate users and make their activity confidential. It uses a #challenge-response mechanism where the client has to prove to the serve that it knows the password associated w/ a username *w/o passing the password over the network*.
 
 ## Challenge-Response Mechanism:
-![[Pasted image 20230222072827.png]]
+![](/networking/networking-pics/NTLM-1.png)
 -[Redlings](https://www.redlings.com/en/guide/ntlm-windows-new-technology-lan-manager)
 
 ### Three messages:
@@ -34,7 +34,7 @@ B/c there is no salting of the hashed passwords an attacker can use a [rainbow t
 
 ### NTLM Relay Attack
 Since the user's client has no way or verifying the identity of the server, so an attack can perform a #man-in-the-middle by pretending to be the server to the client, and the client to the server.
-![[Pasted image 20230222080205.png]]
+![](/networking/networking-pics/NTLM-2.png)
 -[Redlings](https://www.redlings.com/en/guide/ntlm-windows-new-technology-lan-manager)
 
 ### Other Vulnerabilities:

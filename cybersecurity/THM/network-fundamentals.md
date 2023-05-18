@@ -14,7 +14,7 @@ Networking nerd badge
 		- unique, static/ can't be changed
 		- simialr to a #MAC-addresses 
 			- (other than #MAC-spoofing)
-4. [IP addresses](IP-addresses.md)
+4. [IP addresses](networking/OSI/IP-addresses.md)
 5. [MAC-addresses](MAC-addresses.md)
 6. [ping](ping.md)
 
@@ -39,7 +39,7 @@ Networking nerd badge
 		2. #OSPF
 		3. #RIP
 	6. [data-link-layer](/networking/OSI/data-link-layer.md)
-		1. MAC-addresses
+		1. [MAC-addresses](/networking/OSI/MAC-addresses.md)
 		2. #network-interface-card 
 	7. #physical-layer 
 

@@ -1,7 +1,7 @@
 
 # User Datagram Protocol
 #UDP is a protocol used for transferring data between devices which guarantees speed of transfer.
-![[Pasted image 20230208201648.png]]
+![](/networking/networking-pics/UDP-1.png)
 (if only packets 1 and 3 make it to the destination) -TryHackMe.com
 
 ### ==Unlike TCP:==
@@ -20,7 +20,7 @@
 - unstable connection = terrible user experience
 
 ## UDP Packets:
-![[Pasted image 20230208211514.png]]
+![](/networking/networking-pics/UDP-2.png)
 ### Types of Headers:
 1. #TTL / Time to Live: packet expiration time
 2. #source-address: IP of sending device

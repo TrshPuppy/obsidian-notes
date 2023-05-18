@@ -1,16 +1,7 @@
 
 # Hypertext Transfer Protocol
 
-
-
 #port-80 
-
-
-
-
-
-
-
 
 ## Headers:
 - #user-agent-string :

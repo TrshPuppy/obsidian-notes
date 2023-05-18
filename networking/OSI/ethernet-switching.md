@@ -1,6 +1,6 @@
 
 # Ethernet Switching
-#ethernet operates in #L1 / #physical-layer and #L2 / [[data-link-layer]] 
+#ethernet operates in #L1 / #physical-layer and #L2 / [data-link-layer](/networking/data-link-layer.md) 
  
 ## Ethernet Frames:
 Ea frame is a minimum of 64 bytes and maximum of 1518 bytes.
@@ -15,10 +15,10 @@ Ea frame is a minimum of 64 bytes and maximum of 1518 bytes.
 ### Ethernet Encapsulation:
 - a family of networking technologies developed and defined by the #IEEE-802/2 and #IEEE-802/3 standards
 	- IEEE 802.2 deals w/ the #LLC-sublayer 
-		- places information in the frame to identify which [[network-layer]] protocl is used for the #frame
+		- places information in the frame to identify which [network-layer](/networking/OSI/network-layer.md) protocol is used for the #frame
 	- IEEE 802.3 deals w/ the #MAC-sublayer 
 		- responsible for data #encapsulation and #media-access-control
-		- provides [[data-link-layer]] addressing
+		- provides Data Link Layer addressing
 	- * 802.3 is various ethernet standards, #IEEE-802/11 is #WLAN standards for #wireless communication, and #IEEE-802/15 is #WPAN standards ( #bluetooth, #RFID)
 - IEEE 802.3 data encapsulation includes:
 	- #ethernet-frame: the internal structure of the Ethernet frame
@@ -35,13 +35,13 @@ Ea frame is a minimum of 64 bytes and maximum of 1518 bytes.
 		- #half-duplex: can only send OR receive (not both at the same time)
 		- #collision-detection: #CSMA/CD Carrier Sense Multiple Access/ Collision Detection
 			- allows for detection on the medium
-			- collision = #hold-down-timer placed so transmission is ppaused to be tried again later
+			- collision = #hold-down-timer placed so transmission is paused to be tried again later
 	- today's ethernet:
 		- #full-duplex
-		- [[switches]] 
+		- [switches](/networking/routing/switches.md)
 		- All gigabit connections are full duplex
 		- collision detection: doesn't require CSMA/CD because ea #collision-domain is tied to each port and not to the entire device
 
 >[!links]
->https://www.youtube.com/watch?v=q4ZGh7lNQgw&ab_channel=ArthurSalmon
+> [Arthur Salmon: YouTube](https://www.youtube.com/watch?v=q4ZGh7lNQgw&ab_channel=ArthurSalmon)
 

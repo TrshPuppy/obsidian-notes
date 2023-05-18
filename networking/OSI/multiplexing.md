@@ -17,4 +17,4 @@ The opposite of #multiplexing
 - break one stream of data into several streams and transfer them simultaneously over several channels, then recreating the original data stream.
 
 >[!links]
->https://en.wikipedia.org/wiki/Multiplexing
+> [Wikipedia](https://en.wikipedia.org/wiki/Multiplexing)

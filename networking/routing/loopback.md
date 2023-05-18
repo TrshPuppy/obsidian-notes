@@ -6,7 +6,7 @@ The loopback #CIDR-block, *127.0.0.0/8* is a reserved collection of addresses.
 	- ex: if you're on your desktop, 127.0.0.1 refers to your desktop
 
 Steve:
-- computer [[operating-system]] ships w/ a #TCP-IP-stack which understands [[TCP]] 
+- computer OS ships w/ a #TCP-IP-stack which understands [TCP](/networking/protocols/TCP.md) 
 	- when anything in computer wants to access a network resource via TCP/IP it goes through the IP stack
 	- computer also has a #network-card / interface (ex: ethernet/wifi)
 		- knows how to physically connect to the network
@@ -14,7 +14,7 @@ Steve:
 			- ex: 192.168.0.5/24
 			- Also knows its own MAC address (of the physical card)
 				- ex: 00:00:00"00:00:01
-			- [[VPN]]: *creates a virtual network interface (w/ virtual IP and #MAC-addresses )
+			- [VPN](/networking/routing/VPN.md): *creates a virtual network interface (w/ virtual IP and #MAC-addresses )
 				- ex 10.0.0.12/8
 				- default route: 10.0.0.1
 	- computer knows routes:
@@ -27,13 +27,13 @@ Steve:
 			- default route (for #network-card ) is 192.168.0.1
 - In the web browser:
 	- ex: want to access Google.com
-		- First: [[DNS]] servers (same IP as the router)
+		- First: [DNS](/networking/DNS/DNS.md) servers (same IP as the router)
 			- IP: 192.168.0.1
 			- Browser asks IP stack in OS for IP address which corresponds to Google.com
 				- needs to find the DNS server
 					- looks at  routing table
 						-  the DNS is 192.168.0.1
-			- [[ARP]] request sent:
+			- [ARP](/networking/protocols/ARP.md) request sent:
 				- "who on this network has the IP 192.168.0.1" (layer 2)
 					- goes to router
 					- router has IP address cached so responds wwith:
@@ -42,7 +42,7 @@ Steve:
 					- new entry made: 
 						- IP: 192.168.0.1
 						- MAC: 00:00:00:00:00:00:03
-			- [[DNS]] request sent:
+			- [DNS](/networking/DNS/DNS.md) request sent:
 				- request to 192.168.0.1 via :03
 					- packet has header for IP address (L3) then MAC (L2)
 			- DNS responds:
@@ -84,11 +84,9 @@ Steve:
 						- web server is listening on port 80
 				- No packets or any interfaces on the actual network were involved 
 
+![](/networking/networking-pics/IP-routing-steve.png)
 
-
-![[IP-routing-steve.png]] 
-
-![[IP-routing-with-steve-2.png]]
+![](/networking/networking-pics/IP-routing-steve-2.png)
 
 >[!links]
 >https://www.geeksforgeeks.org/what-is-a-loopback-address/

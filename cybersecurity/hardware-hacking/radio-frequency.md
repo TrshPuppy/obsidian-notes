@@ -32,7 +32,7 @@ A capacitor stores electrical energy in an electric field.
 	- This releases a lot of energy all at once (faster than attaching the motor to a battery)
 	- #capacitance 
 
-### #inductor
+### Inductor
 An inductor is another way to store energy (ex: electrons)
 - Passing an electric current through a wire:
 	- will create an #electromagnetic-field:
@@ -45,7 +45,7 @@ An inductor is another way to store energy (ex: electrons)
 		- Over time, as more current goes through the coil, an electromagnetic field builds between the coils
 			- inductors *store energy in the electromagnetic field they create*
 				- the inductor is "charging up"
-		- As the electormagnetic field gets stronger, the resistance of the inductor decreases
+		- As the electromagnetic field gets stronger, the resistance of the inductor decreases
 			- Eventually, the resistance is so low that a current can flow through it easily.
 - When the EM-field in the coil is at its maximum and the OG power supply is shut off:
 	- *the EM-field will collapse and release all of the energy it was storing into the circuit*
@@ -55,11 +55,6 @@ An inductor is another way to store energy (ex: electrons)
 		- the inductor **opposes this change** (resistance)
 	- When the circuit turns off again, and the inductor is charged (has an EM-field)
 		- It will release its energy in an opposing force called #back-EMF
-
-
-## #flipper-zero:
-#sub-GHz
-
 
 >[!links]
 >Capacitors:

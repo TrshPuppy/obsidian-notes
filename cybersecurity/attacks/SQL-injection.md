@@ -37,10 +37,5 @@ A shopping application displays data about products in different categories:
 		- This query returns all itemse where either the category is Gifts or 1 is equal to 1.
 			- (since 1=1 is always true, the query returns ALL ITEMS)
 
-
 >[!links]
->https://portswigger.net/web-security/sql-injection
-
->[!neurons]
->[[SQL]]
-
+> [Port Swigger](https://portswigger.net/web-security/sql-injection)

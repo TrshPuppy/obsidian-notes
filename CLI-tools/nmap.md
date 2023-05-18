@@ -6,7 +6,7 @@ nmap [Scan Type(s)] [Options] {target sppecification}
 
 ## useful options:
 TCP connect scan: #nmap-sT
-- Scanning for [[TCP]] 
+- Scanning for [TCP](/networking/protocols/TCP.md) 
 - syntax: for TCP: ``nmap -sT {target}``
 SYN connect scan #nmap-sS
 - scan for SYN connects
@@ -35,13 +35,13 @@ Limit number of ports scanned: `-p <number or range>`
 	- Disadvantages:
 		- requires root privileges
 		- may cause an unstable target service to crash
-3. [[UDP]] scans: ( #nmap-sU)
+3. [UDP](/networking/protocols/UDP.md) scans: ( #nmap-sU)
 	- UDP is ==stateless== 
 		- it doesn't require a handshake
 	- more difficult to scan for:
 		- When there is no response when a packet is sent to an ==open== UDP port:
 			- nmap marks response as "`open|filtered`"
-		- ==closed port== : nmap receives an [[ICMP]] "ping" packet which nmap marks as closed
+		- ==closed port== : nmap receives an [ICMP](/networking/protocols/ICMP.md) "ping" packet which nmap marks as closed
 	- Disadvantages:
 		- scans take longer
 			- ==tip== if scanning with `-sU` use `top-ports` so it only scans the top 1000 ports

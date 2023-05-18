@@ -1,7 +1,7 @@
 
 # Xfreerdp Command
-An X11 [[RDP]] client chish is part of the #FreeRDP project.
-- an #RDP-server is build into many versions of Windows.xf
+An X11 [RDP](/networking/protocols/RDP.md) client chish (wtf was I trying to write here?) is part of the #FreeRDP project.
+- an #RDP-server is built into many versions of Windows.xf
 
 ## Usage:
 ```

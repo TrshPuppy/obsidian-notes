@@ -3,11 +3,11 @@
 Identifies a host on a network (for a terminal amount of time/ not static)
 
 ## Format:
-![[Pasted image 20230203215427.png]]
+![](/networking/networking-pics/IP-addresses-1.png)
 -Tryhackme.com
 
 ==IP addresses can change from device to device but cannot be used simultaneously within the same network===
-- can change for one device r/t whether it's on a public or private network (will determine whehter they have  a public or private IP address)
+- can change for one device r/t whether it's on a public or private network (will determine whether they have  a public or private IP address)
 - #public-IP addresses used to identify a device on the internet
 	- any data sent to a device through it's public-facing IP address will be identified w/ its public IP
 	- provided by an #ISP for a monthly fee
@@ -20,5 +20,5 @@ Identifies a host on a network (for a terminal amount of time/ not static)
 - IPv4 uses a numbering system (2^32) which supplies 4.29 billion addresses
 - IPv6 supports up to ==2^128 (340+ trillion)== IP addresses
 	- and is also more efficient r/t new methodologies
-- ![[Pasted image 20230203221332.png]]
+- ![](/networking/networking-pics/IP-addresses-2.png)
 -Tryhackme.com

@@ -82,10 +82,8 @@ Gathering information on the victim.
 > See: [phishing-defense](/cybersecurity/defense/phishing-defense.md)
 
 >[!links]
->Professor Messer Sec+
->https://www.youtube.com/watch?v=0Tr8avVrzLA&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=2&ab_channel=ProfessorMesser
->Try Hack Me Phishing Module:
->https://tryhackme.com/module/phishing
+> [Professor Messer Sec+](https://www.youtube.com/watch?v=0Tr8avVrzLA&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=2&ab_channel=ProfessorMesser)c 
+> [Try Hack Me Phishing Module](https://tryhackme.com/module/phishing)
 
 
 

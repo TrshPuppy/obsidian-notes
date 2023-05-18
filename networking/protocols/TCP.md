@@ -17,7 +17,7 @@ Protocol for sending data between devices which guarantees reliability.
 - slower than #UDP 
 - devices have to do more work for TCP
 
-![[Pasted image 20230208200625.png]]
+![](/networking/networking-pics/TCP-1.png)
 -TryHackMe.com
 
 ## Reliability:
@@ -41,7 +41,7 @@ Sets up connection b/w two machines:
 	- To initiate closing a connection:
 		- one device will send the "FIN" packet to the other device
 		- Other device has to acknowledge the FIN
-		- ![[Pasted image 20230208211316.png]]
+		- ![](/networking/networking-pics/TCP-2.png)
 		- -TryHackMe.com
 - #RST-flag: abruptly ends all communication
 	- indicates there was a problem during the process (like service not working properly or has low resources)
@@ -66,8 +66,6 @@ Contain headers added by #encapsulation :
 	- #data-header: where the data is stored in bytes
 	- #flag-header: determines how the packet should be handled by either device during the handshake
 		- specific flags = specific behaviors
-
-
 
 >[!related]
 > #RFC-793 

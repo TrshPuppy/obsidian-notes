@@ -53,13 +53,13 @@ The source code of attachments can also be viewed which includes headers:
 
 ## Delivery:
 Uses 3 main protocols:
-1. [[SMTP]]: Simple Mail Transfer Protocol
+1. [SMTP](/networking/protocols/SMTP.md): Simple Mail Transfer Protocol
 	- handles sending of emails
-2. [[POP3]]: Post Office Protocol
+2. [POP3](/networking/protocols/POP3.md): Post Office Protocol
 	- transfers emails b/w client and #mail-server
 	- downloads all mail from the server for your inbox ==onto your local computer==
 		- emails are available when you're offline
-1. [[IMAP]]: Internet Message Access Protocol
+1. [IMAP](/networking/protocols/IMAP.md): Internet Message Access Protocol
 	- same as #POP3
 		- Difference: syncs your mail client w/ the server
 			- emails ==stay on the server==
@@ -67,13 +67,13 @@ Uses 3 main protocols:
 			- available on different devices
 				- the device just needs to be able to connect to the mail server where the emails are stored to access them.
 
-![[Pasted image 20230212204019.png]]
+![](/networking/networking-pics/email-1.png)
 -TryHackMe.com
 
 ### Steps:
 1. email is composed by `alexa@janedoe.com` addressed to `billy@johndoe.com` w/ her favorite email client
 2. the #SMTP server needs to determine where to send the email
-	- queries the [[DNS]] for info on `johndoe.com`
+	- queries the [DNS](/networking/DNS/DNS.md) for info on `johndoe.com`
 3. the #DNS server obtains the info on `johndoe.com` and sends it back to the SMTP server
 4. the SMTP server sends the email from Alexa across the interned to Billy's inbox at `johndoe.com`
 	- has to pass through firewalls
@@ -108,10 +108,9 @@ Mail clients connect to #mail-servers using either POP3 or IMAP
 - mail server is authenticated using #certificates
 	- #public-key which matches a #private-key on the email/ POP3/IMAP server
 
-
 ## Security:
 
-See: [[phishing-defense]]
+See: [phishing-defense](/cybersecurity/defense/phishing-defense.md)
 - Using #BCC / Blind Carbon Copy:
 	- Protects the privacy of email addresses form the original email (recipients unable to see email addresses listed in the BCC field)
 	- 

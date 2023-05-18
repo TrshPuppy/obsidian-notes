@@ -3,7 +3,8 @@
 Cyber threat intelligence model designed by #David-Bianco
 	- A pyramid of the types of Indicators of Compromise ( #IOC s) you will see and how much it will *hurt the threat actor* for you to deny them these indicators.
 
-![[Pasted image 20230118194706.png]]
+![](/cybersecurity/cybersecurity-pics/pyramid-1.png)
+
 ### Types of Indicators
 1. #hash-values 
 	1. Defensive standpoint: Can be used to as a unique reference to specific samples of malware or to files involved in an incident
@@ -15,7 +16,7 @@ Cyber threat intelligence model designed by #David-Bianco
 		- *easy* for a threat actor to recover from
 	- ==ex: [[Fast-Flux]]==
 3. #domain-names 
-	- Harder for an attacker to recover from/ change because they have to re-register, modify [DNS](/networking/routing/DNS.md) records and purchase new domains
+	- Harder for an attacker to recover from/ change because they have to re-register, modify [DNS](DNS.md) records and purchase new domains
 		- However, DNS providers have #APIs which make it easy to purchase/register domains
 	- [punycode](/cybersecurity/attacks/punycode.md)
 		- using Unicode to encode non-ASCII characters
@@ -30,7 +31,6 @@ Cyber threat intelligence model designed by #David-Bianco
 	1. #user-agent-string
 		- [Wireshark](/cybersecurity/tools/wireshark.md)
 		- #tshark (command)
-
 
 > [!Links]
 > [Try Hack Me: Pyramid of Pain](https://tryhackme.com/room/pyramidofpainax?trk=public_post_feed-article-content)

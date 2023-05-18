@@ -26,9 +26,9 @@ This vulnerability exists in the #RDP used by the listed vulnerable OSs.
 - block #TCP #port-3389 at the firewall
 
 >[!links]
->https://www.cisa.gov/uscert/ncas/alerts/AA19-168A
+> [CISA](https://www.cisa.gov/uscert/ncas/alerts/AA19-168A)
 >
->https://www.rapid7.com/blog/post/2019/11/07/the-anatomy-of-rdp-exploits-lessons-learned-from-bluekeep-and-dejablue/
+> [Rapid7](https://www.rapid7.com/blog/post/2019/11/07/the-anatomy-of-rdp-exploits-lessons-learned-from-bluekeep-and-dejablue/)
 
 
 

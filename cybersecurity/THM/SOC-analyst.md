@@ -20,7 +20,7 @@ Junior SOC Analysts/ Tier 1 SOC analysts are responsible for #triage
 - #CompTIA-Sec
 
 ## Preparation and Prevention:
-- stay informed of current cybersecurity thretes
+- stay informed of current cybersecurity threats
 	- gathering intelligence data on latest threats & threat actors
 		- #TTPs 
 		- ex: good place to look for TTPs etc is [CISA](https://www.cisa.gov/)
