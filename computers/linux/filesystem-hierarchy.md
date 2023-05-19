@@ -1,3 +1,4 @@
+
 # Linux File System Hierarchy
 Everything in Linux is a file.
 
@@ -155,3 +156,7 @@ cat dpkg.log | cut -d ' ' -f 1 | uniq -c
     254 2023-04-19
 ...
 ```
+
+> [!Resources:]
+> All of this information is from a video made for me by a knowledgeable friend.
+
