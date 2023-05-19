@@ -77,7 +77,7 @@ drwxrwxrwt  9 root      root      4096 May 17 09:18 .
 ### Changing Permissions:
 If you create a file in Linux it will inherit the permissions associated with your user context. Depending on your shell context, you may create a new file but find you have no permissions to read, write, or execute it.
 
-#### Using `+`
+#### Using `chmod +`
 To update the permissions of a file, use the `chmod` command:
 ```bash
 1  trshpuppy@trshheap:~$ echo "hello" > hello.txt
@@ -94,26 +94,26 @@ To update the permissions of a file, use the `chmod` command:
 On line `8` we use `chmod +rwx` to add all three file permissions to our `hello.txt` file.
 
 #### Using `chmod` numbers:
-A faster way to update permissions with `chmod` is to use `chmod` numbers as flags to the command. To do this, you just give three numbers, each from 0-7, to `chmod`.
+A faster way to update permissions with `chmod` is to use give it numbers as flags. To do this, you just give three numbers, each from 0-7, to `chmod`.
 
-Each combination of permissions results in a number between 0 and 7. For example, the number `0` is `- - -`, or no permissions at all. the number `1` is `- - 1`, or only execution permissions.  The number `2` is `-w-` or only write permissions. And the number `4` is `4- -` or only read permissions.
-| Num | Permissions | Total |
-| :--: | :--------: | :---: |
-| 0 | --- | 0+0+0 |
-| 1 | --x | 0+0+1 |
-| 2 | -w- | 0+2+0 |
-| 3 | -wx | 0+2+1 |
-| 4 | r-- | 4+0+0 |
-| 5 | r-x | 4+0+1 |
-| 6 | rw- | 4+2+0 |
-| 7 | rwx | 4+2+1 |
+Each combination of permissions results in a number between 0 and 7. For example, the number `0` is `- - -`, or no permissions at all. the number `1` is `- - 1`, or only execution permissions.  The number `2` is `-w-` or only write permissions. And the number `4` is `4 - -` or only read permissions (the numbers represent bits being turned on or off).
+| Num | Permissions | Total | Binary |
+| :--: | :--------: | :---: | :-:|
+| 0 | --- | 0+0+0 | 000 |
+| 1 | --x | 0+0+1 | 001 |
+| 2 | -w- | 0+2+0 | 010 |
+| 3 | -wx | 0+2+1 | 011 |
+| 4 | r-- | 4+0+0 | 100 |
+| 5 | r-x | 4+0+1 | 101 |
+| 6 | rw- | 4+2+0 | 110 |
+| 7 | rwx | 4+2+1 | 111 |
+
 So, to give everybody full permissions on a file, the command would be:
 ```bash
 trshpuppy@trshheap:~$ chmod 777 hello.txt
 trshpuppy@trshheap:~$ ls -al | grep "hello.txt"
 -rwxrwxrwx  1 trshpuppy trshpuppy    6 May 19 15:08 hello.txt
 ```
-
 
 > [!Resources:]
 > [GNU ls Documentation](https://www.gnu.org/software/coreutils/manual/html_node/What-information-is-listed.html)
