@@ -40,7 +40,7 @@ This folder is useful because any user has access to it, so it is an easy place 
 
 ## Text Editors:
 ### Nano
-#nano is a terminal text editor (has to be installed on a bare-bones shell set up).
+Nano is a terminal text editor (has to be installed on a bare-bones shell set up).
 
 #### Usage:
 ```bash
@@ -55,12 +55,11 @@ These features can be used w/i nano by pressing the `Ctrl` key + the desired swi
 - Jumping to a line number: `^_`
 - Finding out the current line number: `^C`
 
-### Vim
-#vim
+Vim and Vi are other similar CLI text editors.
 
 ## Transferring files
 ### wget
-Allows you to download files from the web using [HTTP](/networking/protocols/HTTP.md). Just need to supply #wget with the address of the resource.
+Allows you to download files from the web using [HTTP](/networking/protocols/HTTP.md). Just need to supply `wget` with the address of the resource.
 ```bash
 wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt
 ```
@@ -68,7 +67,7 @@ wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt
 Can also use [curl](/CLI-tools/curL.md)
 
 ### SCP
-#SCP or "secure copy" is a way to transfer files via SSH (so the files are encrypted and transferred over an authenticated connection).
+SCP or "secure copy" is a way to transfer files via SSH (so the files are encrypted and transferred over an authenticated connection).
 ```shell
 # copy a file from host machine to target machine:
 scp important.txt ubuntu@192.168.1.30:/home/unbuntu/transferred.txt
