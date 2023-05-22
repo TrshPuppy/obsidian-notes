@@ -27,3 +27,4 @@ A layer 3 protocol used between IP addressable devices to check the status of a 
 Using the [`ping` command](/CLI-tools/ping.md) on either a Linux or Windows machine will tell you whether that device is connected and able to respond. On Windows, `ping` will only send a set amount of packets to the target, whereas on Linux `ping` will continuously send packets unless you use `SIGINT` or tell the command how many packets to send.
 
 `ping` will also give you the time in milliseconds it took to get a response from the target, as well as how many bytes were sent in the ping request.
+
