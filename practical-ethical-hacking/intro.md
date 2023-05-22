@@ -90,6 +90,7 @@ You should be prepared to give a technical *and* high-level explanation of your 
 The Debrief also allows the client to ask questions about or challenge your findings before a final report is written (the initial report is always a *draft*).
 
 > [!Resources]
+> <br>
 > [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 > 
 > My own previous notes:
@@ -98,3 +99,5 @@ The Debrief also allows the client to ask questions about or challenge your find
 > 
 > > GitHub:
 > > > [phishing](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/TTPs/phishing.md)
+
+
