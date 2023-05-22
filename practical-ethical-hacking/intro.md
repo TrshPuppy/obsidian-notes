@@ -90,14 +90,11 @@ You should be prepared to give a technical *and* high-level explanation of your 
 The Debrief also allows the client to ask questions about or challenge your findings before a final report is written (the initial report is always a *draft*).
 
 > [!Resources]
-> <br>
-> [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-> 
+> - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 > My own previous notes:
-> > Local path:
-> > > Links to other notes local to my obsidian notes directory will work if you've downloaded the entire thing, but not on GitHub.
-> 
-> > GitHub:
-> > > [phishing](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/TTPs/phishing.md)
+> > - Local path:
+> > 	- Links to other notes local to my obsidian notes directory will work if you've downloaded the entire thing, but not on GitHub.
+> > - GitHub:
+> > 	- [phishing](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/TTPs/phishing.md)
 
 

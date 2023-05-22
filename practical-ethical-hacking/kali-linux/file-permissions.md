@@ -115,6 +115,6 @@ trshpuppy@trshheap:~$ ls -al | grep "hello.txt"
 -rwxrwxrwx  1 trshpuppy trshpuppy    6 May 19 15:08 hello.txt
 ```
 
-> [!Resources] 
+> [!Resources]
 > - [GNU ls Documentation](https://www.gnu.org/software/coreutils/manual/html_node/What-information-is-listed.html)
 > - [How to Geek: ls Command](https://www.howtogeek.com/448446/how-to-use-the-ls-command-on-linux/)
