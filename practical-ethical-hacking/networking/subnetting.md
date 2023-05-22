@@ -1,6 +1,6 @@
 
 # Subnetting
-Subnetting is an organizational technique used on networks break them up into sub networks. Subnetting works by taking advantage of [CIDR Notation](/networking/routing/CIDR.md) to re-delegate bits in an IP Address to serve either the host or the network.
+Subnetting is an organizational technique used on networks to break them up into sub networks. Subnetting works by taking advantage of [CIDR Notation](/networking/routing/CIDR.md) to re-delegate bits in an IP Address to serve either the host or the network.
 
 ## Subnet Mask:
 The subnet mask tells you which parts of the IP address are network bits vs host bits. Each octet set to `255` in the subnet mask denotes an entire byte which belongs to the network. Each `0` in the subnet mask denotes bits belonging to the host:
@@ -34,12 +34,12 @@ In the *third* octet, the only bit which can be flipped to make a unique address
 
 Every bit in the fourth octet is available to be flipped to either a `1` or `0` giving a total of 2^8 (256) combinations and thus, 256 unique addresses.
 
-This means that there are 256 possible addresses with the third octet set to `0` and 256 possible addresses with the third octet set to `1`. So the range of IP addresses for the address `192.168.0.0/23` is:
+This means that there are 256 possible addresses with the third octet set to `0` and 256 *additional* possible addresses with the third octet set to `1`. So the range of IP addresses for the address `192.168.0.0/23` is:
 ```yaml
 Third octet set to 0 :
-	Range : 192.168.0.0 - 192.168.0.255
+    Range : 192.168.0.0 - 192.168.0.255
 Third octet set to 1 :
-	Range : 192.168.1.0 - 192.168.1.255
+    Range : 192.168.1.0 - 192.168.1.255
 ```
 For a total of 512 unique IP addresses.
 
@@ -77,9 +77,9 @@ IP Address           : 192.168.32.5
 Subnet Mask          : 255.255.255.192
 Subnet Mask (binary) : 11111111.11111111.11111111.11000000
 # The increment = the least significant network bit:
-	Forth Octet      : 1    1    0    0    0    0    0    0
-				      128  (64)  32   16   8    4    2    1
-					 # the least sig network bit = 64 = the increment
+    Forth Octet      : 1    1    0    0    0    0    0    0
+                      128  (64)  32   16   8    4    2    1
+                     # the least sig network bit = 64 = the increment
 ```
 Once you have the increment, you know that each subnet spans *increment* number of addresses. The subnet ranges in this example would be:
 ```yaml
@@ -102,9 +102,9 @@ IP Address       : 192.168.1.32/27
 Subnet mask      : 255.255.255.224
 Wildcard         : 0.0.0.31       <-- 32 possible addresses
 Range            : 192.168.1.32 - 192.168.1.63
-	Network ID   : 192.168.1.32
-	Broadcast ID : 192.168.1.63
-	Num of available addresses for hosts : 29
+    Network ID   : 192.168.1.32
+    Broadcast ID : 192.168.1.63
+    Num of available addresses for hosts : 29
 ```
 
 > [!Resources:]

@@ -92,7 +92,7 @@ So now we can scan a specific address space like `69.69.69` by calling our scrip
 ```
 
 ### 5. If statements
-Running this code as is can be buggy, especially if we run it *without giving it any arguments.* Adding and if statement can easily fix this:
+Running this code as is can be buggy, especially if we run it *without giving it any arguments.* Adding an if statement can easily fix this:
 ```bash
 #!/bin/bash
 

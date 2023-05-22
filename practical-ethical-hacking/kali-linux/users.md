@@ -35,7 +35,7 @@ newuser:x:1001:1001:new user,,,:/home/newuser:/bin/bash
 ```
 
 ## /etc/passwd
-This file doesn't actually have passwords stored in it, but used to. Now, it can concatenated to see information about users on the machine.
+This file doesn't actually have passwords stored in it, but used to. Now, it can be concatenated to see information about users on the machine.
 ```bash
 cat /etc/passwd
 root:x:0:0:root:/root:/bin/bash
@@ -151,7 +151,7 @@ In this example, the `sudo` command and users in the sudoers group have `ALL` pe
 
 Man entry for `sudo -l`:
 ```
- -l, --list:
+-l, --list:
 If no command is specified, list the allowed (and forbidden) commands for the invoking user (or the user specified by the -U option) on the current host.  A longer list format is used if this option is specified multiple times and the security policy supports a verbose output format.
 
 If a command is specified and is permitted by the security policy, the fully-qualified path to the command is displayed along with any command line arguments.  If a command is specified but not allowed by the policy, sudo will exit with a status value of 1.

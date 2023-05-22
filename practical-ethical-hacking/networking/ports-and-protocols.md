@@ -31,12 +31,12 @@ In order to resolve a domain name into an IP address (so devices can send data b
 
 If the domain is not in the recursive server, a request will be sent to a Root Name Server. There used to only be 13 root name servers in the world, each with their own IP address. Root servers keep track of the next level below them in the hierarchy (Top Level Domain Servers).
 
-Each Top Level Domain server keeps track of a specific top level domain (ex: `com` from `site.com`) and all of the Second Level Domains associated with it. From there, a TLD can be queried for the Second Level Domains it umbrellas (ex: `site` from `site.com`.
+Each Top Level Domain server keeps track of a specific top level domain (ex: `com` from `site.com`) and all of the Second Level Domains associated with it. From there, a TLD can be queried for the Second Level Domains it umbrellas (ex: `site` from `site.com`).
 
 ### [HTTP](/networking/protocols/http.md) & [HTTPS](/networking/protocols/https.md):
 HTTP (port 80) and HTTPS (port 443) are protocols which dictate how "hypermedia documents" like HTML are transmitted between devices. These protocols relate mainly to the application layer of the OSI model.
 
-HTTP and HTTPS were developed in order to standardize how a web browser and a web server communicate. When the browser asks a server for the information it is storing related to a website address (`site.com`), it uses HTTP. When the server sends the website data it is storing to the web browser, it is also using HTTP.
+HTTP and HTTPS were developed in order to standardize how a web browser and a web server communicate. When the browser asks a server for the information it is storing related to a website address (`site.com`), it uses HTTP. When the server sends the website data it is storing to the web browser, it also uses HTTP.
 
 The difference b/w HTTP and HTTPS is that HTTPS is encrypted.
 

@@ -25,7 +25,7 @@ hello again
 
 ## Text Editors:
 ### Terminal Text Editors:
-Besides using `touch` and `echo` there are command-line text editors you can use which can do a lot more, such as searching through a test, copy pasting, jumping to line numbers, etc..
+Besides using `touch` and `echo` there are command-line text editors you can use which can do a lot more, such as searching through a text, copy pasting, jumping to line numbers, etc..
 
 Three common CLI text editors are *nano*, *vi*, and *vim*. Terminal text editors are useful, especially if you are working in a system that has no GUI.
 
