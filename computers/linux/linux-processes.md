@@ -1,41 +1,40 @@
 
 # Linux Processes
-The programs running on the machine. Managed by the kernel which gives each #process a PID. The PID *increments for the order of which the process was started* (60th process PID = 60).
+The programs running on the machine. Managed by the kernel which gives each process a PID. The PID *increments for the order of which the process was started* (60th process PID = 60).
 
 ## How do Processes Start:
 ### Namespaces:
-#Namespaces are how the operating system splits up available resources and isolates them. Processes within the same namespace will have access to a delegated amount of computing power which is small compared to what is available overall.
+Namespaces are how the operating system splits up available resources and isolates them. Processes within the same namespace will have access to a delegated amount of computing power which is small compared to what is available overall.
 
 Namespaces are *more secure* because they isolate processes from one another. Only processes w/i the same namespace can "see" each other.
 
 ### systemd
-systemd is a service manager for Linux OS's. When it is started on boot as the first process (PID 1) it acts as an *initialization system* which brings up and maintains userspace services.
+`systemd` is a service manager for Linux OS's. When it is started on boot as the first process (PID 1) it acts as an *initialization system* which brings up and maintains userspace services.
 
-#systemd is the system's init process and sits in between the operating system and the user.
+`systemd` is the system's init process and sits in between the operating system and the user.
 
-Any program that we want to start on boot will likely start as a *child process* of systemd, which means systemd controls it. The child processes of systemd will share the same resources as it, but will still run as their own process.
+Any program that we want to start on boot will likely start as a *child process* of `systemd`, which means `systemd` controls it. The child processes of `systemd` will share the same resources as it, but will still run as their own process.
 
 #### Configuration:
-When systemd is ran as a *system instance* it interprets the configuration file `system.conf` and files in `system.conf.d` directories.
+When `systemd` is ran as a *system instance* it interprets the configuration file `system.conf` and files in `system.conf.d` directories.
 
-When ran as a *user instance*, systemd interprets the configuration file `user.conf` and the files in `user.conf.d`.
+When ran as a *user instance*, `systemd` interprets the configuration file `user.conf` and the files in `user.conf.d`.
 
 #### Units:
-systemd provides a dependency system between 11 different entities called *"units"*. These units encapsulate various objects which are necessary for system boot-up and maintenance.
+`systemd` provides a dependency system between 11 different entities called *"units"*. These units encapsulate various objects which are necessary for system boot-up and maintenance.
 
 Most of the 11 units are configured and set up via configuration files, but some are created from other configuration, dynamically from system state, or programmatically at runtime.
 
 Units can be active, inactive, activating (b/w inactive and active), deactivating (vice versa), or a special state of *failed* (entered when the service failed in some way).
 
-systemd only keeps a minimal number of units loaded into memory. Any unit that does *NOT* have the *inactive* state is kept in memory (active, activating, deactivating, failed). Units will only be kept loaded in memory if *one of the following is true*:
+`systemd` only keeps a minimal number of units loaded into memory. Any unit that does *NOT* have the *inactive* state is kept in memory (active, activating, deactivating, failed). Units will only be kept loaded in memory if *one of the following is true*:
 1. state = active, activating, deactivating, or failed
 2. the unit has a job queued for it
 3. the unit is a *dependency* of at least one other unit that *is currently also loaded into memory*
 4. it still has a form of resource allocated to it (like a service unit who's state is inactive but still has a process lingering which ignored the termination request)
-5. it has been pinned into memory programmatically via a *"D-Bus call"*.
+5. it has been pinned into memory programmatically via a *"D-Bus call."*
 
-==Currently loaded units are invisible to the client.==
-- can use `systemctl list-units --all` to list all currently-loaded units.
+*Currently loaded units are invisible to the client* (can use `systemctl list-units --all` to list all currently-loaded units).
 
 ##### List of units:
 Units are named for their configuration files. Some have special semantics (see `systemd.special(7)`):
@@ -55,12 +54,12 @@ Units are named for their configuration files. Some have special semantics (see 
 Processes told to start on boot are usually critical and configured by an administrator. 
 
 ##### systemctl
-#systemctl is a command/ service which allows you to interact with the systemd process/ daemon.
+`systemctl` is a command/ service which allows you to interact with the `systemd` process/ daemon.
 ```bash
 systemctl [options] [service]
 ```
 
-There are four options which can be given to systemctl:
+There are four options which can be given to `systemctl`:
 1. start: start one or more units (must already be loaded in memory)
 2. stop: deactivate one or more units
 3. enable: enable one or more units/ unit instances. Creates a set of *"symlinks"* as encoded in the "[Install]" section of the indicated unit files.
