@@ -34,29 +34,15 @@ This is the layer where standardization of how data can be transmitted starts to
 ### L7: [Application](/networking/OSI/OSI-reference-model.md#application-layer-7) (away)
 Has protocols which dictate how a user can interact with the data being sent or received. This usually involves a Graphical User Interface (GUI), and also includes protocols like [DNS](/networking/DNS/DNS.md) to help render an internet resource like a webpage on a web browser.
 
-> [!Resources]
-> My own previous notes:
-> > Local paths (won't work on GitHub):
-> > > [OSI model](/networking/OSI/OSI-reference-model.md)
-> > > [Data-Link Layer](/networking/OSI/data-link-layer.md)
-> > > [Multiplexing](/networking/OSI/multiplexing.md)
-> > > [IP Addresses](/networking/OSI/IP-addresses.md)
-> > > [MAC Addresses](/networking/OSI/MAC-addresses.md)
-> > > [Network Layer](/networking/OSI/network-layer.md)
-> > > [TCP](/networking/protocols/TCP.md)
-> > > [UDP](/networking/protocols/UDP.md)
-> > > ... If you've actually downloaded my Obsidian notes repo, just click the links in the text, they work -_-
-> > > 
-> 
-> > GitHub paths:
-> > > [OSI model](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/OSI-reference-model.md)
-> > > [Data-Link Layer](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/data-link-layer.md)
-> > > [Multiplexing](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/multiplexing.md)
-> > > [IP Addresses](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/IP-addresses.md)
-> > > [MAC Addresses](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/MAC-addresses.md)
-> > > [Network Layer](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/network-layer.md)
-> > > [TCP](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/protocols/TCP.md)
-> > > [UDP](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/protocols/UDP.md)
-> > > [DNS](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/DNS/DNS.md)
+> [!My previous notes (linked in text)]
+> - [OSI model](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/OSI-reference-model.md)
+> - [Data-Link Layer](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/data-link-layer.md)
+> - [Multiplexing](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/multiplexing.md)
+> - [IP Addresses](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/IP-addresses.md)
+> - [MAC Addresses](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/MAC-addresses.md)
+> - [Network Layer](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/network-layer.md)
+> - [TCP](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/protocols/TCP.md)
+> - [UDP](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/protocols/UDP.md)
+> - [DNS](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/DNS/DNS.md)
 
 

@@ -22,13 +22,9 @@ sudo systemctl enable ssh
 # The SSH service will now start up on boot
 ```
 
-> [!Resources]
-> My previous notes on linux processes:
-> > [Local path](/computers/linux/linux-processes.md)
-> > [GitHub](https://github.com/TrshPuppy/obsidian-notes/blob/main/computers/linux/linux-processes.md)
+> [!My previous notes (linked in text)]
+> - [Linux Processes](https://github.com/TrshPuppy/obsidian-notes/blob/main/computers/linux/linux-processes.md)
 
-
-> 
 
 
 

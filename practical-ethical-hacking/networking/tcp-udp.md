@@ -21,11 +21,6 @@ It says "I acknowledge your ISN of 5000, here is the my first message containing
 #### DATA
 Once connection has been established via the SYN/ACK three way handshake, subsequent messages from the source device will have the `DATA` flag until it has finished sending all of its data.
 
-> [!Resources]
-> My own previous notes:
-> > Local path:
-> > > Links to other notes local to my obsidian notes directory will work if you've downloaded the entire thing, but not on GitHub.
-> > 
-> > GitHub:
-> > > [TCP](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/TCP.md)
-> > > [UDP](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/UDP.md)
+> [! My own previous notes (linked in text)]
+> - [TCP](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/TCP.md)
+> - [UDP](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/UDP.md)

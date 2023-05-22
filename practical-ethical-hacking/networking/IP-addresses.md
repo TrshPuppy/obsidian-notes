@@ -21,7 +21,9 @@ In 1993 the Class system of IP Addressing was replaced with [Classless Inter-Dom
 It allows IP addresses to be _dynamically allocated_ based on the requirement of user and specific rules.
 
 > [!Resources]
-> [Wikipedia: Network Address Translation](https://en.wikipedia.org/wiki/Network_address_translation)
-> My own previous notes:
-> > Local path (won't work on GitHub): [IP Addresses](/networking/OSI/IP-addresses.md)
-> > GitHub path: [IP Addresses](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/IP-addresses.md)
+> - [Wikipedia: Network Address Translation](https://en.wikipedia.org/wiki/Network_address_translation)
+
+> [!My previous notes (linked in text)]
+> - [IP Addresses](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/IP-addresses.md)
+
+

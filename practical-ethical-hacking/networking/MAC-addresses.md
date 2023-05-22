@@ -12,7 +12,7 @@ The first six digits of the number *identifies the manufacturer* of the device. 
 
 Example: `00:0C:29` resolves to the manufacturer VMware, Inc
 
-> [!Resources]
-> My own previous notes:
-> > Local path (won't work on Github): [MAC Addresses](/networking/OSI/MAC-addresses.md)
-> > GitHub path: [MAC Addresses](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/MAC-addresses.md)
+> [!My previous notes (linked in text)]
+> - [MAC Addresses](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/MAC-addresses.md)
+
+

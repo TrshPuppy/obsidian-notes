@@ -158,6 +158,6 @@ If a command is specified and is permitted by the security policy, the fully-qua
 ```
 
 > [!Resources:]
-> [Linuxize: Understanding the /etc/shadow File](https://linuxize.com/post/etc-shadow-file/)
-> [CyberCiti: Understanding /etc/group File](https://www.cyberciti.biz/faq/understanding-etcgroup-file/)
+> - [Linuxize: Understanding the /etc/shadow File](https://linuxize.com/post/etc-shadow-file/)
+> - [CyberCiti: Understanding /etc/group File](https://www.cyberciti.biz/faq/understanding-etcgroup-file/)
 
