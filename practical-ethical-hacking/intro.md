@@ -91,10 +91,12 @@ The Debrief also allows the client to ask questions about or challenge your find
 
 > [!Resources]
 > - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
-> My own previous notes:
+> <br> My own previous notes:
 > > - Local path:
 > > 	- Links to other notes local to my obsidian notes directory will work if you've downloaded the entire thing, but not on GitHub.
 > > - GitHub:
 > > 	- [phishing](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/TTPs/phishing.md)
+
+
 
 
