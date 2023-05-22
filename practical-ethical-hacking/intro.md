@@ -66,7 +66,7 @@ Basically web-app pentesting but on a mobile app. Each operating system comes wi
 Usually involves IoT devices which have wireless capabilities but are not traditional user-interfaced computers like laptops/ desktops/ mobile phones, etc.
 
 #### Red Team Engagement:
-When an organization asks for a pentest but not for details regarding when or how. Methodology can include anything defined in the scope or the engagement.
+When an organization asks for a pentest but not for details regarding when or how. Methodology can includ[[package-managment]]e anything defined in the scope or the engagement.
 
 #### Purple Team Engagement:
 When a Red Team and Blue Team run an engagement together to determine a baseline for the current security/ detection measures. I.E. the red team may attempt an attack and the Blue Team will report on how the network/ target changed or didn't change (including detection measures, network traffic, etc.).

@@ -59,11 +59,10 @@ Resources shared via SMB on a network are referred to as "shares" (`$ipc`). SMB 
 ### [SNMP](/networking/protocols/SNMP.md) (Simple Network Management Protocol):
 *Port 161.* 
 
-> Resources:
+> [!Resources]
 > - [Wikipedia: Domain Name System](https://en.wikipedia.org/wiki/Domain_Name_System)
 > - [CyberSophia: What is SMB and Why is it a Security Concern?](https://cybersophia.net/articles/what-is/what-is-smb-protocol-and-why-is-it-a-security-concern/)
 > - [SentinelOne: EternalBlue Exploit: What it is and How it Works](https://www.sentinelone.com/blog/eternalblue-nsa-developed-exploit-just-wont-die/)
-
 
 >[!My previous notes (linked in text)]
 > - [Ports](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/ports.md)  
