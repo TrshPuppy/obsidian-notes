@@ -26,7 +26,14 @@ A layer 3 protocol used between IP addressable devices to check the status of a 
 
 Using the [`ping` command](/CLI-tools/ping.md) on either a Linux or Windows machine will tell you whether that device is connected and able to respond. On Windows, `ping` will only send a set amount of packets to the target, whereas on Linux `ping` will continuously send packets unless you use `SIGINT` or tell the command how many packets to send.
 
-`ping` will also give you the time in milliseconds it took to get a response from the target, as well as how many bytes were sent in the ping request.
+Use the `-c <number>` flag to tell `ping` how many requests to send:
+```bash
+ping -c 1 69.69.69.69
+PING 69.69.69.69 (69.69.69.69) 56(84) bytes of data.
+64 bytes from 69.69.69.69: icmp_seq=1 ttl=64 time=0.016 ms
+```
+
+`ping` will also give you the time in milliseconds it took to get a response from the target, as well as how many bytes were received in the target's response.
 
 > [!My previous notes (linked in text)]
 > - [ARP](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/protocols/ARP.md)
