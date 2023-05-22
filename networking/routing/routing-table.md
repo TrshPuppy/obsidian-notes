@@ -45,9 +45,9 @@ One of the oldest routing protocols. Uses the *hop count metric* to dictate rout
 BGP is an *exterior* gateway protocol. It makes routing decisions based on paths, network policies, and rule-sets configured for a network.
 
 > [!Resources:]
-> [Wikipedia: Routing tables](https://en.wikipedia.org/wiki/Routing_table)\
-> [Cysec Guide: Linux routing table](https://cysecguide.blogspot.com/2017/12/linux-routing-table.html)\
-> [Wikipedia: IS-IS](https://en.wikipedia.org/wiki/IS-IS)\
-> [Wikipedia: Routing Info. Protocol](https://en.wikipedia.org/wiki/Routing_Information_Protocol)\
-> [Wikipedia: Border Gateway Protocol](https://en.wikipedia.org/wiki/Border_Gateway_Protocol)\
+> - [Wikipedia: Routing tables](https://en.wikipedia.org/wiki/Routing_table)
+> - [Cysec Guide: Linux routing table](https://cysecguide.blogspot.com/2017/12/linux-routing-table.html)
+> - [Wikipedia: IS-IS](https://en.wikipedia.org/wiki/IS-IS)
+> - [Wikipedia: Routing Info. Protocol](https://en.wikipedia.org/wiki/Routing_Information_Protocol)
+> - [Wikipedia: Border Gateway Protocol](https://en.wikipedia.org/wiki/Border_Gateway_Protocol)
 
