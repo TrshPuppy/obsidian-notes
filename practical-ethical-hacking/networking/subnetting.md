@@ -114,5 +114,11 @@ Range            : 192.168.1.32 - 192.168.1.63
 > [Wikipedia: Bitwise Operators](https://en.wikipedia.org/wiki/Bitwise_operation)
 > [Wikipedia: Wildcard Mask](https://en.wikipedia.org/wiki/Wildcard_mask)
 > [Subnet Calculator](https://www.subnet-calculator.com/wildcard.php)
+> My own previous notes:
+> > Local path:
+> > > Links to other notes local to my obsidian notes directory will work if you've downloaded the entire thing, but not on GitHub. 
+> > 
+> > GitHub:
+> > > [CIDR Notation](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/routing/CIDR.md)
 
 

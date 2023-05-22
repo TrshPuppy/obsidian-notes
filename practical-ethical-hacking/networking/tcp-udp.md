@@ -1,12 +1,5 @@
 
 # TCP, UDP, and the Three Way Handshake
-Local Paths:
-[TCP](/networking/protocols/TCP.md)
-[UDP](/networking/protocols/UDP.md)
-
-GitHub Paths:
-[TCP](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/protocols/TCP.md)
-[UDP](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/protocols/UDP.md)
 
 ## TCP vs. UDP
 TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) are relevant to Layer 4 of the OSI model. TCP is focused on establishing a reliable connection between parties using the Three Way Handshake, while UDP focuses on sending data between parties w/o ensuring a reliable connection between them first.
@@ -28,3 +21,11 @@ It says "I acknowledge your ISN of 5000, here is the my first message containing
 #### DATA
 Once connection has been established via the SYN/ACK three way handshake, subsequent messages from the source device will have the `DATA` flag until it has finished sending all of its data.
 
+> [!Resources]
+> My own previous notes:
+> > Local path:
+> > > Links to other notes local to my obsidian notes directory will work if you've downloaded the entire thing, but not on GitHub.
+> > 
+> > GitHub:
+> > > [TCP](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/TCP.md)
+> > > [UDP](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/UDP.md)

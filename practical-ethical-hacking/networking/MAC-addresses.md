@@ -1,8 +1,5 @@
 
 # MAC Addresses
-Local path: [MAC Addresses](/networking/OSI/MAC-addresses.md)
-GitHub path: [MAC Addresses](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/MAC-addresses.md)
-
 MAC Addresses are relevant to Layer Two of the [OSI Reference Model](/networking/OSI/OSI-reference-model.md). They are addressing for physical devices in a local network. A MAC Address is a 48 bit hardware number which is *unique* to the device it is attached to (assigned during manufacturing).
 
 ## Network Interface Card:
@@ -15,4 +12,7 @@ The first six digits of the number *identifies the manufacturer* of the device. 
 
 Example: `00:0C:29` resolves to the manufacturer VMware, Inc
 
-
+> [!Resources]
+> My own previous notes:
+> > Local path (won't work on Github): [MAC Addresses](/networking/OSI/MAC-addresses.md)
+> > GitHub path: [MAC Addresses](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/MAC-addresses.md)

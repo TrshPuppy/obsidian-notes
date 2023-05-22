@@ -28,3 +28,17 @@ Using the [`ping` command](/CLI-tools/ping.md) on either a Linux or Windows mach
 
 `ping` will also give you the time in milliseconds it took to get a response from the target, as well as how many bytes were sent in the ping request.
 
+> [!Resources]
+> My previous notes:
+> > Local paths (*won't work on GitHub*):
+> > > [ARP](/networking/protocols/ARP.md)
+> > > [Routing Tables](/networking/routing/routing-table.md)
+> > > [ICMP](/networking/protocols/ICMP.md)
+> > > [ping command](/CLI-tools/ping.md)
+> > 
+> > GitHub:
+> > > [ARP](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/protocols/ARP.md)
+> > > [Routing Tables](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/routing/routing-table.md)
+> > > [ICMP](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/protocols/ICMP.md)
+> > > [ping command](https://github.com/TrshPuppy/obsidian-notes/blob/main/CLI-tools/ping.md)
+

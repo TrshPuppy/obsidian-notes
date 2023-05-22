@@ -10,7 +10,8 @@ Instead, these are my own notes which I created and use for my own learning and 
 
 ### Some notes on use:
 This is a sub directory of my personal notes in [Obsidian Desktop](https://obsidian.md/) so some of the links will not work because they are relative to the entire vault rather than just the PNPT directory. Sorry. 
-If there is a link you can't follow, that means the linked notes exist in my [obsidian-notes repo](https://github.com/TrshPuppy/obsidian-notes) and you can find them there!
+<br>
+If there is a link you can't follow, that means the linked notes exist in my [obsidian-notes repo](https://github.com/TrshPuppy/obsidian-notes) and you can find them there! I will try to link them (to their external GitHub residence) throughout.
 
 ## Thank you so much for stopping by and I hope this repo is useful for someone out there in the void!
 

@@ -88,3 +88,12 @@ Designed to walk technical and non-technical audiences through your findings dur
 You should be prepared to give a technical *and* high-level explanation of your findings.
 
 The Debrief also allows the client to ask questions about or challenge your findings before a final report is written (the initial report is always a *draft*).
+
+> [!Resources]
+> [OWASP Top 10](https://owasp.org/www-project-top-ten/)
+> My own previous notes:
+> > Local path:
+> > > Links to other notes local to my obsidian notes directory will work if you've downloaded the entire thing, but not on GitHub.
+> 
+> > GitHub:
+> > > [phishing](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/TTPs/phishing.md)
