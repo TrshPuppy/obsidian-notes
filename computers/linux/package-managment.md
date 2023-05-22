@@ -73,5 +73,5 @@ apt remove [software name]
 apt remove sublime-text
 ```
 
->[!links:]
->[THM Linux Fundamentals](https://tryhackme.com/room/linuxfundamentalspart3#)
+> [!Links]
+> - [THM Linux Fundamentals](https://tryhackme.com/room/linuxfundamentalspart3#)
