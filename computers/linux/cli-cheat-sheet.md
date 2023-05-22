@@ -77,5 +77,5 @@ scp ubuntu@192.168.1.30:/home/ubuntu/documents.txt notes.txt
 ```
 
 > [!Links:]
-> [THM Linux Fundamentals pt. 3](https://tryhackme.com/room/linuxfundamentalspart3)
+> - [THM Linux Fundamentals pt. 3](https://tryhackme.com/room/linuxfundamentalspart3)
 
