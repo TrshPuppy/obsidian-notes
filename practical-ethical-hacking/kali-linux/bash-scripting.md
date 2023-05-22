@@ -7,7 +7,7 @@ A shell is an interpreter program in the command line which can be used to send 
 
 It allows users and/ or programs to send messages and signals to the operating system and its low-level utilities.
 ![](/nested-repos/PNPT-study-guide/PNPT-pics/bash-scripting-1.png)
-![](/PNPT-pics/bash-scripting-1.png)
+![](/PNPT-pics/bash-scripting-1.png)<br>
 -[Phoenix Nap: 8 Types of Linux Shells](https://phoenixnap.com/kb/linux-shells)
 
 ## Ping Sweeping:
