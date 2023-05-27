@@ -4,7 +4,8 @@ The loopback #CIDR-block, *127.0.0.0/8* is a reserved collection of addresses.
 - It mocks the #TCP/IP server or TCP/IP client on the same system.
 - ex: 127.0.0.1 is the commonly used address for a machine and is a network address which can be used to refer to the current machine you're on
 	- ex: if you're on your desktop, 127.0.0.1 refers to your desktop
-
+![](/networking/networking-pics/loopback-1.png)
+-[Geeks for Geeks](https://www.geeksforgeeks.org/what-is-a-loopback-address/)
 Steve:
 - computer OS ships w/ a #TCP-IP-stack which understands [TCP](/networking/protocols/TCP.md) 
 	- when anything in computer wants to access a network resource via TCP/IP it goes through the IP stack
@@ -88,5 +89,6 @@ Steve:
 
 ![](/networking/networking-pics/IP-routing-steve-2.png)
 
->[!links]
->https://www.geeksforgeeks.org/what-is-a-loopback-address/
+>[!Resources:]
+> - [Geeks for Geeks: What is a Loopback Address](https://www.geeksforgeeks.org/what-is-a-loopback-address/)
+> - My friend Steve
