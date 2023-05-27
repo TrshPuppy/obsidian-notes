@@ -5,7 +5,7 @@ The loopback [CIDR](/networking/routing/CIDR.md) block, `127.0.0.0/8` is a reser
 `127.0.0.1` is a network address which can be used to refer to the current machine you're on. It is also called the *localhost* or *loopback address*.
 
 ![](/networking/networking-pics/loopback-1.png)
->	- [Geeks for Geeks](https://www.geeksforgeeks.org/what-is-a-loopback-address/)
+>	[Geeks for Geeks](https://www.geeksforgeeks.org/what-is-a-loopback-address/)
 
 ## Steve:
 **Let's say this is all happening on the network `192.168.0.0/24`:**
@@ -24,7 +24,7 @@ The VPN's network in this example is **`10.0.0.12/8`** with a gateway address of
 
 ### Routing Journey:
 ![](/networking/networking-pics/IP-routing-steve.png)
->	- Drawing by Steve
+>	Drawing by Steve
 
 The computer knows how to route traffic because the OS *has its own [routing table](/networking/routing/routing-table)*. Each entry in the routing table is a destination address as well as its [subnet mask](/nested-repos/PNPT-study-guide/practical-ethical-hacking/networking/subnetting.md), gateway, next hop, etc..
 
@@ -63,7 +63,7 @@ The router will "pretend" to send the packet to `8.8.8.8` but really just sends 
 >	**IMPORTANT:** the router will have a *private* IP address known within the network (`192.168.0.1`) and a *public IP* address known to networks outside of the local network (`5.5.5.5`).
 
 ![](/networking/networking-pics/IP-routing-steve-2.png)
->	- Steve
+>	Steve
 
 The packet will travel from router to router in the ISP's network (hop) until it finds a router who knows a route to `8.8.8.8`. The router which knows will send the routing information back to the original router (`5.5.5.5`) which can then add the new route in its routing table.
 
