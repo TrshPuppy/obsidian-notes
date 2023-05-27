@@ -1,6 +1,6 @@
 
 # Traceroute Command
-Used to map the path your request takes to its target machine.
+Used to map the path your request takes to its target machine. On Linux, this command operates over [UDP](/networking/protocols/UDP.md) but can be altered to use something else w/ switches.
 
 ## Usage:
 ```
@@ -8,19 +8,20 @@ traceroute <destination> [OPTIONS]
 ```
 
 ### Useful options:
-#traceroute-i:
-- specify an interface which traceroute should use to sent packets.
-	- default: will use the routing table
-#traceroute-T & #traceroute-I:
-- use #TCP/SYN for probes OR
-- use ICMP ECHO_REQUEST for probes
+#### `traceroute -i`:
+Specify an interface which traceroute should use to send packets. *Default:* will use the computer's [routing table](/networking/routing/routing-table.md).
 
-## About:
-Windows:
-- `tracert`
-- uses [ICMP](/networking/protocols/ICMP.md) protocol (like [ping](/CLI-tools/ping.md))
+#### `traceroute -T` & `traceroute -I`:
+The `-T` flag will let you probe using [TCP](/networking/protocols/TCP.md) SYN packets.
 
-Linux:
-- operates over [UDP](/networking/protocols/UDP.md)
-==Can be altered w/ switches in both contexts==
+The `-I` flag will let you use an [ICMP](/networking/protocols/ICMP.md) ([ping](/CLI-tools/ping.md)) `ECHO_REQUEST` to probe the route.
+
+### On Windows:
+The equivalent command is `tracert` and it also uses ICMP protocol, similar to `ping`.
+
+> [!Resources:]
+> - [Try Hack Me: Intro to Networking](https://tryhackme.com/room/introtonetworking)
+
+
+
 
