@@ -104,6 +104,8 @@ Can also use `grep -e` or `egrep` to pass a regex to grep:
 egrep '[0-9]{4}' dpkg.log
 ```
 
+`grep --color <parameter>` to highlight results or `grep --color=auto`
+
 ### Number of lines/ words:
 To see how many lines there are in a file, cat the file and pipe with `wc -l`, (*always includes one extra line in the count*).
 - `wc` stands for word count
