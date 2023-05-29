@@ -1,7 +1,4 @@
-.obsidian/cache
-.trash/
-.DS_Store
-.obsidian/workspace.json
+# Repo specific:
 vid.md
 cybersecurity/security-roadmap.md
 networking/open-source/odin-project-API-keys.md
@@ -13,3 +10,14 @@ networking/open-source/odin-project-API-keys.md
 /roadmap
 move-pics.sh
 .move-pics.sh.swp
+
+# Submod specifics:
+/nested-repos/PNPT-study-guide/PNPT-hidden
+/nested-repose/malware-analysis-notes/PMAT-hidden
+
+# Obsidian specific:
+.obsidian/cache
+.trash/
+.DS_Store
+.obsidian/workspace.json
+
