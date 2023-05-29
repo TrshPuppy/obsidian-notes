@@ -1,11 +1,7 @@
+# Submod specific:
 /PNPT-hidden
-../.obsidian/bookmarks.json
 
-## parent repo
-.obsidian/cache
-.trash/
-.DS_Store
-.obsidian/workspace.json
+# Parent repo
 vid.md
 cybersecurity/security-roadmap.md
 networking/open-source/odin-project-API-keys.md
@@ -17,3 +13,10 @@ networking/open-source/odin-project-API-keys.md
 /roadmap
 move-pics.sh
 .move-pics.sh.swp
+
+# Obsidian specific:
+../.obsidian/bookmarks.json
+.obsidian/cache
+.trash/
+.DS_Store
+.obsidian/workspace.json
