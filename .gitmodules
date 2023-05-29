@@ -1,3 +1,6 @@
 [submodule "PNPT-study-guide"]
 	path = nested-repos/PNPT-study-guide
 	url = git@github.com:TrshPuppy/PNPT-study-guide.git
+[submodule "malware-analysis-notes"]
+	path = nested-repos/malware-analysis-notes
+	url = git@github.com:TrshPuppy/malware-analysis-notes.git
