@@ -89,7 +89,19 @@ If the password field is set to `!` of `*` that means the user will not be able 
 
 For best practice users like `root` should not be able to login with a password. Instead, root access can be controlled by allowing some users to temporarily elevate their permissions to root, and logging to keep records of when that has happened.
 
+### Changing a user's password:
+There are (at least) two ways to change a user's password in kali/Linux. The first is to use the `usermod -p` command **HOWEVER** This command requires you to paste the password as plain text in the command line **which will be viewable in the shell history and as plain text in `/etc/shadow`!**
+
+A better way to change a user password is with `sudo passwd <user>`. This command will prompt you to enter the password but the plaintext will not be shown or saved in the command line. Plus, the password will be updated in `etc/shadow` with a *hashed* value.
+
 ## Groups
+### Adding a user to a group:
+To see what groups a user is in, you can switch to that user and use the `groups` command which will list all the group they're in. To add a user to a group use:
+```bash
+sudo usermod -a -G sudo exampleUser
+```
+The `-a` means `append` and will append this group to the user's current group list instead of overwriting their current group list. `G` stands for `groups` and specifies the group you want to add them to.
+
 ### /etc/group
 The `/etc/group` file lists all the groups on the machine and which users are in them. Each line in the file has 4 fields:
 ```bash
@@ -157,7 +169,13 @@ If no command is specified, list the allowed (and forbidden) commands for the in
 If a command is specified and is permitted by the security policy, the fully-qualified path to the command is displayed along with any command line arguments.  If a command is specified but not allowed by the policy, sudo will exit with a status value of 1.
 ```
 
+#### Editing sudoers File:
+When editing the sudoers file (to add or remove users) you should use `visudo`. The `visudo` command not only checks syntax and parsing, it also prevents the file from being edited by multiple people at the same time.
+
+Using `visudo` will launch a command line editor like nano. You can set the editor it uses with `sudo EDITOR=nano visudo`. `visudo` will not allow your changes to be saved *if they don't pass its tests*. 
+
 > [!Resources:]
 > - [Linuxize: Understanding the /etc/shadow File](https://linuxize.com/post/etc-shadow-file/)
 > - [CyberCiti: Understanding /etc/group File](https://www.cyberciti.biz/faq/understanding-etcgroup-file/)
+> - [How to Geek: How to Control sudo Access](https://www.howtogeek.com/447906/how-to-control-sudo-access-on-linux/)
 
