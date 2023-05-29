@@ -4,6 +4,5 @@ A protocol used between routers and other network ([layer 3](/networking/OSI/net
 ## [Ping Command](/CLI-tools/ping.md):
 The `ping` command can be used on both Linux and Windows systems to see whether a connection to a resource via the network is possible.
 
-
 > [!Resources:]
 > [Wikipedia: Internet Control Message Protocol](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol)
