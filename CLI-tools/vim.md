@@ -1,5 +1,5 @@
-
 # Vim: CLI Text Editor
+**[Ultimate Cheat Sheet](https://vim.rtorr.com)**
 
 ## Config/ Settings:
 ### Home Directory:
@@ -106,8 +106,11 @@ autocmd FileType vim setlocal foldmethod=marker
 #### Fold Expressions:
 You can further customize your fold settings using fold expressions which are functions that help Vim decide how to fold.
 
-To do this, you write a function and then use `autocmd` w/ the `foldmethod` set to your function to override the current fold settings in your specific case:
+To do this, you write a function and then use `autocmd` w/ the `foldexpr` set to your function to override the current fold settings in your specific case:
 ```.vimrc
+autocmd FileType javascript foldmethod=expr
+autocmd FileType javascript foldexpr=JSFolds()
+
 function! JSFolds()
 	let thisline = getline(v:lnum)
 	if thisline =~? '|v^\s*$'
@@ -155,7 +158,7 @@ In normal mode, press `0` to move the cursor to the start of the current line. P
 > - [Linux Handbook](https://linuxhandbook.com/move-start-end-line-vim/)
 > - [Linux Handbook: Vim Basics](https://linuxhandbook.com/basic-vim-commands/)
 > - [Free Code Camp: Vimrc Config Guide](https://www.freecodecamp.org/news/vimrc-configuration-guide-customize-your-vim-editor/)
-> - [Vim From Scratch](https://www.vimfromscratch.com/articles/vim-folding)
+> - [Vim From Scratch: Folding](https://www.vimfromscratch.com/articles/vim-folding)
 > - [Dev.to: Vim Keymappings](https://dev.to/mr_destructive/vim-keymapping-guide-3olb)
-
+> - [Vim.rtoor: Vim Cheat Sheet](https://vim.rtorr.com)
 
