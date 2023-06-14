@@ -1,17 +1,28 @@
+# `smbclient` Command Line Tool
+Used to interact with Samba programs on Linux. [SMB](/networking/protocols/SMB.md) is a network protocol which allows file and printer sharing among computers.
+
+It's normally found on ports 445 or 139.
 
 ## Usage: 
 ```
 smbclient [OPTIONS] service <password>
 ```
+### Example:
+
+
 
 ## Useful options:
-	#smbclient-L
-		- gets a list of available #smb-shares  on the host
-		- syntax: ``smbclient -L [HOST IP]``
-	- #smbclient//fileserver/Backup
-		- To access the #smb-server of a specific #smb-share
+- `smbclient -L`
+	- gets a list of available SMB shares on the host
+	- syntax: ``smbclient -L [HOST IP]``
+- `-U`
+	- Login identity to use
+	- ex: `smbclient -L {target IP} -U Administrator`
+	- *HINT:* you can try entering a blank password when prompted while using `Administrator` as the user.
+- `smbclient//fileserver/Backup
+		- To access the SMB server of a specific SMB share
 		- syntax: ``smbclient\\\\IPADDRESS\\ShareName``
-- Once in the #smb-server shell
+- Once in the SMB server shell
 	- ``ls``
 	- ``cd`` 
 	- ``get [filename]`` 
