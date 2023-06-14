@@ -89,10 +89,35 @@ If the password field is set to `!` of `*` that means the user will not be able 
 
 For best practice users like `root` should not be able to login with a password. Instead, root access can be controlled by allowing some users to temporarily elevate their permissions to root, and logging to keep records of when that has happened.
 
+#### Making an Encrypted Password:
+To make an encrypted password in bash you can use the `mkpasswd` command which comes with the `whois` package:
+```bash
+mkpasswd --help
+Usage mkpasswd [OPTIONS]... [SALT]]
+Crypts the PASSWORD using crupt(3).
+
+	-m, --method=TYPE     select method TYPE
+	-5                    like --method=md5crypt
+	-S, --salt=SALT       use the specified SALT
+	-R, --rounds=NUMBER   use the specified NUMBER of rounds
+	-P, --password-fd=NUM read the password from the file descriptor NUM
+	                      instead of /dev/tty
+	-s, --stdin           like --password-fd=0
+	-h, --help
+	-V, --version         output version information and exit
+	
+If PASSWORD is missing then it is asked interactively.
+if no SALT specified, a random one is generated.
+If TYPE is 'help', available methods are printed.
+```
+
 ### Changing a user's password:
 There are (at least) two ways to change a user's password in kali/Linux. The first is to use the `usermod -p` command **HOWEVER** This command requires you to paste the password as plain text in the command line **which will be viewable in the shell history and as plain text in `/etc/shadow`!**
 
 A better way to change a user password is with `sudo passwd <user>`. This command will prompt you to enter the password but the plaintext will not be shown or saved in the command line. Plus, the password will be updated in `etc/shadow` with a *hashed* value.
+
+## Deleting a User:
+You can use the `deluser` (or sometimes `userdel`) command
 
 ## Groups
 ### Adding a user to a group:
@@ -108,7 +133,7 @@ The `/etc/group` file lists all the groups on the machine and which users are in
 sudo:x:27:trshpuppy,newuser
 [--][-][-][----------------]
   |  |  |         |+ ---------> Group List: users in the group (separated w/ ',')
-  |  |  |+--------------------> Group ID: ea user has a group ID (listed in                   
+  |  |  |+--------------------> Group ID: ea user has a group ID (listed in      
   |  |                          /etc/passwd)
   |  |+-----------------------> Password: Not generally used, 'x' placeholder
   |+--------------------------> Group Name: name of the group
