@@ -29,8 +29,8 @@ The last 6 digits of the address is the Network Interface Controller and is also
 When a networked device pretends to identify as a different one by using its MAC address. This can break poorly-maintained security designs. For example, if a network firewall is configured to trust any and all traffic coming from the MAC address of the administrator
 
 >[!Command line:]
-> - [ifconfig](/CLI-tools/ifconfig.md)
-> - [ip-command](/CLI-tools/ip-command.md)
+> - [ifconfig](ifconfig.md)
+> - [ip-command](ip-command.md)
 
 > [!Resources:]
 > - [Try Hack Me: What is Networking](https://tryhackme.com/room/whatisnetworking)

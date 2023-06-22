@@ -4,7 +4,7 @@
 - Primary use is for ethical hacking/ #penetration-testing
 
 ## Main components:
-### [msfconsole](/CLI-tools/msfconsole.md)
+### [msfconsole](msfconsole.md)
 Main CL interface.
 
 ### Modules:

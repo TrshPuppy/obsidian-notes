@@ -64,7 +64,7 @@ Allows you to download files from the web using [HTTP](/networking/protocols/HTT
 wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt
 ```
 
-Can also use [curl](/CLI-tools/curL.md)
+Can also use [curl](curL.md)
 
 ### SCP
 SCP or "secure copy" is a way to transfer files via SSH (so the files are encrypted and transferred over an authenticated connection).

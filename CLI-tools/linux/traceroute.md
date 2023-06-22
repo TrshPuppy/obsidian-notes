@@ -14,7 +14,7 @@ Specify an interface which traceroute should use to send packets. *Default:* wil
 #### `traceroute -T` & `traceroute -I`:
 The `-T` flag will let you probe using [TCP](/networking/protocols/TCP.md) SYN packets.
 
-The `-I` flag will let you use an [ICMP](/networking/protocols/ICMP.md) ([ping](/CLI-tools/ping.md)) `ECHO_REQUEST` to probe the route.
+The `-I` flag will let you use an [ICMP](/networking/protocols/ICMP.md) ([ping](ping.md)) `ECHO_REQUEST` to probe the route.
 
 ### On Windows:
 The equivalent command is `tracert` and it also uses ICMP protocol, similar to `ping`.

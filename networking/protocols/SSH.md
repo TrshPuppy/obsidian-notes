@@ -7,7 +7,7 @@ A protocol which connects devices and encrypts the traffic between them. *The mo
 Allows you to execute commands on a remote device. Any data sent between the devices over the internet is encrypted and then decrypted by the receiving device.
 
 ## Command line:
-The [ssh](/CLI-tools/ssh-command) command allows you to connect to devices via #ssh.
+The [ssh](ssh-command.md) command allows you to connect to devices via #ssh.
 
 
 >[!links]

@@ -14,7 +14,7 @@ The SMBv1 server used in some older versions of Windows has recently been exploi
 
 > [!Related:]
 >
-> Command: [smbclient](/CLI-tools/smbclient.md)
+> Command: [smbclient](smbclient.md)
 > Ports: #port-445 #port-139
 > Vulnerabilities: [EternalBlue](/cybersecurity/vulnerabilities/eternalblue.md), [NotPetya](/cybersecurity/attacks/notpetya.md)
 > Attacks: [WannaCry](/cybersecurity/attacks/wannacry.md)

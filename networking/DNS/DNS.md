@@ -55,5 +55,5 @@ You type `www.twitch.com` into your browser:
 		- ==the source of the information==
 	- When a request reaches the #ANS it sends the relevant info back to your computer.
 
-## Dig / [dig](/CLI-tools/dig.md) command:
+## Dig / [dig](dig.md) command:
 The dig command allows you to manually query recursive DNS servers for info about domains
