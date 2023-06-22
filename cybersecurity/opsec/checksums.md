@@ -81,5 +81,41 @@ cat amass_checksums.txt | grep "amass_Linux_amd64.zip" | cut -d " " -f 1 > check
 
 If you don't know what algorithm was used to make the checksum, there are ways to figure it out:
 
+##### MD5:
+The [MD5](/cybersecurity/hashing.md#MD5) Algorithm generates a 128 bit hash represented by 32 hexadecimal characters.
+
+##### SHA512:
+The [SHA512](/cybersecurity/hashing.md#SHA-2) is a variant of SHA-2. It produces a hash with 128 characters.
+
+##### Verifying the two checksums:
+```bash
+# Using MD5sum first:
+┌──(hakcypuppy㉿kali)-[~/Downloads]
+└─$ md5sum amass_Linux_amd64.zip > md5.txt
+
+┌──(hakcypuppy㉿kali)-[~/Downloads]
+└─$ cat md5.txt 
+bfbb46361ac3d4df30a9c07f2ce45a70  amass_Linux_amd64.zip
+# Using SHA512sum:
+┌──(hakcypuppy㉿kali)-[~/Downloads]
+└─$ sha512sum amass_Linux_amd64.zip > sha.txt
+
+┌──(hakcypuppy㉿kali)-[~/Downloads]
+└─$ cat sha.txt
+b1046b3b08e1697ecd08310b0f52d5abd185aae1a594025feb58a49a2a85fd7eff5928cc928ca6ebc7ba3c3c44ad9f02afa51587ea3a3a1f86bcb3820c618d94  amass_Linux_amd64.zip
+#  Neither of them match...
+#  Fortunately there is a sha256sum command:
+┌──(hakcypuppy㉿kali)-[~/Downloads]
+└─$ sha256sum amass_Linux_amd64.zip > sha256.txt
+
+┌──(hakcypuppy㉿kali)-[~/Downloads]
+└─$ cat sha256.txt           
+2b5afb8a567d9703dfb416099fb0452e2b4b4da5170f0b23cd3b812df2e9319c  amass_Linux_amd64.zip
 ```
-```
+ 
+
+> [!Resources:]
+> - [Infosec Scout: Identify MD5 Hash](https://infosecscout.com/identify-md5-hash/)
+> - [Wikipedia: SHA-2](https://en.wikipedia.org/wiki/SHA-2)
+> - [Medium: Cryptography: Explaining SHA-512](https://medium.com/@zaid960928/cryptography-explaining-sha-512-ad896365a0c1)
+
