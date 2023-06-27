@@ -97,6 +97,7 @@ On line `8` we use `chmod +rwx` to add all three file permissions to our `hello.
 A faster way to update permissions with `chmod` is to use give it numbers as flags. To do this, you just give three numbers, each from 0-7, to `chmod`.
 
 Each combination of permissions results in a number between 0 and 7. For example, the number `0` is `- - -`, or no permissions at all. the number `1` is `- - 1`, or only execution permissions.  The number `2` is `-w-` or only write permissions. And the number `4` is `4 - -` or only read permissions (the numbers represent bits being turned on or off).
+
 | Num | Permissions | Total | Binary |
 | :--: | :--------: | :---: | :-:|
 | 0 | --- | 0+0+0 | 000 |

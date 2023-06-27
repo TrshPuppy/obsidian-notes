@@ -108,7 +108,7 @@ fi
 ```
 
 ### 6. Creating a file
-Right now, the script is outputting to the command line, but the information is not saved beyond that. We should add to our script so that it creates a list of IP Addresses, then we can use that list for other scans like [`nmap`](/CLI-tools/nmap.md):
+Right now, the script is outputting to the command line, but the information is not saved beyond that. We should add to our script so that it creates a list of IP Addresses, then we can use that list for other scans like [`nmap`](/CLI-tools/linux/nmap.md):
 ```bash
 #!/bin/bash
 
@@ -156,6 +156,6 @@ done
 > - [ping](https://github.com/TrshPuppy/obsidian-notes/blob/main/CLI-tools/ping.md)
 > - [grep and cut](https://github.com/TrshPuppy/obsidian-notes/blob/main/computers/linux/filesystem-hierarchy.md)
 > - [Subnetting](https://github.com/TrshPuppy/PNPT-study-guide/blob/main/practical-ethical-hacking/networking/subnetting.md)
-> - [nmap](https://github.com/TrshPuppy/obsidian-notes/blob/main/CLI-tools/nmap.md)
+> - [nmap](https://github.com/TrshPuppy/obsidian-notes/blob/main/CLI-tools/linux/nmap.md)
 
 
