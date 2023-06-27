@@ -36,7 +36,7 @@ deb http://eu-west-1.ec2.archive.ubuntu.com/ubuntu/ focal-updates main restricte
 `add-apt-repository` lets you add provider repos to your `sources.list`. Adding  repos to apt means that whenever we update our system the repos we add *are checked for updates*.
 
 #### Software Integrity:
-To help ensure the integrity of software installed, #apt uses *GPG (Gnu Privacy Guard) keys*. If the keys of the software do not match the public key provided by the software developers, then the software will not be downloaded.
+To help ensure the integrity of software installed, apt uses *GPG (Gnu Privacy Guard) keys*. If the keys of the software do not match the public key provided by the software developers, then the software will not be downloaded.
 
 ##### Example with Sublime Text:
 1. Download the GPG key for the developers of Sublime Text:
