@@ -32,8 +32,6 @@ Sublist3r is capable of finding 3rd and 4th level domains.
 
 ## OWASP [Amass](/cybersecurity/tools/amass.md)
 
-
-
 ## Certificate Fingerprinting:
 Certificate fingerprint/ thumbprint is the hash of an SSL certificate derived from the certificate's data and signature. The thumbprint is used as a unique identifier for the certificate.
 
@@ -61,5 +59,6 @@ You can also get a map of the domain and subdomains like this:
 > - [Sublist3r (usage)](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/tools/sublist3r.md)
 > - [dig command](https://github.com/TrshPuppy/obsidian-notes/blob/main/CLI-tools/linux/dig.md)
 > - [Subdomain Takeover](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/TTPs/subdomain-takeover.md)
+> - [Amass](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/tools/amass.md)
 
 
