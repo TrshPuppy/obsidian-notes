@@ -1,6 +1,6 @@
 
 # SPF Surveyor
-Provides a graphical presentation of #SPF-record(s)
+Provides a graphical presentation of SPF-record(s)
 >https://dmarcian.com/spf-survey/
 
 Example record: Twitter.com

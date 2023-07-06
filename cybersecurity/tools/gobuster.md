@@ -1,6 +1,6 @@
 
 # Gobuster
-Gobuster is a tool used to #brute-force #URIs including directories and files as well as #DNS subdomains. It does so by enumerating hidden directories and files.
+Gobuster is a tool used to brute-force URIs including directories and files as well as [DNS](/networking/DNS/DNS.md) subdomains. It does so by enumerating hidden directories and files.
 
 ## Usage:
 ```

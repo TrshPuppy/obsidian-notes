@@ -3,8 +3,7 @@
 # WhatWeb - Web technology recon
 [WhatWeb](https://github.com/urbanadventurer/WhatWeb) is a command line utility written in [ruby](/coding/languages/ruby.md) used to enumerate the technology and services used to create and run a target website.
 
-
-
+## Usage:
 ```bash
 .$$$     $.                                   .$$$     $.         
 $$$$     $$. .$$$  $$$ .$$$$$$.  .$$$$$$$$$$. $$$$     $$. .$$$$$$$. .$$$$$$. 
@@ -148,10 +147,34 @@ EXAMPLE USAGE:
   --url-suffix /crossdomain.xml -p crossdomain_xml
 ```
 
+### Other useful flags:
+#### `--verbose`
+Verbose output which describes what the output means.
 
-##### Aggression:
+#### `--v`: really verbose:
+Really verbose shows how ea plugin was matched and is helpful for debugging plugins.
+
+
+### Aggression:
 WhatWeb can be set to 3 levels of aggression w/ the `-a` flag:
 1. Stealthy: only one HTTP request + redirects per target
-2. Aggressive: 
-##### Logging & Output:
+2. Unused
+3. Aggressive: Makes multiple [HTTP](/networking/protocols/http.md) requests per target. Also triggers *aggressive plugins* (plugins which have the option to be ran at level 2), but only if their targets are "identified with a level 1 request first".
+4. Heavy: Even more HTTP requests per target *and all aggressive tests from all plugins are used for all target URLs* (regardless of whether the target showed up at level 1 aggression)
+
+Each level becomes less stealthy but more accurate in its resultant output. WhatWeb *defaults to level 1* unless the `-a` flag is give.
+
+#### Example of level 3 scan:
+```bash
+#          * plugin            * aggression
+./whatweb -p plugins/phpbb.rb -a 3 smartor.is-root.com/forum/
+http://smartor.is-root.com/forum/ [200] phpBB[2,>2.0.20]
+#                                        |---> phpBB v2.0.20
+```
+
+### Logging & Output:
 There are many `--log-x` flags you can give whatweb to do logging of your output.
+
+## Plugins:
+WhatWeb can be run with or without plugins. Plugins are community-written modules which you can add to a scan to get more details on specific systems based on signatures.
+
