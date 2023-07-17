@@ -156,11 +156,8 @@ Defaults        mail_badpass
 Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
 
 # Host alias specification
-
 # User alias specification
-
 # Cmnd alias specification
-
 # User privilege specification
 root    ALL=(ALL:ALL) ALL
 
