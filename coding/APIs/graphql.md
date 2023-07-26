@@ -35,8 +35,8 @@ GraphQL uses its *type system* to validate incoming queries. Queries have to que
 ```js
 // Query (invalid):
 {
-  hero {
-    favoriteSpaceship
+	hero {
+		favoriteSpaceship
   }
 }
 
@@ -66,12 +66,12 @@ Each field in a query can be though of as a function/method of its parent type. 
 The top level of every GQL server *is a type that represents all possible entry points into the API*. It's called the "root type" or 'query type'.
 ```js
 Query: {
-	human(obj, args, context, info) { 
+	human(obj, args, context, info) {
 		return context.db.loadHumanByID(args.id).then(
-		userData => new Human(userData)      
-		)    
-	}  
-}     
+		userData => new Human(userData)
+		)
+	}
+}
 ```
 This is an example of a resolver function written for the root query. In this example, the function retrieves a `Human` object and returns it.
 
@@ -119,8 +119,21 @@ The result of executing a query is typically in [JSON](/coding/data-structures/J
 }
 ```
 
+## Batching:
+Batching is a technique which can be used in GraphQL to decrease the network traffic associated w/ making multiple requests to the server. Instead of sending each request separately, the client waits 50ms. If, within the 50ms of the first request being made, another request is made, the two are packaged into a single request and sent to the server.
+
+The best way to do batching is to package the requests into an array. This allows for tracking of each single operation while still sending all of them as part of one request.
+
+### Cons:
+One major con of batching is that the response from the server may take longer. This means that every response for every request won't be returned until the slowest request is resolved and can be returned.
+
+Another con is that depending on how the queries are batched/packaged, batching makes it harder to track individual requests. It's better to package the requests into an array so they can each be resolved individually on the server and be returned with their tracking information intact.
+
+Sending the requests as a multiple operations nested into a single operation means you will lose the ability to track the requests.
 
 > [!Resources]
 > - [GraphQL: Intro to GraphQL](https://graphql.org/learn/)
 > - [GQL: Validation](https://graphql.org/learn/validation/)
 > - [GQL: Execution](https://graphql.org/learn/execution/)
+> - [Apollo Blog: Batching GraphQL Queries](https://www.apollographql.com/blog/apollo-client/performance/batching-client-graphql-queries/)
+
