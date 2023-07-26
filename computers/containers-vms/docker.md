@@ -1,7 +1,7 @@
 
 # Docker
-Docker [containers](/computers/containers.md) sit on top of the host [operating-system](/computers/operating-system.md):
-- A #docker-container uses the host #operating-system
+Docker [containers](computers/containers-vms/containers.md) sit on top of the host [operating-system](/computers/operating-system.md):
+- A docker container uses the host #operating-system
 	- prefers [linux](/computers/linux)-based OS's
 	- lighter than a #virtual-machine because it piggy-backs on the pre-existing OS
 	- #boot s faster
@@ -82,6 +82,7 @@ sudo docker build -t <container name> .
 sudo docker run -it <container name> 
 # -it allows you to interact w/ the container when it is running
 ```
+The `.` at the end of the first command points to the directory in which the Dockerfile is located, in this case the current directory
 
 #### Mounting host directories into container:
 ```bash
@@ -114,6 +115,10 @@ sudo docker system prune -a
 ```bash
 sudo docker exec -it <container name> sh
 # -it is interactive mode
+```
+You can also execute a more provisioned shell such as bash using this command instead:
+```bash
+docker exec -it <container name> /bin/bash
 ```
 
 #### See the logs of a running container:
