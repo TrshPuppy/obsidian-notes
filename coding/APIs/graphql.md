@@ -84,7 +84,7 @@ Resolvers are made up of four arguments and can be written in many different cod
 
 ### Results:
 The result of executing a query is typically in [JSON](/coding/data-structures/JSON.md) format. The result normally attempts to mirror the original request:
-```json
+```js
 // OG ("root") Query:
 {
   human(id: 1002) {
