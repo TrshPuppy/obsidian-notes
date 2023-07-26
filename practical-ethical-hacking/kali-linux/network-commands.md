@@ -9,6 +9,16 @@ Address Resolution Protocol is a [layer 3](/networking/OSI/network-layer.md) pro
 
 The `arp -a` and the `ip n` (`n` stands for `neighbor`) commands can be used in Linux to list the MAC Addresses associated with local IP addresses in the network.
 
+You can also use the `netdiscover` with a `-r` flag to do a live ARP packet capture:
+```bash
+sudo netdiscover -r 10.0.2.11
+Currently scanning: Finished!   |   Screen View: Unique Hosts
+3 Captured ARP Req/Rep packets, from 3 hosts.   Total size: 180                                   __________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname
+--------------------------------------------------------------------------
+ 10.0.2.2        52:54:00:12:35:02      1      60  Unknown vendor          10.0.2.3        52:54:00:12:35:03      1      60  Unknown vendor          10.0.2.4        52:54:00:12:35:04      1      60  Unknown vendor 
+```
+
 ## [Routing Tables](/networking/routing/routing-tables.md)
 When you're on a network, it's good to know the routing tables. The routing tables of a network can tell you about the topology of the network. 
 
