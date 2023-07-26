@@ -6,7 +6,7 @@ GraphQL is a query language and a runtime used to queries APIs for *existing* da
 GraphQL is a *server-side* runtime you can use to execute queries on your data. It allows you to define the queries which can be used via a type system.
 
 You create a GQL service by defining types and fields on those types. Then you provide a function for each field:
-```q
+```json
 type Query{
 	me: User
 }
@@ -32,7 +32,7 @@ Once created, a GQL service can be ran (usually at a URL of a website). From her
 Before executing the functions associated with a received query, GQL makes sure the query refers to only types and fields which have been defined in the service.
 
 GraphQL uses its *type system* to validate incoming queries. Queries have to query for fields which are valid/defined on the given type. If the requested field does not exist, GQL will return an error:
-```json
+```js
 // Query (invalid):
 {
   hero {
