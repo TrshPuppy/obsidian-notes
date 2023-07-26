@@ -6,7 +6,7 @@ GraphQL is a query language and a runtime used to queries APIs for *existing* da
 GraphQL is a *server-side* runtime you can use to execute queries on your data. It allows you to define the queries which can be used via a type system.
 
 You create a GQL service by defining types and fields on those types. Then you provide a function for each field:
-```json
+```q
 type Query{
 	me: User
 }
