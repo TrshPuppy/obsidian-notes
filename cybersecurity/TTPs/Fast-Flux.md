@@ -3,7 +3,7 @@
 Used by a threat actor to hide malicious activity using compromised hosts on a [botnet](/cybersecurity/TTPs/botnet.md). This TTP was first introduced by [storm-worm](/cybersecurity/malware/storm-worm.md) in 2006 and is effective at making the connection between malware and its [C2C](/cybersecurity/TTPs/C2C.md) harder to discover.
 ![](/cybersecurity/cybersecurity-pics/fast-flux-1.png)
 >	"To understand the boundaries and relations between the network entities, an undirected network graph was created (Figure 2). The graph represents the following entities and relations between them: domains (shown in red), IP addresses (purple), and nameservers (green). The inspected network is composed of two subnetworks sharing a strong relation. These subnetworks are connected based on the similarity between their shared IP addresses associated with different nameservers." 
->	- [Akamai](https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network)
+>	\- [Akamai](https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network)
 
 ## Primary Characteristics:
 A fast flux network hides the origin of its C2 by constantly changing its [domains](/networking/DNS/DNS.md), [IP addresses](/networking/OSI/IP-addresses.md), and [nameservers](/networking/DNS/DNS.md). This allows it to hide the true nature of the network by making it harder to study and defend against.
@@ -32,7 +32,7 @@ Even though the faked-personal information of the alleged owners of different na
 ## C2 network vs hosting-network:
 ![](/cybersecurity/cybersecurity-pics/fast-flux-5.png)
 >	"To further investigate the initial assumption of having two different subnetworks as observed in “Fast Flux network — overview”, we created a network graph, but this time without showing the relation to the name-server. Doing that showed us that we can see two distinct subnetworks segregated in terms of associated IP addresses." 
->	- [Akamai](https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network) 
+>	\- [Akamai](https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network) 
 
 >[!Resources]
 > - [Akamai: Fast-Flux](https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network)
