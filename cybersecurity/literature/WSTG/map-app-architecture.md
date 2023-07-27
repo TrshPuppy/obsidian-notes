@@ -1,5 +1,5 @@
 
-# WSTG-INFO-10: Map Application Architecture
+# WSTG-INFO-10:Map Application Architecture
 The objective of this step in the WSTG framework is to *understand the architecture* of the applications and services in use. Understanding the infrastructure allows you to effectively test the application.
 
 ## Application Components

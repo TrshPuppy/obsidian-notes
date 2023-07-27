@@ -37,5 +37,3 @@ Even though the faked-personal information of the alleged owners of different na
 >[!Resources]
 > - [Akamai: Fast-Flux](https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network)
 > - [Fast Flux 101](https://unit42.paloaltonetworks.com/fast-flux-101/)
-
-
