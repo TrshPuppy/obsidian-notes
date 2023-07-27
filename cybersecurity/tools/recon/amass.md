@@ -2,7 +2,7 @@
 # OWASP Amass for [DNS](/networking/DNS/DNS.md) Enumeration:
 >	[Official User Guide](https://github.com/owasp-amass/amass/blob/master/doc/user_guide.md)
 
-Amass is a tool created by [OWASP](/cybersecurity/literature/OWASP.md) to do DNS enumeration. It uses both passive and active techniques, including brute forcing (if you tell it to).
+Amass is a tool created by [OWASP](cybersecurity/literature/OWASP.md) to do DNS enumeration. It uses both passive and active techniques, including brute forcing (if you tell it to).
 
 You can also create visualizations of the data you get back from a scan, like graphs and maps, using the API and the `viz` subcommand.
 
