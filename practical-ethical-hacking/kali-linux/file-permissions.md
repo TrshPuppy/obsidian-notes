@@ -93,7 +93,6 @@ To update the permissions of a file, use the `chmod` command:
 On line `8` we use `chmod +rwx` to add all three file permissions to our `hello.txt` file.
 
 ### Using `chmod` umask:
-https://www.digitalocean.com/community/questions/what-is-umask-how-to-set-it-permanently-for-a-user
 "Umask" in Linux refers to the user file-creation mode mask which determines the *default permissions* applied to newly created files and directories.
 
 The default permissions are *set in shell init files like `.bashrc`, `.bash_profile`, etc.* and are inherited by all the processes started by the user. The *Umask* is a set of bits subtracted from the default permissions to calculate the final permissions of new files.
@@ -140,4 +139,5 @@ chmod 777 --recursive <dir name>
 > [!Resources]
 > - [GNU ls Documentation](https://www.gnu.org/software/coreutils/manual/html_node/What-information-is-listed.html)
 > - [How to Geek: ls Command](https://www.howtogeek.com/448446/how-to-use-the-ls-command-on-linux/)
+> - [Digital Ocean: Umask](https://www.digitalocean.com/community/questions/what-is-umask-how-to-set-it-permanently-for-a-user)
 
