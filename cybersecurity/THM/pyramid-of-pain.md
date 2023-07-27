@@ -14,7 +14,7 @@ Cyber threat intelligence model designed by #David-Bianco
 	- Defensive standpoint: can be blocked, dropped, or denied by a firewall
 		- not always bulletproof
 		- *easy* for a threat actor to recover from
-	- ==ex: [[Fast-Flux]]==
+	- ==ex: [[cybersecurity/TTPs/fast-flux]]==
 3. #domain-names 
 	- Harder for an attacker to recover from/ change because they have to re-register, modify [DNS](DNS.md) records and purchase new domains
 		- However, DNS providers have #APIs which make it easy to purchase/register domains
