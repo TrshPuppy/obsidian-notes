@@ -18,12 +18,14 @@ Threat actors cycle between making activating and deactivating domains in the ne
 
 #### Double-flux
 When the threat actor activates a domain, it stays active for a limited time while malicious activity is taking place. Once the malicious activity associated w/ that ends its deactivated again and a new domain is activated to take its place. This is to ensure network services remained intact. This is called *"Double Flux"*.
+
 ![](/cybersecurity/cybersecurity-pics/fast-flux-6.png) 
 
 Double Flux ensures redundancy and survivability w/i the network. Following the DNS trail and shutting down servers/domains used by the botnet *does not end the activities of the larger botnet*.
 
 ### Nameservers :
 Nameservers associated w/ the fast flux network are are usually registered to different entities, rotated in and out of usage, and registered to owners w/ spoofed personal information:
+
 ![](/cybersecurity/cybersecurity-pics/fast-flux-3.png) 
 ![](/cybersecurity/cybersecurity-pics/fast-flux-4.png) 
 >	Akamai
