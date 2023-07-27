@@ -8,7 +8,7 @@ Used by a threat actor to hide malicious activity using compromised hosts on a [
 ## Primary Characteristics:
 A fast flux network hides the origin of its C2 by constantly changing its [domains](/networking/DNS/DNS.md), [IP addresses](/networking/OSI/IP-addresses.md), and [nameservers](/networking/DNS/DNS.md). This allows it to hide the true nature of the network by making it harder to study and defend against.
 
-### IP Addresses:
+### IP Addresses
 The amount of IP addresses associated w/ a fast flux network changes rapidly.
 ![](/cybersecurity/cybersecurity-pics/fast-flux-2.png)
 >	This image shows the avg number of times IP addresses associated a single domain name changed in one day (over 2 months) - [Akamai](/cybersecurity/literature/Akamai.md)
