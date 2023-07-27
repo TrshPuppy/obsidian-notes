@@ -14,5 +14,8 @@ Example: `00:0C:29` resolves to the manufacturer VMware, Inc
 
 > [!My previous notes (linked in text)]
 > - [MAC Addresses](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/MAC-addresses.md)
+> - [OSI Reference Model](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/OSI/OSI-reference-model.md)
+
+
 
 

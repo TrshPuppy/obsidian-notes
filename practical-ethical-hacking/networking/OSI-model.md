@@ -3,13 +3,13 @@
 A representation of networking used to contextualize the different protocols and layers of encapsulation that data has to travel thru to go from one device to another across a network.
 
 ## Pneumonic:
-Please
-Do
-Not
-Throw
-Sausage
-Pizza
-Away
+###### Please
+###### Do
+###### Not
+###### Throw
+###### Sausage
+###### Pizza
+###### Away
 
 ### L1: Physical (please)
 Handles the transmission of electrical signals along physical mediums. Relates to data cables like ethernet/CAT-5, etc..
