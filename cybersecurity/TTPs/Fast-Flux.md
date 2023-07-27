@@ -23,7 +23,8 @@ When the threat actor activates a domain, it stays active for a limited time whi
 Double Flux ensures redundancy and survivability w/i the network. Following the DNS trail and shutting down servers/domains used by the botnet *does not end the activities of the larger botnet*.
 
 ### Nameservers :
-Nameservers associated w/ the fast flux network are are usually registered to different entities, rotated in and out of usage, and registered to owners w/ spoofed personal information: ![](/cybersecurity/cybersecurity-pics/fast-flux-3.png) 
+Nameservers associated w/ the fast flux network are are usually registered to different entities, rotated in and out of usage, and registered to owners w/ spoofed personal information:
+![](/cybersecurity/cybersecurity-pics/fast-flux-3.png) 
 ![](/cybersecurity/cybersecurity-pics/fast-flux-4.png) 
 >	Akamai
 
@@ -36,4 +37,4 @@ Even though the faked-personal information of the alleged owners of different na
 
 >[!Resources]
 > - [Akamai: Fast-Flux](https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network)
-> - [Fast Flux 101](https://unit42.paloaltonetworks.com/fast-flux-101/)
+> - [UInt42: Fast Flux 101](https://unit42.paloaltonetworks.com/fast-flux-101/)
