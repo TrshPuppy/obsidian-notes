@@ -35,5 +35,5 @@ Notes should also be stripped of all P.I.I. so that, in the case that they fall 
 >
 >But usually, the actual notes on testing is either standardized at each org you work for, or you're kinda left to your own devices. One company I worked for, as an example, required encrypting the Burp State, Notes, and Report using PGP encryption stored on their servers, then deleted on your end."
 
-> Other resources:
+> [!Resources]
 > - [HTB Academy: Pentesting Reports Template](https://www.hackthebox.com/blog/penetration-testing-reports-template-and-guide)
