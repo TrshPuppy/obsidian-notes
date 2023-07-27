@@ -30,6 +30,8 @@ https://morningstarsecurity.com/ [200 OK] Apache[2.4.29], Country[RESERVED][ZZ],
 > - [WhatWeb](https://github.com/urbanadventurer/WhatWeb)
 
 >[!My previous notes:]
-> - [WhatWeb](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/tools/whatweb)
+> - [WhatWeb](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/tools/whatweb.md)
+
+
 
 
