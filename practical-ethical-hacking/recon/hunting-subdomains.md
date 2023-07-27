@@ -56,9 +56,9 @@ You can also get a map of the domain and subdomains like this:
 
 > [!My previous notes (linked in the text)]
 > - [DNS](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/DNS/DNS.md)
-> - [Sublist3r (usage)](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/tools/sublist3r.md)
+> - [Sublist3r (usage)](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/tools/recon/sublist3r.md)
 > - [dig command](https://github.com/TrshPuppy/obsidian-notes/blob/main/CLI-tools/linux/dig.md)
 > - [Subdomain Takeover](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/TTPs/subdomain-takeover.md)
-> - [Amass](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/tools/amass.md)
+> - [Amass](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/tools/recon/amass.md)
 
 
