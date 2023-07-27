@@ -16,3 +16,6 @@ site:google.com -www
 # Actual URL:
 https://www.google.com/search?q=site:facebook.com+-www
 ```
+
+> [!Resources]
+> - [Ahrefs: Google Search Operators, The Complete List](https://ahrefs.com/blog/google-advanced-search-operators/)
