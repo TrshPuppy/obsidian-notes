@@ -70,7 +70,7 @@ Resources shared via SMB on a network are referred to as "shares" (`$ipc`). SMB 
 > - [Email](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/email.md)
 > - [DNS](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/DNS/DNS.md)  
 > - [EternalBlue](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/vulnerabilities/eternalblue.md)
-> - WannaCry (no notes yet)
+> - [WannaCry](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/attacks/wannacry.md)
 > - NotPetya (no notes yet)
 
 
