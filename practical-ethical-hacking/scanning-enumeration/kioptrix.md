@@ -26,38 +26,13 @@ To scan all the ports use `nmap -p-`.
 #### `-A` All:
 The `-A` flag tells nmap to *scan using all of the detection options* which including versioning `-sV`, OS detection `-O`, script scanning `-sC`, and [traceroute](/CLI-tools/linux/traceroute.md) `--traceroute`.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 > [!Resources]
 > - [Nmap.org](https://nmap.org)
 > - [hummus-ful: Kioptrix Walkthrough](https://hummus-ful.github.io/vulnhub/2021/01/17/Kioptrix_1.html)
+> -  [VulnHub](https://www.vulnhub.com)
+
+> [!My previous notes (linked in text)]
+> - [nmap](https://github.com/TrshPuppy/obsidian-notes/tree/main/CLI-tools/linux/nmap.md) 
+> - [TCP](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/TCP.md)
+> - [traceroute](https://github.com/TrshPuppy/obsidian-notes/tree/main/CLI-tools/linux/traceroute.md)
+
