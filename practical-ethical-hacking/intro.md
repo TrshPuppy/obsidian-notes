@@ -8,7 +8,7 @@ Most common type performed, assessing and testing an organization's security fro
 They also tend to be cheaper than other types of pentesting. This makes it easier for companies to start adopting pentesting as a practice for their security.
 
 #### Methodology:
-Focuses heavily on [OSINT](../OSINT-fundamentals/OSINT-overview.md), gathering open-source information on the company and its employees. Usually takes ~32-40 hours + 8-16 for report writing.
+Focuses heavily on [OSINT](/cybersecurity/TTPs/recon/OSINT.md), gathering open-source information on the company and its employees. Usually takes ~32-40 hours + 8-16 for report writing.
 
 ##### OSINT:
 What data can be gathered (which is public) to aid breaking in/ exploiting the organization's network and gaining access to restricted spaces/ information?
@@ -66,7 +66,7 @@ Basically web-app pentesting but on a mobile app. Each operating system comes wi
 Usually involves IoT devices which have wireless capabilities but are not traditional user-interfaced computers like laptops/ desktops/ mobile phones, etc.
 
 #### Red Team Engagement:
-When an organization asks for a pentest but not for details regarding when or how. Methodology can includ[[package-managment]]e anything defined in the scope or the engagement.
+When an organization asks for a pentest but not for details regarding when or how. Methodology can include anything defined in the scope or the engagement.
 
 #### Purple Team Engagement:
 When a Red Team and Blue Team run an engagement together to determine a baseline for the current security/ detection measures. I.E. the red team may attempt an attack and the Blue Team will report on how the network/ target changed or didn't change (including detection measures, network traffic, etc.).
@@ -94,7 +94,7 @@ The Debrief also allows the client to ask questions about or challenge your find
 
 > [!My previous notes (linked in the text)]
 > - [phishing](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/TTPs/phishing.md)
-> - OSINT (not created yet)
+> - [OSINT](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/TTPs/recon/OSINT.md)
 
 
 
