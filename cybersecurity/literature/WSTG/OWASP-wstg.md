@@ -1,42 +1,38 @@
 
-# Fast Flux
-Used by a threat actor to hide malicious activity using compromised hosts on a [botnet](/cybersecurity/TTPs/botnet.md). This TTP was first introduced by [storm-worm](/cybersecurity/malware/storm-worm.md) in 2006 and is effective at making the connection between malware and its [C2C](/cybersecurity/TTPs/C2C.md) harder to discover.
-![](/cybersecurity/cybersecurity-pics/fast-flux-1.png)
->	"To understand the boundaries and relations between the network entities, an undirected network graph was created (Figure 2). The graph represents the following entities and relations between them: domains (shown in red), IP addresses (purple), and nameservers (green). The inspected network is composed of two subnetworks sharing a strong relation. These subnetworks are connected based on the similarity between their shared IP addresses associated with different nameservers." 
->	- [Akamai](https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network)
+# [OWASP Web Security Testing Guide](https://github.com/OWASP/wstg)
+The OWASP WSTG is a comprehensive guide for pen-testing web applications and services. It is a 'framework for best practices' used by pen-testers in the industry.
 
-## Primary Characteristics:
-A fast flux network hides the origin of its C2 by constantly changing its [domains](/networking/DNS/DNS.md), [IP addresses](/networking/OSI/IP-addresses.md), and [nameservers](/networking/DNS/DNS.md). This allows it to hide the true nature of the network by making it harder to study and defend against.
+## Methodology:
+The methodology is divided into *passive* and *active* testing.
 
-### IP Addresses:
-The amount of IP addresses associated w/ a fast flux network changes rapidly.
-![](/cybersecurity/cybersecurity-pics/fast-flux-2.png)
->	This image shows the avg number of times IP addresses associated a single domain name changed in one day (over 2 months) - [Akamai](/cybersecurity/literature/Akamai.md)
+### Passive Testing:
+The tester attempts to understand the application's logic and explores the app *as the end user*. There are various tools which can be used to gather information. The objective is for the tester to understand:
+- the access points
+- the functionality of the system
 
-### Domains:
-Threat actors cycle between making activating and deactivating domains in the network. A domain is considered inactive when a DNS query returns w/ `NX-DOMAIN`.
+#### [Info. Gathering](https://github.com/OWASP/wstg/tree/master/document/4-Web_Application_Security_Testing/01-Information_Gathering)
+- WSTG-INFO-01: [Conduct search engine recon](/cybersecurity/literature/WSTG/search-engine-recon.md)
+- INFO-02: [Fingerprint web server](/cybersecurity/literature/WSTG/fingerprint-web-werver.md)
+- 03: [Review web server metafiles](/cybersecurity/literature/WSTG/web-server-metafiles.md)
+- 04: [Enumerate Apps on Webserver](/cybersecurity/literature/WSTG/enumerate-webserver-apps.md)
+- 05: [Review content for info-leakage](/cybersecurity/literature/WSTG/content-info-leakage.md)
+- 06: [ID App entry points](/cybersecurity/literature/WSTG/id-entrypoints.md)
+- 07: [Map Execution paths](/cybersecurity/literature/WSTG/map-execution-paths.md)
+- 08: [Fingerprint app framework](/cybersecurity/literature/WSTG/fingerprint-framework)
+- 09: [Fingerprint application](/cybersecurity/literature/WSTG/finerprint-app.md)
+- 10: [Map App architecture](/cybersecurity/literature/WSTG/map-app-architecture.md)
 
-#### Double-flux
-When the threat actor activates a domain, it stays active for a limited time while malicious activity is taking place. Once the malicious activity associated w/ that ends its deactivated again and a new domain is activated to take its place. This is to ensure network services remained intact. This is called *"Double Flux"*.
-![](/cybersecurity/cybersecurity-pics/fast-flux-6.png) 
+/cybersecurity/literature/WSTG/
 
-Double Flux ensures redundancy and survivability w/i the network. Following the DNS trail and shutting down servers/domains used by the botnet *does not end the activities of the larger botnet*.
+### Active Testing:
+The rest of the methodologies in the WSTG are considered part of active testing. They include:
 
-### Nameservers :
-Nameservers associated w/ the fast flux network are are usually registered to different entities, rotated in and out of usage, and registered to owners w/ spoofed personal information: ![](/cybersecurity/cybersecurity-pics/fast-flux-3.png) 
-![](/cybersecurity/cybersecurity-pics/fast-flux-4.png) 
->	Akamai
+#### Configuration and Deployment MGMT testing:
 
-Even though the faked-personal information of the alleged owners of different nameservers seem unrelated (different countries, etc) analysis of their IP addresses proves they are actually *closely related* nameservers.
+####
 
-## C2 network vs hosting-network:
-![](/cybersecurity/cybersecurity-pics/fast-flux-5.png)
->	"To further investigate the initial assumption of having two different subnetworks as observed in “Fast Flux network — overview”, we created a network graph, but this time without showing the relation to the name-server. Doing that showed us that we can see two distinct subnetworks segregated in terms of associated IP addresses." 
->	- [Akamai](https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network) 
-
->[!Resources]
-> - [Akamai: Fast-Flux](https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network)
-> - [Fast Flux 101](https://unit42.paloaltonetworks.com/fast-flux-101/)
+> [!Resources]
+> - [WSTG GitHub](https://github.com/OWASP/wstg)
+> - [WSTG-INFO](https://github.com/OWASP/wstg/tree/master/document/4-Web_Application_Security_Testing/01-Information_Gathering)
 
 
-![](Pasted%20image%202)
