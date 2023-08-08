@@ -38,3 +38,7 @@ Some RPC services are *not encrypted by default* meaning the communication passe
 > - [Wikipedia: Remote Procedure Call](https://en.wikipedia.org/wiki/Remote_procedure_call)
 > - [How to Use Linux: Understanding Rpcbind...](https://www.howtouselinux.com/post/understanding-rpcbind-and-rpc)
 > - [HackTricks: Pentesting Portmapper](https://book.hacktricks.xyz/network-services-pentesting/pentesting-rpcbind)
+> - [Akamai: Critical RCE Vulns in Windows...](https://www.akamai.com/blog/security/critical-remote-code-execution-vulnerabilities-windows-rpc-runtime)
+
+> [!Info]
+> - Command: [rpcbind](/CLI-tools/linux/rpcbind.md)
