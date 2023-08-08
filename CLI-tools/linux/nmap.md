@@ -3,38 +3,31 @@
 ```
 nmap [Scan Type(s)] [Options] {target sppecification}
 ```
-
 ## Useful Options:
 ### `-sT` TCP scan:
 TCP connect scan scans for [TCP](/networking/protocols/TCP.md) ports and performs the *entire three way handshake* with the target system. nmap reports the port status depending on the flags it exchanges with the target.
-
 #### Results:
 If nmap receives an `ACK` flag, it reports the port as _open_. If it receives the `RST` flag, it reports the port as *closed*.
 
-If there is no response, that likely means *the port is hidden behind a firewall.* This is because older [firewalls](/cybersecurity/defense/firewalls.md) will drop the packet. *Some firewalls are configured to send a fabricated `RST` flag* which nmap will mark as "closed"
-
+If there is no response, that likely means *the port is hidden behind a firewall.* This is because older [firewalls](/cybersecurity/defense/firewalls.md) will drop the packet. *Some firewalls are configured to send a fabricated `RST` flag* which nmap will mark as "closed."
 ### `-sS` (half/open or "stealth"):
 SYN connect scan/ "half-open" or "stealth" scan. When the target sends the `SYN/ACK` flag, nmap (the client) then sends the `RST` flag which closes the connection. This prevents the target from repeatedly sending requests.
-
 #### Advantages:
 This is *the default scan* run by nmap when executed with `sudo`. It's considered "stealthy" because most *older* IDS systems only log a connection if it was fully-established (i.e. the entire three-way handshake was performed).
 
 This scan is also *faster than the TCP*.
-
 #### Disadvantages:
 May not work with *newer IDS's* which track/log all connection requests whether or not they completed.
 
 May cause unstable target OSes to *crash*.
 
 Requires *sudo privileges*.
-
 ### `-sV` (versioning):
 When **NOT** given this flag, nmap will scan a target and list the services which are *likely* to be hosted at specific ports. For example, most systems will host their [SMTP](/networking/protocols/SMTP.md) [email](/networking/email.md) service on port 25. If nmap finds that port is open, it will report that the service running on the target is SMTP on port 25.
 
 nmap uses their nmap-services database of about 2200 known, common ports and their services to do this. *However* any port can theoretically host *any service*.
 
 To more accurately determine the service hosted on a target port, the `-sV` flag can be given. This enables version detection.
-
 #### Version detection mode:
 When `-sV` is given and a scan is performed in version detection mode, nmap will attempt to determine the service by *querying each open port* using probes from their database.
 
@@ -126,26 +119,21 @@ Service Info: OSs: Windows, Linux; CPE: cpe:/o:microsoft:windows, cpe:/o:linux:l
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 28.42 seconds
 ```
-
 #### Versioning Options:
 ##### `--all-ports`:
 Every port scanned will be submitted to version detection (querying for a response from the service).
-
 ##### `--version-intensity <intensity>`:
 The probes sent by nmap for versioning are assigned a rarity value b/w 1 and 9. Lower numbers *have had the most success against targets in the past*. Higher numbers are more accurate but take longer.
 
 The default is set to 7. 
-
 ##### `--version-all`
 Try *every single probe*.
-
 ### `-O` OS Detection:
 This flag enables nmap to do *OS detection* on the target. It requires *sudo* privileges.
 
 Nmap does OS detection by using [TCP/IP](/networking/protocols/TCP.md) stack fingerprinting. Basically, it sends TCP and [UDP](/networking/protocols/UDP.md) packets to the remote target and examines every single bit in the responses.
 
 After performing a number of tests on the responses (including TCP ISN sampling, checking the window size, IP ID sampling, etc) it will compare the results to nmap's *OS database* of >2600 known OS fingerprints.
-
 #### Result reliability:
 If the results of the scan include *both an open and closed port* than the OS detection results can be considered "good". However, if not, then nmap reports the results as "unreliable".
 
@@ -164,14 +152,12 @@ Network Distance: 1 hop
 ```
 
 If you don't want nmap to do OS detection unless it will be reliable (at least one open and one closed port), you can add the `--osscan-limit`. With this flag, OS detection will not be performed unless there is at least one open and one closed port.
-
 #### Other useful info:
 The `-O` scan also returns info that is useful about the target beyond the OS including:
 - MAC address
 - Device type
 - CPE (Common Platform Enumeration)
 - Network distance (how many hops)
-
 ### `-sU` UDP/ "stateless":
 Since UDP doesn't require a handshake, it's considered "stateless". When there is no response to a packet sent by nmap to the port, it is more difficult for nmap to determine the state of the port.
 
@@ -186,7 +172,6 @@ Nmap attempts to detect UDP ports by sending a UDP packet *without a payload* to
 |ICMP port unreachable error (type 3, code 3)|`closed`|
 |Other ICMP unreachable errors (type 3, code 1, 2, 9, 10, or 13)|`filtered`|
 >	[Nmap.org](https://nmap.org/book/scan-methods-udp-scan.html)
-
 #### Speeding up UDP scans:
 ```bash
 sudo nmap -sUV -T4 -F --version-intensity 0 scanme.nmap.org
@@ -223,15 +208,59 @@ Closed ports will respond to all of these scans with an `RST` flag:
 |TCP RST packet|`closed`|
 |ICMP unreachable error (type 3, code 1, 2, 3, 9, 10, or 13)|`filtered`|
 > 	Nmap.org
-
 #### `-sN` NULL scan:
 This scan sends a TCP packet *without any flags set* so the packet is empty (TCP header is 0).
-
 #### `-sF` TCP Fin:
 The only bit set in the packet is the `TCP FIN` bit.
-
 #### `-sX` Xmas scan:
 Sets the FIN, PSH, and URG flags which "lights the packet up like a xmas tree"
+### [Nmap Scripting Engine](https://nmap.org/book/nse.html):
+Nmap comes with the Nmap Scripting Engine (NSE) which is a collection of user-written [Lua](/coding/languages/lua.md) scripts used to automate a wide-variety of networking tasks.
+```bash
+sudo nmap -sSUC -p 111 10.0.3.5
+Starting Nmap 7.94 ( https://nmap.org ) at 2023-08-08 18:36 EDT
+Nmap scan report for 10.0.3.5
+Host is up (0.00042s latency).
+
+PORT    STATE SERVICE
+111/tcp open  rpcbind
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100024  1          32768/tcp   status
+|_  100024  1          32768/udp   status
+111/udp open  rpcbind
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2            111/tcp   rpcbind
+|   100000  2            111/udp   rpcbind
+|   100024  1          32768/tcp   status
+|_  100024  1          32768/udp   status
+MAC Address: x:x:x:x:x:x (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.32 seconds
+```
+In this example, the `-sS` (TCP Syn scan), `-sU` (UDP), and `-sC` (scripting) flags are given with a target port of `111` (usually [RPC](/networking/protocols/RPC.md)). With these flags, nmap is able to return *extra* information as it relates to `port 111` on the target.
+
+Nmap ran default script/s written specifically for port 111. In this case, the script was able to enumerate specific programs, including their numbers, version, and service.
+
+The same scan, on the same target *without the `-sC` flag* returns the following, less-detailed report:
+```bash
+sudo nmap -sSU -p 111 10.0.3.5                                                   
+Starting Nmap 7.94 ( https://nmap.org ) at 2023-08-08 19:01 EDT
+Nmap scan report for 10.0.3.5
+Host is up (0.00040s latency).
+
+PORT    STATE SERVICE
+111/tcp open  rpcbind
+111/udp open  rpcbind
+MAC Address: x:x:x:x:x:x (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.40 seconds
+```
+#### `-sC` Scripting:
+To use the NSE, the `-sC` flag is provided. You can either use it without any arguments (and default scripts will be ran based on the rest of the `nmap` command), or you can give `-sC` the path to a custom script you want run.
 
 > [!Resources]
 > - `man nmap`
@@ -239,4 +268,5 @@ Sets the FIN, PSH, and URG flags which "lights the packet up like a xmas tree"
 > - [Nmap: OS Detection](https://nmap.org/book/man-os-detection.html)
 > - [Nmap: UDP scanning](https://nmap.org/book/scan-methods-udp-scan.html)
 > - [Nmap: NULL, FIN, XMAS](https://nmap.org/book/scan-methods-null-fin-xmas-scan.html)
+> - [Nmap: Nmap Scripting Engine](https://nmap.org/book/nse.html)
 
