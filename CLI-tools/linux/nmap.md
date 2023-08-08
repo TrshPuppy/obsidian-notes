@@ -13,19 +13,16 @@ If there is no response, that likely means *the port is hidden behind a firewall
 ### `-sS` (half/open or "stealth"):
 SYN connect scan/ "half-open" or "stealth" scan. When the target sends the `SYN/ACK` flag, nmap (the client) then sends the `RST` flag which closes the connection. This prevents the target from repeatedly sending requests.
 #### Advantages:
-This is *the default scan* run by nmap when executed with `sudo`. It's considered "stealthy" because most *older* IDS systems only log a connection if it was fully-established (i.e. the entire three-way handshake was performed).
-
-This scan is also *faster than the TCP*.
+- This is *the default scan* run by nmap when executed with `sudo`. It's considered "stealthy" because most *older* IDS systems only log a connection if it was fully-established (i.e. the entire three-way handshake was performed).
+- This scan is also *faster than the TCP*.
 #### Disadvantages:
-May not work with *newer IDS's* which track/log all connection requests whether or not they completed.
-
-May cause unstable target OSes to *crash*.
-
-Requires *sudo privileges*.
+- May not work with *newer IDS's* which track/log all connection requests whether or not they completed.
+- May cause unstable target OSes to *crash*.
+- Requires *sudo privileges*.
 ### `-sV` (versioning):
 When **NOT** given this flag, nmap will scan a target and list the services which are *likely* to be hosted at specific ports. For example, most systems will host their [SMTP](/networking/protocols/SMTP.md) [email](/networking/email.md) service on port 25. If nmap finds that port is open, it will report that the service running on the target is SMTP on port 25.
 
-nmap uses their nmap-services database of about 2200 known, common ports and their services to do this. *However* any port can theoretically host *any service*.
+Nmap uses their nmap-services database of about 2200 known, common ports and their services to do this. *However* any port can theoretically host *any service*.
 
 To more accurately determine the service hosted on a target port, the `-sV` flag can be given. This enables version detection.
 #### Version detection mode:
