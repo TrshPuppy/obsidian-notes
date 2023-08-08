@@ -37,3 +37,4 @@ Some RPC services are *not encrypted by default* meaning the communication passe
 > - [VMWare: Layer 7 Application Identity...](https://www.slideserve.com/roz/network-file-systems-nfs-and-remote-procedure-calls-rpc-powerpoint-ppt-presentation)
 > - [Wikipedia: Remote Procedure Call](https://en.wikipedia.org/wiki/Remote_procedure_call)
 > - [How to Use Linux: Understanding Rpcbind...](https://www.howtouselinux.com/post/understanding-rpcbind-and-rpc)
+> - [HackTricks: Pentesting Portmapper](https://book.hacktricks.xyz/network-services-pentesting/pentesting-rpcbind)
