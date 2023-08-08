@@ -66,7 +66,6 @@ HOP RTT     ADDRESS
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 34.16 seconds
 ```
-
 ### Findings (nmap):
 #### Architecture:
 From this scan we learn some things about the target's architecture:
@@ -74,11 +73,8 @@ From this scan we learn some things about the target's architecture:
 2. Ports 80 and 443 ([HTTP](/networking/protocols/HTTP.md) & [HTTPS](/networking/protocols/HTTPS.md)) are running an Apache server, v1.3.20 as well as OpenSSL
 
 **NOTE:** Any information about the software being used by the target, and the software's versions, is considered a finding because it can be used by an attacker to find exploits/ CVE's related to that software and its version.
-
 #### Other Services:
-3. Port 111 is running [RPC](/networking/protocols/RPC.md) (Remote Procedure Call)
-
-
+3. Port 111 is running [RPC](/networking/protocols/RPC.md) (Remote Procedure Call).
 
 > [!Resources]
 > - [hummus-ful: Kioptrix Walkthrough](https://hummus-ful.github.io/vulnhub/2021/01/17/Kioptrix_1.html)
@@ -88,3 +84,4 @@ From this scan we learn some things about the target's architecture:
 > - [SSH](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/SSH.md) 
 > - [HTTP](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/HTTP.md)
 > - [HTTPS](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/HTTPS.md)
+> - [RPC](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/RPC.md)
