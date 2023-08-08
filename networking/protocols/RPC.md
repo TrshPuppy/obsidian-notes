@@ -41,4 +41,5 @@ Some RPC services are *not encrypted by default* meaning the communication passe
 > - [Akamai: Critical RCE Vulns in Windows...](https://www.akamai.com/blog/security/critical-remote-code-execution-vulnerabilities-windows-rpc-runtime)
 
 > [!Info]
-> - Command: [rpcbind](/CLI-tools/linux/rpcbind.md)
+> - Command: [rpcbind & rpcinfo](/CLI-tools/linux/rpcbind-rpcinfo.md)
+
