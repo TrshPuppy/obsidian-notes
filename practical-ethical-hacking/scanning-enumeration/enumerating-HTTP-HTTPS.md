@@ -2,11 +2,8 @@
 # Enumerating HTTP & HTTPS
 Ports 80 and 443 are *normally* assigned to host web services using the [HTTP](/networking/protocols/HTTP.md) and [HTTPS](/networking/protocols/HTTPS.md) protocols (respectively). These protocols are used for communication between a web server and a web browser over the [application layer](/networking/OSI/OSI-reference-model.md) of the OSI model.
 ## Information Gathering:
-Because these ports host web services, they can be visited using a web browser. You can do this by putting the target's IP address into the search bar of a browser, and appending `:80` or `:443` to the end:
-```
-http://10.0.3.5:80
-```
-
+Ports 80 and 443 being present on a scan of a target indicate the target is likely hosting web services. Investigating these ports is a good way to gather information on the target. You can find out a lot about their architecture, services/ applications they use, etc..
+### Via Terminal:
 If the target is potentially volatile, or you want to leave less of a trace, you can start by using [`curl`](/CLI-tools/linux/curl.md). With `curl`, you can get the HTML of the entire website. You can also just ask for the headers with the `-I` command, which is sneakier because the response from the target carries less data.
 ```bash
 # Headers only: using wordcount command:
@@ -48,6 +45,33 @@ curl -I -H "User-Agent: Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail
 HTTP/1.1 200 OK
 ...
 ```
+### Via Browser:
+Because these ports host web services, they can be visited using a web browser. You can do this by putting the target's IP address into the search bar of a browser, and appending `:80` or `:443` to the end:
+```
+http://10.0.3.5:80
+```
+Or by using the browser from your terminal:
+```bash
+firefox http://10.0.3.5:80
+```
+![](nested-repos/PNPT-study-guide/PNPT-pics/enumerating-HTTP-HTTPS-1.png)
+![](/PNPT-study-guide/PNPT-pics/enumerating-HTTP-HTTPS-1.png)
+> Kioptrix VM
+
+## Vulnerability Scanning (w/ `nikto`)
+
+
+
+## Findings
+### Hygiene:
+By investigating these ports, we can see a default page left up accidentally by the target. This indicates *poor hygiene* and can be included in a pen-test report as a finding.
+### Information Disclosure:
+The URLs included in the HTML can also tell us more about the target. For example, clicking the link to "DocumentRoot" takes us to another part of the website `http://10.0.3.5:80/manual/mod/core.html#document` where we see a `404` response error code.
+![](nested-repos/PNPT-study-guide/PNPT-pics/enumerating-HTTP-HTTPS-2.png)
+![](/PNPT-study-guide/PNPT-pics/enumerating-HTTP-HTTPS-2.png)
+
+This page not only tells us that this presumably once-working link is now broken (poor hygiene), we also see *Apache versioning*, and the target's *hostname* (in this case it's localhost). This information is considered *not for us* and can be included in the report under "information disclosure".
+
 
 > [!Resources]
 > - [MDN: User-Agent String Reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox)
