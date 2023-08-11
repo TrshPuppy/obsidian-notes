@@ -67,14 +67,26 @@ OS and Service detection performed. Please report any incorrect results at https
 Nmap done: 1 IP address (1 host up) scanned in 34.16 seconds
 ```
 ### Findings (nmap):
-#### Architecture:
+#### Web Architecture:
 From this scan we learn some things about the target's architecture:
 1. The server supports OpenSSHv1 and we have some exposed host-keys (used to authenticate during an [SSH](/networking/protocols/SSH.md) connection)
 2. Ports 80 and 443 ([HTTP](/networking/protocols/HTTP.md) & [HTTPS](/networking/protocols/HTTPS.md)) are running an Apache server, v1.3.20 as well as OpenSSL
 
 **NOTE:** Any information about the software being used by the target, and the software's versions, is considered a finding because it can be used by an attacker to find exploits/ CVE's related to that software and its version.
-#### Other Services:
-3. Port 111 is running [RPC](/networking/protocols/RPC.md) (Remote Procedure Call).
+##### Open[SSL](networking/protocols/SSL.md)
+On port 443 (HTTPS) we can see OpenSSL is being used (and an old version) to authenticate and encrypt the target's web-data/ traffic.
+#### Port & Service Mapping:
+##### RPC:
+Port 111 is running [RPC](/networking/protocols/RPC.md) (Remote Procedure Call). `nmap` also tells us that the *program numbers* of the programs using the RPC protocol, as well as the ports they're on. 
+
+We can use this to probe those ports and see what type of information we get back. For example, using the [rpcinfo](/CLI-tools/linux/rpcbind-rpcinfo.md) command w/ the port `32768` we can get slightly more info back:
+```bash
+rpcinfo -s -n 32768 10.0.3.5
+   program version(s) netid(s)                         service     owner
+    100000  2         udp,tcp                          portmapper  unknown
+    100024  1         tcp,udp                          status      unknown
+```
+## 2. Vulnerability Scanning w/ [Nikto](/cybersecurity/tools/scanning-enumeration/nikto.md)
 
 > [!Resources]
 > - [hummus-ful: Kioptrix Walkthrough](https://hummus-ful.github.io/vulnhub/2021/01/17/Kioptrix_1.html)
@@ -85,3 +97,5 @@ From this scan we learn some things about the target's architecture:
 > - [HTTP](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/HTTP.md)
 > - [HTTPS](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/HTTPS.md)
 > - [RPC](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/RPC.md)
+> - [rpcinfo](https://github.com/TrshPuppy/obsidian-notes/tree/main/CLI-tools/linux/rpcbind-rpcinfo.md)
+> - [SSL](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/SSL.md)
