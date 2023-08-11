@@ -1,7 +1,6 @@
 
 # WhatWeb - Web technology recon
 [WhatWeb](https://github.com/urbanadventurer/WhatWeb) is a command line utility written in [ruby](/coding/languages/ruby.md) used to enumerate the technology and services used to create and run a target website.
-
 ## Usage:
 ```bash
 .$$$     $.                                   .$$$     $.         
@@ -145,17 +144,13 @@ EXAMPLE USAGE:
   ./whatweb -i plugin-development/alexa-top-100.txt \
   --url-suffix /crossdomain.xml -p crossdomain_xml
 ```
-
 ### Other useful flags:
 #### `--verbose`
 Verbose output which describes what the output means.
-
 #### `--v`: really verbose:
 Really verbose shows how ea plugin was matched and is helpful for debugging plugins.
-
 #### `--user-agent=AGENT`:
 Lets you set your own user agent for the request. Defaults to `WhatWeb/0.5.5` if not specified, and will not send the `User-Agent` header if set to `--user-agent=""`.
-
 ### Aggression:
 WhatWeb can be set to 3 levels of aggression w/ the `-a` flag:
 1. Stealthy: only one HTTP request + redirects per target
@@ -164,7 +159,6 @@ WhatWeb can be set to 3 levels of aggression w/ the `-a` flag:
 4. Heavy: Even more HTTP requests per target *and all aggressive tests from all plugins are used for all target URLs* (regardless of whether the target showed up at level 1 aggression)
 
 Each level becomes less stealthy but more accurate in its resultant output. WhatWeb *defaults to level 1* unless the `-a` flag is give.
-
 #### Example of level 3 scan:
 ```bash
 #          * plugin            * aggression
@@ -172,15 +166,12 @@ Each level becomes less stealthy but more accurate in its resultant output. What
 http://smartor.is-root.com/forum/ [200] phpBB[2,>2.0.20]
 #                                        |---> phpBB v2.0.20
 ```
-
 ### Logging & Output:
 There are many `--log-x` flags you can give whatweb to do logging of your output.
-
 ## Plugins:
 WhatWeb can be run with or without plugins. Plugins are community-written modules which you can add to a scan to get more details on specific systems based on signatures.
 
 They can have additional aims including identifying service versions, modules, usernames and accounts, etc.. Other plugins aim to discover or identify unanticipated systems (hashes, title of page, uncommon HTTP headers, etc.).
-
 ### Methods:
 There are four main methods to identify website technology which plugins can achieve:
 1. Matching patterns in HTTP headers and HTML in a simple webpage request
@@ -189,10 +180,8 @@ There are four main methods to identify website technology which plugins can ach
 4. Testing URLs and noting that they exist or at least return an HTTP 200 status code
 
 Method 1 is the most common and returns the most information for the time spent. Methods 2 thru 4 are less common and are mostly used in aggressive (level 3 plugins).
-
 ### Filesystem:
 On Kali linux the directories for plugins and used by plugins can be found in `/usr/share/whatweb`. This dir includes `plugins` and `my-plugins`. If developing a plugin, you may also need to add: `plugin-development` and `plugin-development/tests/`.
-
 ### Anatomy of a plugin:
 #### Header:
 At the top of a ruby plugin file (`.rb`), the header declares the plugin in sections.
@@ -203,10 +192,8 @@ At the top of a ruby plugin file (`.rb`), the header declares the plugin in sect
 4. description "Drupal is an opensource CMS written in PHP. Homepage: http://www.drupal.org"
 ```
 Line 1 is the name of the plugin and can be used to refer to it in the command line (case sensitive). 
-
 #### Variables:
 There are only a handful of variable names which can be defined in a plugin including `author, version, description, examples, matches, dorks`.
-
 ##### var Examples:
 Examples have to be listed in a ruby array using `%w|`. This notation in ruby means an array of elements separated by whitespace:
 ```ruby
@@ -219,7 +206,6 @@ www.example-3.com/
 |
 ```
 If `http://` or `https://` is not included, then `http://` is assumed by WhatWeb.
-
 ##### var Matches:
 A list of patterns to match against the webpage. The strings should be in an array and each should be surrounded by `{}`.
 ```ruby
@@ -241,7 +227,6 @@ A list of patterns to match against the webpage. The strings should be in an arr
 Each element of the array is an object which includes the pattern's `name` (optional, but should be unique), and the pattern it matches. There are different ways you can use to make the matching pattern including regex (`:regexp`), plaintext (`:text`), ghdb (Google Hacking Database)(`:ghdb`), MD5 hash (`:md5`) etc..
 
 **NOTE:** slashes `\` need to be escaped with a backslash `/`
-
 #### Functions & Variables:
 Functions in plugins can access the following variables:
 - `@body`: HTML body (w/i the `<html> </html>` tags, not `<body>`)
@@ -253,10 +238,8 @@ Functions in plugins can access the following variables:
 - `@ip`: IP address of the page as a string
 
 Functions can be one of the following: passive, aggressive, startup, or shutdown.
-
 ## Writing a Plugin for a Service:
 [WhatWeb GitHub: Research background info](https://github.com/urbanadventurer/WhatWeb/wiki/How-to-develop-WhatWeb-plugins#3-research-background-information)
-
 ### Service/ Software home page:
 Go to the service's website and look for anything regarding:
 - Requirements: type of web server, languages, it requires etc..
@@ -264,7 +247,6 @@ Go to the service's website and look for anything regarding:
 - Website showcases/ portfolios
 - Download links
 - Documentation
-
 ### Collect samples:
 Try to collect samples which represent the service in all of its versions. Don't just choose recent version examples. Collect a variety of samples w/ a range of configurations.
 
@@ -282,7 +264,6 @@ https://portfolio-sagar.vercel.app/
 https://www.gaylemanningdesigns.com/
 https://ftcportfolio.vercel.app/
 ```
-
 #### Using Search Engines:
 Besides just searching for things like `vercel porfolio sites` or `vercel showcase`, you can use [Google Dorking](/cybersecurity/TTPs/recon/google-dorking.md) which is much more powerful.
 

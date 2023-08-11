@@ -26,7 +26,7 @@ Ex: `hackthebox.com` vs `ctf.hackthebox.com`. -->`ctf` is the subdomain and it s
 *Subdomains can have different IP addresses* and all of the subdomains of one domain can be handled by one server using #virtual-host-routing where the servers uses the #host-header in the HTTP request to determine which app is meant to handle which request.
 
 #### Subdomain Enumeration:
-In order to find all the subdomains on a virtual host, tools like [Gobuster](/cybersecurity/tools/gobuster.md) can perform #subdomain-enumeration. Using a wordlist of possible subdomains, Gobuster will send out an HTTP request with a host header (of the vhost) to all the addresses w/ the possible subdomains appended.
+In order to find all the subdomains on a virtual host, tools like [Gobuster](cybersecurity/tools/scanning-enumeration/gobuster.md) can perform #subdomain-enumeration. Using a wordlist of possible subdomains, Gobuster will send out an HTTP request with a host header (of the vhost) to all the addresses w/ the possible subdomains appended.
 ```
 Host: [word].thetoppers.htb
 ```

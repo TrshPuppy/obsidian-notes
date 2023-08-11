@@ -1,88 +1,66 @@
 
 # OWASP Amass for [DNS](/networking/DNS/DNS.md) Enumeration:
 >	[Official User Guide](https://github.com/owasp-amass/amass/blob/master/doc/user_guide.md)
-
 Amass is a tool created by [OWASP](cybersecurity/literature/OWASP.md) to do DNS enumeration. It uses both passive and active techniques, including brute forcing (if you tell it to).
 
 You can also create visualizations of the data you get back from a scan, like graphs and maps, using the API and the `viz` subcommand.
-
 ## Configuration File:
 Configuration can be supplied to amass using either the config file or the `-config` flag (which takes the path to the file and/ or configuration arguments).
 
 Arguments/ parameters given to the amass command *will take precedence over configurations set in the config file*. I.e. if the file has brute-forcing disabled, but the `-brute` flag was supplied, then amass will perform brute force enumeration.
-
 ### Location:
 The location of the config file can be specified with the `-config` flag or by setting the `AMASS_CONFIG` env variable. The file should be called `config.ini`. This will allow Amass to attempt to find it.
 - Linux: `$HOME/.config/amass/config.ini` or `/etc/amass/config.ini`
 - Windows: `%AppData%\amass\config.ini`
 - Apple: `$HOME/Library/Application Support/amass/config.ini`
-
 #### Output Directory:
 The location of the config file is dependent on the *output directory*. Using the `-dir` flag will change the location Amass will use to try and discover the file. For example, if you use `-dir /my/ouput/dir` Amass will go there to look for `config.ini`
-
 ### Config file sections:
 #### Default Section:
-
 | Option | Description |
 |--------|-------------|
 | mode | Determines which mode the enumeration is performed in: default, passive or active |
 | output_directory | The directory that stores the graph database and other output files |
 | maximum_dns_queries | The maximum number of concurrent DNS queries that can be performed |
-
 #### `resolvers` Section:
 
 | Option | Description |
 |--------|-------------|
 | resolver | The IP address of a DNS resolver and used globally by the amass package |
-
 #### `scope` Section:
-
 | Option | Description |
 |--------|-------------|
 | address | IP address or range (e.g. a.b.c.10-245) that is in scope |
 | asn | ASN that is in scope |
 | cidr | CIDR (e.g. 192.168.1.0/24) that is in scope |
 | port | Specifies a port to be used when actively pulling TLS certificates or crawling |
-
 #### `scope.domains` Section:
-
 | Option | Description |
 |--------|-------------|
 | domain | A root DNS domain name to be added to the enumeration scope |
-
 #### The `scope.blacklisted` Section:
-
 | Option | Description |
 |--------|-------------|
 | subdomain | A DNS subdomain name to be considered out of scope during the enumeration |
-
 #### The `graphdbs` Section:
-
 ##### The `graphdbs.postgres` Section:
-
 | Option | Description |
 |--------|-------------|
 | primary | When set to true, the graph database is specified as the primary db |
 | url | URL in the form of "postgres://[username:password@]host[:port]/database-name?sslmode=disable" where Amass will connect to a PostgreSQL database |
 | options | Additional PostgreSQL database options |
-
 ##### The `graphdbs.mysql` Section:
-
 | Option | Description |
 |--------|-------------|
 | url | URL in the form of "[username:password@]tcp(host[:3306])/database-name?timeout=10s" where Amass will connect to a MySQL database |
-
 #### The `bruteforce` Section:
-
 | Option | Description |
 |--------|-------------|
 | enabled | When set to true, brute forcing is performed during the enumeration |
 | recursive | When set to true, brute forcing is performed on discovered subdomain names as well |
 | minimum_for_recursive | Number of discoveries made in a subdomain before performing recursive brute forcing |
 | wordlist_file | Path to a custom wordlist file to be used during the brute forcing |
-
 #### The `alterations` Section:
-
 | Option | Description |
 |--------|-------------|
 | enabled | When set to true, permuting resolved DNS names is performed during the enumeration |
@@ -92,34 +70,25 @@ The location of the config file is dependent on the *output directory*. Using th
 | add_words | When set to true, causes other words in the alteration word list to be added to resolved DNS names |
 | add_numbers | When set to true, causes numbers to be added and removed from resolved DNS names |
 | wordlist_file | Path to a custom wordlist file that provides additional words to the alteration word list |
-
 #### The `data_sources` Section:
-
 | Option | Description |
 |--------|-------------|
 | ttl | The number of minutes that the responses of **all** data sources for the target are cached |
-
 ##### The `data_sources.SOURCENAME` Section:
-
 | Option | Description |
 |--------|-------------|
 | ttl | The number of minutes that the response of the data source for the target is cached |
-
 ###### The `data_sources.SOURCENAME.CREDENTIALSETID` Section:
-
 | Option | Description |
 |--------|-------------|
 | apikey | The API key to be used when accessing the data source |
 | secret | An additional secret to be used with the API key |
 | username | User for the data source account |
 | password | Valid password for the user identified by the 'username' option |
-
 ##### The `data_sources.disabled` Section:
-
 | Option | Description |
 |--------|-------------|
 | data_source | One of the Amass data sources that is **not** to be used during the enumeration |
-
 ## Graph Database:
 All findings outputted from an Amass enumeration are stored in a graph database. The graph db is either located in a file in the output directory, or can be connected to remotely using settings in the config file.
 
@@ -128,14 +97,11 @@ If a new enumeration is started and there is already a graph db from a previous 
 New DNS queries will also be run on the subdomains to make sure they still are legitimate and have current IP addresses.
 
 Results from each enumeration are stored separately in the db. The `track` subcommand can be used to look for differences between them. 
-
 ### Cayley Graph Schema:
 The graph db stores all the domains found during an enumeration including associated info like IP, NS Records, CNAME, A Record, IP Block, etc.. Each enumeration has an associated, unique UUID.
-
 #### *BONUS:*
 Graphs can also be imported into [Maltego](https://www.maltego.com/product-features/).
 `amass viz -maltego` <-- converts Amass data to Maltego CSV file.
-
 ## Usage:
 ```bash
 Usage: amass intel|enum|viz|track|db [options]
@@ -150,10 +116,8 @@ Subcommands:
         amass track - Track differences between enumerations              
         amass db    - Manipulate the Amass graph database
 ```
-
 ### Subcommands:
 Amass has a few useful subcommands/ modules which make it very powerful:
-
 #### `intel` Subcommand:
 This subcommand will collect *open source* intel on the target org/ domain. It's useful for discovering [root domains](/networking/DNS/DNS.md) associated with the target and for finding *targets for enumeration*.
 ```bash
@@ -200,18 +164,15 @@ Intel will use multiple resources for finding targets including [WHOIS](/CLI-too
 | -timeout | Number of minutes to execute the enumeration | amass intel -timeout 30 -d example.com |
 | -v | Output status / debug / troubleshooting info | amass intel -v -whois -d example.com |
 | -whois | All discovered domains are run through reverse whois | amass intel -whois -d example.com |
-
 #### `enum` Subcommand:
 This subcommand is for performing enumeration and mapping a network. This helps you determine the attack surface of the target and what is exposed.
 
 The findings for this subcommand are *stored in a graph database.* The database lives in the Amass default output folder or a specified output directory (`-dir` flag).
 
 This subcommand can be executed in either a normal, a passive, or an active configuration mode.
-
 ##### `-normal`:
 Will use data sources to enumerate and will use DNS to *validate findings and investigate the namescpaes in scope* (the domain names given to the command).
 `amass enum -d example.com`
-
 ##### `-passive`: 
 This mode of `enum` is faster, but will not validate the DNS information (like by resolving subdomains).
 
@@ -228,7 +189,6 @@ amass enum -passive -d owasp.org -src
 ...
 ```
 The `-src` flag tells Amass to include the source of each result in the output (ex: `[DNSSpy]`). The `-d` flag just allows us to list multiple domains separated by a comma.
-
 ##### `-active:
 The `-active` flag and the active configuration state are different things(?). In this mode, the results are *more accurate* but are obtained using techniques such as *brute forcing*.
 
@@ -285,7 +245,6 @@ The config file amass will use for this command is specified using the `-config 
 | -v | Output status / debug / troubleshooting info | amass enum -v -d example.com |
 | -w | Path to a different wordlist file for brute forcing | amass enum -brute -w wordlist.txt -d example.com |
 | -wm | "hashcat-style" wordlist masks for DNS brute forcing | amass enum -brute -wm ?l?l -d example.com |
-
 #### `viz` Subcommand:
 Use this subcommand to add visual detail to the output data. This command will use the `output_directory` and remote graph database settings configured in the configuration file to create network graphs.
 
@@ -306,7 +265,6 @@ The generated graphs will be output to the current working directory and named `
 | -maltego | Output a Maltego Graph Table CSV file | amass viz -maltego -d example.com |
 | -o | Path to a pre-existing directory that will hold output files | amass viz -d3 -o OUTPATH -d example.com |
 | -oA | Prefix used for naming all output files | amass viz -d3 -oA example -d example.com |
-
 #### `track` Subcommand:
 This subcommand can be used to show differences between multiple enumerations done on the same target. You can use it to monitor a target's attack surface and any changes to it over time. 
 
@@ -319,7 +277,6 @@ Uses the `output_directory` and remote graph db settings in the config file.
 | -history | Show the difference between all enumeration pairs | amass track -history |
 | -last | The number of recent enumerations to include in the tracking | amass track -last NUM |
 | -since | Exclude all enumerations before a specified date (format: 01/02 15:04:05 2006 MST) | amass track -since DATE |
-
 #### `db` Subcommand:
 Use this subcommand to view and manipulate the graph database.
 
