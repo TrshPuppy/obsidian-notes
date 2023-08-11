@@ -1,7 +1,6 @@
 
 # nmap scanning:
 [nmap](/CLI-tools/linux/nmap.md) is a network scanning tool which scans a target IP address for open ports.
-
 ### `-sS` ("Stealth" scanning):
 This technique *is not stealthy* like it used to be, but is still called a "stealth scan" in nmap. 
 
@@ -13,7 +12,6 @@ Ports which respond with `ACK` are reported by nmap as "open."
 The `-T` flag allows you to tell nmap how fast you want the scan to be done. You can give it a number between 0 and 5 with 5 being the fastest.
 
 Higher/ faster settings will be less accurate. Slower settings will be *more accurate* and *harder to detect* (not sure on this check [Nmap: Timing and Performance](https://www.twitch.tv/melkey)).
-
 #### `-p` Ports:
 You can use the `-p` flag to tell nmap which ports you want it to scan. If you don't give this flag, then nmap *will scan the first 1000* which are generally assigned to specific services.
 

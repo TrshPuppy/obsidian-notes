@@ -21,7 +21,7 @@ http://morningstarsecurity.com [301 Moved Permanently] Apache[2.4.29], Country[R
 https://morningstarsecurity.com/ [200 OK] Apache[2.4.29], Country[RESERVED][ZZ], Google-Analytics[Universal][UA-791888-17], HTML5, HTTPServer[Apache/2.4.29], IP[104.225.220.14], JQuery[3.6.4], Open-Graph-Protocol[website], Script[application/ld+json,text/javascript], Title[Home - MorningStar Security], WordPress, WordpressSuperCache
 ```
 
-**See more on WhatWeb [here](/cybersecurity/tools/recon/whatweb.md)
+**See more on WhatWeb [here](cybersecurity/tools/scanning-enumeration/whatweb.md)
 
 > [!Resources]
 > - [BuiltWith](https://builtwith.com)
