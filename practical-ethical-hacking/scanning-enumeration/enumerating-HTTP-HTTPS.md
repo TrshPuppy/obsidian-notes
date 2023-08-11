@@ -59,7 +59,7 @@ firefox http://10.0.3.5:80
 > Kioptrix VM
 
 ## Vulnerability Scanning (w/ `nikto`)
-
+![Nikto](/cybersecurity/tools/recon/nikto.md) 
 
 
 ## Findings
