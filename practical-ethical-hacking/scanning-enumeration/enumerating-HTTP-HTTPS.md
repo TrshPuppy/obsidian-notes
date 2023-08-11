@@ -58,8 +58,7 @@ firefox http://10.0.3.5:80
 ![](/PNPT-pics/enumerating-HTTP-HTTPS-1.png)
 > - Kioptrix VM
 ## Vulnerability Scanning (w/ `nikto`)
-![Nikto](cybersecurity/tools/scanning-enumeration/nikto.md)
-![](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/tools/scanning-enumeration/nikto.md?plain=1)
+![Notes on Nikto CLI tool](cybersecurity/tools/scanning-enumeration/nikto.md)
 ## Findings
 ### Hygiene:
 By investigating these ports, we can see a default page left up accidentally by the target. This indicates *poor hygiene* and can be included in a pen-test report as a finding.
