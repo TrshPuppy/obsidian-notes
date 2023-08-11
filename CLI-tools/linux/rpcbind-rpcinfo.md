@@ -23,6 +23,15 @@ DESCRIPTION
 ### Usage:
 #### `-p` probe:
 The `-p` flag allows you probe the `rpcbind` service running on the host in order to discover a list of all the registered RPC programs. The command will *use version 2* or the RPC protocol w/ this flag.
+#### `-t` RPC call w/ TCP:
+Makes an RPC call to the specified program (using program number) and reports whether a response was received:
+```bash
+#          *port             *program #
+rpcinfo -n 32768 -t 10.0.3.5 100024                
+program 100024 version 1 ready and waiting
+```
+#### `-u` RPC call w/ UDP:
+Same as the `-t` flag but uses UDP.
 #### `-n` portnum:
 This flag requires the port number (for the `-t` & `-u` flags) to be used instead of the port number provided by `rpcbind`. Using this flag *avoids calling the remote rpcbind to determine the address of the service*.
 #### `-s` concise:
@@ -57,7 +66,7 @@ DESCRIPTION
      RPC calls on a server on that machine.
 ```
 ### Usage:
-#### `-p` host:
+#### `-h` host:
 Give `rpcbind` a specific host to bind to *for UDP requests*.
 #### `-r` random:
 Tell `rpcbind` to *open random listening ports*. This is *required by `rpcinfo`* in order to work.
