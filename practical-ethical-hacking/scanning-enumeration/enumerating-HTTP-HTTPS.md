@@ -55,13 +55,10 @@ Or by using the browser from your terminal:
 firefox http://10.0.3.5:80
 ```
 ![](nested-repos/PNPT-study-guide/PNPT-pics/enumerating-HTTP-HTTPS-1.png)
-![](/PNPT-study-guide/PNPT-pics/enumerating-HTTP-HTTPS-1.png)
-> Kioptrix VM
-
+![](/PNPT-pics/enumerating-HTTP-HTTPS-1.png)
+> - Kioptrix VM
 ## Vulnerability Scanning (w/ `nikto`)
-![Nikto](/cybersecurity/tools/recon/nikto.md) 
-
-
+![Nikto](cybersecurity/tools/scanning-enumeration/nikto.md) 
 ## Findings
 ### Hygiene:
 By investigating these ports, we can see a default page left up accidentally by the target. This indicates *poor hygiene* and can be included in a pen-test report as a finding.
@@ -69,9 +66,7 @@ By investigating these ports, we can see a default page left up accidentally by 
 The URLs included in the HTML can also tell us more about the target. For example, clicking the link to "DocumentRoot" takes us to another part of the website `http://10.0.3.5:80/manual/mod/core.html#document` where we see a `404` response error code.
 ![](nested-repos/PNPT-study-guide/PNPT-pics/enumerating-HTTP-HTTPS-2.png)
 ![](/PNPT-study-guide/PNPT-pics/enumerating-HTTP-HTTPS-2.png)
-
 This page not only tells us that this presumably once-working link is now broken (poor hygiene), we also see *Apache versioning*, and the target's *hostname* (in this case it's localhost). This information is considered *not for us* and can be included in the report under "information disclosure".
-
 
 > [!Resources]
 > - [MDN: User-Agent String Reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent/Firefox)
@@ -81,3 +76,4 @@ This page not only tells us that this presumably once-working link is now broken
 > - [HTTP](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/HTTP.md)
 > - [HTTPS](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/HTTPS.md)
 > - [curl command](https://github.com/TrshPuppy/obsidian-notes/tree/main/CLI-tools/linux/curL.md)
+> - [Nikto](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/tools/scanning-enumeration/nikto.md)
