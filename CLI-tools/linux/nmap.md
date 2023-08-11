@@ -31,7 +31,7 @@ When `-sV` is given and a scan is performed in version detection mode, nmap will
 *If nmap cannot match port responses* to their database, it will print a fingerprint to the command line which you can submit to nmap (via a URL printed with the fingerprint).
 
 ```bash
-nmap -sV -sT -Pn 10.0.2.4                                                                                                     
+nmap -sV -sT -Pn 10.0.2.4                                        
 Starting Nmap 7.94 ( https://nmap.org ) at 2023-07-20 13:24 EDT
 Nmap scan report for 10.0.2.4
 Host is up (0.0052s latency).
@@ -190,7 +190,6 @@ Nmap done: 1 IP address (1 host up) scanned in 41.89 seconds
 - Use `--host-timeout` to skip 'slow' hosts (some are ICMP rate limited) (ex: `--host-timeout 5m` = 5 minutes)
 - Use `-v` (verbosity): this flag will tell you real time how long nmap thinks the scan will take
 - Limit the number of ports scanned: `-p <number or range>`
-
 ### TCP FIN, NULL, & Xmas Scans:
 These scans send *malformed packets* which allows them to be stealthier in some contexts. This is because *most* firewalls automatically block incoming requests w/ the `SYN` flag but *don't block packets w/o the `SYN` flag*.
 

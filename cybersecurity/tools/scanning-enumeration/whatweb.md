@@ -49,7 +49,7 @@ HTTP OPTIONS:
                         "User-Agent:" will remove the header.
   --follow-redirect=WHEN Control when to follow redirects. WHEN may be `never',
                         `http-only', `meta-only', `same-site', or `always'.
-                        Default: always.
+                        Default: always.'
   --max-redirects=NUM   Maximum number of contiguous redirects. Default: 10.
 
 AUTHENTICATION:
@@ -93,7 +93,7 @@ OUTPUT:
   --verbose, -v         Verbose output includes plugin descriptions. Use twice
                         for debugging.
   --colour,--color=WHEN control whether colour is used. WHEN may be `never',
-                        `always', or `auto'.
+                        `always', or `auto''.
   --quiet, -q           Do not display brief logging to STDOUT.
   --no-errors           Suppress error messages.
 
