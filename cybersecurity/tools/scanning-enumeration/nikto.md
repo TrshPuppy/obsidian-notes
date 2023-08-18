@@ -23,3 +23,14 @@ DESCRIPTION
        to the maintainers.
 ...
 ```
+### Useful flags:
+#### `-h` Host:
+```bash
+nikto -h 10.0.3.5
+```
+#### `-list-plugins` Plugins:
+Will list all the plugins available to use in a scan w/o executing a scan.
+#### `-plugins`:
+Choose specific plugins to use for a scan (comma-separated list).
+#### `-Tuning`: Tuning options
+**IMPORTANT:** Nikto is *not* a passive scan. It will perform active pentesting techniques to gather information, including [SQL Injection](cybersecurity/TTPs/injection/SQL-injection.md), [directory busting](cybersecurity/TTPs/enumeration/directory-enumeration.md), [XSS](/cybersecurity/TTPs/)

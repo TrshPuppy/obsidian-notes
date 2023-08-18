@@ -1,15 +1,12 @@
 
 # MySQL UNION Attack:
-When an attacker uses the #SQL `UNION` keyword to retrieve data from more than one table in the database.
-
+When an attacker uses the [SQL](/coding/languages/SQL.md) `UNION` keyword to retrieve data from more than one table in the database.
 ## UNION keyword:
 In SQL the `UNION` keyword allows you to execute more than one `SELECT` query and append the results to the original query.
 - Removes duplicate rows as default
-
 Example:
 `SELECT a, b FROM table1 UNION SELECT c, d FROM table2`
 - This query will return a single result with two columns, containing values from columns `a` and `b` in `table1` and `c` and `d` from `table2`.
-
 ## Attack requirements:
 1. The # and order of columns which appear in all SELECT statements must be the same
 2. The data types of the columns must be the same or compatible

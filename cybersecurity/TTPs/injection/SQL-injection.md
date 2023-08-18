@@ -10,7 +10,7 @@ A vulnerability in web-security in which the queries sent by an application to i
 ## Examples of SQLi vulnerabilities/ techniques:
 1. Modifying an SQL query to retrieve hidden data or additional results
 2. Subverting the logic of the application by changing a query in a way that interfere's with the application's logic.
-3. [UNION-attack](UNION-attack.md) where data can be retrieved from different database tables.
+3. [UNION-attack](cybersecurity/TTPs/injection/UNION-attack.md) where data can be retrieved from different database tables.
 4. Extracting information about the database itself including its structure, version etc.
 5. #blind-SQLi where the results of a query are not returned in the application's response.
 
