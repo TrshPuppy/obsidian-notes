@@ -2,9 +2,8 @@
 aliases: [phishing, Phishing]
 ---
 # Phishing
-A type of attack using #social-engineering as well as spoofing in order to trick somebody into clicking a malicious link or giving up access credentials.
+A type of attack using [social engineering](/cybersecurity/TTPs/social-engineering.md) as well as spoofing in order to trick somebody into clicking a malicious link or giving up access credentials.
 - URL and/or something in the email usually has something off
-
 ## Tricks and Misdirection:
 - #typosquating:
 	- A type of #URL-hijacking which attempts to copy a well known or trusted URL by creating one with a small typo
