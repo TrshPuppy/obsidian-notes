@@ -39,38 +39,33 @@ More [OSINT](/cybersecurity/TTPs/recon/OSINT.md) done on a victim = better abili
 ## Emails:
 The most common vector for phishing is via [email](/networking/email.md).
 ### Characteristics of phishing emails:
-- the sender email masquerades as a trusted entity #email-spoofing
-- subject line will see legitimate
+- the sender email masquerades as a trusted entity via email spoofing
+- subject line will seem legitimate
 	- may use keywords like "invoice"
 - body/ message looks trusted
 	- HTML may be poorly formatted
 	- generic
-- includes hyperlinks (especially #URL-shortener )
+- includes hyperlinks (especially URL shortener)
 - malicious attachment
-- - URL and/or something in the email usually has something off
+- URL and/or something in the email usually has something off
 
 ## Phishing Analysis Tools:
-1. Google Messageheader:
-	- "analyzes SMTP message headers which help identify the root cause of delivery delays... Can detect misconfigured servers and mail-routing problems."
-> https://toolbox.googleapps.com/apps/messageheader/analyzeheader
-2. Message Header Analyzer:
-> https://mha.azurewebsites.net/ 
-3. Mail Header
-> https://mailheader.org/
-4. IPinfo.io
->  https://ipinfo.io/
-5. Talos Reputation Center:
-> https://talosintelligence.com/reputation
-- Can be used to lookup reputations of the #hash-value of a file, etc.
-6. [malware-sandboxes](/cybersecurity/tools/malware-sandboxes.md) 
-7. [phish-tool](/cybersecurity/tools/phish-tool.md)
+### [Google Messageheader](https://toolbox.googleapps.com/apps/messageheader/analyzeheader):
+A tool which "analyzes SMTP message headers which help identify the root cause of delivery delays... Can detect misconfigured servers and mail-routing problems."
+### [Message Header Analyzer:](https://mha.azurewebsites.net/)
+### [Mail Header](https://mailheader.org/)
+### [IPinfo.io](https://ipinfo.io/)
+### [Talos Reputation Center:](https://talosintelligence.com/reputation)
+Can be used to lookup reputations of the hash value of a file, etc.
+### [Malware-sandboxes](/cybersecurity/tools/malware-sandboxes.md) 
+### [phish-tool](/cybersecurity/tools/phish-tool.md)
 
 ## Defense:
 > See: [phishing-defense](/cybersecurity/defense/phishing-defense.md)
 
->[!links]
-> [Professor Messer Sec+](https://www.youtube.com/watch?v=0Tr8avVrzLA&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=2&ab_channel=ProfessorMesser)c 
-> [Try Hack Me Phishing Module](https://tryhackme.com/module/phishing)
+> [!Resources]
+> - [Professor Messer Sec+](https://www.youtube.com/watch?v=0Tr8avVrzLA&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=2&ab_channel=ProfessorMesser)
+> - [Try Hack Me Phishing Module](https://tryhackme.com/module/phishing)
 
 
 
