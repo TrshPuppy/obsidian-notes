@@ -21,7 +21,6 @@ Routing tables can also include additional fields which help refine the the sele
 Example of a routing table when using the `netstat -rn` command:
 ![](/networking/networking-pics/routing-table-1.png)
 -[Cysec Guide: Linux routing table](https://cysecguide.blogspot.com/2017/12/linux-routing-table.html)
-
 ## Routing Protocols: 
 Routing protocols are protocols which routers use to communicate with each other about the topology of their networks. These protocols allow routers to share and update their own information on how data should be routed between sources and destinations.
 
@@ -30,17 +29,13 @@ One router alone only has information in its tables related to networks and devi
 Because routing protocols *and routing tables* are dynamic, the routes and paths between devices can be updated. This contributes to the local network's and larger internet's *fault tolerance* because the network can adapt to changing conditions such as lost connections or obstructions.
 
 This also allows networks and the internet to increase their availability despite connection losses across different links making up the network.
-
 ### Examples of Routing Protocols:
 #### [IS-IS](/networking/protocols/IS-IS.md) (Intermediate System to Intermediate System): 
 Is an interior gateway protocol used in the [data-link-layer](/networking/OSI/data-link-layer.md) of the OSI to help move data throughout a *local domain or network*.
-
 #### [OSPF](/networking/protocols/OSPF.md) (Open Shortest Path First):
 OSPF is a *link-state* protocol which is designed to find the best path for routing packets through a single autonomous system.
-
 #### [RIP](/networking/protocols/RIP.md) (Routing Information Protocol):
 One of the oldest routing protocols. Uses the *hop count metric* to dictate routing. In RIP, hop counts above 15 are not allowed, which limits its use as a protocol on larger networks, but also prevents routing loops.
-
 #### [BGP](/networking/protocols/BGP.md) (Border Gateway Protocol):
 BGP is an *exterior* gateway protocol. It makes routing decisions based on paths, network policies, and rule-sets configured for a network.
 
