@@ -1,13 +1,9 @@
----
-aliases: [operating-system, OS]
----
+
 # Operating System
 
-Two components:
+## Components:
 
-#kernel :
-- communicates w/ the [hardware](/computers/hardware.md) ([cpu](/computers/cpu.md), [memory](/computers/memory.md))
-
-#applications 
-- based on / run the #kernel 
-	- example: [linux](/computers/linux.md) distros use the same kernel but implement different #applications
+### Kernel:
+The kernel of an OS communicates w/ the hardware ([cpu](/computers/cpu.md), [memory](/computers/memory.md))
+### Applications
+The other part of the operating system is the applications, which are based on and help run the kernel. *For example* [linux](/computers/linux.md) distros use the same kernel *but implement different applications*
