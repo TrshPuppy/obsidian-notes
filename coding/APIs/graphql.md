@@ -1,6 +1,6 @@
 
 # GraphQL
-GraphQL is a query language and a runtime used to queries APIs for *existing* data. It is not tied to any [databases](/coding/databases/DBMS.md) and instead is backed by your own code and data. 
+GraphQL is a query language and a runtime used to queries APIs for *existing* data. It is not tied to any [databases](coding/databases/DBMS.md) and instead is backed by your own code and data. 
 
 ## Usage:
 GraphQL is a *server-side* runtime you can use to execute queries on your data. It allows you to define the queries which can be used via a type system.

@@ -10,4 +10,4 @@ redis-cli -h [IP ADDRESS]
 - ``get [key/s]
 
 > [!related]
-> [redis](/coding/databases/redis.md)
+> [redis](coding/databases/redis.md)

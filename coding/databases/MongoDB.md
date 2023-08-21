@@ -1,3 +1,3 @@
 
 # MongoDB
-Type of #NoSQL [DBMS](/coding/databases/DBMS.md) 
+Type of #NoSQL [DBMS](coding/databases/DBMS.md) 
