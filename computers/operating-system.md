@@ -1,8 +1,6 @@
 
 # Operating System
-
 ## Components:
-
 ### Kernel:
 The kernel of an OS communicates w/ the hardware ([cpu](/computers/cpu.md), [memory](/computers/memory.md))
 ### Applications
