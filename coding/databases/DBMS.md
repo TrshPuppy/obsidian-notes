@@ -60,4 +60,4 @@ Also called #NoSQL, does not use tables, rows, columns, keys, relationships, or 
 	4. #graph-DB
 
 #### Languages:
-[MongoDB](/coding/databases/MongoDB.md) is the most common type of NoSQL database.
+[MongoDB](coding/databases/MongoDB.md) is the most common type of NoSQL database.
