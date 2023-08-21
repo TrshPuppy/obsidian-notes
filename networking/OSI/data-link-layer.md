@@ -6,7 +6,6 @@ Considered the most complex layer of the OSI (abstracts the interaction w/ the h
 - Divides packets from the [network-layer](/networking/OSI/network-layer.md) into frames
 - Ensures the *error-free* transmission of data.
 - #encode, #decode and organize incoming and outgoing data.
-
 ## Major Functions:
 1. #framing: 
 	- receives a #packet from the #network-layer (referred to as a #frame in the DLL)
@@ -29,7 +28,6 @@ Considered the most complex layer of the OSI (abstracts the interaction w/ the h
 		- Flow control controls the amount of data which can be sent before receiving an acknowledgement from the receiving node
 5. #access-control
 	- (media access control)
-
 ## *Has 2 sub-layers:*
 1. "Logical Link Control" ( #LLC-sublayer)
 	- the #LLC acts as an interface between the MAC-sublayer and the #network-layer (OSI layer 3)
