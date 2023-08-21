@@ -22,14 +22,6 @@ The engine controls how the *Docker Client* is created and uses a client-server 
 Docker uses a client-server architecture. The client talks to the Docker daemon (server) using the REST-API. The two communicate using either [UNIX sockets](/computers/linux/unix-sockets.md) or over a [network interface](/networking/OSI/MAC-addresses.md).
 ### Server
 The Docker server does most of the work regarding building, running and distributing docker containers. It can be run on the same system as the client or the Docker client can be configured to communicate w/ a remote daemon.
-	1. open-source, #server -side service which hosts #docker-image s which can be shared easily (amongst team members)
-	2. Docker has a default registry called #docker-hub 
-		1. public vs private registries
-	3. Commands: pull and push
-		1. to build a #docker-container :
-			1. `Docker pull <image>:<tag>` --> pulls an image from a docker repo
-		2. to update a repo:
-			1. `Docker push <image>:<tags>`
 ### Client
 The client is where the *Docker daemon* and *registry service* are run from. It's accessed via the command line and is where the user can build docker images and run docker containers.
 
