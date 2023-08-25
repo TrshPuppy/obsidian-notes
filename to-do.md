@@ -7,6 +7,14 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] FTP
 - [ ] metasploit
 - [ ] smbclient
+- [ ] msfconsole
+- [ ] telnet-command
+- [ ] whois
+- [ ] xfreerdp
+- [ ] ping
+- [ ] DBMS
+- [ ] SQL
+- [ ] 
 ## Inits which need notes:
 - [ ] CPU
 - [ ] CVEs
@@ -27,3 +35,13 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] wannacry
 - [ ] XSS
 - [ ] NetBIOS
+- [ ] redis
+- [ ] searchsploit
+- [ ] ssh
+- [ ] netstat
+- [ ] trie
+- [ ] mongo DB
+- [ ] 
+
+## Clean up
+- [ ] enumerating-SMB
