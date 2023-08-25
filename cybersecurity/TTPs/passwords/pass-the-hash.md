@@ -9,7 +9,7 @@ Obtaining the password hash is also easy because they can usually be found in a 
 ```
 C:\Windows\System32\config\SAM
 ``` 
- which can be read by any user w/ admin privileges. Password hashes are also cached in memory and can be extracted w/ tools like Mimikatz.
+which can be read by any user w/ admin privileges. Password hashes are also cached in memory and can be extracted w/ tools like Mimikatz.
 
 For the password hashes of domain controllers are normally stored in:
 ```

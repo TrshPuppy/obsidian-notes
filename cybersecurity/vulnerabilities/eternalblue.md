@@ -3,7 +3,7 @@
 A family of "critical" vulnerabilities in Microsoft [SMB](/networking/protocols/SMB.md)v1 servers and server protocol. These vulnerabilities not only effect Windows machines, but also machines which make use of the same server protocol including Siemens ultrasound medical equipment.
 
 ## CVE-2017-0144 (EternalBlue itself):
-A flaw in the SMBv1 server allows remote adversaries to execute code on a target computer. An unauthenticated attacker can craft malicious packet and send it to the server. Because SMB allows devices on a network to share resources w/ each other, malware like [WannaCry](/cybersecurity/attacks/wannacry.md) can use the server to propagate to other devices.
+A flaw in the SMBv1 server allows remote adversaries to execute code on a target computer. An unauthenticated attacker can craft malicious packets and send them to the server. Because SMB allows devices on a network to share resources w/ each other, malware like [WannaCry](/cybersecurity/attacks/wannacry.md) can use the server to propagate to other devices.
 
 This technique is rumored to have been developed by the NSA and/or an APT group known as the "Equation Group". 
 
