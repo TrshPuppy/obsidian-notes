@@ -87,6 +87,109 @@ rpcinfo -s -n 32768 10.0.3.5
     100024  1         tcp,udp                          status      unknown
 ```
 ## 2. Vulnerability Scanning w/ [Nikto](/cybersecurity/tools/scanning-enumeration/nikto.md)
+`kioptrix_nikto.txt`:
+```bash
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          10.0.3.5
++ Target Hostname:    10.0.3.5
++ Target Port:        80
++ Start Time:         2023-08-05 18:39:31 (GMT-4)
+---------------------------------------------------------------------------
++ Server: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b
++ /: Server may leak inodes via ETags, header found with file /, inode: 34821, size: 2890, mtime: Wed Sep  5 23:12:46 2001. See: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2003-1418
++ /: The anti-clickjacking X-Frame-Options header is not present. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
++ /: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/
++ /: Apache is vulnerable to XSS via the Expect header. See: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3918
++ Apache/1.3.20 appears to be outdated (current is at least Apache/2.4.54). Apache 2.2.34 is the EOL for the 2.x branch.
++ OpenSSL/0.9.6b appears to be outdated (current is at least 3.0.7). OpenSSL 1.1.1s is current for the 1.x branch and will be supported until Nov 11 2023.
++ mod_ssl/2.8.4 appears to be outdated (current is at least 2.9.6) (may depend on server version).
++ Apache/1.3.20 - Apache 1.x up 1.2.34 are vulnerable to a remote DoS and possible code execution.
++ Apache/1.3.20 - Apache 1.3 below 1.3.27 are vulnerable to a local buffer overflow which allows attackers to kill any process on the system.
++ Apache/1.3.20 - Apache 1.3 below 1.3.29 are vulnerable to overflows in mod_rewrite and mod_cgi.
++ mod_ssl/2.8.4 - mod_ssl 2.8.7 and lower are vulnerable to a remote buffer overflow which may allow a remote shell.
++ OPTIONS: Allowed HTTP Methods: GET, HEAD, OPTIONS, TRACE .
++ /: HTTP TRACE method is active which suggests the host is vulnerable to XST. See: https://owasp.org/www-community/attacks/Cross_Site_Tracing
++ ///etc/hosts: The server install allows reading of any system file by adding an extra '/' to the URL.
++ /usage/: Webalizer may be installed. Versions lower than 2.01-09 vulnerable to Cross Site Scripting (XSS). See: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2001-0835
++ /manual/: Directory indexing found.
++ /manual/: Web server manual found.
++ /icons/: Directory indexing found.
++ /icons/README: Apache default file found. See: https://www.vntweb.co.uk/apache-restricting-access-to-iconsreadme/
++ /test.php: This might be interesting.
++ /wp-content/themes/twentyeleven/images/headers/server.php?filesrc=/etc/hosts: A PHP backdoor file manager was found.
++ /wordpress/wp-content/themes/twentyeleven/images/headers/server.php?filesrc=/etc/hosts: A PHP backdoor file manager was found.
++ /wp-includes/Requests/Utility/content-post.php?filesrc=/etc/hosts: A PHP backdoor file manager was found.
++ /wordpress/wp-includes/Requests/Utility/content-post.php?filesrc=/etc/hosts: A PHP backdoor file manager was found.
++ /wp-includes/js/tinymce/themes/modern/Meuhy.php?filesrc=/etc/hosts: A PHP backdoor file manager was found.                                                 
++ /wordpress/wp-includes/js/tinymce/themes/modern/Meuhy.php?filesrc=/etc/hosts: A PHP backdoor file manager was found.                      
++ /assets/mobirise/css/meta.php?filesrc=: A PHP backdoor file manager was found: 
++ /login.cgi?cli=aa%20aa%27cat%20/etc/hosts: Some D-Link router remote command execution.                                                          
++ /shell?cat+/etc/hosts: A backdoor was identified.
++ /#wp-config.php#: #wp-config.php# file found. This file contains the credentials.
++ 8908 requests: 0 error(s) and 30 item(s) reported on remote host
++ End Time:           2023-08-05 18:39:59 (GMT-4) (28 seconds)                   
+---------------------------------------------------------------------------      
++ 1 host(s) tested   
+```
+### Nikto findings:
+**NOTE:** Some targets w/ good security/ firewalls will block nikto.
+#### Outdated software/ services:
+Anything that returns as 'outdated' w/ Nikto can be reported as a finding. The more behind the version in use is to the current released version *the more serious the finding is*.
+#### Directory Enumeration:
+Nikto shows that there are some possible subdirectories we can enumerate on ports 80 and 443. To check for these, we can run a handful of tools:
+##### [Feroxbuster](/cybersecurity/tools/scanning-enumeration/feroxbuster.md)
+Feroxbuster is a tool similar to [gobuster](/cybersecurity/tools/scanning-enumeration/gobuster.md) except it's able to *do recursive enumeration*. We can try feroxbuster against Kioptrix like this:
+```bash
+feroxbuster -u http://10.0.3.5
+# or:
+feroxbuster -u https://10.0.3.5
+```
+With Kioptrix, we can find a few more instances of *information disclosure*. For example the subdirectory `/manual/mod/mod_perl.html` is a default user's manual for for using perl on the server.
+
+From this page we can see that *the Apache HTTP Server* is version 1.3b5. Another subdirectory we find with feroxbuser is `manual/mod/mod_perl.html`. From this page we can flip through an entire SSL-related module. From here we learn that the server is likely using *Mod_SSL version 2.8.31*.
+
+These information disclosures are nice, but there isn't much else of use reported by feroxbuster and nikto. In fact, some of the subdirectories identified by nikto are *redirects or no longer active*, and we can't do anything with them.
+
+
+
+
+
+######### POST MORTEM?#####
+- metasploit:
+	- `exploit/linux/samba/trans2open`
+		- buffer overflow
+		- **PAYLOAD**
+		- `linux/x86/shell/reverse_tcp`
+	- Once we in:
+		- whoami
+		- persistence
+			- way back in
+			- 
+		- history
+		- users
+		- networking
+		- groups
+		- passwords
+		- services
+		- software
+		- devices
+		- files
+		- directories
+		- tasty data
+		- 
+- mail command
+- SMB
+	- trans2open
+	- smbget
+	- enum4linux
+- openSSL
+	- openfuck
+- feroxbuster
+	- 
+
+
+
 
 > [!Resources]
 > - [hummus-ful: Kioptrix Walkthrough](https://hummus-ful.github.io/vulnhub/2021/01/17/Kioptrix_1.html)
