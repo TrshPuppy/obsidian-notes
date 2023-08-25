@@ -4,7 +4,6 @@ Tuples are structures in python which are similar to lists but *are immutable.* 
 ```python
 fruits = ("apples", "oranges", "kiwis")
 ```
-
 ## Accessing a Tuple:
 To access an element in a tuple, you use bracket notation, just like lists:
 ```python
