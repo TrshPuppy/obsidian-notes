@@ -1,6 +1,5 @@
 
 # Terraform (Infrastructure as Code)
-
 ## Syntax:
 ```Terraform
 terraform {
@@ -25,25 +24,19 @@ resource "aws_instance" "test_ec"{
 	instance_type = "t2.micro"
 }
 ```
-
 Terraform is written in a language called "HashiCorp configuration language" which uses a `.tf` extension. Within a .tf file, the first thing you should do is *define a provider.*
 
 The main job of the language is to declare resources, which are used to represent infrastructure objects.
-
 ### Terraform Configuration
 A terraform configuration is a .tf document that tells Terraform how to manage a collection of infrastructure resources. It can be made up of multiple files and directories.
 
 The language is "declarative" meaning the order of blocks and files are not meaningful. The only meaning which is relevant to terraform is the implicit and explicit relationships between resources (used to determine the order of operations).
-
 #### Blocks
 Blocks are containers for content and usually represent configuration for an object, like a resource. Blocks can have a *block type*, zero or more *labels*, and a *body* which contains arguments and nested blocks.
-
 #### Arguments:
 Appear w/i blocks and assign a value to a name.
-
 #### Expressions:
 Represent a value, literally or by referencing/ combining other values. They can be placed as values to arguments or w/i other expressions.
-
 ### Providers:
 According to [Terraform](https://developer.hashicorp.com/terraform/language/providers/configuration) Providers allow Terraform to interact with APIs. Each Provider has specific configuration requirements/ settings which you can set in the root module of a terraform configuration.
 ```Terraform
@@ -52,7 +45,6 @@ provider "google"{
 	region = "us-central1"
 }
 ```
-
 If a provider is referenced in a tf file, then terraform will download all the necessary code to talk to the provider API.
 ### Resources:
 The resource we want to access provided by a specific provider. Syntax:
