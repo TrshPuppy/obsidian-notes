@@ -54,7 +54,6 @@ provider "google"{
 ```
 
 If a provider is referenced in a tf file, then terraform will download all the necessary code to talk to the provider API.
-
 ### Resources:
 The resource we want to access provided by a specific provider. Syntax:
 ```Terraform
@@ -64,7 +63,6 @@ resource "<provider>_<reource_type>" "name" {
 	key2 = "value"
 }
 ```
-
 ## Running a configuration:
 ### Init
 In the command line:
@@ -73,7 +71,6 @@ In the command line:
 terraform init
 ```
 Terraform does a "dry run" of your current infrastructure and will return any errors if they occur.
-
 ### Plan
 Once the infrastructure has been initialized, use `terraform plan`:
 ```shell
@@ -135,12 +132,11 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 `~` indicates resources which were modified.
 
 Fields which are unknown will be applied once terraform actually gets run for the first time.
-
 ### Apply
 Use `terraform apply` to run the code based on the plan terraform laid out with the `plan` command. Terraform will give you the chance to review the runtime before it happens:
 
->[!links:]
->[Terraform Docs](https://developer.hashicorp.com/terraform/intro)
->[Terraform Registry](https://registry.terraform.io/)
+>[!Resources]
+> - [Terraform Docs](https://developer.hashicorp.com/terraform/intro)
+> - [Terraform Registry](https://registry.terraform.io/)
 
 
