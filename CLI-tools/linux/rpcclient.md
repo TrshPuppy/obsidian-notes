@@ -50,4 +50,4 @@ Version options:
   -V, --version                                Print version
 ```
 > [!Resources]
-> `rpcclient --help`
+> - `rpcclient --help`
