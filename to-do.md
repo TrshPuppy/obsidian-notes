@@ -14,7 +14,34 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] ping
 - [ ] DBMS
 - [ ] SQL
-- [ ] 
+- [ ] fs
+- [ ] logic
+- [ ] math lectures
+- [ ] react
+- [ ] eternalblue
+- [ ] cli-cheat sheet (linnux)
+- [ ] filesystem hierarchy
+- [ ] linux processes
+- [ ] package management
+- [ ] windows
+	- [ ] enumeration
+	- [ ] powershell
+- [ ] APT 40
+- [ ] hackerone stuff
+- [ ] dMACR
+- [ ] DKIM
+- [ ] bluekeep
+- [ ] OSI-reference
+- [ ] blue keep
+- [ ] deja blue
+- [ ] LFI
+- [ ] RFI
+- [ ] Perl
+- [x] cyber kill chain
+- [ ] wateing hole
+- [ ] candy drop
+- [ ] url shorteners
+- [ ] LLMNR Poisoning
 ## Inits which need notes:
 - [ ] CPU
 - [ ] CVEs
@@ -41,7 +68,29 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] netstat
 - [ ] trie
 - [ ] mongo DB
-- [ ] 
+- [ ] golang
+- [ ] node
+- [ ] oauth 2
+- [ ] operating system
+- [ ] burp suite
+- [ ] bucket-enumeration
+- [ ] directory enumeration
+- [ ] SSH
+- [ ] application layer
+- [ ] trans2
+- [ ] buffer overflows
+- [ ] zero day
+- [ ] trojan
+- [ ] denial of service
+- [ ] password cracking
+- [ ] rainbow table
+- [x] connect back
+- [ ] back-door
 
 ## Clean up
 - [ ] enumerating-SMB
+- [ ] spf-surveyor
+- [ ] akamai
+- [ ] cyber-kill-chain
+- [ ] hashing
+- [ ] connect back
