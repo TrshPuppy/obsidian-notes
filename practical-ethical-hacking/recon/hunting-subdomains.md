@@ -11,7 +11,7 @@ Gathering information on these subdomains is important because doing so will giv
 - `qa.blank.blank`
 - `stage`/`stg.blank.blank`
 #### Abandoned Subdomains:
-If someone has abandoned a subdomain, it is vulnerable to [subdomain takeover](/cybersecurity/TTPs/subdomain-takeover.md).
+If someone has abandoned a subdomain, it is vulnerable to [subdomain takeover](cybersecurity/TTPs/delivery/subdomain-takeover.md).
 ##### What to look for:
 Using the [dig](/CLI-tools/linux/dig.md) command, you can spot a vulnerable subdomain when the server responds with `NXDOMAIN`, `SERVFAIL`, `REFUSED`, or `no servers could be reached`.
 
