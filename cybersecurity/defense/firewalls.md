@@ -23,5 +23,5 @@ Firewalls use packet inspection to determine:
 	- =="DUMB"==
 		- only as effective as their set of rules
 		- if a bad packet does not exactly match a rule, it will not be caught
-	- ==Better for [[denial-of-service]] attacks==
+	- ==Better for [[cybersecurity/TTPs/exploitation/denial-of-service]] attacks==
 		- https://www.netscout.com/sites/default/files/2021-10/SECWP_020_EN-2101%20-%20Enemy%20of%20the%20State.pdf

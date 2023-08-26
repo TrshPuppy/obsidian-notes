@@ -7,7 +7,7 @@ A [DNS](DNS.md) protocol allows hosts to resolve hostnames on the same local lin
 - uses [UDP](/networking/protocols/UDP.md) #port-5355 
 
 ## Security
-[LLMNR Poisoning](LLMNR-poisoning.md)
+[LLMNR Poisoning](cybersecurity/TTPs/exploitation/LLMNR-poisoning.md)
 
 >[!Links]
 > [Hacking Articles: Detailed Guide to Responder](https://www.hackingarticles.in/a-detailed-guide-on-responder-llmnr-poisoning/)

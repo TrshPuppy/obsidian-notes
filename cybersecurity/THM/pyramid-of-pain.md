@@ -14,12 +14,12 @@ Cyber threat intelligence model designed by #David-Bianco
 	- Defensive standpoint: can be blocked, dropped, or denied by a firewall
 		- not always bulletproof
 		- *easy* for a threat actor to recover from
-	- ==ex: [[cybersecurity/TTPs/fast-flux]]==
+	- ==ex: [[cybersecurity/TTPs/c2/fast-flux]]==
 3. #domain-names 
 	- Harder for an attacker to recover from/ change because they have to re-register, modify [DNS](DNS.md) records and purchase new domains
 		- However, DNS providers have #APIs which make it easy to purchase/register domains
-	- [p[punycode](punycode.md)		- using Unicode to encode non-ASCII characters
-	- [URL-shorteners](URL-shorteners.md)
+	- [p[punycode](cybersecurity/TTPs/delivery/punycode.md)		- using Unicode to encode non-ASCII characters
+	- [URL-shorteners](cybersecurity/TTPs/delivery/URL-shorteners.md)
 4. #host-artifacts 
 	- More annoying for a hacker if you're able to detect the observable traces they've left on a victimized system.
 	- may include: #registry-values, suspicious process execution, attack patterns/ #IOC s, files left by malicious applications.

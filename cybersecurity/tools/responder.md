@@ -8,7 +8,7 @@ A CLI utility which can perform #DNS-poisoning of multiple protocols.
 ### [MDNS](/networking/protocols/MDNS.md)
 
 ## DNS Poisoning:
-### [LLMNR/ NBT-NS Poisoning](LLMNR-poisoning.md)
+### [LLMNR/ NBT-NS Poisoning](cybersecurity/TTPs/exploitation/LLMNR-poisoning.md)
 
 
 >[!Links]

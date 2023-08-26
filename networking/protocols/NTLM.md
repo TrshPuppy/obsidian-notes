@@ -16,7 +16,7 @@ The server then verifies the user's identity by making sure that the *challenge*
 - It will either use the stored NT-hash from its own database or it will forward the challenge/response pair to the domain-controller for validation.
 ## Security:
 NTLM is vulnerable to a few different attack vectors:
-![Pass the Hash](cybersecurity/TTPs/passwords/pass-the-hash.md)
+![Pass the Hash](cybersecurity/TTPs/exploitation/pass-the-hash.md)
 ### Brute Force Attack:
 NTLM is vulnerable to brute-force attacks b/c the hashing algorithm (DES) does not use a salt.
 - A salt adds random characters to a password before it's hashed, making it more difficult to de-obfuscate.
@@ -24,9 +24,9 @@ NTLM is vulnerable to brute-force attacks b/c the hashing algorithm (DES) does n
 		1. xxxxxxxxx (password)
 		2. sha256([salt]password[pepper])
 
-B/c there is no salting of the hashed passwords an attacker can use a [rainbow table](rainbow-table.md) to brute force the hash using pre-calculated hashes of standard passwords. This method is *less effective* on passwords which are more complex and longer (> 15 characters).
+B/c there is no salting of the hashed passwords an attacker can use a [rainbow table](cybersecurity/TTPs/exploitation/rainbow-table.md) to brute force the hash using pre-calculated hashes of standard passwords. This method is *less effective* on passwords which are more complex and longer (> 15 characters).
 ### NTLM Relay Attack
-Since the user's client has no way or verifying the identity of the server, an attacker can perform a [Man in the Middle (MITM)](/cybersecurity/TTPs/MITM.md) by pretending to be the server to the client, and the client to the server.
+Since the user's client has no way or verifying the identity of the server, an attacker can perform a [Man in the Middle (MITM)](cybersecurity/TTPs/exploitation/MITM.md) by pretending to be the server to the client, and the client to the server.
 ![](/networking/networking-pics/NTLM-2.png)
 -[Redlings](https://www.redlings.com/en/guide/ntlm-windows-new-technology-lan-manager)
 ### Other Vulnerabilities:
