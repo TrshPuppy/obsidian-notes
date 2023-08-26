@@ -3,13 +3,11 @@
 Sublist3r is a CLI tool written in python which *passively* searched for subdomains using Google, Yahoo, and other search engines including [VirusTotal](/cybersecurity/tools/Virus-Total.md).
 
 Using an integrated tool called *Subbrute* it can be used to perform active subdomain brute forcing against a root domain.
-
 ## Usage:
 ### Dependencies:
 - python3
 - python3-requests
 - python3-dnspython
-
 ### Command Line:
 ```bash
 sublist3r -h
