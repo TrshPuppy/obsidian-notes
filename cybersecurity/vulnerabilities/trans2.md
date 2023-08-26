@@ -1,6 +1,6 @@
 
 # CAN-2003-0201: trans2 Vulnerabilities
-trans2 is a vulnerability in [SMB](/networking/protocols/SMB.md)v1 protocol which allows for a [buffer overflow](cybersecurity/TTPs/exploitation/buffer-overflow.md). This is due to a string operation in the server code which copies a *client supplied string* to a *fixed-size* buffer *w/o checking to make sure the buffer can hold the entire string.*
+trans2 is a vulnerability in [SMB](/networking/protocols/SMB.md)v1 protocol which allows for a [buffer overflow](/cybersecurity/TTPs/exploitation/buffer-overflow.md). This is due to a string operation in the server code which copies a *client supplied string* to a *fixed-size* buffer *w/o checking to make sure the buffer can hold the entire string.*
 
 Because the buffer happens *during a function call*, a buffer overflow is able to overwrite the instruction pointer copy which is saved on the stack. This vulnerability was first reported by Digital Defense Inc. in April of 2003 in advisory DDI-1013. Another associated vulnerability is *CAN-2003-0196* which is another buffer overflow in the Samba implementation of SMB (for Linux).
 ## Exploits
