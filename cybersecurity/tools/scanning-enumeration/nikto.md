@@ -35,7 +35,7 @@ Will list all the plugins available to use in a scan w/o executing a scan.
 #### `-plugins`:
 Choose specific plugins to use for a scan (comma-separated list).
 #### `-Tuning`: Tuning options
-> **IMPORTANT:** Nikto is *not* a passive scan. It will perform active pentesting techniques to gather information, including [SQL Injection](cybersecurity/TTPs/injection/SQL-injection.md), [directory busting](cybersecurity/TTPs/enumeration/directory-enumeration.md), [XSS](/cybersecurity/TTPs/injection/XSS.md), etc..
+> **IMPORTANT:** Nikto is *not* a passive scan. It will perform active pentesting techniques to gather information, including [SQL Injection](cybersecurity/TTPs/exploitation/injection/SQL-injection.md), [directory busting](cybersecurity/TTPs/recon/directory-enumeration.md), [XSS](cybersecurity/TTPs/exploitation/injection/XSS.md), etc..
 > For example, the Nikto plugin `nikto_dictionary_attack.plugin` performs a dictionary attack on the target to determine if it's vulnerable to this technique.
 
 The `-Tuning` flag allows you to choose specifically which tests you want run on a target:

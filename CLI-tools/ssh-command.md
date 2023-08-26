@@ -1,6 +1,5 @@
 # SSH Command
 Command line tool to connect to devices via the [SSH](/networking/protocols/ssh) protocol.
-
 ## Usage:
 To connect to a device via #ssh you need the IP of the target and the correct credentials:
 ```shell
