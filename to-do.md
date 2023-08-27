@@ -86,6 +86,11 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] rainbow table
 - [x] connect back
 - [ ] back-door
+- [ ] rate-limiting
+- [ ] host header injection
+- [ ] referrer leakage
+- [ ] otp tokens
+- [ ] input validation
 
 ## Clean up
 - [ ] enumerating-SMB
