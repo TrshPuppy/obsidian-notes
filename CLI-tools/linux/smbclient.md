@@ -4,6 +4,8 @@ Used to interact with Samba programs on Linux. [SMB](/networking/protocols/SMB.m
 ```
 smbclient [OPTIONS] service <password>
 ```
+
+**HINT**: Try `//target/` instead of `////target//` - <3 clayhax
 ## Useful options:
 - `smbclient -L`
 	- gets a list of available SMB shares on the host
