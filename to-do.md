@@ -91,6 +91,13 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] referrer leakage
 - [ ] otp tokens
 - [ ] input validation
+- [ ] diffie-hellman
+- [ ] rsa
+- [ ] dss
+- [ ] feroxbuster
+- [ ] searchsploit
+- [ ] CVSS
+
 
 ## Clean up
 - [ ] enumerating-SMB
