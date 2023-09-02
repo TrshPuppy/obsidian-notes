@@ -33,3 +33,4 @@ Because the buffer happens *during a function call*, a buffer overflow is able t
 > - Ports: `port 445`, `port 139`
 > - Vulnerabilities: [EternalBlue](/cybersecurity/vulnerabilities/eternalblue.md), [NotPetya](/cybersecurity/attacks/notpetya.md), [trans2](/cybersecurity/vulnerabilities/trans2.md)
 > - Attacks: [WannaCry](/cybersecurity/attacks/wannacry.md)
+> - Enumeration: [Enumerating SMB](/nested-repos/PNPT-study-guide/PEH/scanning-enumeration/enumerating-SMB.md)
