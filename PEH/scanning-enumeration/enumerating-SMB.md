@@ -77,6 +77,14 @@ msf6 auxiliary(scanner/smb/smb_version) >
 ```
 Now we know the target is running *Samba 2.2.1a*, which we can look up for related exploits/ CVEs.
 ## Other SMB Enumerating Tools:
+### [`nmblookup`](CLI-tools/linux/nmblookup.md)
+`nmblookup` is a CLI tool which resolves the NetBIOS names of devices on a network to their [IP addresses](/networking/OSI/IP-addresses.md). It does so by making use of queries being made on the network.
+### [`nbtscan`](/CLI-tools/nbtscan.md)
+`nbtscan` is another CLI command which will return information about computers on a network by sending NetBIOS status queries to the provided IP address or IP address range. It can return the following info:
+- IP address
+- NetBIOS computer names
+- currently *logged-in users*
+- [MAC Address](/networking/OSI/MAC-addresses.md)
 ### [enum4linux](cybersecurity/tools/scanning-enumeration/enum4linux.md)
 enum4linux is an enumeration tool made specifically for enumerating SMB information on a target (but which can return additional info as well).
 
@@ -96,28 +104,42 @@ There is a lot of output returned including juicy information like:
 9. etc
 #### Embedded commands:
 enum4linux enumerates target information by using other common SMB commands. These include [`smbclient`](/CLI-tools/linux/smbclient.md), `smbget`, [`rpcclient`](/CLI-tools/linux/rpcclient.me), `net`, `nmblookup`, etc.
+### Nmap `nbstat.nse` script
+This Nmap script is specific for enumerating NetBIOS names and MAC addresses on the target. It returns the name of the computer logged in as well as the user. If you *increase the verbosity* it can also return all the names it *thinks the system owns*.
 
-$ -- IPC shares
+It will also give us the same flags that `nmblookup` gives us.
+![](nested-repos/PNPT-study-guide/PNPT-pics/enumerating-SMB-1.png)
+![](/PNPT-study-guide/PNPT-pics/enumerating-SMB-1.png)
+> [Hacking Articles](https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/)
+### Nmap `smb-os-discovery.nse` script
+This Nmap script *initiates a connection with the target* via SMB using an anonymous account. In doing so, it's able to collect and return information including the OS, computer name, domain, workgroup, and current time.
 
-enum4linux
-	- rid rid is basically like using the machine sid and adding numbers known for certain users at the end then querying if it exists... idk if that makes sense
-https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/
-https://www.giac.org/paper/gcih/484/exploiting-sambas-smbtrans2-vulnerability/105385
-
-ORM: object relational mapper (SQLi)
-VBoxManage dhcpserver add --network=vhnet --server-ip=10.0.12.1 --lower-ip=10.0.12.2 --upper-ip=10.0.12.10 --netmask=255.255.255.0 --enable
-
-**CHECK /etc/samba/smb.conf**
-Go to `min protocol` : needs to match the protocol of the remote target and/or the target version needs to fall w/i the range.
+This is possible because the SMB server *sends all of this information back when you initiate a connection* with it. Other info this script can return includes:
+- Forest name
+- FQDN
+![](nested-repos/PNPT-study-guide/PNPT-pics/enumerating-SMB-2.png)
+![](/PNPT-study-guide/PNPT-pics/enumerating-SMB-2.png)
+> [Hacking Articles](https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/)
+## TIPS
+### **CHECK /etc/samba/smb.conf**
+Go to `min protocol`: this needs to match the protocol of the remote target and/or the target version needs to fall w/i the range.
+### RID
+The *RID* is basically like using the machine's SID and adding numbers known for certain users at the end then querying if it exists... 
 
 > [!Resources]
 > - [Metasploit](https://www.metasploit.com)
+> - [Hacking Articles: ...Enumerating SMB](https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/)
 
 > [!My previous notes (linked in text)]
 > - [SMB](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/SMB.md)
+> - [NetBIOS](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/NetBIOS.md)
 > - [nmap](https://github.com/TrshPuppy/obsidian-notes/tree/main/CLI-tools/linux/nmap.md)
 > - [CVEs](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/literature/CVEs.md)
 > - [metasploit](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/tools/metasploit.md)
 > - [enum4linux](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/tools/enum4linux.md)
 > - [smbclient](https://github.com/TrshPuppy/obsidian-notes/tree/main/CLI-tools/linux/smbclient.md)
 > - [rpcclient](https://github.com/TrshPuppy/obsidian-notes/tree/main/CLI-tools/linux/rpcclient.md)
+> - [IP addresses](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/OSI/IP-addresses.md)
+> - [MAC addresses](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/OSI/MAC-addresses.md)
+> - [nmblookup](https://github.com/TrshPuppy/obsidian-notes/tree/main/CLI-tools/linux/nmblookup.md)
+> - [nbtscan](https://github.com/TrshPuppy/obsidian-notes/tree/main/CLI-tools/nbtscan.md)
