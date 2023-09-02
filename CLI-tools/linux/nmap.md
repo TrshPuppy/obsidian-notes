@@ -1,9 +1,9 @@
 
-# Usage
+# Nmap: Network Mapper
 ```
 nmap [Scan Type(s)] [Options] {target sppecification}
 ```
-## Useful Options:
+## Usage:
 ### `-sT` TCP scan:
 TCP connect scan scans for [TCP](/networking/protocols/TCP.md) ports and performs the *entire three way handshake* with the target system. nmap reports the port status depending on the flags it exchanges with the target.
 #### Results:
