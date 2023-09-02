@@ -21,7 +21,7 @@ Instead, OSINT is focused on *gathering intel* such as what is the topology of t
 Assessing the security of an organization's from *inside the network*. The network has already been breached and/or part of the agreement w/ the client is to allow a laptop/ device to be brought internally and attached to the network (which the pentester can then remote into to perform the assessment).
 
 #### Methodology:
-Focuses heavily on [Active Directory](nested-repos/PNPT-study-guide/practical-ethical-hacking/active-directory/active-directory-overview.md) attacks. A majority of organizations use Active Directory in the technical environments, so it's critical to understand in order to perform internal pentests.
+Focuses heavily on [Active Directory](nested-repos/PNPT-study-guide/PEH/active-directory/active-directory-overview.md) attacks. A majority of organizations use Active Directory in the technical environments, so it's critical to understand in order to perform internal pentests.
 
 Usually last 32-40 hours w/ another 8-16 hours for writing the report.
 

@@ -1,7 +1,7 @@
 
 # [Kioptrix](https://www.vulnhub.com/series/kioptrix,8/)
 Kioptrix is a vulnerable VM you can download from [VulnHub](https://www.vulnhub.com). There are multiple [walkthroughs]() for attacking this box. The following are my notes from my own Kioptrix campaign:
-## 1. [Scanning w/ nmap](/nested-repos/PNPT-study-guide/practical-ethical-hacking/scanning-enumeration/scanning-with-nmap.md)
+## 1. [Scanning w/ nmap](nested-repos/PNPT-study-guide/PEH/scanning-enumeration/scanning-with-nmap.md)
 `kioptrix_nmap.txt`:
 ```bash
 sudo nmap -A -p- 10.0.3.5

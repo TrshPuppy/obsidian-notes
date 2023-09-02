@@ -13,7 +13,7 @@ Gathering information on these subdomains is important because doing so will giv
 #### Abandoned Subdomains:
 If someone has abandoned a subdomain, it is vulnerable to [subdomain takeover](cybersecurity/TTPs/delivery/subdomain-takeover.md).
 ##### What to look for:
-Using the [dig](/CLI-tools/linux/dig.md) command, you can spot a vulnerable subdomain when the server responds with `NXDOMAIN`, `SERVFAIL`, `REFUSED`, or `no servers could be reached`.
+Using the [dig](CLI-tools/dig.md) command, you can spot a vulnerable subdomain when the server responds with `NXDOMAIN`, `SERVFAIL`, `REFUSED`, or `no servers could be reached`.
 
 Once you've found a subdomain which is possibly abandoned, you can `dig` that as well.
 ## [Sublist3r](https://www.kali.org/tools/sublist3r/)

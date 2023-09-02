@@ -53,7 +53,7 @@ This is called a "shebang" and it tells the compiler/ machine that the following
 ```bash
 ping 69.69.69.69 -c 1| grep "64 bytes from" | cut -d " " -f 4 | tr -d ":"
 ```
-Pasting your code like this into the bash script is fine, and calling the script will run the commands just like running them in the terminal. However, you want to check multiple IP Addresses within a [subnet](/nested-repos/PNPT-study-guide/practical-ethical-hacking/networking/subnetting.md). To run this command enough times, you need to make a for loop.
+Pasting your code like this into the bash script is fine, and calling the script will run the commands just like running them in the terminal. However, you want to check multiple IP Addresses within a [subnet](nested-repos/PNPT-study-guide/PEH/networking/subnetting.md). To run this command enough times, you need to make a for loop.
 
 ### 3. Bash for-loop
 A for-loop in coding allows for an expression to run multiple times until specific conditions are met. For the ping sweeper, we're assuming we're pinging IP Addresses w/i a `/24` subnet, meaning there are 256 total addresses.

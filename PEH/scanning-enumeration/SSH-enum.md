@@ -16,7 +16,7 @@ Unable to negotiate with 10.0.2.5 port 22: no matching cipher found. Their offer
 ```
 Depending on how the target responds, you may be able to keep changing the `KexAlgorithms` flag to match their offer and get a connection. But connecting via SSH is *not considered enumeration*. This would be considered exploitation.
 ### Versioning:
-In [our nmap scan](/nested-repos/PNPT-study-guide/practical-ethical-hacking/scanning-enumeration/kioptrix.md) we can see that nmap found an OpenSSH version of `2.9p2`, which we can report as information disclosure.
+In [our nmap scan](nested-repos/PNPT-study-guide/PEH/scanning-enumeration/kioptrix.md) we can see that nmap found an OpenSSH version of `2.9p2`, which we can report as information disclosure.
 
 [!My previous notes (linked in text)]
 > - [nmap](https://github.com/TrshPuppy/obsidian-notes/tree/main/CLI-tools/linux/nmap.md) 

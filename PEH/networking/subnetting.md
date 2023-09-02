@@ -1,7 +1,6 @@
 
 # Subnetting
 Subnetting is an organizational technique used on networks to break them up into sub networks. Subnetting works by taking advantage of [CIDR Notation](/networking/routing/CIDR.md) to re-delegate bits in an IP Address to serve either the host or the network.
-
 ## Subnet Mask:
 The subnet mask tells you which parts of the IP address are network bits vs host bits. Each octet set to `255` in the subnet mask denotes an entire byte which belongs to the network. Each `0` in the subnet mask denotes bits belonging to the host:
 ```yaml
@@ -13,12 +12,10 @@ CIDR Notation : 192.168.32.5/24
 Network Bits : 192.168.32.x (total of 24 bits)
 Host bits    : x.x.x.5      (total of 8 bits)
 ```
-
 ### Host bits:
 The number of bits reserved for the host in an IP Address tells us *how many hosts* the network can support (how many devices can be on the network with their own unique IP Addresses).
 
 In a `/24` network with 8 bits reserved for the host, 2^8 (256) hosts/devices can be on that network (minus 2 because the `0` address is reserved, usually for a router and counts as the first address).
-
 ### Wildcard Mask:
 The wildcard mask is the inverted subnet mask. To create a wildcard mask you have to get the *bitwise complement* of the subnet mask in binary (i.e. all the 1 bits become 0, all the 0 bits become 1):
 ```yaml
@@ -42,7 +39,6 @@ Third octet set to 1 :
     Range : 192.168.1.0 - 192.168.1.255
 ```
 For a total of 512 unique IP addresses.
-
 ## Changing the Subnet Mask:
 Subnetting is just *changing the subnet mask* to allow for more networks to be supported by the IP Address. To create subnets in an IP address, bits are taken from the host portion of the address and "given" to the network portion.
 
@@ -59,17 +55,14 @@ Binary      : 11111111.11111111.11111111.10000000
 Decimal     : 255.255.255.192
 CIDR        : 192.168.32.5/25
 ```
-
 ### Deciding how many bits to take:
 The number of bits taken from the network determines how many sub-networks can be created. The number of subnets possible = 2^(how many bits were taken).
 
 *For example*: to create 4 subnets = 2^x. Solving for x gives us 2, meaning 2 bits need to be taken from the host bits to create 4 subnets.
 
 *Example 2*: to create 17 subnets = 2^x. 2^4 = 16 (not enough, need one more bit) ==> 2^5 = 32, so 5 bits needed to be taken to create 17 sub networks.
-
 ## Subnets:
 Once the subnet mask has been changed to support subnets, the range of each subnet can be determined. To figure out the range, you need the *increment.*
-
 ### Increment:
 The increment (or the range of addresses each network belongs to) can be found by looking at the subnet mask:
 ```YAML
@@ -88,13 +81,10 @@ Subnet 2 : 192.168.32.64 - 192.168.32.127
 Subnet 3 : 192.168.32.128 - 192.168.32.191
 Subnet 4 : 192.168.32.192 - 192.168.32.255
 ```
-
 ### Reserved IPs w/i a Subnet:
 In a subnet, the number of available hosts is always -2 the total possible addresses in the subnet. This is to account for the first and last addresses in the range, which are reserved for the Network ID and the Broadcast ID:
-
 #### Network ID:
 This is usually the first address in the sub netted range.
-
 #### Broadcast ID:
 Usually the last address in the range (but not always)
 ```yaml
