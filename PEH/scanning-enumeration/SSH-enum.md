@@ -18,7 +18,7 @@ Depending on how the target responds, you may be able to keep changing the `KexA
 ### Versioning:
 In [our nmap scan](nested-repos/PNPT-study-guide/PEH/scanning-enumeration/kioptrix.md) we can see that nmap found an OpenSSH version of `2.9p2`, which we can report as information disclosure.
 
-[!My previous notes (linked in text)]
+> [!My previous notes (linked in text)]
 > - [nmap](https://github.com/TrshPuppy/obsidian-notes/tree/main/CLI-tools/linux/nmap.md) 
 > - [Diffie-Hellman](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/cryptography/diffie-hellman.md)
 > - [SSH](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/SSH.md)
