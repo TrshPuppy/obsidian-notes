@@ -135,7 +135,7 @@ sage: amass intel [options] [-whois -d DOMAIN] [-addr ADDR -asn ASN -cidr CIDR]
 ...
 ```
 
-Intel will use multiple resources for finding targets including [WHOIS](/CLI-tools/linux/whois.md) lookup and IPv4Info. Like the `enum` subcommand, `intel` has an `-active` mode which will allow it to attempt zone transfers(?) and scan to fetch for SSL/TLS certificates in order to extract extra info.
+Intel will use multiple resources for finding targets including [WHOIS](CLI-tools/whois.md) lookup and IPv4Info. Like the `enum` subcommand, `intel` has an `-active` mode which will allow it to attempt zone transfers(?) and scan to fetch for SSL/TLS certificates in order to extract extra info.
 
 | Flag | Description | Example |
 |------|-------------|---------|

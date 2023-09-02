@@ -31,7 +31,7 @@ Most attackers perform a lot of [OSINT](/cybersecurity/TTPs/recon/OSINT.md) rese
 #### Examples of OSINT techniques:
 - Looking at a target's website and finding what [technologies](/nested-repos/PNPT-study-guide/practical-ethical-hacking/recon/website-tech-recon.md) it uses.
 - Looking up a target on google maps
-- *Passive* [email harvesting](/cybersecurity/TTPs/recon/email-harvesting.md): obtaining email addresses from public/ free services
+- *Passive* [email harvesting](/nested-repos/PNPT-study-guide/practical-ethical-hacking/recon/email-addresses.md): obtaining email addresses from public/ free services
 	1. [The Harvester](/cybersecurity/tools/recon/the-harvester.md) tool which can be used to harvest emails, as well as domains, sub domains, names, IP addresses, URLs etc.
 	2. [Hunter.io](https://hunter.io/email-finder)
 - Finding who works for a target using LinkedIn, etc.
@@ -40,7 +40,7 @@ Most attackers perform a lot of [OSINT](/cybersecurity/TTPs/recon/OSINT.md) rese
 
 Recon can also be done once you  have breached the target and have access to the system. After *persistence* has been established, further intelligence should be gathered which can be done quietly.
 
-Especially in [penetration testing](/cybersecurity/penetration-testing.md) the questions once you've breached a system which further recon can answer are:
+Especially in [penetration testing](cybersecurity/pen-testing/penetration-testing.md) the questions once you've breached a system which further recon can answer are:
 1. **What can I know** about this target?
 2. **What can I do** now that I've breached them?
 #### Examples of on-target recon techniques:
@@ -101,54 +101,42 @@ Once an attacker is in, they need to install something to establish persistence 
 Persistence is the first step once you're on a breached system. You need to be able to:
 1. establish a way back in (backdoor)
 2. avoid detection
-##### a backdoor...
-is a way for an attacker to establish a way back into the system while bypassing security measures. Can also be called an "access-point"
-##### a persistent-backdoor...
-allows an attacker to re-access a system they compromised in the past.
-2. Persistence can be achieved through:
-	1. installing a #web-shell on a web server
-		1. a malicious script written in web-languages like #PHP and #JavaScript which allows the attacker to maintain access.
-		2. usually web shells have simplistic file formatting w/ file extensions that are difficult to detect (.php, .asp, .jsp, etc.)
-			1. might be classified as "benign"
-	2. installing a backdoor on a victim's machine
-		1. #Meterpreter can be used to install a backdoor
-			1. a [metasploit](/cybersecurity/tools/metasploit.md) payload which gives the user an interactive shell which allows interaction with the victim's machine which can remotely execute malicious code
-	3. creating or modifying a Windows service
-		1. attacker creates or modifies a Windows service to execute malicious scripts/ payloads
-			1. can use #sc/exe and #Reg to modify service configurations
-			2. attacker can also #masquerade a payload by using service names which are known to be r/t the #OS or legitimate software.
-	4. Adding the entry to the #run-keys of the malicious payload to the #Registry or #startup-folder.
-		1. the payload will execute each time the user logs into the computer
-	5. #timestomping
-		1. a technique used by attackers to avoid forensic detection.
-			1. Also helps make the malware appear legitimate
-			2. allows the attacker to modify file #timestamps, including modify, access, create, and change times
-#### Command and Control/ #C2 
-1. Allows for remote control/ manipulation of the victim
-	1. compromised victim/ endpoint communicates to an external sever set up by the attacker
-2. #C2-beaconing
-3. The C2 infrastructure may be owned by the attacker *but also another compromised host*
-4. ex:
-	- #IRC (Internet Relay Chat)
-		- used to be common for C2 communication but is now easily detected
-	- #HTTP on #port-80 OR #HTTPS on #port-443
-		- much more common
-		- allows attacker to blend malicious traffic w/ legitimate traffic
-		- helps them evade #firewalls
-	- #DNS 
-		- Attacker purchase/ registers a DNS server
-		- infected machine makes DNS requests to the malicious DNS server
-		- also called #DNS-tunneling
-#### Exfiltration/ #exfiltration
-1. ex: collecting user credentials, privilege escalation, internal recon, lateral movement thru network, collecting sensitive data, deleting backup/ #shadow-copies 
-	1. a Shadow Copy is a Microsoft technology which creates backup copies, snapshots, etc of computer files and volumes
-2. overwrite of #corrupt data
+#### [Backdoor](/cybersecurity/TTPs/persistence/backdoor.md)
+A backdoor is a way for an attacker to *establish a way back into the system* while bypassing security measures. Can also be called an "access-point". It also allows them to return to exploited targets they compromised in the past.
+
+There are a few ways persistence can be achieved:
+##### Installing a [web shell](/cybersecurity/TTPs/exploitation/web-shell.md) on a server
+##### Installing a backdoor directly on the victim's machine
+An example of this technique is the use of [Metasploit's Meterpreter](/cybersecurity/tools/metasploit.md). Meterpreter is a *payload* which gives the user an interactive shell on *the target's network/device*.
+##### Creating or modifying a Windows service
+An attacker can create or modify Windows services to execute malicious scripts/ payloads. One way to do this is via *Registry keys* to modify service configurations.
+
+Attackers can also *masquerade a payload* by using service names which are known to be r/t the OS or legitimate software.
+
+They can also add entries to the *run keys* of the malicious payload to the Registry or startup folder. This will cause their payload to *execute each time the user logs into the computer*.
+##### Timestamping
+Timestamping is a a technique used by attackers to avoid forensic detection. It helps make malware appear legitimate and allows the attacker to modify file timestamps, including when the file was last modified, accessed, created, etc..
+#### Command and Control ([C2](/cybersecurity/TTPs/C2/C2.md))
+This phase describes how attackers maintain remote control/ manipulation of the victim. The compromised victim/ endpoint communicates to an external sever set up by the attacker.
+
+The C2 infrastructure may be owned by the attacker *but also by another compromised host*. Some examples of how C2 can be achieved include:
+##### IRC (Internet Relay Chat)
+This method used to be common for C2 communication but is now easily detected.
+##### [HTTP](/networking/protocols/HTTP.md) on `port 80` OR [HTTPS](/networking/protocols/HTTPS.md) on `port 443`
+This method is much more common. It allows attackers to blend malicious traffic w/ legitimate traffic, helping them evade [firewalls](/cybersecurity/defense/firewalls.md).
+##### [DNS](/networking/DNS/DNS.md)
+Attackers can use DNS to set up command and control by purchasing/ registering a *DNS nameserver*. Then, if they can make the victim's machine make DNS requests to the malicious server, they can use that connection to control the rest of their activity on the victim remotely.
+
+This is also known as [DNS Tunneling](/cybersecurity/TTPs/C2/DNS-tunneling.md).
+#### Actions on Objective:
+This part of the cyber kill chain covers all the actions an attacker might take on a victim device once they've exploited it and gained persistent access.
+
+This can include several things like collecting user credentials, [privilege escalation](/cybersecurity/TTPs/actions-on-objective/privesc.md), lateral movement thru the network, collecting and exfiltrating data, internal recon, deleting backups/ logs/ shadow-copies to *cover their tracks*, overwrite/ corrupt data, etc..
 
 > [!Resources]
 > - [TryHackMe: Cyber Kill Chain](https://tryhackme.com/room/cyberkillchainzmt)
 > - [Lockheed Martin: Cyber Kill Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
-> - [Technical Aspects of Cyber Kill Chain](https://arxiv.org/pdf/1606.03184.pdf) Yadav, Mallari (2016)
 
-White papers:
-https://arxiv.org/pdf/1606.03184.pdf
-https://www.lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Threat-Driven-Approach.pdf
+> [!White papers]
+> - [Technical Aspects of Cyber Kill Chain](https://arxiv.org/pdf/1606.03184.pdf) Yadav, Mallari (2016)
+> - [Threat-Driven Approach to Cyber Security](https://www.lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Threat-Driven-Approach.pdf) Muckin, Fitch (2019)

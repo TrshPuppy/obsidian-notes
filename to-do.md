@@ -9,7 +9,7 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] smbclient
 - [ ] msfconsole
 - [ ] telnet-command
-- [ ] whois
+- [x] whois
 - [ ] xfreerdp
 - [ ] ping
 - [ ] DBMS
@@ -42,6 +42,12 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] candy drop
 - [ ] url shorteners
 - [ ] LLMNR Poisoning
+- [x] subnetting
+- [x] firewalls
+- [x] DNS
+- [ ] TCP
+- [x] dig
+- [x] responder
 ## Inits which need notes:
 - [ ] CPU
 - [ ] CVEs
@@ -97,12 +103,25 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] feroxbuster
 - [ ] searchsploit
 - [ ] CVSS
-
+- [ ] OSINT
+- [ ] the harvester
+- [ ] penetration testing
+- [ ] C2
+- [ ] DNS poisoning
+- [ ] DNS tunneling
+- [ ] privesc
 
 ## Clean up
 - [ ] enumerating-SMB
 - [ ] spf-surveyor
 - [ ] akamai
-- [ ] cyber-kill-chain
+- [x] cyber-kill-chain
 - [ ] hashing
 - [ ] connect back
+- [x] firewalls
+- [x] DNS
+- [ ] TCP
+- [x] whois
+- [x] mDNS
+- [x] responder
+- [ ] UDP
