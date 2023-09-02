@@ -34,7 +34,7 @@ Remaingin 8 bits: 202 ==> the Host portion of the address
 ```
 By using CIDR notation, we can tell that this IP address can support 255 hosts (devices), meaning it can assign 254 unique IP addresses (`192.168.23.1` thru `192.168.23.255`).
 
-CIDR notation is also used in [subnetting](/nested-repos/PNPT-study-guide/practical-ethical-hacking/networking/subnetting.md) because it makes it easy to re-allocate network bits to the host, thus creating subnets under one IP Address.
+CIDR notation is also used in [subnetting](nested-repos/PNPT-study-guide/PEH/networking/subnetting.md) because it makes it easy to re-allocate network bits to the host, thus creating subnets under one IP Address.
 ## Namespace (public vs private)
 There are both private and public IP Address ranges. This practice has helped to prevent IP Address Exhaustion (since 4 octets can only support 4 billion unique addresses). By splitting the IP ranges into private vs public, separate private networks can make use of the same IP Address namespace without collision.
 

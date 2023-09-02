@@ -36,7 +36,7 @@ The class system extended the use of IPv4 but did not prevent its eventual exhau
 In 1993 Classful IP Addressing was replaced with Classless Inter-Domain Routing (CIDR).
 
 ## CIDR:
-CIDR uses VLSM (variable length [subnet](/nested-repos/PNPT-study-guide/practical-ethical-hacking/networking/subnetting.md) masking) to break an IP address into multiple sub-networks. It does this by stating the number of network bits in the IP address which are allocated to the network. Host bits in the original Classful IP address can be "given" to the network, which creates room for more networks (and reduces how many hosts each network can support).
+CIDR uses VLSM (variable length [subnet](nested-repos/PNPT-study-guide/PEH/networking/subnetting.md) masking) to break an IP address into multiple sub-networks. It does this by stating the number of network bits in the IP address which are allocated to the network. Host bits in the original Classful IP address can be "given" to the network, which creates room for more networks (and reduces how many hosts each network can support).
 
 ### CIDR Blocks:
 A CIDR block is a collection of addresses which *share the same network prefix and number of bits*. Larger blocks have a smaller suffix (`/8`) and contain more IP addresses.

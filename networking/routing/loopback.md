@@ -22,7 +22,7 @@ The VPN's network in this example is **`10.0.0.12/8`** with a gateway address of
 ![](/networking/networking-pics/IP-routing-steve.png)
 >	Drawing by Steve
 
-The computer knows how to route traffic because the OS *has its own [routing table](/networking/routing/routing-table)*. Each entry in the routing table is a destination address as well as its [subnet mask](/nested-repos/PNPT-study-guide/practical-ethical-hacking/networking/subnetting.md), gateway, next hop, etc..
+The computer knows how to route traffic because the OS *has its own [routing table](/networking/routing/routing-table)*. Each entry in the routing table is a destination address as well as its [subnet mask](nested-repos/PNPT-study-guide/PEH/networking/subnetting.md), gateway, next hop, etc..
 #### Browser requests a domain:
 If the web browser running on the computer requests `google.com`, the browser asks the IP stack. The IP stack needs to resolve the domain name (`google.com`) to an IP address, so it needs to find [DNS](/networking/DNS/DNS.md) server.
 

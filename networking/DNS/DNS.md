@@ -18,7 +18,7 @@ A subdomain is additional info added to the beginning of a website's domain name
 Ex: `hackthebox.com` vs `ctf.hackthebox.com`. -->`ctf` is the subdomain and it still under `hackthebox`'s domain.
 
 *Subdomains can have different IP addresses* and all of the subdomains of one domain can be handled by one server using *virtual host routing* where the server uses the *Host* header in the [HTTP](/networking/protocols/HTTP.md) request to determine which app is meant to handle which request.
-#### [Subdomain Enumeration](/nested-repos/PNPT-study-guide/practical-ethical-hacking/recon/hunting-subdomains.md):
+#### [Subdomain Enumeration](nested-repos/PNPT-study-guide/PEH/recon/hunting-subdomains.md):
 In order to find all the subdomains on a virtual host, tools like [Gobuster](cybersecurity/tools/scanning-enumeration/gobuster.md) can perform subdomain enumeration Using a wordlist of possible subdomains, Gobuster will send out an HTTP request with a host header (of the vhost) to all the addresses w/ the possible subdomains appended.
 ```
 Host: [word].thetoppers.htb
