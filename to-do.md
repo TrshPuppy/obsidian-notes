@@ -83,7 +83,7 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] directory enumeration
 - [ ] SSH
 - [ ] application layer
-- [ ] trans2
+- [x] trans2
 - [ ] buffer overflows
 - [ ] zero day
 - [ ] trojan
@@ -110,9 +110,10 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] DNS poisoning
 - [ ] DNS tunneling
 - [ ] privesc
+- [ ] domain controller
 
 ## Clean up
-- [ ] enumerating-SMB
+- [x] enumerating-SMB
 - [ ] spf-surveyor
 - [ ] akamai
 - [x] cyber-kill-chain

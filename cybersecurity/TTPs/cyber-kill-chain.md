@@ -29,9 +29,9 @@ There are some gray areas surrounding whether public info has been gathered lega
 
 Most attackers perform a lot of [OSINT](/cybersecurity/TTPs/recon/OSINT.md) research into their target in order to discover vulnerabilities, patterns, etc.. Vulnerabilities can be technological or personal/ human in nature (for example: finding a staff member of a target who's public info can be used against them in a [social-engineering](cybersecurity/TTPs/delivery/social-engineering.md) attack).
 #### Examples of OSINT techniques:
-- Looking at a target's website and finding what [technologies](/nested-repos/PNPT-study-guide/practical-ethical-hacking/recon/website-tech-recon.md) it uses.
+- Looking at a target's website and finding what [technologies](nested-repos/PNPT-study-guide/PEH/recon/website-tech-recon.md) it uses.
 - Looking up a target on google maps
-- *Passive* [email harvesting](/nested-repos/PNPT-study-guide/practical-ethical-hacking/recon/email-addresses.md): obtaining email addresses from public/ free services
+- *Passive* [email harvesting](nested-repos/PNPT-study-guide/PEH/recon/email-addresses.md): obtaining email addresses from public/ free services
 	1. [The Harvester](/cybersecurity/tools/recon/the-harvester.md) tool which can be used to harvest emails, as well as domains, sub domains, names, IP addresses, URLs etc.
 	2. [Hunter.io](https://hunter.io/email-finder)
 - Finding who works for a target using LinkedIn, etc.
@@ -46,7 +46,7 @@ Especially in [penetration testing](cybersecurity/pen-testing/penetration-testin
 #### Examples of on-target recon techniques:
 - *Groups/Users*: who are you upon entrance? What other groups and users exist? What permissions do they have?
 - *Globbing the filesystem*: make a list/map of everything on the system. Get file names, paths, permissions. Find sensitive files which you may want to exfiltrate.
-- *Network mapping*: what IP addresses are local? What is the [subnet](/nested-repos/PNPT-study-guide/practical-ethical-hacking/networking/subnetting.md)? What does the [routing table](/networking/routing/routing-table.md) have in it?
+- *Network mapping*: what IP addresses are local? What is the [subnet](nested-repos/PNPT-study-guide/PEH/networking/subnetting.md)? What does the [routing table](/networking/routing/routing-table.md) have in it?
 - *OS*: what is the CPU architecture? How much memory/RAM is there?
 - etc.
 ## Weaponization:
