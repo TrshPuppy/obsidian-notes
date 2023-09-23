@@ -98,17 +98,32 @@ Details about the vuln have been published but not verified.
 #### Unknown
 There may be reports and/or rumors that the vuln exists, but the validity of the reports is questionable and not consistent.
 ## Environmental
-This metric judges severity based on the *importance* of the effected asset to the organization. The importance is measured based on confidentiality, integrity, and availability.
+This metric modifies the Base metric by taking into account how the base metric changes r/t environmental factors of an enterprise. It's made up of Modified Base Metrics and Security Requirements:
 ### Modified Base Metrics
-This metric allows the original Base metrics to be modified *based on the user's specific environment*.
-### Confidentiality Requirement
-### Integrity Requirement
-### Availability Requirement
+This metric allows the original Base metrics to be modified *based on the user's specific environment*. It's scored individually by each enterprise wishing to re-assess the severity of a CVE in their own environment.
 
+For example, if an enterprise has [firewalls](/cybersecurity/defense/firewalls.md) up as mitigation, then their base scare can be modified to reflect a lower severity for their environment.
+### Security Requirements
+This metric is used to determining the criticality of a business's asset. The criticality is measured using the *CIA triad* which is made up of confidentiality, integrity, and availability.
 
-
+Each requirement is assigned 1 of 4 values to measure their individual severity. The more important and/ or impactful the loss of each requirement is, the more severe the CVE is rated for that organization.
+- Not Defined (see above)
+- *High:* the loss of confidentiality, integrity, and/ or availability would have catastrophic impact on the organization
+- Medium: the loss of either of these would have a serious adverse effect on the org.
+- Low: loss of either of these would have a limited and/ or isolated impact on the org.
+#### Confidentiality Requirement
+Confidentiality is the ability to hide sensitive information from users who aren't authorized to access it.
+#### Integrity Requirement
+This describes the ability of the organization to protect the information from being changed/ modified from its original state.
+#### Availability Requirement
+This describes the availability of the information to authorized users as they need it.
+### Environmental Metric Impact
+In this example, a CVE has been given a CVSS of 9.9 (after the Base and Temporal metrics have been graded). With aggressive environmental controls and mitigations, the Environmental Metric is scored as a 3.2, bringing the overall CVSS *down from 9.9 to 3.2*.
+![](cybersecurity/cybersecurity-pics/CVSS-2.png)
+> [Balbix](https://www.balbix.com/insights/environmental-cvss-scores/)
 
 > [!Resources]
 > - [NIST: Vulnerability Metrics](https://nvd.nist.gov/vuln-metrics/cvss)
 > - [First: CVSS v3.1 User Guide](https://www.first.org/cvss/user-guide)
 > - [Balbix: Temporal CVSS Scored](https://www.balbix.com/insights/temporal-cvss-scores/)
+> - [Balbix: Environmental CVSS Scores](https://www.balbix.com/insights/environmental-cvss-scores/)
