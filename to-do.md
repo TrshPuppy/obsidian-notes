@@ -102,7 +102,7 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] dss
 - [ ] feroxbuster
 - [ ] searchsploit
-- [ ] CVSS
+- [x] CVSS
 - [ ] OSINT
 - [ ] the harvester
 - [ ] penetration testing
