@@ -29,7 +29,8 @@ Ports w/ findings:
 		SMB version 2.2.1a
 		ntlmv2
 	445: 
-	22: OpenSSH
+	22: SSH
+		OpenSSH 2.9p2 
 ```
 ## Starting w/ `mod_ssl`
 The version we've found using nmap is `2.8.4`. Using that, we can search for vulnerabilities/ exploits r/t this exact version. There are a few resources we can use to do this.
@@ -50,3 +51,43 @@ Shellcodes: No Results
 Using either the online database, or `searchsploit`, we find [`OpenFuck`](/cybersecurity/vulnerabilities/openfuck.md) which is a remote [buffer overflow](/cybersecurity/TTPs/exploitation/buffer-overflow.md). From the online database, you can review the code of the exploit itself:
 ![](nested-repos/PNPT-study-guide/PNPT-pics/researching-vulns-1.png)
 > [Exploit DB: OpenFuckV2.c](https://www.exploit-db.com/exploits/764)
+
+**You can also just Google for `mod_ssl 2.8.4 exploit` / `vulnerability` and find similar results**
+### Notetaking:
+Keep notes on the vulnerabilities you find so you they're easier to reference when you write your [report](/cybersecurity/pen-testing/report-writing.md).
+#### Example:
+`vulnerabilities.txt`
+```bash
+80/443: Potentially vulnerable to OpenFuck (https://www.exploit-db.com/exploits/764)
+```
+## Determining Severity:
+Now let's search for vulnerabilities and exploits r/t `Apache v1.3.20` (the [HTTP](/networking/protocols/HTTP.md) server running on `port 80`).
+### [CVE Details](https://cvedetails.com)
+CVE Details is another source we can use to research our vulnerabilities. If we search `apache 1.3.20` we can find multiple [CVEs](/cybersecurity/literature/CVEs.md) r/t the server we found.
+
+Each CVE is *rated based on severity* (1-10) using the [CVSS](/cybersecurity/literature/CVSS.md) (Common Vulnerability Scoring System). We want to find one for our server version which has a high severity.
+### Vulnerability Scoring (CVSS):
+The CVSS for a CVE is determined using three metrics:
+#### 1. Base
+A base score given based on some sub-metrics. These submetrics determine  either the *exploitability or impact* of the vulnerability. The Base score will changed based on the Temporal and Environment metrics.
+#### 2. Temporal
+#### 3. Environment
+
+
+
+> [!Resources]
+> - [Exploit DB: OpenFuckV2.c](https://www.exploit-db.com/exploits/764)
+> - [CVE Details](https://cvedetails.com)
+
+> [!My previous notes (linked in text)]
+> - [searchsploit](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/tools/reverse-engineering/searchsploit.md)
+> - [buffer overflow](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/TTPs/exploitation/buffer-overflow.md)
+> - [report writing](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/pen-testing/report-writing.md)
+> - [HTTP](https://github.com/TrshPuppy/obsidian-notes/tree/main/networking/protocols/HTTP.md)
+> - [CVEs](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/literature/CVEs.md)
+> - [CVSS](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/literature/CVSS.md) 
+> - https://github.com/TrshPuppy/obsidian-notes/tree/main
+> - https://github.com/TrshPuppy/obsidian-notes/tree/main
+> - https://github.com/TrshPuppy/obsidian-notes/tree/main
+
+
