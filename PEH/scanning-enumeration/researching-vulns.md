@@ -100,16 +100,15 @@ With these metrics listed, the `trans2open` exploit looks like it may be the mos
 ### [trans2open](/cybersecurity/vulnerabilities/trans2.md)/ CVE-2003-0201
 Researching more on this specific vulnerability can tell us more about how successful it could be. According to NIST, this CVE was last modified in 2018, using CVSS v2 which gave it a score of 10.0. The Base Score breakdown is:
 ![](nested-repos/PNPT-study-guide/PNPT-pics/researching-vulns-3.png)
+![](/PNPT-study-guide/PNPT-pics/researching-vulns-3.png)
 > [NVD](https://nvd.nist.gov/vuln-metrics/cvss/v2-calculator?name=CVE-2003-0201&vector=(AV:N/AC:L/Au:N/C:C/I:C/A:C)&version=2.0&source=NIST)
 
 Looking at [CVE Details](https://www.cvedetails.com/epss/CVE-2003-0201/epss-score-history.html) we can see that the [EPSS](/cybersecurity/literature/EPSS.md) (Exploit Prediction Scoring System) for this CVE is *96.89%* which reflects the likelihood of trans2open being used in the next 30 days. This score was re-calculated *in March of 2023*, lending to the temporal severity.
 ![](nested-repos/PNPT-study-guide/PNPT-pics/researching-vulns-2.png)
+![](/PNPT-study-guide/PNPT-pics/researching-vulns-3.png)
 > [CVE Details](https://www.cvedetails.com/epss/CVE-2003-0201/epss-score-history.html)
 
 Thinking back on how the CVSS is calculated, we know that increased activity and availability of the exploit code *increases the overall severity* of the CVE. CVE Details also tells us that there are a few [Metasploit](/cybersecurity/tools/metasploit.md) modules which make this vulnerability even easier to exploit.
-
-
-
 
 > [!Resources]
 > - [Exploit DB: OpenFuckV2.c](https://www.exploit-db.com/exploits/764)
@@ -119,7 +118,6 @@ Thinking back on how the CVSS is calculated, we know that increased activity and
 > - [CVE Details: CVE-2021-28041](https://www.cvedetails.com/cve/CVE-2021-28041)
 > - [CVE Details: CVE-2003-0201](https://www.cvedetails.com/cve/CVE-2003-0201/)
 > - [NVD: CVSS calculator for CVE-2003-0201](https://nvd.nist.gov/vuln-metrics/cvss/v2-calculator?name=CVE-2003-0201&vector=(AV:N/AC:L/Au:N/C:C/I:C/A:C)&version=2.0&source=NIST)
-> - 
 
 > [!My previous notes (linked in text)]
 > - [searchsploit](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/tools/reverse-engineering/searchsploit.md)
@@ -131,8 +129,6 @@ Thinking back on how the CVSS is calculated, we know that increased activity and
 > - [trans2open](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/vulnerabilities/trans2.md)
 > - [Metasploit](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/tools/metasploit.md)
 > - [EPSS](https://github.com/TrshPuppy/obsidian-notes/tree/main/cybersecurity/literature/EPSS.md) 
-> - https://github.com/TrshPuppy/obsidian-notes/tree/main
-> - https://github.com/TrshPuppy/obsidian-notes/tree/main
-> - https://github.com/TrshPuppy/obsidian-notes/tree/main
+
 
 
