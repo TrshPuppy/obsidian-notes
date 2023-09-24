@@ -111,6 +111,7 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] DNS tunneling
 - [ ] privesc
 - [ ] domain controller
+- [ ] EPSS
 
 ## Clean up
 - [x] enumerating-SMB
