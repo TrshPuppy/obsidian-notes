@@ -50,6 +50,7 @@ Shellcodes: No Results
 ```
 Using either the online database, or `searchsploit`, we find [`OpenFuck`](/cybersecurity/vulnerabilities/openfuck.md) which is a remote [buffer overflow](/cybersecurity/TTPs/exploitation/buffer-overflow.md). From the online database, you can review the code of the exploit itself:
 ![](nested-repos/PNPT-study-guide/PNPT-pics/researching-vulns-1.png)
+![](/PNPT-study-guide/PNPT-pics/researching-vulns-1.png)
 > [Exploit DB: OpenFuckV2.c](https://www.exploit-db.com/exploits/764)
 
 **You can also just Google for `mod_ssl 2.8.4 exploit` / `vulnerability` and find similar results**
