@@ -1,7 +1,6 @@
 
 # Linux File System Hierarchy
 Everything in Linux is a file.
-
 ## `tree`
 `tree` is a command which can show you the file hierarchy relative to your current directory:
 ```bash
@@ -25,31 +24,24 @@ trshpuppy@trshpile:/var/log$ tree
 ...
 ```
 Can also use `tree ..` to list the parent directory tree.
-
 ## Special Files:
 Every file has a file handle which is a number. Every file handle has a number.
-
 ### stdin (`fh 0`):
 Input from the console/keyboard, or from a redirect to stdin. Can redirect data to `stdin` and have it be processed through a pipe.
-
 ### stdout (`fh 1`):
 Output to the user.
-
 ### stderr (`fh 2`):
 Error output to the user.
-
 ### *pipe (`|`)* 
 ```bash
 firstcommand | seccondcommand
 ```
 Allows you to "pipe" anything from the `stdout` of the first command to the `stdin` of the second command. The command before the pipe *has to complete* before output can be piped to the second command (which *can* take up a lot of memory).
-
 ### Example:
 ```bash
 command > file.txt # > only captures stdout of the command
 command &> file.txt # &> captures stdout AND stderr of the command
 ```
-
 ## Parsing Logs:
 ### `cat`
 Means 'concatenate.' Can take 2 files as arguments and concatenate them:
@@ -76,7 +68,6 @@ Means 'concatenate.' Can take 2 files as arguments and concatenate them:
  71263548-dd90-b3b3-dklfjkdjl
  78361783-dd89-b4b4-dkfdhdjkh 
  ```
-
 ### `grep`:
 grep can be used to search through logs by having the concatenated log piped to grep and/or passing the filename to grep:
 ```bash
@@ -105,14 +96,12 @@ egrep '[0-9]{4}' dpkg.log
 ```
 
 `grep --color <parameter>` to highlight results or `grep --color=auto`
-
-### Number of lines/ words:
+### `wc` Number of lines/ words:
 To see how many lines there are in a file, cat the file and pipe with `wc -l`, (*always includes one extra line in the count*).
 - `wc` stands for word count
 - `l` stands for lines
 
 `wc -c` will tell you how many characters there are *including new line (\n) characters.*
-
 ### `cut`
 Piping a log output (concatenated) to cut can help you "cut" the file into pieces based on its parts.
 

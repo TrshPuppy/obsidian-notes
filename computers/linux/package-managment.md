@@ -31,13 +31,10 @@ deb http://eu-west-1.ec2.archive.ubuntu.com/ubuntu/ focal-updates main restricte
 # deb-src http://eu-west-1.ec2.archive.ubuntu.com/ubuntu/ focal-updates main restricted
 ...
 ```
-
 ### Adding repos:
 `add-apt-repository` lets you add provider repos to your `sources.list`. Adding  repos to apt means that whenever we update our system the repos we add *are checked for updates*.
-
 #### Software Integrity:
 To help ensure the integrity of software installed, apt uses *GPG (Gnu Privacy Guard) keys*. If the keys of the software do not match the public key provided by the software developers, then the software will not be downloaded.
-
 ##### Example with Sublime Text:
 1. Download the GPG key for the developers of Sublime Text:
 ```shell
@@ -58,7 +55,6 @@ deb https://download.sublimetext.com/ apt/stable
 
 3. Update apt so it recognizes the new entry with `apt update`
 4. Install the software we have trusted and added to apt with `apt install sublime-text`
-
 ### Removing Repos:
 You can remove  repos by either using this command:
 ```shell
@@ -73,5 +69,5 @@ apt remove [software name]
 apt remove sublime-text
 ```
 
-> [!Links]
+> [!Resources]
 > - [THM Linux Fundamentals](https://tryhackme.com/room/linuxfundamentalspart3#)

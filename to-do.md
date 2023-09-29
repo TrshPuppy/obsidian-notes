@@ -20,9 +20,9 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] react
 - [ ] eternalblue
 - [ ] cli-cheat sheet (linnux)
-- [ ] filesystem hierarchy
-- [ ] linux processes
-- [ ] package management
+- [x] filesystem hierarchy
+- [x] linux processes
+- [x] package management
 - [ ] windows
 	- [ ] enumeration
 	- [ ] powershell
@@ -48,6 +48,7 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] TCP
 - [x] dig
 - [x] responder
+- [x] ansible
 ## Inits which need notes:
 - [ ] CPU
 - [ ] CVEs
@@ -112,6 +113,7 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] privesc
 - [ ] domain controller
 - [ ] EPSS
+- [ ] gdb
 
 ## Clean up
 - [x] enumerating-SMB

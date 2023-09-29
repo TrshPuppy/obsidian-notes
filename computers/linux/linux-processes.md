@@ -1,25 +1,23 @@
 
 # Linux Processes
 The programs running on the machine. Managed by the kernel which gives each process a PID. The PID *increments for the order of which the process was started* (60th process PID = 60).
-
 ## How do Processes Start:
 ### Namespaces:
 Namespaces are how the operating system splits up available resources and isolates them. Processes within the same namespace will have access to a delegated amount of computing power which is small compared to what is available overall.
 
 Namespaces are *more secure* because they isolate processes from one another. Only processes w/i the same namespace can "see" each other.
-
+### init
+`init` is `pid 1` in linux and refers to the *kernel*. Everything coming after `init` is *a child process of `init`*. To change values for the `init` process/ `pid 1` you can use [`gdb`](/computers/linux/gdb.md) (GNU Project Debugger)
 ### systemd
 `systemd` is a service manager for Linux OS's. When it is started on boot as the first process (PID 1) it acts as an *initialization system* which brings up and maintains userspace services.
 
 `systemd` is the system's init process and sits in between the operating system and the user.
 
 Any program that we want to start on boot will likely start as a *child process* of `systemd`, which means `systemd` controls it. The child processes of `systemd` will share the same resources as it, but will still run as their own process.
-
 #### Configuration:
 When `systemd` is ran as a *system instance* it interprets the configuration file `system.conf` and files in `system.conf.d` directories.
 
 When ran as a *user instance*, `systemd` interprets the configuration file `user.conf` and the files in `user.conf.d`.
-
 #### Units:
 `systemd` provides a dependency system between 11 different entities called *"units"*. These units encapsulate various objects which are necessary for system boot-up and maintenance.
 
@@ -35,7 +33,6 @@ Units can be active, inactive, activating (b/w inactive and active), deactivatin
 5. it has been pinned into memory programmatically via a *"D-Bus call."*
 
 *Currently loaded units are invisible to the client* (can use `systemctl list-units --all` to list all currently-loaded units).
-
 ##### List of units:
 Units are named for their configuration files. Some have special semantics (see `systemd.special(7)`):
 1. Service Units: start and control daemons and processes they consist of (`systemd.service(5)`)
@@ -49,10 +46,8 @@ Units are named for their configuration files. Some have special semantics (see 
 9. Path units: activates other services when file system objects are changed or modified (`systemd.path(5)`)
 10. Slice units: group units which manage system processes in hierarchical tree (`systemd.slice(5)`)
 11. Scope units: manage foreign processes instead of starting them as well (`systemd.scope(5)`)
-
 ### Starting processes on boot:
-Processes told to start on boot are usually critical and configured by an administrator. 
-
+Processes told to start on boot are usually critical and configured by an administrator.
 ##### systemctl
 `systemctl` is a command/ service which allows you to interact with the `systemd` process/ daemon.
 ```bash
@@ -66,7 +61,6 @@ There are four options which can be given to `systemctl`:
 4. disable: disables one or more units and removes all symlinks to the unit files from the unit configuration directory.
 
 To [start a process on boot](https://tryhackme.com/room/linuxfundamentalspart3#) use: `systemctl enable <target service>`.
-
 ## Viewing Processes:
 The `ps` command will list all of the running processes on the current user's session, plus additional information like the status code, usage time, CPU usage, and the name or the program or command being executed.
 
@@ -116,10 +110,8 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   1634.3 avail Mem
      15 root      rt   0       0      0      0 S   0.0   0.0   0:00.02 migrati+ 
      ...
 ```
-
 ## Managing Processes:
 You can send signals to terminate processes which change based on how cleanly you want the process to be killed.
-
 ### kill
 the `kill` command takes the PID as an arg and kills a process outright. The kill command can also be given #signals to decide how the process is killed:
 - `SIGTERM`: (-15) will give the process the chance to handle the signal internally (or ignore it)
@@ -127,7 +119,6 @@ the `kill` command takes the PID as an arg and kills a process outright. The kil
 - `SIGKILL`:(-9) kill the process outright
 - `SIGINT`: (`^C`) In the terminal, when you stop a command by hitting `Ctrl C` you send a `SIGINT` signal to the command.
 - `SIGSTP`:(`^Z`) Using `Ctrl Z` in the terminal will send a suspend signal, causing the currently running process to enter a state of suspension until an `fg` (foreground) command brings it back to the foreground.
-
 ### Exit Codes:
 The exit code of the last terminated process can be accessed by typing `echo $?`, the variable which the exit code is saved in immediately after termination.
 ```bash
@@ -143,10 +134,8 @@ trshpuppy@trshpile:/etc$ echo $?
 [1]+  Terminated              sleep 30
 
 ```
-
 ### Backgrounding and Foregrounding
 Processes can be run in either of two states: the background or the foreground.
-
 #### Backgrounding:
 ```shell
 # echo defaults to foreground:
@@ -162,7 +151,6 @@ $ hello
 # when ran in the background unsing '&' we are given the PID instead
 ```
 *Using `Ctrl Z` also backgrounds and suspends a process* (`SIGSTP`)
-
 #### Foregrounding:
 When a process is backgrounded, use `fg` to bring it back to the foreground so the output of the script is returned in the terminal.
 ```shell
@@ -180,12 +168,12 @@ fg 1286
 fg python3
 python3 -m http.server
 ```
-
 ## Process Automation
 ### cron
 `cron` is a process which is started on boot and can be interacted with via `crontab`. #Crontab is responsible for facilitating and managing *cron jobs*.
 
 A crontab is a special file with *formatting recognized by the `cron` process*. Crontabs require 6 specific values:
+
 |value|description|
 |-|-|
 |MIN|What minute to execute at|
@@ -194,7 +182,7 @@ A crontab is a special file with *formatting recognized by the `cron` process*. 
 |MON|What month of the year to execute at|
 |DOW|What day of the week...|
 |CMD|The actual command to execute|
-
+grep through all cron jobs `/var/log/cron.log`
 #### Example: backing up files:
 If you wanted to backup files in `Documents` q12 hours:
 ```shell
