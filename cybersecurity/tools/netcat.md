@@ -1,5 +1,6 @@
 # Netcat Command Line Utility:
-Used to be for 
+Placeholder:
+![](/nested-repos/PNPT-study-guide/PEH/exploit-basics/shells.md)
 
 `netcat -l`: listen
 over ssh?

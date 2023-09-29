@@ -114,6 +114,7 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] domain controller
 - [ ] EPSS
 - [ ] gdb
+- [ ] rev-shells
 
 ## Clean up
 - [x] enumerating-SMB
@@ -129,3 +130,4 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [x] mDNS
 - [x] responder
 - [ ] UDP
+- [ ] netcat
