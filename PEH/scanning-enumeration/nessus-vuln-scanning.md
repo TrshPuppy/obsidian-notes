@@ -50,7 +50,7 @@ By clicking on the currently scanning scan, you can see what vulnerabilities are
 Once the scan has finished, we can go through the findings starting w/ the most severe. Based on how many results there are, we can tell Kioptrix is super vulnerable
 ### Example: OpenSSL Unsupported
 Clicking on this finding we can see more details:
-![](nested-repos/PNPT-study-guide/PNPT-pics/nessus-4.png)
+![](/nested-repos/PNPT-study-guide/PNPT-pics/nessus-4.png)
 ![](/PNPT-study-guide/PNPT-pics/nessus-4.png)
 At the bottom we can see the installed version is out of date. This should be added to our findings.
 ### Reporting Nessus Findings
