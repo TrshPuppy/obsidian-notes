@@ -115,6 +115,7 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] EPSS
 - [ ] gdb
 - [ ] rev-shells
+- [ ] denial of service
 
 ## Clean up
 - [x] enumerating-SMB
