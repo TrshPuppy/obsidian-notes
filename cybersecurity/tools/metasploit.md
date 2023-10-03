@@ -40,6 +40,7 @@ In msfconsole, under ``payloads`` there are 3 different directories:
 - Stand-alone tools which help w/ vulnerability finding/ research/ assessment and penetration testing
 	- ex: #mfsvenom
 	- #pattern_create, and #pattern_offset
-
+## Use
+![gaining-root](nested-repos/PNPT-study-guide/PEH/exploit-basics/gaining-root.md#Running%20Metasploit)
 > [!Resources]
 > - [Metasploit](https://www.metasploit.com)

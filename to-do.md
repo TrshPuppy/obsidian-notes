@@ -116,6 +116,7 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] gdb
 - [ ] rev-shells
 - [ ] denial of service
+- [ ] gcc
 
 ## Clean up
 - [x] enumerating-SMB

@@ -269,7 +269,7 @@ Besides just searching for things like `vercel porfolio sites` or `vercel showca
 
 Google Dorking is essentially searching for intelligence/ info on the web using specifically crafted strings called 'google dorks.'
 
-The [Google Hacking Database](https://www.exploit-db.com/google-hacking-database) is a huge database organized by [Exploit DB](/cybersecurity/tools/reverse-engineering/exploit-db) of google dorks people have used with success to find specific services, etc..
+The [Google Hacking Database](https://www.exploit-db.com/google-hacking-database) is a huge database organized by [Exploit DB](cybersecurity/tools/exploitation/exploit-db.md) of google dorks people have used with success to find specific services, etc..
 
 Even though google dorking can be very useful, it is a known TTP, so webmasters avoid and remove strings which are dorkable in order to reduce discoverability. 
 
