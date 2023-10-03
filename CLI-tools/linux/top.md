@@ -50,11 +50,14 @@ top - 09:48:15 up 4 days,  1:18,  2 users,  load average: 0.28, 0.24, 0.19
 ```
 Can use to troubleshoot issue w/ processes. Can also use to see if fixing something has helped (reflected in decreasing load averages since fix).
 ### CPU Processors
-hitting the 1 key: shows u the processor cores (CPU)
-	- if you see `wa` is > 0, then there are processes waiting on the core
-- `s` = sleeping `r` = running `i`= idle
+Hitting the 1 key shows you the processor cores (CPU) being used. If `wa` is > 0, then there are processes waiting on the core.
+### Processes
+For each process listed:
+- `S` = sleeping 
+- `R` = running
+- `I`= idle
+### `buff/cache` 
+Linux uses free space as buffers/cache: this might be large.
 
-	- `buff/cache` linux uses free space as buffers/cache: might be large
-- `Swap` if 0 used, thats okay (if it is full, and you need it,*u get an oome*)
 > [!Resources]
 > - `man top`

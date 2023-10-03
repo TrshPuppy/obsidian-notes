@@ -118,6 +118,8 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] denial of service
 - [ ] gcc
 - [ ] proxy
+- [ ] html
+- [ ] transport layer
 
 ## Clean up
 - [x] enumerating-SMB

@@ -28,7 +28,7 @@ DESCRIPTION
 #### `curl -H "header: string"` Setting custom headers:
 **HTTP, IMAP, & SMTP:** The `-H` flag will allow you to set custom headers *in addition to the ones sent by default* (however, if you set a header which happens to match one of the defaults, your value will be sent instead of the default's).
 #### `curl -X` Setting the request method
-**HTTP only:** With the `-X` flag you can set the [request method](/www/request-methods.md) type ()
+**HTTP only:** With the `-X` flag you can set the [request method](www/HTTP-request.md) type ()
 With
 
 > [!Resources]
