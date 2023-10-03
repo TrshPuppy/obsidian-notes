@@ -6,7 +6,7 @@ It's useful to have access to these large data dumps because the usernames/ pass
 Gather credentials connected to a target and create a collection of interwoven info which you can use to craft an exploit against them. 
 
 For example, finding a hashed password and using it in susequent searches can give you additional results and connections to the target.
-## Breach Parse:
+## [Breach Parse](cybersecurity/tools/recon/breach-parse.md):
 A [tool](https://github.com/hmaverickadams/breach-parse) written by Heath Adams which can search through large collections of breached data.
 ### Usage:
 ```bash
