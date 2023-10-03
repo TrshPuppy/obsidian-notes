@@ -34,10 +34,10 @@ Ports w/ findings:
 ```
 ## Finding Pre-existing Exploits & CVEs
 Starting w/ `mod_ssl`, the version we've found using nmap is `2.8.4`. Using that, we can search for vulnerabilities/ exploits r/t this exact version. There are a few resources we can use to do this.
-### [Exploit DB](/cybersecurity/tools/reverse-engineering/exploit-db.md):
+### [Exploit DB](cybersecurity/tools/exploitation/exploit-db.md):
 Exploit DB is a database of malware. The malware can be perused [online](https://www.exploit-db.com/exploits/764) or downloaded into a VM and looked through/ used that way. *When downloading, malware should be downloaded into an isolated environment* b/c it will carry out its designed actions when executed.
 
-Exploit DB can also be searched via the command line using the [searchsploit](/cybersecurity/tools/reverse-engineering/searchsploit.md) command.
+Exploit DB can also be searched via the command line using the [searchsploit](cybersecurity/tools/exploitation/searchsploit.md) command.
 ```bash
 searchsploit mod_ssl 2.8.4
 Exploit Title                                               |  Path
