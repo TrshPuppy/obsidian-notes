@@ -3,7 +3,6 @@
 The `ip` and `ifconfig` commands are similar. They list and configure current network interfaces on the device. `ifconfig` is the older of the two and may not be present on all machines.
 
 Using `ip a` will list both wireless *and* hard-wired/ ethernet connections, while `ifconfig` will only list ethernet. Another command you can use to list wireless connections is `iwconfig`.
-
 ## [ARP](/networking/protocols/ARP.md) (Address Resolution Protocol)
 Address Resolution Protocol is a [layer 3](/networking/OSI/network-layer.md) protocol which helps a host resolve an IP address into the MAC address of the associated device. 
 
@@ -18,7 +17,6 @@ Currently scanning: Finished!   |   Screen View: Unique Hosts
 --------------------------------------------------------------------------
  10.0.2.2        52:54:00:12:35:02      1      60  Unknown vendor          10.0.2.3        52:54:00:12:35:03      1      60  Unknown vendor          10.0.2.4        52:54:00:12:35:04      1      60  Unknown vendor 
 ```
-
 ## [Routing Tables](/networking/routing/routing-tables.md)
 When you're on a network, it's good to know the routing tables. The routing tables of a network can tell you about the topology of the network. 
 
@@ -30,7 +28,6 @@ Both of the following commands will show you the routing table of the network yo
 - `netstat -rn` command
 
 Networks can also be *added to a routing table* allowing you to gain access to it.
-
 ## [ICMP (Internet Control Message Protocol)](/networking/protocols/ICMP.md)
 A layer 3 protocol used between IP addressable devices to check the status of a host/ device. 
 
@@ -42,7 +39,6 @@ ping -c 1 69.69.69.69
 PING 69.69.69.69 (69.69.69.69) 56(84) bytes of data.
 64 bytes from 69.69.69.69: icmp_seq=1 ttl=64 time=0.016 ms
 ```
-
 `ping` will also give you the time in milliseconds it took to get a response from the target, as well as how many bytes were received in the target's response.
 
 > [!My previous notes (linked in text)]
