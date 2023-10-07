@@ -170,7 +170,7 @@ python3 -m http.server
 ```
 ## Process Automation
 ### cron
-`cron` is a process which is started on boot and can be interacted with via `crontab`. #Crontab is responsible for facilitating and managing *cron jobs*.
+`cron` is a process which is started on boot and can be interacted with via `crontab`. [crontab](/CLI-tools/linux/crontab.md) is responsible for facilitating and managing *cron jobs*.
 
 A crontab is a special file with *formatting recognized by the `cron` process*. Crontabs require 6 specific values:
 
@@ -190,10 +190,14 @@ If you wanted to backup files in `Documents` q12 hours:
 ```
 
 
-> [!links]
-> [THM Linux Fundamentals pt. 3](https://tryhackme.com/room/linuxfundamentalspart3)
-> [Linux Signals](https://www.howtogeek.com/devops/linux-signals-hacks-definition-and-more/)
-> [Crontab generator tool](https://crontab-generator.org/)
+> [!Resouces]
+> - [THM Linux Fundamentals pt. 3](https://tryhackme.com/room/linuxfundamentalspart3)
+> - [Linux Signals](https://www.howtogeek.com/devops/linux-signals-hacks-definition-and-more/)
+> - [Crontab generator tool](https://crontab-generator.org/)
+
+> [!Related]
+> - Command line: [psypy](cybersecurity/tools/actions-on-objective/psypy.md)
+
 
 
 

@@ -1,31 +1,26 @@
----
-aliases: [FTP, file-transfer-protocol, ftp]
----
+
 # File Transfer Protocol
-#client/server protocol used to communicate and transfer files using [[TCP]] between computers on a network.
-- users who wish to use an FTP connection need to have permission
-	- permission is gained by providing credentials to the #FTP-server
-		- some *public* #FTP-server s don't require credentials which is called #anonymous-ftp
-- Two distinct channels:
-	1. #command-channel : FTP connection initiates the instruction and response
-	2. #data-channel: where distribution of data happens
+A client-server protocol used to communicate and transfer files using [[TCP]] between computers on a network. Users who wish to use an FTP connection need to have permission which is gained by providing credentials to the server.
 
-#anonymous-ftp :
-- sites can enable #anonymous-ftp so files are available to the public.
-- users can access the files w/o a password and with the username ``anonymous``
-- *Access is limited to copying files* anonymous ftp does not allow the user to navigate through directories
+Some *public* FTP servers *don't require credentials* which is called and allow users to login via the `anonymous` user. This is called *anonymous FTP*.
+## Channels
+There are two distinct channels:
+### Command Channel:
+FTP connection initiates the instruction and response.
+### Data Channel:
+where distribution of data happens b/w peers.
+## Anonymous FTP
+Sites can enable anonymous FTP so files are available to the public. Users can access the files w/o a password and with the username ``anonymous``. *Access is limited to copying files* and anonymous ftp *does not allow the user to navigate through directories*.
+## Secure FTP or SSH FTP
+This is an extension of [SSH](/networking/protocols/SSH.md).
 
-#SFTP: Secure FTP or SSH FTP:
-- Extension of [SSH](/networking/protocols/SSH.md)
+> [!Related]
+> - #port-21
+> - [FTP command](CLI-tools/linux/ftp-command.md)
 
->[!related]
-> #port-21
- [[ftp-command]]
+> [!Resources]
+> - [Hostinger: what is FTP](https://www.hostinger.com/tutorials/what-is-ftp)
+> - [Geeks for Geeks: FTP](https://www.geeksforgeeks.org/file-transfer-protocol-ftp/)
+> - [Wikipedia: FTP](https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol)
 
->[!links]
->https://www.hostinger.com/tutorials/what-is-ftp
->
->https://www.geeksforgeeks.org/file-transfer-protocol-ftp/
->
->https://en.wikipedia.org/wiki/SSH_File_Transfer_Protocol
 

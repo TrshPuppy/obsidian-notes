@@ -2,7 +2,7 @@
 # SMB: Server Message Block
 SMB is an [application-layer](/networking/OSI/application-layer.md) server-client based architecture used on primarily Windows computers. It is a File Sharing Protocol which allows devices on the same network (and devices connected to the network remotely) to share files and printing services. Using SMB, files can be accessed, created, uploaded and downloaded, read and written to.
 
-Ports 445 and 139 are reserved for SMB and use the [TCP](/networking/protocols/TCP.md) network protocol to “talk” to other computers over the internet/ network. In order for two devices/client to use SMB, they have to *connect to a supporting server using [NetBIOS](/networking/protocols/NetBIOS.md)* over TCP/IP (also referred to as *NBT*). Resources hosted on the SMB server are referred to as "shares" and are normally file directories.
+*Ports 445 and 139* are reserved for SMB and use the [TCP](/networking/protocols/TCP.md) network protocol to “talk” to other computers over the internet/ network. In order for two devices/client to use SMB, they have to *connect to a supporting server using [NetBIOS](/networking/protocols/NetBIOS.md)* over TCP/IP (also referred to as *NBT*). Resources hosted on the SMB server are referred to as "shares" and are normally file directories.
 ## Samba
 Because Unix and Linux OS's can't use SMB, a similar, open-source protocol was developed in the 90s called "Samba". Samba is a software implementation of SMB and also makes use of NetBIOS. With Samba, a Unix-OS computer can share files/ shares/ printers with Windows devices.
 

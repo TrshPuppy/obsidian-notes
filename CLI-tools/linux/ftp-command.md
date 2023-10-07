@@ -1,17 +1,62 @@
 
-## Usage: 
+# FTP Command
+A CLI utility which allows you to interact with [FTP](networking/protocols/FTP.md) servers on local and remote devices.
+## Usage
+```bash
+ftp <username>@<IP Address>
+```
+### Anonymous FTP
+Some hosts allow for *Anonymous FTP* to allow the public to access documents. In this case, a user can login using the `anonymous` username with a password of `anonymous` OR no password at all:
+```bash
+ftp 10.0.2.15
+Connected to 10.0.2.15.    
+220 (vsFTPd 3.0.3)  
+Name (10.0.2.15:hakcypuppy): anonymous  
+331 Please specify the password.  
+Password:   # <------- password is 'anonymous'        
+230 Login successful.
+Remote system type is UNIX. 
+Using binary mode to transfer files.  
+ftp>        # <------- ftp shell
+# OR
+ftp anonymous@10.0.2.15
+...
+```
+**NOTE:** The anonymous user *is not allowed to change directories or upload files*. But they can *copy files using the `get` command.*
+### FTP Shell prompt
+Once you have access to an FTP server, you're given a command prompt. You can use `-h` or `help` to get an output of available commands:
+```bash
+ftp> help
+Commands may be abbreviated.  Commands are:
+!               edit            lpage           nlist           rcvbuf          struct
+$               epsv            lpwd            nmap            recv           sunique
+account         epsv4           ls              ntrans          reget           system
+append          epsv6           macdef          open            remopts         tenex
+ascii           exit            mdelete         page            rename         hrottle
+bell            features        mdir            passive         reset           trace
+binary          fget            mget            pdir            restart         type
+bye             form            mkdir           pls             rhelp           umask
+case            ftp             mls             pmlsd           rmdir           unset
+cd              gate            mlsd            preserve        rstatus         usage
+cdup            get             mlst            progress        runique         user
+chmod           glob            mode            prompt          send           verbose
+close           hash            modtime         proxy           sendport       xferbuf
+cr              help            more            put             set             ?
+debug           idle            mput            pwd             site
+delete          image           mreget          quit            size
+dir             lcd             msend           quote           sndbuf
+disconnect      less            newer           rate            status
+ftp> 
+```
+#### `ls`
+The `ls` command will list all of the files in the current directory.
+#### `get`
+The `get` command will allow you to download a file on the server w/ the syntax `get file.txt <LOCAL PATH>` where `<LOCAL PATH>` refers to where you want the file downloaded on your own computer.
+#### `put`
+The `put` command will allow you to *upload a file* to the server.
 
-## Useful options:
-- ``ftp -h`` to see help menu
-- logging in w/o password w/ ``anonymous`` username:
-	- syntax: ``ftp anonymous@HOSTIP
-	- successful login =  ``230 Login successful``
+> [!Related]
+> - [FTP protocol](/networking/protocols/FTP.md)
 
-## Once in #FTP-server 
-- ``dir`` or ``ls`` to list directories on the [FTP](/networking/protocols/FTP.md) server ( #FTP-server )
-- ``get`` to download/receive file in server
-	- default downloads file to home directory
-
->[!related]
-> [FTP](/networking/protocols/FTP.md)
-
+> [!Resources]
+> - `man ftp`

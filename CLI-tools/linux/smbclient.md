@@ -4,26 +4,41 @@ Used to interact with Samba programs on Linux. [SMB](/networking/protocols/SMB.m
 ```
 smbclient [OPTIONS] service <password>
 ```
-
 **HINT**: Try `//target/` instead of `////target//` - <3 clayhax
-## Useful options:
-- `smbclient -L`
-	- gets a list of available SMB shares on the host
-	- syntax: ``smbclient -L [HOST IP]``
-- `-U`
-	- Login identity to use
-	- ex: `smbclient -L {target IP} -U Administrator`
-	- *HINT:* you can try entering a blank password when prompted while using `Administrator` as the user.
-- `smbclient//fileserver/Backup
-		- To access the SMB server of a specific SMB share
-		- syntax: ``smbclient\\\\IPADDRESS\\ShareName``
-- Once in the SMB server shell
-	- ``ls``
-	- ``cd`` 
-	- ``get [filename]`` 
-		- downloads file to home directory
-		- syntax: ``<REMOTE_FILE_PATH>/<REMOTE_FILE_NAME> <LOCAL_FILE_PATH>/<LOCAL_FILE_NAME>``
-			- (tells get where to put downloaded file)
+> [!HINT]
+> 1. Try `//target/` instead of `////target//` - <3 clayhax
+> 2. If there are multiple SMB services running on a target, you can specify a port to `smbclient` using `-p`
+### Listing shares
+Gets a list of available SMB shares on the host
+```bash
+smbclient -L <target IP>
+```
+### Accessing shares
+To access the SMB server of a specific SMB share the syntax is:
+```bash
+smbclient ////<target IP>//<share name>
+# OR
+smbclient //<target IP>/<share name>
+```
+### Logging in as a user
+```bash
+smbclient //<target IP>/<target share> -U <username> 
+# OR
+smbclient <username>@<target IP>
+```
+*HINT:* you can try entering a blank password when prompted while using `anonymous` as the user.
+### SMB Shell
+Once you've gained access to the SMB server on the target, you're given a shell instance.
+#### Shell commands
+``ls``: list shares/ directories
+``cd`` : change directory
+`get [filename]`: downloads file to *your* home directory, syntax:
+```smb
+<REMOTE_FILE_PATH>/<REMOTE_FILE_NAME> <LOCAL_FILE_PATH>/<LOCAL_FILE_NAME>
+```
 
-> [!related]
- [SMB](/networking/protocols/SMB.md)
+> [!Resources]
+> - `man smbclient`
+
+> [!Related]
+> - [SMB protocol](/networking/protocols/SMB.md)

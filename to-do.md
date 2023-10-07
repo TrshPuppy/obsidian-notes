@@ -4,7 +4,8 @@ As I write and upload notes to GitHub, my process as it relates to Obsidian's fo
 
 Additionally, as one's knowledge grows, they may need to go back and fix some mistakes in prior notes ;).
 ## Fix Formatting:
-- [ ] FTP
+- [x] FTP
+- [x] ftp command
 - [ ] metasploit
 - [ ] smbclient
 - [ ] msfconsole
@@ -120,6 +121,14 @@ Additionally, as one's knowledge grows, they may need to go back and fix some mi
 - [ ] proxy
 - [ ] html
 - [ ] transport layer
+- [x] hash id
+- [ ] dictionary attack
+- [ ] Combinator Attack
+- [ ]  Brute Force Attack
+- [ ] fuff
+- [x] dirb
+- [ ] 
+
 
 ## Clean up
 - [x] enumerating-SMB
