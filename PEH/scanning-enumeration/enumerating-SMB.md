@@ -63,9 +63,6 @@ msf6 auxiliary(scanner/smb/smb_version) > spool output.txt
 #### Starting the module:
 Now that we've chosen a module and given it a target, we can run the module with the `run` command.
 ```bash
-[*] Spooling to file output.txt...
-msf6 auxiliary(scanner/smb/smb_version) > start
-[-] Unknown command: start
 msf6 auxiliary(scanner/smb/smb_version) > run
 
 [*] 10.0.3.5:139          - SMB Detected (versions:) (preferred dialect:)

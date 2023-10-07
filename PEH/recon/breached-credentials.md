@@ -5,7 +5,7 @@ It's useful to have access to these large data dumps because the usernames/ pass
 ## Methodology:
 Gather credentials connected to a target and create a collection of interwoven info which you can use to craft an exploit against them. 
 
-For example, finding a hashed password and using it in susequent searches can give you additional results and connections to the target.
+For example, finding a hashed password and using it in subsequent searches can give you additional results and connections to the target.
 ## [Breach Parse](cybersecurity/tools/recon/breach-parse.md):
 A [tool](https://github.com/hmaverickadams/breach-parse) written by Heath Adams which can search through large collections of breached data.
 ### Usage:
@@ -26,6 +26,7 @@ Allows you to search using email, username, IP address, name, address, phone num
 All of the info you gather from dehashed can be used to build a 'dossier' on the target and individuals associated w/ it.
 ## Other Resources:
 [Hashes.org](https://hashes.org): Can be used to break a hash or find passwords which have already been broken via that hash.
+
 > [!Resources]
 > - [Heath Adams: Breach Parse](https://github.com/hmaverickadams/breach-parse)
 > - [Dehashed](https://dehashed.com)

@@ -32,6 +32,7 @@ Is email enumeration OSINT?
 ### [The Harvester](http://www.edge-security.com/theharvester.php)
 ### [ClearBit](https://chrome.google.com/webstore/detail/clearbit-connect-free-ver/pmnhcgfcafcnkbengdcanjablaabjplo)
 ### [Hunter.io](https://hunter.io/email-finder)
+
 > [!Resources:]
 > - [Hackers Arise: OSINT Scraping w/ theHarvester](https://www.hackers-arise.com/post/osint-scraping-email-addresses-with-theharvester)
 > - [Rapid7: About User Enumeration](https://www.rapid7.com/blog/post/2017/06/15/about-user-enumeration/)
