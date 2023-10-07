@@ -335,6 +335,13 @@ If you had any issue please let us know in the course discord.
 Happy hacking !                                                                                   
 root@academy:~#    
 ```
+## Notes on other avenues:
+Having tried this box *without watching the walkthrough first*, there are some other interesting avenues one could try. The walkthrough above is a combo of my own investigations + the walkthrough supplied by TCM.
+### mysql
+Once you've SSH'd into the target as Grimmie, you can access the [mysql](CLI-tools/linux/mysql.md) database using the same password.
+![](nested-repos/PNPT-study-guide/PNPT-pics/academy-6.png)
+![](/PNPT-pics/academy-6.png)
+Some tasty tables in here include: `db` and `user`, both of which give you access to credentials.
 
 > [!Resources]
 > - [hash-identifier repo](https://www.kali.org/tools/hash-identifier/)
