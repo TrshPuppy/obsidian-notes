@@ -186,12 +186,15 @@ Besides the photo upload, we can also pentest this for [SQL-injection](cybersecu
 ### Plain Photo
 Starting w/ a plain photo, let's see what happens:
 ![](nested-repos/PNPT-study-guide/PNPT-pics/academy-3.png)
+
 ![](/PNPT-study-guide/PNPT-pics/academy-3.png)
 We can see a green success message, as well as our new photo. If we investigate the source, we might be able to figure out where the photo is being loaded from in the HTML:
 ![](nested-repos/PNPT-study-guide/PNPT-pics/academy-4.png)
+
 ![](/PNPT-pics/academy-4.png)
 The endpoint for the photo is `studentphoto/duck.jpeg`. Let's try to go to that endpoint w/ the browser:
 ![](nested-repos/PNPT-study-guide/PNPT-pics/academy-5.png)
+
 ![](/PNPT-pics/academy-5.png)
 The fact that we can see our duck in the browser means *the webserver is executing the file*, so we know if we upload some code *it will be executed*.
 ### Reverse Shell
