@@ -180,13 +180,13 @@ If we go to `http://10.0.2.15/academy` we get a login page where we can login wi
 ![](/PNPT-pics/academy-1.png)
 Once we're in, one of the interesting tabs we have access to is the `My Profile` tab. Clicking this, we find a form where we can upload a 'student photo'.
 ![](nested-repos/PNPT-study-guide/PNPT-pics/academy-2.png)
-![](/PNPT-pics/academy-2.png))
+![](/PNPT-pics/academy-2.png)
 Besides the photo upload, we can also pentest this for [SQL-injection](cybersecurity/TTPs/exploitation/injection/SQL-injection.md), etc.. However, the simplest place to start is to *use the form like its intended* and investigate from there.
 ## Student Photo Upload
 ### Plain Photo
 Starting w/ a plain photo, let's see what happens:
 ![](nested-repos/PNPT-study-guide/PNPT-pics/academy-3.png)
-![](/PNPT-study-guide/PNPT-pics/academy-3.png))
+![](/PNPT-study-guide/PNPT-pics/academy-3.png)
 We can see a green success message, as well as our new photo. If we investigate the source, we might be able to figure out where the photo is being loaded from in the HTML:
 ![](nested-repos/PNPT-study-guide/PNPT-pics/academy-4.png)
 ![](/PNPT-pics/academy-4.png)
