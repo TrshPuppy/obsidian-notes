@@ -68,6 +68,34 @@ apt remove [software name]
 # sublime text example:
 apt remove sublime-text
 ```
+## Packages
+### Listing packages
+```bash
+dpkg -l
+```
+### Purging packages
+```bash
+┌──(hakcypuppy㉿kali)-[~/blue]
+└─$ dpkg -l | grep microsoft 
+iU  microsoft-edge-stable                          117.0.2045.55-1                      amd64        The web browser from Microsoft
+
+┌──(hakcypuppy㉿kali)-[~/blue]
+└─$ dpkg --purge microsoft-edge-stable # <-------- HERE
+dpkg: error: requested operation requires superuser privilege
+┌──(hakcypuppy㉿kali)-[~/blue]
+└─$ sudo !!   
+sudo dpkg --purge microsoft-edge-stable 
+(Reading database ... 471035 files and directories currently installed.)
+Removing microsoft-edge-stable (117.0.2045.55-1) ...
+Purging configuration files for microsoft-edge-stable (117.0.2045.55-1) ...
+Processing triggers for man-db (2.11.2-3) ...
+Processing triggers for kali-menu (2023.4.5) ...
+Processing triggers for desktop-file-utils (0.26-1) ...
+Processing triggers for mailcap (3.70+nmu1) ...
+```
 
 > [!Resources]
 > - [THM Linux Fundamentals](https://tryhackme.com/room/linuxfundamentalspart3#)
+> - `man apt`
+> - `man dpkg`
+

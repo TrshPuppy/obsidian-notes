@@ -147,6 +147,18 @@ cat dpkg.log | cut -d ' ' -f 1 | uniq -c
     254 2023-04-19
 ...
 ```
+## Symlinking
+Symlinking (symbolic link) is creating a file which *point to another file* on the Linux device.
+### Creating a symlink
+`ln` is the link command, it creates *hardlinks by default*. To tell it to create a symbolic link instead, use the `-s` flag. The syntax is as follows:
+```bash
+ln -s <path to file to be linked> <path of link to be created>
+```
+#### Example:
+```bash
+┌──(hakcypuppy㉿kali)-[~/blue]
+└─$ sudo ln -s AutoBlue-MS17-010/ ../exploit-code/AutoBlue-MS17-010
+```
 
 > [!Resources:]
 > All of this information is from a video made for me by a knowledgeable friend.
