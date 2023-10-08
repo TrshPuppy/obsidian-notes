@@ -152,12 +152,6 @@ Collecting impacket (from -r requirements.txt (line 1))
   Installing build dependencies ... done
   Getting requirements to build wheel ...
 ```
-#### Checking target
-Just like w/ the metasploit module, this script can run a check against the target to make sure it's vulnerable *before we exploit*. In real pentests this may be enough to prove vulnerability *especially if you are testing critical infrastructure*.
-
-EternalBlue tends to *completely crash the target*. So if you're checking for it as a vulnerability on a real target, you should consider doing the check instead of the exploit so you don't crash the target system.
-
-To check the target run `./`
 #### Shellcode
 `cd` into `/shellcode` and run `./shell_prep.sh`
 ```bash

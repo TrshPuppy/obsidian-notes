@@ -1,6 +1,5 @@
 
 # Permissions and Privileges in Linux:
-
 The output of `ls -al` is a list of all the files and directories in the current/ parent directory *with the addition* of some metadata.
 
 The `-l` flag means "long" form, or "list more information about each file/ directory". This includes file type, size, timestamp, permissions, owner, last access date/ time, etc.
@@ -63,7 +62,6 @@ rwxr-xr-x
 - The owner (`rwx`) has read, write and execution permissions.
 - Users in the owner's group (`r-x`) only have read and execute permissions.
 - Other users (the last set of `r-x`) also only have read and execute permissions.
-
 ## Pentesting:
 For pentesting, it's ideal to find files which allow full permissions so you can write and execute to the disk. A good example of a directory that allows full access across all users/groups is the `/tmp` folder:
 ```bash
@@ -72,10 +70,8 @@ total 164
 drwxrwxrwt  9 root      root      4096 May 17 09:18 .
 # the '.' in the last field denotes the parent/ root folder (/tmp)
 ```
-
 ## Changing Permissions:
 If you create a file in Linux it will inherit the permissions associated with your user context. Depending on your shell context, you may create a new file but find you have no permissions to read, write, or execute it.
-
 ### Using `chmod +`
 To update the permissions of a file, use the `chmod` command:
 ```bash
@@ -91,12 +87,10 @@ To update the permissions of a file, use the `chmod` command:
 10 -rwxr-xr-x  1 trshpuppy trshpuppy    6 May 19 15:08 hello.txt
 ```
 On line `8` we use `chmod +rwx` to add all three file permissions to our `hello.txt` file.
-
 ### Using `chmod` umask:
 "Umask" in Linux refers to the user file-creation mode mask which determines the *default permissions* applied to newly created files and directories.
 
 The default permissions are *set in shell init files like `.bashrc`, `.bash_profile`, etc.* and are inherited by all the processes started by the user. The *Umask* is a set of bits subtracted from the default permissions to calculate the final permissions of new files.
-
 #### Umask Bits:
 The umask is made up of 3 sets of permission bits: user (owner of the file), group, and everyone else.
 
@@ -121,7 +115,6 @@ trshpuppy@trshheap:~$ chmod 777 hello.txt
 trshpuppy@trshheap:~$ ls -al | grep "hello.txt"
 -rwxrwxrwx  1 trshpuppy trshpuppy    6 May 19 15:08 hello.txt
 ```
-
 ### Changing Dir Permissions (recursively)
 The `chmod` command can also be used to set the permissions of files created in a target directory (new files, starting after the command has been called).
 
