@@ -62,6 +62,15 @@ John has another utility called `zip2john` which helps to get hashes from zipped
 $ zip2john file.zip > zip.hashes
 ```
 This command gets the hash form the zip file and saves it in the `zip.hashes` file. Then run `$ john zip.hashes`
+#### Reverse SSH keys
+Using `ssh2john` john can reverse [SSH](networking/protocols/SSH.md) keys/ crack password-protected keys. To do this, first *save the key to a file*. Then use:
+```bash
+ssh2john id_rsa > ssh.hashes
+```
+The, just give the output file to john:
+```bash
+john --wordlist=/usr/share/wordlists/rockyou.txt ssh.hashes
+```
 
 > [!Resources]
 > - [freeCodeCamp: Crack Passwords Using John the Ripper](https://www.freecodecamp.org/news/crack-passwords-using-john-the-ripper-pentesting-tutorial/)

@@ -161,5 +161,7 @@ ln -s <path to file to be linked> <path of link to be created>
 ```
 
 > [!Resources:]
-> All of this information is from a video made for me by a knowledgeable friend.
+> - Most of this information is from a video made for me by a knowledgeable friend.
+> - [Free Code Camp: Symlink Tutorial](https://www.freecodecamp.org/news/symlink-tutorial-in-linux-how-to-create-and-remove-a-symbolic-link/)
+ 
 
