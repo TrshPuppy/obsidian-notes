@@ -5,14 +5,11 @@ Checksums are usually hashes of a file used to identify and uniquely represent i
 Because of this, checksums can be used to verify the integrity of a shared or downloaded file.
 
 *For example* you can generate checksums of your file backups so you can verify they haven't been tampered with when you access them later.
-
 ## Algorithms:
 The two most common algorithms used in checksums is SHA and MD5. When you verify a checksum, you have to be sure to use the same algorithm to generate the checksum, or the two hashes will be different.
-
 ## Generating Checksums:
 ### Linux:
 Linux has some command line tools to generate checksums and hashes for files.
-
 #### `md5sum`:
 Usage:
 ```bash
