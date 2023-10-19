@@ -28,7 +28,6 @@ The structure of the heap *allows you to access variables/ data stored in it in 
 > - [Wikipedia: Call stack](https://en.wikipedia.org/wiki/Call_stack)
 > - [Geeks for Geeks: Intro to Stack Memory](https://www.geeksforgeeks.org/introduction-to-stack-memory/#)
 > - [Alex Hyett: Stack vs Heap Memory](https://www.youtube.com/watch?v=5OJRqkYbK-4)
-> - 
 
 > [!My previous notes (linked in text)]
 > - You'll find them all [here](https://github.com/TrshPuppy/obsidian-notes)
