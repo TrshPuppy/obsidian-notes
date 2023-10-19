@@ -4,6 +4,17 @@
 nmap [Scan Type(s)] [Options] {target sppecification}
 ```
 ## Usage:
+### Host Discovery:
+#### `-Pn` No Ping
+This tells nmap to *skip host discovery*. Setting `-Pn` will tell nmap to attempt the additional flags/ scanning functions *against every IP address specified*.
+#### `-PA` & `-PS` TCP ACK & TCP SYN
+The `-PS` flag tells nmap to send a *TCP SYN* packet to the specified ports. When the host responds (w/ TCP ACK), the *kernel of the scanning machine* sends a TCP RST packet. If no ports are specified, nmap will scan the defaults (80). *There should be no space between `-PS` and the ports*:
+```bash
+nmap -PA1-1000 $t
+Starting Nmap 7.94 ( https://nmap.org ) at...
+```
+The `-PS` flag is similar to `-PA` but instead of sending an SYN packet, nmap *sends an ACK* packet. The reason for sending different packet types *is to test for [firewalls](cybersecurity/defense/firewalls.md)*.
+
 ### `-sT` TCP scan:
 TCP connect scan scans for [TCP](/networking/protocols/TCP.md) ports and performs the *entire three way handshake* with the target system. nmap reports the port status depending on the flags it exchanges with the target.
 #### Results:
