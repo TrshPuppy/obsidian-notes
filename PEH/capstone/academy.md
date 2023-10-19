@@ -265,7 +265,7 @@ ls -al /tmp/backup.zip
 ```
 Being that it's currently 20:51 when this command was run, we can see that `backup.zip` was recently accessed (w/i the last minute). We can either wait around to check again and see if we catch the next execution, or try a few other ways to check.
 ### [crontab](CLI-tools/linux/crontab.md)
-crontab is a Linux tool which allows you to interface w/ [cron](computers/linux/linux-processes.md). Cron is a service which automates linux processes/ commands on an interval. If this `backup.sh` script is being ran on an interval, we might find a 'cronjob' for it.
+`crontab` is a Linux tool which allows you to interface w/ [cron](computers/linux/linux-processes.md). Cron is a service which automates linux processes/ commands on an interval. If this `backup.sh` script is being ran on an interval, we might find a 'cronjob' for it.
 
 Run `crontab -l` to see all the cron jobs associated w/ the current user (grimmie). Unfortunately, there are none. 
 #### Systemd
