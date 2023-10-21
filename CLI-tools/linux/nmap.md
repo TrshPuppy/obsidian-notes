@@ -14,7 +14,6 @@ nmap -PA1-1000 $t
 Starting Nmap 7.94 ( https://nmap.org ) at...
 ```
 The `-PS` flag is similar to `-PA` but instead of sending an SYN packet, nmap *sends an ACK* packet. The reason for sending different packet types *is to test for [firewalls](cybersecurity/defense/firewalls.md)*.
-
 ### `-sT` TCP scan:
 TCP connect scan scans for [TCP](/networking/protocols/TCP.md) ports and performs the *entire three way handshake* with the target system. nmap reports the port status depending on the flags it exchanges with the target.
 #### Results:
