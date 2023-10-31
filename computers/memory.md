@@ -6,7 +6,7 @@ There are also forms of computer memory which are considered *Semi-volatile*. (T
 ## Volatile Memory
 Volatile memory *requires electricity to maintain the information it stores*. The most common type of volatile memory is DRAM [RAM](/computers/RAM.md) (random access memory). DRAM is the big, fast memory to hold working set data like program code or data just worked on or to be worked on soon. In constrast, there is SRAM which is used for on-chip CPU cache: less dense, more expensive, much faster
 
-[*Cache*](/computers/cache.md) is another form of volatile memory. Unlike RAM cache is used to store *frequently needed* information to avoid having to get the information elsewhere (using slower routes).
+Memory can be used as [*Cache*](/computers/cache.md). Cache is a place to store recently used or soon-to-be needed things that need to be accessed quickly or to smooth impedence mismatch between componenets operating at different speeds. Cache is a purpose rather than a specific memory or storage technology. For example, DRAM is used as file cache for the file system data present on a hard drive, L2  and L3 CPU cache are different levels of SRAM cache to avoid off-chip DRAM access, on-board DRAM cache on a NIC to buffer network traffic before sending over the wire or sending back to host.
 ## Non-Volatile Memory
 Non-volatile memory is "permanent" and is used to store information so that it persists even after the device is shut down (loses power).
 ### Read Only Memory (ROM)
