@@ -20,7 +20,8 @@ This repo is for my organization and reference but can be viewed by the public. 
 ## P.S. Nested Repos!
 Check out the [nested-repos](https://github.com/TrshPuppy/obsidian-notes/tree/main/nested-repos) directory to see sub-folders of my notes which I've contextualized into their own repos!
 
-
+## P.P.S. Contributing:
+If you find flaws and or misinformation in topic notes you'd like me to correct, feel free to make a pull request so I can review the changes! I want these notes to be accurate and because I'm learning so much so quickly, I'm sure ther are notes which need fixing!
 
 
 
