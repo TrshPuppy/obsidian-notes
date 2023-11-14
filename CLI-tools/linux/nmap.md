@@ -268,6 +268,13 @@ Nmap done: 1 IP address (1 host up) scanned in 0.40 seconds
 #### `-sC` Scripting:
 To use the NSE, the `-sC` flag is provided. You can either use it without any arguments (and default scripts will be ran based on the rest of the `nmap` command), or you can give `-sC` the path to a custom script you want run.
 
+#### Looking up nmap scripts
+```
+ls /usr/share/nmap/scripts/ | grep <service> | grep <vuln, etc>`
+```
+#### `--script smb-vuln`
+Used to look for all smb vulnerabilities against a host
+
 > [!Resources]
 > - `man nmap`
 > - [Nmap: Version Detection](https://nmap.org/book/man-version-detection.html)
