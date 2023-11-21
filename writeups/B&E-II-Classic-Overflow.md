@@ -205,7 +205,8 @@ p.sendafter(b"is this name correct? (y/n)?\n", b"y\n")
 
 p.interactive()
 ```
-All we have to do is set our offset in `overflow_offset_rip`, set `new_rip` to the start of our buffer (the address of our shellcode).
+All we have to do is set our offset in `overflow_offset_rip`, set `new_rip` to the start of our buffer (the address of our shellcode). What we're going to send to the vulnerable program looks essentially like this:
+![](/writeups/writeup-pics/Pasted%20image%2020231121173335.png)
 ## Exploit it Yo!
 All you have to do now is `chmod +x` your exploit script and then run it. It will start the vulnerable process and send the exploit:
 ```bash
