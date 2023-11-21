@@ -27,6 +27,18 @@ Subtracts a value from a target (like a register). Ex:
 ```asm
 sub    $0x110,%rsp
 ```
+### `ret`
+Return is normally the last instruction of a function/ routine/ sub routine. It's job is to:
+1. Pop 8 bytes off the top of the stack (`$rsp`) and
+2. Executes the instruction at the address it in the `rsp` it popped off the stack.
+### The Function Prologue
+The function prologue (and epilogue) is a sequence of  instructions commonly seen when a function is called in assembly code. If the architecture *has a base pointer and a stack pointer*, the function prologue does the following things:
+1. Pushes the current base pointer (in `%ebp`/`%rbp`) onto the stack so it can be restored later.
+2. Sets the value of the `%rbp` register (base pointer) to the current value of the stack pointer (in `%rsp`). Since the stack pointer is always pointed to the top of the stack, the base pointer will now also be pointing to the stop of the stack.
+3. Move the stack pointer by increasing or decreasing its value (depending on the architecture. For example, in x86 architecture, the stack *grows downwards* so the pointer value will be decreased).
+	- This is to *make room for the local variables of the function being called*.
+
+
 
 > [!Resources]
 > - [Wikipedia: X86-64](https://en.wikipedia.org/wiki/X86-64#Architectural_features)

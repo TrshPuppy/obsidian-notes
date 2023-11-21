@@ -88,7 +88,7 @@ This is a default login page, and if you did the boxes before this one on HTB, y
 ```
 The form itself can sometimes give us *plaintext credentials*, and sometimes pathing to other endpoints. In this case I didn't learn much (although I have a feeling their are nuggets I overlooked as a n00b).
 #### Browser
-![](CTF-walkthroughs/walkthrough-pics/vaccine-HTB-1.png)
+![](writeups/writeup-pics/vaccine-HTB-1.png)
 ![](/walkthrough-pics/vaccine-HTB-1.png)
 
 When I found this I tried credentials I got from doing Oopsies and Archetype (the two boxes before Vaccine) because using credentials from Archetype worked on Oopsies. It did not work this time.
