@@ -1,0 +1,10 @@
+{
+  "accentColor": "#9367d5",
+  "cssTheme": "Obsidian Nord",
+  "interfaceFontFamily": "Ubuntu Mono",
+  "textFontFamily": "Noto Mono",
+  "monospaceFontFamily": "Source Code Pro",
+  "theme": "obsidian",
+  "nativeMenus": true,
+  "baseFontSize": 15
+}

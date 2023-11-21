@@ -1,0 +1,152 @@
+
+# Repo Maintenance/ To-Do:
+As I write and upload notes to GitHub, my process as it relates to Obsidian's formatting changes. So, I end up having to go back and fix notes I've uploaded in the past.
+
+Additionally, as one's knowledge grows, they may need to go back and fix some mistakes in prior notes ;).
+## Fix Formatting:
+- [x] FTP
+- [x] ftp command
+- [ ] metasploit
+- [ ] smbclient
+- [ ] msfconsole
+- [ ] telnet-command
+- [x] whois
+- [ ] xfreerdp
+- [ ] ping
+- [ ] DBMS
+- [ ] SQL
+- [ ] fs
+- [ ] logic
+- [ ] math lectures
+- [ ] react
+- [ ] eternalblue
+- [ ] cli-cheat sheet (linnux)
+- [x] filesystem hierarchy
+- [x] linux processes
+- [x] package management
+- [ ] windows
+	- [ ] enumeration
+	- [ ] powershell
+- [ ] APT 40
+- [ ] hackerone stuff
+- [ ] dMACR
+- [ ] DKIM
+- [ ] bluekeep
+- [ ] OSI-reference
+- [ ] blue keep
+- [ ] deja blue
+- [ ] LFI
+- [ ] RFI
+- [ ] Perl
+- [x] cyber kill chain
+- [ ] wateing hole
+- [ ] candy drop
+- [ ] url shorteners
+- [ ] LLMNR Poisoning
+- [x] subnetting
+- [x] firewalls
+- [x] DNS
+- [ ] TCP
+- [x] dig
+- [x] responder
+- [x] ansible
+## Inits which need notes:
+- [ ] CPU
+- [ ] CVEs
+- [ ] directory-enumeration
+- [ ] enum4linux
+- [ ] HTML
+- [ ] HTTPS
+- [ ] lua
+- [ ] memory
+- [ ] MITM
+- [ ] presentation layer
+- [ ] request-methods
+- [ ] REST-API
+- [ ] social-engineering
+- [ ] SSTI
+- [ ] unix-sockets
+- [ ] version control
+- [ ] wannacry
+- [ ] XSS
+- [ ] NetBIOS
+- [ ] redis
+- [ ] searchsploit
+- [ ] ssh
+- [ ] netstat
+- [ ] trie
+- [ ] mongo DB
+- [ ] golang
+- [ ] node
+- [ ] oauth 2
+- [ ] operating system
+- [ ] burp suite
+- [ ] bucket-enumeration
+- [ ] directory enumeration
+- [ ] SSH
+- [ ] application layer
+- [x] trans2
+- [ ] buffer overflows
+- [ ] zero day
+- [ ] trojan
+- [ ] denial of service
+- [ ] password cracking
+- [ ] rainbow table
+- [x] connect back
+- [ ] back-door
+- [ ] rate-limiting
+- [ ] host header injection
+- [ ] referrer leakage
+- [ ] otp tokens
+- [ ] input validation
+- [ ] diffie-hellman
+- [ ] rsa
+- [ ] dss
+- [ ] feroxbuster
+- [ ] searchsploit
+- [x] CVSS
+- [ ] OSINT
+- [ ] the harvester
+- [ ] penetration testing
+- [ ] C2
+- [ ] DNS poisoning
+- [ ] DNS tunneling
+- [ ] privesc
+- [ ] domain controller
+- [ ] EPSS
+- [ ] gdb
+- [ ] rev-shells
+- [ ] denial of service
+- [ ] gcc
+- [ ] proxy
+- [ ] html
+- [ ] transport layer
+- [x] hash id
+- [ ] dictionary attack
+- [ ] Combinator Attack
+- [ ]  Brute Force Attack
+- [ ] fuff
+- [x] dirb
+- [ ] python
+- [ ] NFS
+- [ ] gdb
+- [ ] compilation
+- [ ] assembly
+- [ ] x86
+
+
+## Clean up
+- [x] enumerating-SMB
+- [ ] spf-surveyor
+- [ ] akamai
+- [x] cyber-kill-chain
+- [ ] hashing
+- [ ] connect back
+- [x] firewalls
+- [x] DNS
+- [ ] TCP
+- [x] whois
+- [x] mDNS
+- [x] responder
+- [ ] UDP
+- [ ] netcat
