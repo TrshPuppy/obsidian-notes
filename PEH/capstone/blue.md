@@ -254,7 +254,7 @@ Traceback (most recent call last):
 What will likely happen is *this will crash your target machine*:
 ![](nested-repos/PNPT-study-guide/PNPT-pics/blue-3.png)
 ![](/PNPT-pics/blue-3.png)
-This exploit is *volatile* because it's a [buffer-overflow](cybersecurity/TTPs/exploitation/buffer-overflow.md), and will commonly cause a target to crash. **DON'T USE THIS AGAINST CRITICAL INFRASTRUCTURE** such as targets in hospitals, etc..
+This exploit is *volatile* because it's a [buffer-overflow](cybersecurity/TTPs/exploitation/binary-exploitation/buffer-overflow.md), and will commonly cause a target to crash. **DON'T USE THIS AGAINST CRITICAL INFRASTRUCTURE** such as targets in hospitals, etc..
 
 > [!Resources]
 > - [ExploitDB: ID 42031](https://www.exploit-db.com/exploits/42031)

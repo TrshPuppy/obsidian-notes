@@ -61,11 +61,35 @@ $_string_variable("0"); # <--- variable to send
 ```
 `generic_send_tcp` will take our script and use it to send strings of various lengths, all filled with "0", to the `STATS` command to *until the program breaks*.
 #### Spiking:
-With our script created, now we can send it to the program being hosted on Vulnserver:
+With our script created, now we can send it to the program being hosted on Vulnserver using the `generic_tcp_send_tcp` command:
 ```bash
+generic_send_tcp 10.0.2.15 9999 stats.spk 0 0
+Total Number of Strings is 681
+Fuzzing
+Fuzzing Variable 0:0
+Fuzzing Variable 0:1
+Variablesize= 5004
+Fuzzing Variable 0:2
+Variablesize= 5005
+...
+Fuzzing Variable 0:436
+Couldn't tcp connect to target
+Variablesize= 1024
+tried to send to a closed socket!
+Fuzzing Variable 0:437
+Couldn't tcp connect to target
+^C   # <--- kill
+```
+In the output we can see that `generic_send_tcp` is sending variables of increasing sizes to the `STATS` command of the host. At some point it starts failing w/ the `Couldn't tcp connect to target` output message. We can end the process here (although normally you would wait until it finishes on its own).
+
+From this output we know *the `STATS` command is not vulnerable*.
+### Targeting `TRUN` command
+For `TRUN` we'll do the same thing, except change the `s_string()` variable parameter to `"TRUN "`. Let's send it (in the same way):
+```bash
+generic_send_tcp $t 9999 trun.spk 0 0
 
 ```
-
+This time when we run the command, the immunity debugger shows that the vulnserver process pauses and 
 
 
 

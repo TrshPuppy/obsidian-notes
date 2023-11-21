@@ -48,7 +48,7 @@ Apache mod_ssl < 2.8.7 OpenSSL - 'OpenFuckV2.c' Remote Buffer Overflow (2)      
 --------------------------------------------------------------------------------------
 Shellcodes: No Results
 ```
-Using either the online database, or `searchsploit`, we find [`OpenFuck`](/cybersecurity/vulnerabilities/openfuck.md) which is a remote [buffer overflow](/cybersecurity/TTPs/exploitation/buffer-overflow.md). From the online database, you can review the code of the exploit itself:
+Using either the online database, or `searchsploit`, we find [`OpenFuck`](/cybersecurity/vulnerabilities/openfuck.md) which is a remote [buffer overflow](cybersecurity/TTPs/exploitation/binary-exploitation/buffer-overflow.md). From the online database, you can review the code of the exploit itself:
 ![](nested-repos/PNPT-study-guide/PNPT-pics/researching-vulns-1.png)
 ![](/PNPT-study-guide/PNPT-pics/researching-vulns-1.png)
 > [Exploit DB: OpenFuckV2.c](https://www.exploit-db.com/exploits/764)

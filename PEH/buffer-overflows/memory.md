@@ -1,8 +1,8 @@
 
 # Anatomy of Memory
-[Computer memory](/computers/memory.md) can be broken down into volatile and non-volatile types. The difference between the two is whether the information being stored *persists after the device loses power*.
+[Computer memory](computers/memory/memory.md) can be broken down into volatile and non-volatile types. The difference between the two is whether the information being stored *persists after the device loses power*.
 
-[Buffer Overflows](cybersecurity/TTPs/exploitation/buffer-overflow.md) are executed on volatile memory in the [RAM](computers/RAM.md). Specifically they target memory *temporarily allocated* to a running program. In a basic sense, a buffer overflow allows an attacker *to write data beyond the intended storage boundaries* of a function call or variable in the vulnerable code.
+[Buffer Overflows](cybersecurity/TTPs/exploitation/binary-exploitation/buffer-overflow.md) are executed on volatile memory in the [RAM](computers/memory/RAM.md). Specifically they target memory *temporarily allocated* to a running program. In a basic sense, a buffer overflow allows an attacker *to write data beyond the intended storage boundaries* of a function call or variable in the vulnerable code.
 ## Stack
 Stack memory is memory allocated in RAM during the execution of a program. It's used for running programs and tracking the functions and variables in the code.
 
