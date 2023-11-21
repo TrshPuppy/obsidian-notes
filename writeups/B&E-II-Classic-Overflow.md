@@ -1,5 +1,5 @@
 
-This is part II of my notes while working through [TsarSec's Course]() on [binary-exploitation](cybersecurity/TTPs/exploitation/binary-exploitation/buffer-overflow.md). You can find part I [here](https://trshpuppy.github.io/portfolio/writeups/binary-exploitation).
+This is part II of my notes while working through [TsarSec's Course]() on [binary-exploitation](/cybersecurity/TTPs/exploitation/binary-exploitation/buffer-overflow.md). You can find part I [here](https://trshpuppy.github.io/portfolio/writeups/binary-exploitation).
 # Overflowing the Buffer
 Now that we have an idea of how the stack is manipulated during a program's runtime, we want to hijack the control flow in order to exploit the program.
 
@@ -12,7 +12,7 @@ With all of the mitigations turned off (flags we can give to `gcc` during compil
 This means that data we write to the stack can be executed by the CPU. So how do we know where to put our exploit so the CPU will execute it?
 ## Finding the `%rip` offset
 Our target will be the saved `rip` frame on the stack (from the Function Prologue). Here's our stack from part I for reference:
-![](cybersecurity/cybersecurity-pics/buffer-overflow-11.png)
+![](/cybersecurity/cybersecurity-pics/buffer-overflow-11.png)
 The saved RIP frame holds the address *where the CPU will resume execution* after the `overflow()` function returns and is popped off the stack. Whatever address the saved RIP is inhabiting is where we want to put our malicious code. So we need to figure out the offset (in bytes) from our entrance point (`name`) and the saved RIP (at `0x7fffffffddd0`).
 
 Remember from our overflow c script:
@@ -27,7 +27,7 @@ void overflow() {
 Theoretically, if we know the address and length of `name` as well as the address and length of `option` we could build our buffer with the exact right length. However, because of stack alignment, these variables might be bigger than 0x100 bytes.
 ### Building the Buffer
 So, we know that `name` is *at least 0x100 bytes*, so our payload will have to be at least that long to overflow the borders of `name`. To visualize our payload (the string we're going to give `name`), here's a diagram:
-![](writeups/writeup-pics/Pasted%20image%2020231121133242.png)
+![](/writeups/writeup-pics/Pasted%20image%2020231121133242.png)
 So just the letter `A` 0x100 times, should be enough to overflow `name`.
 
 In `gdb` we want to be able to see our overflow. If the string is just a bunch of `As` it will be difficult to tell at what byte length we were able to overflow the saved RIP. So, we'll add another character to the end of our string, `B`. So our buffer string will look something lie this:
@@ -149,13 +149,13 @@ Program received signal SIGSEGV, Segmentation fault.
 From this output we can tell our 8 `B`s land directly in the first byte of the `rsp` or saved RIP. So now we're sure there are 280 bytes between our `name` parameter in `overflow()` and the saved RIP.
 ## Building our Exploit
 Now that we know the exact byte offset between our `name` parameter and the saved RIP, we can craft our exploit. Right now, our string looks something like this:
-![](writeups/writeup-pics/Pasted%20image%2020231121160423.png)
+![](/writeups/writeup-pics/Pasted%20image%2020231121160423.png)
 The 8 `B`s at the end overwrite the first byte of the saved RIP. So, let's replace the `B`s with an address we're in control of so we can tell the CPU to jump to that address and execute our malicious code.
 ### Exploit Code
 For simplicity, we can put our shell code at the beginning of our buffer string. The beginning address of our code will be the address we put into the position which is being placeheld by the 8 `B`s right now.
 
 When we're done our buffer will look something like this:
-![](writeups/writeup-pics/Pasted%20image%2020231121161123.png)
+![](/writeups/writeup-pics/Pasted%20image%2020231121161123.png)
 Instead of doing the math and crafting this string ourselves, we can take advantage of [python](/coding/languages/python.md) and [pwntools](https://docs.pwntools.com/en/stable/). If you need help finding and installing these tools, go check out [TsarSec's Course](https://taggartinstitute.org/courses/an-oral-history-of-binary-exploitation-defenses/) (it's free and awesome!)
 #### Finding the address
 To find the address of where our shellcode will land, we can use the `x` command in `gdb` and just ask to examine 280 - 16 bytes from the `$rsp` (we want to see 16 bytes past just to make sure the address is where we think it is):
@@ -226,3 +226,5 @@ $
 > - [Wikipedia: Buffer Overflows](https://en.wikipedia.org/wiki/Stack_buffer_overflow)
 > - [TsarSec: Oral History of Binary Exploitation](https://taggartinstitute.org/courses/an-oral-history-of-binary-exploitation-defenses)
 > - [Scott Wolchok: How to Read Assembly](https://wolchok.org/posts/how-to-read-assembly-language/)
+> - [Python Pwntools](https://docs.pwntools.com/en/stable/)
+
