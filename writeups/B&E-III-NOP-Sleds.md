@@ -104,3 +104,8 @@ In the next part of this series, we'll make our exploit *even more reliable* by 
 >
 
 > -   You'll find them all [here](https://github.com/TrshPuppy/obsidian-notes)
+
+
+
+
+![](writeups/writeup-pics/Pasted%20image%2020231124145724.png)
