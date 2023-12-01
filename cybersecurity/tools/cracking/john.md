@@ -29,9 +29,10 @@ The most powerful mode in john; tries all possible character combinations as pas
 ```shell
 $ john -i:digits password.txt
 ```
-
 `-i`: tells john to use incremental mode. 
 `digits`: placeholder which can be used to set the *max number of characters*(?). Can also set the `--format` flag.
+#### `--show`
+Show the passwords cracked from the last session (?)
 ### Contexts:
 #### Windows:
 In Windows, hashed passwords are stored in the #SAM-database. SAM uses [LM/NTLM](/networking/protocols/NTLM.md) hashing format. After retrieving a password from the SAM database (see [Responder](/cybersecurity/tools/responder.md)) use this command in john:

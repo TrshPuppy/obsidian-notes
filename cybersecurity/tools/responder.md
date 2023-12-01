@@ -12,3 +12,4 @@ A CLI utility which can perform [DNS poisoning](cybersecurity/TTPs/exploitation/
 > [!Resources]
 > - [Hacking Articles: Detailed Guide on Responder](https://www.hackingarticles.in/a-detailed-guide-on-responder-llmnr-poisoning/)
 
+https://www.hackthebox.com/achievement/machine/1343592/212
