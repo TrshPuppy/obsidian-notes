@@ -107,7 +107,7 @@ A backdoor is a way for an attacker to *establish a way back into the system* wh
 There are a few ways persistence can be achieved:
 ##### Installing a [web shell](/cybersecurity/TTPs/exploitation/web-shell.md) on a server
 ##### Installing a backdoor directly on the victim's machine
-An example of this technique is the use of [Metasploit's Meterpreter](/cybersecurity/tools/metasploit.md). Meterpreter is a *payload* which gives the user an interactive shell on *the target's network/device*.
+An example of this technique is the use of [Metasploit's Meterpreter](cybersecurity/tools/exploitation/metasploit.md). Meterpreter is a *payload* which gives the user an interactive shell on *the target's network/device*.
 ##### Creating or modifying a Windows service
 An attacker can create or modify Windows services to execute malicious scripts/ payloads. One way to do this is via *Registry keys* to modify service configurations.
 
