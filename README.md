@@ -1,5 +1,6 @@
 # Obsidian Notes
 ## This is a public repo of my notes using [Obsidian](https://obsidian.md/).
+> P.S. the commit history has been wiped due to insecure configuration. This repo was created in December '22
 
 ### Viewing this Repo:
 The best way to view this collection of notes is with the Obsidian desktop app. The app shows connections, links between topics, and other formatting which can't be appreciated in the markdown alone.
