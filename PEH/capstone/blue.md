@@ -40,7 +40,7 @@ Shellcodes: No Results
 Searching `microsoft 7 ultimate exploits` online, we find a lot of mentions to [EternalBlue](cybersecurity/vulnerabilities/eternalblue.md) and *MS17-010*. EternalBlue is an exploit which uses [SMB](networking/protocols/SMB.md) to get remote code execution on the target. 
 
 We also find the [Exploit DB](cybersecurity/tools/exploitation/exploit-db.md) entry [for EternalBlue](https://www.exploit-db.com/exploits/42315).
-## [Metasploit](cybersecurity/tools/metasploit.md)
+## [Metasploit](cybersecurity/tools/exploitation/metasploit.md)
 Now that we've found an exploit that will likely work on this machine, let's see what Metasploit has to help us.
 ### Auxiliary Module
 In `msfconsole` let's search for EternalBlue:

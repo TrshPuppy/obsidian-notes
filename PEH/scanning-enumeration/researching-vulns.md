@@ -109,7 +109,7 @@ Looking at [CVE Details](https://www.cvedetails.com/epss/CVE-2003-0201/epss-scor
 ![](/PNPT-study-guide/PNPT-pics/researching-vulns-3.png)
 > [CVE Details](https://www.cvedetails.com/epss/CVE-2003-0201/epss-score-history.html)
 
-Thinking back on how the CVSS is calculated, we know that increased activity and availability of the exploit code *increases the overall severity* of the CVE. CVE Details also tells us that there are a few [Metasploit](/cybersecurity/tools/metasploit.md) modules which make this vulnerability even easier to exploit.
+Thinking back on how the CVSS is calculated, we know that increased activity and availability of the exploit code *increases the overall severity* of the CVE. CVE Details also tells us that there are a few [Metasploit](cybersecurity/tools/exploitation/metasploit.md) modules which make this vulnerability even easier to exploit.
 
 > [!Resources]
 > - [Exploit DB: OpenFuckV2.c](https://www.exploit-db.com/exploits/764)

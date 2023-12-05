@@ -9,7 +9,7 @@ In the [Kioptrix](nested-repos/PNPT-study-guide/PEH/scanning-enumeration/kioptri
 Determining the version of the SMB service running is useful (and considered a finding) because you can use the version to find [CVEs](/cybersecurity/literature/CVEs.md) and exploits which have already been developed and used successfully against it.
 
 If Nmap was unable to find the exact version with the `-sV` flag (and w/ `--version-intensity` set to 9), then you can use other tools.
-### [Metasploit](/cybersecurity/tools/metasploit.md)
+### [Metasploit](cybersecurity/tools/exploitation/metasploit.md)
 Metasploit is a command line tool that can be used for most phases of an exploitation. It can do recon, scanning, enumeration, exploitation, etc.. In Kioptrix, for now, all we want to do is get the SMB version being used by our target:
 #### `msfconsole`
 Use this command to start the metasploit framework console. This is the environment where we'll build our exploit.

@@ -64,4 +64,3 @@ We can see that the `EIP` wasn't overwritten, but that's okay. We're trusting th
 > - [Immunity Debugger](https://www.immunityinc.com/products/debugger/) 
 > - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
 > - My [writeup on basic buffer overflow](https://trshpuppy.github.io/portfolio/writeups/basic-buffer-overflow)
-
