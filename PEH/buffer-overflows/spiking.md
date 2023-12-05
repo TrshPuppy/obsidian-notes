@@ -104,7 +104,7 @@ Based on the [anatomy of the stack](https://trshpuppy.github.io/portfolio/writeu
 
 By overflowing the allotted buffer space for `TRUN` we've written data onto the stack *in the direction of those register frames*, and that's why they've been overwritten with our buffer characters.
 
-Now that we've found a vulnerable command, we can move on to [fuzzing](nested-repos/PNPT-study-guide/PEH/buffer-overflows/fuzzing.md).
+Now that we've found a vulnerable command, we can move on to [fuzzing](/nested-repos/PNPT-study-guide/PEH/buffer-overflows/fuzzing.md).
 
 > [!Resources]
 > -  [Vulnserver](https://thegreycorner.com/vulnserver.html) 
