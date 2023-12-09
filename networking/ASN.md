@@ -1,12 +1,9 @@
----
-aliases: [ASN, Autonomous-System, Autonomous-System-Number]
----
-# Autonomous System Number
-- An #autonomous-system is a "set of routers under a single technical administration, using an interior gateway protocol and common metrics to route packets to other ASes."
-	- it is a "connected group of one or more #IP-prefixes run by one or more network operators which has a SINGLE and CLEARLY DEFINED #routing-policy"
-		- #routing-policy : how routing decisions are made
 
-from #RFC-1930 :
+# Autonomous System Number
+An autonomous system is a group of *IP prefixes* which are run by network operators who *maintain the same [routing](/networking/routing/routing-table.md) policy.* Each AS is assigned an *Autonomous System Number* by the IANA. This number is meant to identify a large network which *serves a set of subnets* (with the same IP prefixes).
+
+It's a "connected group of one or more [IP](/networking/OSI/IP-addresses.md)s run by one or more network operators which have a SINGLE and CLEARLY DEFINED routing policy (which dictate how routing decisions are made).
+## #RFC-1930
 ```              
 NET1 ......  ASX  <--->  ASY  ....... NET2
 
@@ -33,21 +30,18 @@ NET1 ......  ASX  <--->  ASY  ....... NET2
    ASY, ASX must announce that route to ASY and ASY must accept it from
    ASX...
 ```
-
->[!link]
->https://neosnetworks.com/products-services/business-internet-services/what-are-autonomous-system-numbers/
-
-An #ASN is a unique identifier which two organizations can use to connect to each and be able to send and receive #IP-addresses  which can further be distributed
-- can be public or private
-	- #public-ASNs are required for systems to exchange info over the internet
-	- #private-ASNs can be used instead if a system is communicating solely w/ a single provider via [BGP](/networking/protocols/BGP.md) (Border GateWay Protocol).
-- #ASN-gateway:
-	- how internal communication nodes (like w/i a business) connect to the global internet at one common point, using an #ASN 
-	- #internal-nodes each have their own #IP-address are connected through and [IGP](/networking/protocols/IGP.md) (Internal Gateway Protocol)
-	- the internal grouping of nodes is then connected to the larger internet using #BGP 
-
->[!related]
-> #RFC-1930
-
->[!links]
->https://datatracker.ietf.org/doc/rfc1930/
+## ASN
+An ASN is a unique identifier which organizations can use to connect to each other and be able to send and receive IP addresses which can further be distributed
+### Public ASNs
+Public ASNs are required for systems to exchange info over the internet
+### Private ASNs
+...can be used instead if a system is communicating solely w/ a single provider via [BGP](/networking/protocols/BGP.md) (Border GateWay Protocol).
+### ASN Gateway:
+How internal communication nodes (like w/i a business) connect to the global internet using ASN at one common point. 
+#### Internal nodes
+Each have their own IP addresses are connected through and [IGP](/networking/protocols/IGP.md) (Internal Gateway Protocol). The internal grouping of nodes is then connected to the larger internet using BGP.
+>[!Resources]
+> - [Data Tracker: RFC 1930](https://datatracker.ietf.org/doc/rfc1930/)
+> - [Business Internet Services](https://neosnetworks.com/products-services/business-internet-services/what-are-autonomous-system-numbers/)
+> - [Arin: ASN](https://www.arin.net/resources/guide/asn/)
+> - [IP Location: ASN](https://www.iplocation.net/asn)
