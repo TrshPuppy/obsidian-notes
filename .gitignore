@@ -20,3 +20,5 @@ move-pics.sh
 .trash/
 .DS_Store
 .obsidian/workspace.json
+.obsidian/community-plugins.json
+.obsidian/plugins/
