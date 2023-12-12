@@ -12,3 +12,6 @@ Use this flag to define an output file. `.state` is the default extension set by
 > [!Resources]
 > - `feroxbuster --help`
 
+| table | table |     |     |     |
+| ----- | ----- | --- | --- | --- |
+|       |       |     |     |     |
