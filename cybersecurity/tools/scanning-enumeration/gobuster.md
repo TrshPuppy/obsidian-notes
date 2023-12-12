@@ -32,15 +32,20 @@ Then Gobuster will send an HTTP request to each enumerated subdomain w/ a host h
 - use `-d` to specify a target domain you want to find a #subdomain in
 - `-w` for a wordlist
 - *May have to resolve domain name in /etc/hosts*
-### Options: 
+### Syntax: 
 #### *help*: `gobuster -h` or `gobuster <mode> -h`
-- `-o <output string>` File to save output to
-- `-v` verbose output
-- `-x <fie extension` to see pages w/ listed extensions:
-	- ex: `-x php,html`
+#### `-o <output string>` output
+File to save output to.
+#### `-v` verbose
+#### `-x <file extension>` 
+Tells gobuster to find/ try specific file types. For example, if you want it to find php pages, the command will look like:
+```bash
+gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u $t -x php
+```
+**NOTE:** you can list multiple file types: `-x php,html`
 ### Tips:
 - To get a list of options specific to a mode use `gobuster <mode> -h`
-- Gobuster is written in  #golang which makes it faster than similar tools
+- Gobuster is written in [golang](/coding/languages/golang.md) which makes it faster than similar tools
 - **Disadvantage:** Can't do recursive enumeration (if you want to enumerate on directories below the outer directory, you have to run it again with the next directory deep as the target)
 
 > [!Resources]
