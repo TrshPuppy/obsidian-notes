@@ -1,7 +1,7 @@
 
 # Hydra
 Hydra is a [brute forcing](/cybersecurity/TTPs/cracking/brute-force.md) tool used primarily for cracking passwords and logins on a network. It can brute force multiple connections/ login attempts *at the same time* which reduces the time it takes (when compared to sequential brute forcing).
-## Use
+## Usage
 ### Installation
 Hydra can be installed using apt:
 ```bash
