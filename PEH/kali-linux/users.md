@@ -33,7 +33,6 @@ newuser@trshheap:~$ # <-- new user shell context
 cat /etc/passwd | grep "newuser"
 newuser:x:1001:1001:new user,,,:/home/newuser:/bin/bash
 ```
-
 ## /etc/passwd
 This file doesn't actually have passwords stored in it, but used to. Now, it can be concatenated to see information about users on the machine.
 ```bash
@@ -47,7 +46,6 @@ The `x` in the second field is a placeholder for the user's password. The follow
 Each line in the `/etc/passwd` file also lists the home folder and shell types of each user. For example the home folder for `root` user is `/root` and the shell type is bash (`/bin/bash`).
 
 Different services running on the computer will likely be listed as users in `/etc/passwd`, which means that concatenating it can tell you what services and programs are present.
-
 ## /etc/shadow
 To view the `/etc/shadow` folder you need super user permissions. This file *contains hashed passwords* for users on the system:
 ```bash
@@ -74,7 +72,6 @@ mark:$6$.n.:17736:0:99999:7:::
 +----------------------------------------> 1. Username
 ```
 -[Linuxize: Understanding the /etc/shadow File](https://linuxize.com/post/etc-shadow-file/)
-
 ### Encrypted Password:
 The encrypted password field is formatted as: `$type$salt$hash` where `$type` is the encryption algorithm used. The following algorithms can be used:
 - `$1$`: MD5
@@ -88,7 +85,6 @@ The encrypted password field is formatted as: `$type$salt$hash` where `$type` is
 If the password field is set to `!` of `*` that means the user will not be able to use password authentication to login (other methods like `su` and key-based auth are still allowed).
 
 For best practice users like `root` should not be able to login with a password. Instead, root access can be controlled by allowing some users to temporarily elevate their permissions to root, and logging to keep records of when that has happened.
-
 #### Making an Encrypted Password:
 To make an encrypted password in bash you can use the `mkpasswd` command which comes with the `whois` package:
 ```bash
@@ -110,15 +106,12 @@ If PASSWORD is missing then it is asked interactively.
 if no SALT specified, a random one is generated.
 If TYPE is 'help', available methods are printed.
 ```
-
 ### Changing a user's password:
 There are (at least) two ways to change a user's password in kali/Linux. The first is to use the `usermod -p` command **HOWEVER** This command requires you to paste the password as plain text in the command line **which will be viewable in the shell history and as plain text in `/etc/shadow`!**
 
 A better way to change a user password is with `sudo passwd <user>`. This command will prompt you to enter the password but the plaintext will not be shown or saved in the command line. Plus, the password will be updated in `etc/shadow` with a *hashed* value.
-
 ## Deleting a User:
 You can use the `deluser` (or sometimes `userdel`) command
-
 ## Groups
 ### Adding a user to a group:
 To see what groups a user is in, you can switch to that user and use the `groups` command which will list all the group they're in. To add a user to a group use:
@@ -126,7 +119,6 @@ To see what groups a user is in, you can switch to that user and use the `groups
 sudo usermod -a -G sudo exampleUser
 ```
 The `-a` means `append` and will append this group to the user's current group list instead of overwriting their current group list. `G` stands for `groups` and specifies the group you want to add them to.
-
 ### /etc/group
 The `/etc/group` file lists all the groups on the machine and which users are in them. Each line in the file has 4 fields:
 ```bash
@@ -139,7 +131,6 @@ sudo:x:27:trshpuppy,newuser
   |+--------------------------> Group Name: name of the group
 ```
 -[CyberCiti: Understanding /etc/group File](https://www.cyberciti.biz/faq/understanding-etcgroup-file/)
-
 ### /etc/sudoers
 The `/etc/sudoers` file contains information on the sudoers group including which users are part of it and who can use `sudo` to escalate their privileges.
 ```bash
@@ -190,7 +181,6 @@ If no command is specified, list the allowed (and forbidden) commands for the in
 
 If a command is specified and is permitted by the security policy, the fully-qualified path to the command is displayed along with any command line arguments.  If a command is specified but not allowed by the policy, sudo will exit with a status value of 1.
 ```
-
 #### Editing sudoers File:
 When editing the sudoers file (to add or remove users) you should use `visudo`. The `visudo` command not only checks syntax and parsing, it also prevents the file from being edited by multiple people at the same time.
 
