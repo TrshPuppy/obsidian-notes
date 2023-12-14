@@ -1,5 +1,5 @@
 This is part III of my notes while working through [TsarSec's Course](https://taggartinstitute.org/courses/an-oral-history-of-binary-exploitation-defenses) on [binary-exploitation](https://github.com/TrshPuppy/obsidian-notes/blob/main/cybersecurity/TTPs/exploitation/binary-exploitation/buffer-overflow.md). You can find part II [here](https://trshpuppy.github.io/portfolio/writeups/binary-exploitation).
-# B&E Pt. 3 NOP Sleds
+# Binary Exploitation Pt. 3: NOP Sleds
 If you were to following along in the last part, you would have noticed that the addresses I was referencing are different than the ones you may be seeing.
 
 The difference in addresses on different systems is due mainly to *the environment variables stored by the stack.* If you were to add an environment variable in your system and then re-compile the binary, the addresses would be different.
@@ -105,7 +105,3 @@ In the next part of this series, we'll make our exploit *even more reliable* by 
 
 > -   You'll find them all [here](https://github.com/TrshPuppy/obsidian-notes)
 
-
-
-
-![](writeups/writeup-pics/Pasted%20image%2020231124145724.png)

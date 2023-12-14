@@ -2,7 +2,7 @@ This is part II of my notes while working through [TsarSec's Course](https://tag
 
   
 
-# B&E Pt. 2 Overflowing the Buffer
+# Binary Exploitation Pt. 2: Overflowing the Buffer
 
   
 

@@ -2,7 +2,7 @@ These are my notes from working through TsarSec's [course](https://taggartinstit
 
   
 
-# B&E I: Understanding the Stack
+# Binary Exploitation Pt 1: Understanding the Stack
 
   
 
@@ -187,25 +187,13 @@ We can step through the execution by using `c` in the prompt (for continue). `gd
   
 
 ```bash
-
 (gdb) c
-
 Continuing.
-
 Hey, whats your name!?
-
-  
-
 tiddies
-
 Welcome
-
 tiddies
-
-  
-
 is this name correct? (y/n)?
-
 ```
 
   
@@ -221,33 +209,19 @@ To see all the areas of memory our binary will be using we can use the `info pro
 ```bash
 
 (gdb) info proc mappings
-
 process 244655
-
 Mapped address spaces:
-
           Start Addr           End Addr       Size     Offset  Perms  objfile
-
             0x400000           0x401000     0x1000        0x0  r--p   /home/hakcypuppy/tsar/vuln_1
-
       0x7ffff7dca000     0x7ffff7df0000    0x26000        0x0  r--p   /usr/lib/x86_64-linux-gnu/libc.so.6
-
       ...
-
       0x7ffff7f9f000     0x7ffff7fac000     0xd000        0x0  rw-p
-
       0x7ffff7fc3000     0x7ffff7fc5000     0x2000        0x0  rw-p
-
       0x7ffff7fc5000     0x7ffff7fc9000     0x4000        0x0  r--p   [vvar]
-
       0x7ffff7fc9000     0x7ffff7fcb000     0x2000        0x0  r-xp   [vdso]
-
       ...
-
       0x7ffffffde000     0x7ffffffff000    0x21000        0x0  rwxp   [stack]
-
 --Type <RET> for more, q to quit, c to continue without paging--
-
 ```
 
   
@@ -463,19 +437,12 @@ Let's look at the first few instructions of `overflow()`:
   
 
 ```asm
-
 (gdb) disassemble overflow
-
 Dump of assembler code for function overflow:
-
    0x0000000000401146 <+0>:     push   %rbp
-
    0x0000000000401147 <+1>:     mov    %rsp,%rbp
-
 => 0x000000000040114a <+4>:     sub    $0x110,%rsp
-
 ...
-
 ```
 
   
