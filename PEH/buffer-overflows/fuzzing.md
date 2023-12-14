@@ -1,8 +1,8 @@
 
 # Fuzzing
-> Keep vulnserver and Immunity Debugger running from [spiking](/nested-repos/PNPT-study-guide/PEH/buffer-overflows/spiking.md) section (run them with Admin privileges).
+> Keep vulnserver and Immunity Debugger running from [spiking](/PEH/buffer-overflows/spiking.md) section (run them with Admin privileges).
 
-The difference between spiking and fuzzing is that in spiking we're *attacking multiple commands* in order to find vulnerable ones, and in fuzzing we're *attacking a single command* (which we know is vulnerable) in order to build an effective [buffer overflow](/nested-repos/PNPT-study-guide/PEH/buffer-overflows/buffer-overflow-basics.md).
+The difference between spiking and fuzzing is that in spiking we're *attacking multiple commands* in order to find vulnerable ones, and in fuzzing we're *attacking a single command* (which we know is vulnerable) in order to build an effective [buffer overflow](/PEH/buffer-overflows/buffer-overflow-basics.md).
 ## Python Script
 ```python
 `#!/usr/bin/python
@@ -49,14 +49,14 @@ We need to know the offset between the vulnerable command on the stack `TRUN` an
 When compiled into a binary, the vulnerable program will *take up the same amount of addresses on the stack* on any (x86) machine it runs on as it does on our vulnerable machine right now. So the offset is static.
 
 Once we know the offset, we can create our buffer overflow exploit using a payload of the same length as the offset. At the end of the payload, we place the address we want to send the CPU to. By the end, our payload will look something like this (replace `name` with `TRUN`):
-![](/nested-repos/PNPT-study-guide/PNPT-pics/fuzzing-1.png)
+![](/PNPT-pics/fuzzing-1.png)
 > My [writeup on basic buffer overflow](https://trshpuppy.github.io/portfolio/writeups/basic-buffer-overflow)
 
 ## Running the Script
 Once the script is finished, save it and remember to give it execution permissions using `chmod +x fuzz.py`. Make sure Immunity debugger is running w/ the vulnerable program attached and also running, then you can execute `fuzz.py`.
 
 Once it crashes (around 2700 bytes) we can inspect the crash in Immunity:
-![](/nested-repos/PNPT-study-guide/PNPT-pics/fuzzing-2.png)
+![](/PNPT-pics/fuzzing-2.png)
 We can see that the `EIP` wasn't overwritten, but that's okay. We're trusting that since the program crashed, the buffer length in bytes was long enough. So let's move on, working with *an offset around 3000 bytes*.
 
 > [!Resources]
