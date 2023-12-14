@@ -33,7 +33,7 @@ Remember when we did the NOP sled, our exploit ended up looking something like t
 ![](/writeups/writeup-pics/Pasted%20image%2020231214121607.png)
 ![](/writeups/writeup-pics/Pasted%20image%2020231124142229.png)
 Now that we have *the exact address* of our jump gadget, we can fix our exploit code so that our exploit will look like this:
-![](/writeups/writeup-pics/Pasted%20image%2020231214143634.png)
+![](writeups/writeup-pics/Pasted%20image%2020231214152234.png)
 ![](/writeups/writeup-pics/Pasted%20image%2020231214123032.png)
 **REMEMBER**: That our *stack pointer* (which is where `jmp rsp` will tell the CPU to go and start executing from) *will be pointing directly at our shellcode*! This is because the `overflow()` function *will return first* before our overflow actually starts hijacking the execution flow.
 
