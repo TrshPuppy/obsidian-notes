@@ -25,6 +25,7 @@ Because we can't reliably pick an address for our shellcode on the stack we're g
 This will essentially widen the window of addresses which will capture the CPU for execution. If the address we overwrite the saved RIP with is within the NOP sled, the CPU will enter the sled at that address, begin executing the NOPs and *slide into our shellcode* placed at the end of the NOP sequence. That's why this technique is called a *NOP sled*. 
 
 Using this technique, our payload on the stack will look something like this:
+![](/writeups/writeup-pics/Pasted%20image%2020231214121607.png)
 ![](writeups/writeup-pics/Pasted%20image%2020231124142229.png)
 Compared to our basic overflow (the first image) the shellcode is at the *END* of the NOP sled instead of at the beginning of our payload (at the `name` variable). If we point the CPU to any of the addresses between the saved RIP and the shellcode, our shellcode is guaranteed to get executed. 
 ### NOP Sled Length
