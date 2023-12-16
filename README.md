@@ -2,7 +2,7 @@
 
 ## This is a sub repo of my [Obsidian Notes](https://github.com/TrshPuppy/obsidian-notes) vault
 
-I've expanded it into its own repo so it can be an accessible resource to others. This houses all of my notes/ study guides I've generated while studying for the [PNPT Certification](https://certifications.tcm-sec.com/pnpt/).
+I've expanded it into its own repo so it can be an accessible resource to others. This houses all of my notes/ study guides I've generated while studying for the [PNPT Certification](https://academy.tcm-sec.com/a/aff_qsrrk8f2/external?affcode=770707_rpgcmrcd).
 
 ### THIS REPO DOES NOT CONTAIN MATERIAL PRODUCED OR DISTRIBUTED BY TCM SECURITY
 
