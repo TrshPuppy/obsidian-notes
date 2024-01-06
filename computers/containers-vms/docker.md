@@ -1,6 +1,6 @@
 
 # Docker
-Docker [containers](computers/containers-vms/containers.md) sit on top of and uses the host's [operating-system](/computers/operating-system.md). Although Docker can be used on both [Windows](/computers/windows) and [Linux](/computers/linux), the software *prefers linux-based* OS's.
+Docker [containers](computers/containers-vms/containers.md) sit on top of and uses the host's [operating-system](computers/concepts/operating-system.md). Although Docker can be used on both [Windows](/computers/windows) and [Linux](/computers/linux), the software *prefers linux-based* OS's.
 
 Compared to [virtual machines](/computers/containers-vms/virtual-machines.md), Docker containers are *lighter* b/c they *piggyback on the pre-existing host OS*. This allows them to:
 - boot faster
@@ -35,7 +35,7 @@ If multiple docker containers are running at the same time, they use the same in
 ### Docker Registries
 Docker Registries are used to store Docker images. *Docker Hub* is a public registry you can use to look for images (which is the default), but you can also run your own *private registry.*
 #### Docker Hub
-Once a Dockerfile is made, it can be stored in a repository called [*Docker Hub.*](https://registry.hub.docker.com/) Just like other [distributed version control](/coding/version-control.md) systems, images can be pulled from the hub, which also supports versioning.
+Once a Dockerfile is made, it can be stored in a repository called [*Docker Hub.*](https://registry.hub.docker.com/) Just like other [distributed version control](coding/concepts/version-control.md) systems, images can be pulled from the hub, which also supports versioning.
 ##### Commands:
 You can use the `docker run`, `docker pull` and `docker push` commands to pull, push, and run images from Docker Hub (or other registries).
 ## Usage:

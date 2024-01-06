@@ -79,10 +79,10 @@ cat amass_checksums.txt | grep "amass_Linux_amd64.zip" | cut -d " " -f 1 > check
 If you don't know what algorithm was used to make the checksum, there are ways to figure it out:
 
 ##### MD5:
-The [MD5](/cybersecurity/hashing.md#MD5) Algorithm generates a 128 bit hash represented by 32 hexadecimal characters.
+The [MD5](computers/concepts/cryptography/hashing.md#MD5) Algorithm generates a 128 bit hash represented by 32 hexadecimal characters.
 
 ##### SHA512:
-The [SHA512](/cybersecurity/hashing.md#SHA-2) is a variant of SHA-2. It produces a hash with 128 characters.
+The [SHA512](computers/concepts/cryptography/hashing.md#SHA-2) is a variant of SHA-2. It produces a hash with 128 characters.
 
 ##### Verifying the two checksums:
 ```bash

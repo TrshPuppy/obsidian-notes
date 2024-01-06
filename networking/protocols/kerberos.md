@@ -2,7 +2,7 @@
 # Kerberos Protocol
 Kerberos is an *authentication protocol* used in Windows computer-network environments. It uses a *ticket system* to allow parties to prove their identities to one another 'securely.' 
 
-It's based around a *client-server model* and requires both the server and client to verify each other's identities. It also uses *symmetric key [cryptography](/computers/cryptography.md)* as well as *public key cryptography* (optional) and requires a 3rd party for authentication.
+It's based around a *client-server model* and requires both the server and client to verify each other's identities. It also uses *symmetric key [cryptography](computers/concepts/cryptography/cryptography.md)* as well as *public key cryptography* (optional) and requires a 3rd party for authentication.
 
 
 

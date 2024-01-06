@@ -7,7 +7,7 @@ Init.
 ## Registers
 Registers in assembly code are basically equivalent to variables in other languages. However, unlike variables, there are a fixed number of them, they have standardized names, and they can only hold 64 bits-worth of information *at most*.
 
-In [x86](computers/x86.md) architecture, there are *16 registers* including `rax, rcx, rdx, rbx, rsp, rbp, rsi, rdi, r8, r9, rr10, r11, r12, r13, r14,` and `r15`.
+In [x86](computers/concepts/x86.md) architecture, there are *16 registers* including `rax, rcx, rdx, rbx, rsp, rbp, rsi, rdi, r8, r9, rr10, r11, r12, r13, r14,` and `r15`.
 ### Nomenclature
 Registers can be seen w/ either an `e` or `r` in their names. Registers w/ an `e` (such as `eax`) are 'extended', meaning they are *32 bits wide*. Registers used to be smaller (8, 16 bytes). So registers starting w/ an `e` are 'extended' b/c they're larger than the original register lengths.
 
