@@ -1,6 +1,6 @@
 
 # [Sublist3r](https://www.kali.org/tools/sublist3r/)
-Sublist3r is a CLI tool written in python which *passively* searched for subdomains using Google, Yahoo, and other search engines including [VirusTotal](/cybersecurity/tools/Virus-Total.md).
+Sublist3r is a CLI tool written in python which *passively* searched for subdomains using Google, Yahoo, and other search engines including [VirusTotal](cybersecurity/tools/reverse-engineering/Virus-Total.md).
 
 Using an integrated tool called *Subbrute* it can be used to perform active subdomain brute forcing against a root domain.
 ## Usage:

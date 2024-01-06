@@ -21,9 +21,9 @@ Developed by NIST (national institute of standards and technology) and the NSA i
 Returns an output which is a 256-bit hash as a 64 digit hexadecimal number.
 
 > [!Tools]
-> - [Cyber-Chef](/cybersecurity/tools/Cyber-Chef.md)
-> - [OPSWAT](/cybersecurity/tools/OPSWAT.md) 
-> - [Virus-Total](/cybersecurity/tools/Virus-Total.md)
+> - [Cyber-Chef](cybersecurity/resources/Cyber-Chef.md)
+> - [OPSWAT](cybersecurity/resources/OPSWAT.md) 
+> - [Virus-Total](cybersecurity/tools/reverse-engineering/Virus-Total.md)
 
 > [!Command Line]
 > - see [checksums](/cybersecurity/opsec/checksums.md)
