@@ -251,7 +251,6 @@ Go to the service's website and look for anything regarding:
 Try to collect samples which represent the service in all of its versions. Don't just choose recent version examples. Collect a variety of samples w/ a range of configurations.
 
 You can use search engines, website portfolios, web dev forums, etc. to source your samples.\
-
 ```
 https://hsr-showcase.vercel.app/profile?uid=600516595
 https://showcase-theme.vercel.app/
