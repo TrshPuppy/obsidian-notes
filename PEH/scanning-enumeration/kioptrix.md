@@ -86,7 +86,7 @@ rpcinfo -s -n 32768 10.0.3.5
     100000  2         udp,tcp                          portmapper  unknown
     100024  1         tcp,udp                          status      unknown
 ```
-## 2. Vulnerability Scanning w/ [Nikto](/cybersecurity/tools/scanning-enumeration/nikto.md)
+## 2. Vulnerability Scanning w/ [Nikto](cybersecurity/tools/scanning-enumeration/vuln-scanning/nikto.md)
 `kioptrix_nikto.txt`:
 ```bash
 - Nikto v2.5.0
@@ -138,8 +138,8 @@ rpcinfo -s -n 32768 10.0.3.5
 Anything that returns as 'outdated' w/ Nikto can be reported as a finding. The more behind the version in use is to the current released version *the more serious the finding is*.
 #### Directory Enumeration:
 Nikto shows that there are some possible subdirectories we can enumerate on ports 80 and 443. To check for these, we can run a handful of tools:
-##### [Feroxbuster](/cybersecurity/tools/scanning-enumeration/feroxbuster.md)
-Feroxbuster is a tool similar to [gobuster](/cybersecurity/tools/scanning-enumeration/gobuster.md) except it's able to *do recursive enumeration*. We can try feroxbuster against Kioptrix like this:
+##### [Feroxbuster](cybersecurity/tools/scanning-enumeration/dir-and-subdomain/feroxbuster.md)
+Feroxbuster is a tool similar to [gobuster](cybersecurity/tools/scanning-enumeration/dir-and-subdomain/gobuster.md) except it's able to *do recursive enumeration*. We can try feroxbuster against Kioptrix like this:
 ```bash
 feroxbuster -u http://10.0.3.5
 # or:

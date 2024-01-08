@@ -7,7 +7,7 @@ Because Kioptrix is outdated, the errors which return when attempting an SSH con
 ssh 10.0.2.5
 Unable to negotiate with 10.0.2.5 port 22: no matching key exchange method found. Their offer: diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1
 ```
-Using the `ssh` command w/ no flags set, the target returns information to us *that it shouldn't*. This is a finding. The above error is telling us that the target did not find a match for us as a known host, and is offering to connect anyways as long as key exchange is [Diffie-Hellman](/cybersecurity/cryptography/diffie-hellman.md).
+Using the `ssh` command w/ no flags set, the target returns information to us *that it shouldn't*. This is a finding. The above error is telling us that the target did not find a match for us as a known host, and is offering to connect anyways as long as key exchange is [Diffie-Hellman](computers/concepts/cryptography/diffie-hellman.md).
 
 W/ this error returned from the target, we can attempt to ssh again with a `-o` flag (options) set to `KexAlgorithms=+diffie-hellman-group1-sha1` to match the key exchange method they're offering.
 ```bash

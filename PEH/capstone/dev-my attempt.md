@@ -104,7 +104,7 @@ From this file we learn:
 2. There is a config file somewhere
 3. There is a development website (which needs updating)
 4. JP thinks *java is awesome*
-## 4. [Feroxbuster](cybersecurity/tools/scanning-enumeration/feroxbuster.md)
+## 4. [Feroxbuster](cybersecurity/tools/scanning-enumeration/dir-and-subdomain/feroxbuster.md)
 ### Port 80
 Let's find some endpoints using feroxbuster:
 ```bash

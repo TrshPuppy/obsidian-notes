@@ -8,6 +8,10 @@ The technologies used likely have vulnerabilities which you can exploit later.
 This is a website where you can enter the name of a website and get some basic information back about the technologies the website uses in its architecture.
 ### Wappalyzer:
 Wappalyzer is an open source tool which you can use as an [addon](https://addons.mozilla.org/addon/wappalyzer) to your web browser or in your [command-line](https://github.com/wappalyzer/wappalyzer).
+
+> [!Edit]
+> Wappalyzer is no longer open source, they've since made all GitHub repositories private :(. See [here](https://github.com/wappalyzer). However there is [webanalyze](https://github.com/rverton/webanalyze) a Go commandline tool which used to ship w/ Wappalyzer but has switched to 'loading definitions from [enthec](https://github.com/enthec/webappanalyzer)'
+
 ### [WhatWeb](https://github.com/urbanadventurer/WhatWeb)
 WhatWeb is another command line utility which comes with Kali Linux. It's open source and can be found on GitHub.
 #### Usage:
@@ -16,7 +20,8 @@ Here is an example of the output when scanning `morningstarsecurity.com` (creato
 http://morningstarsecurity.com [301 Moved Permanently] Apache[2.4.29], Country[RESERVED][ZZ], HTTPServer[Apache/2.4.29], IP[104.225.220.14], RedirectLocation[https://morningstarsecurity.com/], UncommonHeaders[x-redirect-by], x-pingback[http://morningstarsecurity.com/xmlrpc.php]
 https://morningstarsecurity.com/ [200 OK] Apache[2.4.29], Country[RESERVED][ZZ], Google-Analytics[Universal][UA-791888-17], HTML5, HTTPServer[Apache/2.4.29], IP[104.225.220.14], JQuery[3.6.4], Open-Graph-Protocol[website], Script[application/ld+json,text/javascript], Title[Home - MorningStar Security], WordPress, WordpressSuperCache
 ```
-**See more on WhatWeb [here](cybersecurity/tools/scanning-enumeration/whatweb.md)
+**See more on WhatWeb [here](/cybersecurity/tools/scanning-enumeration/whatweb.md)
+
 > [!Resources]
 > - [BuiltWith](https://builtwith.com)
 > - [Wappalyzer GitHub](https://github.com/wappalyzer/wappalyzer)

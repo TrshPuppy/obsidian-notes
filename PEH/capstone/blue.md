@@ -29,7 +29,7 @@ sudo nmap -A -p 139, 445 $t
 ...
 ```
 The useful service version we get out of this is `Windows 7 Ultimate 7601 Service Pack 1`.
-### [searchsploit](cybersecurity/tools/exploitation/searchsploit.md)
+### [searchsploit](/cybersecurity/tools/exploitation/searchsploit.md)
 Using searchsploit, we don't find anything about this service version:
 ```bash
 searchsploit 'Microsoft 7 Ultimate'
@@ -37,10 +37,10 @@ Exploits: No Results
 Shellcodes: No Results
 ```
 ### Google
-Searching `microsoft 7 ultimate exploits` online, we find a lot of mentions to [EternalBlue](cybersecurity/vulnerabilities/eternalblue.md) and *MS17-010*. EternalBlue is an exploit which uses [SMB](networking/protocols/SMB.md) to get remote code execution on the target. 
+Searching `microsoft 7 ultimate exploits` online, we find a lot of mentions to [EternalBlue](/cybersecurity/vulnerabilities/eternalblue.md) and *MS17-010*. EternalBlue is an exploit which uses [SMB](/networking/protocols/SMB.md) to get remote code execution on the target. 
 
-We also find the [Exploit DB](cybersecurity/tools/exploitation/exploit-db.md) entry [for EternalBlue](https://www.exploit-db.com/exploits/42315).
-## [Metasploit](cybersecurity/tools/exploitation/metasploit.md)
+We also find the [Exploit DB](/cybersecurity/tools/exploitation/exploit-db.md) entry [for EternalBlue](https://www.exploit-db.com/exploits/42315).
+## [Metasploit](/cybersecurity/tools/exploitation/metasploit.md)
 Now that we've found an exploit that will likely work on this machine, let's see what Metasploit has to help us.
 ### Auxiliary Module
 In `msfconsole` let's search for EternalBlue:
@@ -259,6 +259,4 @@ This exploit is *volatile* because it's a [buffer-overflow](cybersecurity/TTPs/e
 > [!Resources]
 > - [ExploitDB: ID 42031](https://www.exploit-db.com/exploits/42031)
 > - [3ndG4me: AutoBlue GitHub repo](https://github.com/3ndG4me/AutoBlue-MS17-010)
-
-> [!My previous notes (linked in text)]
-> - You'll find them all [here](https://github.com/TrshPuppy/obsidian-notes)
+> - My other notes (linked throughout text) can be found [here](https://github.com/TrshPuppy/obsidian-notes)

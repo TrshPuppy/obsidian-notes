@@ -1,5 +1,5 @@
 
-# Common [Ports](/networking/ports.md) and Protocols
+# Common [Ports](networking/routing/ports.md) and Protocols
 There are 65,535 ports available to connect to a device on a network. Ports are controlled by software which is managed by the device's operating system.
 
 Each port is associated w/ a specific service or process. In order to transfer data b/w ports *the communicating ports have to be configured in the same way*.
