@@ -1,6 +1,6 @@
 
 # WhatWeb - Web technology recon
-[WhatWeb](https://github.com/urbanadventurer/WhatWeb) is a command line utility written in [ruby](/coding/languages/ruby.md) used to enumerate the technology and services used to create and run a target website.
+[WhatWeb](https://github.com/urbanadventurer/WhatWeb) is a command line utility written in ruby used to enumerate the technology and services used to create and run a target website.
 ## Usage:
 ```bash
 .$$$     $.                                   .$$$     $.         
@@ -268,17 +268,15 @@ Besides just searching for things like `vercel porfolio sites` or `vercel showca
 
 Google Dorking is essentially searching for intelligence/ info on the web using specifically crafted strings called 'google dorks.'
 
-The [Google Hacking Database](https://www.exploit-db.com/google-hacking-database) is a huge database organized by [Exploit DB](cybersecurity/tools/exploitation/exploit-db.md) of google dorks people have used with success to find specific services, etc..
+The [Google Hacking Database](https://www.exploit-db.com/google-hacking-database) is a huge database organized by [Exploit DB](/cybersecurity/tools/exploitation/exploit-db.md) of google dorks people have used with success to find specific services, etc..
 
 Even though google dorking can be very useful, it is a known TTP, so webmasters avoid and remove strings which are dorkable in order to reduce discoverability. 
 
 For example, Wordpress sites can sometimes include the footer "Powered by Wordpress" which is easy to grep via Google Dorks, so most Wordpress sites know to get rid of it.
 
 > [!Resources]
-> [WhatWeb GitHub](https://github.com/urbanadventurer/WhatWeb)
-> [How to Develop WhatWeb Plugins](https://github.com/urbanadventurer/WhatWeb/wiki/How-to-develop-WhatWeb-plugins)
-
-> [!My previous notes (linked in the text)]
-> - [HTTP](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/protocols/HTTP.md)
-> - [ruby](https://github.com/TrshPuppy/obsidian-notes/blob/main/coding/languages/ruby.md)
+> - [WhatWeb GitHub](https://github.com/urbanadventurer/WhatWeb)
+> - [How to Develop WhatWeb Plugins](https://github.com/urbanadventurer/WhatWeb/wiki/How-to-develop-WhatWeb-plugins)
+> - [!My previous notes (linked in the text)]
+> 	- [HTTP](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/protocols/HTTP.md)
 

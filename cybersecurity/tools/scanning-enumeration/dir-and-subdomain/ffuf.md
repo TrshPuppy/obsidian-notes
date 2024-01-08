@@ -1,6 +1,6 @@
 
-# Fuff (Fuzz Faster U Fool)
-dirb is a CLI tool used for [directory-enumeration](cybersecurity/TTPs/recon/directory-enumeration.md). It is *non-recursive*, and will only enumerate at the specified depth in the command.
+# Ffuf (Fuzz Faster U Fool)
+Ffuf is a CLI tool used for [directory-enumeration](/cybersecurity/TTPs/recon/directory-enumeration.md). It is *non-recursive*, and will only enumerate at the specified depth in the command.
 ## Usage:
 ```bash
 ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt:FUZZ -u http://10.0.2.15/FUZZ

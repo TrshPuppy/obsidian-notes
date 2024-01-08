@@ -181,3 +181,4 @@ MARKDOWN_EXPORT_SORT_MODE=template nuclei -target example.com -markdown-export n
 > - [Nuclei Documentation](https://docs.projectdiscovery.io/tools/nuclei/overview)
 > - [Nuclei Template Guide](https://nuclei.mintlify.app/template-guide/variables)
 > - [Nuclei: Workflows](https://c4pr1c3.github.io/nuclei-docs/templating-guide/workflows.html)
+> - My [other notes](https://github.com/TrshPuppy/obsidian-notes) (linked throughout) can all be found here.

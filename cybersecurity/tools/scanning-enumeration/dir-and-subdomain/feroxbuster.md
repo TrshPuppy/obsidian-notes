@@ -9,9 +9,7 @@ feroxbuster -u x.x.x.x
 ```
 ### `-o` Output
 Use this flag to define an output file. `.state` is the default extension set by ferox but can be prevented w/ the `--no-state` flag.
+
 > [!Resources]
 > - `feroxbuster --help`
 
-| table | table |     |     |     |
-| ----- | ----- | --- | --- | --- |
-|       |       |     |     |     |
