@@ -6,6 +6,7 @@ A records are specified by [`RFC 1035`](https://www.rfc-editor.org/rfc/rfc1035).
 ## Redundancy
 Domains can have *multiple A records* to create redundancy. Additionally, *multiple domains can point to one address*. Each domain would have its own A record pointing to that IP address.
 
+**NOTE:** A record = IPv4, AAAA = IPv6
 > [!Resources]
 > - [RFC 1035](https://www.rfc-editor.org/rfc/rfc1035)
 > - [DNSimple: A Record](https://support.dnsimple.com/articles/a-record/)
