@@ -24,7 +24,7 @@ Sublist3r is capable of finding 3rd and 4th level domains.
 *However* Sublist3r can be used to do brute force (active/ not OSINT) enumeration using the Subbrute integrated tool.
 ### [Usage](/cybersecurity/tools/recon/sublist3r.md)
 
-## OWASP [Amass](/cybersecurity/tools/amass.md)
+## OWASP [Amass](/cybersecurity/tools/scanning-enumeration/dir-and-subdomain/amass.md)
 
 ## Certificate Fingerprinting:
 Certificate fingerprint/ thumbprint is the hash of an SSL certificate derived from the certificate's data and signature. The thumbprint is used as a unique identifier for the certificate.
