@@ -1,7 +1,9 @@
 
+
+These are my notes I wrote for Asyncio while watching [Tib3rius' YT video](https://www.youtube.com/watch?v=1vhu5VUv2tk). Tibs was trying to help me out with writing my python CLI tool [NetPuppy](https://github.com/TrshPuppy/NetPuppy). I learned a lot about processes, threading, and concurrency (it was actually very eye-opening). So please, check out his [channel](https://www.youtube.com/@Tib3rius); he is a cybersecurity badass and has put out a lot of solid & free educational material on hacking and coding.
 # Learning the Asyncio Python Lib
-[Asyncio](https://realpython.com/async-io-python/#async-io-explained) is a library in [python](/coding/languages/python/python.md) used for asynchronous coding. Similar to other languages, like [JavaScript](/coding/languages/javascript.md), it uses an `async`/ `await` syntax. In addition to providing a framework to run asynchronous code, it also provides APIs which handle coroutines, subprocesses, network I/O, task queueing, and even synchronizing concurrent code (among other things).
-## [Coroutines](/coding/concepts/coroutines.md)
+[Asyncio](https://realpython.com/async-io-python/#async-io-explained) is a library in [python](https://github.com/TrshPuppy/obsidian-notes/blob/main/coding/languages/python/python.md) used for asynchronous coding. Similar to other languages, like [JavaScript](https://github.com/TrshPuppy/obsidian-notes/blob/main/coding/languages/javascript.md), it uses an `async`/ `await` syntax. In addition to providing a framework to run asynchronous code, it also provides APIs which handle coroutines, subprocesses, network I/O, task queueing, and even synchronizing concurrent code (among other things).
+## [Coroutines](https://github.com/TrshPuppy/obsidian-notes/blob/main/coding/concepts/coroutines.md)
 Coroutines are functions which are asynchronous and can be run concurrently. Coroutines *DO NOT* run in parallel. Instead, they are functions which can pause their own execution to *yield* execution control to another function. They can then *resume* execution when they're called again by another coroutine.
 
 With the asyncio lib, we can start and complete multiple tasks in a shorter amount of time by using concurrency. Instead of tasks being executed consecutively, asyncio has methods which allow us to start one task, then start another task before the first one returns.
@@ -215,13 +217,13 @@ Result: Coroutine 3: 5 second delay
 Time: 10.011
 ```
 ## Processes w/ `create_subprocess_shell()`
-What we've done w/ Asyncio so far is try to get as close to concurrency as possible using [coroutines](/coding/concepts/coroutines.md). In Python, true concurrency and [threading](/coding/concepts/threading.md) is nearly impossible due to Python's [Global Interpreter Lock](https://en.wikipedia.org/wiki/Global_interpreter_lock) (GIL). Evidently, Python is [unable to handle thread safety](https://www.infoworld.com/article/3685373/is-it-finally-time-to-remove-the-python-gil.html) and so it implements a GIL to enforce *mutual exclusion*.
+What we've done w/ Asyncio so far is try to get as close to concurrency as possible using [coroutines](https://github.com/TrshPuppy/obsidian-notes/blob/main/coding/concepts/coroutines.md). In Python, true concurrency and [threading](https://github.com/TrshPuppy/obsidian-notes/blob/main/coding/concepts/threading.md) is nearly impossible due to Python's [Global Interpreter Lock](https://en.wikipedia.org/wiki/Global_interpreter_lock) (GIL). Evidently, Python is [unable to handle thread safety](https://www.infoworld.com/article/3685373/is-it-finally-time-to-remove-the-python-gil.html) and so it implements a GIL to enforce *mutual exclusion*.
 ### Mutual Exclusion
-[Mutual Exclusion]() (or "mutex") is a concept in computer science which dictates how a thread accesses a resource. With a mutex, a resource can only be accessed *by one thread at a time*.
+[Mutual Exclusion](https://github.com/TrshPuppy/obsidian-notes/blob/main/coding/concepts/coroutines.md) (or "mutex") is a concept in computer science which dictates how a thread accesses a resource. With a mutex, a resource can only be accessed *by one thread at a time*.
 
 Python's GIL is a *global mutex lock*, so true threading and concurrency is not actually supported by the language itself. Python *attempts* to get around this with subprocesses.
 ### Subprocesses
-If you think of a 'program' as an executable file, then a [process](/computers/concepts/process.md) is a currently-executing *instance* of a program. For example, if you open a Firefox window, you've started the process which executes the Firefox program/ executable.
+If you think of a 'program' as an executable file, then a [process](https://github.com/TrshPuppy/obsidian-notes/blob/main/computers/concepts/process.md) is a currently-executing *instance* of a program. For example, if you open a Firefox window, you've started the process which executes the Firefox program/ executable.
 
 A process can further be broken down into *threads* which are the smallest executable units of a process. Processes usually have multiple threads with one main thread. Processes commonly use *multithreading* to implement concurrency and avoid idle CPU time (while waiting for a task to finish)
 .
@@ -297,3 +299,5 @@ Asyncio is a complex lib and there is a lot more to it, but this was enough for 
 > - [This Dev.to thread](https://dev.to/thibmaek/explain-coroutines-like-im-five-2d9)
 > - [Educative: Multithreading and Concurrency Fundamentals](https://www.educative.io/blog/multithreading-and-concurrency-fundamentals)
 > - [InfoWorld: Is it Finally Time to Remove the Python GIL?](https://www.infoworld.com/article/3685373/is-it-finally-time-to-remove-the-python-gil.html)
+
+![](writeups/writeup-pics/asyncio-1.png)

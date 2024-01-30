@@ -1,10 +1,12 @@
 
 # Coroutines
 To understand coroutines, let's establish the definition of a function. A function is a block of code which is called, does some work, and then returns back to the caller. When one function calls another function *the second function has to return* before the first function can continue.
+<br>
 ![](/coding/coding-pics/coroutines-1.png)
 > [Educative](https://www.educative.io/answers/what-is-a-coroutine)
 
 A coroutine, on the other hand, can return to its caller at *multiple points in its execution*. To do this, coroutines *remember the exit point* of the first function as well as *the entry point* to the second function. So, when the first function starts is executing, and then *yields* control to the second function, the point at which the first function yields *will be remembered*. When the second function yields back to the first, execution of the first *will resume at the point that it first yielded*.
+<br>
 ![](/coding/coding-pics/coroutines-2.png)
 
 At each point that it returns to the caller, it pauses its execution at that point until it is called again, then picks up where it left off.
