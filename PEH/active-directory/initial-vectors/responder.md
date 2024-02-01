@@ -73,10 +73,12 @@ Note that all of the poisoner and server types should be on. If you've used Resp
 In a real pentest, you might not see any traffic until staff in the client organization actually login to their AD accounts. So, to force some traffic in our lab simulation, we can login to one of our regular domain VMs.
 ### Traffic From Powering Up Host
 ![](PNPT-pics/active-directory-9.png)
+![](/PNPT-pics/active-directory-9.png)
 This is the traffic I was able to capture simply by powering on one of my AD user boxes (haven't logged in as that user yet). This traffic tells us that an MDNS (multicast DNS) request to resolve the hostname *`TRASHCAN.local`*. Our rogue server *responded w/ a poisoned answer* (which was sent to our user box which we powered up).
 ### Searching for IP in filesystem
 Now, if we go to the user VM's File Explorer and search for the IP *of our attacking machine* we get the following hash in Responder:
 ![](PNPT-pics/active-directory-10.png)
+![](/PNPT-pics/active-directory-10.png)
 This screenshot shows the hash our rogue server received when Dan Dumpster searched for our attacking IP address while logged in to a domain computer. Now that we have the hash (which is an DES-made hash) we can easily crack it to get Dan Dumpster's password.
 ## Cracking the Hash
 To crack this hash, we're going to use [Hashcat](/cybersecurity/tools/cracking/hashcat.md). Hashcat is a cracking program which *ideally* uses GPU processing to crack hashes in many different formats. To crack this hash, we're going to specify a value of 5600 to the `-m` flag. This tells hashcat that we're cracking an [NTLMv2](networking/protocols/NTLM.md) hash.
@@ -89,6 +91,7 @@ hashcat -m 5600 hashes.txt /usr/share/wordlists/rockyou.txt
 ```
 We're also using the RockYou [wordlist](/cybersecurity/tools/scanning-enumeration/wordlists/seclists.md) which hashcat will use to generate hashes to try and match the one we're looking for. Even in a VM, this crack only takes hashcat about 16 seconds:
 ![](PNPT-pics/active-directory-11.png)
+![](/PNPT-pics/active-directory-11.png)
 Now we can log in as Dan Dumpster!
 
 > [!Resources]
