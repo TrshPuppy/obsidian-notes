@@ -103,7 +103,7 @@ Instead of using Metasploit, we can find a way to use EternalBlue ourselves:
 ### Searchsploit
 ![](nested-repos/PNPT-study-guide/PNPT-pics/blue-2.png)
 ![](/PNPT-pics/blue-2.png)
-Let's go through out searchsploit/ exploit db flow again. Using `searchsploit` we can see that we have three options for exploit code; all three use [python](coding/languages/python.md), all three are for Windows, but only 2 can exploit Windows 7 (our target).
+Let's go through out searchsploit/ exploit db flow again. Using `searchsploit` we can see that we have three options for exploit code; all three use [python](coding/languages/python/python.md), all three are for Windows, but only 2 can exploit Windows 7 (our target).
 
 We can either checkout the code on our machine at the path `/usr/share/exploitdb/exploits/windows/remote/42031.py` or on [Exploit DB](https://www.exploit-db.com/exploits/42031). Unfortunately, this script, as well as the alternative (ID 42315) don't work right out of the box w/o some major debugging. So let's find a reliable version on google.
 ### GitHub
@@ -113,7 +113,7 @@ W/o having to read through every line, we can use check the trustworthiness of a
 
 Additionally, it comes with an easy to follow walkthrough on how to set it up.
 ### 3ndG4me AutoBlue-MS17-010
-Since this is a [python](coding/languages/python.md) script, we can go through the walkthrough *and avoid cluttering our machine w/ installs etc* by using python venv. To install python venv, just attempt to use it, and python will tell you what package to install if you don't have it.
+Since this is a [python](coding/languages/python/python.md) script, we can go through the walkthrough *and avoid cluttering our machine w/ installs etc* by using python venv. To install python venv, just attempt to use it, and python will tell you what package to install if you don't have it.
 #### Python Venv
 Python venv is essentially a tiny VM where you can do all of your dev work on python. It creats a virtual environment for needed dependencies etc.. You can destroy it once you're done, allowing you to avoid installing unneeded BS on your machine.
 

@@ -12,5 +12,6 @@ For example, if a victim machine sends an LLMNR request for a hostname like `\\l
 The victim machine will respond: "yes! I want that IP address," but in order to receive the IP address from the authoritative server, the victim has to authenticate w/i it by *sending [NTLM](/networking/protocols/NTLM.md) hash*. This hash includes a random number sent by the server, [encrypted](/computers/concepts/cryptography/cryptography.md) using the DES algorithm *and the user's password as the key.*
 
 Since DES is *an old and vulnerable algorithm which is easy to crack*, the attacker can easily get the password of the victim by cracking the hash sent by the victim computer during authentication w/ their fake authoritative server.
+
 > [!Resources]
 > - My other notes (linked throughout), all of which can be found [here](https://github.com/TrshPuppy/obsidian-notes)

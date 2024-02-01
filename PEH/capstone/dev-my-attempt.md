@@ -488,7 +488,7 @@ This search returns a few results. We're looking for Bolt v3.7 and there is one 
 ![](nested-repos/PNPT-study-guide/PNPT-pics/dev-14.png)
 ![](/PNPT-pics/dev-14.png)
 
-Finding this exploit on [Exploit DB](https://www.exploit-db.com/exploits/48296) we can peruse the code, written in [python](coding/languages/python.md). It appears that if you're authenticated to BoltCMS, you're able to take advantage of their routing system to achieve RCE via an injection into a URL containing `/files/test{}.php?test=<injection>`.
+Finding this exploit on [Exploit DB](https://www.exploit-db.com/exploits/48296) we can peruse the code, written in [python](coding/languages/python/python.md). It appears that if you're authenticated to BoltCMS, you're able to take advantage of their routing system to achieve RCE via an injection into a URL containing `/files/test{}.php?test=<injection>`.
 
 We *have a user which we registered* so let's attempt this while authenticated as that user:
 ![](nested-repos/PNPT-study-guide/PNPT-pics/dev-15.png)
