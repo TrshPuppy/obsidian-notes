@@ -8,7 +8,7 @@ The victim user has to have some type of privilege or trust relationship w/ the 
 
 The privilege the victim user has can be over their own user-controlled data (like their password) or the permissions/ data of other users. For example, an attacker might use CSRF to take advantage of the victim user *changing their password*. Changing their password would be the privileged action in this case.
 ### Cookie-based Sessions
-The privileged action the attacker is trying to manipulate involves sending [HTTP](/networking/protocols/HTTP.md) requests. Most *vulnerable* applications *rely solely on session cookies* to identify the user in these requests. If there is no other method to validate the user, than an attacker can use session cookies unique to the victim to perform CSRF.
+The privileged action the attacker is trying to manipulate involves sending [HTTP](www/HTTP.md) requests. Most *vulnerable* applications *rely solely on session cookies* to identify the user in these requests. If there is no other method to validate the user, than an attacker can use session cookies unique to the victim to perform CSRF.
 ### Predictable Request Parameters
 The requested action (being made to the application via HTTP) has to contain parameters which *the attacker knows or can easily guess*. An example of a parameter which is unpredictable is the user's current password.
 

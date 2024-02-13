@@ -81,13 +81,13 @@ Usability of the RAT is a major constraint, so a lot of energy in building a RAT
 The second part of the Weaponization phase is developing the exploit. The exploit is what carries and delivers the RAT. It uses vulnerabilities in the target software/ system to deliver the RAT.
 
 A major objective of the RAT is to avoid target detection while establishing a backdoor. Once the RAT is installed, persistence, privilege escalation, data exfiltration, spreading, etc. can be achieved by the RAT Client/Server.
-#### Delivery
+### Delivery
 How the weapon/payload gets delivered
 *Examples*:
 1. [watering-hole](cybersecurity/TTPs/delivery/watering-hole.md)
 2. [phishing](cybersecurity/TTPs/delivery/phishing.md)
 3. [candy-drop](cybersecurity/TTPs/delivery/candy-drop.md)
-#### Exploitation
+### Exploitation
 When the attacker uses a vulnerability in a device/ system to gain access to the target system.
 
 *Ex of exploits:*
@@ -95,7 +95,7 @@ When the attacker uses a vulnerability in a device/ system to gain access to the
 2. [zero-day](/cybersecurity/TTPs/exploitation/zero-day.md)
 3. vulnerabilities in software/ hardware or even human
 4. server-based vulnerabilities
-#### Installation
+### Installation
 Once an attacker is in, they need to install something to establish persistence (a way to gain access again)
 ##### Persistence:
 Persistence is the first step once you're on a breached system. You need to be able to:
@@ -116,19 +116,19 @@ Attackers can also *masquerade a payload* by using service names which are known
 They can also add entries to the *run keys* of the malicious payload to the Registry or startup folder. This will cause their payload to *execute each time the user logs into the computer*.
 ##### Timestamping
 Timestamping is a a technique used by attackers to avoid forensic detection. It helps make malware appear legitimate and allows the attacker to modify file timestamps, including when the file was last modified, accessed, created, etc..
-#### Command and Control ([C2](/cybersecurity/TTPs/C2/C2.md))
+### Command and Control ([C2](/cybersecurity/TTPs/C2/C2.md))
 This phase describes how attackers maintain remote control/ manipulation of the victim. The compromised victim/ endpoint communicates to an external sever set up by the attacker.
 
 The C2 infrastructure may be owned by the attacker *but also by another compromised host*. Some examples of how C2 can be achieved include:
 ##### IRC (Internet Relay Chat)
 This method used to be common for C2 communication but is now easily detected.
-##### [HTTP](/networking/protocols/HTTP.md) on `port 80` OR [HTTPS](/networking/protocols/HTTPS.md) on `port 443`
+##### [HTTP](www/HTTP.md) on `port 80` OR [HTTPS](www/HTTPS.md) on `port 443`
 This method is much more common. It allows attackers to blend malicious traffic w/ legitimate traffic, helping them evade [firewalls](/cybersecurity/defense/firewalls.md).
 ##### [DNS](/networking/DNS/DNS.md)
 Attackers can use DNS to set up command and control by purchasing/ registering a *DNS nameserver*. Then, if they can make the victim's machine make DNS requests to the malicious server, they can use that connection to control the rest of their activity on the victim remotely.
 
 This is also known as [DNS Tunneling](/cybersecurity/TTPs/C2/DNS-tunneling.md).
-#### Actions on Objective:
+### Actions on Objective:
 This part of the cyber kill chain covers all the actions an attacker might take on a victim device once they've exploited it and gained persistent access.
 
 This can include several things like collecting user credentials, [privilege escalation](/cybersecurity/TTPs/actions-on-objective/privesc.md), lateral movement thru the network, collecting and exfiltrating data, internal recon, deleting backups/ logs/ shadow-copies to *cover their tracks*, overwrite/ corrupt data, etc..

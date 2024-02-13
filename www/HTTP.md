@@ -18,6 +18,5 @@ Proxies are *able to change the request/ response* before it reaches its destina
 ### User Agent string
 The User Agent request header is a unique string which lets servers and "network peers" identify an application, OS, vendor and/or version of the requesting user agent.
 
-
 > [!Resources]
 > - [MDN: HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)
