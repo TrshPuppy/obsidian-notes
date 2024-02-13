@@ -1,2 +1,0 @@
-
-# MITRE ATT&CK Matrix
