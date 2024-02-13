@@ -16,7 +16,7 @@ Some common ports:
 |-|-|-|
 |21| #FTP | see [FTP](/networking/protocols/FTP.md), #port-21 |
 |22| #SSH | securely log into systems via text-interface, see #port-22 |
-|80| #HTTP | for browsers and the #World-Wide-Web, see [HTTP](/networking/protocols/HTTP.md), #port-80 |
+|80| #HTTP | for browsers and the #World-Wide-Web, see [HTTP](www/HTTP.md), #port-80 |
 |443| #HTTPS|same as port 80 but traffic is encrypted, see #port-443 |
 |445| #SMB|similar to FTP, see [SMB](/networking/protocols/SMB.md), #port-445 |
 |3389| #RDP| see [RDP](/networking/protocols/RDP.md), #port-3389 |

@@ -41,7 +41,7 @@ PORT   STATE SERVICE
 
 Nmap done: 1 IP address (1 host up) scanned in 0.90 seconds
 ```
-We can see that the target is running [SSH](networking/protocols/SSH.md), [FTP](networking/protocols/FTP.md), and [HTTP](networking/protocols/HTTP.md) services. I like to start by looking at HTTP.
+We can see that the target is running [SSH](networking/protocols/SSH.md), [FTP](networking/protocols/FTP.md), and [HTTP](www/HTTP.md) services. I like to start by looking at HTTP.
 ### `Port 80`/ HTTP
 Before visiting the website, I like to use [curL](CLI-tools/linux/curL.md) first. You can either just grab the headers using the `-I` flag:
 ```bash

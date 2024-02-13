@@ -1,6 +1,6 @@
 
 # Routing Tables
-Routing tables are tables of IP Addresses maintained by [L3](/networking/OSI/network-layer.md) devices like routers and L3 switches. Routing tables are basically data structures which routers refer to to determine the path to transfer packets from a source IP address to a destination IP.
+Routing tables are tables of [IP addresses](networking/OSI/IP-addresses.md) maintained by [L3](/networking/OSI/network-layer.md) devices like routers and L3 switches. Routing tables are basically data structures which routers refer to to determine the path to transfer packets from a source IP address to a destination IP.
 
 A routing table includes the following things:
 1. *Destination Network:* represented by a destination IP Address and its [subnet mask](nested-repos/PNPT-study-guide/PEH/networking/subnetting.md).
@@ -20,7 +20,7 @@ Routing tables can also include additional fields which help refine the the sele
 
 Example of a routing table when using the `netstat -rn` command:
 ![](/networking/networking-pics/routing-table-1.png)
--[Cysec Guide: Linux routing table](https://cysecguide.blogspot.com/2017/12/linux-routing-table.html)
+> [Cysec Guide: Linux routing table](https://cysecguide.blogspot.com/2017/12/linux-routing-table.html)
 ## Routing Protocols: 
 Routing protocols are protocols which routers use to communicate with each other about the topology of their networks. These protocols allow routers to share and update their own information on how data should be routed between sources and destinations.
 

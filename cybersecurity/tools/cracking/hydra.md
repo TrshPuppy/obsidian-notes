@@ -55,7 +55,7 @@ hydra  -l molly -p peanuts -f 10.10.10.136 ssh -s 6969
 This field takes the service you want hydra to brute force on the target IP. If you want to brute force an [SSH](/networking/protocols/SSH.md) login for example, you provide `ssh`.
 
 #### `http` service
-For an [HTTP](/networking/protocols/HTTP.md) brute force, you need to provide the URL *w/ a placeholder for where hydra should inject the credentials*. Additionally, the URL string will be divided into *3 parts by the `:` delimiter* like this:
+For an [HTTP](www/HTTP.md) brute force, you need to provide the URL *w/ a placeholder for where hydra should inject the credentials*. Additionally, the URL string will be divided into *3 parts by the `:` delimiter* like this:
 ```bash
 hydra ... http-post-form "<URL endpoint>:<parameters to bruteforce>:<error string>"
 ```

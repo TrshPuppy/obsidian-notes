@@ -51,7 +51,7 @@ tor.service - Anonymizing overlay network for TCP (multi-instance-master)
 
 ## Configuration:
 ### Proxy Chains:
-Tor routes your VPN connection through proxy chaining. In the [HTTP protocol](/networking/protocols/HTTP.md) proxies/ proxy servers are servers which are configured to forward [TCP](/networking/protocols/TCP.md) connections to a desired destination. The server makes the connection *on behalf of the client* to the destination.
+Tor routes your VPN connection through proxy chaining. In the [HTTP protocol](www/HTTP.md) proxies/ proxy servers are servers which are configured to forward [TCP](/networking/protocols/TCP.md) connections to a desired destination. The server makes the connection *on behalf of the client* to the destination.
 
 The initial connection is done via HTTP. Then subsequent data sent b/w the server (on behalf of the client) to the destination is sent via a TCP stream.
 

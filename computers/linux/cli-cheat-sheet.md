@@ -48,7 +48,7 @@ These features can be used w/i nano by pressing the `Ctrl` key + the desired swi
 Vim and Vi are other similar CLI text editors.
 ## Transferring files
 ### wget
-Allows you to download files from the web using [HTTP](/networking/protocols/HTTP.md). Just need to supply `wget` with the address of the resource.
+Allows you to download files from the web using [HTTP](www/HTTP.md). Just need to supply `wget` with the address of the resource.
 ```bash
 wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt
 ```

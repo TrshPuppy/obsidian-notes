@@ -1,6 +1,6 @@
 
 # curL Command:
-The linux `curl` command is a tool used to transfer data to and from a server using various protocols. It's most commonly used with [HTTP](/networking/protocols/HTTP.md) & [HTTPS](/networking/protocols/HTTPS.md) but supports many others including:
+The linux `curl` command is a tool used to transfer data to and from a server using various protocols. It's most commonly used with [HTTP](www/HTTP.md) & [HTTPS](www/HTTPS.md) but supports many others including:
 - [FTP/S](/networking/protocols/FTP.md)
 - [IMAP/S](/networking/protocols/IMAP.md)
 - [POP3/S](/networking/protocols/POP3.md)

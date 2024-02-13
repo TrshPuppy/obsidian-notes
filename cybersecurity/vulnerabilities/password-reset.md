@@ -7,7 +7,7 @@ In order for the user to request a password reset, the service needs to be able 
 When the potential user requests a reset, generate a token, attach it to the URL query string, and send the URL to the user's email. When the user gets the email, they click the link which takes them to the URL w/ the token attached. The user can then make a new password *and confirm it*.
 #### Security
 1. When making the token, don't use the *Host header* to authenticate the requesting user. This can make the interaction vulnerable to [Host Header Injection](/cybersecurity/TTPs/exploitation/injection/HHI.md).
-2. Ensure the URL is *[HTTPS](/networking/protocols/HTTPS.md)*.
+2. Ensure the URL is *[HTTPS](www/HTTPS.md)*.
 3. The password reset page should have the *Referrer Policy* tag set to `noreferrer`. This protects against [referrer leakage](/cybersecurity/vulnerabilities/referrer-leakage.md).
 4. Prevent [brute forcing]() techniques against the token w/ protections like [rate-limiting](/cybersecurity/defense/rate-limiting.md).
 ### PINs

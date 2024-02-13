@@ -64,7 +64,7 @@ When the browser asks to communicate w/ `127.0.0.1` (the device's localhost/ loo
 
 The entire routing process is different in this case as compared to the browser's request for `google.com`:
 #### Browser asks IP stack for `127.0.0.1`:
-The browser sends an [HTTP](/networking/protocols/HTTP.md) `GET` request to the IP stack, looking for the IP `127.0.0.1`. The request will also use TCP so port 80 will be added to the request.
+The browser sends an [HTTP](www/HTTP.md) `GET` request to the IP stack, looking for the IP `127.0.0.1`. The request will also use TCP so port 80 will be added to the request.
 
 The IP stack *knows that `127.0.0.1`* is a special case. It basically says "This is me so I'm gonna *loop it back* to myself". Then it checks to see if anything is listening on port 80.
 

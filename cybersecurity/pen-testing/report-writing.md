@@ -59,7 +59,7 @@ This section should include:
 ### Recommendations or Remediations:
 This section should provide the client w/ recommendations for the short, medium, and long terms. It should start by addressing the *most critical flaws first*, then high and medium. If there are low priority findings and/ or a lot of findings, they can be *included in an attached appendix.*
 
-The best way to report the severity of findings + recommended fixes is to *use a scoring system* & classification set. The [CVSS](/cybersecurity/literature/CVSS.md) (Common Vulnerability Scoring System) and [CVEs](/cybersecurity/literature/CVEs.md).
+The best way to report the severity of findings + recommended fixes is to *use a scoring system* & classification set. The [CVSS](cybersecurity/resources/CVSS.md) (Common Vulnerability Scoring System) and [CVEs](cybersecurity/resources/CVEs.md).
 
 This section can also be organized *based on findings* like this:
 ```txt

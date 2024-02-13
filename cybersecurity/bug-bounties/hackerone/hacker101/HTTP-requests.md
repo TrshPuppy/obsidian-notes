@@ -2,7 +2,7 @@
 # The Web in Depth: HTTP Requests
 (How to do bug bounties from [hackerone](https://www.hacker101.com/start-here))
 
-# [HTTP](/networking/protocols/HTTP.md) Requests:
+# [HTTP](www/HTTP.md) Requests:
 ## Basic Format:
 ```HTTP
 VERB/resource/locator HTTP/1.1
@@ -38,7 +38,7 @@ These flags are set in the `Set-Cookie` header which is indicated by the server.
 	- If this isn't set, the cookie can't be ready using the `document.cookie` variable available in JS.
 
 ### Referer:
-Page leading to the current request. This is *not* passed to other servers when using [HTTPS](/networking/protocols/HTTPS.md) on the origin.
+Page leading to the current request. This is *not* passed to other servers when using [HTTPS](www/HTTPS.md) on the origin.
 
 ### Authorization:
 Used for basic authentication pages. Takes the form of: `Basic <base64'd username:password>`. Ex: [NTLM](/networking/protocols/NTLM.md).

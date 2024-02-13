@@ -5,7 +5,7 @@ nmap [Scan Type(s)] [Options] {target sppecification}
 ```
 ## Usage:
 ### Host Discovery:
-Nmap Automatically does host discovery with each scan unless *told otherwise*. If not host discovery options are provided, nmap sends an [ICMP](networking/protocols/ICMP.md) echo request, a TCP `SYN` packet to port 443 ([HTTPS](networking/protocols/HTTPS.md)), and a TCP `ACK` packet to port 80 ([HTTP](networking/protocols/HTTP.md)).
+Nmap Automatically does host discovery with each scan unless *told otherwise*. If not host discovery options are provided, nmap sends an [ICMP](networking/protocols/ICMP.md) echo request, a TCP `SYN` packet to port 443 ([HTTPS](www/HTTPS.md)), and a TCP `ACK` packet to port 80 ([HTTP](www/HTTP.md)).
 
 These defaults *change depending on if nmap is run w/ root privileges*. Additionally, if any targets are *on a local ethernet connection*, the default host discovery includes [ARP](networking/protocols/ARP.md) and 'Neighbor Discovery' scans.
 #### `-Pn` No Ping

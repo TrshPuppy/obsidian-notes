@@ -1,10 +1,10 @@
 
 # Nuclei Vulnerability Scanner
-[Nuclei](https://github.com/projectdiscovery/nuclei) is a CLI-based *EXPLOITABLE* vulnerability scanner. It works by 'sending requests across targets based on  a template'. It can scan across multiple protocols including [TCP](/networking/protocols/TCP.md), [DNS](/networking/DNS/DNS.md), [HTTP](/networking/protocols/HTTP.md), [SSL](/networking/protocols/SSL.md), [FTP](/networking/protocols/FTP.md), [WHOIS](/networking/protocols/whois.md), etc..
+[Nuclei](https://github.com/projectdiscovery/nuclei) is a CLI-based *EXPLOITABLE* vulnerability scanner. It works by 'sending requests across targets based on  a template'. It can scan across multiple protocols including [TCP](/networking/protocols/TCP.md), [DNS](/networking/DNS/DNS.md), [HTTP](www/HTTP.md), [SSL](/networking/protocols/SSL.md), [FTP](/networking/protocols/FTP.md), [WHOIS](/networking/protocols/whois.md), etc..
 ## Methodology
 Nuclei uses [YAML](/coding/languages/YAML.md) files as templates to create and define methods for detecting and ranking security vulnerabilities on a target. Each template can be thought of as a *possible attack route*.
 ### Templates
-Each YAML template *details a possible attack route* for a target. The template describes the vulnerability, its [severity](/cybersecurity/literature/CVSS.md), priority, and associated exploits (if applicable). Templating allows Nuclei to supplement discovered vulnerabilities w/ potential threats and exploits.
+Each YAML template *details a possible attack route* for a target. The template describes the vulnerability, its [severity](cybersecurity/resources/CVSS.md), priority, and associated exploits (if applicable). Templating allows Nuclei to supplement discovered vulnerabilities w/ potential threats and exploits.
 
 Templates are downloaded onto your machine with nuclei and are kept in the nuclei install path in `/<nuclei root dir>/nuclei-templates`.  `cd`ing and listing everything in this directory will show  all the sub-directories of templates:
 ```bash

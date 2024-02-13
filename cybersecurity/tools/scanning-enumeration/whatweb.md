@@ -155,7 +155,7 @@ Lets you set your own user agent for the request. Defaults to `WhatWeb/0.5.5` if
 WhatWeb can be set to 3 levels of aggression w/ the `-a` flag:
 1. Stealthy: only one HTTP request + redirects per target
 2. Unused
-3. Aggressive: Makes multiple [HTTP](/networking/protocols/http.md) requests per target. Also triggers *aggressive plugins* (plugins which have the option to be ran at level 2), but only if their targets are "identified with a level 1 request first".
+3. Aggressive: Makes multiple [HTTP](www/HTTP.md) requests per target. Also triggers *aggressive plugins* (plugins which have the option to be ran at level 2), but only if their targets are "identified with a level 1 request first".
 4. Heavy: Even more HTTP requests per target *and all aggressive tests from all plugins are used for all target URLs* (regardless of whether the target showed up at level 1 aggression)
 
 Each level becomes less stealthy but more accurate in its resultant output. WhatWeb *defaults to level 1* unless the `-a` flag is give.

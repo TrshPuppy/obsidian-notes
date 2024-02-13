@@ -13,7 +13,7 @@ Contains notes on different defensive/ blue team techniques. For example, [firew
 ### [Hardware Hacking](/cybersecurity/hardware-hacking)
 Notes relating specifically to hardware. Right now all it contains is my notes on how radio frequencies work, lol. More to come.
 ### [Literature](/cybsersecurity/literature)
-Contains links to resources like [Akamai](/cybersecurity/literature/Akamai.md) and [OWASP](/cybersecurity/literature/OWASP.md) as well as conceptual notes on things like [CVEs](/cybersecurity/literature/CVEs.md) and [CVSS](/cybersecurity/literature/CVSS.md).
+Contains links to resources like [Akamai](cybersecurity/resources/Akamai.md) and [OWASP](cybersecurity/resources/OWASP.md) as well as conceptual notes on things like [CVEs](cybersecurity/resources/CVEs.md) and [CVSS](cybersecurity/resources/CVSS.md).
 ### [Malware](/cybersecurity/malware)
 Holds my notes related to specific, common/ noteworthy malware such as [Emotet](/cybersecurity/malware/emotet.md).
 ### [Opsec](/cybersecurity/opsec)
