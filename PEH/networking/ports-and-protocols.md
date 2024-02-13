@@ -33,7 +33,7 @@ If the domain is not in the recursive server, a request will be sent to a Root N
 
 Each Top Level Domain server keeps track of a specific top level domain (ex: `com` from `site.com`) and all of the Second Level Domains associated with it. From there, a TLD can be queried for the Second Level Domains it umbrellas (ex: `site` from `site.com`).
 
-### [HTTP](/networking/protocols/http.md) & [HTTPS](/networking/protocols/https.md):
+### [HTTP](www/HTTP.md) & [HTTPS](www/HTTPS.md):
 HTTP (port 80) and HTTPS (port 443) are protocols which dictate how "hypermedia documents" like HTML are transmitted between devices. These protocols relate mainly to the application layer of the OSI model.
 
 HTTP and HTTPS were developed in order to standardize how a web browser and a web server communicate. When the browser asks a server for the information it is storing related to a website address (`site.com`), it uses HTTP. When the server sends the website data it is storing to the web browser, it also uses HTTP.

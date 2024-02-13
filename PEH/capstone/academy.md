@@ -288,7 +288,7 @@ There are some timers, but none seem to be related to our backup file.
 #### psypy
 [psypy](/cybersecurity/tools/actions-on-objective/psypy.md) is a tool developed by DominicBreuker on GitHub. It allows us to monitor linux processes *without root permissions* w/ live updates. Other linux tools like `top`, `lsof`, and `ps aux` can also be used.
 ##### Usage
-To use psypy as Grimmie we need to get it on the target machine. To do this, first we need to download and install it from the [psypy repo](https://github.com/DominicBreuker/pspy)  on our own machine, then serve it using [HTTP](networking/protocols/HTTP.md).
+To use psypy as Grimmie we need to get it on the target machine. To do this, first we need to download and install it from the [psypy repo](https://github.com/DominicBreuker/pspy)  on our own machine, then serve it using [HTTP](www/HTTP.md).
 
 Once it's served, we can `cd` into `/tmp` where `backup.zip` is and use `wget` to download it on the target machine. Now, change the permissions of `pspy64` so we can execute it using `chmod +x pspy64`. Now we can run it:
 ```bash

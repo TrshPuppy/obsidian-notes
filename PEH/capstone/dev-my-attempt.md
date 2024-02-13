@@ -23,7 +23,7 @@ MAC Address: 08:00:27:75:18:29 (Oracle VirtualBox virtual NIC)
 Nmap done: 1 IP address (1 host up) scanned in 6.66 seconds
 ```
 ## 2. Port 80 & 8080
-### 80 [HTTP](networking/protocols/HTTP.md)
+### 80 [HTTP](www/HTTP.md)
 ![](nested-repos/PNPT-study-guide/PNPT-pics/dev-1.png)
 ![](/PNPT-pics/dev-1.png)
 #### Findings:

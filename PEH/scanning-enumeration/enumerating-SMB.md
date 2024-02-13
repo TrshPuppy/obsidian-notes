@@ -6,7 +6,7 @@ The SMB/ "samba" service (normally hosted on ports `445` or `139`) can be access
 
 In the [Kioptrix](nested-repos/PNPT-study-guide/PEH/scanning-enumeration/kioptrix.md) box, we can see from our [nmap](/CLI-tools/linux/nmap.md) scan that the Workgroup identified on port `445` is `MYGROUP`. 
 ## Versioning
-Determining the version of the SMB service running is useful (and considered a finding) because you can use the version to find [CVEs](/cybersecurity/literature/CVEs.md) and exploits which have already been developed and used successfully against it.
+Determining the version of the SMB service running is useful (and considered a finding) because you can use the version to find [CVEs](cybersecurity/resources/CVEs.md) and exploits which have already been developed and used successfully against it.
 
 If Nmap was unable to find the exact version with the `-sV` flag (and w/ `--version-intensity` set to 9), then you can use other tools.
 ### [Metasploit](cybersecurity/tools/exploitation/metasploit.md)

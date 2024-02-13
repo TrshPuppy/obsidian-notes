@@ -70,7 +70,7 @@ Nmap done: 1 IP address (1 host up) scanned in 34.16 seconds
 #### Web Architecture:
 From this scan we learn some things about the target's architecture:
 1. The server supports OpenSSHv1 and we have some exposed host-keys (used to authenticate during an [SSH](/networking/protocols/SSH.md) connection)
-2. Ports 80 and 443 ([HTTP](/networking/protocols/HTTP.md) & [HTTPS](/networking/protocols/HTTPS.md)) are running an Apache server, v1.3.20 as well as OpenSSL
+2. Ports 80 and 443 ([HTTP](www/HTTP.md) & [HTTPS](www/HTTPS.md)) are running an Apache server, v1.3.20 as well as OpenSSL
 
 **NOTE:** Any information about the software being used by the target, and the software's versions, is considered a finding because it can be used by an attacker to find exploits/ CVE's related to that software and its version.
 ##### Open[SSL](networking/protocols/SSL.md)

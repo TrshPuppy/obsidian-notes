@@ -1,6 +1,6 @@
 
 # Enumerating HTTP & HTTPS
-Ports 80 and 443 are *normally* assigned to host web services using the [HTTP](/networking/protocols/HTTP.md) and [HTTPS](/networking/protocols/HTTPS.md) protocols (respectively). These protocols are used for communication between a web server and a web browser over the [application layer](/networking/OSI/OSI-reference-model.md) of the OSI model.
+Ports 80 and 443 are *normally* assigned to host web services using the [HTTP](www/HTTP.md) and [HTTPS](www/HTTPS.md) protocols (respectively). These protocols are used for communication between a web server and a web browser over the [application layer](/networking/OSI/OSI-reference-model.md) of the OSI model.
 ## Information Gathering:
 Ports 80 and 443 being present on a scan of a target indicate the target is likely hosting web services. Investigating these ports is a good way to gather information on the target. You can find out a lot about their architecture, services/ applications they use, etc..
 ### Via Terminal:

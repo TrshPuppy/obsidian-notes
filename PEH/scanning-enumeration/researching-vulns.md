@@ -62,11 +62,11 @@ Keep notes on the vulnerabilities you find so you they're easier to reference wh
 80/443: Potentially vulnerable to OpenFuck (https://www.exploit-db.com/exploits/764)
 ```
 ## Determining Severity:
-Now let's search for vulnerabilities and exploits r/t `Apache v1.3.20` (the [HTTP](/networking/protocols/HTTP.md) server running on `port 80`).
+Now let's search for vulnerabilities and exploits r/t `Apache v1.3.20` (the [HTTP](www/HTTP.md) server running on `port 80`).
 ### [CVE Details](https://cvedetails.com)
-CVE Details is another source we can use to research our vulnerabilities. If we search `apache 1.3.20` we can find multiple [CVEs](/cybersecurity/literature/CVEs.md) r/t the server we found.
+CVE Details is another source we can use to research our vulnerabilities. If we search `apache 1.3.20` we can find multiple [CVEs](cybersecurity/resources/CVEs.md) r/t the server we found.
 
-Each CVE is *rated based on severity* (1-10) using the [CVSS](/cybersecurity/literature/CVSS.md) (Common Vulnerability Scoring System). We want to find one for our server version which has a high severity.
+Each CVE is *rated based on severity* (1-10) using the [CVSS](cybersecurity/resources/CVSS.md) (Common Vulnerability Scoring System). We want to find one for our server version which has a high severity.
 ### Vulnerability Scoring (CVSS):
 The CVSS for a CVE is determined using three metrics:
 #### 1. Base
@@ -104,7 +104,7 @@ Researching more on this specific vulnerability can tell us more about how succe
 ![](/PNPT-study-guide/PNPT-pics/researching-vulns-3.png)
 > [NVD](https://nvd.nist.gov/vuln-metrics/cvss/v2-calculator?name=CVE-2003-0201&vector=(AV:N/AC:L/Au:N/C:C/I:C/A:C)&version=2.0&source=NIST)
 
-Looking at [CVE Details](https://www.cvedetails.com/epss/CVE-2003-0201/epss-score-history.html) we can see that the [EPSS](/cybersecurity/literature/EPSS.md) (Exploit Prediction Scoring System) for this CVE is *96.89%* which reflects the likelihood of trans2open being used in the next 30 days. This score was re-calculated *in March of 2023*, lending to the temporal severity.
+Looking at [CVE Details](https://www.cvedetails.com/epss/CVE-2003-0201/epss-score-history.html) we can see that the [EPSS](cybersecurity/resources/EPSS.md) (Exploit Prediction Scoring System) for this CVE is *96.89%* which reflects the likelihood of trans2open being used in the next 30 days. This score was re-calculated *in March of 2023*, lending to the temporal severity.
 ![](nested-repos/PNPT-study-guide/PNPT-pics/researching-vulns-2.png)
 ![](/PNPT-study-guide/PNPT-pics/researching-vulns-3.png)
 > [CVE Details](https://www.cvedetails.com/epss/CVE-2003-0201/epss-score-history.html)
