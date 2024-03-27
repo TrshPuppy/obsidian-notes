@@ -83,6 +83,10 @@ In this example:
 - `0`: 0 is the type of algorithm which in this case is MD5
 - `hashes`: the file containing *the hash we want to crack*
 - `.../rockyou.txt`: the wordlist hashcat should use
+### Example w/ [kerberos ticket](networking/protocols/kerberos.md)
+```bash
+hashcat -m18200 tgt -a 0 /usr/share/wordlists/rockyou.txt
+```
 
 > [!Resources]
 > - [Hashcat](https://hashcat.net/wiki/)

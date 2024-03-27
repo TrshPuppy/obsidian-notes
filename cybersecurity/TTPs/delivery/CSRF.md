@@ -52,7 +52,7 @@ With this vulnerable change-email action in the application, an attacker can per
 ```
 Next, the attacker has to get the user to visit their webpage. If the user is logged in the browser will *automatically pull the session cookie of the user* when it visits `vulnerable-website.com` (however, this is assuming `SameSite cookies` is not being used).
 
-The victim browser will make the request and the application will *process it normally* because the request appears to be coming from the victim. The victim's email dress will then be changed to `pwned@evil-user.com`.
+The victim browser will make the request and the application will *process it normally* because the request appears to be coming from the victim. The victim's email address will then be changed to `pwned@evil-user.com`.
 ## Common Defenses:
 Anti-CSRF mechanisms are nowadays present on both websites *and the browser itself*.
 ### CSRF Tokens
