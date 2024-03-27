@@ -28,3 +28,4 @@ Another good mitigation tactic is to *require strong user passwords* which are l
 
 > [!Resources]
 > - My other notes (linked throughout), all of which can be found [here](https://github.com/TrshPuppy/obsidian-notes)
+
