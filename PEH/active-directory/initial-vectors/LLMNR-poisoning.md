@@ -12,6 +12,19 @@ For example, if a victim machine sends an LLMNR request for a hostname like `\\l
 The victim machine will respond: "yes! I want that IP address," but in order to receive the IP address from the authoritative server, the victim has to authenticate w/i it by *sending [NTLM](/networking/protocols/NTLM.md) hash*. This hash includes a random number sent by the server, [encrypted](/computers/concepts/cryptography/cryptography.md) using the DES algorithm *and the user's password as the key.*
 
 Since DES is *an old and vulnerable algorithm which is easy to crack*, the attacker can easily get the password of the victim by cracking the hash sent by the victim computer during authentication w/ their fake authoritative server.
+## Mitigating LLMNR
+The best way to mitigate this attack vector is to *disable LLMNR and NBT-NS*. This can be done from Windows Server using group policies.
+### Steps:
+#### Turning off LLMNR:
+- From the Group Policy Editor, navigate to Computer Configuration > Administrative Templates > Network > DNS CLient
+- Turn off 'Multicast Name Resolution' under Local Computer Policy 
+#### Turning off NBT-NS:
+- Navigate to Network Connections > Network Adapter Properties > TCP/IPv4 Properties > Advanced tab > WINS tab
+- Select 'Disable [NetBIOS](networking/protocols/NetBIOS.md) over TCP/IP'
+### What if a Client CAN'T turn these off?
+The best way is to *require Network Access Control*. In other words, there should be limits to what computers actually get network access when plugged into the network. For example, network access can be limited based on [MAC addresses](networking/OSI/MAC-addresses.md), where only devices with specific MAC Addresses are given access to the network when they connect.
+
+Another good mitigation tactic is to *require strong user passwords* which are long and *avoid common words*. This makes cracking a captured hash *much harder*.
 
 > [!Resources]
 > - My other notes (linked throughout), all of which can be found [here](https://github.com/TrshPuppy/obsidian-notes)
