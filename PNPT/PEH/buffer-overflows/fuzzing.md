@@ -1,8 +1,8 @@
 
 # Fuzzing
-> Keep vulnserver and Immunity Debugger running from [spiking](PEH/buffer-overflows/spiking.md) section (run them with Admin privileges).
+> Keep vulnserver and Immunity Debugger running from [spiking](spiking.md) section (run them with Admin privileges).
 
-The difference between spiking and fuzzing is that in spiking we're *attacking multiple commands* in order to find vulnerable ones, and in fuzzing we're *attacking a single command* (which we know is vulnerable) in order to build an effective [buffer overflow](PEH/buffer-overflows/buffer-overflow-basics.md).
+The difference between spiking and fuzzing is that in spiking we're *attacking multiple commands* in order to find vulnerable ones, and in fuzzing we're *attacking a single command* (which we know is vulnerable) in order to build an effective [buffer overflow](buffer-overflow-basics.md).
 ## Python Script
 ```python
 `#!/usr/bin/python
@@ -51,7 +51,6 @@ When compiled into a binary, the vulnerable program will *take up the same amoun
 Once we know the offset, we can create our buffer overflow exploit using a payload of the same length as the offset. At the end of the payload, we place the address we want to send the CPU to. By the end, our payload will look something like this (replace `name` with `TRUN`):
 ![](/PNPT-pics/fuzzing-1.png)
 > My [writeup on basic buffer overflow](https://trshpuppy.github.io/portfolio/writeups/basic-buffer-overflow)
-
 ## Running the Script
 Once the script is finished, save it and remember to give it execution permissions using `chmod +x fuzz.py`. Make sure Immunity debugger is running w/ the vulnerable program attached and also running, then you can execute `fuzz.py`.
 
