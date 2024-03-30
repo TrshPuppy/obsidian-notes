@@ -27,11 +27,11 @@ OSINT usually refers to the gathering of *open source* intelligence on a target.
 
 There are some gray areas surrounding whether public info has been gathered legally or illegally depending on the means. For example, it's technically legal to do [subdomain enumeration](/cybersecurity/TTPs/subdomain-enumeration.md) if you were to do it by hand. But running a program against the domain which automates enumeration of its subdomains can be considered illegal.
 
-Most attackers perform a lot of [OSINT](/cybersecurity/TTPs/recon/OSINT.md) research into their target in order to discover vulnerabilities, patterns, etc.. Vulnerabilities can be technological or personal/ human in nature (for example: finding a staff member of a target who's public info can be used against them in a [social-engineering](cybersecurity/TTPs/delivery/social-engineering.md) attack).
+Most attackers perform a lot of [OSINT](/cybersecurity/TTPs/recon/OSINT.md) research into their target in order to discover vulnerabilities, patterns, etc.. Vulnerabilities can be technological or personal/ human in nature (for example: finding a staff member of a target who's public info can be used against them in a [social-engineering](/cybersecurity/TTPs/delivery/social-engineering.md) attack).
 #### Examples of OSINT techniques:
-- Looking at a target's website and finding what [technologies](nested-repos/PNPT-study-guide/PEH/recon/website-tech-recon.md) it uses.
+- Looking at a target's website and finding what [technologies](/PNPT/PEH/recon/website-tech-recon.md) it uses.
 - Looking up a target on google maps
-- *Passive* [email harvesting](nested-repos/PNPT-study-guide/PEH/recon/email-addresses.md): obtaining email addresses from public/ free services
+- *Passive* [email harvesting](/PNPT/PEH/recon/email-addresses.md): obtaining email addresses from public/ free services
 	1. [The Harvester](/cybersecurity/tools/recon/the-harvester.md) tool which can be used to harvest emails, as well as domains, sub domains, names, IP addresses, URLs etc.
 	2. [Hunter.io](https://hunter.io/email-finder)
 - Finding who works for a target using LinkedIn, etc.
@@ -40,13 +40,13 @@ Most attackers perform a lot of [OSINT](/cybersecurity/TTPs/recon/OSINT.md) rese
 
 Recon can also be done once you  have breached the target and have access to the system. After *persistence* has been established, further intelligence should be gathered which can be done quietly.
 
-Especially in [penetration testing](cybersecurity/pen-testing/penetration-testing.md) the questions once you've breached a system which further recon can answer are:
+Especially in [penetration testing](/cybersecurity/pen-testing/penetration-testing.md) the questions once you've breached a system which further recon can answer are:
 1. **What can I know** about this target?
 2. **What can I do** now that I've breached them?
 #### Examples of on-target recon techniques:
 - *Groups/Users*: who are you upon entrance? What other groups and users exist? What permissions do they have?
 - *Globbing the filesystem*: make a list/map of everything on the system. Get file names, paths, permissions. Find sensitive files which you may want to exfiltrate.
-- *Network mapping*: what IP addresses are local? What is the [subnet](nested-repos/PNPT-study-guide/PEH/networking/subnetting.md)? What does the [routing table](/networking/routing/routing-table.md) have in it?
+- *Network mapping*: what IP addresses are local? What is the [subnet](/PNPT/PEH/networking/subnetting.md)? What does the [routing table](/networking/routing/routing-table.md) have in it?
 - *OS*: what is the CPU architecture? How much memory/RAM is there?
 - etc.
 ## Weaponization:
@@ -84,9 +84,9 @@ A major objective of the RAT is to avoid target detection while establishing a b
 ### Delivery
 How the weapon/payload gets delivered
 *Examples*:
-1. [watering-hole](cybersecurity/TTPs/delivery/watering-hole.md)
-2. [phishing](cybersecurity/TTPs/delivery/phishing.md)
-3. [candy-drop](cybersecurity/TTPs/delivery/candy-drop.md)
+1. [watering-hole](/cybersecurity/TTPs/delivery/watering-hole.md)
+2. [phishing](/cybersecurity/TTPs/delivery/phishing.md)
+3. [candy-drop](/cybersecurity/TTPs/delivery/candy-drop.md)
 ### Exploitation
 When the attacker uses a vulnerability in a device/ system to gain access to the target system.
 
@@ -107,7 +107,7 @@ A backdoor is a way for an attacker to *establish a way back into the system* wh
 There are a few ways persistence can be achieved:
 ##### Installing a [web shell](/cybersecurity/TTPs/exploitation/web-shell.md) on a server
 ##### Installing a backdoor directly on the victim's machine
-An example of this technique is the use of [Metasploit's Meterpreter](cybersecurity/tools/exploitation/metasploit.md). Meterpreter is a *payload* which gives the user an interactive shell on *the target's network/device*.
+An example of this technique is the use of [Metasploit's Meterpreter](/cybersecurity/tools/exploitation/metasploit.md). Meterpreter is a *payload* which gives the user an interactive shell on *the target's network/device*.
 ##### Creating or modifying a Windows service
 An attacker can create or modify Windows services to execute malicious scripts/ payloads. One way to do this is via *Registry keys* to modify service configurations.
 
@@ -122,7 +122,7 @@ This phase describes how attackers maintain remote control/ manipulation of the 
 The C2 infrastructure may be owned by the attacker *but also by another compromised host*. Some examples of how C2 can be achieved include:
 ##### IRC (Internet Relay Chat)
 This method used to be common for C2 communication but is now easily detected.
-##### [HTTP](www/HTTP.md) on `port 80` OR [HTTPS](www/HTTPS.md) on `port 443`
+##### [HTTP](/www/HTTP.md) on `port 80` OR [HTTPS](/www/HTTPS.md) on `port 443`
 This method is much more common. It allows attackers to blend malicious traffic w/ legitimate traffic, helping them evade [firewalls](/cybersecurity/defense/firewalls.md).
 ##### [DNS](/networking/DNS/DNS.md)
 Attackers can use DNS to set up command and control by purchasing/ registering a *DNS nameserver*. Then, if they can make the victim's machine make DNS requests to the malicious server, they can use that connection to control the rest of their activity on the victim remotely.
