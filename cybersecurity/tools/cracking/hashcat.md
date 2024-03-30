@@ -1,8 +1,8 @@
 
 # Hashcat
-A CLI tool which is able to crack [hashes](computers/concepts/cryptography/hashing.md) of various algorithms. It works by using techniques like [dictionary attacks](cybersecurity/TTPs/exploitation/cracking/dictionary-attack.md), [combinator attacks](/cybersecurity/TTPs/cracking/compbinator-attack.md), [brute forcing](/cybersecurity/TTPs/cracking/brute-force.md), etc. against a provided hash.
+A CLI tool which is able to crack [hashes](/computers/concepts/cryptography/hashing.md) of various algorithms. It works by using techniques like [dictionary attacks](/cybersecurity/TTPs/exploitation/cracking/dictionary-attack.md), [combinator attacks](/cybersecurity/TTPs/cracking/compbinator-attack.md), [brute forcing](/cybersecurity/TTPs/cracking/brute-force.md), etc. against a provided hash.
 
-**hashcat uses your CPU to crack the hash**: so it can take a long time + may be too much work for your hardware depending on your system.
+**Hashcat uses your CPU to crack the hash**: so it can take a long time + may be too much work for your hardware depending on your system.
 ## Example (w/ MD5 hash)
 ```bash
 hashcat -m 0 hashes /usr/share/wordlists/rockyou.txt 
@@ -83,7 +83,7 @@ In this example:
 - `0`: 0 is the type of algorithm which in this case is MD5
 - `hashes`: the file containing *the hash we want to crack*
 - `.../rockyou.txt`: the wordlist hashcat should use
-### Example w/ [kerberos ticket](networking/protocols/kerberos.md)
+### Example w/ [kerberos ticket](/networking/protocols/kerberos.md)
 ```bash
 hashcat -m18200 tgt -a 0 /usr/share/wordlists/rockyou.txt
 ```

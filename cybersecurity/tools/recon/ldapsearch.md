@@ -1,4 +1,5 @@
 
+Init.
 # `ldapsearch` Command
 
 ```bash
@@ -29,8 +30,8 @@ Search options:
 ...
 ```
 > from `ldapsearch -h`
-## Use:
-### Example Syntax:
+## Use
+### Example Syntax
 ```bash
 ldapsearch -D 'guest' -b 'DC=EGOTISTICAL-BANK,DC=LOCAL' -H ldap://egotistical-bank.local:389
 ```

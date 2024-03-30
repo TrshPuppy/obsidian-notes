@@ -34,4 +34,4 @@ everything in that directory (that's normally there *locally*) will be inaccessi
 
 
 > [!Resources]
-> [Linux Config: How to Configure NFS on Linux]
+> [Linux Config: How to Configure NFS on Linux](https://linuxconfig.org/how-to-configure-nfs-on-linux)
