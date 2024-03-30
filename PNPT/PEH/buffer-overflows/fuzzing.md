@@ -1,6 +1,6 @@
 
 # Fuzzing
-> Keep vulnserver and Immunity Debugger running from [spiking](/PNPT/PEH/buffer-overflows/spiking.md) section (run them with Admin privileges).
+> Keep vulnserver and Immunity Debugger running from [spiking](PEH/buffer-overflows/spiking.md) section (run them with Admin privileges).
 
 The difference between spiking and fuzzing is that in spiking we're *attacking multiple commands* in order to find vulnerable ones, and in fuzzing we're *attacking a single command* (which we know is vulnerable) in order to build an effective [buffer overflow](PEH/buffer-overflows/buffer-overflow-basics.md).
 ## Python Script
