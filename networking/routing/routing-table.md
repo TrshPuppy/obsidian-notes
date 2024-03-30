@@ -1,9 +1,9 @@
 
 # Routing Tables
-Routing tables are tables of [IP addresses](networking/OSI/IP-addresses.md) maintained by [L3](/networking/OSI/network-layer.md) devices like routers and L3 switches. Routing tables are basically data structures which routers refer to to determine the path to transfer packets from a source IP address to a destination IP.
+Routing tables are tables of [IP addresses](/networking/OSI/IP-addresses.md) maintained by [L3](/networking/OSI/network-layer.md) devices like routers and L3 switches. Routing tables are basically data structures which routers refer to to determine the path to transfer packets from a source IP address to a destination IP.
 
 A routing table includes the following things:
-1. *Destination Network:* represented by a destination IP Address and its [subnet mask](nested-repos/PNPT-study-guide/PEH/networking/subnetting.md).
+1. *Destination Network:* represented by a destination IP Address and its [subnet mask](/PNPT/PEH/networking/subnetting.md).
 2. *Next Hop:* For each destination network, the routing table specifies the IP address for the next router/ network interface to which the outgoing packet should be sent. The next hop can either be directly connected to the router or a remote router.
 3. *Metric/ Cost:* Each entry in the routing table also has a metric or cost associated with it. This represents the efficiency of the route each specific route. The packet will be sent *via the route with the lowest metric.* Efficiency is measured in: 
 	- time

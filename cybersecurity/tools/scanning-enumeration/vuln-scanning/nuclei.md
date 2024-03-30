@@ -4,7 +4,7 @@
 ## Methodology
 Nuclei uses [YAML](/coding/languages/YAML.md) files as templates to create and define methods for detecting and ranking security vulnerabilities on a target. Each template can be thought of as a *possible attack route*.
 ### Templates
-Each YAML template *details a possible attack route* for a target. The template describes the vulnerability, its [severity](cybersecurity/resources/CVSS.md), priority, and associated exploits (if applicable). Templating allows Nuclei to supplement discovered vulnerabilities w/ potential threats and exploits.
+Each YAML template *details a possible attack route* for a target. The template describes the vulnerability, its [severity](/cybersecurity/resources/CVSS.md), priority, and associated exploits (if applicable). Templating allows Nuclei to supplement discovered vulnerabilities w/ potential threats and exploits.
 
 Templates are downloaded onto your machine with nuclei and are kept in the nuclei install path in `/<nuclei root dir>/nuclei-templates`.  `cd`ing and listing everything in this directory will show  all the sub-directories of templates:
 ```bash
@@ -122,7 +122,7 @@ To use a custom template from a GitHub repo, the repo should be *downloaded in t
 nuclei -u https://example.com -t github/repo-name
 ```
 #### `-as`: Automatic Scan
-Uses Wappalyzer (see [website-tech-recon](/nested-repos/PNPT-study-guide/PEH/recon/website-tech-recon.md)) to automatically scan based on technology found by Wappalyzer.
+Uses Wappalyzer (see [website-tech-recon](/PNPT/PEH/recon/website-tech-recon.md)) to automatically scan based on technology found by Wappalyzer.
 #### `-tl`: List templates
 List all the available templates.
 #### `-tc`: Template Condition

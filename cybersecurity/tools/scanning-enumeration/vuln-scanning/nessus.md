@@ -1,7 +1,8 @@
 
 # Nessus Vulnerability Scanner
+Init.
 
-![Notes on Nessus CLI tool](/nested-repos/PNPT-study-guide/PEH/scanning-enumeration/nessus-vuln-scanning.md)
+![Notes on Nessus CLI tool](/PNPT/PEH/scanning-enumeration/nessus-vuln-scanning.md)
 [If You're on GitHub Click Me (for Nessus notes)](https://github.com/TrshPuppy/PNPT-study-guide/blob/main/PEH/scanning-enumeration/nessus-vuln-scanning.md)
 
 > [!Resources]

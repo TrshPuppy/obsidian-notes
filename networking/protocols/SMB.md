@@ -18,7 +18,7 @@ User level protection is applied to each share and individual files. When the cl
 The *SMBv1* server used in some older versions of Windows has recently been exploited, most notably by [WannaCry](/cybersecurity/attacks/wannacry.md) and [NotPetya](/cybersecurity/attacks/notpetya.md). The [EternalBlue](/cybersecurity/vulnerabilities/eternalblue.md) vulnerability in SMBv1 allows an attacker to execute code on connected devices remotely.
 ### Samba
 #### trans2
-When dealing w/ *Samba* the [trans2](/cybersecurity/vulnerabilities/trans2.md) vulnerability allows for a [buffer overflow](cybersecurity/TTPs/exploitation/binary-exploitation/buffer-overflow.md). This is due to a string operation in the code with copies a *client supplied string* to a *fixed-size* buffer *w/o checking to make sure the buffer can hold the entire string.*
+When dealing w/ *Samba* the [trans2](/cybersecurity/vulnerabilities/trans2.md) vulnerability allows for a [buffer overflow](/cybersecurity/TTPs/exploitation/binary-exploitation/buffer-overflow.md). This is due to a string operation in the code with copies a *client supplied string* to a *fixed-size* buffer *w/o checking to make sure the buffer can hold the entire string.*
 
 Because the buffer happens *during a function call*, a buffer overflow is able to overwrite the instruction pointer copy which is saved on the stack.
 
@@ -32,5 +32,5 @@ Because the buffer happens *during a function call*, a buffer overflow is able t
 > - Tools: [`enum4linux`](/cybersecurity/tools/scanning-enumeration/enum4linux.md)
 > - Ports: `port 445`, `port 139`
 > - Vulnerabilities: [EternalBlue](/cybersecurity/vulnerabilities/eternalblue.md), [NotPetya](/cybersecurity/attacks/notpetya.md), [trans2](/cybersecurity/vulnerabilities/trans2.md)
-> - Attacks: [WannaCry](/cybersecurity/attacks/wannacry.md), [SMB-relay](nested-repos/PNPT-study-guide/PEH/active-directory/initial-vectors/SMB-relay.md)
-> - Enumeration: [Enumerating SMB](/nested-repos/PNPT-study-guide/PEH/scanning-enumeration/enumerating-SMB.md)
+> - Attacks: [WannaCry](/cybersecurity/attacks/wannacry.md), [SMB-relay](/PNPT/PEH/active-directory/initial-vectors/SMB-relay.md)
+> - Enumeration: [Enumerating SMB](/PNPT/PEH/scanning-enumeration/enumerating-SMB.md)

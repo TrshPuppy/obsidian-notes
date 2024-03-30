@@ -5,24 +5,23 @@ The loopback [CIDR](/networking/routing/CIDR.md) block, `127.0.0.0/8` is a reser
 `127.0.0.1` is a network address which can be used to refer to the current machine you're on. It is also called the *localhost* or *loopback address*.
 
 ![](/networking/networking-pics/loopback-1.png)
->	[Geeks for Geeks](https://www.geeksforgeeks.org/what-is-a-loopback-address/)
-## Steve:
+> - [Geeks for Geeks](https://www.geeksforgeeks.org/what-is-a-loopback-address/)
+## Steve
 **Let's say this is all happening on the network `192.168.0.0/24`:**
-
 Each computer's OS ships  w/ a *TCP/IP stack* which understands the TCP protocol. When any service/program wants to access a network resource via TCP/IP if goes through the IP Stack.
-### Network Interface:
+### Network Interface
 "Network Interface" usually refers to the computer's network card. Each computer has a Network Interface Card (NIC) (either for ethernet or wifi) which knows how to connect the device to internet. The NIC is allocated an [IP Address](/networking/OSI/IP-addresses.md) (usually by a router). The NIC also knows its device's [MAC Address](/networking/OSI/MAC-addresses.md). 
 
 In this example, the computer's NIC's IP address is **`192.168.0.5`**.
-### [Virtual Private Networks](/networking/routing/VPN.md):
+### [Virtual Private Networks](/networking/routing/VPN.md)
 A VPN creates a *virtual network interface* w/ a *virtual IP address* and *virtual MAC address*.
 
 The VPN's network in this example is **`10.0.0.12/8`** with a gateway address of **`10.0.0.1`**.
 ### Routing Journey:
 ![](/networking/networking-pics/IP-routing-steve.png)
->	Drawing by Steve
+> - Drawing by Steve
 
-The computer knows how to route traffic because the OS *has its own [routing table](/networking/routing/routing-table)*. Each entry in the routing table is a destination address as well as its [subnet mask](nested-repos/PNPT-study-guide/PEH/networking/subnetting.md), gateway, next hop, etc..
+The computer knows how to route traffic because the OS *has its own [routing table](/networking/routing/routing-table)*. Each entry in the routing table is a destination address as well as its [subnet mask](/PNPT/PEH/networking/subnetting.md), gateway, next hop, etc..
 #### Browser requests a domain:
 If the web browser running on the computer requests `google.com`, the browser asks the IP stack. The IP stack needs to resolve the domain name (`google.com`) to an IP address, so it needs to find [DNS](/networking/DNS/DNS.md) server.
 
@@ -64,7 +63,7 @@ When the browser asks to communicate w/ `127.0.0.1` (the device's localhost/ loo
 
 The entire routing process is different in this case as compared to the browser's request for `google.com`:
 #### Browser asks IP stack for `127.0.0.1`:
-The browser sends an [HTTP](www/HTTP.md) `GET` request to the IP stack, looking for the IP `127.0.0.1`. The request will also use TCP so port 80 will be added to the request.
+The browser sends an [HTTP](/www/HTTP.md) `GET` request to the IP stack, looking for the IP `127.0.0.1`. The request will also use TCP so port 80 will be added to the request.
 
 The IP stack *knows that `127.0.0.1`* is a special case. It basically says "This is me so I'm gonna *loop it back* to myself". Then it checks to see if anything is listening on port 80.
 
