@@ -6,8 +6,7 @@
 The best way to view this collection of notes is with the Obsidian desktop app. The app shows connections, links between topics, and other formatting which can't be appreciated in the markdown alone.
 
 Cloning it down into an Obsidian vault also means all of the internal links will work. I've done my best to make the links work in GitHub as well but there are likely some stragglers which are still broken.
-> [!NOTE]
-> Any note page with the word `Init.` at the top signifies notes which I plan to fill in later, or which I've started writing, but haven't finished.
+
 <picture>
 
 <img src=cybersecurity/cybersecurity-pics/fast-flux-README-pic.png width="400">
@@ -21,6 +20,8 @@ If you prefer to browse my notes w/o the help of Obsidian, just know that some m
 
 This repo is for my organization and reference but can be viewed by the public. Feel free to use these notes for your own reference or education, however, I cannot guarantee their accuracy. Thanks! :)
 
+> [!NOTE]
+> Any note page with the word `Init.` at the top signifies notes which I plan to fill in later, or which I've started writing, but haven't finished.
 ## P.S. PNPT Study Guide
 The notes I took while studying for the PNPT are in the [PNPT directory](/PNPT) but have also been contextualized into their own [GitHub repo](github.com/trshpuppy/pnpt-study-guide). Again, because these notes are originally from my Obsidian vault, some links may be broken in the PNPT repo!
 
