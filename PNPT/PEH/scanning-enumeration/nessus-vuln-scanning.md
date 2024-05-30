@@ -12,8 +12,8 @@ Unpacking Nessus Scanner Core Components...
 ┌──(hakcypuppy㉿kali)-[~/Downloads]
 └─$ /bin/systemctl start nessusd.service   
 ```
-Follow the link to `https://kali:8834/`:![](PNPT/PNPT-pics/nessus-1.png)
-![](/PNPT-study-guide/PNPT-pics/nessus-1.png)
+Follow the link to `https://kali:8834/`:![](/PNPT/PNPT-pics/nessus-1.png)
+
 ## Basic Network Scan
 Let's scan [Kioptrix](/PNPT/PEH/scanning-enumeration/kioptrix.md). In the basic network scan under `General` create a target called 'Kioptrix' w/ the IP address.
 ### Schedule
@@ -42,16 +42,16 @@ The Credentials tab (horizontal) allows you to add credentials you may have for 
 Once you've set all your scan settings, you can launch the scan from its listing in your Folder section.
 ### Vulnerabilities
 By clicking on the currently scanning scan, you can see what vulnerabilities are being found including their severity and other details for each target.
-![](PNPT/PNPT-pics/nessus-2.png)
-![](/PNPT-study-guide/PNPT-pics/nessus-2.png)
-![](PNPT/PNPT-pics/nessus-3.png)
-![](/PNPT-study-guide/PNPT-pics/nessus-3.png)
+![](/PNPT/PNPT-pics/nessus-2.png)
+
+![](/PNPT/PNPT-pics/nessus-3.png)
+
 ## Scan Results
 Once the scan has finished, we can go through the findings starting w/ the most severe. Based on how many results there are, we can tell Kioptrix is super vulnerable
 ### Example: OpenSSL Unsupported
 Clicking on this finding we can see more details:
-![](PNPT/PNPT-pics/nessus-4.png)
-![](/PNPT-study-guide/PNPT-pics/nessus-4.png)
+![](/PNPT/PNPT-pics/nessus-4.png)
+
 At the bottom we can see the installed version is out of date. This should be added to our findings.
 ### Reporting Nessus Findings
 To report Nessus findings specifically, we can export the findings into a Nessus file which can later be converted into an excel document, etc.. this can be added to our [report](/cybersecurity/pen-testing/report-writing.md).
