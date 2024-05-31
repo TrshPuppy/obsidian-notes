@@ -1,4 +1,3 @@
-
 # Console vs. Terminal vs. Shell vs. TTY
 These terms are all closely related & are often used interchangeably, but are technically different. Console, terminal, and shell all originally referred to a *piece of equipment which you could use to interact with a machine*.
 

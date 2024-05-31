@@ -29,3 +29,8 @@ The original question was 'what is a go.sum file for?'
 > Later, when you run `go build` or `go test`, Go will check the `go.sum` file to ensure that it's using the exact same version of the module dependencies that you used the last time you ran `go mod download` or `go build`. If the `go.sum` file has changed, Go will refuse to build your program, because this might mean that an attacker has tampered with your dependencies.
 > 
 > In summary, the `go.sum` file is used to ensure the integrity of your module dependencies. It's a good idea to commit the `go.sum` file to your version control system.
+## `go build`
+### Build smaller binaries:
+#### `-ldlflags -"w s"`
+`-ldlflags` stands for 'linker flags'.  The `-w` strips debugging information from the binary. And `-s` strips the symbol table. Stripping the symbol table *can cause issues* with profiling tools and runtime panic reports.
+https://dev.to/aryaprakasa/the-trade-offs-of-optimizing-and-compressing-go-binaries-492d

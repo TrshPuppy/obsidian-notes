@@ -1,3 +1,0 @@
-
-# Linker
-Init.
