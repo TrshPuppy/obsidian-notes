@@ -13,3 +13,6 @@ Stratum 2 servers synchronize according to stratum 1 servers, and so on...
 In NTP, clients are devices on the network which can connect to NTP servers to configure their internal clock. NTP clients have to *query stratum servers* to get accurate time keeping data.
 ## Security
 NTP is an important protocol as it relates to cybersecurity. Accurate time keeping is essential for many automated security tasks like *event logging*, authentication, cryptographic operations, network troubleshooting, and correlation of events on a device or network.
+
+> [!Resources]
+> - Internship learning requirements
