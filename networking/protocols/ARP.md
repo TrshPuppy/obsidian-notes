@@ -1,8 +1,6 @@
----
-aliases: [ARP, address-resolution-protocol]
----
+
 # Address resolution protocol
-ARP is a [layer 3](/networking/OSI/network-layer.md) protocol which resolves a known, destination [IP Address](/networking/OSI/IP-addresses.md) into a [MAC Address](/networking/OSI/MAC-addresses.md).
+ARP is a [network-layer](../OSI/3-network/network-layer.md) protocol which resolves a known, destination [IP Address](/networking/OSI/3-network/IP-addresses.md) into a [MAC Address](/networking/OSI/2-datalink/MAC-addresses.md).
 
 This protocol uses an *ARP lookup table* to associate IP addresses on a network to [MAC Addresses](/PNPT/PEH/networking/MAC-addresses.md). While ARP tables are associated w/ MAC addresses, it is layer 3 devices (like routers) which create the table. Layer 2 devices (switches/ hubs) are not aware of ARP tables. 
 

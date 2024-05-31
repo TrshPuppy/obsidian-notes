@@ -4,7 +4,7 @@ Zero Trust is a security model which attempts to strengthen an organization's se
 
 Organizations attempt to implement ZTA through identity verification and validation. For example, a user and device should be verified *before being granted access*. It follows that the *least amount of privilege* should be given to those accessing resources.
 ## Mutual Authentication
-In a zero trust architecture the identity and integrity of users and devices are checked *irrespective* of location (can include [IP address](networking/OSI/IP-addresses.md)). When a request is made to access and/or manage data, ZTA the decision to grant access to the user/device is sometimes based on *Attribute-Based Access Control* (ABAC).
+In a zero trust architecture the identity and integrity of users and devices are checked *irrespective* of location (can include [IP address](networking/OSI/3-network/IP-addresses.md)). When a request is made to access and/or manage data, ZTA the decision to grant access to the user/device is sometimes based on *Attribute-Based Access Control* (ABAC).
 ### ABAC
 Attribute-Based access control (also called 'policy-based') is a methodology used to determine a subject's authorization by evaluating attributes associated with that subject.
 

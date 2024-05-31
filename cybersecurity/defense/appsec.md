@@ -37,7 +37,7 @@ In order to integrate secure coding into the SDLC, some needs need to be met:
 		- versions
 		- origin of all components
 		- vulnerabilities
-	- makes it much easier to repsond to vulns which occur in these components and where to make changes
+	- makes it much easier to respond to vulns which occur in these components and where to make changes
 	- recover much faster
 ## Vulnerability Testing Tools:
 Testing for vulnerabilities in the code should be started as early as possible in the SDLC and continue throughout. SAST and DAST (described below) should *both be used* (not a matter of choosing one over the other).

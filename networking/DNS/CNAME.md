@@ -2,7 +2,7 @@
 # Canonical Name Record (CNAME)
 The CNAME record points an alias domain name *to a 'canonical' domain.* It's used instead of an [A record](/networking/DNS/A-record.md) *when a domain or subdomain **is an alias** for another domain*.
 
-Unlike A records, CNAME Records *must point to a domain* and never to an [IP address](/networking/OSI/IP-addresses.md). A domain w/ a CNAME can point to another domain w/ a CNAME (another alias) OR to a domain w/ an A record.
+Unlike A records, CNAME Records *must point to a domain* and never to an [IP address](/networking/OSI/3-network/IP-addresses.md). A domain w/ a CNAME can point to another domain w/ a CNAME (another alias) OR to a domain w/ an A record.
 ## Example:
 If we have `blog.example.com` which has a *CNAME record* pointing to `example.com`, then, when the [DNS](/networking/DNS/DNS.md) server finds the record for `blog.example.com`, it will trigger a *second DNS lookup* for `example.com`.
 
