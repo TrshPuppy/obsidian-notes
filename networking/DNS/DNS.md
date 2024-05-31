@@ -1,6 +1,6 @@
 
 # Domain Name System
-DNS is a [TCP/IP](/networking/protocols/TCP.md) protocol which allows a device to ask a name server for the [IP address](/networking/OSI/IP-addresses.md) attached to a domain name.
+DNS is a [TCP/IP](/networking/protocols/TCP.md) protocol which allows a device to ask a name server for the [IP address](/networking/OSI/3-network/IP-addresses.md) attached to a domain name.
 ## Domain Hierarchy:
 ![](/networking/networking-pics/DNS-1.png)
 -[Try Hack Me](https://tryhackme.com/room/dnsindetail)
