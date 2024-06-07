@@ -21,10 +21,11 @@ CC:46:D6 - Cisco
 ```
 ### Network Interface Controller:
 The last 6 digits of the address is the Network Interface Controller and is also assigned by the manufacturer.
+## MAC Address Table
+The MAC address table, also called the Content Addressable Memory (CAM), is a database which *maps MAC addresses to the corresponding ports on a network switch.* The CAM is used by network [switches](switches.md) to make forwarding decisions based on the *destination MAC address for incoming frames.*
 ## MAC Spoofing:
 When a networked device pretends to identify as a different one by using its MAC address. This can break poorly-maintained security designs. For example, if a network firewall is configured to trust any and all traffic coming from the MAC address of the administrator
-## MAC Address Table
-The MAC address table, also called the Content Addressble Memory (CAM), is a database which *maps MAC addresses to the corresponding ports on a network switch.* The CAM is used by network switches to make forwarding decisions based on the *destination MAC address for incoming frames.*
+
 
 >[!Command line:]
 > - [ifconfig](ifconfig.md)

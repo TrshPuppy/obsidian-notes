@@ -11,7 +11,7 @@ The browser parses the HTML file sent back by the server, and then makes additio
 ### Web Server
 The Web Server is a single device, *or a collection of devices* which host software server instances which respond to requests and *serve* the documents requested.
 ### Proxies
-Because the internet is a a bunch of tubes ;) the route between the browser and the server is *not direct*. Instead, the messages from both are relayed through numerous other computers. Most of these [proxy](www/proxy.md) computers operate at the [transport layer](/networking/OSI/transport-layer.md) of the [OSI model](/networking/OSI/OSI-reference-model.md).
+Because the internet is a a bunch of tubes ;) the route between the browser and the server is *not direct*. Instead, the messages from both are relayed through numerous other computers. Most of these [proxy](../networking/design-structure/proxy.md) computers operate at the [transport layer](/networking/OSI/transport-layer.md) of the [OSI model](/networking/OSI/OSI-reference-model.md).
 
 Proxies are *able to change the request/ response* before it reaches its destination. Proxies which do this are referred to as "non-transparent". Proxies which don't alter the data at all are 'transparent'.
 ## Headers:
