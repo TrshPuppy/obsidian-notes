@@ -19,7 +19,7 @@ Once you've downloaded a torrent file using the BitTorrent client, you can opt-i
 ### IP Address
 When you use torrent to download content, your [IP address](/networking/OSI/IP-addresses.md) is visible to everyone who is or will also download the content.
 
-You can use a [VPN](/networking/routing/VPN.md) to help protect yourself from this.
+You can use a [VPN](../../../networking/design-structure/VPN.md) to help protect yourself from this.
 ### Adware & Malware
 Some BitTorrent clients can download adware and malware on your system when you use them.
 > [!Resources:]

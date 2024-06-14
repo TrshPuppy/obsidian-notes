@@ -9,3 +9,6 @@ whois <target domain name>
 > [!Resources]
 > - `man whois`
 
+> [!Related]
+> - [WHOIS protocol](../networking/protocols/WHOIS.md)
+

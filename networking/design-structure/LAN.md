@@ -28,7 +28,6 @@ Devices are individually connected to a central networking device like a hub or 
 Star topologies are easy to implement and easy to scale.
 #### Disadvantages:
 As the network grows, so does the maintenance. If the central device fails *there is no redundancy to re-route traffic*. This topology also tends to be expensive.
-
 ![](/networking/networking-pics/LAN-3.png)
 >	[TryHackMe](https://tryhackme.com/room/introtolan)
 ### Bus Topology:
