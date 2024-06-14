@@ -12,7 +12,6 @@ Dark blue circles: tech running on endpoint
 
 find oauth portalsWhat
 
-
 > [!Related]
 > - [GoWitness]
 > - [EyeWitness]

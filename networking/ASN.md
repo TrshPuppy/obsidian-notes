@@ -3,7 +3,7 @@
 An autonomous system is a group of *IP prefixes* which are run by network operators who *maintain the same [routing](/networking/routing/routing-table.md) policy.* Each AS is assigned an *Autonomous System Number* by the IANA. This number is meant to identify a large network which *serves a set of subnets* (with the same IP prefixes).
 
 It's a "connected group of one or more [IP](/networking/OSI/IP-addresses.md)s run by one or more network operators which have a SINGLE and CLEARLY DEFINED routing policy (which dictate how routing decisions are made).
-## #RFC-1930
+## RFC-1930
 ```              
 NET1 ......  ASX  <--->  ASY  ....... NET2
 

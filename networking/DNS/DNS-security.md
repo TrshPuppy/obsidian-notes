@@ -32,7 +32,7 @@ An NXDOMAIN attack is a form of [denial of service](/cybersecurity/TTPs/exploita
 - Phantom Domain attack
 - Random Subdomain attack
 - Domain Lock-up
-- [Botnet](/cybersecurity/TTPs/botnet) CPE attack
+- [Botnet](../../cybersecurity/TTPs/c2/botnet.md) CPE attack
 ## DNSSEC
 [DNSSEC](/networking/protocols/DNSSEC.md) is a security protocol which implements digital signing of data to ensure its validity.
 ![DNSSEC](/networking/protocols/DNSSEC.md)

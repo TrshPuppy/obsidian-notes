@@ -48,10 +48,15 @@ TLD servers are responsible for *keeping track of the next level below them*; Au
 ### The TLD queries the Authoritative Name Servers
 *Authoritative Name Servers* store DNS records for domain directly. Every DNS record in the world *is stored on an ANS*.
 
-An ANS is the final *source of information when resolving a domain name*. Once the correct ANS is found, it will fill in the IP address matching the original request, and this information *gets sent back to your computer.*
+An ANS is the final *source of information when resolving a domain name*. Once the correct ANS is found, it will fill in the IP address matching the original request, and this information *gets sent back to your computer.* 
+#### NOERROR
+`NOERROR` is the response returned from nameservers and recursive DNS servers when the domain *is successfully resolved*. Attached to this response will be the resolved IP address.
+#### NXDOMAIN
+`NXDOMAIN` is a DNS error message sent as a response from a DNS request *when the requested domain name doesn't exist*. Only an *Authoritative Name Server* can return `NXDOMAIN`.
 
 > [!Resources]
-> - [TryHackMe: DNS in Detail](https://tryhackme.com/room/dnsindetail)
+> - [TryHackMe: DNS in Detail](https://tryhackme.com/room/dnsindetail) 
+> - [ClouDNS: What is NXDOMAIN](https://www.cloudns.net/blog/what-is-nxdomain/#NXDOMAIN_%E2%80%93_Definition)
 
 > [!Related]
 > - Commands: [dig](/CLI-tools/dig.md), [whois](/CLI-tools/whois.md)

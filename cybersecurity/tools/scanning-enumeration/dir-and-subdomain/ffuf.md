@@ -1,4 +1,4 @@
-
+fuff
 # Ffuf (Fuzz Faster U Fool)
 Ffuf is a CLI tool used for [directory-enumeration](/cybersecurity/TTPs/recon/directory-enumeration.md). It is *non-recursive*, and will only enumerate at the specified depth in the command.
 ## Usage:
