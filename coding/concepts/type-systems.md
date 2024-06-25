@@ -24,4 +24,3 @@ In dynamic type checking, the program is *expected to fail at runtime* if it can
 > [!Resources]
 > - [Digital Ocean: Python typing module](https://www.digitalocean.com/community/tutorials/python-typing-module)
 > - [Wikipedia: Type  Systems](https://en.wikipedia.org/wiki/Type_system#Static_and_dynamic_type_checking_in_practice)
-> - 
