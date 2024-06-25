@@ -1,6 +1,6 @@
 
 # Threading
-Threads are the *smallest executable subunits* which make up a [process](/computers/concepts/process.md). Processes can have multiple threads and one main thread. They're most often used to *take full advantage* of the [CPU](/computers/concepts/cpu.md) and avoid idle CPU time.
+Threads are the *smallest executable subunits* which make up a [process](/computers/concepts/process.md). Processes can have multiple threads and one main thread. They're most often used to *take full advantage* of the [CPU](../../computers/concepts/CPU.md) and avoid idle CPU time.
 ## Multithreading
 Without threads and multithreading, the tasks which make up a process can block each other, pausing the execution of a program until a single process has returned. For example, If you're writing a word document using a graphical program, when you save the document, the program has to pause execution in order to *write your document to disk*. 
 

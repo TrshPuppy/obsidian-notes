@@ -24,7 +24,7 @@ Per the [MITRE-ATT&CK](cybersecurity/resources/MITRE-ATT&CK.md) matrix, there ar
 - Emails can pass DMARC if they "Align"
 - to align the address in the #from-header of the email must match the domains listed in the SPF and DKIM records
 
-## [Secure/Multipurpose Internet Mail Extensions](/cybersecurity/defense/SMIME.md) (SMIME)
+## [Secure/Multipurpose Internet Mail Extensions](../../networking/SMIME.md) (SMIME)
 Protocol for sending digitally signed and encrypted messages using #public-key-cryptography.
 - Guarantees data integrity and #nonrepudiation 
 - Ex: If Bob wants to send an email to Mary:

@@ -10,7 +10,7 @@ The stack has a *last in, first out* (LIFO) structure, meaning its units are org
 ### Stack Frames
 Also known as "activation frames", stack frames are the units which make up the stack during program execution. They contain subroutines/ functions and variables defined in and used by the program. The first frame on the stack is *the 'main' function* of the program (wherever execution enters).
 
-When a program is compiled into machine code/ assembly, it generates instructions for the [CPU](/computers/concepts/cpu.md) to follow when executing the program. Part of these instructions include *how stack frames should be created and managed* when functions are called during execution.
+When a program is compiled into machine code/ assembly, it generates instructions for the [CPU](../../../computers/concepts/CPU.md) to follow when executing the program. Part of these instructions include *how stack frames should be created and managed* when functions are called during execution.
 
 On execution, the CPU follows these instructions and *allocates memory in the RAM* to create stack frames. Each stack frame corresponds to a function call and contains all of the required information (including local variables, function parameters, return addresses, etc.).
 

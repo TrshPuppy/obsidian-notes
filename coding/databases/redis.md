@@ -1,6 +1,3 @@
----
-aliases: [redis, remote-dictionary-server]
----
 
 # Remote Dictionary Server
 An #in-memory-database

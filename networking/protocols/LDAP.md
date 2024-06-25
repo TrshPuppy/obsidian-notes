@@ -1,5 +1,18 @@
 
 # Lightweight Directory Access Protocol
 Init.
+Protocol for reading and writing *directories* over an IP ([network layer](../OSI/3-network/network-layer.md)) network. Sort of like an organized set of records *like a phone directory*. Originally, the standard specification for having a *centralized directory* on a network was written by the International Telecommunications Union and was called *DAP*. DAP ran on the [OSI-model](../../PNPT/PEH/networking/OSI-model.md) protocol stack, but LDAP is "lightweight" and runs using [TCP/IP](TCP.md).
+## Uses
+LDAP is used on multiple different [operating systems](../../computers/concepts/operating-system.md) including Windows and Apple. In Windows, it's used w/ [Active Directory](../../computers/windows/active-directory/active-directory.md). With Apple, it's used with *OpenDirectory*. There is also an implementation called *OpenLDAP*, etc..
+## Security
+There are more secure implementations of LDAP including LDAPS and SASL.
+### LDAPS
+"LDAP Secure": uses [SSL](SSL.md) to provide security.
+### SASL
+"Simple Authentication & Security Layer": Uses a few different ways to provide *authentication*, for example [kerberos](kerberos.md) & client certificate.
+
+> [!Resources]
+> - [Professor Messer](https://www.youtube.com/watch?v=yuXK_Jyosus&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=101)
+
 
 rwxrob yt vid
