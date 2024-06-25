@@ -37,5 +37,7 @@ blue.msfconsole.smb.versioning.txt  enum4linux.blue.txt  venv # <--------
 rm -r venv
 ```
 This will change depending on if you created the vent using `python -m venv` versus Virtualenv.
+#### pipenv
+`pipenv` is another choice for making a python virtual env. 
 
 

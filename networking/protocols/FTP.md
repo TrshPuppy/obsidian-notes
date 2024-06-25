@@ -11,8 +11,10 @@ FTP connection initiates the instruction and response.
 where distribution of data happens b/w peers.
 ## Anonymous FTP
 Sites can enable anonymous FTP so files are available to the public. Users can access the files w/o a password and with the username ``anonymous``. *Access is limited to copying files* and anonymous ftp *does not allow the user to navigate through directories*.
-## Secure FTP or SSH FTP
-This is an extension of [SSH](/networking/protocols/SSH.md).
+## FTPS
+This is an extension of [SSL](SSL.md)
+## SFTP
+Uses [SSH](/networking/protocols/SSH.md) to provide encryption. Also provides file system functionality like *resuming interrupted file transfer*, directory listing, and remote file removal.
 
 > [!Related]
 > - #port-21

@@ -2,5 +2,6 @@
   "alwaysUpdateLinks": true,
   "spellcheck": true,
   "useMarkdownLinks": true,
-  "newLinkFormat": "relative"
+  "newLinkFormat": "relative",
+  "vimMode": true
 }

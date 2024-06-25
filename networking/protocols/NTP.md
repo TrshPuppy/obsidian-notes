@@ -14,5 +14,9 @@ In NTP, clients are devices on the network which can connect to NTP servers to c
 ## Security
 NTP is an important protocol as it relates to cybersecurity. Accurate time keeping is essential for many automated security tasks like *event logging*, authentication, cryptographic operations, network troubleshooting, and correlation of events on a device or network.
 
+Unfortunately, NTP *has no security features.* Because of this, attackers can use it for *[DNS amplification](../../cybersecurity/TTPs/exploitation/DNS-amplification.md)* attacks.
+### NTPSec (Secure NTP)
+Began development in 2015. This upgrade focused on *fixing some vulns* and cleaning up the codebase of NTP.
+
 > [!Resources]
-> - Internship learning requirements
+> - [Professor Messer](https://www.youtube.com/watch?v=yuXK_Jyosus&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=101)

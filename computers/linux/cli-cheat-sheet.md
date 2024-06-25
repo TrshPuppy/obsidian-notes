@@ -54,7 +54,7 @@ wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt
 ```
 
 Can also use [curl](curL.md)
-### SCP
+### [SCP](../../networking/protocols/SCP.md)
 SCP or "secure copy" is a way to transfer files via SSH (so the files are encrypted and transferred over an authenticated connection).
 ```shell
 # copy a file from host machine to target machine:

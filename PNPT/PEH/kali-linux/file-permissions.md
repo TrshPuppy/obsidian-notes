@@ -99,15 +99,15 @@ A faster way to update permissions with `chmod` is to give it the umask bits set
 Each combination of permissions results in a number between 0 and 7. For example, the number `0` is `- - -`, or no permissions at all. the number `1` is `- - 1`, or only execution permissions.  The number `2` is `-w-` or only write permissions. And the number `4` is `4 - -` or only read permissions (the numbers represent bits being turned on or off).
 
 | Num | Permissions | Total | Binary |
-| :--: | :--------: | :---: | :-:|
-| 0 | --- | 0+0+0 | 000 |
-| 1 | --x | 0+0+1 | 001 |
-| 2 | -w- | 0+2+0 | 010 |
-| 3 | -wx | 0+2+1 | 011 |
-| 4 | r-- | 4+0+0 | 100 |
-| 5 | r-x | 4+0+1 | 101 |
-| 6 | rw- | 4+2+0 | 110 |
-| 7 | rwx | 4+2+1 | 111 |
+| :-: | :---------: | :---: | :----: |
+|  0  |     ---     | 0+0+0 |  000   |
+|  1  |     --x     | 0+0+1 |  001   |
+|  2  |     -w-     | 0+2+0 |  010   |
+|  3  |     -wx     | 0+2+1 |  011   |
+|  4  |     r--     | 4+0+0 |  100   |
+|  5  |     r-x     | 4+0+1 |  101   |
+|  6  |     rw-     | 4+2+0 |  110   |
+|  7  |     rwx     | 4+2+1 |  111   |
 
 So, to give everybody full permissions on a file, the command would be:
 ```bash
