@@ -64,7 +64,7 @@ unzip save.zip
 Archive:  save.zip
 [save.zip] id_rsa password:
 ```
-#### [zip2john](/cybersecurity/tools/cracking/john.md)
+#### [zip2john](../../../cybersecurity/TTPs/cracking/tools/john.md)
 Using `zip2john` on the zip file, we're able to crack the password:
 ```bash
 zip2john save.zip
@@ -104,7 +104,7 @@ From this file we learn:
 2. There is a config file somewhere
 3. There is a development website (which needs updating)
 4. JP thinks *java is awesome*
-## 4. [Feroxbuster](/cybersecurity/tools/scanning-enumeration/dir-and-subdomain/feroxbuster.md)
+## 4. [Feroxbuster](../../../cybersecurity/TTPs/recon/tools/dir-and-subdomain/feroxbuster.md)
 ### Port 80
 Let's find some endpoints using feroxbuster:
 ```bash

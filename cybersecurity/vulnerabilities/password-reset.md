@@ -32,7 +32,7 @@ When the user enters the request phase of the flow, and inputs their username/em
 1. Always return a *consistent* message for both existing and non-existing user accounts.
 2. Keep a consistent timeframe for the user response message. This prevents attackers from *enumerating user accounts* (i.e. if the response timeframe is different based on whether the account exists or not, an attack can differentiate b/w existent and non-existent accounts).
 3. Protect against excessive/ automated submissions
-4. Perform [user input sanitization](/cybersecurity/defense/input-validation.md)
+4. Perform [user input sanitization](../defense/appsec/input-validation.md)
 ### Reset Password phase:
 1. Send the user an email informing them of the password change
 2. 3. *Don't make changes to the account* until a valid token is presented (don't lock the account out for example).

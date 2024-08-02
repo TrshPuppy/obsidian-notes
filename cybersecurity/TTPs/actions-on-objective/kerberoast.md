@@ -16,10 +16,10 @@ This attack is *difficult to prevent* because the traffic and actions taken are 
 ## Common Attack Flow
 1. The attacker compromises an account in the AD (a Domain User)
 2. Using this account, which is already authenticated, the attacker requests a Kerberos service ticket from the TGS (*Ticket Granting System*).
-	a. A common tool used to check for SPNs on the Domain is `GetUserSPNs.py` from [impacket](cybersecurity/tools/exploitation/impacket.md).
+	a. A common tool used to check for SPNs on the Domain is `GetUserSPNs.py` from [impacket](../exploitation/tools/impacket.md).
 3. The attacker receives the ticket from the *Kerberos key Distribution Center* (KDC)
 	a. Common tools used in this step of the attack include [Rubeus](https://github.com/GhostPack/Rubeus), and Impacket.
-4. The attacker brute-forces the ticket offline to reveal the SPN's password using tools like [hashcat](cybersecurity/tools/cracking/hashcat.md) or [john the ripper](cybersecurity/tools/cracking/john.md).
+4. The attacker brute-forces the ticket offline to reveal the SPN's password using tools like [hashcat](../cracking/tools/hashcat.md) or [john the ripper](../cracking/tools/john.md).
 5. With the password cracked from the hash, the attacker authenticates as the target SPN, *gaining all of the privileges associated*.
 
 > [!Resources]

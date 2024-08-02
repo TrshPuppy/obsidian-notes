@@ -1,11 +1,11 @@
----
-aliases: [SPF, sender-policy-framework]
----
-# Sender Policy Framework/ #SPF:
-Used to authenticate the send of an [email](/networking/email.md) by verifying that the IP address of a mail server is authorized to send email from that specific domain.
-- Similar to #DMARC, an #SPF-TXT record is a list of IP addresses with care permitted to send email on behalf of your #domain 
-	- When a sender tries to send an email to an email receiving server for delivery, the server checks to see ==if the sending IP is on the domain's list of allowed senders==
-		- If it is: a link can be established b/w the email and the domain
+# Sender Policy Framework/ SPF:
+Used to authenticate the sender of an [email](/networking/email.md) by verifying that the IP address of a mail server is authorized to send email from that specific domain.
+
+Similar to [DMARC](DMARC.md), an SPF `TXT` record is a list of IP addresses with care permitted to send email on behalf of your domain
+
+When a sender tries to send an email to an email receiving server for delivery, the server checks to see if the sending IP is on the domain's list of allowed senders
+
+If it is: a link can be established b/w the email and the domain
 		- Email is protected from #email-spoofing and #phishing 
 			- lets the world know which servers are allowed to send emails on your behalf
 - an SPF record is a #DNS-TXT record which contains a list of #IP-addresses which are allowed to send #email on behalf of the domain.

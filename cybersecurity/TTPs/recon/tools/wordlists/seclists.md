@@ -11,7 +11,7 @@ Since RAFT is old and unmaintained, it's been integrated into SecLists. The RAFT
 4. words
 
 Each family includes a small, medium, and large wordlist. Each wordlist has a lowercase copy. For example, the RAFT lowercase, large directories list is `raft-large-directories-lowercase.txt` (in SecLists/Discovery/Web-Content).
-### [Robots Disallowed](/cybersecurity/tools/scanning-enumeration/wordlists/robots-disallowed.md)
+### [Robots Disallowed](robots-disallowed.md)
 Robots Disallowed is a currently maintained and updated tool similar to RAFT.
 
 > [!Resources]

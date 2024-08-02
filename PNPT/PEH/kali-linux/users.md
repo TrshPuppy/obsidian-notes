@@ -112,6 +112,14 @@ There are (at least) two ways to change a user's password in kali/Linux. The fir
 A better way to change a user password is with `sudo passwd <user>`. This command will prompt you to enter the password but the plaintext will not be shown or saved in the command line. Plus, the password will be updated in `etc/shadow` with a *hashed* value.
 ## Deleting a User:
 You can use the `deluser` (or sometimes `userdel`) command
+## User Logs
+
+### `who` command
+![who](../../../CLI-tools/linux/who.md)
+### `w` command
+![w](../../../CLI-tools/linux/w.md)
+### `utmpdump` command
+![utmpdump](../../../CLI-tools/linux/utmpdump.md)
 ## Groups
 ### Adding a user to a group:
 To see what groups a user is in, you can switch to that user and use the `groups` command which will list all the group they're in. To add a user to a group use:

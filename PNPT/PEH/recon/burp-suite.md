@@ -1,5 +1,5 @@
 # Info Gathering w/ Burp Suite
-[Burp Suite](/cybersecurity/tools/delivery/burp-suite.md) is a *web proxy* which means it can intercept web traffic.
+[Burp Suite](../../../cybersecurity/TTPs/delivery/tools/burp-suite.md) is a *web proxy* which means it can intercept web traffic.
 ## Firefox Setup
 For firefox do the following to setup Burp:
 ### Open Firefox

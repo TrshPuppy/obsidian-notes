@@ -58,7 +58,7 @@ A tool which "analyzes SMTP message headers which help identify the root cause o
 ### [Talos Reputation Center:](https://talosintelligence.com/reputation)
 Can be used to lookup reputations of the hash value of a file, etc.
 ### [Malware-sandboxes](/cybersecurity/tools/malware-sandboxes.md) 
-### [phish-tool](cybersecurity/tools/delivery/phish-tool.md)
+### [phish-tool](tools/phish-tool.md)
 
 ## Defense:
 > See: [phishing-defense](/cybersecurity/defense/phishing-defense.md)

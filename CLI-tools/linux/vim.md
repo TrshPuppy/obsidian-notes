@@ -139,12 +139,20 @@ In the `MAPPINGS` section of your `.vimrc` you can add key mappings. The syntax 
 The `map_mode` of the key mapping syntax determines what mode in Vim the keymapping will be applied to. The common ones are:
 - `nnoremap`: Map keys in normal mode
 - `inoremap`: Map keys in insert mode
-- `vnoremap`: Map keys in visual mode
+- `vnoremap`: Map key in visual mode
 #### Example
 Mapping `jj` to `ESC` in insert mode:
 ```.vimrc
 inoremap jj <esc>
 ```
+## Default Key binds
+### `diw()<Esc>P`
+Surround current word w/ parenthesis
+### `o` & `<Shift>O`
+Insert new line under current line & insert new line ABOVE current line.
+
+
+
 
 > [!Resources:]
 > - [Linux Handbook](https://linuxhandbook.com/move-start-end-line-vim/)

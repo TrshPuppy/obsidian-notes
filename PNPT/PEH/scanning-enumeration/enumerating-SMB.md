@@ -9,7 +9,7 @@ In the [Kioptrix](/PNPT/PEH/scanning-enumeration/kioptrix.md) box, we can see fr
 Determining the version of the SMB service running is useful (and considered a finding) because you can use the version to find [CVEs](/cybersecurity/resources/CVEs.md) and exploits which have already been developed and used successfully against it.
 
 If Nmap was unable to find the exact version with the `-sV` flag (and w/ `--version-intensity` set to 9), then you can use other tools.
-### [Metasploit](/cybersecurity/tools/exploitation/metasploit.md)
+### [Metasploit](../../../cybersecurity/TTPs/exploitation/tools/metasploit.md)
 Metasploit is a command line tool that can be used for most phases of an exploitation. It can do recon, scanning, enumeration, exploitation, etc.. In Kioptrix, for now, all we want to do is get the SMB version being used by our target:
 #### `msfconsole`
 Use this command to start the metasploit framework console. This is the environment where we'll build our exploit.
@@ -82,7 +82,7 @@ Now we know the target is running *Samba 2.2.1a*, which we can look up for relat
 - NetBIOS computer names
 - currently *logged-in users*
 - [MAC Address](/networking/OSI/MAC-addresses.md)
-### [enum4linux](/cybersecurity/tools/scanning-enumeration/enum4linux.md)
+### [enum4linux](../../../cybersecurity/TTPs/recon/tools/enum4linux.md)
 enum4linux is an enumeration tool made specifically for enumerating SMB information on a target (but which can return additional info as well).
 
 Just by giving enum4linux our target's IP, and no flags, we get a lot of information back:

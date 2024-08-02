@@ -25,7 +25,7 @@ In order to integrate secure coding into the SDLC, some needs need to be met:
 - Coding Practices checklist: procedures for how to handle/ mitigate vulnerabilities etc.
 	- [OWASP](cybersecurity/resources/OWASP.md)
 - Trusted Libraries: have an in depth list of third party software being used. So if a vuln is released in one of them, it's easy to track it down and take care of it
-	- ex: [log4j](../vulnerabilities/log4j.md)
+	- ex: [log4j](../../vulnerabilities/log4j.md)
 - Standard architecture: spell out in advance how the system should look for taking certain approcahces
 	- application security architecture
 - mistakes to avoid:
@@ -41,20 +41,20 @@ In order to integrate secure coding into the SDLC, some needs need to be met:
 	- recover much faster
 ## Vulnerability Testing Tools:
 Testing for vulnerabilities in the code should be started as early as possible in the SDLC and continue throughout. SAST and DAST (described below) should *both be used* (not a matter of choosing one over the other).
-### Static Application Security Testing (SAST)
-SAST tools analyze *source code and compiled binaries* of code to help find flaws and vulnerabilities. This type of application analysis is considered *white box* testing because the analysis is done on the code itself w/ no limits or unknowns (the tester has access to all the code, frameworks, etc.).
+### SAST
+**Static Application Security Testing**: SAST tools analyze *source code and compiled binaries* of code to help find flaws and vulnerabilities. This type of application analysis is considered *white box* testing because the analysis is done on the code itself w/ no limits or unknowns (the tester has access to all the code, frameworks, etc.).
 
 SAST is normally done *as early as possible* in the SDLC and usually takes place in the development environment of an application. It's usually taken on by the developers of the application using their own testing tools.
 #### Shift to the left
 A "shift to the left" is a phrase in AppSec which refers to integrating application security *earlier in the SDLC*. Traditionally, security of an application isn't considered *until just before release into production* which is disadvantageous for a few reasons. One reason is that any flaws which are found are difficult to address b/c there typically is not enough time left before release to address them.
-### Dynamic Application Security Testing (DAST)
-DAST tools analyze an application *at runtime* to find flaws and vulnerabilities. This type of analysis is considered *black box* because the application is already running and compiled and the tester *has no access to the source code, frameworks, etc.* Any flaws which are found are essentially found 'by accident' since the tester isn't analyzing the source code which allows for those flaws directly.
+### DAST
+**Dynamic Application Security Testing:** tools analyze an application *at runtime* to find flaws and vulnerabilities. This type of analysis is considered *black box* because the application is already running and compiled and the tester *has no access to the source code, frameworks, etc.* Any flaws which are found are essentially found 'by accident' since the tester isn't analyzing the source code which allows for those flaws directly.
 ### Software Composition Analysis (SCA)
 SCA tools analyze the risk and vulnerabilities introduced to an application *by third party and/or open source* components. SCA tools typically work by creating a list of third-party components in the codebase and keep track of any vulnerabilities, licensing issues, CVEs, etc.. 
 
 Without SCA tools, it can be difficult for an organization to find and keep track of third-party software in their code environment, as well as the flaws and vulnerabilities they introduce to the application.
-### Interactive Application Security Testing (IAST)
-IAST tools help secure applications by collecting data which can be used by a security team to analyze real-time events. These tools are normally *automated* and *run as agents* in the environment to collect monitoring data.
+### IAST
+**Interactive Application Security Testing**: IAST tools help secure applications by collecting data which can be used by a security team to analyze real-time events. These tools are normally *automated* and *run as agents* in the environment to collect monitoring data.
 
 > [!Resources]
 > - [IBM: Cybersecurity Architecture: AppSec](https://www.youtube.com/watch?v=nthEXs12nFE)

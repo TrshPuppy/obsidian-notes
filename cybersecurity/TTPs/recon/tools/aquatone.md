@@ -1,6 +1,6 @@
 
 # Aquatone
-Tool for creating an overview of an [HTTP](../../../www/HTTP.md) attack surface of a target. Can scan websites across a large number of hosts.
+Tool for creating an overview of an [HTTP](../../../../www/HTTP.md) attack surface of a target. Can scan websites across a large number of hosts.
 
 Init.
 ## Use
