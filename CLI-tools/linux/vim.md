@@ -8,6 +8,9 @@
 3. type in the new word, then press `Esc` (`NORMAL` mode)
 4. use `n` or `N` to jump to the next or previous occurrence of the original word
 5. press `.` and the current word will be replaced with the new word you used to replace the first occurrence
+##### Alternative method
+`:%s/old/new/g`
+
 #### Move cursor to end/ start of line
 In normal mode, press `0` to move the cursor to the start of the current line. Press `Shift` + `$` to move cursor to end of line.
 ## Config/ Settings
