@@ -9,11 +9,11 @@ Because Unix and Linux OS's can't use SMB, a similar, open-source protocol was d
 Because Samba also uses NetBIOS/ NBT, it also runs NetBIOS's Session Service over TCP `port 139`.
 ## Security
 SMB has two levels of security; the *share level*, and *user level* which was added in later version.
-### Share level:
+### Share level
 Each share has a password which the client needs to enter in order to access it. This helps protect the server. This layer is 'available in the *Core and Core plus SMG* protocol definitions'(Hacking Articles).
-### User Level:
+### User Level
 User level protection is applied to each share and individual files. When the client is authenticated by the server, they receive *a unique ID (UID)* which is *presented to the server upon access.* This security mechanism has been present since LAN Manager 1.0.
-## Exploits/ CVEs:
+## Exploits/ CVEs
 ### SMBv1
 The *SMBv1* server used in some older versions of Windows has recently been exploited, most notably by [WannaCry](/cybersecurity/attacks/wannacry.md) and [NotPetya](/cybersecurity/attacks/notpetya.md). The [EternalBlue](/cybersecurity/vulnerabilities/eternalblue.md) vulnerability in SMBv1 allows an attacker to execute code on connected devices remotely.
 ### Samba

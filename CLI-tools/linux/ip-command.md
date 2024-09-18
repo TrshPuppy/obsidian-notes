@@ -4,7 +4,6 @@ This linux networking command can be used to show and manipulate network devices
 ```
 ip [OPTIONS] OBJECT {COMMAND | help}
 ```
-
 ## Useful options:
 ```bash
 SYNOPSIS
@@ -21,16 +20,12 @@ SYNOPSIS
 	       name | -N[umeric] | -a[ll] | -c[olor] | -br[ief] | -j[son] | 
 	       -p[retty] }
 ```
-
 ### ``ip link list``:
 Shows all the available network interfaces (``link`` = network device, ``list`` = show all objects / devices)
-
 ### `ip maddress`:
 Show [MAC Addresses](/networking/OSI/MAC-addresses.md) of network devices.
-
 ### `ip link set x <up/down>`:
 Bring a network interface up or down.
-
 ### ``ip address show``:
 Shows the `address` (IPv4 or IPv6) of a given device.
 
