@@ -7,7 +7,22 @@ These pieces of equipment used to look a lot like typewriters, hence the term 't
 
 ## TTY
 In Unix a tty is a [device file](/computers/linux/device-file.md). Besides reading and writing, it also implements additional commands called *'ioctls'*
+### Termios
+Termios is a function/ interface which represents a terminal interface in Linux. Attached to the termios interface are flags which can be set to different values which then effect the properties and function of the terminal interface.
+#### Structure
+```bash
+		   tcflag_t c_iflag;      /* input modes */
+           tcflag_t c_oflag;      /* output modes */
+           tcflag_t c_cflag;      /* control modes */
+           tcflag_t c_lflag;      /* local modes */
+           cc_t     c_cc[NCCS];   /* special characters */
+```
+#### Raw Mode
+You can use the termios structure to put the terminal into raw mode (vs. cooked mode). In raw mode, stdin is available *character by character* instead of line by line, like in cooked mode. Additionally, echo is disabled as well as special processing of input and output. 
 
+Setting the terminal to raw mode usually involves changing the following termios flags:
+- `termios_p->c_oflag &= ~OPOST;` : bitwise and w/ the complement of `OPOST` = disabling output processing
+- `termios_p->c_iflag &= ~IXON | ICRNL`" bitwise and w/ complement of `IXON` and `ICRNL` = disable input processing (flow control and carriage return )
 ## Console
 
 
