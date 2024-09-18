@@ -1,6 +1,6 @@
 
 # Fast Flux
-Used by a threat actor to hide malicious activity using compromised hosts on a [botnet](/cybersecurity/TTPs/botnet.md). This TTP was first introduced by [storm-worm](/cybersecurity/malware/storm-worm.md) in 2006 and is effective at making the connection between malware and its [C2C](/cybersecurity/TTPs/C2C.md) harder to discover.
+Used by a threat actor to hide malicious activity using compromised hosts on a [botnet](botnet.md). This TTP was first introduced by [storm-worm](/cybersecurity/malware/storm-worm.md) in 2006 and is effective at making the connection between malware and its [C2C](/cybersecurity/TTPs/C2C.md) harder to discover.
 ![](/cybersecurity/cybersecurity-pics/fast-flux-1.png)
 >	"To understand the boundaries and relations between the network entities, an undirected network graph was created (Figure 2). The graph represents the following entities and relations between them: domains (shown in red), IP addresses (purple), and nameservers (green). The inspected network is composed of two subnetworks sharing a strong relation. These subnetworks are connected based on the similarity between their shared IP addresses associated with different nameservers." 
 >	\- [Akamai](https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network)

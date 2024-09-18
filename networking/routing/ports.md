@@ -1,37 +1,32 @@
 
-# Ports:
-Ports enforce what data can come in or leave from them and how.
-- Has to be compatible
-- Can also be used by networking devices to enforce strict rules on communication b/w one another.
+# Ports
+Ports are used to *uniquely specify services and applications* running on a device. Ports enforce what data can come in or leave from them and how. They're also used with [firewalls](../../cybersecurity/defense/firewalls.md) to block or allow certain connections to a device. Can also be used by networking devices to enforce strict rules on communication b/w devices on or outside a network.
+## Port Ranges
+There are 65,536 ports (starting from port 0) and they are generally split into two different types. The first 1023 are *well known ports* and are *associated with specific services* and protocols.
 
-## Port examples:
-*There are 0 - 65,535 ports*
-- Because there are so many, it's easy to lose track of which apps are running on which ports.
-	- Applications/ software held to a standard of rules
-		- ex: web browsers have to send data over #port-80 ( #HTTP)
-- #Common-ports include all ports between 0 -1024
+The rest are "dynamic" or "ephemeral" ports which are *temporarily assigned* to applications and protocols. Of the dynamic ports, 1,024 to 49,151 are *registered* and the rest are *private*.
 
-Some common ports:
-|port|protocol|description|
-|-|-|-|
-|21| #FTP | see [FTP](/networking/protocols/FTP.md), #port-21 |
-|22| #SSH | securely log into systems via text-interface, see #port-22 |
-|80| #HTTP | for browsers and the #World-Wide-Web, see [HTTP](www/HTTP.md), #port-80 |
-|443| #HTTPS|same as port 80 but traffic is encrypted, see #port-443 |
-|445| #SMB|similar to FTP, see [SMB](/networking/protocols/SMB.md), #port-445 |
-|3389| #RDP| see [RDP](/networking/protocols/RDP.md), #port-3389 |
+The private range ports are usually used on an "as needed basis" and temporarily.
+![](../networking-pics/ports-1.jpg)
+### Common Ports
+![](../networking-pics/ports-2%201.png)
+Of the first 1023 ports, these are the most common and their protocols are *worth knowing*.
 
-These ports follow standards, which means ==you can administer applications which interact with these protocols on different, non-standard ports==
-- Have to provide a `:` w/ the port number bc applications will assume you are using standard ports
+These ports follow standards, which means you can administer applications which interact with these protocols on different, non-standard ports, but if you do *you should include a `:`*. This is because more applications will default to using the standard port for whatever protocol.
+![](../networking-pics/ports-2.jpg)
+## Port Forwarding 
+If a device running a service on a port inside the intranet of a network wants to make that service available to the public internet, or to another [subnet](../../PNPT/PEH/networking/subnetting.md) it can do so with port forwarding. Port Forwarding is normally *configured by a router*.
 
-## Port Forwarding / #port-forwarding
-If a device running a service on a port inside the #intranet of a network wants to make that service available to the public #internet, it can do so with port forwarding.
-- configured by the ==network router==
-- 
-
-Below: the device at `192.168.1.10` is running a service on port 80. Only the other devices w/i the same intranet can access it:
+In the below picture, the device at `192.168.1.10` is running a service on port 80. Only the other devices *w/i the same intranet* can access it:
 ![](/networking/networking-pics/ports-1.png)
+> [TryHackMe](https://tryhackme.com/module/network-fundamentals)
 
-Port forwarding:
+To Port Forward the service so *other devices on other networks can access it*, port forwarding can be used on the router. The routing would look more like this:
 ![](/networking/networking-pics/ports-2.png)
--TryHackMe.com
+> [TryHackMe](https://tryhackme.com/module/network-fundamentals)
+
+Port 80 on the network device *gets forwarded to the router*, so for other devices to access it, the address they access is `82.62.51.70:80`.
+
+> [!Resources]
+> - [TryHackMe: Network Fundamentals](https://tryhackme.com/module/network-fundamentals)
+> - Internship learning material

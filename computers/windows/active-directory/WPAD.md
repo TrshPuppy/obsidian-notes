@@ -1,6 +1,6 @@
 
 # Web Proxy Automatic Detection
-WPAD is a protocol in Windows environments which probes around the network looking for a *WPAD server*. WPAD servers host a [proxy](/www/proxy.md) configuration file, usually at the [DNS](/networking/DNS/DNS.md) address `wpad.domain.com`.
+WPAD is a protocol in Windows environments which probes around the network looking for a *WPAD server*. WPAD servers host a [proxy](../../../networking/design-structure/proxy.md) configuration file, usually at the [DNS](/networking/DNS/DNS.md) address `wpad.domain.com`.
 ## Mechanism
 WPAD uses both [DHCP](networking/protocols/DHCP.md) and DNS protocols to find the URL of the configuration file held by the WPAD server. The configuration file is used to determine if a specified URL *has a proxy* and what it is.
 ### Use

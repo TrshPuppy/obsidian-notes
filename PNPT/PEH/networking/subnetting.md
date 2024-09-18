@@ -2,7 +2,7 @@
 # Subnetting
 Subnetting is an organizational technique used on networks to break them up into sub networks. Subnetting works by taking advantage of [CIDR Notation](/networking/routing/CIDR.md) to re-delegate bits in an IP Address to serve either the host or the network.
 ## Subnet Mask
-The subnet mask tells you which parts of the IP address are network bits vs host bits. Each octet set to `255` in the subnet mask denotes an entire byte which belongs to the network. Each `0` in the subnet mask denotes bits belonging to the host:
+The subnet mask tells you *which parts of the IP address are network bits vs host bits*. Each octet set to `255` in the subnet mask denotes an entire byte which belongs to the network. Each `0` in the subnet mask denotes bits belonging to the host:
 ```yaml
 IP Address    : 192.168.32.5
 Subnet Mask   : 255.255.255.0
@@ -70,9 +70,9 @@ IP Address           : 192.168.32.5
 Subnet Mask          : 255.255.255.192
 Subnet Mask (binary) : 11111111.11111111.11111111.11000000
 # The increment = the least significant network bit:
-    Forth Octet      : 1    1    0    0    0    0    0    0
-                      128  (64)  32   16   8    4    2    1
-                     # the least sig network bit = 64 = the increment
+Forth Octet      : 1    1    0    0    0    0    0    0
+                  128  (64)  32   16   8    4    2    1
+                         # the least sig network bit = 64 = the increment
 ```
 Once you have the increment, you know that each subnet spans *increment* number of addresses. The subnet ranges in this example would be:
 ```yaml
@@ -107,5 +107,3 @@ Range            : 192.168.1.32 - 192.168.1.63
 
 > [!My previous notes (linked in the text):]
 > - [CIDR Notation](https://github.com/TrshPuppy/obsidian-notes/blob/main/networking/routing/CIDR.md)
-
-

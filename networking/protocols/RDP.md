@@ -1,6 +1,4 @@
----
-aliases: [RPD, remote-desktop, remote-desktop-protocol]
----
+
 # Remote Desktop Protocol
 Popular protocol which allows remote access to ==Windows== machines.
 - Allows users to control their remote Windows machines

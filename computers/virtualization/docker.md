@@ -1,6 +1,6 @@
 
 # Docker
-Docker [containers](computers/containers-vms/containers.md) sit on top of and uses the host's [operating-system](computers/concepts/operating-system.md). Although Docker can be used on both [Windows](/computers/windows) and [Linux](/computers/linux), the software *prefers linux-based* OS's.
+Docker [containers](containers.md) sit on top of and uses the host's [operating-system](computers/concepts/operating-system.md). Although Docker can be used on both [Windows](/computers/windows) and [Linux](/computers/linux), the software *prefers linux-based* OS's.
 
 Compared to [virtual machines](/computers/containers-vms/virtual-machines.md), Docker containers are *lighter* b/c they *piggyback on the pre-existing host OS*. This allows them to:
 - boot faster
@@ -29,7 +29,7 @@ The docker commands run from the CLI by the user are sent to the docker server.
 #### Docker Image
 Docker images are templates with instructions which *used to build docker containers*. The images are built via the *Dockerfile*; a text file w/ commands and configurations used to build the image.
 #### Docker Container
-The Docker container is the *runtime of a Docker Image*. It's a standalone executable which includes all the applications and dependencies needed by the container. It also has a virtual filesystem abstracted from the host's OS (however you need to use [*volumes*](/computers/containers-vms/docker.md#Mmounting-volumes) with Docker for files in the container to persist once the container is exited.)
+The Docker container is the *runtime of a Docker Image*. It's a standalone executable which includes all the applications and dependencies needed by the container. It also has a virtual filesystem abstracted from the host's OS (however you need to use [*volumes*](docker.md#Mmounting-volumes) with Docker for files in the container to persist once the container is exited.)
 
 If multiple docker containers are running at the same time, they use the same infrastructure and share operating system components w/ each other.
 ### Docker Registries

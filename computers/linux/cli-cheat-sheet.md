@@ -1,7 +1,6 @@
 
 # Linux CLI Cheat Sheet
 A quick reference for Linux commands:
-
 ## Filesystem:
 | Command | Purpose |Notes|
 |-|-|-|
@@ -26,10 +25,12 @@ Home for the "root" system user (instead of the root user's home directory being
 A "volatile" directory which only stores data which needs to be accessed one or two times. Once the computer is restarted *the contents of this folder are cleared*.
 ##### For pentesting:
 This folder is useful because any user has access to it, so it is an easy place to store things like scripts, etc. which you need during a pentest.
-## Users & Permissions:
-|cmd|purpose|notes|
-|-|-|-|
-|su|switch user| use the `-l` (login) switch to inherit other characteristics of the target user including changing the environment variables|
+## Users & Permissions
+See more in my [PNPT notes](../../PNPT/PEH/kali-linux/file-permissions.md).
+
+| cmd | purpose     | notes                                                                                                                        |
+| --- | ----------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| su  | switch user | use the `-l` (login) switch to inherit other characteristics of the target user including changing the environment variables |
 ## Text Editors:
 ### Nano
 Nano is a terminal text editor (has to be installed on a bare-bones shell set up).
@@ -45,16 +46,16 @@ These features can be used w/i nano by pressing the `Ctrl` key + the desired swi
 - Jumping to a line number: `^_`
 - Finding out the current line number: `^C`
 
-Vim and Vi are other similar CLI text editors.
+[Vim](../../CLI-tools/linux/vim.md) and Vi are other similar CLI text editors.
 ## Transferring files
-### wget
+### `wget`
 Allows you to download files from the web using [HTTP](www/HTTP.md). Just need to supply `wget` with the address of the resource.
 ```bash
 wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt
 ```
 
 Can also use [curl](curL.md)
-### SCP
+### [SCP](../../networking/protocols/SCP.md)
 SCP or "secure copy" is a way to transfer files via SSH (so the files are encrypted and transferred over an authenticated connection).
 ```shell
 # copy a file from host machine to target machine:
@@ -64,6 +65,6 @@ scp important.txt ubuntu@192.168.1.30:/home/unbuntu/transferred.txt
 scp ubuntu@192.168.1.30:/home/ubuntu/documents.txt notes.txt
 ```
 
-> [!Links:]
+> [!Resources:]
 > - [THM Linux Fundamentals pt. 3](https://tryhackme.com/room/linuxfundamentalspart3)
 

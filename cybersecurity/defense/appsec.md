@@ -25,7 +25,7 @@ In order to integrate secure coding into the SDLC, some needs need to be met:
 - Coding Practices checklist: procedures for how to handle/ mitigate vulnerabilities etc.
 	- [OWASP](cybersecurity/resources/OWASP.md)
 - Trusted Libraries: have an in depth list of third party software being used. So if a vuln is released in one of them, it's easy to track it down and take care of it
-	- ex: [log4j](cybersecurity/attacks/log4j.md)
+	- ex: [log4j](../vulnerabilities/log4j.md)
 - Standard architecture: spell out in advance how the system should look for taking certain approcahces
 	- application security architecture
 - mistakes to avoid:
@@ -37,7 +37,7 @@ In order to integrate secure coding into the SDLC, some needs need to be met:
 		- versions
 		- origin of all components
 		- vulnerabilities
-	- makes it much easier to repsond to vulns which occur in these components and where to make changes
+	- makes it much easier to respond to vulns which occur in these components and where to make changes
 	- recover much faster
 ## Vulnerability Testing Tools:
 Testing for vulnerabilities in the code should be started as early as possible in the SDLC and continue throughout. SAST and DAST (described below) should *both be used* (not a matter of choosing one over the other).

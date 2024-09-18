@@ -1,7 +1,6 @@
 
-# Windows Enumeration:
+# Windows Enumeration
 The first thing you should do when you gain access to a Windows machine is enumeration.
-
 ## Users
 ```PowerShell
 Get-LocalUser
@@ -43,8 +42,7 @@ SID                    : S-1-5-21-1394777289-3961777894-1791813945-501
 PrincipalSource        : Local
 ObjectClass            : User
 ```
-
-### Example: sorting my PasswordRequired property:
+### Example: sorting my PasswordRequired property
 ```PowerShell
 get-localuser | where-object -property passwordRequired -like false
 
@@ -55,8 +53,7 @@ duck           True
 duck2          True
 Guest          False   Built-in account for guest access to the computer/domain
 ```
-
-## Groups:
+## Groups
 ```PowerShell
 Get-localgroup
 Name                                Description
@@ -68,25 +65,21 @@ Certificate Service DCOM Access     Members of this group are allowed to connect
 Cryptographic Operators             Members are authorized to perform cryptographic operations.
 Distributed COM Users               Members are allowed to launch, activate and use Distributed COM objects on this ...
 ```
-
-## Network:
-### IP Address:
+## Network
+### IP Address
 ```Powershell
 Get-NetIPAddress
 ```
-
-### Ports:
+### Ports
 ```
 Get-NetTCPConnection
 ```
-
 ## Installations/ Patches
-### Hot-Fixes:
+### Hot-Fixes
 ```
 Get-HotFix
 ```
-
-### CIM Instance:
+### CIM Instance
 Use `Get-CimInstance` to get the [Common Interface Model (CIM)](https://www.techtarget.com/searchstorage/definition/Common-Information-Model) instance of a class from the CIM server:
 ```PowerShell
 Get-CimInstance -Class win32_quickfixengineering
@@ -100,20 +93,17 @@ Source        Description      HotFixID      InstalledBy          InstalledOn
               Update           KB4013418     EC2AMAZ-5M13VM2\A... 3/16/2017 12:00:00 AM
               ...
 ```
-
-## Backup files:
+## Backup files
 Backup files are normally saves with the `.bak` extension. To find a specific backup file:
 ```powershell
 Get-ChildItem -Recurse -ErrorAction SilentlyContinue -Include *.bak* -File
 
 ```
-
-## Running Processes:
+## Running Processes
 ```
 Get-Process
 ```
-
-## Drive Ownership:
+## Drive Ownership
 ```
 Get-Acl C:/
 ```

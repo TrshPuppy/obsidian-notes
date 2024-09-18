@@ -1,8 +1,14 @@
-
+```
+https://qconnect.qfloors.com/payments/?companyId=watkinsfloor1497&processorId=19194&firstName=Richard&lastName=Vu&companyName=&email=rose.p.biz@proton.me&confirmationEmails=caroline@watkinsnewfloor.com&salesOrder=56786&paymentAmount=5550.00&surchargePerc=0&paymentType=&accountType=&address=310%20Landon%20Lane%20&poBox=false&city=Sneads%20Ferry%20&state=NC&zip=28460
+```
 # Vim: CLI Text Editor
 **[Ultimate Cheat Sheet](https://vim.rtorr.com)**
-## Quick Cheats:
-#### Replace multiple instances or same word:
+## Quick Cheats
+#### ASCII
+```bash
+You can also get the ASCII code of a character directly in VIM. To get the code of the character under the cursor in insert mode, you can type "ga" or the command ":as" for ASCII.
+```
+#### Replace multiple instances or same word
 1. type `/<word to replace>` & press `Enter` (cursor jumps to first occurence)
 2. in `NORMAL` mode type `cgn` (word gets deleted)
 3. type in the new word, then press `Esc` (`NORMAL` mode)
@@ -12,7 +18,7 @@
 In normal mode, press `0` to move the cursor to the start of the current line. Press `Shift` + `$` to move cursor to end of line.
 ## Config/ Settings
 ### Home Directory
-Make the following folders in your home direcetory:
+Make the following folders in your home directory:
 ```bash
 .vim/
  ├── autoload/
@@ -20,8 +26,8 @@ Make the following folders in your home direcetory:
  ├── colors/
  └── plugged/
 ```
-Then, create a `.vimrc` file in your home directory:
-#### `~/.vimrc`:
+Then, create a `.vimrc` file in your home directory.
+#### `~/.vimrc`
 This is the configuration file for vim. Double quotes (`"`) Create comments:
 ```vimrc
 " Set shift width to 4 spaces.

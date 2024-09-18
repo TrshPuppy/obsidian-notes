@@ -13,7 +13,7 @@ Each computer's OS ships  w/ a *TCP/IP stack* which understands the TCP protocol
 "Network Interface" usually refers to the computer's network card. Each computer has a Network Interface Card (NIC) (either for ethernet or wifi) which knows how to connect the device to internet. The NIC is allocated an [IP Address](/networking/OSI/IP-addresses.md) (usually by a router). The NIC also knows its device's [MAC Address](/networking/OSI/MAC-addresses.md). 
 
 In this example, the computer's NIC's IP address is **`192.168.0.5`**.
-### [Virtual Private Networks](/networking/routing/VPN.md)
+### [Virtual Private Networks](../design-structure/VPN.md)
 A VPN creates a *virtual network interface* w/ a *virtual IP address* and *virtual MAC address*.
 
 The VPN's network in this example is **`10.0.0.12/8`** with a gateway address of **`10.0.0.1`**.

@@ -26,13 +26,11 @@ DESCRIPTION
 	   option as mentioned below. Please also consult the documentation on
 	   the Tor Project’s website.
 ```
-
-## Quickstart:
-### Install tor:
+## Quickstart
+### Install tor
 ```bash
 sudo apt install tor
 ```
-
 ### Use [systemctl](/computers/linux/linux-processes.md) to start the service:
 ```bash
 sudo systemctl start tor.service
@@ -48,10 +46,9 @@ tor.service - Anonymizing overlay network for TCP (multi-instance-master)
    Main PID: 1294814 (code=exited, status=0/SUCCESS)
         CPU: 2ms
 ```
-
-## Configuration:
-### Proxy Chains:
-Tor routes your VPN connection through proxy chaining. In the [HTTP protocol](www/HTTP.md) proxies/ proxy servers are servers which are configured to forward [TCP](/networking/protocols/TCP.md) connections to a desired destination. The server makes the connection *on behalf of the client* to the destination.
+## Configuration
+### Proxy Chains
+Tor routes your VPN connection through proxy chaining. In the [HTTP protocol](www/HTTP.md), [proxies/ proxy servers](../../networking/design-structure/proxy.md) are servers which are configured to forward [TCP](/networking/protocols/TCP.md) connections to a desired destination. The server makes the connection *on behalf of the client* to the destination.
 
 The initial connection is done via HTTP. Then subsequent data sent b/w the server (on behalf of the client) to the destination is sent via a TCP stream.
 
@@ -63,25 +60,21 @@ To configure the proxy chain type:
 ```bash
 sudo vim /etc/proxychains4.conf
 ```
-
-## Using Proxychains w/ Tor:
+## Using Proxychains w/ Tor
 Once the list of proxies (in the chain) is added to `/etc/proxychains4.conf` you can start using tor and proxychains to "anonymously" browse the internet, etc..
-
-### Start tor:
+### Start tor
 ```bash
 sudo systemctl restart tor.service
 ```
-
-### Connect w/ proxychains:
+### Connect w/ proxychains
 To anonymize your web traffic, use the `proxychains` command + whatever web command you want to use, for example:
 ```bash
 proxychains firefox www.google.com
 ```
-Or nmap:
+Or [nmap](../../CLI-tools/linux/nmap.md)
 ```bash
 sudo proxychains nmap -A -p- 10.0.0.2
 ```
-
 
 > [!Resources]
 > - `man tor`
@@ -89,5 +82,5 @@ sudo proxychains nmap -A -p- 10.0.0.2
 > - [StackExchange: Proxy Chaining...](https://superuser.com/questions/1213774/proxy-chaining-how-does-it-exactly-work)
 > - [Proxy Scrape: What is Proxy Chaining](https://proxyscrape.com/blog/proxy-chaining#what-is-a-proxy)
 > - [Sleepy: Hide Your IP Address Kali Linux](https://www.youtube.com/watch?v=fZuZ81cEh_8)
-> - White PAper:
+> - White Paper:
 > 	- [Justia Patents: Dynamic Forward Proxy Chaining](https://patents.justia.com/patent/11637812)
