@@ -23,3 +23,5 @@ This mode of encryption is able to *provide authentication* by combining encrypt
 
 > [!Resources]
 > - [Professor Messer](https://www.youtube.com/watch?v=bEOrdqLB1Io&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=98)
+
+
