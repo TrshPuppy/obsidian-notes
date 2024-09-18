@@ -28,6 +28,10 @@ smbclient //<target IP>/<target share> -U <username>
 smbclient <username>@<target IP>
 ```
 *HINT:* you can try entering a blank password when prompted while using `anonymous` as the user.
+### Listing *Null Shares*
+```bash
+smbclient -N -L \\\\X.X.X.X
+```
 ### SMB Shell
 Once you've gained access to the SMB server on the target, you're given a shell instance.
 #### Shell commands
@@ -40,6 +44,7 @@ Once you've gained access to the SMB server on the target, you're given a shell 
 
 > [!Resources]
 > - `man smbclient`
+> - [Steflan-Security: SMB Enumeration](https://steflan-security.com/smb-enumeration-guide/)
 
 > [!Related]
 > - [SMB protocol](/networking/protocols/SMB.md)

@@ -14,5 +14,9 @@ There are more secure implementations of LDAP including LDAPS and SASL.
 > [!Resources]
 > - [Professor Messer](https://www.youtube.com/watch?v=yuXK_Jyosus&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=101)
 
+> [!Related]
+> - `port 389`
+> - [kerberos](kerberos.md)
+> - [Active Directory](../../computers/windows/active-directory/active-directory.md)
 
 rwxrob yt vid

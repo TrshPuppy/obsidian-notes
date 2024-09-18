@@ -134,7 +134,7 @@ Archive:  backup.zip
 [backup.zip] index.php password: 
 ```
 ### zip2john
-Fortunately we can do some offline cracking with [john the ripper](cybersecurity/tools/cracking/john.md). John is a cracking tool which can be used to crack various things, specifically passwords. However, he also has some other setting such as `ssh2john` and `zip2john`.
+Fortunately we can do some offline cracking with [john the ripper](../cybersecurity/TTPs/cracking/tools/john.md). John is a cracking tool which can be used to crack various things, specifically passwords. However, he also has some other setting such as `ssh2john` and `zip2john`.
 
 We're gonna use `zip2john` to crack the passwords. From what I understand, `zip2john` creates a hash of the `.zip` file and then attempts to crack the hash, thus revealing the passwords locking it and/or securing the files zipped in it.
 #### Use

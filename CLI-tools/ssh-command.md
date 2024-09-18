@@ -36,3 +36,17 @@ applicable law.
 
 tryhackme@linux2:~$ 
 ```
+### Config Example
+
+```
+Host <custom host name>
+	Hostname <IP>
+	User Administrator
+	IdentityFile .ssh\SSH-Private.pem
+
+Host <custom host name>
+        HostName <IP>
+        User root
+        IdentityFile .ssh\SSH-Private.pem
+        ProxyJump natfuel_windows
+```

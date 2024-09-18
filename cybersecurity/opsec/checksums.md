@@ -49,7 +49,7 @@ Usage:
 ```
 
 ## Verifying Checksums:
-### Linux (ex using [OWASP Amass](/cybersecurity/tools/amass.md)):
+### Linux (ex using [OWASP Amass](../TTPs/recon/tools/amass.md)):
 We're going to verify the checksum of this OWASP Amass download before downloading it *so we know it's safe and coming from the source we think it's coming from ([OWASP](cybersecurity/resources/OWASP.md))*.
 
 #### 1. Go to GitHub releases page of OWASP-Amass tool:

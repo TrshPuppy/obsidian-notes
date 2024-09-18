@@ -14,6 +14,9 @@ You can also get the ASCII code of a character directly in VIM. To get the code 
 3. type in the new word, then press `Esc` (`NORMAL` mode)
 4. use `n` or `N` to jump to the next or previous occurrence of the original word
 5. press `.` and the current word will be replaced with the new word you used to replace the first occurrence
+##### Alternative method
+`:%s/old/new/g`
+
 #### Move cursor to end/ start of line
 In normal mode, press `0` to move the cursor to the start of the current line. Press `Shift` + `$` to move cursor to end of line.
 ## Config/ Settings
@@ -145,12 +148,20 @@ In the `MAPPINGS` section of your `.vimrc` you can add key mappings. The syntax 
 The `map_mode` of the key mapping syntax determines what mode in Vim the keymapping will be applied to. The common ones are:
 - `nnoremap`: Map keys in normal mode
 - `inoremap`: Map keys in insert mode
-- `vnoremap`: Map keys in visual mode
+- `vnoremap`: Map key in visual mode
 #### Example
 Mapping `jj` to `ESC` in insert mode:
 ```.vimrc
 inoremap jj <esc>
 ```
+## Default Key binds
+### `diw()<Esc>P`
+Surround current word w/ parenthesis
+### `o` & `<Shift>O`
+Insert new line under current line & insert new line ABOVE current line.
+
+
+
 
 > [!Resources:]
 > - [Linux Handbook](https://linuxhandbook.com/move-start-end-line-vim/)

@@ -32,7 +32,7 @@ Most attackers perform a lot of [OSINT](/cybersecurity/TTPs/recon/OSINT.md) rese
 - Looking at a target's website and finding what [technologies](/PNPT/PEH/recon/website-tech-recon.md) it uses.
 - Looking up a target on google maps
 - *Passive* [email harvesting](/PNPT/PEH/recon/email-addresses.md): obtaining email addresses from public/ free services
-	1. [The Harvester](/cybersecurity/tools/recon/the-harvester.md) tool which can be used to harvest emails, as well as domains, sub domains, names, IP addresses, URLs etc.
+	1. [The Harvester](recon/tools/credential-harvesting/the-harvester.md) tool which can be used to harvest emails, as well as domains, sub domains, names, IP addresses, URLs etc.
 	2. [Hunter.io](https://hunter.io/email-finder)
 - Finding who works for a target using LinkedIn, etc.
 ### Recon *once inside the target/system*:
@@ -107,7 +107,7 @@ A backdoor is a way for an attacker to *establish a way back into the system* wh
 There are a few ways persistence can be achieved:
 ##### Installing a [web shell](/cybersecurity/TTPs/exploitation/web-shell.md) on a server
 ##### Installing a backdoor directly on the victim's machine
-An example of this technique is the use of [Metasploit's Meterpreter](/cybersecurity/tools/exploitation/metasploit.md). Meterpreter is a *payload* which gives the user an interactive shell on *the target's network/device*.
+An example of this technique is the use of [Metasploit's Meterpreter](exploitation/tools/metasploit.md). Meterpreter is a *payload* which gives the user an interactive shell on *the target's network/device*.
 ##### Creating or modifying a Windows service
 An attacker can create or modify Windows services to execute malicious scripts/ payloads. One way to do this is via *Registry keys* to modify service configurations.
 

@@ -14,9 +14,19 @@ The agent software (running on *managed devices*) has local knowledge of of mana
 The NMS software (running on the *manager device*) executes applications which *monitor and control* the managed devices. It does the bulk of the processing and provides memory resources for managing the network. 
 
 *One network can have multiple managers.*
+## SNMPv1 & SNMPv2
+### Community Strings
+v1 and v2 of this protocol use something called 'community strings' to handle authentication. Community strings are like user IDs or passwords which allow access to a device's statistics.
+
+Each string is made up of a user credential and is transported accross the network *in plain text* using a GET request. Devices requesting access to another device's statistics has to supply the right community string, of the device will ignore the request.
 ## SNMPv3
-Version 3 of SNMP doesn't change the protocol except to add *encryption* and *authentication.*. It also *looks* a lot different than previous versions because it adds new textual conventions, terminology and concepts. For example, SNMPv3 has *security and remote configuration enhancements*.
+Version 3 of SNMP doesn't change the protocol except to add *encryption* and *authentication.* Unlike v1 and v2, it uses username/password authentication (instead of community strings), and an encryption key.
+
+It also *looks* a lot different than previous versions because it adds new textual conventions, terminology and concepts. For example, SNMPv3 has *security and remote configuration enhancements*.
 
 > [!Resources]
 > - [Wikipedia: SNMP](https://en.wikipedia.org/wiki/Simple_Network_Management_Protocol)
 > - [`RFC 1157`](https://datatracker.ietf.org/doc/html/rfc1157)
+
+> [!Related]
+> - `port 161` ([UDP](UDP.md))

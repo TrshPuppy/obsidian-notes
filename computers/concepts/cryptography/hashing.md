@@ -36,10 +36,10 @@ A salt is *random data* added to the password before its hashed so that its hash
 > [!Tools]
 > - [Cyber-Chef](cybersecurity/resources/Cyber-Chef.md)
 > - [OPSWAT](cybersecurity/resources/OPSWAT.md) 
-> - [Virus-Total](cybersecurity/tools/reverse-engineering/Virus-Total.md)
+> - [Virus-Total](../../../cybersecurity/TTPs/recon/tools/reverse-engineering/Virus-Total.md)
 
 > [!Command Line]
 > - see [checksums](/cybersecurity/opsec/checksums.md)
-> - [hash-id](cybersecurity/tools/cracking/hash-id.md)
+> - [hash-id](../../../cybersecurity/TTPs/cracking/tools/hash-id.md)
 
 

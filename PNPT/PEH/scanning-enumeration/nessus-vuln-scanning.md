@@ -1,6 +1,6 @@
 
 # Vulnerability Scanning w/ Nessus
-[Nessus](/cybersecurity/tools/scanning-enumeration/vuln-scanning/nessus.md) is a vulnerability scanner used commonly in penetration testing. 
+[Nessus](../../../cybersecurity/TTPs/recon/tools/vuln-scanning/nessus.md) is a vulnerability scanner used commonly in penetration testing. 
 ## Installation
 Download the tool from `https://www.tenable.com/downloads/nessus?loginAttempted=true`. Use `dpkg -i Nessus...` in the `/Downloads` folder to install. When you install the tool, follow the prompts in the terminal, you'll need an activation code for *Nessus Essentials*:
 ```bash

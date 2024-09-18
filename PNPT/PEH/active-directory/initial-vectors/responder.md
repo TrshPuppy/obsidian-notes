@@ -1,5 +1,5 @@
 
-# Capturing Hashes with [Responder](/cybersecurity/tools/exploitation/responder.md)
+# Capturing Hashes with [Responder](../../../../cybersecurity/TTPs/exploitation/tools/responder.md)
 Responder is a tool which can be used to perform [LLMNR poisoning](/PEH/active-directory/initial-vectors/LLMNR-poisoning.md) attacks on an [active directory](/computers/windows/active-directory/active-directory.md) domain. [LLMNR](/networking/protocols/LLMNR.md) is not the only protocol which responder can do a poisoning attack on. It can also be used against [NBT-NS](/networking/protocols/NBT-NS.md) and [MDNS](/networking/protocols/MDNS.md).
 ## Example Usage
 Against our AD lab, we're going to use Responder to perform LLMNR poisoning. This will allow us to capture the hash sent for authentication from the victim machine. Once we have the hash, we can crack it to get the password for that machine.
@@ -81,7 +81,7 @@ Now, if we go to the user VM's File Explorer and search for the IP *of our attac
 ![](/PNPT-pics/active-directory-10.png)
 This screenshot shows the hash our rogue server received when Dan Dumpster searched for our attacking IP address while logged in to a domain computer. Now that we have the hash (which is an DES-made hash) we can easily crack it to get Dan Dumpster's password.
 ## Cracking the Hash
-To crack this hash, we're going to use [Hashcat](/cybersecurity/tools/cracking/hashcat.md). Hashcat is a cracking program which *ideally* uses GPU processing to crack hashes in many different formats. To crack this hash, we're going to specify a value of 5600 to the `-m` flag. This tells hashcat that we're cracking an [NTLMv2](/networking/protocols/NTLM.md) hash.
+To crack this hash, we're going to use [Hashcat](../../../../cybersecurity/TTPs/cracking/tools/hashcat.md). Hashcat is a cracking program which *ideally* uses GPU processing to crack hashes in many different formats. To crack this hash, we're going to specify a value of 5600 to the `-m` flag. This tells hashcat that we're cracking an [NTLMv2](/networking/protocols/NTLM.md) hash.
 
 To give hashcat the hash, copy and paste the entire hash into a file called `hashes.txt`. The hash includes the username and password, so everything from `ddumpster::LANDFILL:...` to `...00000000` at the very end (in my example).
 
@@ -89,7 +89,7 @@ Once that's saved in a file, the command we use w/ hashcat is as follows:
 ```bash
 hashcat -m 5600 hashes.txt /usr/share/wordlists/rockyou.txt
 ```
-We're also using the RockYou [wordlist](/cybersecurity/tools/scanning-enumeration/wordlists/seclists.md) which hashcat will use to generate hashes to try and match the one we're looking for. Even in a VM, this crack only takes hashcat about 16 seconds:
+We're also using the RockYou [wordlist](../../../../cybersecurity/TTPs/recon/tools/wordlists/seclists.md) which hashcat will use to generate hashes to try and match the one we're looking for. Even in a VM, this crack only takes hashcat about 16 seconds:
 ![](PNPT/PNPT-pics/active-directory-11.png)
 Now we can log in as Dan Dumpster!
 

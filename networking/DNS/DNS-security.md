@@ -36,9 +36,17 @@ An NXDOMAIN attack is a form of [denial of service](/cybersecurity/TTPs/exploita
 ## DNSSEC
 [DNSSEC](/networking/protocols/DNSSEC.md) is a security protocol which implements digital signing of data to ensure its validity.
 ![DNSSEC](/networking/protocols/DNSSEC.md)
+## Other DNS Security
+### Sinkhole Address
+Also called "blackholing". One way to use DNS to secure a network is to set up a sinkhole address. This address is used *whenever a device on the network tries to connect to a known malicious address.* When that happens, we can route them instead to our *sinkhole address.* At the sinkhole address we have monitoring turned on so we can see *how many devices and which devices* attempted to connect to malicious sites.
+
+This can be used to *detect malicious activity* and *stop infected devices* from connecting back to their [C2](../../cybersecurity/TTPs/c2/C2.md) servers. Additionally, if we see an internal device attempting to connect to a malicious address, we can intervene and get that device quarantined off the network.
+
+This is also effectively content filtering. 
 
 > [!Resources]
 > - [Unit 42: DNS Vulnerabilities](https://unit42.paloaltonetworks.com/dns-vulnerabilities/)
 > - [Cloudflare: DNS Security](https://www.cloudflare.com/learning/dns/dns-security/)
 > - [CoreDNS GitHub: Issue 3547, CVE-2019-19794](https://github.com/coredns/coredns/issues/3547)
+> - [Professor Messer](https://www.youtube.com/watch?v=Nj_VF6tuBpw&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=111)
  

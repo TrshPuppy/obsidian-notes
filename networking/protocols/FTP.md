@@ -17,7 +17,7 @@ This is an extension of [SSL](SSL.md)
 Uses [SSH](/networking/protocols/SSH.md) to provide encryption. Also provides file system functionality like *resuming interrupted file transfer*, directory listing, and remote file removal.
 
 > [!Related]
-> - #port-21
+> - `port 21`
 > - [FTP command](CLI-tools/linux/ftp-command.md)
 
 > [!Resources]

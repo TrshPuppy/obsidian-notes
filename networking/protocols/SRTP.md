@@ -1,7 +1,7 @@
 
 # SRTP Secure Real Time Transport Protocol
 Init
-Used in VOIP and is the secure version of *RTP* (Realtime Transport Protocol).
+Used in VOIP and is the secure version of *RTP* (Realtime Transport Protocol). It ensures *secure, realtime transport of video and audio over an [IP](../OSI/4-transport/transport-layer.md) network.*
 ## Adds to RTP
 SRTP uses encryption to keep conversations private, whereas RTP  does not. 
 ### AES Encryption
