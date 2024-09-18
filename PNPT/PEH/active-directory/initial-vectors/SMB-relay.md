@@ -45,7 +45,7 @@ Host script results:
 Nmap done: 1 IP address (1 host up) scanned in 1.23 seconds
 ```
 Regardless of the number of targets which come back as not requiring SMB signing, add each one to a file called `targets.txt`.
-### Relay w/ [Responder](/cybersecurity/tools/exploitation/responder.md) & `smbrelayx.py`
+### Relay w/ [Responder](../../../../cybersecurity/TTPs/exploitation/tools/responder.md) & `smbrelayx.py`
 Once we've found a good host, we're going to use a combination of Responder and `smbrelayx.py`to capture a hash and then relay if (using our own server) to the target.
 
 First, we have to update our Responder configuration so it doesn't act as the server (since the impacket script will do that for us).
@@ -73,7 +73,7 @@ respnder -I eth0 -dwPv
 - `P`: ProxyAuth (forces NTLM authentication)
 - `v`: verbose
 #### `ntlmrelayx.py`
-The `ntlmrelayx.py` script is from python [impacket](/cybersecurity/tools/exploitation/impacket.md) which will handle relaying the hashes captured by responder to the target devices.
+The `ntlmrelayx.py` script is from python [impacket](../../../../cybersecurity/TTPs/exploitation/tools/impacket.md) which will handle relaying the hashes captured by responder to the target devices.
 ```bash
 ntlmrelayx.py -tf targets.txt -smb2support -c 'whoami'
 ```

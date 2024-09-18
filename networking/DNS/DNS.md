@@ -1,6 +1,47 @@
 
 # Domain Name System
 DNS is a [TCP/IP](/networking/protocols/TCP.md) protocol which allows a device to ask a name server for the [IP address](/networking/OSI/3-network/IP-addresses.md) attached to a domain name.
+## Components
+The DNS system is made up of three main components:
+### Namespace and Resource Records
+> The DOMAIN NAME SPACE and RESOURCE RECORDS, which are	specifications for a tree structured name space and data	associated with the names.  Conceptually, each node and leaf	of the domain name space tree names a set of information, and	query operations are attempts to extract specific types of information from a particular set.  A query names the domain name of interest and describes the type of resource information that is desired.  For example, the Internet	uses some of its domain names to identify hosts; queries for address resources return Internet host addresses.
+> - [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+### Name Servers
+>  NAME SERVERS are server programs which hold information about the domain tree's structure and set information.  A name server may cache structure or set information about any part of the domain tree, but in general a particular name server  has complete information about a subset of the domain space, and pointers to other name servers that can be used to lead to information from any part of the domain tree.  Name servers know the parts of the domain tree for which they have complete information; a name server is said to be an AUTHORITY for these parts of the name space.  Authoritative information is organized into units called ZONEs, and these zones can be automatically distributed to the name servers which provide redundant service for the data in a zone.
+  - [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+### Resolvers
+> RESOLVERS are programs that extract information from name servers in response to client requests.  Resolvers must be able to access at least one name server and use that name server's information to answer a query directly, or pursue the query using referrals to other name servers.  A resolver will typically be a system routine that is directly accessible to user programs; hence no protocol is necessary between the resolver and the user program.
+  - [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034)
+## Namespace
+The domain name system (DNS) is hierarchical “tree” structure with nodes and leaves. Resources in the name space correspond to either a node or a leaf. Each node/ leaf has a label which can be anywhere from 0 to 63 octets in length. Two nodes which are related (or 'brothers') cannot have the same name, but two nodes which aren't related can.
+
+A node's domain name *is the list of labels on the path from the node itself to the root domain*. The root domain label is reserved and has a length of 0 (which makes it null). All domain names end at the root *which effectively uses a null string as its label*. Doman names are *case insensitive* (meaning `A` and `a` as domain names would be a collision if they are brothers).
+### Example Namespace Hierarchy
+```rfc
+                                   |
+                                   |
+             +---------------------+------------------+
+             |                     |                  |
+            MIL                   EDU                ARPA
+             |                     |                  |
+             |                     |                  |
+       +-----+-----+               |     +------+-----+-----+
+       |     |     |               |     |      |           |
+      BRL  NOSC  DARPA             |  IN-ADDR  SRI-NIC     ACC
+                                   |
+       +--------+------------------+---------------+--------+
+       |        |                  |               |        |
+      UCI      MIT                 |              UDEL     YALE
+                |                 ISI
+                |                  |
+            +---+---+              |
+            |       |              |
+           LCS  ACHILLES  +--+-----+-----+--------+
+            |             |  |     |     |        |
+            XX            A  C   VAXA  VENERA Mockapetris
+```
+In this hierarchy, the root domain has three subdomains, `MIL`, `EDU`,  and `ARPA`.  These are 'brother' domains. `LCS.MIT.EDU` has one subdomain called `XX.LCS.MIT.EDU`.  This diagram is in RFC 1034.
+
 ## Domain Hierarchy:
 ![](/networking/networking-pics/DNS-1.png)
 -[Try Hack Me](https://tryhackme.com/room/dnsindetail)
@@ -13,18 +54,16 @@ Used for geographical purposes (`.ca` for Canada)
 ### Second Level Domain
 The second level domain in `tryhackme.com` would be `tryhackme`. It's limited to 63 characters + the TLD and *can only use a-z and 0-9.* Also cannot start or end with hyphens or have consecutive hyphens.
 ### Subdomain
-A subdomain is additional info added to the beginning of a website's domain name. *It allows the site to be separated and organized* into specific contents and functions.
-
-Ex: `hackthebox.com` vs `ctf.hackthebox.com`. -->`ctf` is the subdomain and it still under `hackthebox`'s domain.
+A subdomain is a prefix added to a domain name. It allows the domain to be separated and organized into specific contents and functions. For example, the `hackthebox.eu` domain has a subdomain named `ctf` . To access this subdomain, you would visit `ctf.hackthebox.eu`. From the name, you can tell that this is where HackTheBox hosts all of their CTF related services.
 
 *Subdomains can have different IP addresses* and all of the subdomains of one domain can be handled by one server using *virtual host routing* where the server uses the *Host* header in the [HTTP](/www/HTTP.md) request to determine which app is meant to handle which request.
 #### [Subdomain Enumeration](PNPT/PEH/recon/hunting-subdomains.md)
-In order to find all the subdomains on a virtual host, tools like [Gobuster](/cybersecurity/tools/scanning-enumeration/dir-and-subdomain/gobuster.md) can perform subdomain enumeration Using a wordlist of possible subdomains, Gobuster will send out an HTTP request with a host header (of the vhost) to all the addresses w/ the possible subdomains appended.
+In order to find all the subdomains on a virtual host, tools like [Gobuster](../../cybersecurity/TTPs/recon/tools/dir-and-subdomain/gobuster.md) can perform subdomain enumeration Using a wordlist of possible subdomains, Gobuster will send out an HTTP request with a host header (of the vhost) to all the addresses w/ the possible subdomains appended.
 ```
 Host: [word].thetoppers.htb
 ```
 ## Domain/Hostname Resolution
-There is a series of step a device takes in order to resolve a hostname (like `www.twitch.tv`) into an IP address:
+There is a series of steps a device takes in order to resolve a hostname (like `www.twitch.tv`) into an IP address:
 ### Initial Hostname Request
 You type `www.twitch.tv` into your browser.
 ### Computer checks local cache
@@ -57,7 +96,10 @@ An ANS is the final *source of information when resolving a domain name*. Once t
 > [!Resources]
 > - [TryHackMe: DNS in Detail](https://tryhackme.com/room/dnsindetail) 
 > - [ClouDNS: What is NXDOMAIN](https://www.cloudns.net/blog/what-is-nxdomain/#NXDOMAIN_%E2%80%93_Definition)
+> - [RFC 1034](https://datatracker.ietf.org/doc/html/rfc1034) (on domain name concepts)
+> - [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035) (on implementation and specifications)
 
 > [!Related]
 > - Commands: [dig](/CLI-tools/dig.md), [whois](/CLI-tools/whois.md)
-> - Tools: [amass](/cybersecurity/tools/scanning-enumeration/dir-and-subdomain/amass.md)
+> - Tools: [amass](../../cybersecurity/TTPs/recon/tools/dir-and-subdomain/amass.md)
+> - `port 53`

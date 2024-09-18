@@ -4,8 +4,6 @@ Kerberos is an *authentication protocol* used in Windows computer-network enviro
 
 It's based around a *client-server model* and requires both the server and client to verify each other's identities. It also uses *symmetric key [cryptography](computers/concepts/cryptography/cryptography.md)* as well as *public key cryptography* (optional) and requires a 3rd party for authentication.
 
-
-
 > [!Related]
 > - `port 88`
 > - [active-directory](computers/windows/active-directory/active-directory.md)

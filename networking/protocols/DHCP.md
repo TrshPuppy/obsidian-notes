@@ -16,6 +16,10 @@ DHCP *does not include built-in security.* So, controls outside the protocol are
 Another way security can be implemented for DHCP is to have [switches](../OSI/2-datalink/switches.md) be configured with *trusted interfaces*. This means that any DHCP IP address distribution is *only allowed from trusted interfaces*. This can be configured in Cisco switches, where it's referred to as *DHCP snooping*.
 
 Another configuration which can be done on switches is to *limit the number of MAC addresses* per interfaces. For example, if an interface is attached to one device, we should *only see one MAC address* at that interface. This can be done to prevent DHCP exhaustion and *starvation attacks*.
+### [DHCP Snooping](../OSI/1-physical/port-security.md#[DHCP](../../protocols/DHCP.md)%20Snooping)
+![](../OSI/1-physical/port-security.md#[DHCP](../../protocols/DHCP.md)%20Snooping)
+
+
 
 > [!Resources]
 > - [Professor Messer](https://www.youtube.com/watch?v=yuXK_Jyosus&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=101)

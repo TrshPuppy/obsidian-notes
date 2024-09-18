@@ -17,4 +17,5 @@ Additionally, DNSSEC can be integrated w/ other security measures including [TLS
 > [!Resources]
 > - [Cloudflare: DNS Security](https://www.cloudflare.com/learning/dns/dns-security/)
 > - [Professor Messer](https://www.youtube.com/watch?v=yuXK_Jyosus&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=101)
+> - [Professor Messer](https://www.youtube.com/watch?v=Nj_VF6tuBpw&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=111)
 

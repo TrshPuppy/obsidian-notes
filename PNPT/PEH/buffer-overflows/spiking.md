@@ -4,7 +4,7 @@ The following notes were created while using [Vulnserver](https://thegreycorner.
 ## Setup
 Once Vulnserver and Immunity Debugger are installed on the vulnerable Windows VM, use `ipconfig` to find the VM's IP address. Verify your attack box and the vulnerable box can talk to each other (using [ping](/CLI-tools/ping.md)).
 
-Then you can connect to Vulnserver from your attack box using [netcat](/cybersecurity/tools/exploitation/netcat.md):
+Then you can connect to Vulnserver from your attack box using [netcat](../../../cybersecurity/TTPs/exploitation/tools/netcat.md):
 ```bash
 ┌──(hakcypuppy㉿kali)-[~]
 └─$ nc -nv $t 9999

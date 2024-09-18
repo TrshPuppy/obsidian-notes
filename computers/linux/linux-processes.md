@@ -197,7 +197,7 @@ If you wanted to backup files in `Documents` q12 hours:
 > - [Crontab generator tool](https://crontab-generator.org/)
 
 > [!Related]
-> - Command line: [psypy](cybersecurity/tools/actions-on-objective/psypy.md)
+> - Command line: [psypy](../../cybersecurity/TTPs/actions-on-objective/tools/psypy.md)
 
 
 

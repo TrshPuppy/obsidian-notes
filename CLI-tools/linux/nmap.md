@@ -277,6 +277,12 @@ ls /usr/share/nmap/scripts/ | grep <service> | grep <vuln, etc>`
 #### `--script smb-vuln`
 Used to look for all smb vulnerabilities against a host
 
+
+
+```bash
+# nmap -sS -sC -sV -Pn -n -p- -vvv --open --min-hostgroup 256 --min-rate 1000 --max-rtt-timeout 300ms --max-retries 2 --script targets-xml --script -args newtargets,iX=nmap/livehosts-fulltcp.xml -oA nmap/livehosts-allports-scripts
+```
+
 > [!Resources]
 > - `man nmap`
 > - [Nmap: Version Detection](https://nmap.org/book/man-version-detection.html)

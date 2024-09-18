@@ -1,4 +1,4 @@
-test
+
 # MAC Address (Media Access Control)
 A MAC address is a 48 bit hardware number which is *unique* to the device its attached to. It's usually embedded w/i a device's Network Interface Card (NIC) when the device is manufactured.
 
@@ -24,9 +24,9 @@ The last 6 digits of the address is the Network Interface Controller and is also
 ## MAC Address Table
 The MAC address table, also called the Content Addressable Memory (CAM), is a database which *maps MAC addresses to the corresponding ports on a network switch.* The CAM is used by network [switches](switches.md) to make forwarding decisions based on the *destination MAC address for incoming frames.*
 ## MAC Spoofing:
-When a networked device pretends to identify as a different one by using its MAC address. This can break poorly-maintained security designs. For example, if a network firewall is configured to trust any and all traffic coming from the MAC address of the administrator
-
-
+When a networked device pretends to identify as a different one by using its MAC address. This can break poorly-maintained security designs. For example, if a network firewall is configured to trust any and all traffic coming from the MAC address of the administrator.
+### [MAC Filtering](../1-physical/port-security.md#Mac%20Filtering)
+![MAC Filtering](../1-physical/port-security.md#MAC%20Filtering)
 >[!Command line:]
 > - [ifconfig](ifconfig.md)
 > - [ip-command](ip-command.md)
