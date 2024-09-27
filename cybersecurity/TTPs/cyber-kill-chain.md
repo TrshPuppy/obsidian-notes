@@ -5,10 +5,10 @@ Historically a military concept r/t the structure of an attack. Now the Cyber Ki
 Operates w/ the assumption that the attacker is outside of the target system. *Does not cover insider-threats* or people who use their authorization inside a system to access/ harm a network system.
 
 The Cyber Kill Chain is made up of these phases:
-## Reconnaissance:
+## Reconnaissance
 Reconnaissance refers to the collection of information on a target using passive/ stealthy means. The information collected can be done from the outside (before the target has been exploited) *and from the inside* (after you've exploited and gained access).
 
-Recon can describe both *passive* and *active* techniques:
+Recon can describe both *passive* and *active* techniques
 - passive: the information is gathered *quietly* without the target knowing
 - active: the information is gathered more *aggressively* which may alert the target.
 
@@ -22,7 +22,7 @@ Active techniques can be used to get a better, more accurate profile of the  tar
 |b) Target system profiling|active|pingsweeps, fingerprinting, port and service scanning|
 |Target Validation|active|SPAM messages, phishing, social engineering|
 >	[Technical Aspects of Cyber Kill Chain](https://arxiv.org/pdf/1606.03184.pdf) Yadav, Mallari (2016)
-### [OSINT](/cybersecurity/TTPs/recon/OSINT.md) (outside the target):
+### [OSINT](/cybersecurity/TTPs/recon/OSINT.md) (outside the target)
 OSINT usually refers to the gathering of *open source* intelligence on a target. Open source means the info is *public* so gathering it should not include any illegal activity (passive recon).
 
 There are some gray areas surrounding whether public info has been gathered legally or illegally depending on the means. For example, it's technically legal to do [subdomain enumeration](/cybersecurity/TTPs/subdomain-enumeration.md) if you were to do it by hand. But running a program against the domain which automates enumeration of its subdomains can be considered illegal.
@@ -35,7 +35,7 @@ Most attackers perform a lot of [OSINT](/cybersecurity/TTPs/recon/OSINT.md) rese
 	1. [The Harvester](recon/tools/credential-harvesting/the-harvester.md) tool which can be used to harvest emails, as well as domains, sub domains, names, IP addresses, URLs etc.
 	2. [Hunter.io](https://hunter.io/email-finder)
 - Finding who works for a target using LinkedIn, etc.
-### Recon *once inside the target/system*:
+### Recon *once inside the target/system*
 *Note:* this part deviates from the original cyber kill chain.
 
 Recon can also be done once you  have breached the target and have access to the system. After *persistence* has been established, further intelligence should be gathered which can be done quietly.
@@ -49,15 +49,14 @@ Especially in [penetration testing](/cybersecurity/pen-testing/penetration-testi
 - *Network mapping*: what IP addresses are local? What is the [subnet](/PNPT/PEH/networking/subnetting.md)? What does the [routing table](/networking/routing/routing-table.md) have in it?
 - *OS*: what is the CPU architecture? How much memory/RAM is there?
 - etc.
-## Weaponization:
+## Weaponization
 Weaponization refers to the part of the cycle in which the attacker has gathered enough intel to develop:
 1. a *Remote Access Tool* (RAT)
 2. and an *Exploit*
-
 Using intel gathered during the recon phase, an attacker can now decide what type of weapon will work best for the target. They can also decide on a delivery method, and prepare for difficulties in the installation of their malware as well as defensive measures to avoid.
 
 This stage focuses on *combining software exploits with a remote access tool (RAT)*.
-### Remote Access Tool:
+### Remote Access Tool
 A RAT is a software which executes on the target's system and gives the attacker remote access. It's also referred to as *the payload* in an attack. Ideally for an attacker, a RAT should be hidden and undetected by the target. 
 
 Access gained via a RAT usually includes:
@@ -77,7 +76,7 @@ The Client is not always delivered all at once. It can be delivered in separate 
 The Server is the portion of the RAT which runs on the C2 server. This is the vantage point the attacker has to view the target system with and sometimes includes a GUI (of the target system in real time). This is from where the attacker can send commands to the Client portion of the RAT (and receive the results).
 
 Usability of the RAT is a major constraint, so a lot of energy in building a RAT is put towards the server-side UI.
-### Exploit:
+### Exploit
 The second part of the Weaponization phase is developing the exploit. The exploit is what carries and delivers the RAT. It uses vulnerabilities in the target software/ system to deliver the RAT.
 
 A major objective of the RAT is to avoid target detection while establishing a backdoor. Once the RAT is installed, persistence, privilege escalation, data exfiltration, spreading, etc. can be achieved by the RAT Client/Server.

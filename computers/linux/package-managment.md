@@ -9,7 +9,7 @@ ls
 apt.conf.d  auth.conf.d  preferences.d  sources.list  sources.list.d  trusted.gpg.d
 ```
 
-To see all of the repositories added to your source list:
+To see all of the repositories added to your source list
 ```shell
 cat sources.list
 ## Note, this file is written by cloud-init on first boot of an instance
@@ -31,12 +31,12 @@ deb http://eu-west-1.ec2.archive.ubuntu.com/ubuntu/ focal-updates main restricte
 # deb-src http://eu-west-1.ec2.archive.ubuntu.com/ubuntu/ focal-updates main restricted
 ...
 ```
-### Adding repos:
+### Adding repos
 `add-apt-repository` lets you add provider repos to your `sources.list`. Adding  repos to apt means that whenever we update our system the repos we add *are checked for updates*.
-#### Software Integrity:
+#### Software Integrity
 To help ensure the integrity of software installed, apt uses *GPG (Gnu Privacy Guard) keys*. If the keys of the software do not match the public key provided by the software developers, then the software will not be downloaded.
-##### Example with Sublime Text:
-1. Download the GPG key for the developers of Sublime Text:
+##### Example with Sublime Text
+1. Download the GPG key for the developers of Sublime Text
 ```shell
 # from Sublime Text Apr '23:
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg > /dev/null                                                                    
@@ -55,7 +55,11 @@ deb https://download.sublimetext.com/ apt/stable
 
 3. Update apt so it recognizes the new entry with `apt update`
 4. Install the software we have trusted and added to apt with `apt install sublime-text`
-### Removing Repos:
+### Updating
+The commands `apt update` updates the local package index with the latest information about available packages and their versions from the repositories defined in your system's sources list. It doesn't install or upgrade any packages; it just refreshes the information.
+### Upgrading
+The command `apt upgrade` upgrades all installed packages to their latest available versions based on the updated package index. It installs the new versions of the packages, but it won't remove any packages or install new ones that weren't previously installed.
+### Removing Repos
 You can remove  repos by either using this command:
 ```shell
 add-apt-repository --remove ppa:<PPA_NAME>/ppa
