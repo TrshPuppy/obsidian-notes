@@ -120,7 +120,7 @@ cat subfinder_out.json| jq | awk '/"host"/ {print}' | cut -d '│Nmap done: 1067
 ```
 ### Run w/ -all to run all providers
 ```bash
-subfinder -d phoenixtma.com -all -stats
+subfinder -d target.com -all -stats
 ```
 
 > [!Resources]
