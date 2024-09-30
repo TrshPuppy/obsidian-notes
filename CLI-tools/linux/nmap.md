@@ -3,8 +3,8 @@
 ```
 nmap [Scan Type(s)] [Options] {target sppecification}
 ```
-## Usage:
-### Host Discovery:
+## Usage
+### Host Discovery
 Nmap Automatically does host discovery with each scan unless *told otherwise*. If not host discovery options are provided, nmap sends an [ICMP](networking/protocols/ICMP.md) echo request, a TCP `SYN` packet to port 443 ([HTTPS](www/HTTPS.md)), and a TCP `ACK` packet to port 80 ([HTTP](www/HTTP.md)).
 
 These defaults *change depending on if nmap is run w/ root privileges*. Additionally, if any targets are *on a local ethernet connection*, the default host discovery includes [ARP](networking/protocols/ARP.md) and 'Neighbor Discovery' scans.
@@ -23,16 +23,16 @@ TCP connect scan scans for [TCP](/networking/protocols/TCP.md) ports and perform
 If nmap receives an `ACK` flag, it reports the port as _open_. If it receives the `RST` flag, it reports the port as *closed*.
 
 If there is no response, that likely means *the port is hidden behind a firewall.* This is because older [firewalls](/cybersecurity/defense/firewalls.md) will drop the packet. *Some firewalls are configured to send a fabricated `RST` flag* which nmap will mark as "closed."
-### `-sS` (half/open or "stealth"):
+### `-sS` (half/open or "stealth")
 SYN connect scan/ "half-open" or "stealth" scan. When the target sends the `SYN/ACK` flag, nmap (the client) then sends the `RST` flag which closes the connection. This prevents the target from repeatedly sending requests.
-#### Advantages:
+#### Advantages
 - This is *the default scan* run by nmap when executed with `sudo`. It's considered "stealthy" because most *older* IDS systems only log a connection if it was fully-established (i.e. the entire three-way handshake was performed).
 - This scan is also *faster than the TCP*.
-#### Disadvantages:
-- May not work with *newer IDS's* which track/log all connection requests whether or not they completed.
-- May cause unstable target OSes to *crash*.
-- Requires *sudo privileges*.
-### `-sV` (versioning):
+#### Disadvantages
+- May not work with *newer IDS's* which track/log all connection requests whether or not they completed
+- May cause unstable target OSes to *crash*
+- Requires *sudo privileges*
+### `-sV` (versioning)
 When **NOT** given this flag, nmap will scan a target and list the services which are *likely* to be hosted at specific ports. For example, most systems will host their [SMTP](/networking/protocols/SMTP.md) [email](/networking/email.md) service on port 25. If nmap finds that port is open, it will report that the service running on the target is SMTP on port 25.
 
 Nmap uses their nmap-services database of about 2200 known, common ports and their services to do this. *However* any port can theoretically host *any service*.
@@ -175,14 +175,14 @@ Scanning for ports using the UDP protocol *takes longer* which means that *some 
 
 Nmap attempts to detect UDP ports by sending a UDP packet *without a payload* to every target port. It will report the results based on the response:
 
-|Probe Response|Assigned State|
-|---|---|
-|Any UDP response from target port (unusual)|`open`|
-|No response received (even after retransmissions)|`open\|filtered`|
-|ICMP port unreachable error (type 3, code 3)|`closed`|
-|Other ICMP unreachable errors (type 3, code 1, 2, 9, 10, or 13)|`filtered`|
+| Probe Response                                                  | Assigned State   |
+| --------------------------------------------------------------- | ---------------- |
+| Any UDP response from target port (unusual)                     | `open`           |
+| No response received (even after retransmissions)               | `open\|filtered` |
+| ICMP port unreachable error (type 3, code 3)                    | `closed`         |
+| Other ICMP unreachable errors (type 3, code 1, 2, 9, 10, or 13) | `filtered`       |
 >	[Nmap.org](https://nmap.org/book/scan-methods-udp-scan.html)
-#### Speeding up UDP scans:
+#### Speeding up UDP scans
 ```bash
 sudo nmap -sUV -T4 -F --version-intensity 0 scanme.nmap.org
 Starting Nmap 7.94 ( https://nmap.org ) at 2023-07-20 15:13 EDT
@@ -203,7 +203,7 @@ Nmap done: 1 IP address (1 host up) scanned in 41.89 seconds
 - Use `--host-timeout` to skip 'slow' hosts (some are ICMP rate limited) (ex: `--host-timeout 5m` = 5 minutes)
 - Use `-v` (verbosity): this flag will tell you real time how long nmap thinks the scan will take
 - Limit the number of ports scanned: `-p <number or range>`
-### TCP FIN, NULL, & Xmas Scans:
+### TCP FIN, NULL, & Xmas Scans
 These scans send *malformed packets* which allows them to be stealthier in some contexts. This is because *most* firewalls automatically block incoming requests w/ the `SYN` flag but *don't block packets w/o the `SYN` flag*.
 
 According to [Nmap.org](https://nmap.org/book/scan-methods-null-fin-xmas-scan.html):
@@ -217,13 +217,13 @@ Closed ports will respond to all of these scans with an `RST` flag:
 |TCP RST packet|`closed`|
 |ICMP unreachable error (type 3, code 1, 2, 3, 9, 10, or 13)|`filtered`|
 > 	Nmap.org
-#### `-sN` NULL scan:
+#### `-sN` NULL scan
 This scan sends a TCP packet *without any flags set* so the packet is empty (TCP header is 0).
-#### `-sF` TCP Fin:
+#### `-sF` TCP Fin
 The only bit set in the packet is the `TCP FIN` bit.
-#### `-sX` Xmas scan:
+#### `-sX` Xmas scan
 Sets the FIN, PSH, and URG flags which "lights the packet up like a xmas tree"
-### [Nmap Scripting Engine](https://nmap.org/book/nse.html):
+### [Nmap Scripting Engine](https://nmap.org/book/nse.html)
 Nmap comes with the Nmap Scripting Engine (NSE) which is a collection of user-written [Lua](/coding/languages/lua.md) scripts used to automate a wide-variety of networking tasks.
 ```bash
 sudo nmap -sSUC -p 111 10.0.3.5
@@ -268,19 +268,17 @@ MAC Address: x:x:x:x:x:x (Oracle VirtualBox virtual NIC)
 
 Nmap done: 1 IP address (1 host up) scanned in 0.40 seconds
 ```
-#### `-sC` Scripting:
+#### `-sC` Scripting
 To use the NSE, the `-sC` flag is provided. You can either use it without any arguments (and default scripts will be ran based on the rest of the `nmap` command), or you can give `-sC` the path to a custom script you want run.
 #### Looking up nmap scripts
-```
-ls /usr/share/nmap/scripts/ | grep <service> | grep <vuln, etc>`
+```bash
+ls /usr/share/nmap/scripts/ | grep <service> | grep <vuln, etc>
 ```
 #### `--script smb-vuln`
 Used to look for all smb vulnerabilities against a host
-
-
-
+## Examples which worked
 ```bash
-# nmap -sS -sC -sV -Pn -n -p- -vvv --open --min-hostgroup 256 --min-rate 1000 --max-rtt-timeout 300ms --max-retries 2 --script targets-xml --script -args newtargets,iX=nmap/livehosts-fulltcp.xml -oA nmap/livehosts-allports-scripts
+nmap -sS -sC -sV -Pn -n -p- -vvv --open --min-hostgroup 256 --min-rate 1000 --max-rtt-timeout 300ms --max-retries 2 --script targets-xml --script -args newtargets,iX=nmap/livehosts-fulltcp.xml -oA nmap/livehosts-allports-scripts
 ```
 
 > [!Resources]

@@ -1,9 +1,9 @@
-fuff
+Init.
 # Ffuf (Fuzz Faster U Fool)
 Ffuf is a CLI tool used for [directory-enumeration](/cybersecurity/TTPs/recon/directory-enumeration.md). It is *non-recursive*, and will only enumerate at the specified depth in the command.
 ## Usage:
 ```bash
-ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt:FUZZ -u http://10.0.2.15/FUZZ
+ffuf -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt:FUZZ -u http://target/FUZZ
 ```
 In this command the `FUZZ` keyword is used twice; once to tell us how to use the wordlist, and twice to *tell fuff where in the provided URL path it should enumerate.* So, fuff will only be enumerating results at the `FUFF` placeholder in the `-u` URL
 ### Useful Options
@@ -28,18 +28,18 @@ ffuf -w /usr/share/seclists/Discovery/Web-Content/raft-large-directories-lowerca
 # WORKED
 uff -w wordlisttest \
 -t 5 -c \
--u "https://198.135.80.42:443/FUZZ" \
+-u "https://target/FUZZ" \
 -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10; rv:33.0) Gecko/20100101 Firefox/33.0'
 ```
 #### With json output
 ```bash 
 uff -w /opt/tools/wordlists/SecLists/Discovery/Web-Content/raft-large-directories-lowercase.txt \
 -t 5 -e .7z,.asp,.aspx,.backup,.bak,.bz,.cgi,.conf,.config,.db,.doc,.docx,.git,.htm,.html,.ini,.jar,.js,.json,.jsp,.jspx,.jsx,.log,.md,.old,.pdf,.php,.py,.rar,.tar,.tar.bz2,.tar.gz,.sh,.txt,.xls,.xlsx,.xml,.zip \
--u https://tools.ciena.com/FUZZ \
+-u https://target/FUZZ \
 -mc 200,204,301,307,401,403,500,302 \
 -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36' \
 -ic \
--o ffuf-tools.json -of json
+-o ffuf.json -of json
 ```
 
 > [!Resources]
