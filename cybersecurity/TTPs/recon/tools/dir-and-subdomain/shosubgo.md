@@ -1,6 +1,11 @@
 
 # Shosubgo
 Init.
+## Use
+### Quick Start
+```bash
+go install github.com/incogbyte/shosubgo@latest
+```
 ## Examples which worked
 ```bash
 shosubgo -d target.com -s '<shodan API key>' > shosubout
