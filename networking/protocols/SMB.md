@@ -34,3 +34,4 @@ Because the buffer happens *during a function call*, a buffer overflow is able t
 > - Vulnerabilities: [EternalBlue](/cybersecurity/vulnerabilities/eternalblue.md), [NotPetya](/cybersecurity/attacks/notpetya.md), [trans2](/cybersecurity/vulnerabilities/trans2.md)
 > - Attacks: [WannaCry](/cybersecurity/attacks/wannacry.md), [SMB-relay](/PNPT/PEH/active-directory/initial-vectors/SMB-relay.md)
 > - Enumeration: [Enumerating SMB](/PNPT/PEH/scanning-enumeration/enumerating-SMB.md)
+> - [nmap](../../CLI-tools/linux/nmap.md) scripts: `smb-os-discovery.nse`

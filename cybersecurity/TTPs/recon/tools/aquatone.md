@@ -11,6 +11,18 @@ Give it hosts and ports, it will go out and scan, if it finds an HTTP server, ta
 Dark blue circles: tech running on endpoint
 
 find oauth portalsWhat
+## Examples which worked
+```bash
+cat webhosts.txt | aquatone -ports small -out scans/aquatone -threads 10 -screenshot-timeout 50000 -chrome-path /usr/bin/chromium
+```
+### Serving report
+```bash
+aquatone report server --address <IP> 7171
+
+# or with python
+python3 -m http.server 7171 --bind <IP>
+```
+
 
 > [!Related]
 > - [GoWitness]
