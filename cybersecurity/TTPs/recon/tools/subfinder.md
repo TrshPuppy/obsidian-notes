@@ -2,6 +2,11 @@
 # Subfinder
 Init.
 ## Usage
+`subfinder -up` important to do to update it
+- sometimes the devs have to update/ change the scrapers
+`subfinder -d bmw.de -all -stats` 
+- -all = use all available resources (important) 
+- -stats = which of our api keys are actually working
 ### Config file
 Make sure you have this, it will improve your results by a lot! `/home/.config/subfinder/`
 ```bash
@@ -105,7 +110,6 @@ urlscan: []
 virustotal: []
 zoomeye: []
 subfinder-version: 2.4.5
-
 ```
 ## Examples which worked
 ```bash

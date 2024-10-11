@@ -3,6 +3,30 @@
 ```
 nmap [Scan Type(s)] [Options] {target sppecification}
 ```
+## Basics
+When scanning a host with Nmap, the output looks something like this:
+```shell
+trshpuppy@htb[/htb]$ nmap 10.129.42.253
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2021-02-25 16:07 EST
+Nmap scan report for 10.129.42.253
+Host is up (0.11s latency).
+Not shown: 995 closed ports
+PORT    STATE SERVICE
+21/tcp  open  ftp
+22/tcp  open  ssh
+80/tcp  open  http
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+
+Nmap done: 1 IP address (1 host up) scanned in 2.19 seconds
+```
+### `STATE` column
+This column tells us about the report and how it responded to Nmap's probes. The port will either be `closed`,  `open`, `filtered`, `unfiltered`, `open|filtered`, or `closed|filtered`.
+#### `filtered` and `unfiltered`
+`filtered` usually means Nmap *couldn't tell the state of the port* because it's behind a firewall or other network device. `unfiltered` means the port responded to Nmap but Nmap couldn't tell whether it was open or closed.
+#### `open|filtered` and `closed|filtered`
+Nmap reports these states when it can't determine between which of the two states the port was in. You may see this *especially with UDP scans.*
 ## Usage
 ### Host Discovery
 Nmap Automatically does host discovery with each scan unless *told otherwise*. If not host discovery options are provided, nmap sends an [ICMP](networking/protocols/ICMP.md) echo request, a TCP `SYN` packet to port 443 ([HTTPS](www/HTTPS.md)), and a TCP `ACK` packet to port 80 ([HTTP](www/HTTP.md)).
@@ -42,7 +66,6 @@ To more accurately determine the service hosted on a target port, the `-sV` flag
 When `-sV` is given and a scan is performed in version detection mode, nmap will attempt to determine the service by *querying each open port* using probes from their database.
 
 *If nmap cannot match port responses* to their database, it will print a fingerprint to the command line which you can submit to nmap (via a URL printed with the fingerprint).
-
 ```bash
 nmap -sV -sT -Pn 10.0.2.4                                        
 Starting Nmap 7.94 ( https://nmap.org ) at 2023-07-20 13:24 EDT
@@ -211,11 +234,11 @@ According to [Nmap.org](https://nmap.org/book/scan-methods-null-fin-xmas-scan.ht
 
 Closed ports will respond to all of these scans with an `RST` flag:
 
-|Probe Response|Assigned State|
-|---|---|
-|No response received (even after retransmissions)|`open\|filtered`|
-|TCP RST packet|`closed`|
-|ICMP unreachable error (type 3, code 1, 2, 3, 9, 10, or 13)|`filtered`|
+| Probe Response                                              | Assigned State   |
+| ----------------------------------------------------------- | ---------------- |
+| No response received (even after retransmissions)           | `open\|filtered` |
+| TCP RST packet                                              | `closed`         |
+| ICMP unreachable error (type 3, code 1, 2, 3, 9, 10, or 13) | `filtered`       |
 > 	Nmap.org
 #### `-sN` NULL scan
 This scan sends a TCP packet *without any flags set* so the packet is empty (TCP header is 0).
@@ -274,12 +297,46 @@ To use the NSE, the `-sC` flag is provided. You can either use it without any ar
 ```bash
 ls /usr/share/nmap/scripts/ | grep <service> | grep <vuln, etc>
 ```
+You can also use the `locate` command like so:
+```bash
+$ locate scripts/citrix
+
+/usr/share/nmap/scripts/citrix-brute-xml.nse
+/usr/share/nmap/scripts/citrix-enum-apps-xml.nse
+/usr/share/nmap/scripts/citrix-enum-apps.nse
+/usr/share/nmap/scripts/citrix-enum-servers-xml.nse
+/usr/share/nmap/scripts/citrix-enum-servers.nse
+```
 #### `--script smb-vuln`
 Used to look for all smb vulnerabilities against a host
 ## Examples which worked
 ```bash
 nmap -sS -sC -sV -Pn -n -p- -vvv --open --min-hostgroup 256 --min-rate 1000 --max-rtt-timeout 300ms --max-retries 2 --script targets-xml --script -args newtargets,iX=nmap/livehosts-fulltcp.xml -oA nmap/livehosts-allports-scripts
 ```
+## Other TidBits
+### Banner Grabbing
+You can use Nmap to grab the banner of a port which you want to investigate further:
+```bash
+# Single Host
+nmap -sV --script=banner 10.10.10.10 2121
+
+# CIDR range
+nmap -sV --script=banner 10.10.10.0/24 
+```
+### Probe Timeout
+> **--min-rtt-timeout** time, **--max-rtt-timeout** time, **--initial-rtt-timeout** time (Adjust probe timeouts).  
+>
+> Nmap maintains a running timeout value for determining how long it will wait for a probe response before giving up or retransmitting the probe. This is calculated based on the response times of previous probes.
+>
+> If the network latency shows itself to be significant and variable, this timeout can grow to several seconds. It also starts at a conservative (high) level and may stay that way for a while when Nmap scans unresponsive hosts.
+>
+> Specifying a lower **--max-rtt-timeout** and **--initial-rtt-timeout** than the defaults can cut scan times significantly. This is particularly true for pingless (**-PN**) scans, and those against heavily filtered networks. Don´t get too aggressive though. The scan can end up taking longer if you specify such a low value that many probes are timing out and retransmitting while the response is in transit.  If all the hosts are on a local network, 100 milliseconds is a reasonable aggressive
+>
+>  **--max-rtt-timeout** value. If routing is involved, ping a host on the network first with the ICMP ping utility, or with a custom packet crafter such as **hping2**.  that is more likely to get through a firewall. Look at the maximum round trip time out of ten packets or so. You might want to double that for the **--initial-rtt-timeout** and triple or quadruple it for the **--max-rtt-timeout**. I generally do not set the maximum RTT below 100 ms, no matter what the ping times are. Nor do I exceed 1000 ms.
+>
+> **--min-rtt-timeout** is a rarely used option that could be useful when a network is so unreliable that   even Nmap´s default is too aggressive. Since Nmap only reduces the timeout down to the minimum when the network seems to be reliable, this need is unusual and should be reported as a bug to the nmap-dev mailing list..
+-`man nmap`
+
 
 > [!Resources]
 > - `man nmap`

