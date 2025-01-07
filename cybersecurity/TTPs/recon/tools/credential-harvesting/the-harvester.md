@@ -4,7 +4,7 @@ Init.
 ## Use
 Can be used, in conjunction with various API keys, to harvest **[OSINT](../../OSINT.md)** information from multiple sources. 
 ### API key config file
-Create this file: `~/.theHarvester/api-keys.yaml`
+Create this file: `~/.theHarvester/api-keys.yaml` OR `/usr/local/etc/theharvester/api-keys.yaml`
 ```bash
 apikeys:
   bevigil:
@@ -51,7 +51,7 @@ apikeys:
     key:
 
   projectDiscovery:
-    key: 249cfb33-8885-4e66-b0e1-190ebd94a39d
+    key:
 
   rocketreach:
     key:
@@ -78,6 +78,10 @@ apikeys:
 python3 theHarvester.py -d target.tld -b intelx >> harvester-intelx-out
 ```
 - `-b` tells the Harvester which OSINT source to use, in this case
+### Use all sources
+```bash
+./theharvester.py -d target.com -b all
+```
 
 > [!Resources]
 > - [GitHub](https://github.com/laramies/theHarvester/)

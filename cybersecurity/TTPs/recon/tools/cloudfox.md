@@ -1,4 +1,6 @@
 # Cloudfox
+Init.
+
 Cloudfox is a tool used for *enumerating the attack surface of a cloud-based target* (during [pentesting](/cybersecurity/pen-testing/penetration-testing.md)). Cloudfox is a command line tool which can be deployed to enumerate the following assets on a cloud target:
 - AWS account regions
 - secrets in EC2 userdata and environment variables

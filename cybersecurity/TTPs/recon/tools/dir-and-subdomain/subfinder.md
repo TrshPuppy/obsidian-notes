@@ -1,6 +1,6 @@
 
 # Subfinder
-Init.
+Init
 ## Usage
 `subfinder -up` important to do to update it
 - sometimes the devs have to update/ change the scrapers
