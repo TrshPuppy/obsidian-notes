@@ -1,6 +1,6 @@
 
 # Aquatone
-Tool for creating an overview of an [HTTP](../../../../www/HTTP.md) attack surface of a target. Can scan websites across a large number of hosts.
+Tool for creating an overview of an [HTTP](../../../../../www/HTTP.md) attack surface of a target. Can scan websites across a large number of hosts.
 
 Init.
 ## Use
@@ -31,8 +31,8 @@ python3 -m http.server 7171 --bind <IP>
 
 
 > [!Related]
-> - [gowitness](gowitness.md)
-> - [eyewitness](eyewitness.md)
+> - [gowitness](tech-stack/gowitness.md)
+> - [eyewitness](tech-stack/eyewitness.md)
 
 > [!Resources]
 > - [GitHub](https://github.com/michenriksen/aquatone)

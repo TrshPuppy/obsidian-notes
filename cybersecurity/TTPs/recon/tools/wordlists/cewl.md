@@ -1,6 +1,6 @@
 
 # Custom Word List Generator (CeWL)
-CeWL is a CLI tool which will spider a website and generate *a custom wordlist* based on keywords it finds in the [HTML](/coding/markup/HTML.md). The most common use case is to develop a wordlist *which can be used in a password cracking or brute forcing tool* such as [john](../../cracking/tools/john.md) or [hydra](../../cracking/tools/hydra.md).
+CeWL is a CLI tool which will spider a website and generate *a custom wordlist* based on keywords it finds in the [HTML](/coding/markup/HTML.md). The most common use case is to develop a wordlist *which can be used in a password cracking or brute forcing tool* such as [john](../../../cracking/tools/john.md) or [hydra](../../../cracking/tools/hydra.md).
 
 The advantage of CeWL is that the wordlist it generates *is specific to the target* since a lot of passwords and usernames are a combination of keywords related to the business/ service.
 ## Usage
