@@ -1,6 +1,6 @@
 
 # CredMaster
-Init
+Init,
 > "Launch a password spray / brute force attach via Amazon AWS passthrough proxies, shifting the requesting IP address for every authentication attempt. This dynamically creates FireProx APIs for more evasive password sprays."
 > -GitHub
 ## Use
@@ -53,7 +53,6 @@ python3 credmaster.py -u "all_emails_v1.txt" \
 #### o365enum
 ```bash
 python3 credmaster.py -u "users.txt" \
--p pass.txt \
 --plugin o365enum \
 --config aws.config \
 --color \

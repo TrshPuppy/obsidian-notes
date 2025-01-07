@@ -1,7 +1,12 @@
 
 # Feroxbuster CLI Tool for "Forced Browsing"
+Init.
 Feroxbuster is a CLI tool for enumerating directories on a target.
 ## Usage
+### Quick Start
+```bash
+sudo apt update && sudo apt install -y feroxbuster
+```
 ### `-u` Url
 This is the target url
 ```bash

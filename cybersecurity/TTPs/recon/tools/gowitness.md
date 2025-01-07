@@ -1,5 +1,6 @@
 
 # GoWitness
+Init.
 ## Examples which worked
 ```bash
 gowitness file -f inscope-subdomains.txt
