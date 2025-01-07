@@ -22,7 +22,7 @@ Sublist3r is a tool written in python which can be used to enumerate subdomains.
 Sublist3r is capable of finding 3rd and 4th level domains.
 
 *However* Sublist3r can be used to do brute force (active/ not OSINT) enumeration using the Subbrute integrated tool.
-### [Usage](../../../cybersecurity/TTPs/recon/tools/sublist3r.md)
+### [Usage](../../../cybersecurity/TTPs/recon/tools/dir-and-subdomain/sublist3r%201.md)
 
 ## OWASP [Amass](../../../cybersecurity/TTPs/recon/tools/dir-and-subdomain/amass.md)
 
