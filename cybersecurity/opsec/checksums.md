@@ -41,21 +41,17 @@ The default mode is to print a line with: checksum, a space,
 a character indicating input mode ('*' for binary, ' ' for text
 or where binary is insignificant), and name for each FILE.
 ```
-
 #### `sha512sum`:
 Usage:
 ```bash
 # The --help for sha512sum is identical to md5sum --help
 ```
-
 ## Verifying Checksums:
-### Linux (ex using [OWASP Amass](../TTPs/recon/tools/amass.md)):
+### Linux (ex using [OWASP Amass](../TTPs/recon/tools/dir-and-subdomain/amass%201.md)):
 We're going to verify the checksum of this OWASP Amass download before downloading it *so we know it's safe and coming from the source we think it's coming from ([OWASP](cybersecurity/resources/OWASP.md))*.
-
 #### 1. Go to GitHub releases page of OWASP-Amass tool:
 `https://github.com/owasp-amass/amass/releases/tag/v3.23.3`
 Click to `download amass_checksums.txt`
-
 #### 2. Go to Downloads folder via terminal:
 Cat the file to see the checksums for each download:
 ```bash
@@ -67,23 +63,18 @@ Cat the file to see the checksums for each download:
 ...3dfb416099fb0452e2b4b4da5170f0b23cd3b812df2e9319c  amass_Linux_amd64.zip
 ...
 ```
-
 #### 3. Isolate the checksum of your download:
 ```bash
 cat amass_checksums.txt | grep "amass_Linux_amd64.zip" | cut -d " " -f 1 > checksum.txt
 ```
-
 #### 4. Compare the checksum to the one you generate using the download file:
 (Assuming the unzipped download is also in your `Downloads` folder):
 
 If you don't know what algorithm was used to make the checksum, there are ways to figure it out:
-
 ##### MD5:
 The [MD5](computers/concepts/cryptography/hashing.md#MD5) Algorithm generates a 128 bit hash represented by 32 hexadecimal characters.
-
 ##### SHA512:
 The [SHA512](computers/concepts/cryptography/hashing.md#SHA-2) is a variant of SHA-2. It produces a hash with 128 characters.
-
 ##### Verifying the two checksums:
 ```bash
 # Using MD5sum first:
@@ -110,9 +101,7 @@ b1046b3b08e1697ecd08310b0f52d5abd185aae1a594025feb58a49a2a85fd7eff5928cc928ca6eb
 2b5afb8a567d9703dfb416099fb0452e2b4b4da5170f0b23cd3b812df2e9319c  amass_Linux_amd64.zip
 ```
  
-
 > [!Resources:]
 > - [Infosec Scout: Identify MD5 Hash](https://infosecscout.com/identify-md5-hash/)
 > - [Wikipedia: SHA-2](https://en.wikipedia.org/wiki/SHA-2)
 > - [Medium: Cryptography: Explaining SHA-512](https://medium.com/@zaid960928/cryptography-explaining-sha-512-ad896365a0c1)
-
