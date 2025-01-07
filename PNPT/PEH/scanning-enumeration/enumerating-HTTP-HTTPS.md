@@ -4,7 +4,7 @@ Ports 80 and 443 are *normally* assigned to host web services using the [HTTP](/
 ## Information Gathering
 Ports 80 and 443 being present on a scan of a target indicate the target is likely hosting web services. Investigating these ports is a good way to gather information on the target. You can find out a lot about their architecture, services/ applications they use, etc..
 ### Via Terminal
-If the target is potentially volatile, or you want to leave less of a trace, you can start by using [`curl`](/CLI-tools/linux/curl.md). With `curl`, you can get the HTML of the entire website. You can also just ask for the headers with the `-I` command, which is sneakier because the response from the target carries less data.
+If the target is potentially volatile, or you want to leave less of a trace, you can start by using [`curl`](../../../CLI-tools/linux/remote/curL.md). With `curl`, you can get the HTML of the entire website. You can also just ask for the headers with the `-I` command, which is sneakier because the response from the target carries less data.
 ```bash
 # Headers only: using wordcount command:
 curl -I http://10.0.3.5:80 | wc -c

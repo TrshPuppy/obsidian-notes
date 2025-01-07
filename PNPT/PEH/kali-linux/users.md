@@ -115,11 +115,11 @@ You can use the `deluser` (or sometimes `userdel`) command
 ## User Logs
 
 ### `who` command
-![who](../../../CLI-tools/linux/who.md)
+![who](../../../CLI-tools/linux/users/who.md)
 ### `w` command
-![w](../../../CLI-tools/linux/w.md)
+![w](../../../CLI-tools/linux/users/w.md)
 ### `utmpdump` command
-![utmpdump](../../../CLI-tools/linux/utmpdump.md)
+![utmpdump](../../../CLI-tools/linux/remote/utmpdump.md)
 ## Groups
 ### Adding a user to a group:
 To see what groups a user is in, you can switch to that user and use the `groups` command which will list all the group they're in. To add a user to a group use:

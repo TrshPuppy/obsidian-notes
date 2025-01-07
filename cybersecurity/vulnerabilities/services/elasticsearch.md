@@ -13,7 +13,7 @@ The index lists every unique word in a document and then identifies all document
 ![](../../cybersecurity-pics/elasticsearch-1.png)
 -[Victor Lavrenko](https://www.youtube.com/watch?v=bFrO8piASKg)
 ## Authentication
-By default *Elasticsearch has authentication disabled*, meaning you can access *everything in the database w/o creds*. To verify auth is disabled, you can use [curL](../../../CLI-tools/linux/curL.md) w/ a `GET` request:
+By default *Elasticsearch has authentication disabled*, meaning you can access *everything in the database w/o creds*. To verify auth is disabled, you can use [curL](../../../CLI-tools/linux/remote/curL.md) w/ a `GET` request:
 ```bash
 curl -X GET "ELASTICSEARCH-SERVER:9200/_xpack/security/user"
 {"error":{"root_cause":[{"type":"exception","reason":"Security must be explicitly enabled when using a [basic] license. Enable security by setting [xpack.security.enabled] to [true] in the elasticsearch.yml file and restart the node."}],"type":"exception","reason":"Security must be explicitly enabled when using a [basic] license. Enable security by setting [xpack.security.enabled] to [true] in the elasticsearch.yml file and restart the node."},"status":500}

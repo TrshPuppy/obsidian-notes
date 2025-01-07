@@ -28,8 +28,8 @@ When a networked device pretends to identify as a different one by using its MAC
 ### [MAC Filtering](../1-physical/port-security.md#Mac%20Filtering)
 ![MAC Filtering](../1-physical/port-security.md#MAC%20Filtering)
 >[!Command line:]
-> - [ifconfig](ifconfig.md)
-> - [ip-command](ip-command.md)
+> - [ifconfig](../../../CLI-tools/linux/local/ifconfig.md)
+> - [ip-command](../../../CLI-tools/linux/local/ip-command.md)
 
 > [!Resources:]
 > - [Try Hack Me: What is Networking](https://tryhackme.com/room/whatisnetworking)

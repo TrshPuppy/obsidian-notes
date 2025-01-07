@@ -1,6 +1,5 @@
 
-
-# `nmblookup` CLI tool:
+# `nmblookup` CLI tool
 `nmblookup` is a CLI tool which resolves the NetBIOS names of devices on a network to their [IP addresses](/networking/OSI/IP-addresses.md). It does so by making use of queries being made on the network. This tool is part of the [samba](/networking/protocols/SMB.md) suite of tools.
 
 `nmblookup` sends [NetBios](/networking/protocols/NetBIOS.md) name queries across an IP broadcast area in order to map the names to IP addresses. All of the queries are made of [UDP](/networking/protocols/UDP.md).
@@ -68,5 +67,5 @@ This causes an IP addresses found during the query to be looked up using a *reve
 Using this flag allows you to *override the default workgroup name* defined in the `smb.conf` & `/etc/samba/smb.conf` files.
 
 > [!Resources]
-> [Hacking Articles: ...SMB enumeration](https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/)
+> - [Hacking Articles: ...SMB enumeration](https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/)
 > - `man nmblookup`

@@ -2,9 +2,9 @@
 # Enumerating SMB (Kioptrix)
 [SMB](/networking/protocols/SMB.md) is a protocol used primarily on Windows which allows devices on the same network to share files. SMB allows for files to be written to, read, downloaded, etc..
 
-The SMB/ "samba" service (normally hosted on ports `445` or `139`) can be accessed using the [smbclient](/CLI-tools/linux/smbclient.md) command on linux. Files hosted on SMB are referred to as "shares" and to get access to them, you need to login via a "workgroup".
+The SMB/ "samba" service (normally hosted on ports `445` or `139`) can be accessed using the [smbclient](../../../CLI-tools/linux/remote/smbclient.md) command on linux. Files hosted on SMB are referred to as "shares" and to get access to them, you need to login via a "workgroup".
 
-In the [Kioptrix](/PNPT/PEH/scanning-enumeration/kioptrix.md) box, we can see from our [nmap](/CLI-tools/linux/nmap.md) scan that the Workgroup identified on port `445` is `MYGROUP`. 
+In the [Kioptrix](/PNPT/PEH/scanning-enumeration/kioptrix.md) box, we can see from our [nmap](../../../CLI-tools/linux/remote/nmap.md) scan that the Workgroup identified on port `445` is `MYGROUP`. 
 ## Versioning
 Determining the version of the SMB service running is useful (and considered a finding) because you can use the version to find [CVEs](/cybersecurity/resources/CVEs.md) and exploits which have already been developed and used successfully against it.
 
@@ -74,7 +74,7 @@ msf6 auxiliary(scanner/smb/smb_version) >
 ```
 Now we know the target is running *Samba 2.2.1a*, which we can look up for related exploits/ CVEs.
 ## Other SMB Enumerating Tools:
-### [`nmblookup`](/CLI-tools/linux/nmblookup.md)
+### [`nmblookup`](../../../CLI-tools/linux/remote/nmblookup.md)
 `nmblookup` is a CLI tool which resolves the NetBIOS names of devices on a network to their [IP addresses](/networking/OSI/IP-addresses.md). It does so by making use of queries being made on the network.
 ### [`nbtscan`](/CLI-tools/nbtscan.md)
 `nbtscan` is another CLI command which will return information about computers on a network by sending NetBIOS status queries to the provided IP address or IP address range. It can return the following info:
@@ -100,7 +100,7 @@ There is a lot of output returned including juicy information like:
 8. shares
 9. etc
 #### Embedded commands:
-enum4linux enumerates target information by using other common SMB commands. These include [`smbclient`](/CLI-tools/linux/smbclient.md), `smbget`, [`rpcclient`](/CLI-tools/linux/rpcclient.md), `net`, `nmblookup`, etc.
+enum4linux enumerates target information by using other common SMB commands. These include [`smbclient`](../../../CLI-tools/linux/remote/smbclient.md), `smbget`, [`rpcclient`](../../../CLI-tools/linux/remote/rpcclient.md), `net`, `nmblookup`, etc.
 ### Nmap `nbstat.nse` script
 This Nmap script is specific for enumerating NetBIOS names and MAC addresses on the target. It returns the name of the computer logged in as well as the user. If you *increase the verbosity* it can also return all the names it *thinks the system owns*.
 

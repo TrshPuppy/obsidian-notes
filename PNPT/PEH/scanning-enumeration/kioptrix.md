@@ -79,7 +79,7 @@ On port 443 (HTTPS) we can see OpenSSL is being used (and an old version) to aut
 ##### RPC:
 Port 111 is running [RPC](/networking/protocols/RPC.md) (Remote Procedure Call). `nmap` also tells us that the *program numbers* of the programs using the RPC protocol, as well as the ports they're on. 
 
-We can use this to probe those ports and see what type of information we get back. For example, using the [rpcinfo](/CLI-tools/linux/rpcbind-rpcinfo.md) command w/ the port `32768` we can get slightly more info back:
+We can use this to probe those ports and see what type of information we get back. For example, using the [rpcinfo](../../../CLI-tools/linux/remote/rpcbind-rpcinfo.md) command w/ the port `32768` we can get slightly more info back:
 ```bash
 rpcinfo -s -n 32768 10.0.3.5
    program version(s) netid(s)                         service     owner

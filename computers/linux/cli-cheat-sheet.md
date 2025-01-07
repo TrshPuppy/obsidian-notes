@@ -46,7 +46,7 @@ These features can be used w/i nano by pressing the `Ctrl` key + the desired swi
 - Jumping to a line number: `^_`
 - Finding out the current line number: `^C`
 
-[Vim](../../CLI-tools/linux/vim.md) and Vi are other similar CLI text editors.
+[Vim](../../CLI-tools/linux/file-system/vim.md) and Vi are other similar CLI text editors.
 ## Transferring files
 ### `wget`
 Allows you to download files from the web using [HTTP](www/HTTP.md). Just need to supply `wget` with the address of the resource.
@@ -54,7 +54,7 @@ Allows you to download files from the web using [HTTP](www/HTTP.md). Just need t
 wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt
 ```
 
-Can also use [curl](curL.md)
+Can also use [curl](../../CLI-tools/linux/remote/curL.md)
 ### [SCP](../../networking/protocols/SCP.md)
 SCP or "secure copy" is a way to transfer files via SSH (so the files are encrypted and transferred over an authenticated connection).
 ```shell

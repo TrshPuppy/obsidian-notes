@@ -4,7 +4,7 @@ The process of securing an app by *limiting the attack surface*. Focused on prot
 ## Ports and Services
 *Limiting what ports are accessible* on a device (besides the ones which are absolutely necessary). This includes getting rid or or disallowing ports which are opened by *unknown or unused services.* Every port is a *possible entry point,* so access to them should be controlled, usually with [firewalls](../firewalls.md).
 
-Can use [nmap](../../../CLI-tools/linux/nmap.md) to scan a device or network to see what ports are currently opened.
+Can use [nmap](../../../CLI-tools/linux/remote/nmap.md) to scan a device or network to see what ports are currently opened.
 ### Firewalls
 Firewalls allow you to control access to specific ports and which [IP-addresses](../../../PNPT/PEH/networking/IP-addresses.md) can access them. Even better, a *Next Generation Firewall* will let you also limit the *applications* which are allowed to run on the current network IP address. 
 ## Windows Registry

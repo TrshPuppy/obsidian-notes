@@ -71,7 +71,7 @@ To anonymize your web traffic, use the `proxychains` command + whatever web comm
 ```bash
 proxychains firefox www.google.com
 ```
-Or [nmap](../../CLI-tools/linux/nmap.md)
+Or [nmap](../../CLI-tools/linux/remote/nmap.md)
 ```bash
 sudo proxychains nmap -A -p- 10.0.0.2
 ```
