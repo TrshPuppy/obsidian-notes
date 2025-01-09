@@ -249,3 +249,4 @@ RTechRef:    https://rdap.arin.net/registry/entity/PSI-NISC-ARIN
 
 > [!Resources]
 > - [ARIN](https://www.arin.net/)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
