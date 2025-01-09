@@ -25,7 +25,11 @@ intitle:"index of" site:megacorpone.com
 ### Google Hacking Database
 [Google Hacking Database](https://www.exploit-db.com/google-hacking-database) is a database hosted by [Exploit DB](../../cybersecurity/TTPs/exploitation/tools/exploit-db.md) of tasty Google Dorks other people have discovered. Peruse it to find some you may want to use.
 
-
 > [!Resources]
 > - [Blackhat: Google Hacking for Pentesters](https://www.blackhat.com/presentations/bh-europe-05/BH_EU_05-Long.pdf)
 > - [Google: Refining Google Searches](https://support.google.com/websearch/answer/2466433?hl=en)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
+
+> [!Related]
+> - [google-fu](../../PNPT/PEH/recon/google-fu.md) (PNPT notes)
+

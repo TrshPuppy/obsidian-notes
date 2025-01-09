@@ -11,3 +11,6 @@ Strict passive recon maintains secrecy so the target can't guess at or know our 
 Gathering OSINT by interacting with the target *as a normal user would*. For example, if the target's website has a 'register user' function, then we use it as a normal user would to try and gain information about the target.
 
 We would *not do any testing* of the target for vulnerabilities, etc.. The idea is to gather public information which is readily available to any internet user. This type of reconnaissance *leaves a trace* or our actions which the target may discover and use to try to interpret our intentions (or as a means to re-create/ track down steps we take later on).
+
+> [!Resources]
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
