@@ -1,6 +1,6 @@
 
 # nmap scanning:
-[nmap](/CLI-tools/linux/nmap.md) is a network scanning tool which scans a target IP address for open ports.
+[nmap](../../../CLI-tools/linux/remote/nmap.md) is a network scanning tool which scans a target IP address for open ports.
 ### `-sS` ("Stealth" scanning):
 This technique *is not stealthy* like it used to be, but is still called a "stealth scan" in nmap. 
 
@@ -17,7 +17,7 @@ You can use the `-p` flag to tell nmap which ports you want it to scan. If you d
 
 To scan all the ports use `nmap -p-`.
 #### `-A` All
-The `-A` flag tells nmap to *scan using all of the detection options* which including versioning `-sV`, OS detection `-O`, script scanning `-sC`, and [traceroute](/CLI-tools/linux/traceroute.md) `--traceroute`.
+The `-A` flag tells nmap to *scan using all of the detection options* which including versioning `-sV`, OS detection `-O`, script scanning `-sC`, and [traceroute](../../../CLI-tools/linux/remote/traceroute.md) `--traceroute`.
 
 > [!Resources]
 > - [Nmap.org](https://nmap.org)

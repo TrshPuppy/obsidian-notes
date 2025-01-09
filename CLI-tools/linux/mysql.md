@@ -1,36 +1,31 @@
 
 # mysql Command Line Utility:
-Used to authenticate to and interact with a #MySQL / #MariaDB database.
-
-## Usage:
-```shell-session
+Used to authenticate to and interact with a MySQL or MariaDB database.
+## Usage
+```shell
 trshpuppy@trshpile$ mysql -U root -p
 Enter password: <password>
 ...SNIP...
 
 mysql>
 ```
-
-The `-U` flag:
+### Flags
+#### `-U` flag:
 > used to supply the username. This is set to `root` in the example meaning you will log in as the superuser.
-
-The `-p` flag:
+#### `-p` flag:
 > used to supply the password and ==should never be followed by the password b/c it will show in plaintext in the `bash_history` file== (leaving it blank will cause it to prompt you afterward).
-
-The `-h` and `-P` flags:
+#####  `-h` and `-P` flags:
 > Specifies a remote host and port. If not set, it will ==default to the #Localhost==. Default port MySQL/ MariaDB port is #port-3306
 > `mysql -U root -h docker.hackthebox.eu -P 3306 -p`
-
-### Creating a database:
-``` shell-session
+### Creating a database
+``` shell
 mysql> CREATE DATABASE users;
 
 Query OK, 1 row affected (0.02 sec)
 ```
 > MySQL expects queries to be terminated with a `;`.
-
-### View a list of databases:
-```shell-session
+### View a list of databases
+```shell
 mysql> SHOW DATABASES;
 
 +--------------------+
@@ -47,17 +42,14 @@ mysql> USE users;
 
 Database changed
 ```
-> the `USE` statement switches the `users` database.
-
-==SQL commands are not case-sensitive, but the names of databases/ tables/ columns etc. are.==
-
-### Tables:
-DBMSs store data in tables. The intersection of a row and column is called a cell.
+The `USE` statement switches the `users` database.
+**SQL commands are not case-sensitive, but the names of databases/ tables/ columns etc. are.**
+### Tables
+[DBMS](../../coding/databases/DBMS.md)s store data in tables. The intersection of a row and column is called a cell.
 - tables are created w/ a fixed set of columns
 - each column is a specific data type
-
-#### Creating a table:
-``` shell-session
+#### Creating a table
+``` shell
 mysql> CREATE TABLE logins (
     ->     id INT,
     ->     username VARCHAR(100),
@@ -66,9 +58,8 @@ mysql> CREATE TABLE logins (
     ->     );
 Query OK, 0 rows affected (0.03 sec)
 ```
-
-#### List all tables in a database:
-```shell-session
+#### List all tables in a database
+```shell
 mysql> SHOW TABLES;
 
 +-----------------+
@@ -78,9 +69,8 @@ mysql> SHOW TABLES;
 +-----------------+
 1 row in set (0.00 sec)
 ```
-
-#### Describe table in a database:
-```shell-session
+#### Describe table in a database
+```shell
 mysql> DESCRIBE logins;
 
 +-----------------+--------------+

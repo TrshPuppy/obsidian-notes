@@ -18,7 +18,7 @@ Uses [SSH](/networking/protocols/SSH.md) to provide encryption. Also provides fi
 
 > [!Related]
 > - `port 21`
-> - [FTP command](CLI-tools/linux/ftp-command.md)
+> - [FTP command](../../CLI-tools/linux/remote/ftp-command.md)
 
 > [!Resources]
 > - [Hostinger: what is FTP](https://www.hostinger.com/tutorials/what-is-ftp)

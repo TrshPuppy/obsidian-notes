@@ -28,10 +28,10 @@ Because the buffer happens *during a function call*, a buffer overflow is able t
 > - [GIAC: Exploiting Samba's SMBTrans2 Vulnerability](https://www.giac.org/paper/gcih/484/exploiting-sambas-smbtrans2-vulnerability/105385)
 
 > [!Related]
-> - Commands: [`smbclient`](/CLI-tools/linux/smbclient.md), `smbget`
+> - Commands: [`smbclient`](../../CLI-tools/linux/remote/smbclient.md), `smbget`
 > - Tools: [`enum4linux`](../../cybersecurity/TTPs/recon/tools/enum4linux.md)
 > - Ports: `port 445`, `port 139`
 > - Vulnerabilities: [EternalBlue](/cybersecurity/vulnerabilities/eternalblue.md), [NotPetya](/cybersecurity/attacks/notpetya.md), [trans2](/cybersecurity/vulnerabilities/trans2.md)
 > - Attacks: [WannaCry](/cybersecurity/attacks/wannacry.md), [SMB-relay](/PNPT/PEH/active-directory/initial-vectors/SMB-relay.md)
 > - Enumeration: [Enumerating SMB](/PNPT/PEH/scanning-enumeration/enumerating-SMB.md)
-> - [nmap](../../CLI-tools/linux/nmap.md) scripts: `smb-os-discovery.nse`
+> - [nmap](../../CLI-tools/linux/remote/nmap.md) scripts: `smb-os-discovery.nse`

@@ -96,7 +96,7 @@ else
 fi
 ```
 ### 6. Creating a file
-Right now, the script is outputting to the command line, but the information is not saved beyond that. We should add to our script so that it creates a list of IP Addresses, then we can use that list for other scans like [`nmap`](/CLI-tools/linux/nmap.md):
+Right now, the script is outputting to the command line, but the information is not saved beyond that. We should add to our script so that it creates a list of IP Addresses, then we can use that list for other scans like [`nmap`](../../../CLI-tools/linux/remote/nmap.md):
 ```bash
 #!/bin/bash
 

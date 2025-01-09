@@ -24,7 +24,7 @@ First, we have to find hosts on the target network which have SMB signing disabl
 SMB signing is a security mechanism added to the SMB protocol by Microsoft starting with Windows 2000. It protects the integrity of messages sent b/w a client and a server by signing each message with a signature generated via the session key.
 
 This *prevents tampering of the message* by an attacker because any tampering will *change the hash*, thus signaling to the system that the message was compromised in-transit.
-#### Using [nmap](/CLI-tools/linux/nmap.md)
+#### Using [nmap](../../../../CLI-tools/linux/remote/nmap.md)
 Nmap has a script which will report back which hosts on the network have SMB signing disabled. To run it, just use:
 ```bash
 ┌──(hakcypuppy㉿kali)-[~]

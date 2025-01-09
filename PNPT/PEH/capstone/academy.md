@@ -1,7 +1,7 @@
 
 # Academy Walkthrough
 Treat these boxes as if they were CTFs (not actual pen-tests).
-## [Nmap](/CLI-tools/linux/nmap.md) Recon
+## [Nmap](../../../CLI-tools/linux/remote/nmap.md) Recon
 ```bash
 sudo nmap -A -p- -T4 10.0.2.15
 Starting Nmap 7.94 ( https://nmap.org ) at 2023-10-06 12:46 EDT
@@ -46,7 +46,7 @@ SSH on a CTF is normally treated differently than on an actual pentest. On a pen
 ### Port 80
 Has an Apache webserver running. If we visit the address `http://<target IP>:80` in the browser, we'll see a default page for Apache 2. This could mean that *[PHP](/coding/languages/PHP.md) is running the backend*. BTW, the default page *is considered a finding*, because it's disclosing architecture when it doesn't need to be.
 ### Port 21 ([FTP](/networking/protocols/FTP.md))
-We can use the [ftp command](/CLI-tools/linux/ftp-command.md) to check the FTP service on the target. Let's attempt to login to the service using `anonymous` user.
+We can use the [ftp command](../../../CLI-tools/linux/remote/ftp-command.md) to check the FTP service on the target. Let's attempt to login to the service using `anonymous` user.
 ```bash
 ftp 10.0.2.15
 Connected to 10.0.2.15.    

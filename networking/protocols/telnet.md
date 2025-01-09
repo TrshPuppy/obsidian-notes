@@ -21,7 +21,7 @@ A server/client application protocol.
 >[!related]
 > #port-23
 > #RFC-15 & #RFC-855
-> [telnet-command](telnet-command.md)
+> [telnet-command](../../CLI-tools/linux/remote/telnet-command.md)
 
 >[!links]
 > https://en.wikipedia.org/wiki/Telnet

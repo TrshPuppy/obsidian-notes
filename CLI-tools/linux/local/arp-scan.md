@@ -1,6 +1,6 @@
 
 # Arp-Scan
-`arp-scan` is a linux command line tool that preforms [ARP](/networking/protocols/ARP.md) scans on the local network using raw sockets. `arp-scan` can also be provided a target but have to be IPv4 addresses or [domain names](../../networking/DNS/DNS.md). You can also use [CIDR](../../networking/routing/CIDR.md) notation.
+`arp-scan` is a linux command line tool that preforms [ARP](/networking/protocols/ARP.md) scans on the local network using raw sockets. `arp-scan` can also be provided a target but have to be IPv4 addresses or [domain names](../../../networking/DNS/DNS.md). You can also use [CIDR](../../../networking/routing/CIDR.md) notation.
 ## Usage:
 
 ### Useful Options:

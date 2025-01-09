@@ -2,7 +2,7 @@
 # Blue Walkthrough
 Treat these boxes as if they were CTFs (not actually pen-tests).
 ## Recon
-Our first [nmap](/CLI-tools/linux/nmap.md) scan gives us a few ports and some OS versioning:
+Our first [nmap](../../../CLI-tools/linux/remote/nmap.md) scan gives us a few ports and some OS versioning:
 ```bash
 nmap -Pn $t 
 	Starting Nmap 7.94 ( https://nmap.org ) at 2023-10-04 13:59 EDT

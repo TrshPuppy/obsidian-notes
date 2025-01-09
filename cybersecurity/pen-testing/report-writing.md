@@ -92,7 +92,7 @@ Document the original, agreed upon scope, including IP addresses, horsts, domain
 #### Details
 This section is where you detail how you completed your tasks and/or overall mission and objective. It should include both how you were able to bypass defenses, and *when their defenses were able to rebuff you.*
 ### Appendix:
-This section will hold any supporting details including screenshots, output results from tools like [nmap](/CLI-tools/linux/nmap.md), credentials you discovered or cracked, and other documentation required to *prove your actions*. They can either be included as attachments, or directly in the report.
+This section will hold any supporting details including screenshots, output results from tools like [nmap](../../CLI-tools/linux/remote/nmap.md), credentials you discovered or cracked, and other documentation required to *prove your actions*. They can either be included as attachments, or directly in the report.
 
 *The more you can provide to prove your findings, the better.*
 
