@@ -177,4 +177,75 @@ network:Updated:2024-05-13 18:48:33
 %ok
 ```
 The results from the reverse lookup tells us *who is hosting the IP address*. 
-If `whois` is not available on your machine, you can also use [curL](../../CLI-tools/linux/remote/curL.md) to make the same query.
+### [`curL`](../../CLI-tools/linux/remote/curL.md)
+If `whois` is not available on your machine, you can also use [curL](../../CLI-tools/linux/remote/curL.md) to make the same query. For this, we need to send a [telnet](../../networking/protocols/telnet.md) request to the American Registry for Internet Numbers ([ARIN](https://www.arin.net/)), which is one of the internet numbers authorities who manage and adminster IP addresses.
+```bash
+┌─[25-01-09 6:57:03]:(rose.pineau@)-[~/Documents/repos/obsidian-notes]
+└# echo '38.100.193.70' | curl telnet://whois.arin.net:43
+.. SNIP ..
+
+#
+# Query terms are ambiguous.  The query is assumed to be:
+#     "n 38.100.193.70"
+#
+# Use "?" to get help.
+#
+
+NetRange:       38.0.0.0 - 38.255.255.255
+CIDR:           38.0.0.0/8
+NetName:        COGENT-A
+NetHandle:      NET-38-0-0-0-1
+Parent:          ()
+NetType:        Direct Allocation
+OriginAS:       AS174
+Organization:   PSINet, Inc. (PSI)
+RegDate:        1991-04-16
+Updated:        2023-10-11
+Comment:        IP allocations within 38.0.0.0/8 are used for Cogent customer static IP assignments.
+Comment:
+Comment:        Reassignment information for this block can be found at rwhois.cogentco.com 4321
+Comment:
+Comment:        Geofeed https://geofeed.cogentco.com/geofeed.csv
+Ref:            https://rdap.arin.net/registry/ip/38.0.0.0
+
+OrgName:        PSINet, Inc.
+OrgId:          PSI
+Address:        2450 N Street NW
+City:           Washington
+StateProv:      DC
+PostalCode:     20037
+Country:        US
+RegDate:
+Updated:        2023-10-11
+Comment:        Geofeed https://geofeed.cogentco.com/geofeed.csv
+Ref:            https://rdap.arin.net/registry/entity/PSI
+
+ReferralServer:  rwhois://rwhois.cogentco.com:4321
+
+OrgTechHandle: IPALL-ARIN
+OrgTechName:   IP Allocation
+OrgTechPhone:  +1-877-875-4311
+OrgTechEmail:  ipalloc@cogentco.com
+OrgTechRef:    https://rdap.arin.net/registry/entity/IPALL-ARIN
+
+OrgNOCHandle: ZC108-ARIN
+OrgNOCName:   Cogent Communications
+OrgNOCPhone:  +1-877-875-4311
+OrgNOCEmail:  noc@cogentco.com
+OrgNOCRef:    https://rdap.arin.net/registry/entity/ZC108-ARIN
+
+OrgAbuseHandle: COGEN-ARIN
+OrgAbuseName:   Cogent Abuse
+OrgAbusePhone:  +1-877-875-4311
+OrgAbuseEmail:  abuse@cogentco.com
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/COGEN-ARIN
+
+RTechHandle: PSI-NISC-ARIN
+RTechName:   IP Allocation
+RTechPhone:  +1-877-875-4311
+RTechEmail:  ipalloc@cogentco.com
+RTechRef:    https://rdap.arin.net/registry/entity/PSI-NISC-ARIN
+```
+
+> [!Resources]
+> - [ARIN](https://www.arin.net/)
