@@ -37,7 +37,6 @@ applicable law.
 tryhackme@linux2:~$ 
 ```
 ### Config Example
-
 ```
 Host <custom host name>
 	Hostname <IP>
@@ -50,3 +49,16 @@ Host <custom host name>
         IdentityFile .ssh\SSH-Private.pem
         ProxyJump natfuel_windows
 ```
+### SOCKS Proxy
+```bash
+ssh -D 44444 <user>@<IP address>
+```
+This creates a SOCKS server which you can connect to to create a SOCKS connection. For example, if I want to proxy all of my [burp-suite](../cybersecurity/TTPs/delivery/tools/burp-suite.md) traffic through a [proxy](../networking/design-structure/proxy.md) so it is sent from the IP address `1.2.3.4`, then the SSH command on my local machine would be:
+```bash
+ssh -D 44444 root@1.2.3.4
+```
+And the address of the SOCKS proxy host I give to Burp would be `127.0.0.1:44444` or (expanded): `socks5://127.0.0.1:44444`.
+
+> [!Resources]
+> - `man ssh`
+> - [Question about SOCKS proxy on Stack Exchange](https://superuser.com/questions/1308495/how-to-create-a-socks-proxy-with-ssh)
