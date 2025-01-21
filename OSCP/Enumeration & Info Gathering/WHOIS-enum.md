@@ -1,5 +1,5 @@
 
-# [WHOIS](../../networking/protocols/whois.md) Enumeration
+# (PASSIVE) [WHOIS](../../networking/protocols/whois.md) Enumeration
 WHOIS is a [TCP](../../networking/protocols/TCP.md) network protocol and database which provides information about [DNS](../../networking/DNS/DNS.md) domain names. WHOIS information is largely related to the domain's [Name Servers](../../networking/DNS/DNS.md#Name%20Servers) and registration information. All of this information is public but some registrars provide private registration for a fee (which obfuscates information about the person/ company who registered the domain).
 ## Tools
 ### [`whois`](../../CLI-tools/whois.md)
