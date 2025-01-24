@@ -77,7 +77,6 @@ IPv6 is a new way to notate IP addresses and was developed to expand the availab
 Instead of being made up of 32 bits, notated in base 10, IPv6 is 128 bits notated in hexadecimal. So it supports 2^128 possible addresses (which is 340,282,366,920,938,000,000,000,000,000,000,000,000) (more than we'll ever need).
 
 Even though IPv6 fixes IPv4 exhaustion, it has not been widely adopted.
-
 ![](/networking/networking-pics/IP-addresses-2.png)
 > [Try Hack Me](https://tryhackme.com/room/whatisnetworking)
 

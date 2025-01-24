@@ -39,7 +39,6 @@ Master CIDR Block (RIR) : 10.10.0.0/16
 2 subnets each w/ 192
 172.36.0.0 -192
 ```
-
 #### A CIDR Block Contains IP addresses based on 3 simple rules:
 1. w/i the block, IP addresses allocated to the hosts should be *continuous*
 2. the size of the block should be to the power of 2 and be equal to the total number of IP addresses
@@ -68,7 +67,8 @@ The network address followed by a slash and a number of bits.
 		- the network address = ``172.16.23.0``
 		- and the host address = ``0.0.0.1``
 
->[!Resources]
+> [!Resources]
 > - [EDUCBA](https://www.educba.com/what-is-cidr/)
 > - [Wikipedia: Classful Networks](https://en.wikipedia.org/wiki/Classful_network)
+> - [Wikipedia: CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
 

@@ -16,7 +16,6 @@ You can also get the ASCII code of a character directly in VIM. To get the code 
 5. press `.` and the current word will be replaced with the new word you used to replace the first occurrence
 ##### Alternative method
 `:%s/old/new/g`
-
 #### Move cursor to end/ start of line
 In normal mode, press `0` to move the cursor to the start of the current line. Press `Shift` + `$` to move cursor to end of line.
 ## Config/ Settings
