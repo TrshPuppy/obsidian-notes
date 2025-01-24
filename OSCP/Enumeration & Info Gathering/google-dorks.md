@@ -1,5 +1,5 @@
 
-# Google Dorking/ Hacking
+# (PASSIVE) Google Dorking/ Hacking
 Popularized by Johnny Long's 2001 book ["Google Hacking"](https://www.blackhat.com/presentations/bh-europe-05/BH_EU_05-Long.pdf).  Google Dorking is the process of finding information on a target through the use of crafted Google search engine queries. Queries can be further sharpened through the use of *operators* which help to narrow down or filter results.
 ## Operators
 ### Modifying operators
@@ -22,13 +22,17 @@ This operator returns pages which have the specified string in their title. For 
 ```bash
 intitle:"index of" site:megacorpone.com
 ```
+## Resources
 ### Google Hacking Database
 [Google Hacking Database](https://www.exploit-db.com/google-hacking-database) is a database hosted by [Exploit DB](../../cybersecurity/TTPs/exploitation/tools/exploit-db.md) of tasty Google Dorks other people have discovered. Peruse it to find some you may want to use.
+### [DorkSearch](https://dorksearch.com/)
+Provides a subset of pre-built quieies and a tool to build queries for searches. 
 
 > [!Resources]
 > - [Blackhat: Google Hacking for Pentesters](https://www.blackhat.com/presentations/bh-europe-05/BH_EU_05-Long.pdf)
 > - [Google: Refining Google Searches](https://support.google.com/websearch/answer/2466433?hl=en)
 > - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
+> - [DorkSearch](https://dorksearch.com/)
 
 > [!Related]
 > - [google-fu](../../PNPT/PEH/recon/google-fu.md) (PNPT notes)

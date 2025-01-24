@@ -1,3 +1,4 @@
+
 # Sender Policy Framework/ SPF:
 Used to authenticate the sender of an [email](/networking/email.md) by verifying that the IP address of a mail server is authorized to send email from that specific domain.
 

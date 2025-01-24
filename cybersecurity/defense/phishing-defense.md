@@ -10,7 +10,7 @@ Per the [MITRE-ATT&CK](cybersecurity/resources/MITRE-ATT&CK.md) matrix, there ar
 	- `Users can be trained to identify social engineering techniques and spearfishing attempts.`
 
 ## Domain Configuration:
-#### [Sender Policy Framework](/cybersecurity/defense/sender-policy-framework.md) (SPF)
+#### [Sender Policy Framework](SPF.md) (SPF)
 - Allows a domain to only allow emails from specified IP addresses:
 - Incoming email from an unlisted IP will either be:
 	1. Blocked and dropped (fail)

@@ -5,7 +5,6 @@ The `NS` DNS record indicates which [DNS server](DNS.md) is the *authoritative n
 This tells you *where to go* to find the domain's IP address. Domains *can have multiple NS records* which indicate *primary and secondary* nameservers for the domain. If the `NS` record isn't configured correctly, then users won't be able to load the domain's webpage (for example)
 ## NS Record Format:
 ![](../networking-pics/NS-record-1.png)
-
 **NOTE**: NS records *cannot point to [CNAME](CNAME.md) records*.
 
 > [!Resources]
