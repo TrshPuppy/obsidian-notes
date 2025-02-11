@@ -17,6 +17,7 @@ We would *not do any testing* of the target for vulnerabilities, etc.. The idea 
 - [open-source-code](open-source-code.md)
 - [netcraft](netcraft.md)
 - [security-headers-SSL](security-headers-SSL.md)
+- [LLM-powered](LLM-powered.md)
 # Active Reconnaissance
 Information we gather on the target through active strategies means we've gathered it by interacting w/ the target directly. Usually, this info is gathered using automated tools such as [netcat](../../cybersecurity/TTPs/exploitation/tools/netcat.md) or [nmap](../../CLI-tools/linux/remote/nmap.md), etc.. Most active reconnaissance infolves *enumeration* of external services and ports. This includes enumerating ports during port scanning, and enumerating services which return information for us like [SMB](../../networking/protocols/SMB.md), [DNS](../../networking/DNS/DNS.md), [SMTP](../../networking/protocols/SMTP.md), [SNMP](../../networking/protocols/SNMP.md), etc..
 ## Windows LOLBins

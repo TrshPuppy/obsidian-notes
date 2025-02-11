@@ -28,5 +28,9 @@ If you want to enumerate users, you can add the `--users` flag with a list of us
 trevorspray --recon victimdomain.com --users usernames.txt
 ```
 
+> [!Related]
+> - [credmaster](credmaster.md)
+> - [password-spraying](../../password-spraying.md)
+
 > [!Resources]
 > - [GitHub](https://github.com/blacklanternsecurity/TREVORspray)
