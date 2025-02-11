@@ -16,7 +16,7 @@ The PTR record is the *opposite* of an A record. Instead of storing the IP addre
 The CNAME record, or 'canonical name' record, stores the *alias* for a domain. In other words, it points to another domain name. CNAME records can *never* point to an IP address. They have to contain domains or subdomains. When a DNS server finds the CNAME record for a queried domain, it triggers a second lookup for the domain stored in the CNAME.
 ### [TXT Record](../../networking/DNS/TXT-record.md)
 Text records can contain any arbitrary data, human readable *AND machine readable*. Primarily, TXT records are used for domain verification and for storing [SPF](../../cybersecurity/defense/SPF.md) and [DMARC](../../cybersecurity/defense/DMARC.md) information. TXT records can be tasty during recon because they often tell us what technologies an organization may be using, and sometimes admins will use TXT records to store sensitive information.
-## Enumeration
+## Enumeration Using Linux 
 You can do DNS enumeration through automating common DNS tools like [dig](../../CLI-tools/dig.md). Using [bash](../../coding/languages/bash.md) we can automate DNS lookups by creating a list of common subdomain names and then using a for loop to loop over them, making DNS requests for each using dig.
 ### Bash Enum Example
 This script will perform a type of DNS brute forcing to find valid subdomains for our target domain `megacorpone.com`. 
@@ -398,3 +398,149 @@ So, our one liner will have to iterate through all the IP addresses between `167
 ```bash
 for ip in $(seq 1 25); do printf "167.114.21.$ip "; dig +short -x 167.114.21.$ip  echo "\n"; done
 ```
+### Other DNS Enum tools
+#### [DNSEnum](https://www.kali.org/tools/dnsenum/)
+```bash
+└─# kali@kali:~$ dnsenum megacorpone.com
+...
+dnsenum VERSION:1.2.6
+
+-----   megacorpone.com   -----
+
+...
+
+Brute forcing with /usr/share/dnsenum/dns.txt:
+_______________________________________________
+
+admin.megacorpone.com.                   5        IN    A        51.222.169.208
+beta.megacorpone.com.                    5        IN    A        51.222.169.209
+fs1.megacorpone.com.                     5        IN    A        51.222.169.210
+intranet.megacorpone.com.                5        IN    A        51.222.169.211
+mail.megacorpone.com.                    5        IN    A        51.222.169.212
+mail2.megacorpone.com.                   5        IN    A        51.222.169.213
+ns1.megacorpone.com.                     5        IN    A        51.79.37.18
+ns2.megacorpone.com.                     5        IN    A        51.222.39.63
+ns3.megacorpone.com.                     5        IN    A        66.70.207.180
+router.megacorpone.com.                  5        IN    A        51.222.169.214
+siem.megacorpone.com.                    5        IN    A        51.222.169.215
+snmp.megacorpone.com.                    5        IN    A        51.222.169.216
+syslog.megacorpone.com.                  5        IN    A        51.222.169.217
+test.megacorpone.com.                    5        IN    A        51.222.169.219
+vpn.megacorpone.com.                     5        IN    A        51.222.169.220
+www.megacorpone.com.                     5        IN    A        149.56.244.87
+www2.megacorpone.com.                    5        IN    A        149.56.244.87
+
+
+megacorpone.com class C netranges:
+___________________________________
+
+ 51.79.37.0/24
+ 51.222.39.0/24
+ 51.222.169.0/24
+ 66.70.207.0/24
+ 149.56.244.0/24
+
+
+Performing reverse lookup on 1280 ip addresses:
+________________________________________________
+
+18.37.79.51.in-addr.arpa.                86400    IN    PTR      ns1.megacorpone.com.
+...
+```
+#### [DNSRecon](https://github.com/darkoperator/dnsrecon)
+```bash
+└─# kali@kali:~$ dnsrecon -d megacorpone.com -t std
+[*] std: Performing General Enumeration against: megacorpone.com...
+[-] DNSSEC is not configured for megacorpone.com
+[*] 	 SOA ns1.megacorpone.com 51.79.37.18
+[*] 	 NS ns1.megacorpone.com 51.79.37.18
+[*] 	 NS ns3.megacorpone.com 66.70.207.180
+[*] 	 NS ns2.megacorpone.com 51.222.39.63
+[*] 	 MX mail.megacorpone.com 51.222.169.212
+[*] 	 MX spool.mail.gandi.net 217.70.178.1
+[*] 	 MX fb.mail.gandi.net 217.70.178.217
+[*] 	 MX fb.mail.gandi.net 217.70.178.216
+[*] 	 MX fb.mail.gandi.net 217.70.178.215
+[*] 	 MX mail2.megacorpone.com 51.222.169.213
+[*] 	 TXT megacorpone.com Try Harder
+[*] 	 TXT megacorpone.com google-site-verification=U7B_b0HNeBtY4qYGQZNsEYXfCJ32hMNV3GtC0wWq5pA
+[*] Enumerating SRV Records
+[+] 0 Records Found
+```
+- `-d` signifies the domain name
+- `-t` signifies the record type (`std` meaning 'standard' in this case)
+##### Brute Forcing
+You can also *Brute Force* domain names w/ `dnsrecon`:
+```bash
+└─# kali@kali:~$ dnsrecon -d megacorpone.com -D ~/list.txt -t brt
+[*] Using the dictionary file: /home/kali/list.txt (provided by user)
+[*] brt: Performing host and subdomain brute force against megacorpone.com...
+[+] 	 A www.megacorpone.com 149.56.244.87
+[+] 	 A mail.megacorpone.com 51.222.169.212
+[+] 	 A router.megacorpone.com 51.222.169.214
+[+] 3 Records Found
+```
+In this case `list.txt` is our list of subdomain prefixes from before.
+## Enumeration Using Windows
+### `nslookup`
+`nslookup` is a command line tool on Windows computers which we can use to enumerate DNS. A basic command looks like this:
+```cmd
+C:\Users\student> nslookup mail.megacorptwo.com
+DNS request timed out.
+    timeout was 2 seconds.
+Server:  UnKnown
+Address:  192.168.50.151
+
+Name:    mail.megacorptwo.com
+Address:  192.168.50.154
+```
+The output tells us that `nslookup` queried the *default DNS server* at `192.168.50.151` to resolve the IP address for `mail.megacorptwo.com`. 
+#### Querying for specific records
+We can use `nslookup` to make our query more specifc. For example, to query for [TXT records](../../networking/DNS/TXT-record.md) , we can use the `-type=` flag.
+```cmd
+C:\Users\student>nslookup -type=TXT info.megacorptwo.com 192.168.50.151
+Server:  UnKnown
+Address:  192.168.50.151
+
+info.megacorptwo.com    text =
+
+        "greetings from the TXT record body"
+```
+#### Enumerating subdomains
+You can also give `nslookup` a list (like we did before) to find subdomains of a domain. So, if `list.txt` is:
+```
+www
+info
+mail
+```
+We're going to need a [powershell](../../computers/windows/powershell.md) script for this unfortunately...
+```powershell
+# Define the domain and wordlist file
+$domain = "megacorptwo.com"
+$wordlist = "C:\student\list.txt"
+
+# Read subdomains from the file
+$subdomains = Get-Content $wordlist
+
+# Loop through each subdomain and perform nslookup
+foreach ($sub in $subdomains) {
+    $fqdn = "$sub.$domain"
+    $result = nslookup $fqdn 2>&1
+    if ($result -match "Name:") {
+        Write-Output "Found: $fqdn"
+    }
+}
+```
+If you wrote this script in Command Prompt like me (`copy con dnsenum.ps1`) then use this oneliner to run it using powershell from cmdprompt:
+```powershell
+C:\Users\student>powershell -ExecutionPolicy Bypass -File dnsenum.ps1
+Found: mail.megacorptwo.com
+Found: info.megacorptwo.com
+
+C:\Users\student>
+```
+
+> [!Resources]
+> - [DNSEnum](https://www.kali.org/tools/dnsenum/)
+> - [DNSRecon](https://github.com/darkoperator/dnsrecon)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
