@@ -1,21 +1,21 @@
 
 # (Active) DNS Enumeration
-[DNS](../../networking/DNS/DNS.md) is an important protocol and system for resolving [IP-addresses](../../networking/OSI/3-network/IP-addresses.md) into domain names (check out my DNS notes for more). Each domain has *DNS records* attached to it which are publicly accessible and can give away some clues and info we can use in building a potential attack against it.
+[DNS](../../networking/DNS/DNS.md) is an important protocol and system for resolving [IP addresses](../../networking/OSI/3-network/IP-addresses.md) into domain names (check out my DNS notes for more). Each domain has *DNS records* attached to it which are publicly accessible and can give away some clues and info we can use in building a potential attack against it.
 ## Records
-### [NS Record](../../networking/DNS/NS-record.md)
-The NS record contains the name of the *authoritative nameserver* which hosts the most up to date and accurate information about the domain and which IP address it resolves to.
-### [A Record](../../networking/DNS/A-record.md)
-The A record contains the IP address the domain or subdomain resolves to.
+### NS Record
+The [NS Record](../../networking/DNS/NS-record.md) contains the name of the *authoritative [name server](../../networking/DNS/DNS.md#Name%20Servers)* which hosts the most up to date and accurate information about the domain and which IP address it resolves to.
+### A Record
+The [A Record](../../networking/DNS/A-record.md) contains the IP address the domain or subdomain resolves to.
 ### AAAA Record
 The AAAA record is just like an A record but is meant to be used for [IPv6](../../networking/OSI/3-network/IP-addresses.md#IPv6) addresses.
-### [MX Record](../../networking/DNS/MX-record.md)
-The MX record contians the names of the servers which are responsible for handling [email](../../networking/email.md) which is sent to the domain. A domain can have more than one MX record.
-### [PTR Record](../../networking/DNS/PTR-record.md)
-The PTR record is the *opposite* of an A record. Instead of storing the IP address that a domain resolves to, it stores *the domain an IP address resolves to*. Because of this, they're *not stored on a domain*. They are instead stored in the `in-addr.arpa` namespace of the `.arpa` [Top Level Domain](../../networking/DNS/DNS.md#Top%20Level%20Domain).
-### [CNAME](../../networking/DNS/CNAME.md)
-The CNAME record, or 'canonical name' record, stores the *alias* for a domain. In other words, it points to another domain name. CNAME records can *never* point to an IP address. They have to contain domains or subdomains. When a DNS server finds the CNAME record for a queried domain, it triggers a second lookup for the domain stored in the CNAME.
-### [TXT Record](../../networking/DNS/TXT-record.md)
-Text records can contain any arbitrary data, human readable *AND machine readable*. Primarily, TXT records are used for domain verification and for storing [SPF](../../cybersecurity/defense/SPF.md) and [DMARC](../../cybersecurity/defense/DMARC.md) information. TXT records can be tasty during recon because they often tell us what technologies an organization may be using, and sometimes admins will use TXT records to store sensitive information.
+### MX Record
+The [MX Record](../../networking/DNS/MX-record.md) contians the names of the servers which are responsible for handling [email](../../networking/email.md) which is sent to the domain. A domain can have more than one MX record.
+### PTR Record
+The [PTR Record](../../networking/DNS/PTR-record.md) is the *opposite* of an A record. Instead of storing the IP address that a domain resolves to, it stores *the domain an IP address resolves to*. Because of this, they're *not stored on a domain*. They are instead stored in the `in-addr.arpa` namespace of the `.arpa` [Top Level Domain](../../networking/DNS/DNS.md#Top%20Level%20Domain).
+### CNAME
+The [CNAME](../../networking/DNS/CNAME.md), or 'canonical name' record, stores the *alias* for a domain. In other words, it points to another domain name. CNAME records can *never* point to an IP address. They have to contain domains or subdomains. When a DNS server finds the CNAME record for a queried domain, it triggers a second lookup for the domain stored in the CNAME.
+### TXT Record
+The [TXT Record](../../networking/DNS/TXT-record.md) can contain any arbitrary data, human readable *AND machine readable*. Primarily, TXT records are used for domain verification and for storing [SPF](../../cybersecurity/defense/SPF.md) and [DMARC](../../cybersecurity/defense/DMARC.md) information. TXT records can be tasty during recon because they often tell us what technologies an organization may be using, and sometimes admins will use TXT records to store sensitive information.
 ## Enumeration Using Linux 
 You can do DNS enumeration through automating common DNS tools like [dig](../../CLI-tools/dig.md). Using [bash](../../coding/languages/bash.md) we can automate DNS lookups by creating a list of common subdomain names and then using a for loop to loop over them, making DNS requests for each using dig.
 ### Bash Enum Example
