@@ -83,3 +83,7 @@ python3 credmaster.py \
 
 > [!Resources]
 > - [GitHub](https://github.com/knavesec/CredMaster)
+
+> [!Related]
+> - [password-spraying](../../password-spraying.md)
+> - [trevorspray](trevorspray.md)
