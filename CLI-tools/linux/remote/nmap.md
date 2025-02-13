@@ -337,7 +337,6 @@ nmap -sV --script=banner 10.10.10.0/24
 > **--min-rtt-timeout** is a rarely used option that could be useful when a network is so unreliable that   even Nmap´s default is too aggressive. Since Nmap only reduces the timeout down to the minimum when the network seems to be reliable, this need is unusual and should be reported as a bug to the nmap-dev mailing list..
 -`man nmap`
 
-
 > [!Resources]
 > - `man nmap`
 > - [Nmap: Version Detection](https://nmap.org/book/man-version-detection.html)
@@ -347,3 +346,6 @@ nmap -sV --script=banner 10.10.10.0/24
 > - [Nmap: Nmap Scripting Engine](https://nmap.org/book/nse.html)
 > - [Nmap: Host Discovery](https://nmap.org/book/man-host-discovery.html)
 
+> [!Related]
+> - [Port Scanning with Nmap](../../../OSCP/Enumeration%20&%20Info%20Gathering/nmap-scanning.md#Port%20Scanning%20with%20Nmap)
+> - [Nmap scanning:](../../../PNPT/PEH/scanning-enumeration/scanning-with-nmap.md#nmap%20scanning)
