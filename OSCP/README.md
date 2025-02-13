@@ -4,7 +4,7 @@ Similar to my [PNPT](../PNPT/README.md) notes, this collection/ directory houses
 ### THIS REPO DOES NOT CONTAIN MATERIAL PRODUCED OR DISTRIBUTED BY OFFSEC
 Instead, these are my own notes which I created and use for my own learning and studying. If other outside references are used they will be linked appropriately.
 ### Some notes on use
-This is a sub directory of my personal notes in [Obsidian Desktop](https://obsidian.md/) so some of the links will not work because they are relative to the entire vault rather than just the PNPT directory. Sorry.
+This is a sub directory of my personal notes in [Obsidian Desktop](https://obsidian.md/) so some of the links will not work because they are relative to the entire vault rather than just the OSCP directory. Sorry.
 
 I've done my best to embed links to the Obsidian repo but if there is a link you can't follow, you can find it [here](https://github.com/TrshPuppy/obsidian-notes)! I will try to link them (to their external GitHub residence) throughout.
 ## Thank you so much for stopping by and I hope this repo is useful for someone out there in the void!
