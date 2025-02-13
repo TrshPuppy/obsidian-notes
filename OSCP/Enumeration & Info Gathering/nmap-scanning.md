@@ -18,7 +18,7 @@ To see how much traffic is received by the remote host by this type of scan, we'
 ┌──(trshpuppy㉿kali)-[~/oscp/recon]
 └─$ sudo iptables -Z
 ```
-- `-I`: This tells iptables to insert a new rule into a specific "chain", the chain in this case is the `INPUT` (inbound) chain and the `OUTPUT` (outbound) chain. `-I` is followed by the *rule number* (which is `1`)
+- `-I`: This tells [iptables](../../CLI-tools/linux/local/iptables.md) to insert a new rule into a specific "chain", the chain in this case is the `INPUT` (inbound) chain and the `OUTPUT` (outbound) chain. `-I` is followed by the *rule number* (which is `1`)
 - `-s`: specifies the source IP address
 - `-d`: specifies the destination IP address
 - `-j`: tells iptables to `ACCEPT` traffic
