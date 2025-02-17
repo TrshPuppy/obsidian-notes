@@ -118,8 +118,46 @@ If we were to do a full nmap TCP scan of a *[Class C](../../networking/routing/C
 
 You might be wondering about other tools like [masscan](../../cybersecurity/TTPs/recon/tools/scanning/masscan.md) and RustScan for these situations. While these tools are faster than Nmap they *generate much more traffic* which is *[concurrent](../../coding/concepts/coroutines.md#Concurrency)* (lots of packets sent at the same time to the target).
 ## Nmap scanning techniques
+### SYN scans
+`SYN` or "stealth" scans are the most popular nmap scanning technique. `SYN` scans are a type of TCP port scanning method which uses `SYN` packets to initiate TCP connections on a target's ports, but doesn't complete the handshake. When the target port receives a `SYN` packet, if it's open, it will *return a `SYN ACK`* packet. But instead of continuing the three-way handshake (and sending a `ACK` packet) nmap will continue to the next port, not bothering to send any more packets to the current port.
 
+`SYN` scans are "stealthy" because, since the three-way handshake is never completed *the information never gets passed to the application layer* on the target. This means our packets are unlikely to be recorded in logs (it's important to note that this is how it used to be, but modern firewalls are better and are configured to log incomplete handshakes). `SYN` scans are also faster than full TCP scans b/c fewer packets are sent. `SYN` scans are run using the `-sS` flag.
+### TCP Connect Scanning
+This scan techniques is much slower because it uses the Berkley Socket API to carry out the three-way handshake with each port. Because it doesn't deal w/ raw sockets, TCP connect scans can be run w/o `sudo`/ root privileges. W/ the Berkeley API, results are not returned until the entire handshake is complete, making TCP connect scans much slower. However, nmap won't wait to send a `FIN` flag, instead, it will send the target a `RST` packet to terminate the connection as soon as the target sends its first data packets (after nmap sends `ACK`).
+![](../oscp-pics/nmap-scanning-1.png)
+> - [Nmap: TCP Connect Scan](https://nmap.org/book/scan-methods-connect-scan.html)
+
+TCP connect scans are done using the `-sT` flag with nmap and is the default scan type.
+### UDP scans
+In UDP scans, nmap uses two different techniques to determine if a target UDP port is open. For most ports, it will use the *ICMP port unreachable* method (sends an empty packet to the port). For ports which are commonly running UDP services (like port `161` which runs [SNMP](../../hidden/Sec+/25%%203%20Implementation/3.1%20Secure%20Protocols/SNMP.md)) nmap will try sending *protocol-specific* packets to see if the application responds.
+
+UDP scans use the `-sU` flag which can also be combined with the `-sS` flag during scanning for a more thorough assessment of the target.
+### Network Sweeping
+Network sweeping is a technique we can use to deal w/ a large network or number of hosts. The general idea is to start with broad scans and then narrow them down to more specific ones as we determine which hosts are actually up and have open ports.
+
+Network sweeping can be done w/ nmap by using the `-sn` option. This tells nmap to do more than just send an ICMP echo request for each target host to determine if it's up or not. In addition to the ICMP packet, nmap will send a TCP `SYN` packet to port `443`, a TCP `ACK` packet to port `80`, and an ICMP timestamp request.
+
+To make the output easier to grep through, we can also give nmap the `-oG` flag w/ the name of a file. This will create a file with out output in it that is formatted in a way which is easier to read and programmatically grep through:
+```bash
+┌──(trshpuppy㉿kali)-[~/oscp/recon]
+└─$ nmap 192.168.144.131 -sn -oG test.txt
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-02-17 10:02 EST
+Nmap scan report for 192.168.144.131
+Host is up (0.000088s latency).
+Nmap done: 1 IP address (1 host up) scanned in 0.05 seconds
+
+┌──(trshpuppy㉿kali)-[~/oscp/recon]
+└─$ cat test.txt
+# Nmap 7.94SVN scan initiated Mon Feb 17 10:02:44 2025 as: nmap -sn -oG test.txt 192.168.144.131
+Host: 192.168.144.131 ()        Status: Up
+# Nmap done at Mon Feb 17 10:02:44 2025 -- 1 IP address (1 host up) scanned in 0.05 seconds
+
+┌──(trshpuppy㉿kali)-[~/oscp/recon]
+└─$ grep Up test.txt
+Host: 192.168.144.131 ()        Status: Up
+```
 
 > [!Resources]
 > - [Berkeley socket API](https://networkprogrammingnotes.blogspot.com/p/berkeley-sockets.html)
 > - [`iptables`](https://netfilter.org/projects/iptables/index.html) 
+> - [Nmap: TCP Connect Scan](https://nmap.org/book/scan-methods-connect-scan.html)
