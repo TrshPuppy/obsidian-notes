@@ -76,7 +76,7 @@ Now we know the target is running *Samba 2.2.1a*, which we can look up for relat
 ## Other SMB Enumerating Tools:
 ### [`nmblookup`](../../../CLI-tools/linux/remote/nmblookup.md)
 `nmblookup` is a CLI tool which resolves the NetBIOS names of devices on a network to their [IP addresses](/networking/OSI/IP-addresses.md). It does so by making use of queries being made on the network.
-### [`nbtscan`](/CLI-tools/nbtscan.md)
+### [`nbtscan`](../../../CLI-tools/linux/nbtscan.md)
 `nbtscan` is another CLI command which will return information about computers on a network by sending NetBIOS status queries to the provided IP address or IP address range. It can return the following info:
 - IP address
 - NetBIOS computer names

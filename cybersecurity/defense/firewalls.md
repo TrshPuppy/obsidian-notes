@@ -1,13 +1,13 @@
 
 # Firewalls
 Device w/i a network responsible for determining what traffic can enter and exit. Can be hardware or software.
-## Configuration Factors:
-Firewalls use packet inspection to determine:
+## Configuration Factors
+Firewalls use packet inspection to determine
 - Where is the traffic *coming from* (has the firewall been configured to deny traffic from specific sources)?
 - Where is the traffic *going to* (has it been configured to deny traffic from going to a specific network)?
 - What*port is the traffic for* (has it been configured to deny traffic destined for a specific port)?
 - What *protocol* is the traffic using (has it been configured to deny traffic which is [UDP](/networking/protocols/UDP.md)/ [TCP](/networking/protocols/TCP.md) or both?)
-## Types/ Categories:
+## Types/ Categories
 ### Stateful
 Stateful firewalls examine *the entire connection* instead of a single packet from a connection. These types of firewalls tend to be *resource heavy* & if the one packet is found to be bad *the entire connection is blocked.*
 ### Stateless

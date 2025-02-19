@@ -28,7 +28,7 @@ In most internal pen-tests, the client gives us *assumed breach* access to their
 - [port-scanning](active/port-scanning.md)
 - [nmap-scanning](active/nmap-scanning.md)
 - [windows-port-scanning](active/windows-port-scanning.md)
-- [SMB-enumeration](active/SMB-enumeration.md)
+- [SMB-enum](active/SMB-enum.md)
 - [DNS-enum](active/DNS-enum.md) (seems like passive to me but OffSec disagrees lol)
 
 
