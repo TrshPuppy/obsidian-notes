@@ -1,6 +1,7 @@
 
-# [OWASP Web Security Testing Guide](https://github.com/OWASP/wstg)
-The OWASP WSTG is a comprehensive guide for pen-testing web applications and services. It is a 'framework for best practices' used by pen-testers in the industry.
+# OWASP WSTG
+Init.
+The [OWASP Web Security Testing Guide](https://github.com/OWASP/wstg) is a comprehensive guide for pen-testing web applications and services. It is a 'framework for best practices' used by pen-testers in the industry.
 ## Methodology:
 The methodology is divided into *passive* and *active* testing.
 ### Passive Testing:
@@ -18,8 +19,6 @@ The tester attempts to understand the application's logic and explores the app *
 - 08: [Fingerprint app framework](/cybersecurity/literature/WSTG/fingerprint-framework)
 - 09: [Fingerprint application](/cybersecurity/literature/WSTG/finerprint-app.md)
 - 10: [Map App architecture](cybersecurity/resources/WSTG/map-app-architecture.md)
-
-/cybersecurity/literature/WSTG/
 ### Active Testing:
 The rest of the methodologies in the WSTG are considered part of active testing. They include:
 #### Configuration and Deployment MGMT testing:

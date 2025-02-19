@@ -1,7 +1,6 @@
 
 # Elasticsearch
 > Elasticsearch is a **distributed**, **open source** search and analytics engine for **all types of data**. It is known for its **speed**, **scalability**, and **simple REST APIs**. Built on Apache Lucene, it was first released in 2010 by Elasticsearch N.V. (now known as Elastic). Elasticsearch is the core component of the Elastic Stack, a collection of open source tools for data ingestion, enrichment, storage, analysis, and visualization. This stack, commonly referred to as the ELK Stack, also includes Logstash and Kibana, and now has lightweight data shipping agents called Beats.
-
 -[HackTricks](https://book.hacktricks.xyz/network-services-pentesting/9200-pentesting-elasticsearch)
 ## Elasticsearch Index
 > [!Info]

@@ -1,3 +1,4 @@
+
 # DMARC
 (I'm not typing this sh-t out again)
 An open source standard which ties together the results of [DKIM](/cybersecurity/defense/domainkeys-identified-mail.md) and [SPF](SPF.md) through a process called "alignment".

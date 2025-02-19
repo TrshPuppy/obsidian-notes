@@ -15,7 +15,7 @@ Each share has a password which the client needs to enter in order to access it.
 User level protection is applied to each share and individual files. When the client is authenticated by the server, they receive *a unique ID (UID)* which is *presented to the server upon access.* This security mechanism has been present since LAN Manager 1.0.
 ## Exploits/ CVEs
 ### SMBv1
-The *SMBv1* server used in some older versions of Windows has recently been exploited, most notably by [WannaCry](/cybersecurity/attacks/wannacry.md) and [NotPetya](/cybersecurity/attacks/notpetya.md). The [EternalBlue](/cybersecurity/vulnerabilities/eternalblue.md) vulnerability in SMBv1 allows an attacker to execute code on connected devices remotely.
+The *SMBv1* server used in some older versions of Windows has recently been exploited, most notably by [WannaCry](/cybersecurity/attacks/wannacry.md) and [NotPetya](/cybersecurity/attacks/notpetya.md). The [EternalBlue](../../cybersecurity/vulnerabilities/EternalBlue.md) vulnerability in SMBv1 allows an attacker to execute code on connected devices remotely.
 ### Samba
 #### trans2
 When dealing w/ *Samba* the [trans2](/cybersecurity/vulnerabilities/trans2.md) vulnerability allows for a [buffer overflow](/cybersecurity/TTPs/exploitation/binary-exploitation/buffer-overflow.md). This is due to a string operation in the code with copies a *client supplied string* to a *fixed-size* buffer *w/o checking to make sure the buffer can hold the entire string.*
@@ -31,7 +31,8 @@ Because the buffer happens *during a function call*, a buffer overflow is able t
 > - Commands: [`smbclient`](../../CLI-tools/linux/remote/smbclient.md), `smbget`
 > - Tools: [`enum4linux`](../../cybersecurity/TTPs/recon/tools/enum4linux.md)
 > - Ports: `port 445`, `port 139`
-> - Vulnerabilities: [EternalBlue](/cybersecurity/vulnerabilities/eternalblue.md), [NotPetya](/cybersecurity/attacks/notpetya.md), [trans2](/cybersecurity/vulnerabilities/trans2.md)
+> - Vulnerabilities: [EternalBlue](../../cybersecurity/vulnerabilities/EternalBlue.md), [NotPetya](/cybersecurity/attacks/notpetya.md), [trans2](/cybersecurity/vulnerabilities/trans2.md)
 > - Attacks: [WannaCry](/cybersecurity/attacks/wannacry.md), [SMB-relay](/PNPT/PEH/active-directory/initial-vectors/SMB-relay.md)
-> - Enumeration: [Enumerating SMB](/PNPT/PEH/scanning-enumeration/enumerating-SMB.md)
+> -  PNPT notes: [Enumerating SMB](/PNPT/PEH/scanning-enumeration/enumerating-SMB.md)
 > - [nmap](../../CLI-tools/linux/remote/nmap.md) scripts: `smb-os-discovery.nse`
+> - OSCP notes: [SMB Enumeration](../../OSCP/Enumeration%20&%20Info%20Gathering/SMB-enumeration.md)
