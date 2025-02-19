@@ -347,5 +347,5 @@ nmap -sV --script=banner 10.10.10.0/24
 > - [Nmap: Host Discovery](https://nmap.org/book/man-host-discovery.html)
 
 > [!Related]
-> - [Port Scanning with Nmap](../../../OSCP/Enumeration%20&%20Info%20Gathering/nmap-scanning.md#Port%20Scanning%20with%20Nmap)
+> - [Port Scanning with Nmap](../../../OSCP/Enumeration%20&%20Info%20Gathering/active/nmap-scanning.md#Port%20Scanning%20with%20Nmap)
 > - [Nmap scanning:](../../../PNPT/PEH/scanning-enumeration/scanning-with-nmap.md#nmap%20scanning)

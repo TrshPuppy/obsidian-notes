@@ -1,8 +1,8 @@
 
-# (PASSIVE) [WHOIS](../../networking/protocols/whois.md) Enumeration
-WHOIS is a [TCP](../../networking/protocols/TCP.md) network protocol and database which provides information about [DNS](../../networking/DNS/DNS.md) domain names. WHOIS information is largely related to the domain's [Name Servers](../../networking/DNS/DNS.md#Name%20Servers) and registration information. All of this information is public but some registrars provide private registration for a fee (which obfuscates information about the person/ company who registered the domain).
+# (PASSIVE) [WHOIS](../../../networking/protocols/whois.md) Enumeration
+WHOIS is a [TCP](../../../networking/protocols/TCP.md) network protocol and database which provides information about [DNS](../../../networking/DNS/DNS.md) domain names. WHOIS information is largely related to the domain's [Name Servers](../../../networking/DNS/DNS.md#Name%20Servers) and registration information. All of this information is public but some registrars provide private registration for a fee (which obfuscates information about the person/ company who registered the domain).
 ## Tools
-### [`whois`](../../CLI-tools/whois.md)
+### [`whois`](../../../CLI-tools/whois.md)
 `whois` is a linux commandline tool which you can use to query name servers for information on a domain name. 
 ```bash
 whois megacorpone.com -h 192.168.50.251
@@ -97,7 +97,7 @@ In the output, some interesting pieces of info we may be able to use later are:
 - the nameservers for `megacorpone.com`: `NS1.MEGACORPONE.COM`, `NS2.MEGACORPONE.COM`, and `NS3.MEGACORPONE.COM`
 - the person listed as "Alan Grofield" in the `Tech Name` field
 #### Reverse WHOIS
-If we give `whois` an [IP address](../../networking/OSI/3-network/IP-addresses.md) then we can perform a *reverse WHOIS lookup* to discover more information
+If we give `whois` an [IP address](../../../networking/OSI/3-network/IP-addresses.md) then we can perform a *reverse WHOIS lookup* to discover more information
  ```bash
 ┌──(trshpuppy㉿kali)-[~/oscp/recon]
 └─$ whois 38.100.193.70
@@ -177,8 +177,8 @@ network:Updated:2024-05-13 18:48:33
 %ok
 ```
 The results from the reverse lookup tells us *who is hosting the IP address*. 
-### [`curL`](../../CLI-tools/linux/remote/curL.md)
-If `whois` is not available on your machine, you can also use [curL](../../CLI-tools/linux/remote/curL.md) to make the same query. For this, we need to send a [telnet](../../networking/protocols/telnet.md) request to the American Registry for Internet Numbers ([ARIN](https://www.arin.net/)), which is one of the internet numbers authorities who manage and adminster IP addresses.
+### [`curL`](../../../CLI-tools/linux/remote/curL.md)
+If `whois` is not available on your machine, you can also use [curL](../../../CLI-tools/linux/remote/curL.md) to make the same query. For this, we need to send a [telnet](../../../networking/protocols/telnet.md) request to the American Registry for Internet Numbers ([ARIN](https://www.arin.net/)), which is one of the internet numbers authorities who manage and adminster IP addresses.
 ```bash
 ┌─[25-01-09 6:57:03]:(rose.pineau@)-[~/Documents/repos/obsidian-notes]
 └# echo '38.100.193.70' | curl telnet://whois.arin.net:43

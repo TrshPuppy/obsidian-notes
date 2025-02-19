@@ -3,7 +3,7 @@
 Popularized by Johnny Long's 2001 book ["Google Hacking"](https://www.blackhat.com/presentations/bh-europe-05/BH_EU_05-Long.pdf).  Google Dorking is the process of finding information on a target through the use of crafted Google search engine queries. Queries can be further sharpened through the use of *operators* which help to narrow down or filter results.
 ## Operators
 ### Modifying operators
-Operators can be modified with `-` to *exclude* them from the results. For example, if I want to search for the site megacorpone.com but want to exclude all of the [HTML](../../cybersecurity/bug-bounties/hackerone/hacker101/HTML.md) files from the results:
+Operators can be modified with `-` to *exclude* them from the results. For example, if I want to search for the site megacorpone.com but want to exclude all of the [HTML](../../../cybersecurity/bug-bounties/hackerone/hacker101/HTML.md) files from the results:
 ```bash
 site:megacorpone.com -ext:html
 ```
@@ -24,7 +24,7 @@ intitle:"index of" site:megacorpone.com
 ```
 ## Resources
 ### Google Hacking Database
-[Google Hacking Database](https://www.exploit-db.com/google-hacking-database) is a database hosted by [Exploit DB](../../cybersecurity/TTPs/exploitation/tools/exploit-db.md) of tasty Google Dorks other people have discovered. Peruse it to find some you may want to use.
+[Google Hacking Database](https://www.exploit-db.com/google-hacking-database) is a database hosted by [Exploit DB](../../../cybersecurity/TTPs/exploitation/tools/exploit-db.md) of tasty Google Dorks other people have discovered. Peruse it to find some you may want to use.
 ### [DorkSearch](https://dorksearch.com/)
 Provides a subset of pre-built quieies and a tool to build queries for searches. 
 
@@ -35,5 +35,5 @@ Provides a subset of pre-built quieies and a tool to build queries for searches.
 > - [DorkSearch](https://dorksearch.com/)
 
 > [!Related]
-> - [google-fu](../../PNPT/PEH/recon/google-fu.md) (PNPT notes)
+> - [google-fu](../../../PNPT/PEH/recon/google-fu.md) (PNPT notes)
 
