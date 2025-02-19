@@ -1,4 +1,6 @@
 
+# INTRO TO OSINT
+I'm setting this as the README for this directory so it's clear that it's the intro content for this section of the course.
 # Passive Reconnaissance
 Also known as [OSINT](../../cybersecurity/TTPs/recon/OSINT.md) (open source intelligence) gathering. The process of finding and collecting *publicly available information* on a target *without directly interacting* with the target. The ultimate goal of passive reconnaissance is to *discover information which clarifies or expands the target's attack surface.* We're interested in any information which will help us exploit the target, whether by [phishing](../../hidden/Sec+/24%%201%20Attacks,%20Threats%20&%20Vulnerabilities/1.1%20Social%20Engineering/phishing.md), malware delivery, password guessing, etc..
 ## Schools of Thought
@@ -23,7 +25,11 @@ Information we gather on the target through active strategies means we've gather
 ## Windows LOLBins
 In most internal pen-tests, the client gives us *assumed breach* access to their internal network, usually via a Windows machine. There are a lot of tools which are pre-installed and trusted on a Windows system which we can use to do active recon. These are called *Living off the Land binaries* (LOLBins, sometimes also called LOLBAS for LOL binaries, scripts, and libraries).
 ## Table of Contents (Active Strats)
-- 
+- [port-scanning](port-scanning.md)
+- [nmap-scanning](nmap-scanning.md)
+- [windows-port-scanning](windows-port-scanning.md)
+- [SMB-enumeration](SMB-enumeration.md)
+- [DNS-enum](DNS-enum.md) (seems like passive to me but OffSec disagrees lol)
 
 
 > [!Resources]
