@@ -82,7 +82,7 @@ Now we know the target is running *Samba 2.2.1a*, which we can look up for relat
 - NetBIOS computer names
 - currently *logged-in users*
 - [MAC Address](/networking/OSI/MAC-addresses.md)
-### [enum4linux](../../../cybersecurity/TTPs/recon/tools/enum4linux.md)
+### [enum4linux](../../../cybersecurity/TTPs/recon/tools/services-and-protocols/enum4linux.md)
 enum4linux is an enumeration tool made specifically for enumerating SMB information on a target (but which can return additional info as well).
 
 Just by giving enum4linux our target's IP, and no flags, we get a lot of information back:

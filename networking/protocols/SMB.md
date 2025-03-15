@@ -29,7 +29,7 @@ Because the buffer happens *during a function call*, a buffer overflow is able t
 
 > [!Related]
 > - Commands: [`smbclient`](../../CLI-tools/linux/remote/smbclient.md), `smbget`
-> - Tools: [`enum4linux`](../../cybersecurity/TTPs/recon/tools/enum4linux.md)
+> - Tools: [`enum4linux`](../../cybersecurity/TTPs/recon/tools/services-and-protocols/enum4linux.md)
 > - Ports: `port 445`, `port 139`
 > - Vulnerabilities: [EternalBlue](../../cybersecurity/vulnerabilities/EternalBlue.md), [NotPetya](/cybersecurity/attacks/notpetya.md), [trans2](/cybersecurity/vulnerabilities/trans2.md)
 > - Attacks: [WannaCry](/cybersecurity/attacks/wannacry.md), [SMB-relay](/PNPT/PEH/active-directory/initial-vectors/SMB-relay.md)

@@ -97,3 +97,6 @@ In this command, `/all` tells `net` to list all of the shares *ending in a dolla
 
 > [!Resources]
 > - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
+
+
+

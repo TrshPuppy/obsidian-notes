@@ -13,4 +13,4 @@ Init.
 > [!Related]
 > - Commands: [nmblookup](../../CLI-tools/linux/remote/nmblookup.md), [nbtscan](../../CLI-tools/linux/nbtscan.md) 
 > - Protocols: [SMB](/networking/protocols/SMB.md)
-> - Tools: [enum4linux](../../cybersecurity/TTPs/recon/tools/enum4linux.md)
+> - Tools: [enum4linux](../../cybersecurity/TTPs/recon/tools/services-and-protocols/enum4linux.md)

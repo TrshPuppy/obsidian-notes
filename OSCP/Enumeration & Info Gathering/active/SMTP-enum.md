@@ -87,6 +87,58 @@ for name in names:
 # Close socket:
 soc.close()
 ```
+Using a wordlist I grabbed [here] the output from this script looks like this:
+```bash
+
+┌──(trshpuppy㉿kali)-[~/oscp/recon]
+└─$ python3 smtp_enum.py names.txt 192.168.188.8
+b'220 mail ESMTP Postfix (Ubuntu)\r\n'
+name file open
+finished creating name list
+Trying name: employees
+
+Result for employees: b'421 4.4.2 mail Error: timeout exceeded\r\n'
+Trying name: root
+Result for root: b''
+Trying name: admin
+Result for admin: b''
+Trying name: test
+Result for test: b''
+Trying name: guest
+Result for guest: b''
+Trying name: info
+Result for info: b''
+Trying name: adm
+Result for adm: b''
+Trying name: mysql
+Result for mysql: b''
+Trying name: user
+Result for user: b''
+Trying name: administrator
+Result for administrator: b''
+Trying name: oracle
+Result for oracle: b''
+Trying name: ftp
+Result for ftp: b''
+Trying name: pi
+Result for pi: b''
+Trying name: puppet
+Result for puppet: b''
+Trying name: ansible
+Result for ansible: b''
+Trying name: ec2-user
+Result for ec2-user: b''
+Trying name: vagrant
+Result for vagrant: b''
+Trying name: azureuser
+Result for azureuser: b''
+Trying name: maillist
+Result for maillist: b''
+Trying name: all
+Result for all: b''
+Trying name: users
+Result for users: b''
+```
 ### Windows
 We can use [`Test-NetConnection`](../../../CLI-tools/windows/Test-NetConnection.md) again to automate SMTP enumeration from a Windows machine as well:
 

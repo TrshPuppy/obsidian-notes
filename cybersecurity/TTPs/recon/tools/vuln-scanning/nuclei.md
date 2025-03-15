@@ -175,6 +175,13 @@ You can also use environment variables w/ Nuclei. For example the `MARKDOWN_EXPO
 ```bash
 MARKDOWN_EXPORT_SORT_MODE=template nuclei -target example.com -markdown-export nuclie_report/
 ```
+## Commands that worked
+```bash
+nuclei -t '/root/nuclei-templates/cloud/enum/gcp-bucket-enum.yaml' -var wordlist='/root/target/cloud/kf.txt' -esc -allow-local-file-access
+```
+- `esc` - allow standalone templates
+- `-allow-local-file-access`/ `-lfa`- allow nuclei to use local files (wordlist in this case)
+- `-var`- supply the value for a variable in the template (in this case wordlist)
 
 > [!Resources]
 > - [Nuclei Repo](https://github.com/projectdiscovery/nuclei)
