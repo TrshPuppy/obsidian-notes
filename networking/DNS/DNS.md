@@ -41,7 +41,6 @@ A node's domain name *is the list of labels on the path from the node itself to 
             XX            A  C   VAXA  VENERA Mockapetris
 ```
 In this hierarchy, the root domain has three subdomains, `MIL`, `EDU`,  and `ARPA`.  These are 'brother' domains. `LCS.MIT.EDU` has one subdomain called `XX.LCS.MIT.EDU`.  This diagram is in RFC 1034.
-
 ## Domain Hierarchy:
 ![](/networking/networking-pics/DNS-1.png)
 -[Try Hack Me](https://tryhackme.com/room/dnsindetail)

@@ -76,13 +76,13 @@ Now we know the target is running *Samba 2.2.1a*, which we can look up for relat
 ## Other SMB Enumerating Tools:
 ### [`nmblookup`](../../../CLI-tools/linux/remote/nmblookup.md)
 `nmblookup` is a CLI tool which resolves the NetBIOS names of devices on a network to their [IP addresses](/networking/OSI/IP-addresses.md). It does so by making use of queries being made on the network.
-### [`nbtscan`](/CLI-tools/nbtscan.md)
+### [`nbtscan`](../../../CLI-tools/linux/nbtscan.md)
 `nbtscan` is another CLI command which will return information about computers on a network by sending NetBIOS status queries to the provided IP address or IP address range. It can return the following info:
 - IP address
 - NetBIOS computer names
 - currently *logged-in users*
 - [MAC Address](/networking/OSI/MAC-addresses.md)
-### [enum4linux](../../../cybersecurity/TTPs/recon/tools/enum4linux.md)
+### [enum4linux](../../../cybersecurity/TTPs/recon/tools/services-and-protocols/enum4linux.md)
 enum4linux is an enumeration tool made specifically for enumerating SMB information on a target (but which can return additional info as well).
 
 Just by giving enum4linux our target's IP, and no flags, we get a lot of information back:

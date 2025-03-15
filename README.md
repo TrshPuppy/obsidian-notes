@@ -1,7 +1,7 @@
 # Obsidian Notes
 ## This is a public repo of my notes using [Obsidian](https://obsidian.md/).
-> P.S. the commit history has been wiped due to insecure configuration. This repo was created in December '22
-
+> [!NOTE]
+> Any note page with the word `Init.` at the top signifies notes which I plan to fill in later, or which I've started writing, but haven't finished.
 ### Viewing this Repo:
 The best way to view this collection of notes is with the Obsidian desktop app. The app shows connections, links between topics, and other formatting which can't be appreciated in the markdown alone.
 
@@ -19,11 +19,11 @@ Cloning it down into an Obsidian vault also means all of the internal links will
 If you prefer to browse my notes w/o the help of Obsidian, just know that some markdown formatting will not make sense and will make the notes harder to read.
 
 This repo is for my organization and reference but can be viewed by the public. Feel free to use these notes for your own reference or education, however, I cannot guarantee their accuracy. Thanks! :)
-
-> [!NOTE]
-> Any note page with the word `Init.` at the top signifies notes which I plan to fill in later, or which I've started writing, but haven't finished.
-## P.S. PNPT Study Guide
-The notes I took while studying for the PNPT are in the [PNPT directory](/PNPT) but have also been contextualized into their own [GitHub repo](github.com/trshpuppy/pnpt-study-guide). Again, because these notes are originally from my Obsidian vault, some links may be broken in the PNPT repo!
-
-## P.P.S. Contributing:
+## P.S. PNPT & OSCP Study Guides
+The notes I took while studying for the PNPT and OSCP are in their respective directories (see [PNPT](PNPT/README.md) and [OSCP](OSCP/README.md)). Again, because these notes are originally from my Obsidian vault, some links may be broken (in the PNPT repo specifically)!
+## P.P.S. Contributing
 If you find flaws and or misinformation in topic notes you'd like me to correct, feel free to make a branch w/ your changes and submit a pull request so I can review them! I want these notes to be accurate and because I'm learning so much so quickly, I'm sure ther are notes which need fixing!
+## P.P.P.S. Pictures
+Each directory has a `/<dir-name>-pics` sub-directory which holds all of the images embedded into notes in the directory. I've named them based on the notepage they're embedded in incremented by 1 for each image (in the same note page). For instance, my notes on [buffer overflow](cybersecurity/TTPs/exploitation/binary-exploitation/buffer-overflow.md) include 13 pictures. So the [9th picture](cybersecurity/cybersecurity-pics/buffer-overflow-9.png) is saved as `/cybersecurity/cybersecurity-pics/buffer-overflow-9.png`.
+
+> P.P.P.P.S. the commit history has been wiped due to insecure configuration. This repo was created in December '22

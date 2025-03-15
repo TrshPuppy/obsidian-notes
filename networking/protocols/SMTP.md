@@ -27,18 +27,24 @@ This commands precedes the *content of the email* which includes the date, from,
 Resets the connection and removes any *previously transferred information* **without closing the connection**. Usually used when the client sends *incorrect information*. 
 #### `QUIT` command
 Ends the connection, lol.
+#### `VRFY`
+`VRFY` requests the server to *verify an email address*. Also see my [OSCP notes on `VRFY`](../../OSCP/Enumeration%20&%20Info%20Gathering/active/SMTP-enum.md#`VRFY`)
+![`VRFY`](../../OSCP/Enumeration%20&%20Info%20Gathering/active/SMTP-enum.md#`VRFY`)
+#### `EXPN`
+`EXPN` can be used to ask the server for the entire list of emails which *belong to a mailing list*, or just the email of a single person (see my [OSCP notes on `EXPN`](../../OSCP/Enumeration%20&%20Info%20Gathering/active/SMTP-enum.md#`EXPN`)).
+![`EXPN`](../../OSCP/Enumeration%20&%20Info%20Gathering/active/SMTP-enum.md#`EXPN`)
 ### Connection Opened
 Since SMTP is a TCP connection, a session starts w/ the *three way handshake*. Once the connection is established b/w the client and server, the *client* begins the sending process with a `HELO`/ `EHLO` ('Hello') command.
 ### Email data transferred
 The client sends a bunch of commands, then the email data. In addition to the email and its content, the client sends the *email header*
-## SMTP Status Codes:
+## SMTP Status Codes
 SMTP-response-codes are updates sent by an SMTP server regarding the status of the email in its delivery process.
 - Sent in response to commands sent by the SMTP-client
 - Numerical codes regarding the status or an error r/t transmission of the message.
 	- allows for troubleshooting errors.
 ![](/networking/networking-pics/SMTP-1.png)
 -[mailersend](https://www.mailersend.com/blog/smtp-codes)
-### Common Codes and meanings:
+### Common Codes and meanings
 214: "Help message"
 >A response to the `HELP` command, usually includes a link/ URL to the FAQ page
 
@@ -65,20 +71,20 @@ SMTP-response-codes are updates sent by an SMTP server regarding the status of t
 
 354: "Start mail input"
 > The email header has been received, the server is now waiting for the body of the email
-## Abuse by Adversaries:
+## Abuse by Adversaries
 > [!Try Hack Me]
 > [Task 8: SMTP and C&C Communication](https://tryhackme.com/room/phishingemails4gkxh)
 
-Per the [MITRE-ATT&CK](../../cybersecurity/resources/MITRE-ATT&CK.md):
+### Per the [MITRE-ATT&CK](../../cybersecurity/resources/MITRE-ATT&CK.md)
 - Technique-1071 > [sub-technique 3](https://attack.mitre.org/techniques/T1071/003/): Adversaries can use [application-layer](/networking/OSI/application-layer.md) protocols w/ email delivery to avoid detection/ network filtering by blending in w/ existing traffic.
 	- Commands to the remote #C2 will be embedded in protocol traffic between the client and server.
 	- SMTP, [POP3](POP3.md) and [IMAP](IMAP.md) are very common mail protocols in network environments.
 		- Include many fields and headers where data can be concealed
 		- data can also be concealed in the message body
-### Mitigation:
+### Mitigation
 Network intrusion detection and prevention systems which use signatures to identify traffic from *specific malware*.
-### Detection:
-Monitor network traffic patterns:
+### Detection
+Monitor network traffic patterns
 - Use [TLS](TLS.md) inspection for encrypted traffic which doesn't follow expected protocols/ standards and traffic flow
 - Watch for correlation b/w process monitoring and traffic patterns
 
@@ -88,7 +94,7 @@ Monitor network traffic patterns:
 > - [SMTP codes](https://www.mailersend.com/blog/smtp-codes)
 > - [IBM](https://www.ibm.com/docs/en/zvm/7.3?topic=commands-ehlo)
 > - [Cloudflare](https://www.cloudflare.com/learning/email-security/what-is-smtp/#:~:text=The%20Simple%20Mail%20Transfer%20Protocol%20(SMTP)%20is%20a%20technical%20standard,their%20underlying%20hardware%20or%20software)*
-
+> - [IBM: SMTP Commands](https://www.ibm.com/docs/en/zos/2.2.0?topic=commands-smtp)
 ### Connection Opened
 
 >[!Related]

@@ -1,23 +1,23 @@
 
 # (Active) DNS Enumeration
-[DNS](../../networking/DNS/DNS.md) is an important protocol and system for resolving [IP addresses](../../networking/OSI/3-network/IP-addresses.md) into domain names (check out my DNS notes for more). Each domain has *DNS records* attached to it which are publicly accessible and can give away some clues and info we can use in building a potential attack against it.
+[DNS](../../../networking/DNS/DNS.md) is an important protocol and system for resolving [IP addresses](../../../networking/OSI/3-network/IP-addresses.md) into domain names (check out my DNS notes for more). Each domain has *DNS records* attached to it which are publicly accessible and can give away some clues and info we can use in building a potential attack against it.
 ## Records
 ### NS Record
-The [NS Record](../../networking/DNS/NS-record.md) contains the name of the *authoritative [name server](../../networking/DNS/DNS.md#Name%20Servers)* which hosts the most up to date and accurate information about the domain and which IP address it resolves to.
+The [NS Record](../../../networking/DNS/NS-record.md) contains the name of the *authoritative [name server](../../../networking/DNS/DNS.md#Name%20Servers)* which hosts the most up to date and accurate information about the domain and which IP address it resolves to.
 ### A Record
-The [A Record](../../networking/DNS/A-record.md) contains the IP address the domain or subdomain resolves to.
+The [A Record](../../../networking/DNS/A-record.md) contains the IP address the domain or subdomain resolves to.
 ### AAAA Record
-The AAAA record is just like an A record but is meant to be used for [IPv6](../../networking/OSI/3-network/IP-addresses.md#IPv6) addresses.
+The AAAA record is just like an A record but is meant to be used for [IPv6](../../../networking/OSI/3-network/IP-addresses.md#IPv6) addresses.
 ### MX Record
-The [MX Record](../../networking/DNS/MX-record.md) contians the names of the servers which are responsible for handling [email](../../networking/email.md) which is sent to the domain. A domain can have more than one MX record.
+The [MX Record](../../../networking/DNS/MX-record.md) contians the names of the servers which are responsible for handling [email](../../../networking/email.md) which is sent to the domain. A domain can have more than one MX record.
 ### PTR Record
-The [PTR Record](../../networking/DNS/PTR-record.md) is the *opposite* of an A record. Instead of storing the IP address that a domain resolves to, it stores *the domain an IP address resolves to*. Because of this, they're *not stored on a domain*. They are instead stored in the `in-addr.arpa` namespace of the `.arpa` [Top Level Domain](../../networking/DNS/DNS.md#Top%20Level%20Domain).
+The [PTR Record](../../../networking/DNS/PTR-record.md) is the *opposite* of an A record. Instead of storing the IP address that a domain resolves to, it stores *the domain an IP address resolves to*. Because of this, they're *not stored on a domain*. They are instead stored in the `in-addr.arpa` namespace of the `.arpa` [Top Level Domain](../../../networking/DNS/DNS.md#Top%20Level%20Domain).
 ### CNAME
-The [CNAME](../../networking/DNS/CNAME.md), or 'canonical name' record, stores the *alias* for a domain. In other words, it points to another domain name. CNAME records can *never* point to an IP address. They have to contain domains or subdomains. When a DNS server finds the CNAME record for a queried domain, it triggers a second lookup for the domain stored in the CNAME.
+The [CNAME](../../../networking/DNS/CNAME.md), or 'canonical name' record, stores the *alias* for a domain. In other words, it points to another domain name. CNAME records can *never* point to an IP address. They have to contain domains or subdomains. When a DNS server finds the CNAME record for a queried domain, it triggers a second lookup for the domain stored in the CNAME.
 ### TXT Record
-The [TXT Record](../../networking/DNS/TXT-record.md) can contain any arbitrary data, human readable *AND machine readable*. Primarily, TXT records are used for domain verification and for storing [SPF](../../cybersecurity/defense/SPF.md) and [DMARC](../../cybersecurity/defense/DMARC.md) information. TXT records can be tasty during recon because they often tell us what technologies an organization may be using, and sometimes admins will use TXT records to store sensitive information.
+The [TXT Record](../../../networking/DNS/TXT-record.md) can contain any arbitrary data, human readable *AND machine readable*. Primarily, TXT records are used for domain verification and for storing [SPF](../../../cybersecurity/defense/SPF.md) and [DMARC](../../../cybersecurity/defense/DMARC.md) information. TXT records can be tasty during recon because they often tell us what technologies an organization may be using, and sometimes admins will use TXT records to store sensitive information.
 ## Enumeration Using Linux 
-You can do DNS enumeration through automating common DNS tools like [dig](../../CLI-tools/dig.md). Using [bash](../../coding/languages/bash.md) we can automate DNS lookups by creating a list of common subdomain names and then using a for loop to loop over them, making DNS requests for each using dig.
+You can do DNS enumeration through automating common DNS tools like [dig](../../../CLI-tools/dig.md). Using [bash](../../../coding/languages/bash.md) we can automate DNS lookups by creating a list of common subdomain names and then using a for loop to loop over them, making DNS requests for each using dig.
 ### Bash Enum Example
 This script will perform a type of DNS brute forcing to find valid subdomains for our target domain `megacorpone.com`. 
 #### List: `list.txt`
@@ -388,7 +388,7 @@ router.megacorpone.com.	300	IN	A	167.114.21.70
 
                      :-- DONE --:
 ```
-With our script bruteforcing the list for us, we discovered three subdomains which resolve to IP addresses: `www.megacorpone.com`, `mail.megacorpone.com`, and `router.megacorpone.com`. Two of these subdomains resolve to IP addresses which are likely in the *same [CIDR](../../networking/routing/CIDR.md) range*. 
+With our script bruteforcing the list for us, we discovered three subdomains which resolve to IP addresses: `www.megacorpone.com`, `mail.megacorpone.com`, and `router.megacorpone.com`. Two of these subdomains resolve to IP addresses which are likely in the *same [CIDR](../../../networking/routing/CIDR.md) range*. 
 ### Reverse DNS Enumeration
 Knowing that two of the subdomains likely share a CIDR range, we can infer that more hosts which are potentially related to the target have IP addresses within that range. We can brute force them using reverse DNS lookups and *PTR records* (if the domain admin configure PTR records for the domains). 
 #### Oneliner
@@ -496,7 +496,7 @@ Address:  192.168.50.154
 ```
 The output tells us that `nslookup` queried the *default DNS server* at `192.168.50.151` to resolve the IP address for `mail.megacorptwo.com`. 
 #### Querying for specific records
-We can use `nslookup` to make our query more specifc. For example, to query for [TXT records](../../networking/DNS/TXT-record.md) , we can use the `-type=` flag.
+We can use `nslookup` to make our query more specifc. For example, to query for [TXT records](../../../networking/DNS/TXT-record.md) , we can use the `-type=` flag.
 ```cmd
 C:\Users\student>nslookup -type=TXT info.megacorptwo.com 192.168.50.151
 Server:  UnKnown
@@ -513,7 +513,7 @@ www
 info
 mail
 ```
-We're going to need a [powershell](../../computers/windows/powershell.md) script for this unfortunately...
+We're going to need a [powershell](../../../computers/windows/powershell.md) script for this unfortunately...
 ```powershell
 # Define the domain and wordlist file
 $domain = "megacorptwo.com"

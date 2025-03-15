@@ -1,8 +1,8 @@
 
 # Port Scanning with Nmap
-[Nmap](../../CLI-tools/linux/remote/nmap.md) is the most popular port scanning tool. It's written by Gordon Lyon/ Fyodor and has been in active development for 2 decades. One thing that makes nmap the best is that it deals in *raw sockets* which require root privilege to access (so some scans have to be run using `sudo`). Raw sockets allow you to *manipulate the network packets*, whereas scanning with a regular socket means you have to follow the [Berkeley socket API](https://networkprogrammingnotes.blogspot.com/p/berkeley-sockets.html) standards.
+[Nmap](../../../CLI-tools/linux/remote/nmap.md) is the most popular port scanning tool. It's written by Gordon Lyon/ Fyodor and has been in active development for 2 decades. One thing that makes nmap the best is that it deals in *raw sockets* which require root privilege to access (so some scans have to be run using `sudo`). Raw sockets allow you to *manipulate the network packets*, whereas scanning with a regular socket means you have to follow the [Berkeley socket API](https://networkprogrammingnotes.blogspot.com/p/berkeley-sockets.html) standards.
 ## Footprint
-It's important to understand the mark you leave on a scanned host when you do port scanning. In a standard TCP scan, we scan the top 1000 [ports](../../networking/routing/ports.md) because *they are the most used* (and are designated). Technically, the first 1023 are assigned to specific protocols and services, the rest are dynamic or "ephemeral" (meaning they can be temporarily assigned to any application). The first 1023 have to follow a *set of standards*.
+It's important to understand the mark you leave on a scanned host when you do port scanning. In a standard TCP scan, we scan the top 1000 [ports](../../../networking/routing/ports.md) because *they are the most used* (and are designated). Technically, the first 1023 are assigned to specific protocols and services, the rest are dynamic or "ephemeral" (meaning they can be temporarily assigned to any application). The first 1023 have to follow a *set of standards*.
 
 To see how much traffic is received by the remote host by this type of scan, we'll use the `iptables` command (on the target host).
 ### `iptables` 
@@ -18,7 +18,7 @@ To see how much traffic is received by the remote host by this type of scan, we'
 ┌──(trshpuppy㉿kali)-[~/oscp/recon]
 └─$ sudo iptables -Z
 ```
-- `-I`: This tells [iptables](../../CLI-tools/linux/local/iptables.md) to insert a new rule into a specific "chain", the chain in this case is the `INPUT` (inbound) chain and the `OUTPUT` (outbound) chain. `-I` is followed by the *rule number* (which is `1`)
+- `-I`: This tells [iptables](../../../CLI-tools/linux/local/iptables.md) to insert a new rule into a specific "chain", the chain in this case is the `INPUT` (inbound) chain and the `OUTPUT` (outbound) chain. `-I` is followed by the *rule number* (which is `1`)
 - `-s`: specifies the source IP address
 - `-d`: specifies the destination IP address
 - `-j`: tells iptables to `ACCEPT` traffic
@@ -114,9 +114,9 @@ Chain OUTPUT (policy ACCEPT 67923 packets, 7606K bytes)
 ```
 This is a local port scan which probes all 65,535 ports on the target host, and it generated about *4MB* or traffic - much higher than the sub 1000 scan. 
 
-If we were to do a full nmap TCP scan of a *[Class C](../../networking/routing/CIDR.md#Class%20C) network* (254 hosts), we would be sending over 1000MB of traffic to that network. While this would provide the most accurate information, it would take way too long and send too much traffic to the target.
+If we were to do a full nmap TCP scan of a *[Class C](../../../networking/routing/CIDR.md#Class%20C) network* (254 hosts), we would be sending over 1000MB of traffic to that network. While this would provide the most accurate information, it would take way too long and send too much traffic to the target.
 
-You might be wondering about other tools like [masscan](../../cybersecurity/TTPs/recon/tools/scanning/masscan.md) and RustScan for these situations. While these tools are faster than Nmap they *generate much more traffic* which is *[concurrent](../../coding/concepts/coroutines.md#Concurrency)* (lots of packets sent at the same time to the target).
+You might be wondering about other tools like [masscan](../../../cybersecurity/TTPs/recon/tools/scanning/masscan.md) and RustScan for these situations. While these tools are faster than Nmap they *generate much more traffic* which is *[concurrent](../../../coding/concepts/coroutines.md#Concurrency)* (lots of packets sent at the same time to the target).
 ## Nmap scanning techniques
 ### SYN scans
 `SYN` or "stealth" scans are the most popular nmap scanning technique. `SYN` scans are a type of TCP port scanning method which uses `SYN` packets to initiate TCP connections on a target's ports, but doesn't complete the handshake. When the target port receives a `SYN` packet, if it's open, it will *return a `SYN ACK`* packet. But instead of continuing the three-way handshake (and sending a `ACK` packet) nmap will continue to the next port, not bothering to send any more packets to the current port.
@@ -124,7 +124,7 @@ You might be wondering about other tools like [masscan](../../cybersecurity/TTPs
 `SYN` scans are "stealthy" because, since the three-way handshake is never completed *the information never gets passed to the application layer* on the target. This means our packets are unlikely to be recorded in logs (it's important to note that this is how it used to be, but modern firewalls are better and are configured to log incomplete handshakes). `SYN` scans are also faster than full TCP scans b/c fewer packets are sent. `SYN` scans are run using the `-sS` flag.
 ### TCP Connect Scanning
 This scan techniques is much slower because it uses the Berkley Socket API to carry out the three-way handshake with each port. Because it doesn't deal w/ raw sockets, TCP connect scans can be run w/o `sudo`/ root privileges. W/ the Berkeley API, results are not returned until the entire handshake is complete, making TCP connect scans much slower. However, nmap won't wait to send a `FIN` flag, instead, it will send the target a `RST` packet to terminate the connection as soon as the target sends its first data packets (after nmap sends `ACK`).
-![](../oscp-pics/nmap-scanning-1.png)
+![](../../oscp-pics/nmap-scanning-1.png)
 > - [Nmap: TCP Connect Scan](https://nmap.org/book/scan-methods-connect-scan.html)
 
 TCP connect scans are done using the `-sT` flag with nmap and is the default scan type.

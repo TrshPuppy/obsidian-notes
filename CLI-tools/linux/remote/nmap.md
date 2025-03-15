@@ -246,8 +246,8 @@ This scan sends a TCP packet *without any flags set* so the packet is empty (TCP
 The only bit set in the packet is the `TCP FIN` bit.
 #### `-sX` Xmas scan
 Sets the FIN, PSH, and URG flags which "lights the packet up like a xmas tree"
-### [Nmap Scripting Engine](https://nmap.org/book/nse.html)
-Nmap comes with the Nmap Scripting Engine (NSE) which is a collection of user-written [Lua](/coding/languages/lua.md) scripts used to automate a wide-variety of networking tasks.
+### Nmap Scripting Engine 
+Nmap comes with the [Nmap Scripting Engine](https://nmap.org/book/nse.html) (NSE) which is a collection of user-written [Lua](/coding/languages/lua.md) scripts used to automate a wide-variety of networking tasks.
 ```bash
 sudo nmap -sSUC -p 111 10.0.3.5
 Starting Nmap 7.94 ( https://nmap.org ) at 2023-08-08 18:36 EDT
@@ -347,5 +347,5 @@ nmap -sV --script=banner 10.10.10.0/24
 > - [Nmap: Host Discovery](https://nmap.org/book/man-host-discovery.html)
 
 > [!Related]
-> - [Port Scanning with Nmap](../../../OSCP/Enumeration%20&%20Info%20Gathering/nmap-scanning.md#Port%20Scanning%20with%20Nmap)
+> - [Port Scanning with Nmap](../../../OSCP/Enumeration%20&%20Info%20Gathering/active/nmap-scanning.md#Port%20Scanning%20with%20Nmap)
 > - [Nmap scanning:](../../../PNPT/PEH/scanning-enumeration/scanning-with-nmap.md#nmap%20scanning)
