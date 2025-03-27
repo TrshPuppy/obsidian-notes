@@ -15,6 +15,9 @@ This example scans an IP address for directory busting using a wordlist
 Enumerate directories/ files branching off the target URL. Also includes hidden directories/ files.
 - can use `-u` to specify a target domain/ IP
 - use `-w` to specify the path to the wordlist you want to use to enumerate directory/ file names 
+```bash
+gobuster dir -u 'http://192.168.204.16:5002/users/admin/' -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
+```
 #### `vhost`: enumerate virtual hosts
 When companies etc. host multiple domain names on a single server or cluster of servers it's called *virtual host routing*.
 - one server is able to share data and resources with the other hostnames 
@@ -32,7 +35,7 @@ Then Gobuster will send an HTTP request to each enumerated subdomain w/ a host h
 - use `-d` to specify a target domain you want to find a #subdomain in
 - `-w` for a wordlist
 - *May have to resolve domain name in /etc/hosts*
-### Syntax: 
+### Syntax 
 #### *help*: `gobuster -h` or `gobuster <mode> -h`
 #### `-o <output string>` output
 File to save output to.
@@ -43,7 +46,7 @@ Tells gobuster to find/ try specific file types. For example, if you want it to 
 gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -u $t -x php
 ```
 **NOTE:** you can list multiple file types: `-x php,html`
-### Tips:
+### Tips
 - To get a list of options specific to a mode use `gobuster <mode> -h`
 - Gobuster is written in [golang](/coding/languages/golang.md) which makes it faster than similar tools
 - **Disadvantage:** Can't do recursive enumeration (if you want to enumerate on directories below the outer directory, you have to run it again with the next directory deep as the target)
