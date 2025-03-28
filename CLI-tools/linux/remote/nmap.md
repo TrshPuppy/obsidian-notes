@@ -309,9 +309,61 @@ $ locate scripts/citrix
 ```
 #### `--script smb-vuln`
 Used to look for all smb vulnerabilities against a host
+#### Updating the NSE
+To add new scripts to the NSE database, we can use the `--script-updatedb` flag. For example, if we find a script for the vulnerability `2021-41773` as a POC on someone's. GitHub, we can download the `.nse` file, copy it to nmap's script directory, and then use the `--script-updatedb` command:
+```bash
+kali@kali:~$ sudo cp /home/kali/Downloads/http-vuln-cve-2021-41773.nse /usr/share/nmap/scripts/http-vuln-cve2021-41773.nse
+
+kali@kali:~$ sudo nmap --script-updatedb
+[sudo] password for kali: 
+Starting Nmap 7.92 ( https://nmap.org )
+NSE: Updating rule database.
+NSE: Script Database updated successfully.
+Nmap done: 0 IP addresses (0 hosts up) scanned in 0.54 seconds
+```
+### Vuln Scanning
+![Vulners script](../../../OSCP/Vulnerability%20Scanning/nmap-vuln-scanning.md#Vulners%20script)
+[Vulnerability Scanning w/ Nmap](../../../OSCP/Vulnerability%20Scanning/nmap-vuln-scanning.md#Vulnerability%20Scanning%20w/%20Nmap)
 ## Examples which worked
 ```bash
 nmap -sS -sC -sV -Pn -n -p- -vvv --open --min-hostgroup 256 --min-rate 1000 --max-rtt-timeout 300ms --max-retries 2 --script targets-xml --script -args newtargets,iX=nmap/livehosts-fulltcp.xml -oA nmap/livehosts-allports-scripts
+```
+### How to actually run scripts you dingus
+Adding `+<script-title>` will force the script to run whether it's specific conditions are met or not.
+```bash
+┌─[25-03-17 17:32:33]:(root@192.168.144.131)-[/home/trshpuppy/oscp/recon]
+└─# nmap 192.168.210.149 --script +http-title -p53,88,389,445,464,593,636,5985,9389,47001,49664,49665,49666,49667,49671,49674,49675,49681,49687,49709,49855
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-03-17 17:33 EDT
+Nmap scan report for 192.168.210.149
+Host is up (0.11s latency).
+
+PORT      STATE SERVICE
+53/tcp    open  domain
+88/tcp    open  kerberos-sec
+389/tcp   open  ldap
+445/tcp   open  microsoft-ds
+464/tcp   open  kpasswd5
+593/tcp   open  http-rpc-epmap
+636/tcp   open  ldapssl
+5985/tcp  open  wsman
+|_http-title: Not Found
+9389/tcp  open  adws
+47001/tcp open  winrm
+|_http-title: Not Found
+49664/tcp open  unknown
+49665/tcp open  unknown
+49666/tcp open  unknown
+49667/tcp open  unknown
+49671/tcp open  unknown
+49674/tcp open  unknown
+49675/tcp open  unknown
+49681/tcp open  unknown
+49687/tcp open  unknown
+49709/tcp open  unknown
+49855/tcp open  unknown
+
+Nmap done: 1 IP address (1 host up) scanned in 8.81 seconds
+
 ```
 ## Other TidBits
 ### Banner Grabbing
@@ -349,3 +401,5 @@ nmap -sV --script=banner 10.10.10.0/24
 > [!Related]
 > - [Port Scanning with Nmap](../../../OSCP/Enumeration%20&%20Info%20Gathering/active/nmap-scanning.md#Port%20Scanning%20with%20Nmap)
 > - [Nmap scanning:](../../../PNPT/PEH/scanning-enumeration/scanning-with-nmap.md#nmap%20scanning)
+> - [Vulnerability Scanning w/ Nmap](../../../OSCP/Vulnerability%20Scanning/nmap-vuln-scanning.md#Vulnerability%20Scanning%20w/%20Nmap)
+

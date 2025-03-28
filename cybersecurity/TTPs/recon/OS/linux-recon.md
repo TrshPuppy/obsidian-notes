@@ -16,4 +16,4 @@ wpa-psk mypass
 > - [LinuxConfig: etcnetworkinterface](https://linuxconfig.org/etcnetworkinterfacesto-connect-ubuntu-to-a-wireless-network)
 
 ### `/etc/netplan`
-Similar to `/etc/network/interfaces`. Contains network [YAML](/coding/languages/YAML.md) config files sometimes w/ cleartext passwords.
+Similar to `/etc/network/interfaces`. Contains network [YAML](../../../../coding/markup/YAML.md) config files sometimes w/ cleartext passwords.

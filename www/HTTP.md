@@ -17,6 +17,61 @@ Proxies are *able to change the request/ response* before it reaches its destina
 ## Headers:
 ### User Agent string
 The User Agent request header is a unique string which lets servers and "network peers" identify an application, OS, vendor and/or version of the requesting user agent.
+## Methods
+### `GET`
+The `GET` method when sent to a webserver is usually used to request a *representation* of the specified resource. They should be used to request data and *should not have a request body*. However, you can add parameters to the path you're requesting and set those equal to certain values as a way to pass data to the server via `GET`.
+### `POST`
+### `PUT` & `PATCH`
+`PUT` and `PATCH` methods are used to *replace a value* on the server rather than create a new value (like with `POST`).
+#### `PUT`
+Should be used to create a new resource or *replace a representation* of the target resource using the request's content. The difference b/w `PUT` and `POST` is that calling it multiple times successively *has no side effects* (it's "idempotent"). 
+
+You can put the data you want to create/ replace with in the path as URL parameters, or in the request's body:
+```http
+PUT /new.html HTTP/1.1
+Host: example.com
+Content-type: text/html
+Content-length: 16
+
+<p>New File</p>
+```
+If the target resource does not have a current representation, and the `PUT` request successfully creates one, the server should respond with `201 Created` and a `Content-Location` header set to the path value of the new resource.
+
+If the target resources already exists (has a current representation), and the `PUT` request modifies it successfully, the webserver should respond w/ `200 OK` or `200 No Content`. Both indicate a successful request.
+#### `PATCH`
+Usually implies *partial modification* of a resource. It differs from `PUT` because it serves as a *set of instructions* for modifying a resources (whereas `PUT` is a complete replacement of the resource). Where a `PUT` request is "idempotent," a `PATCH` request may or may not be. This means it has the potential to cause side effects, just like a `POST` request.
+##### Example
+Let's say a webserver has the following resource which represents a user w/ an ID of `123`:
+```json
+{
+  "firstName": "Example",
+  "LastName": "User",
+  "userId": 123,
+  "signupDate": "2024-09-09T21:48:58Z",
+  "status": "active",
+  "registeredDevice": {
+    "id": 1,
+    "name": "personal",
+    "manufacturer": {
+      "name": "Hardware corp"
+    }
+  }
+}
+```
+If you want to modify only a specific part of the JSON object, you can do that with a `PATCH` request (whereas a `PUT` might be used to overwrite the entire thing):
+```http
+PATCH /users/123 HTTP/1.1
+Host: example.com
+Content-Type: application/json
+Content-Length: 27
+Authorization: Bearer ABC123
+
+{
+  "status": "suspended"
+}
+```
 
 > [!Resources]
 > - [MDN: HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)
+> - [MDN: PUT](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/PUT)
+> - [MDN: PATCH](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/PATCH)
