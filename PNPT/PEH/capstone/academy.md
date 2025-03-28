@@ -181,7 +181,7 @@ If we go to `http://10.0.2.15/academy` we get a login page where we can login wi
 Once we're in, one of the interesting tabs we have access to is the `My Profile` tab. Clicking this, we find a form where we can upload a 'student photo'.
 ![](PNPT/PNPT-pics/academy-2.png)
 ![](/PNPT-pics/academy-2.png)
-Besides the photo upload, we can also pentest this for [SQL-injection](/cybersecurity/TTPs/exploitation/injection/SQL-injection.md), etc.. However, the simplest place to start is to *use the form like its intended* and investigate from there.
+Besides the photo upload, we can also pentest this for [SQLi](../../../cybersecurity/TTPs/exploitation/injection/SQLi.md), etc.. However, the simplest place to start is to *use the form like its intended* and investigate from there.
 ## Student Photo Upload
 ### Plain Photo
 Starting w/ a plain photo, let's see what happens:

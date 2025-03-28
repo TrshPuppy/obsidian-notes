@@ -1,6 +1,6 @@
 
 # Detecting SQLi
-Testing for [SQL-injection](../../TTPs/exploitation/injection/SQL-injection.md) should be done against *every input point* on an application/ website. W/ each attempt, look for *errors* or changes in how the application responds.
+Testing for [SQLi](../../TTPs/exploitation/injection/SQLi.md) should be done against *every input point* on an application/ website. W/ each attempt, look for *errors* or changes in how the application responds.
 ## Common Clauses
 Most SQLis happen in the `WHERE` and `SELECT` clauses of SQL statements. However, they can also be accomplished with:
 ### `UPDATE`
