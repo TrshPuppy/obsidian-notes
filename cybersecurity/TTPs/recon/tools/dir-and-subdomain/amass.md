@@ -172,7 +172,7 @@ The findings for this subcommand are *stored in a graph database.* The database 
 
 This subcommand can be executed in either a normal, a passive, or an active configuration mode.
 ##### `-normal`:
-Will use data sources to enumerate and will use DNS to *validate findings and investigate the namescpaes in scope* (the domain names given to the command).
+Will use data sources to enumerate and will use DNS to *validate findings and investigate the namespaces in scope* (the domain names given to the command).
 `amass enum -d example.com`
 ##### `-passive`: 
 This mode of `enum` is faster, but will not validate the DNS information (like by resolving subdomains).

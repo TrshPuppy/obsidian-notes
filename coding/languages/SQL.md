@@ -49,3 +49,5 @@ The first SQL-standard was implemented in 1986 to standardize use among vendors 
 > [!Related]
 > - [SQLi](../../cybersecurity/TTPs/exploitation/injection/SQLi.md)
 > - [mysql](../../CLI-tools/linux/mysql.md) command line tool
+> - [MSSQL](../../CLI-tools/windows/MSSQL.md)
+> - [UNION-attack](../../cybersecurity/TTPs/exploitation/injection/UNION-attack.md)
