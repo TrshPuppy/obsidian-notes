@@ -20,6 +20,9 @@ OSCP/OSCP-hidden
 # Submod specifics:
 /nested-repos/PNPT-study-guide/PNPT-hidden
 /nested-repose/malware-analysis-notes/PMAT-hidden
+/OSCP/hidden
+
+
 
 # Obsidian specific:
 .obsidian/cache
