@@ -35,4 +35,4 @@ Because the buffer happens *during a function call*, a buffer overflow is able t
 > - Attacks: [WannaCry](/cybersecurity/attacks/wannacry.md), [SMB-relay](/PNPT/PEH/active-directory/initial-vectors/SMB-relay.md)
 > -  PNPT notes: [Enumerating SMB](/PNPT/PEH/scanning-enumeration/enumerating-SMB.md)
 > - [nmap](../../CLI-tools/linux/remote/nmap.md) scripts: `smb-os-discovery.nse`
-> - OSCP notes: [SMB Enumeration](../../OSCP/Enumeration%20&%20Info%20Gathering/active/SMB-enum.md)
+> - OSCP notes: [SMB Enumeration](../../OSCP/enum-and-info-gathering/active/SMB-enum.md)

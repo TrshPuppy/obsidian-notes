@@ -71,8 +71,8 @@ guest        guest
 ```
 The out shows that the `users` table only has two columns: `username` and `password`. There are only two users listed in the table `admin` and `guest`. 
 ## Other Tidbits
-### [`xp_cmdshell`](../../OSCP/Web%20Apps/SQLi.md#In%20MSSQL)
-![My notes on `xp_cmdshell` - OSCP notes](../../OSCP/Web%20Apps/SQLi.md#In%20MSSQL)
+### [`xp_cmdshell`](../../OSCP/web-apps/SQLi.md#In%20MSSQL)
+![My notes on `xp_cmdshell` - OSCP notes](../../OSCP/web-apps/SQLi.md#In%20MSSQL)
 
 > [!Resources]
 > - [Offsec](offsec.com)

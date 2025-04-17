@@ -1,6 +1,6 @@
 
 # Local File Inclusion (LFI)
-Many people mix up local file inclusion and [directory traversal](directory-traversal.md), but they are very different. THe biggest difference b/w them is that local file inclusion results in a file bing *included in the application's running code*, which ultimately means it can be leveraged for *code execution*. Directory traversal, on the other hand, just results in the attacker being able to *read* the file (not execute it). 
+Many people mix up local file inclusion and [directory traversal](../web-apps/directory-traversal.md), but they are very different. THe biggest difference b/w them is that local file inclusion results in a file bing *included in the application's running code*, which ultimately means it can be leveraged for *code execution*. Directory traversal, on the other hand, just results in the attacker being able to *read* the file (not execute it). 
 
 One way to identify an LFI from directory traversal is *how the file is displayed* on the webpage/etc when accessed. For example, an image file like a jpeg which is accessed through a directory traversal will be displayed as raw jpeg data in ASCII. A jpeg file accessed through LFI will be rendered as the actual image by the server.
 ## Log Poisoning

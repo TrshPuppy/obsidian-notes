@@ -47,4 +47,4 @@ Only recently has SNMPv3 been improved to use AES-256 encryption instead of DES-
 
 > [!Related]
 > - `port 161` ([UDP](UDP.md))
-> - [My OSCP notes on SNMP enum](../../OSCP/Enumeration%20&%20Info%20Gathering/active/SNMP-enum.md)
+> - [My OSCP notes on SNMP enum](../../OSCP/enum-and-info-gathering/active/SNMP-enum.md)

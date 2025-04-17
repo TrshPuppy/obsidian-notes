@@ -72,7 +72,7 @@ Please note that the information provided is based on publicly available sources
 ```
 With all of this data related to employees at Mega Corp, we can fashion various phishing and password attacks. For example, we can generate a list of emails for [password spraying](../../../cybersecurity/TTPs/recon/password-spraying.md), or lookup the people listed and craft [phishing](../../../cybersecurity/TTPs/delivery/phishing.md) pretexts to impersonate or target them.
 ### Other Prompt Examples
-#### [Google Dorks](passive/google-dorks.md)
+#### [Google Dorks](google-dorks.md)
 ```bash
 can you provide the best 20 google dorks for megacorpone.com website tailored for a penetration test?
 ```

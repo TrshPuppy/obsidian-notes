@@ -322,8 +322,8 @@ NSE: Script Database updated successfully.
 Nmap done: 0 IP addresses (0 hosts up) scanned in 0.54 seconds
 ```
 ### Vuln Scanning
-![Vulners script](../../../OSCP/Vulnerability%20Scanning/nmap-vuln-scanning.md#Vulners%20script)
-[Vulnerability Scanning w/ Nmap](../../../OSCP/Vulnerability%20Scanning/nmap-vuln-scanning.md#Vulnerability%20Scanning%20w/%20Nmap)
+![Vulners script](../../../OSCP/vuln-scanning/nmap-vuln-scanning.md#Vulners%20script)
+[Vulnerability Scanning w/ Nmap](../../../OSCP/vuln-scanning/nmap-vuln-scanning.md#Vulnerability%20Scanning%20w/%20Nmap)
 ## Examples which worked
 ```bash
 nmap -sS -sC -sV -Pn -n -p- -vvv --open --min-hostgroup 256 --min-rate 1000 --max-rtt-timeout 300ms --max-retries 2 --script targets-xml --script -args newtargets,iX=nmap/livehosts-fulltcp.xml -oA nmap/livehosts-allports-scripts
@@ -399,7 +399,7 @@ nmap -sV --script=banner 10.10.10.0/24
 > - [Nmap: Host Discovery](https://nmap.org/book/man-host-discovery.html)
 
 > [!Related]
-> - [Port Scanning with Nmap](../../../OSCP/Enumeration%20&%20Info%20Gathering/active/nmap-scanning.md#Port%20Scanning%20with%20Nmap)
+> - [Port Scanning with Nmap](../../../OSCP/enum-and-info-gathering/active/nmap-scanning.md#Port%20Scanning%20with%20Nmap)
 > - [Nmap scanning:](../../../PNPT/PEH/scanning-enumeration/scanning-with-nmap.md#nmap%20scanning)
-> - [Vulnerability Scanning w/ Nmap](../../../OSCP/Vulnerability%20Scanning/nmap-vuln-scanning.md#Vulnerability%20Scanning%20w/%20Nmap)
+> - [Vulnerability Scanning w/ Nmap](../../../OSCP/vuln-scanning/nmap-vuln-scanning.md#Vulnerability%20Scanning%20w/%20Nmap)
 

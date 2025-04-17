@@ -28,11 +28,11 @@ Resets the connection and removes any *previously transferred information* **wit
 #### `QUIT` command
 Ends the connection, lol.
 #### `VRFY`
-`VRFY` requests the server to *verify an email address*. Also see my [OSCP notes on `VRFY`](../../OSCP/Enumeration%20&%20Info%20Gathering/active/SMTP-enum.md#`VRFY`)
-![`VRFY`](../../OSCP/Enumeration%20&%20Info%20Gathering/active/SMTP-enum.md#`VRFY`)
+`VRFY` requests the server to *verify an email address*. Also see my [OSCP notes on `VRFY`](../../OSCP/enum-and-info-gathering/active/SMTP-enum.md#`VRFY`)
+![`VRFY`](../../OSCP/enum-and-info-gathering/active/SMTP-enum.md#`VRFY`)
 #### `EXPN`
-`EXPN` can be used to ask the server for the entire list of emails which *belong to a mailing list*, or just the email of a single person (see my [OSCP notes on `EXPN`](../../OSCP/Enumeration%20&%20Info%20Gathering/active/SMTP-enum.md#`EXPN`)).
-![`EXPN`](../../OSCP/Enumeration%20&%20Info%20Gathering/active/SMTP-enum.md#`EXPN`)
+`EXPN` can be used to ask the server for the entire list of emails which *belong to a mailing list*, or just the email of a single person (see my [OSCP notes on `EXPN`](../../OSCP/enum-and-info-gathering/active/SMTP-enum.md#`EXPN`)).
+![`EXPN`](../../OSCP/enum-and-info-gathering/active/SMTP-enum.md#`EXPN`)
 ### Connection Opened
 Since SMTP is a TCP connection, a session starts w/ the *three way handshake*. Once the connection is established b/w the client and server, the *client* begins the sending process with a `HELO`/ `EHLO` ('Hello') command.
 ### Email data transferred
