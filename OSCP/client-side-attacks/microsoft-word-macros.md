@@ -39,6 +39,7 @@ Auto-Open is a macro which runs *when you open* a Word doc. The opening events w
 - When you open the file using the 'Open' command in the File menu
 - When you use `FileOpen` or `FileFind` commands (these are methods of the `FileSystemObject` class which is part of the Windows Scripting Host-- i.e. if the current document is opened by another application via these methods...)
 - When you select a document from the Most Recently Used (MRU) list on the File menu
+
 When the doc is opened, the `AutoOpen()` macro runs if it's *saved as part of the document itself* or if its saved as part of *the template which the doc is based on*. 
 
 `AutoOpen` doesn't run *when its saved as part of a global add-in*. Additionally, a user can *prevent* `AutoOpen` from running by *holding down the shift key* when they open the doc.
