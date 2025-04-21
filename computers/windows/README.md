@@ -1,3 +1,8 @@
+---
+aliases:
+  - Windows
+  - windows
+---
 
 # Windows
 All of my notes pertaining to the Windows operating system.
@@ -17,3 +22,13 @@ All of my notes pertaining to the Windows operating system.
 (not in this directory)
 - [windows-port-scanning](../../OSCP/enum-and-info-gathering/active/windows-port-scanning.md)
 - [abusing-library-files](../../OSCP/client-side-attacks/abusing-library-files.md)
+### Related topics
+- [NTLM](../../networking/protocols/NTLM.md)
+- [kerberos](../../networking/protocols/kerberos.md)
+- [.NET](../../coding/dotNET.md)
+- [LLMNR](../../networking/protocols/LLMNR.md)
+- [VBA](../../coding/languages/VBA.md)
+- [file-extensions-and-execution](../concepts/file-extensions-and-execution.md)
+- [MSSQL](../../CLI-tools/windows/MSSQL.md)
+- [powercat](../../CLI-tools/windows/powercat.md)
+- [Test-NetConnection](../../CLI-tools/windows/Test-NetConnection.md)

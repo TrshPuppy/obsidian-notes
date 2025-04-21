@@ -1,3 +1,8 @@
+---
+aliases:
+  - Linux
+  - linux
+---
 
 # Linux
 All of my notes pertaining to the Linux operating system.
