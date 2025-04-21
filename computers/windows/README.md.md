@@ -1,0 +1,19 @@
+
+# Windows
+All of my notes pertaining to the Windows operating system.
+## Table of Contents
+(may not be fully updated, depends on how tired of doing this I get...)
+### [Active Directory](active-directory/active-directory.md)
+- [active-directory](active-directory/active-directory.md)
+- [ADCS](active-directory/ADCS.md)
+- [domain-controller](active-directory/domain-controller.md)
+- [setspn](active-directory/setspn.md)
+- [WPAD](active-directory/WPAD.md)
+### Others
+- [enumeration](enumeration.md)
+- [powershell](powershell.md)
+- [registry](registry.md)
+## Other places mentioned
+(not in this directory)
+- [windows-port-scanning](../../OSCP/enum-and-info-gathering/active/windows-port-scanning.md)
+- [abusing-library-files](../../OSCP/client-side-attacks/abusing-library-files.md)
