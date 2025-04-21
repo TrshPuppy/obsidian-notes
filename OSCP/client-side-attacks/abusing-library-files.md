@@ -147,6 +147,7 @@ This tag, and its child tag `<folderType>`, determine the *columns and details* 
 | Games Folder     | {b689b0d0-76d3-4cbb-87f7-585d0e0ce070} |
 | Music Folder     | {94d6ddcc-4a68-4175-a374-bd584a510b78} |
 | Contacts         | {DE2B70EC-9BF7-4A93-BD3D-243F7881D492} |
+
 Let's use the Documents Folder GUID for ours:
 ```xml
 ...
