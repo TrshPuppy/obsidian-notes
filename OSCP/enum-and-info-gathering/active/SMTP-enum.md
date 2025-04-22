@@ -19,7 +19,7 @@ In this command, we're using [netcat](../../../cybersecurity/TTPs/exploitation/t
 
 The `VRFY idontextist` command triggers an error response from the server, indicating `idontexist` is not a valid recipient on the server.
 ### `EXPN`
-[`EXPN`](../../../networking/protocols/SMTP.md#`EXPN`) can be used to ask the server is a specific mailbox exists on a server. What's useful about this command is that the server will answer *with the entire email address* of the requested user:
+[`EXPN`](../../../networking/protocols/SMTP.md#`EXPN`) can be used to ask the server if a specific mailbox exists on a server. What's useful about this command is that the server will answer *with the entire email address* of the requested user:
 ```bash
 kali@kali:~$ nc -nv 192.168.50.8 25
 (UNKNOWN) [192.168.50.8] 25 (smtp) open
