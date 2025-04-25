@@ -1,3 +1,10 @@
+---
+aliases:
+  - Virus Total
+---
+# Virus Total
+Init.
 
->[!links]
->https://www.virustotal.com/gui/home/upload
+
+> [!Resources]
+> - [Virus Total Website](https://www.virustotal.com/gui/home/upload)

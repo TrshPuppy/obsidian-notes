@@ -8,6 +8,10 @@ aliases:
 All of my notes pertaining to the Windows operating system.
 ## Table of Contents
 (may not be fully updated, depends on how tired of doing this I get...)
+### File System
+- [file-system-drivers](file-system/file-system-drivers.md)
+- [filter-drivers](file-system/filter-drivers.md)
+- [filter-manager](file-system/filter-manager.md)
 ### [Active Directory](active-directory/active-directory.md)
 - [active-directory](active-directory/active-directory.md)
 - [ADCS](active-directory/ADCS.md)
@@ -18,6 +22,8 @@ All of my notes pertaining to the Windows operating system.
 - [enumeration](enumeration.md)
 - [powershell](powershell.md)
 - [registry](registry.md)
+- [LNK](LNK.md)
+- [PE](PE.md)
 ## Other places mentioned
 (not in this directory)
 - [windows-port-scanning](../../OSCP/enum-and-info-gathering/active/windows-port-scanning.md)

@@ -10,4 +10,4 @@ File system filter drivers ("minifilters") *intercept requests* made to file sys
 The [filter manager](filter-manager.md) (`FltMgr.sys`) is used to *develop filters*. It provides a framework for file I/O operations so developers don't have to worry about those complexities.
 
 > [!Resources]
-> [Microsoft: Filter Drivers](https://learn.microsoft.com/en-us/windows-hardware/drivers/ifs/#file-system-filter-drivers)
+> - [Microsoft: Filter Drivers](https://learn.microsoft.com/en-us/windows-hardware/drivers/ifs/#file-system-filter-drivers)
