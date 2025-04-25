@@ -1,3 +1,8 @@
+---
+aliases:
+  - hash
+  - hashes
+---
 
 # Hashing
 Hashing is the process of creating a hash-value by putting data through an algorithm. Every piece of data produces a unique hash (with some overlap), and the hash becomes a unique fingerprint for that data.

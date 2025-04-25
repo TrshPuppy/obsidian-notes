@@ -1,6 +1,6 @@
-
+INIT.
 # Assembly Code
-Init.
+Assembly code is a low level programming language which sits between source code (written by humans) and machine code. It is slightly more human readable than machine code which is just binary instructions (`1`s and `0`s). 
 > [!Note]
 > 1. The following notes are fragmented, bc I'm completing parts as I need them, i.e. these notes are not complete.
 > 2. These notes are based on *x86 architecure*.

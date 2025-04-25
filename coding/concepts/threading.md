@@ -1,3 +1,8 @@
+---
+aliases:
+  - thread
+  - threads
+---
 
 # Threading
 Threads are the *smallest executable subunits* which make up a [process](/computers/concepts/process.md). Processes can have multiple threads and one main thread. They're most often used to *take full advantage* of the [CPU](../../computers/concepts/CPU.md) and avoid idle CPU time.

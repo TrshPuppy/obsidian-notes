@@ -2,6 +2,7 @@
 ## This is a public repo of my notes using [Obsidian](https://obsidian.md/).
 > [!NOTE]
 > Any note page with the word `Init.` at the top signifies notes which I plan to fill in later, or which I've started writing, but haven't finished.
+> Additionally, you will see an `aliases` box at the top of some note pages. This is an Obsidian feature that allows for quick and easy cross-linking of other note pages within the vault (repo/ directory).
 ### Viewing this Repo:
 The best way to view this collection of notes is with the Obsidian desktop app. The app shows connections, links between topics, and other formatting which can't be appreciated in the markdown alone.
 

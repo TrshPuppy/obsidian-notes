@@ -1,3 +1,8 @@
+---
+aliases:
+  - IP address
+  - IP
+---
 
 # Internet Protocol Addresses
 An IP Address is 4 binary octets separated by periods. IP addresses are used in [Layer 3](/networking/OSI/3-network/network-layer.md) of the [OSI Reference Model](/networking/OSI/OSI-reference-model.md) to transmit data between devices on a network.

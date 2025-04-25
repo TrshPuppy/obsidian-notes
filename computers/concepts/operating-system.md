@@ -1,3 +1,7 @@
+---
+aliases:
+  - OS
+---
 
 # Operating System
 Init.
