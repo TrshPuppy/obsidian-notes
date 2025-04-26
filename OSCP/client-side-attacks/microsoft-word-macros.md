@@ -156,3 +156,5 @@ PS C:\Users\offsec\Documents>
 > - [Microsoft: Document_Open](https://learn.microsoft.com/en-us/office/vba/api/word.document.open)
 > - [Microsoft Learn: ActiveX Objects](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/automat/activex-objects)
 > - [Matt's DFIR blog: Download Cradles](https://mgreen27.github.io/posts/2018/downloadcradle/)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
+ 

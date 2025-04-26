@@ -87,3 +87,4 @@ client01\offsec
 > - [Shellter](https://www.shellterproject.com/homepage/)
 > - [wine](https://www.winehq.org/) 
 > - [Shellter: An important tip for Shellter Usage](https://www.shellterproject.com/an-important-tip-for-shellter-usage/)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.

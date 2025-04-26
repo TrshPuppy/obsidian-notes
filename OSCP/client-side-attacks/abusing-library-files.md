@@ -292,3 +292,4 @@ Once the victim downloads the library file (disguised as a regular Documents fol
 > - [Microsoft: Windows Libraries](https://learn.microsoft.com/en-us/windows/client-management/client-tools/windows-libraries)
 > - [ForensicsWiki: Shortcut files](https://web.archive.org/web/20220519184752/https://forensicswiki.xyz/page/LNK) 
 > - [Microsoft: Library Description Schema](https://learn.microsoft.com/en-us/windows/win32/shell/library-schema-entry)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.

@@ -147,3 +147,6 @@ hostname
 client01
 ```
 If we get the reverse shell, that means *we successfully evaded the AV system on the VM*. 
+
+> [!Resources]
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.

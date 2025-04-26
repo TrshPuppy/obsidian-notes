@@ -51,3 +51,4 @@ We didn't even talk about the most obvious trick: looking at the [TXT-record](..
 
 > [!Resources]
 > - PEN 200 (I guess)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
