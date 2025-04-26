@@ -1,3 +1,9 @@
+---
+aliases:
+  - database
+  - databases
+---
+
 # Database Management Systems
 Create, define, host, and manage databases.
 ## Essential Features:
