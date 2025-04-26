@@ -30,3 +30,5 @@ Additionally, *nothing can be decrypted w/ the server's private key* since every
 > [!Resources]
 > - [Professor Messer](https://www.youtube.com/watch?v=h-9QKN4a7Oo&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=94)
 
+> [!Related]
+> - [OSCP notes on Encryption](../../../OSCP/password-attacks/README.md)

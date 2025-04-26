@@ -1,6 +1,5 @@
 ---
-aliases:
-  - encryption
+aliases: []
 ---
 # Encryption Overview
-INIT
+![My Encryption notes from OSCP](../../../OSCP/password-attacks/README.md)

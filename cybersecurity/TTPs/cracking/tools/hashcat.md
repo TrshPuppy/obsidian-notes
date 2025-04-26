@@ -74,6 +74,36 @@ hashcat (v6.2.6) starting in help mode
 Usage: hashcat [options]... hash|hashfile|hccapxfile [dictionary|mask|directory]...
 ```
 **NOTE:** Put the hash you want to crack into a file to give to hashcat.
+### Benchmarking
+You can benchmark hashcats [Hash Rate](../../../../OSCP/password-attacks/README.md#Hash%20Rate) by using benchmarking mode with `-b`. The benchmark will be based on whatever hardware is available in the system. In the output example below, the only available hardware is the Intel *[CPU](../../../../computers/concepts/CPU.md)*. If there is a GPU present, hashcat would base the values on that.
+```bash
+hashcat -b
+hashcat (v6.2.5) starting in benchmark mode
+...
+* Device #1: pthread-Intel(R) Core(TM) i9-10885H CPU @ 2.40GHz, 1545/3154 MB (512 MB allocatable), 4MCU
+
+Benchmark relevant options:
+===========================
+* --optimized-kernel-enable
+
+-------------------
+* Hash-Mode 0 (MD5)
+-------------------
+
+Speed.#1.........:   450.8 MH/s (2.19ms) @ Accel:256 Loops:1024 Thr:1 Vec:8
+
+----------------------
+* Hash-Mode 100 (SHA1)
+----------------------
+
+Speed.#1.........:   298.3 MH/s (3.22ms) @ Accel:256 Loops:1024 Thr:1 Vec:8
+
+---------------------------
+* Hash-Mode 1400 (SHA2-256)
+---------------------------
+
+Speed.#1.........:   134.2 MH/s (7.63ms) @ Accel:256 Loops:1024 Thr:1 Vec:8
+```
 ### Example (w/ MD5)
 ```bash
 hashcat -m 0 hashes /usr/share/wordlists/rockyou.txt

@@ -3,7 +3,6 @@ aliases:
   - Windows
   - windows
 ---
-
 # Windows
 All of my notes pertaining to the Windows operating system.
 ## Table of Contents

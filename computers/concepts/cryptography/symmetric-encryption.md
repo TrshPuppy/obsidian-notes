@@ -14,3 +14,6 @@ W/ symmetric encryption, there is less overhead (than with asymmetric) and less 
 
 > [!Resources]
 > - [Professor Messer](https://www.youtube.com/watch?v=6uRI4o5EUkI&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=92)
+
+> [!Related]
+> - [OSCP notes on Encryption](../../../OSCP/password-attacks/README.md)
