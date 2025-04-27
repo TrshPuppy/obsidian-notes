@@ -23,6 +23,7 @@ All of my notes pertaining to the Windows operating system.
 - [registry](registry.md)
 - [LNK](LNK.md)
 - [PE](PE.md)
+- the [SAM](SAM.md)
 ## Other places mentioned
 (not in this directory)
 - [windows-port-scanning](../../OSCP/enum-and-info-gathering/active/windows-port-scanning.md)

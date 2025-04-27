@@ -2,7 +2,7 @@
 # Cracking NTLM Hashes
 On [Windows](../../computers/windows/README.md) machines passwords are [hashed](../../computers/concepts/cryptography/hashing.md) and stored in the [Security Account Manager](../../computers/windows/SAM.md)(SAM). Before being stored, passwords are hashed using [NTLM](../../networking/protocols/NTLM.md). Unfortunately, NTLM hashes are pretty insecure and an 8 character password can be *cracked within 2 hours*.
 ## NTLM Security
-NTLM was created to replace the original protocol called LM. LM used DES which is known to be a very week algorithm. Additionally, LM was *case insensitive* which decreased the [keyspace](OSCP/password-attacks/README.md#keyspace) making it easier to crack. 
+NTLM was created to replace the original protocol called LM. LM used DES which is known to be a very week algorithm. Additionally, LM was *case insensitive* which decreased the [Keyspace](password-cracking.md#Keyspace) making it easier to crack. 
 
 NTLM hashes are more secure because they are *case sensitive* and use the *MD4* hashing algorithm. However, *they are not salted* (salting is when random bits are added to the beginning of a password before its hashed). Salting a password prevents it from being [brute-forced](../../cybersecurity/TTPs/cracking/brute-force.md) using a [rainbow-table](../../cybersecurity/TTPs/exploitation/rainbow-table.md).
 ## Getting the Hash
