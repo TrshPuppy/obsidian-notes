@@ -1,6 +1,6 @@
 
 # SecLists
-[SecLists](https://github.com/danielmiessler/SecLists) is a collection of wordlists which can be used in multiple steps of the kill chain. It includes lists which can be used for [dir busting](/cybersecurity/TTPs/recon/directory-enumeration.md), [password cracking](/cybersecurity/TTPs/exploitation/cracking/password-cracking.md), [subdomain enumeration](/PNPT/PEH/recon/hunting-subdomains.md), [credential stuffing](/PNPT/PEH/exploit-basics/credential-stuffing.md) etc..
+[SecLists](https://github.com/danielmiessler/SecLists) is a collection of wordlists which can be used in multiple steps of the kill chain. It includes lists which can be used for [dir busting](/cybersecurity/TTPs/recon/directory-enumeration.md), [password cracking](../../../cracking/password-cracking.md), [subdomain enumeration](/PNPT/PEH/recon/hunting-subdomains.md), [credential stuffing](/PNPT/PEH/exploit-basics/credential-stuffing.md) etc..
 ## RAFT & Robots Disallowed
 [RAFT](https://code.google.com/archive/p/raft/) was a tool built in 2011 which created wordlists using the `robot.txt` file of websites (which tell spiders where *not* to index for a site.
 

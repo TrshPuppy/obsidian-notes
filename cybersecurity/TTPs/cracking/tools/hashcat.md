@@ -1,6 +1,6 @@
 
 # Hashcat
-A CLI tool which is able to crack [hashes](/computers/concepts/cryptography/hashing.md) of various algorithms. It works by using techniques like [dictionary attacks](/cybersecurity/TTPs/exploitation/cracking/dictionary-attack.md), [combinator attacks](/cybersecurity/TTPs/cracking/compbinator-attack.md), [brute forcing](/cybersecurity/TTPs/cracking/brute-force.md), etc. against a provided hash.
+A CLI tool which is able to crack [hashes](/computers/concepts/cryptography/hashing.md) of various algorithms. It works by using techniques like [dictionary attacks](../dictionary-attack.md), [combinator attacks](/cybersecurity/TTPs/cracking/compbinator-attack.md), [brute forcing](/cybersecurity/TTPs/cracking/brute-force.md), etc. against a provided hash.
 
 **Hashcat uses your CPU to crack the hash**: so it can take a long time + may be too much work for your hardware depending on your system.
 ## Example (w/ MD5 hash)
