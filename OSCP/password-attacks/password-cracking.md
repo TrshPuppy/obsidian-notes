@@ -66,3 +66,4 @@ python3 -c "print((8**10)/134200000)"
 
 > [!Resources]
 > - [Hypr: Key Space](https://www.hypr.com/security-encyclopedia/key-space)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.

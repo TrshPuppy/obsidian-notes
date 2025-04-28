@@ -45,3 +45,6 @@ Not NTLMv1 and NTLMv2 use the MD4 hashing algorithm which is *considered obsolet
 
 >[!Resources]
 > - [Redlings NTLM Authentication](https://www.redlings.com/en/guide/ntlm-windows-new-technology-lan-manager) 
+
+> [!Related]
+> - [Cracking NTLM Hashes](../../OSCP/password-attacks/cracking-NTLM.md)

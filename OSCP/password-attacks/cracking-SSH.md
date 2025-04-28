@@ -69,3 +69,4 @@ There are a bunch of other rad word manipulations you can do with JtR rulesets. 
 > - [ssh2john](https://github.com/openwall/john/blob/bleeding-jumbo/run/ssh2john.py)
 > - [Openwall: JtR Rules Syntax](https://www.openwall.com/john/doc/RULES.shtml)
 > - [Miloser Dov: JtR Rulesets](https://miloserdov.org/?p=5477#54)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
