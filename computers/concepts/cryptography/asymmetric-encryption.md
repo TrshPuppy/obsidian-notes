@@ -8,7 +8,9 @@ This key is literally public and is usually unique to an individual or entity. U
 The private key is the *only key which can decrypt data encrypted by the public key* (usually, it can go the opposite way). The private key is *related to the public key* but **cannot be derived from it**.
 ### Creating the keys
 In general, the process for generating both keys looks something like this:
+
 ![]()![](../../computers-pics/assymetric-encryption-1.png.png)
+
 A large, random number is generated, which then goes through a program which uses it to generate the two keys.
 ## Encryption Process
 ![](../../computers-pics/asymmetric-encryption-2.png)If Bob wants to send an encrypted message to Alice, he needs to encrypt the plaintext message *using Alice's public key*. Then, when the ciphertext reaches Alice, she can decrypt it *using her private key* (which is the only way the text can be decrypted).
@@ -30,3 +32,5 @@ Additionally, *nothing can be decrypted w/ the server's private key* since every
 > [!Resources]
 > - [Professor Messer](https://www.youtube.com/watch?v=h-9QKN4a7Oo&list=PLG49S3nxzAnkL2ulFS3132mOVKuzzBxA8&index=94)
 
+> [!Related]
+> - [OSCP notes on Encryption](../../../OSCP/password-attacks/README.md)

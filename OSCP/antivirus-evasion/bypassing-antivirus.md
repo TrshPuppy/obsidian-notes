@@ -36,3 +36,4 @@ Hooking is *often used by rootkits*.
 > - [UPX](https://upx.github.io/)
 > - [Andrea Fortuna: Reflective DLL Injection](https://andreafortuna.org//2017/12/08/what-is-reflective-dll-injection-and-how-can-be-detected/) 
 > - [I RedTeam: Process Hallowing](https://www.ired.team/offensive-security/code-injection-process-injection/process-hollowing-and-pe-image-relocations)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.

@@ -15,3 +15,6 @@ Some OS's, especially [Windows](../../computers/windows/README.md) will automati
 Before starting *make sure the antivirus software is actually working*. You can do this by generating a [metasploit](../../cybersecurity/TTPs/exploitation/tools/metasploit.md) payload/ [PE](../../computers/windows/PE.md) and then transferring it into the VM. If the AV system detects it, you should immediately be met with a warning or notification.
 
 Additionally, it's difficult to develop malware which evades *every kind of AV system*. So, to cut down on time and effort, develop your malware *specific to your target/client's environment* and AV implementation.
+
+> [!Resources]
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
