@@ -1,2 +1,0 @@
-
-# Situational Awareness
