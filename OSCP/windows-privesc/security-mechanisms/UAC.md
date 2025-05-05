@@ -11,3 +11,4 @@ UAC also assigns [Integrity Levels](MIC.md) to apps and processes, as well as "s
 > [!Resources]
 > - [Microsoft: UAC](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/)
 > - [Microsoft: How UAC works](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/how-it-works)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.

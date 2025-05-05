@@ -30,8 +30,6 @@ S-1-5-18                      Local System
 S-1-5-domainidentifier-500    Administrator
 ```
 
-
-
 > [!Resources]
 > - [Microsoft: SID](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-identifiers)
 > - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
