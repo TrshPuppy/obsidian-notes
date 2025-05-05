@@ -23,7 +23,7 @@ This repo is for my organization and reference but can be viewed by the public. 
 ## P.S. PNPT & OSCP Study Guides
 The notes I took while studying for the PNPT and OSCP are in their respective directories (see [PNPT](PNPT/README.md) and [OSCP](OSCP/README.md)). Again, because these notes are originally from my Obsidian vault, some links may be broken (in the PNPT repo specifically)!
 ## P.P.S. Contributing
-If you find flaws and or misinformation in topic notes you'd like me to correct, feel free to make a branch w/ your changes and submit a pull request so I can review them! I want these notes to be accurate and because I'm learning so much so quickly, I'm sure ther are notes which need fixing!
+If you find flaws and/or misinformation in topic notes you'd like me to correct, feel free to make a branch w/ your changes and submit a pull request so I can review them! I want these notes to be accurate and because I'm learning so much so quickly, I'm sure there are notes which need fixing!
 ## P.P.P.S. Pictures
 Each directory has a `/<dir-name>-pics` sub-directory which holds all of the images embedded into notes in the directory. I've named them based on the notepage they're embedded in incremented by 1 for each image (in the same note page). For instance, my notes on [buffer overflow](cybersecurity/TTPs/exploitation/binary-exploitation/buffer-overflow.md) include 13 pictures. So the [9th picture](cybersecurity/cybersecurity-pics/buffer-overflow-9.png) is saved as `/cybersecurity/cybersecurity-pics/buffer-overflow-9.png`.
 
