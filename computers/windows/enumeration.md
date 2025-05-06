@@ -277,4 +277,4 @@ Get-Acl C:/
 ```
 
 > [!Related]
-> - [My notes on enumerating Windows from OSCP](../../OSCP/windows-privesc/enumeration.md)
+> - [My notes on enumerating Windows from OSCP](../../OSCP/windows-privesc/enumeration/enumeration.md)
