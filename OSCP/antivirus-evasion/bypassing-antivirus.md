@@ -17,7 +17,7 @@ Antivirus evasion usually requires some combination of all of these, as well as 
 ## In-Memory Evasion
 In-memory invasion, or "In-Memory Injections", or "[PE](../../computers/windows/PE.md) Injection" techniques are popular for evading AV systems, especially on [Windows](../../computers/windows/README.md) products. In-memory evasion focuses on *manipulating [Volatile Memory](../../computers/memory/memory.md#Volatile%20Memory)* instead of writing to disk. 
 
-Most in-memory techniques rely on low-level coding languages like [C](../../coding/languages/C.md) and [C++](../../coding/languages/CPP.md). But here, we'll be discussing techniques using [powershell](../../computers/windows/powershell.md).
+Most in-memory techniques rely on low-level coding languages like [C](../../coding/languages/C.md) and [C++](../../coding/languages/CPP.md). But here, we'll be discussing techniques using [powershell](../../coding/languages/powershell.md).
 ### Remote Process Memory Injection
 In this technique the malware PE (portable executable) injects itself into another *valid PE* which is not malicious. The most common way to do this is through the Windows API. For example, you could use the `OpenProcess` function to obtain a valid `HANDLE` for a target process. With the `HANDLE`, you could then *allocate memory* in that process's context by calling a Windows API like `VirtualAllocEx`.  
 

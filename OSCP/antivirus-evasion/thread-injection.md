@@ -1,6 +1,6 @@
 
 # AV Evasion via Thread Injection
-You can use a [powershell](../../computers/windows/powershell.md) script to interact with the [Windows](../../computers/windows/README.md) API and implement an [In-Memory Injection](bypassing-antivirus.md#In-Memory%20Evasion)script. The benefit of using a script over a [PE](../../computers/windows/PE.md) is that it's *more difficult* for AV systems to detect a malicious script, since it's execution is *from within an interpreter* (the script itself is not executable). There are some AV products which handle malicious script detection, but not many.
+You can use a [powershell](../../coding/languages/powershell.md) script to interact with the [Windows](../../computers/windows/README.md) API and implement an [In-Memory Injection](bypassing-antivirus.md#In-Memory%20Evasion)script. The benefit of using a script over a [PE](../../computers/windows/PE.md) is that it's *more difficult* for AV systems to detect a malicious script, since it's execution is *from within an interpreter* (the script itself is not executable). There are some AV products which handle malicious script detection, but not many.
 ## PowerShell Memory Injection
 The following script carries out a *well known* version of memory injection via powershell:
 ```powershell

@@ -513,7 +513,7 @@ www
 info
 mail
 ```
-We're going to need a [powershell](../../../computers/windows/powershell.md) script for this unfortunately...
+We're going to need a [powershell](../../../coding/languages/powershell.md) script for this unfortunately...
 ```powershell
 # Define the domain and wordlist file
 $domain = "megacorptwo.com"

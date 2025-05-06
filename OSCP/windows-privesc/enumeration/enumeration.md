@@ -54,7 +54,7 @@ From this listing we can see that one of the groups `dave` belongs to is the `he
 
 The remaining groups are *standard* and non-privileged, like `Everyone` and `BUILTIN\Users`. 
 ### `net user` & `Get-LocalUser`
-We can use the `net` command with the `user` module to enumerate other users and groups present on the system. We can also use the `Get-LocalUser` cmdlet (from [powershell](../../../computers/windows/powershell.md)) to get a list of *all local users* on the system:
+We can use the `net` command with the `user` module to enumerate other users and groups present on the system. We can also use the `Get-LocalUser` cmdlet (from [powershell](../../../coding/languages/powershell.md)) to get a list of *all local users* on the system:
 ```powershell
 PS C:\Users\dave> Get-LocalUser
 Get-LocalUser

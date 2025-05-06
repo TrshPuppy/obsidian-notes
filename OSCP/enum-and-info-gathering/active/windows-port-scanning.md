@@ -15,7 +15,7 @@ TcpTestSucceeded : True
 ```
 The value returned in the `TcpTestSucceeded` field tells us whether the port is open (in this case it is). 
 ### Scripting
-If we want to test more ports using `Test-NetConnection` we can embed it into a [powershell](../../../computers/windows/powershell.md) script like this:
+If we want to test more ports using `Test-NetConnection` we can embed it into a [powershell](../../../coding/languages/powershell.md) script like this:
 ```powershell
 PS C:\Users\student> 1..1024 | % {echo ((New-Object Net.Sockets.TcpClient).Connect("192.168.50.151", $_)) "TCP port $_ is open"} 2>$null
 TCP port 88 is open

@@ -9,7 +9,7 @@ First, we need to install the [`peass`](https://www.kali.org/tools/peass-ng/)pac
 python3 -m http.server 80
 Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
 ```
-Once that's up and listening for connections, we can user [powershell](../../../computers/windows/powershell.md) to access it from the target box we compromised. After starting a PS session, we can use `iwr` with the `-uri` flag set to the address of our python web server. `iwr` is a cmdlet:
+Once that's up and listening for connections, we can user [powershell](../../../coding/languages/powershell.md) to access it from the target box we compromised. After starting a PS session, we can use `iwr` with the `-uri` flag set to the address of our python web server. `iwr` is a cmdlet:
 ```powershell
 C:\Users\dave> powershell
 powershell
@@ -117,3 +117,4 @@ Again, the output doesn't include `asdf.txt` which we found in `dave`'s Desktop 
 > [!Resources]
 > - [_winPEAS_](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)
 > - [**peass**](https://www.kali.org/tools/peass-ng/) package
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.

@@ -1,7 +1,7 @@
 
 # PowerShell Download Cradles
 INIT
-[Powershell](../../../computers/windows/powershell.md) download cradles are used to download and execute code *directly in memory* without it being written to disk. This helps them *bypass security* mechanisms. They're usually single-line commands and are commonly found in malware. They're typically used to implement stages of an exploit. For example, they may be used to download and run code to infiltrate additional malicious code onto a system after initial compromise. Or they might be used to set up persistence.
+[Powershell](../../../coding/languages/powershell.md) download cradles are used to download and execute code *directly in memory* without it being written to disk. This helps them *bypass security* mechanisms. They're usually single-line commands and are commonly found in malware. They're typically used to implement stages of an exploit. For example, they may be used to download and run code to infiltrate additional malicious code onto a system after initial compromise. Or they might be used to set up persistence.
 ## Common Cmdlets
 These cmdlets are commonly used in PS download cradles:
 - `Invoke-WebRequest`:Used to retrieve content from a web page

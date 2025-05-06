@@ -19,7 +19,7 @@ All of my notes pertaining to the Windows operating system.
 - [WPAD](active-directory/WPAD.md)
 ### Others
 - [enumeration](enumeration.md)
-- [powershell](powershell.md)
+- [powershell](../../coding/languages/powershell.md)
 - [registry](registry.md)
 - [LNK](LNK.md)
 - [PE](PE.md)

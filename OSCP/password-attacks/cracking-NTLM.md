@@ -8,7 +8,7 @@ NTLM hashes are more secure because they are *case sensitive* and use the *MD4* 
 ## Getting the Hash
 The SAM database file is located at `C:\Windows\system32\config\sam` and its contents can't just be copy pasted because Windows keeps a *file system lock* on it. Instead, we can use [Mimikatz](https://github.com/gentilkiwi/mimikatz).
 ### Finding Users to Impersonate
-Before we use mimikatz, lets do some recon and find a user to impersonate. We can use `Get-LocalUser` in [powershell](../../computers/windows/powershell.md) to see a list of all of the users on the system:
+Before we use mimikatz, lets do some recon and find a user to impersonate. We can use `Get-LocalUser` in [powershell](../../coding/languages/powershell.md) to see a list of all of the users on the system:
 ```powershell
 PS C:\Users\offsec> Get-LocalUser
 

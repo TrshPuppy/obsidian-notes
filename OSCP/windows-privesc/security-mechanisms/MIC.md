@@ -16,7 +16,7 @@ Restricted processes. Most often used for *security sandboxing* (like for web br
 ### Untrusted
 This is the lowest integrity level and is assigned to *highly restricted* processes which have been deemed to potentially pose a security risk to the system.
 ## Process Explorer
-To check a process' integrity level, we can use the [Process Explorer](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer). The following image shows two [powershell](../../../computers/windows/powershell.md) processes listed in Process Explorer and their corresponding integrity levels:
+To check a process' integrity level, we can use the [Process Explorer](https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer). The following image shows two [powershell](../../../coding/languages/powershell.md) processes listed in Process Explorer and their corresponding integrity levels:
 ![](../../oscp-pics/MIC-1.png)
 `Medium` likely indicates the process was started by a standard user. `High` likely indicates it was started by an `Administive` user. 
 

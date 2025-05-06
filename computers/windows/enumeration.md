@@ -95,7 +95,7 @@ Guest          False   Built-in account for guest access to the computer/domain
 ```
 ## Groups
 ### `net localgroup`
-Is one command we can use similar to the [powershell](powershell.md) cmdlet `Get-LocalGroup`.
+Is one command we can use similar to the [powershell](../../coding/languages/powershell.md) cmdlet `Get-LocalGroup`.
 ### `Get-LocalGroup`
 ```PowerShell
 Get-localgroup
