@@ -1,3 +1,7 @@
+---
+aliases:
+  - PowerShell
+---
 
 # Windows PowerShell
 PowerShell is the Windows scripting language environment, built on the [.NET](/computers/windows/.NET.md) framework. Because it is build using .NET it can execute .NET functions directly from the shell.
