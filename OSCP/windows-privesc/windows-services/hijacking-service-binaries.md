@@ -44,6 +44,7 @@ The [icacls utility](https://docs.microsoft.com/en-us/windows-server/administrat
 | RX   | Read and execute access |
 | R    | Read-only access        |
 | W    | Write-only access       |
+
 As an example, lets run the `icacls` tool on the Apache `httpd.exe` binary:
 ```powershell
 PS C:\Users\dave> icacls "C:\xampp\apache\bin\httpd.exe"
