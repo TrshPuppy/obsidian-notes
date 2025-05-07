@@ -163,7 +163,6 @@ The output shows that our binary successfully created the `dave2` admin account.
 ## Automated Options
 Check out the [PowerUp.ps1](powerUp-ps1.md) notes.
 
-
 > [!Resources]
 > - [**win32_service**](https://docs.microsoft.com/en-us/windows/win32/wmisdk/wmi-classes)
 > - [icacls utility](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/icacls)
