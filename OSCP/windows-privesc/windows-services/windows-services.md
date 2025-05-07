@@ -1,3 +1,7 @@
+---
+aliases:
+  - Windows Services
+---
 
 # Windows Services Overview
 A [_Windows Service_](https://docs.microsoft.com/en-us/dotnet/framework/windows-services/introduction-to-windows-service-applications) is a background executable which is long-running and managed by the [_Service Control Manager_](https://docs.microsoft.com/en-us/windows/win32/services/service-control-manager). Windows Services are similar to daemons on [Linux](../../../computers/linux/README.md) systems. You can use [powershell](../../../coding/languages/powershell.md), Services "snap-in", or `sc.exe` (command line tool) to manage them.

@@ -1,3 +1,7 @@
+---
+aliases:
+  - Service Binary Hijacking
+---
 
 # Hijacking Service Binaries
 Each [windows service](windows-services.md) *has an associated binary* which executes when the service is started or transitioned to a running state. 
