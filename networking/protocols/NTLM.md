@@ -23,7 +23,7 @@ NTLM is vulnerable to brute-force attacks b/c the hashing algorithm (DES) does n
 1. xxxxxxxxx (password)
 2. sha256([salt]password[pepper])
 
-B/c there is no salting of the hashed passwords an attacker can use a [rainbow table](/cybersecurity/TTPs/exploitation/rainbow-table.md) to brute force the hash using pre-calculated hashes of standard passwords. This method is *less effective* on passwords which are more complex and longer (> 15 characters).
+B/c there is no salting of the hashed passwords an attacker can use a [rainbow table](../../cybersecurity/TTPs/cracking/rainbow-table.md) to brute force the hash using pre-calculated hashes of standard passwords. This method is *less effective* on passwords which are more complex and longer (> 15 characters).
 ### NTLM Relay Attack
 Since the user's client has no way or verifying the identity of the server, an attacker can perform a [Man in the Middle (MITM)](/cybersecurity/TTPs/exploitation/MITM.md) by pretending to be the server to the client, and the client to the server.
 ![](/networking/networking-pics/NTLM-2.png)

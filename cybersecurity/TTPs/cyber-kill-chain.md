@@ -130,7 +130,7 @@ This is also known as [DNS Tunneling](/cybersecurity/TTPs/C2/DNS-tunneling.md).
 ### Actions on Objective:
 This part of the cyber kill chain covers all the actions an attacker might take on a victim device once they've exploited it and gained persistent access.
 
-This can include several things like collecting user credentials, [privilege escalation](/cybersecurity/TTPs/actions-on-objective/privesc.md), lateral movement thru the network, collecting and exfiltrating data, internal recon, deleting backups/ logs/ shadow-copies to *cover their tracks*, overwrite/ corrupt data, etc..
+This can include several things like collecting user credentials, [privilege escalation](actions-on-objective/privesc/README.md), lateral movement thru the network, collecting and exfiltrating data, internal recon, deleting backups/ logs/ shadow-copies to *cover their tracks*, overwrite/ corrupt data, etc..
 
 > [!Resources]
 > - [TryHackMe: Cyber Kill Chain](https://tryhackme.com/room/cyberkillchainzmt)

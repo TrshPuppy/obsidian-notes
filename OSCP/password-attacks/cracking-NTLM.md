@@ -4,7 +4,7 @@ On [Windows](../../computers/windows/README.md) machines passwords are [hashed](
 ## NTLM Security
 NTLM was created to replace the original protocol called LM. LM used DES which is known to be a very week algorithm. Additionally, LM was *case insensitive* which decreased the [Keyspace](password-cracking.md#Keyspace) making it easier to crack. 
 
-NTLM hashes are more secure because they are *case sensitive* and use the *MD4* hashing algorithm. However, *they are not salted* (salting is when random bits are added to the beginning of a password before its hashed). Salting a password prevents it from being [brute-forced](../../cybersecurity/TTPs/cracking/brute-force.md) using a [rainbow-table](../../cybersecurity/TTPs/exploitation/rainbow-table.md).
+NTLM hashes are more secure because they are *case sensitive* and use the *MD4* hashing algorithm. However, *they are not salted* (salting is when random bits are added to the beginning of a password before its hashed). Salting a password prevents it from being [brute-forced](../../cybersecurity/TTPs/cracking/brute-force.md) using a [rainbow-table](../../cybersecurity/TTPs/cracking/rainbow-table.md).
 ## Getting the Hash
 The SAM database file is located at `C:\Windows\system32\config\sam` and its contents can't just be copy pasted because Windows keeps a *file system lock* on it. Instead, we can use [Mimikatz](https://github.com/gentilkiwi/mimikatz).
 ### Finding Users to Impersonate

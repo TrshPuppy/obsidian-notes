@@ -1,3 +1,0 @@
-
-# Privilege Escalation
-Init
