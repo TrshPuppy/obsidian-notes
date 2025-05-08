@@ -42,3 +42,4 @@ So, if `IpApplicationName` is set to the (unquoted) value `C:\My Folder\myExecut
 > [!Resources]
 > - [_Tenable: Unquoted service paths_](https://www.tenable.com/sc-report-templates/microsoft-windows-unquoted-service-path-vulnerability)
 > - [_CreateProcess_](https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
