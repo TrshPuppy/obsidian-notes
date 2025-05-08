@@ -4,7 +4,7 @@ Similar to my [PNPT](../PNPT/README.md) notes, this collection/ directory houses
 ### THIS REPO DOES NOT CONTAIN MATERIAL PRODUCED OR DISTRIBUTED BY OFFSEC
 Instead, these are my own notes which I created and use for my own learning and studying. If other outside references are used they will be linked appropriately.
 
-**HOWEVER** assume that any concepts or ideas which I don't reference sources for are sourced from my understanding of the PEN200 course material. As such, I can't verify their accuracy! :)
+**HOWEVER** assume any concepts or ideas I don't reference sources for are sourced from my understanding of the PEN200 course material. As such, I can't verify their accuracy! :)
 ### Some notes on use
 This is a sub directory of my personal notes in [Obsidian Desktop](https://obsidian.md/) so some of the links will not work because they are relative to the entire vault rather than just the OSCP directory. Sorry.
 
