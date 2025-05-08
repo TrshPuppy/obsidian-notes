@@ -1,3 +1,8 @@
+---
+aliases:
+  - port forwarding
+---
+
 INIT
 # Port Forwarding
 
