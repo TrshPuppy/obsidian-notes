@@ -47,13 +47,13 @@ Host <custom host name>
         HostName <IP>
         User root
         IdentityFile .ssh\SSH-Private.pem
-        ProxyJump natfuel_windows
+        ProxyJump target_windows
 ```
 ### SOCKS Proxy
 ```bash
 ssh -D 44444 <user>@<IP address>
 ```
-This creates a SOCKS server which you can connect to to create a SOCKS connection. For example, if I want to proxy all of my [burp-suite](../cybersecurity/TTPs/delivery/tools/burp-suite.md) traffic through a [proxy](../networking/design-structure/proxy.md) so it is sent from the IP address `1.2.3.4`, then the SSH command on my local machine would be:
+This creates a [SOCKS](../OSCP/port-redirection-SSH-tunneling/SSH-tunneling/dynamic-port-forwarding.md) server which you can connect to to create a SOCKS connection. For example, if I want to proxy all of my [burp-suite](../cybersecurity/TTPs/delivery/tools/burp-suite.md) traffic through a [proxy](../networking/design-structure/proxy.md) so it is sent from the IP address `1.2.3.4`, then the SSH command on my local machine would be:
 ```bash
 ssh -D 44444 root@1.2.3.4
 ```

@@ -1,6 +1,7 @@
 ---
 aliases:
   - port scanning
+  - port scan
 ---
 
 # Port Scanning Techniques
