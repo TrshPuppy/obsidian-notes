@@ -1,4 +1,9 @@
-
+---
+aliases:
+  - local port forwarding
+  - SSH local port forwarding
+  - local port forward
+---
 # SSH Local Port Forwarding
 Unlike regular [port forwarding](../../../networking/routing/port-forwarding.md) (where listening for and then forwarding the traffic from a port happens on the same host), in SSH port forwarding the packets being forwarded *are not forwarded by the same host*. 
 
@@ -6,7 +11,7 @@ Instead, an [SSH](../../../networking/protocols/SSH.md) connection is made betwe
 
 The SSH server then *forwards the packets to the specified [socket](../../../networking/OSI/3-network/socket.md).*
 ## Example Scenario
-Assume we have the same scenario as outlined in [port-forwarding-scenario](../linux-tools/port-forwarding-scenario.md), except this time, the `CONFLUENCE01` server we compromised *doesn't have [socat](../linux-tools/socat.md)*. Assume we also still found admin creds to `PGDATABASE01` via:
+Assume we have the same scenario as outlined in [port-forwarding-scenario](../linux-tools/port-forwarding-scenario.md), except this time, the `CONFLUENCE01` server we compromised *doesn't have [socat](../linux-tools/socat.md)* so we can't easily . Assume we also still found admin creds to `PGDATABASE01` via:
 ```bash
 cat /var/atlassian/application-data/confluence/confluence.cfg.xml
 <sian/application-data/confluence/confluence.cfg.xml   
@@ -29,11 +34,12 @@ cat /var/atlassian/application-data/confluence/confluence.cfg.xml
 We can use these creds to SSH into `PGDATABASE01` which is on the internal/[DMZ](../../../networking/design-structure/DMZ.md) [subnet](../../../PNPT/PEH/networking/subnetting.md). From the `PGDATABASE01` machine we find an [SMB](../../../networking/protocols/SMB.md) server with [TCP](../../../networking/protocols/TCP.md) port `445` open on a second internal subnet. So, the network topology we've discovered so far, and the connection to the SMB server we want to achieve, looks like this:
 ![](../../oscp-pics/SSH-local-port-forwarding-1.png)
 ## Enumerating `PGDATABASE01`
-To set up an SSH local port forward, we need to know the IP address and port we want our packets forwarded to. So the first step is to log in to `PGDATABASE01` and start our enumeration process:
+To set up an SSH local port forward, we need to know the IP address and port we want our packets forwarded to. So the first step is to log in to `PGDATABASE01` (from `CONFLUENCE01`) and start our enumeration process:
 ### SSH Into `PGDATABASE01`
 ```bash
 confluence@confluence01:/opt/atlassian/confluence/bin$ python3 -c 'import pty; pty.spawn("/bin/sh")'
 </bin$ python3 -c 'import pty; pty.spawn("/bin/sh")'
+
 $ ssh database_admin@10.4.50.215
 <sian/confluence/bin$ ssh database_admin@10.4.50.215   
 Could not create directory '/home/confluence/.ssh'.
@@ -113,6 +119,7 @@ nc: connect to 172.16.50.216 port 445 (tcp) failed: Connection refused
 Connection to 172.16.50.217 445 port [tcp/microsoft-ds] succeeded!
 nc: connect to 172.16.50.218 port 445 (tcp) timed out: Operation now in progress
 ...
+
 database_admin@pgdatabase01:~$ 
 ```
 Our script uses [netcat](../../../cybersecurity/TTPs/exploitation/tools/netcat.md) to sweep the entire [CIDR](../../../networking/routing/CIDR.md) block for live hosts with port `445` open. The `-z` flag checks for a listening port *without sending data*. The `-w` flag set to 1 ensures a *lower time-out threshold*, and `-v` is for verbosity.
@@ -124,7 +131,7 @@ Now that we've found our target SMB host and port, we want to enumerate it and b
 First, we need to create an SSH connection from `CON01` to `PGD01`. As part of this connection we can create the SSH local port forward. We want our connection to listen on port `4455` of the [WAN](../../../networking/design-structure/WAN.md) interface on `CON01`. This would make `CON01` the *SSH client*. 
 
 Any packets arriving to `4455` on `CON01` should then be forwarded through the SSH connection to `PGD01` (which would be the *SSH server* in this case). `PGD01` should then then forward any packets through the SSH connect from `CON01` to the *SMB host* (`172.16.50.217`).
-### OpenSSH
+### `ssh -L`
 OpenSSH can facilitate local port forwarding via its `-L` flag. The `-L` flag takes two sockets:
 1. the listening socket bound to the SSH client machine
 2. the destination socket

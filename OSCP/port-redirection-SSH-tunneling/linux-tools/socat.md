@@ -27,7 +27,7 @@ socat -ddd TCP-LISTEN:2345,fork TCP:10.4.50.215:5432
 - `fork`: fork the traffic *into a new subprocess* (prevent connection from dying after a single connection)
 - `TCP:10.4.50.215:5432`: (fork) the traffic to `PGDATABASE01` port `5432`
 ### Connecting from Kali
-Now that `socat` has created and the listening port on `CONFLUENCE01` and configured it to port forward to `PGDATABASE01`, we can use `psql` on our attacking box to establish a connection to the Postgres database (assume we have the password for the database after enumerating `CONFLUENCE01`):
+Now that `socat` has created the listening port on `CONFLUENCE01` and configured it to port forward to `PGDATABASE01`, we can use `psql` on our attacking box to establish a connection to the Postgres database (assume we have the password for the database after enumerating `CONFLUENCE01`):
 ```bash
 psql -h 192.168.50.63 -p 2345 -U postgres
 

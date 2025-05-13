@@ -8,6 +8,13 @@ Tunneling is the act of *encapsulating* one kind of data stream in another.  Pro
 SSH was designed *primarily as a tunneling protocol* meaning almost *any kind* of data can pass through an SSH connection. Because of its versatility, it's common to find SSH client services running on organizations' networks. Because it's so prevalent, it *blends into normal traffic* and, unless the network is heavily monitored, SSH traffic is unlikely to be seen as anomalous or malicious. 
 
 Another advantage for using SSH tunneling during a pen-test is the contents of the traffic *cannot be monitored easily*. 
+## SSH Tunneling/ Port Forwarding Techniques
+The notes in this directory cover:
+- Using SSH for [local port forwarding](local-port-forwarding.md)
+- Using SSH for [local dynamic port forwarding](dynamic-port-forwarding.md)
+- Using SSH for [remote port forwarding](remote-port-forwarding.md)
+- Using SSH for [remote dynamic port forwarding](remote-dynamic-port-forwarding.md)
+
 
 > [!Resources]
 > - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
