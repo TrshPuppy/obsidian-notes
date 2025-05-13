@@ -1,4 +1,8 @@
-
+---
+aliases:
+  - subnet
+  - subnets
+---
 # Subnetting
 Subnetting is an organizational technique used on networks to break them up into sub networks. Subnetting works by taking advantage of [CIDR Notation](/networking/routing/CIDR.md) to re-delegate bits in an IP Address to serve either the host or the network.
 ## Subnet Mask
