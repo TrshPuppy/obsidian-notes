@@ -243,12 +243,39 @@ tcp       LISTEN     0          4096                         *:8080             
 tcp       LISTEN     0          511                          *:80                         *:*
 ```
 YAY, thank *f_ck*.
+## Using the Tunnel
+We're going to use [SSH](../../networking/protocols/SSH.md)'s *[_ProxyCommand_](https://man.openbsd.org/ssh_config#ProxyCommand)* (instead of proxychains like we did in the [dynamic port forward](../port-redirection-SSH-tunneling/SSH-tunneling/dynamic-port-forwarding.md) scenario). `ProxyCommand` accepts a shell command which it uses to open *a proxy-enabled channel*. The `ProxyCommand` docs suggest using [netcat](../../cybersecurity/TTPs/exploitation/tools/netcat.md)'s `-X` flag, but the version of netcat which ships with Kali *doesn't support proxying*. We can use [nmap](../../CLI-tools/linux/remote/nmap.md)'s [_Ncat_](https://nmap.org/ncat/) tool instead. Ncat can be installed using `sudo apt install ncat`. 
+### Ncat
+Once Ncat is installed we can use it along with `ProxyCommand` to *SSH to `PGDATABASE01`*:
+```bash
+kali@kali:~$ ssh -o ProxyCommand='ncat --proxy-type socks5 --proxy 127.0.0.1:1080 %h %p' database_admin@10.4.50.215
+The authenticity of host '10.4.50.215 (<no hostip for proxy command>)' can't be established.
+ED25519 key fingerprint is SHA256:IGz427yqW3ALf9CKYWNmVctA/Z/emwMWWRG5qQP8JvQ.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '10.4.50.215' (ED25519) to the list of known hosts.
+database_admin@10.4.50.215's password:
+Welcome to Ubuntu 22.04 LTS (GNU/Linux 5.15.0-41-generic x86_64)
 
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
 
+0 updates can be applied immediately.
 
+Last login: Thu Jul 21 14:04:11 2022 from 192.168.97.19
+database_admin@pgbackup1:~$
+```
+- `-o ProxyCommand`: this tells `ssh` to use the proxy command configuration (following `ProxyCommand=`). You can also use a *configuration file* to do the same thing
+- `ncat --proxy-type socks5`: tell `ncat` to use a proxy configured for the [SOCKS](../port-redirection-SSH-tunneling/SSH-tunneling/dynamic-port-forwarding.md) protocol
+- `--proxy 127.0.0.1:1080`: this is the address and port number for the SOCKS port *the chisel client established for us* on the Kali machine
+- `%h`: this is the host value for the SSH command - (filled in automatically by SSH
+- `%p`: the port value for the SSH command - (filled in automatically by SSH)
 
 > [!Resources]
 > - [_Chisel_](https://github.com/jpillora/chisel)
 > - [Chisel Github releases page](https://github.com/jpillora/chisel/releases)
 > -  [_CVE-2022-26134_](https://confluence.atlassian.com/doc/confluence-security-advisory-2022-06-02-1130377146.html)
 > - [Golang GitHub issues about `glibc`](https://github.com/golang/go/issues/58550)
+> - [SSH _ProxyCommand_](https://man.openbsd.org/ssh_config#ProxyCommand)
+> - [_Ncat_](https://nmap.org/ncat/)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
