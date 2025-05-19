@@ -1,3 +1,7 @@
+---
+aliases:
+  - "`tcpdump`"
+---
 
 # tcpdump Command
 Init.
