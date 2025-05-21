@@ -102,3 +102,5 @@ An ANS is the final *source of information when resolving a domain name*. Once t
 > - Commands: [dig](/CLI-tools/dig.md), [whois](/CLI-tools/whois.md)
 > - Tools: [amass](../../cybersecurity/TTPs/recon/tools/dir-and-subdomain/amass.md)
 > - `port 53`
+> - [DNS tunneling](../../OSCP/tunneling/DNS-tunneling.md)
+> - [`dnsmasq`](../../OSCP/tunneling/DNS-tunneling.md#`dnsmasq`)
