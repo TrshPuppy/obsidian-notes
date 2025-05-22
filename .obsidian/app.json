@@ -4,5 +4,8 @@
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "vimMode": true,
-  "propertiesInDocument": "hidden"
+  "propertiesInDocument": "hidden",
+  "newFileLocation": "current",
+  "readableLineLength": false,
+  "strictLineBreaks": false
 }
