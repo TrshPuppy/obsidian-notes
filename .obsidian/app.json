@@ -3,5 +3,9 @@
   "spellcheck": true,
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
-  "vimMode": true
+  "vimMode": true,
+  "propertiesInDocument": "hidden",
+  "newFileLocation": "current",
+  "readableLineLength": true,
+  "strictLineBreaks": false
 }

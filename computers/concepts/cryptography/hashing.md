@@ -31,7 +31,7 @@ Returns an output which is a 256-bit hash as a 64 digit hexadecimal number.
 ### Passwords
 Commonly , passwords are stored *as their hash values* since the hash of the actual password can be compared to the hash of an attempted password.
 #### Salting
-Because users can have the same password, if an attacker is able to exfiltrate a bunch of password hashes and then brute force them using a [rainbow table](../../../cybersecurity/TTPs/exploitation/rainbow-table.md), it's common now to add a *salt* to a password before hashing it.
+Because users can have the same password, if an attacker is able to exfiltrate a bunch of password hashes and then brute force them using a [rainbow table](../../../cybersecurity/TTPs/cracking/rainbow-table.md), it's common now to add a *salt* to a password before hashing it.
 
 A salt is *random data* added to the password before its hashed so that its hash *is different* in the case that another user has the same password.
 

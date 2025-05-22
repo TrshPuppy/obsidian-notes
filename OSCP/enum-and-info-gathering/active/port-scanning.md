@@ -1,7 +1,12 @@
+---
+aliases:
+  - port scanning
+  - port scan
+---
 
 # Port Scanning Techniques
-## [TCP](../../../networking/protocols/TCP.md) CONNECT Scan
-Uses the TCP [3 Way handshake:](../../../networking/protocols/TCP.md#3%20Way%20handshake) two hosts who want to communicate negotiate parameters of the connection before establishing it.
+## TCP CONNECT Scan
+Uses the [TCP](../../../networking/protocols/TCP.md) [3 Way handshake:](../../../networking/protocols/TCP.md#3%20Way%20handshake) two hosts who want to communicate negotiate parameters of the connection before establishing it.
 ### Steps
 #### 1. SYN
 Initiating server sends a TCP `SYN` packet to the destination server.

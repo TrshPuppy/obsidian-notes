@@ -14,6 +14,11 @@ The [ssh](CLI-tools/ssh-command.md) command allows you to connect to devices via
 > [!Related]
 > - [`ssh` command](../../CLI-tools/ssh-command.md)
 > - [SFTP](FTP.md#SFTP)
+> - [SSH remote port forwarding](../../OSCP/port-redirection-SSH-tunneling/SSH-tunneling/remote-port-forwarding.md)
+> - [SSH local port forwarding](../../OSCP/port-redirection-SSH-tunneling/SSH-tunneling/local-port-forwarding.md)
+> - [SSH remote dynamic port forwarding](../../OSCP/port-redirection-SSH-tunneling/SSH-tunneling/remote-dynamic-port-forwarding.md)
+> - [SSH dynamic port forwarding](../../OSCP/port-redirection-SSH-tunneling/SSH-tunneling/dynamic-port-forwarding.md)
+
 
 
 

@@ -1,7 +1,7 @@
 
 # DMARC
 (I'm not typing this sh-t out again)
-An open source standard which ties together the results of [DKIM](/cybersecurity/defense/domainkeys-identified-mail.md) and [SPF](SPF.md) through a process called "alignment".
+An open source standard which ties together the results of [DKIM](DKIM.md) and [SPF](SPF.md) through a process called "alignment".
 - DKIM (a tamper-evident domain seal associated with an email)
 - SPF (a published list of servers which are authorized to send [email](/networking/email.md) on behalf of a domain)
 A DMARC record is a text record w/t the [DNS](../../networking/DNS/DNS.md) which indicates the domains email policy r/t checking if a SPF or DKIM has passed or failed.

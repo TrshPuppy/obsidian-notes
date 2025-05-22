@@ -17,7 +17,7 @@ Per the [MITRE-ATT&CK](cybersecurity/resources/MITRE-ATT&CK.md) matrix, there ar
 	2. Accepted but marked as non-trusted (softfail)
 	3. Accepted (no IPs specified as trusted in the SPF record)
 
-#### [Domainkeys Identified Mail](/cybersecurity/defense/domainkeys-identified-mail.md) (DKIM)
+#### [Domainkeys Identified Mail](DKIM.md) (DKIM)
 - Authenticates the origin of an email by using #RSA encryption and matching public and private key pairs.
 
 #### [Domain-based Message Authentication Reporting & Conformance](/cybersecurity/defense/DMARC.md) (DMARC)

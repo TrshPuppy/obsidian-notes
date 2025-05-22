@@ -19,7 +19,7 @@ All of my notes pertaining to the Windows operating system.
 - [WPAD](active-directory/WPAD.md)
 ### Others
 - [enumeration](enumeration.md)
-- [powershell](powershell.md)
+- [powershell](../../coding/languages/powershell.md)
 - [registry](registry.md)
 - [LNK](LNK.md)
 - [PE](PE.md)
@@ -30,7 +30,7 @@ All of my notes pertaining to the Windows operating system.
 (not in this directory)
 - [windows-port-scanning](../../OSCP/enum-and-info-gathering/active/windows-port-scanning.md)
 - [abusing-library-files](../../OSCP/client-side-attacks/abusing-library-files.md)
-- [enumerating Windows for Privesc](../../OSCP/windows-privesc/enumeration.md)
+- [enumerating Windows for Privesc](../../OSCP/windows-privesc/enumeration/enumeration.md)
 - [access tokens](../../OSCP/windows-privesc/security-mechanisms/access-tokens.md)
 - [UAC](../../OSCP/windows-privesc/security-mechanisms/UAC.md)
 - [SID](../../OSCP/windows-privesc/security-mechanisms/SID.md)

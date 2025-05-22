@@ -1,12 +1,13 @@
 
 # DNS lookup utility
 Used to manually query *recursive [DNS](/networking/DNS/DNS.md) servers* for info about domains.
-## Usage: 
+## Usage 
 ```
 dig  [@server] [-b address] [-c class] [-f filename] [-k filename] [-m]
        [-p port#] [-q name] [-t type] [-v] [-x addr]  [-y  [hmac:]name:key]  [
        [-4] | [-6] ] [name] [type] [class] [queryopt...]
 ```  
+### Querying a Specific Server
 ```
 dig <domain> @<dns-server-ip>
 ```

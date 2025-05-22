@@ -1,10 +1,10 @@
 ---
 aliases:
   - OS
+  - operating system
 ---
-
+INIT
 # Operating System
-Init.
 ## Components
 ### Kernel
 The kernel of an OS communicates w/ the hardware ([CPU](CPU.md), [memory](computers/memory/memory.md))

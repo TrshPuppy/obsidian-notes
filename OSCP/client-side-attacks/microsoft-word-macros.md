@@ -22,7 +22,7 @@ Sub tits()
 	Set wshShellObj = CreateObject("Wscript.Shell")
 End Sub
 ```
-Once the object is instantiated, we can invoke its `Run` method to launch an application on the victim's machine, in this case, [powershell](../../computers/windows/powershell.md):
+Once the object is instantiated, we can invoke its `Run` method to launch an application on the victim's machine, in this case, [powershell](../../coding/languages/powershell.md):
 ```vb
 Sub tits()
 	Dim wshShellObj As Object
@@ -66,7 +66,7 @@ Sub tits()
 End Sub
 ```
 ## Creating a Reverse Shell
-After saving and executing our above script, we should see a [powershell](../../computers/windows/powershell.md) terminal open. Nice. Now we can make our script even better by using it to create a [rev-shell](../../cybersecurity/TTPs/exploitation/rev-shell.md) on our victim's machine. We're going to do this using [powercat](../../CLI-tools/windows/powercat.md).
+After saving and executing our above script, we should see a [powershell](../../coding/languages/powershell.md) terminal open. Nice. Now we can make our script even better by using it to create a [rev-shell](../../cybersecurity/TTPs/exploitation/rev-shell.md) on our victim's machine. We're going to do this using [powercat](../../CLI-tools/windows/powercat.md).
 ### Download Cradles
 To get PowerCat onto our victim machine, we're going to use a [powershell download cradle](../../cybersecurity/TTPs/actions-on-objective/download-cradles.md). Download Cradles are just single-line commands (usually in powershell) used to download and execute code. They evade security measures by downloading and running the code *in memory* without writing it to disk. 
 

@@ -1,4 +1,7 @@
-
+---
+aliases:
+  - firewall
+---
 # Firewalls
 Device w/i a network responsible for determining what traffic can enter and exit. Can be hardware or software.
 ## Configuration Factors

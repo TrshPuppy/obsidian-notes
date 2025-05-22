@@ -1,11 +1,11 @@
 
 # Files Hidden in Plain View
 > [!Note]
-> For these notes the assumption is we've used a client-side attack to gain access via a [bind-shell](../../cybersecurity/TTPs/exploitation/bind-shell.md) running on port `44444`. The system is called `CLIENTWK220`, and the account we've compromised is `dave`. 
+> For these notes the assumption is we've used a client-side attack to gain access via a [bind-shell](../../../cybersecurity/TTPs/exploitation/bind-shell.md) running on port `44444`. The system is called `CLIENTWK220`, and the account we've compromised is `dave`. 
 
 Even though there is a password manager app on our compromised machine (which we found via [enumeration](enumeration.md)),  most users *are lazy* and will often save sensitive information to easy to access files, such as a `note.txt` on the Desktop. So, we should do our best to look around the filesystem we have access to for tidbits like this. 
 ## Where to Start
-From enumerating, we know that both KeePass and XAMPP are installed on the system. A good place to start is looking for password [databases](../../coding/databases/DBMS.md) and configuration files on the machine.
+From enumerating, we know that both KeePass and XAMPP are installed on the system. A good place to start is looking for password [databases](../../../coding/databases/DBMS.md) and configuration files on the machine.
 ### KeePass Database files
 To search for this kind of file, we can use `Get-ChildItem` with a `-Include` flag set to `.kdbx` (which is the filetype for KeePass password manager databases). Note that we're searching *recursively* through the `C:\` directory:
 ```powershell
@@ -32,7 +32,7 @@ Mode                 LastWriteTime         Length Name
 -a----         5/16/2022  12:21 AM           7368 readme_en.txt     
 -a----         6/16/2022   1:17 PM           1200 xampp-control.ini  
 ```
-So far, the two interesting files we've found are `passwords.txt` and `my.ini` which is a [mysql](../../CLI-tools/linux/mysql.md) configuration file. We can use the `type` [Windows](../../computers/windows/README.md) command to print the files' contents to the command line:
+So far, the two interesting files we've found are `passwords.txt` and `my.ini` which is a [mysql](../../../CLI-tools/linux/mysql.md) configuration file. We can use the `type` [Windows](../../../computers/windows/README.md) command to print the files' contents to the command line:
 ```powershell
 PS C:\Users\dave> type C:\xampp\passwords.txt
 ### XAMPP Default Passwords ###
@@ -92,10 +92,10 @@ Local Group Memberships      *helpdesk             *Remote Desktop Users
                              *Remote Management Use*Users                
 ...
 ```
-From this we can see `steve` is a member of `Remote Desktop Users` which means he can *login to this system using [RDP](../../networking/protocols/RDP.md)*. 
+From this we can see `steve` is a member of `Remote Desktop Users` which means he can *login to this system using [RDP](../../../networking/protocols/RDP.md)*. 
 ## New User Access
 Let's see if we can login to the system using his username and the password we found in `asdf.txt` via RDP:
-![](../oscp-pics/sensitive-files-1.png)
+![](../../oscp-pics/sensitive-files-1.png)
 Now that we've accessed the system as a different user, we need to *start the enumeration process over again*. This is part of the *cyclical process* that is penetration testing. Once you've gained a new level of access, or discovered a new system, etc. you need to re-evaluate the situation and include any new information so you can identify *potential new attack vectors*.
 
 We can start by re-evaluating our permissions and privileges as this new user `steve`. For example, let's check if we can access the config file `dave` was unable to access:
@@ -115,5 +115,18 @@ Since the `steve` account does have access to the file, we can see its contents 
 ### `Runas`
 Since we have GUI access via RDP, we can try to use `Runas` to try and run a program as a different user.  `Runas` can be used for any account *as long as it has the ability to log in to the system*. Without a GUI, we can't use `Runas` because `Runas` will immediately display a password prompt. This password prompt *does not accept passwords issued from a shell*.
 
+Since we have GUI access using RDP as `steve` we can try to use `Runas` to start a cmdshell as the user `backupadmin`:
+```powershell
+PS C:\Users\steve> runas /user:backupadmin cmd
+Enter the password for backupadmin:
+Attempting to start cmd as user "CLIENTWK220\backupadmin" ...
+
+PS C:\Users\steve> 
+```
+Once we enter the password, a new cmd prompt window appears. Running `whoami` in this prompt reveals that we've successfully started a cmd shell as the `backupadmin` user:
+![](../../oscp-pics/sensitive-files-2.png)
+And now, the whole process of enumerating starts again since we've achieved privilege escalation from `steve` to `backupadmin`!
+
 > [!Resources]
 > - [Apache XAMPP Docs](https://www.apachefriends.org/docs/)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.

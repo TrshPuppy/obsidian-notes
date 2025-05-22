@@ -1,4 +1,8 @@
-
+---
+aliases:
+  - "`CNAME` records"
+  - "`CNAME` record"
+---
 # Canonical Name Record (CNAME)
 The CNAME record points an alias domain name *to a 'canonical' domain.* It's used instead of an [A record](/networking/DNS/A-record.md) *when a domain or subdomain **is an alias** for another domain*.
 

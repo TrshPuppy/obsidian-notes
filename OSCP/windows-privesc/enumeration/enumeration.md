@@ -6,16 +6,16 @@ The pieces of information to focus on include:
 - username and hostname
 - group membership of our current user
 - other existing users and groups
-- [operating-system](../../computers/concepts/operating-system.md) info including version and architecture
+- [operating-system](../../../computers/concepts/operating-system.md) info including version and architecture
 - network information
 - installed applications
 - running processes
 All of these should be enumerated so we can get a good idea of how to further target the system and privilege escalate. 
 ## User, Hostname & Group Enumeration
 > [!Note]
-> For these notes the assumption is we've used a client-side attack to gain access via a [bind-shell](../../cybersecurity/TTPs/exploitation/bind-shell.md) running on port `44444`. The system is called `CLIENTWK220`, and the account we've compromised is `dave`.
+> For these notes the assumption is we've used a client-side attack to gain access via a [bind-shell](../../../cybersecurity/TTPs/exploitation/bind-shell.md) running on port `44444`. The system is called `CLIENTWK220`, and the account we've compromised is `dave`.
 ### `whoami`
-`whoami` is a common command-line tool found on both [Windows](../../computers/windows/README.md) and Linux machines. We can use this to see both the username and the hostname:
+`whoami` is a common command-line tool found on both [Windows](../../../computers/windows/README.md) and Linux machines. We can use this to see both the username and the hostname:
 ```powershell
 kali@kali:~$ nc 192.168.50.220 4444
 Microsoft Windows [Version 10.0.22000.318]
@@ -50,11 +50,11 @@ NT AUTHORITY\Authenticated Users     Well-known group S-1-5-11                  
 ```
 From this listing we can see that one of the groups `dave` belongs to is the `helpdesk` group. This might mean he has *additional permissions and access* compared to regular users (since he is likely part of the organization's help desk staff). 
 
-`dave` is also a member of `BUILTIN\Remote Desktop Users` which indicates he might be able to connect *via [RDP](../../networking/protocols/RDP.md)* to this system.
+`dave` is also a member of `BUILTIN\Remote Desktop Users` which indicates he might be able to connect *via [RDP](../../../networking/protocols/RDP.md)* to this system.
 
 The remaining groups are *standard* and non-privileged, like `Everyone` and `BUILTIN\Users`. 
 ### `net user` & `Get-LocalUser`
-We can use the `net` command with the `user` module to enumerate other users and groups present on the system. We can also use the `Get-LocalUser` cmdlet (from [powershell](../../computers/windows/powershell.md)) to get a list of *all local users* on the system:
+We can use the `net` command with the `user` module to enumerate other users and groups present on the system. We can also use the `Get-LocalUser` cmdlet (from [powershell](../../../coding/languages/powershell.md)) to get a list of *all local users* on the system:
 ```powershell
 PS C:\Users\dave> Get-LocalUser
 Get-LocalUser
@@ -89,8 +89,8 @@ Non-standard groups in this listing are `BackupUsers`, `helpdesk` and `adminteam
 #### Standard Groups
 The standard groups in the listing above include some common ones:
 - `Backup Operators`: can backup and restore *all files* on the computer, even ones they *don't have permission for*
-- `Remote Desktop Users`: can access the system using [RDP](../../networking/protocols/RDP.md)
-	- `Remote Management Users`: can access the system using *[WinRM](../../computers/windows/WinRM.md)*
+- `Remote Desktop Users`: can access the system using [RDP](../../../networking/protocols/RDP.md)
+	- `Remote Management Users`: can access the system using *[WinRM](../../../computers/windows/WinRM.md)*
 - `Administrators`
 ### `Get-LocalGroupMember`
 `Get-LocalGroupMember` is a powershell cmdlet which we can use to review information *for specific groups*. For example, lets use it to review the `adminteam` and `Administrators` groups and their members:
@@ -162,12 +162,12 @@ Ethernet adapter Ethernet0:
    NetBIOS over Tcpip. . . . . . . . : Enabled
 ```
 From this output, we've learned a few interesting facts:
-- the system does not get leased an [IP address](../../networking/OSI/3-network/IP-addresses.md) from [DHCP](../../networking/protocols/DHCP.md) (it was set manually)
-- the DNS server, gateway, and [Subnet Mask](../../PNPT/PEH/networking/subnetting.md#Subnet%20Mask)
-- the [MAC address](../../networking/OSI/2-datalink/MAC-addresses.md)
+- the system does not get leased an [IP address](../../../networking/OSI/3-network/IP-addresses.md) from [DHCP](../../../networking/protocols/DHCP.md) (it was set manually)
+- the DNS server, gateway, and [Subnet Mask](../../../PNPT/PEH/networking/subnetting.md#Subnet%20Mask)
+- the [MAC address](../../../networking/OSI/2-datalink/MAC-addresses.md)
 All of this information will be useful if we try to *move laterally* to other systems on the network.
 ### `route print`
-This command will display the [routing-table](../../networking/routing/routing-table.md) which contains *all of the routes* known to the system. We can use the output from `route print` to determine possible *attack vectors* to other systems and networks:
+This command will display the [routing-table](../../../networking/routing/routing-table.md) which contains *all of the routes* known to the system. We can use the output from `route print` to determine possible *attack vectors* to other systems and networks:
 ```powershell
 PS C:\Users\dave> route print
 route print
@@ -214,7 +214,7 @@ Persistent Routes:
 ```
 This output *doesn't reveal any routes to unknown networks*, but it's still a valuable thing to check during penetration tests.
 ### `netstat`
-[netstat](../../CLI-tools/windows/netstat.md) is a command line tool on both Windows machines which we can use to display active [TCP](../../networking/protocols/TCP.md) connections, listening [ports](../../networking/routing/ports.md), ethernet stats, IP routing tables and stats for both [IPv4 and IPv6](../../networking/OSI/3-network/IP-addresses.md#IPv4%20vs%20IPv6). Without giving any parameters, it lists active TCP connections. But with the parameters `-ano`, we can see all active TCP connections as well as TCP and [UDP](../../networking/protocols/UDP.md) ports (with `-n` disabling name resolution and `-o` showing the process ID for each connection):
+[netstat](../../../CLI-tools/windows/netstat.md) is a command line tool on both Windows machines which we can use to display active [TCP](../../../networking/protocols/TCP.md) connections, listening [ports](../../../networking/routing/ports.md), ethernet stats, IP routing tables and stats for both [IPv4 and IPv6](../../../networking/OSI/3-network/IP-addresses.md#IPv4%20vs%20IPv6). Without giving any parameters, it lists active TCP connections. But with the parameters `-ano`, we can see all active TCP connections as well as TCP and [UDP](../../../networking/protocols/UDP.md) ports (with `-n` disabling name resolution and `-o` showing the process ID for each connection):
 ```powershell
 PS C:\Users\dave> netstat -ano
 netstat -ano
@@ -233,7 +233,7 @@ Active Connections
   TCP    192.168.50.220:44444    192.168.48.3:58386     ESTABLISHED     2064
 ...
 ```
-In this ouptut, we can see that ports `80` and `443` on the system are listening for connections. This usually indicates that a web server is hosted and running on the system. There is also a [mysql](../../CLI-tools/linux/mysql.md) server likely running on port `3306`. We can also see our [netcat](../../cybersecurity/TTPs/exploitation/tools/netcat.md) connection (our [bind-shell](../../cybersecurity/TTPs/exploitation/bind-shell.md)) running on port `44444` and an RDP connection running on port `3389`. 
+In this ouptut, we can see that ports `80` and `443` on the system are listening for connections. This usually indicates that a web server is hosted and running on the system. There is also a [mysql](../../../CLI-tools/linux/mysql.md) server likely running on port `3306`. We can also see our [netcat](../../../cybersecurity/TTPs/exploitation/tools/netcat.md) connection (our [bind-shell](../../../cybersecurity/TTPs/exploitation/bind-shell.md)) running on port `44444` and an RDP connection running on port `3389`. 
 
 The RDP connection specifically indicates that *we might not be the only user connected to this machine*. 
 ### Installed Applications
@@ -270,7 +270,7 @@ Update for Windows 10 for x64-based Systems (KB5001716)
 ```
 The first registry key `HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall` will list all of the *32-bit* installed applications. The second (`HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall`) will list all of the *64-bit ones*. 
 
-From the output, the only *non-standard* applications installed are FileZilla (an [FTP](../../networking/protocols/FTP.md) client), KeePass (a password manager), 7-Zip and XAMPP.
+From the output, the only *non-standard* applications installed are FileZilla (an [FTP](../../../networking/protocols/FTP.md) client), KeePass (a password manager), 7-Zip and XAMPP.
 #### Checking Other Directories
 In case some applications were installed improperly, we should also check the `Program Files` directories for installed files. The 32-bit and 64-bit directories are located on the `C:\` drive. We should also check the `Downloads` folder.
 ### Running Processes

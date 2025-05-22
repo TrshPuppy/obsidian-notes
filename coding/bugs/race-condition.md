@@ -15,7 +15,7 @@ When multiple processes attempt to access and modify the same file simultaneousl
 ### Database
 When multiple queries/ transactions are sent to a database at the same time, this can cause data to be inconsistent and can also lead to *unauthorized access*.
 ## Security
-Race conditions in software can be leveraged by an attacker. The bugs caused by race conditions can allow an attacker to perform any number of attacks including [denial-of-service](cybersecurity/TTPs/exploitation/denial-of-service.md),[privesc](cybersecurity/TTPs/actions-on-objective/privesc.md), etc.. 
+Race conditions in software can be leveraged by an attacker. The bugs caused by race conditions can allow an attacker to perform any number of attacks including [denial-of-service](cybersecurity/TTPs/exploitation/denial-of-service.md),[README](../../cybersecurity/TTPs/actions-on-objective/privesc/README.md), etc.. 
 
 A specific attack based on race conditions is a 0TOCTTOU (time-of-check-to-time-of-use). This bug usually involves *authentication*. A window of time between when an auth value is checked and when it's used is opened, allowing for exploitation.
 

@@ -1,7 +1,7 @@
 
 # PowerCat 
 INIT
-[PowerCat](https://github.com/besimorhino/powercat) is a command line tool similar to [netcat](../../cybersecurity/TTPs/exploitation/tools/netcat.md) but written for Windows and [powershell](../../computers/windows/powershell.md). Like netcat, it can be used for file transfer, as well as executing commands on the remote computer you use it to connect to.
+[PowerCat](https://github.com/besimorhino/powercat) is a command line tool similar to [netcat](../../cybersecurity/TTPs/exploitation/tools/netcat.md) but written for Windows and [powershell](../../coding/languages/powershell.md). Like netcat, it can be used for file transfer, as well as executing commands on the remote computer you use it to connect to.
 ## Installation
 PowerCat is a powershell function. So, you can either copy it from GitHub into a `.ps1` file and then run it with `. ./powercat.ps1`, or you can load the function using a URL:
 ```ps1

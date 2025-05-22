@@ -37,6 +37,7 @@ applicable law.
 tryhackme@linux2:~$ 
 ```
 ### Config Example
+The config file is usually stored at `/etc/ssh/sshd_config`
 ```
 Host <custom host name>
 	Hostname <IP>
@@ -47,18 +48,35 @@ Host <custom host name>
         HostName <IP>
         User root
         IdentityFile .ssh\SSH-Private.pem
-        ProxyJump natfuel_windows
+        ProxyJump target_windows
 ```
-### SOCKS Proxy
+Can also configure `ssh` to use password based authentication by adding `PasswordAuthentication` and setting it to `yes`.
+### Local Port Forwarding (`-L`)
+![See my OSCP notes on Local Port Forwarding: `ssh -L`](../OSCP/port-redirection-SSH-tunneling/SSH-tunneling/local-port-forwarding.md#`ssh%20-L`)
+### SOCKS Proxy / Dynamic Port Forwarding (`-D`)
 ```bash
 ssh -D 44444 <user>@<IP address>
 ```
-This creates a SOCKS server which you can connect to to create a SOCKS connection. For example, if I want to proxy all of my [burp-suite](../cybersecurity/TTPs/delivery/tools/burp-suite.md) traffic through a [proxy](../networking/design-structure/proxy.md) so it is sent from the IP address `1.2.3.4`, then the SSH command on my local machine would be:
+This creates a [SOCKS](../OSCP/port-redirection-SSH-tunneling/SSH-tunneling/dynamic-port-forwarding.md) server and a [dynamic port forwarding](../OSCP/port-redirection-SSH-tunneling/SSH-tunneling/dynamic-port-forwarding.md) connection which you can connect to to create a SOCKS connection. For example, if I want to proxy all of my [burp-suite](../cybersecurity/TTPs/delivery/tools/burp-suite.md) traffic through a [proxy](../networking/design-structure/proxy.md) so it is sent from the IP address `1.2.3.4`, then the SSH command on my local machine would be:
 ```bash
 ssh -D 44444 root@1.2.3.4
 ```
 And the address of the SOCKS proxy host I give to Burp would be `127.0.0.1:44444` or (expanded): `socks5://127.0.0.1:44444`.
 
+See my OSCP notes on [dynamic port forwarding](../OSCP/port-redirection-SSH-tunneling/SSH-tunneling/dynamic-port-forwarding.md) (you may also want to read the *Proxychains* part ;) )
+### Remote Port Forward (`-R <IP 1>:<Port 1>:<IP 2>:<Port 2>`)
+![See my OSCP notes on remote port forwarding](../OSCP/port-redirection-SSH-tunneling/SSH-tunneling/remote-port-forwarding.md#`ssh%20-R`)
+### Remote Dynamic Port Forward (`-R <Port>`)
+![See my OSCP notes on remote dynamic port forwarding](../OSCP/port-redirection-SSH-tunneling/SSH-tunneling/remote-dynamic-port-forwarding.md#`ssh%20-R`)
+
+See my OSCP notes on [remote dynamic port forwarding](../OSCP/port-redirection-SSH-tunneling/SSH-tunneling/remote-dynamic-port-forwarding.md)
+
+
+
+
 > [!Resources]
 > - `man ssh`
 > - [Question about SOCKS proxy on Stack Exchange](https://superuser.com/questions/1308495/how-to-create-a-socks-proxy-with-ssh)
+
+> [!Related]
+> - [SSH](../networking/protocols/SSH.md)
