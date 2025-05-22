@@ -14,16 +14,16 @@ This attack was finally mitigated by *randomly generated* TXIDs, however, the ra
 
 Since there are only 65,536 possible values for the TXID, a hacker simply had to send as many malicious responses in the timeframe and there likelihood of guessing the right one increased.
 
-Now, the TXID *as well as the port number* is randomized and combined into a 32-bit key, making attacks like [DNS Spoofing](/cybersecurity/TTPs/delivery/DNS-spoofing.md) (using the TXID) much harder to perform.
+Now, the TXID *as well as the port number* is randomized and combined into a 32-bit key, making attacks like [DNS Spoofing](../../cybersecurity/TTPs/actions-on-objective/exfiltration-infiltration/DNS-spoofing.md) (using the TXID) much harder to perform.
 ### Recent Vulns
 While DNS is more secure than it used to be, it still has to be *implemented properly* by developers. A good example of poor DNS implementation is this [CoreDNS bug](https://github.com/coredns/coredns/issues/3547) in which the port and TXID were generated using a *non-cryptographically secure* randomization method in [Golang](/coding/languages/golang.md).
 
 Because the `math.rand` function in Golang does not actually create an unpredictable value, an attacker would easily exploit this by predicting the transaction ID and perform DNS spoofing.
 ## Common Attacks
 ### DNS Spoofing/ Cache Poisoning
-![DNS-spoofing](/cybersecurity/TTPs/delivery/DNS-spoofing.md)
+![DNS-spoofing](../../cybersecurity/TTPs/actions-on-objective/exfiltration-infiltration/DNS-spoofing.md)
 ### DNS Hijacking
-DNS Hijacking is slightly different than [DNS-spoofing](/cybersecurity/TTPs/delivery/DNS-spoofing.md) because the attacker uses *DNS Records* rather than the Resolver's cache to redirect queries.
+DNS Hijacking is slightly different than [DNS-spoofing](../../cybersecurity/TTPs/actions-on-objective/exfiltration-infiltration/DNS-spoofing.md) because the attacker uses *DNS Records* rather than the Resolver's cache to redirect queries.
 ### DNS Tunneling
 ![DNS-tunneling](/cybersecurity/TTPs/c2/DNS-tunneling.md)
 ### NXDOMAIN Attack
