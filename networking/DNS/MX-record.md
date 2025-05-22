@@ -1,3 +1,8 @@
+---
+aliases:
+  - "`MX` records"
+  - "`MX` record"
+---
 
 # DNS MX Record
 The [DNS](DNS.md) `MX` record ('mail exchange') directs *[email](../email.md) to a mail server*. It indicates how emails should be routed, specifically using the Simple Mail Transfer Protocol [SMTP](../protocols/SMTP.md). 

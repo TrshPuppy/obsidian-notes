@@ -6,6 +6,6 @@
   "vimMode": true,
   "propertiesInDocument": "hidden",
   "newFileLocation": "current",
-  "readableLineLength": false,
+  "readableLineLength": true,
   "strictLineBreaks": false
 }

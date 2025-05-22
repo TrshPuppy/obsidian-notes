@@ -3,6 +3,7 @@ aliases:
   - DNS tunneling
   - DNS tunnel
   - dnsmasq
+  - "`dnsmasq`"
 ---
 # DNS Tunneling
 Continuing off of the same [Scenario](HTTP-tunneling.md#Scenario) (from the [HTTP tunneling](HTTP-tunneling.md) notes), in our victim's network, `MULTISERVER03` serves *as the DNS server*. So, a request from `PGDATABSEO1` for `www.example.com` would follow this path:

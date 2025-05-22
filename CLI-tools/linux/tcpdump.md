@@ -20,8 +20,12 @@ Init.
 9.dbus-system (D-Bus system bus) [none]
 10.dbus-session (D-Bus session bus) [none]
 ```
-### Listen for source ip `host`
+### Listen for traffic to and from specific `host`
 ```bash
 tcpdump -i eth0 host 192.168.5.5
+```
+#### Specific port
+```bash
+tcpdump -i eth0 host 100.100.100.100 and port udp 53
 ```
 ### Packet content `-A`

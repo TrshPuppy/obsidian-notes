@@ -1,8 +1,5 @@
 ---
 aliases:
-  - TXT
-  - TXT record
-  - "`TXT`"
   - "`TXT` record"
   - "`TXT` records"
 ---

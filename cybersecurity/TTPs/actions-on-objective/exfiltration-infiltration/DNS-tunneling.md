@@ -1,6 +1,3 @@
----
-link: "[[DNS-tunneling]]"
----
 
 INIT
 # DNS Tunneling
