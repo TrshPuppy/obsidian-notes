@@ -1,4 +1,9 @@
-
+---
+aliases:
+  - DC
+  - Domain Controller
+---
+INIT
 # AD Domain Controller
 Domain Controllers are physical components running the Windows Server OS within an [Active Directory](computers/windows/active-directory/active-directory.md). Specifically, they're any computer in an AD domain which is running Windows Server w/ Active Directory Domain Services installed.
 
