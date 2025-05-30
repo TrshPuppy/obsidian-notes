@@ -37,7 +37,7 @@ The `attributeSchema` should include information about each attribute's:
 > Me
 
 ## Object Identification
-### GIDs
+### GUIDs
 When an object is created, its assigned a *128-bit unique* value called a Global Unique Identifier (*GUID*). The GUID is used to *identify the object* in the network.
 ### SIDs & Security Principles
 Security Principles are a special category of objects which *can be authenticated* by the [operating system](../../concepts/operating-system.md). Users, computers, and Groups *are all security principles*.  In addition to having a GUID, security principles are assigned *a second unique identifier* called a Security Identifier (*SID*).
@@ -79,3 +79,4 @@ While both object types are container-types, they differ in the following ways:
 > [!Resources]
 > - [Windows AD: AD Objects, All you need to know](https://www.windows-active-directory.com/active-directory-objects-2.html)
 > - [_Organizational Units_](https://en.wikipedia.org/wiki/Organizational_unit_\(computing\)) 
+> - [Microsoft: Distinguished Names](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ldap/distinguished-names) 

@@ -13,6 +13,9 @@ On the machine running Windows Server, you can make it the *Domain Controller* o
 
 By default, a domain controller *stores all the information about the domain it is located in* inside a "domain directory." The DC is, in general, the source of authentication in Windows environments and is used to verify identities in AD (among other things).
 ![](/computers/computers-pics/domain-controller-2.png)
+## Primary Domain Controller
+![See my OSCP notes on Primary Domain Controller](../../../OSCP/AD/manual-enumeration/LDAP-ADSI.md#Primary%20Domain%20Controller)
+
 
 > [!Resources]
 > - [Wikipedia: Domain Controllers](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc786438(v=ws.10))
