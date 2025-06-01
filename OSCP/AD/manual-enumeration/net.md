@@ -110,3 +110,5 @@ The command completed successfully.
 
 > [!Resources]
 > - [_Remote Server Administration Tools_](https://learn.microsoft.com/en-us/troubleshoot/windows-server/system-management-components/remote-server-administration-tools) (RSAT)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
+> 

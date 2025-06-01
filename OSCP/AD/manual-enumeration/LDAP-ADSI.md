@@ -532,4 +532,7 @@ Notice that an ampersand (`&`) was added. This functions as a logical `AND` in t
 > - [_DirectoryEntry_](https://learn.microsoft.com/en-us/dotnet/api/system.directoryservices.directoryentry?view=dotnet-plat-ext-6.0)
 > - [_DirectorySearcher_](https://learn.microsoft.com/en-us/dotnet/api/system.directoryservices.directorysearcher?view=dotnet-plat-ext-6.0)
 > - [_samAccountType_](https://learn.microsoft.com/en-us/windows/win32/adschema/a-samaccounttype)
+> - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
+> 
+
 
