@@ -1,4 +1,5 @@
 # Enumerating AD w/ PowerShell and .NET Classes
+![](../../oscp-pics/LDAP-ADSI-1.png)
 > [!Note]
 > For these notes, the following *scenario* applies: we're enumerating the `corp.com` domain. We've obtained user credentials to a domain user through a successful phishing attack. The user we have access to is `stephanie` who has remote desktop permissions on a Windows 11 machine `CLIENT75` which is a part of the domain. This user is not a local administrator on the machine. The scope is restricted to the `corp.com` domain.
 > 
@@ -435,7 +436,7 @@ In the code above, we've added the `LDAPSearch` function which takes `$LDAPQuery
 
 Instead of the nested for loops we had before, we've instead instantiated our `$dirSearcher` object with `$dirEntry` (like before), and `$LDAPQuery`. According to Microsoft (linked earlier), calling `DirectorySearcher` with two arguments will result in `$dirSearcher`'s `RootPath` value being set to the first argument (`dirEntry`), and then `$dirSearcher`'s `Filter` property being set *to the second argument* (`$LDAPQuery`).
 
-Additionally, the second argument *is a list of string values*, meaning you can *set the filter to retrieve multiple properties*. So, if you wanted to enumerate with a filter for user `samAccountType` accounts, you could call the function from the command line like this (after importing it):
+Additionally, the second argument *is a list of string values*, meaning you can *set the filter to retrieve multiple object types*. So, if you wanted to enumerate with a filter for user `samAccountType` accounts, you could call the function from the command line like this (after importing it):
 ```powershell
 # Import the script as a module first:
 PS C:\Users\stephanie> Import-Module .\enumeration.ps1
@@ -457,7 +458,70 @@ LDAP://DC1.corp.com/CN=pete,CN=Users,DC=corp,DC=com          {logoncount, codepa
 LDAP://DC1.corp.com/CN=jen,CN=Users,DC=corp,DC=com           {logoncount, codepage, objectcategory, dscorepropagatio
 
 ```
+### `objectclass`
+Instead of searching by `samAccountType` we can also search by the *Object Class* which is what defines what type an object is in AD. To filter the output for all the groups in the domain, we can give `"(objectclass=group)"` to the `-LDAPQuery` flag:
+```powershell
+PS C:\Users\stephanie> LDAPSearch -LDAPQuery "(objectclass=group)"
 
+...                                                                                 ----------
+LDAP://DC1.corp.com/CN=Read-only Domain Controllers,CN=Users,DC=corp,DC=com            {usnchanged, distinguishedname, grouptype, whencreated...}
+LDAP://DC1.corp.com/CN=Enterprise Read-only Domain Controllers,CN=Users,DC=corp,DC=com {iscriticalsystemobject, usnchanged, distinguishedname, grouptype...}
+LDAP://DC1.corp.com/CN=Cloneable Domain Controllers,CN=Users,DC=corp,DC=com            {iscriticalsystemobject, usnchanged, distinguishedname, grouptype...}
+LDAP://DC1.corp.com/CN=Protected Users,CN=Users,DC=corp,DC=com                         {iscriticalsystemobject, usnchanged, distinguishedname, grouptype...}
+LDAP://DC1.corp.com/CN=Key Admins,CN=Users,DC=corp,DC=com                              {iscriticalsystemobject, usnchanged, distinguishedname, grouptype...}
+LDAP://DC1.corp.com/CN=Enterprise Key Admins,CN=Users,DC=corp,DC=com                   {iscriticalsystemobject, usnchanged, distinguishedname, grouptype...}
+LDAP://DC1.corp.com/CN=DnsAdmins,CN=Users,DC=corp,DC=com                               {usnchanged, distinguishedname, grouptype, whencreated...}
+LDAP://DC1.corp.com/CN=DnsUpdateProxy,CN=Users,DC=corp,DC=com                          {usnchanged, distinguishedname, grouptype, whencreated...}
+LDAP://DC1.corp.com/CN=Sales Department,DC=corp,DC=com                                 {usnchanged, distinguishedname, grouptype, whencreated...}
+LDAP://DC1.corp.com/CN=Management Department,DC=corp,DC=com                            {usnchanged, distinguishedname, grouptype, whencreated...}
+LDAP://DC1.corp.com/CN=Development Department,DC=corp,DC=com                           {usnchanged, distinguishedname, grouptype, whencreated...}
+LDAP://DC1.corp.com/CN=Debug,CN=Users,DC=corp,DC=com                                   {usnchanged, distinguishedname, grouptype, whencreated...}
+```
+Notice that our script *returned more results for groups than [`net user`](net.md#`net%20user`) did*. This is because, in addition to searching global groups, our script searches for *Domain Local groups* because it enumerates all objects in AD.
+### Looping from the Command Line
+Right now, our script can't print properties and attributes for the objects it finds because *we removed the for loops*. For now, we can re-implement them from the command line when we execute the function. 
+
+To display the user members of each group in the domain, for example, we can wrap our script command in a foreach loop and pipe each line of output to `select` to select the specific attributes we're interested in. To make it more obvious what we're doing, here is the foreach loop as if it was written in a script:
+```powershell
+foreach ($group in $(LDAPSearch -LDAPQuery "(objectCategory=group)")) {
+	$group.properties | select {$_.cn}, {$_.member}
+}
+```
+Now, running this in the command line has the exact same syntax (without the extra tabs or line breaks):
+```powershell
+PS C:\Users\stephanie\Desktop> foreach ($group in $(LDAPSearch -LDAPQuery "(objectCategory=group)")) {
+$group.properties | select {$_.cn}, {$_.member}
+}
+```
+If ran correctly in our scenario environment, there is a lot of output. Let's crop it down to three groups we noticed earlier when we [enumerated with `net`](net.md):
+```powershell
+...
+Sales Department              {CN=Development Department,DC=corp,DC=com, CN=pete,CN=Users,DC=corp,DC=com, CN=stephanie,CN=Users,DC=corp,DC=com}
+Management Department         CN=jen,CN=Users,DC=corp,DC=com
+Development Department        {CN=Management Department,DC=corp,DC=com, CN=pete,CN=Users,DC=corp,DC=com, CN=dave,CN=Users,DC=corp,DC=com}
+...
+```
+As you can see, our foreach loop expanded each group returned by our script and then printed the `.cn` (Common Name), and `.member` (each member in the group) properties.
+
+Notice again that the results for the `Sales Department` group lists more members than when we enumerated the same group using `net`. That's because `net user` only lists *user objects* and not group objects. Additionally, `net` *can't display specific attributes* like our script can.
+#### A Note on Nested Groups
+The additional group we found nested in the `Sales Department` group (`Development Department`) is what's known as a *nested group*. In AD group objects can contain other group objects, and whatever users or objects are a part of the nested group *also inherit membership to the group that contains their group*. 
+
+For example, if we found a user account object called `jen` in the `Development Deparment` group, that would mean that `jen` is both a member of `Development Department` and `Sales Department`. This is normal for AD, *but can lead to security risks* if misconfigured. Sometimes users inadvertently inherit *more privileges* than they were supposed to if they belong to a nested group.
+### Saving the Filter in a Variable
+Alternatively, we can also filter for a specific object category, save that to a variable, and then enumerate the property we want on it using the variable. For example, let's make a `$sales` variable which holds the output from executing our script with `-LDAPQuery` set to two object types (remember we can give a list of objects). Then, we can access `$sales` in our next command and get the output for specific properties: 
+```powershell
+# Create $sales variable
+PS C:\Users\stephanie> $sales = LDAPSearch -LDAPQuery "(&(objectCategory=group)(cn=Sales Department))"
+
+# Print the .member property of the $sales object:
+PS C:\Users\stephanie\Desktop> $sales.properties.member
+CN=Development Department,DC=corp,DC=com
+CN=pete,CN=Users,DC=corp,DC=com
+CN=stephanie,CN=Users,DC=corp,DC=com
+PS C:\Users\stephanie\Desktop>
+```
+Notice that an ampersand (`&`) was added. This functions as a logical `AND` in the *LDAP filter* to specify that both conditions (`objectCategory=group` and `cn=Sales Department`) need to be met. We could optionally add a `*` after `Sales Department`. This would specify to the LDAP filter that we want it to return any groups where `cn` matches "Sales Department" with any number of characters *appended after* (i.e. "Sales Department" and "Sales Department1" would both match).
 
 > [!Resources]
 > - [Microsoft: LDAP ADSI Provider](https://learn.microsoft.com/en-us/windows/win32/adsi/adsi-ldap-provider) 
