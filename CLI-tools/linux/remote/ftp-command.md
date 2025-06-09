@@ -54,9 +54,35 @@ The `ls` command will list all of the files in the current directory.
 The `get` command will allow you to download a file on the server w/ the syntax `get file.txt <LOCAL PATH>` where `<LOCAL PATH>` refers to where you want the file downloaded on your own computer.
 #### `put`
 The `put` command will allow you to *upload a file* to the server.
+#### `status`
+Lists information about the current connection:
+```bash
+ftp> status
+Connected to 10.10.69.69.
+No proxy connection.
+Gate ftp: off, server (none), port ftpgate.
+Passive mode: on; fallback to active mode: on.
+Mode: stream; Type: ascii; Form: non-print; Structure: file.
+Verbose: on; Bell: off; Prompting: on; Globbing: on.
+Store unique: off; Receive unique: off.
+Preserve modification times: on.
+Case: off; CR stripping: on.
+Ntrans: off.
+Nmap: off.
+Hash mark printing: off; Mark count: 1024; Progress bar: on.
+Get transfer rate throttle: off; maximum: 0; increment 1024.
+Put transfer rate throttle: off; maximum: 0; increment 1024.
+Socket buffer sizes: send 16384, receive 131072.
+Use of PORT cmds: on.
+Use of EPSV/EPRT cmds for IPv4: on.
+Use of EPSV/EPRT cmds for IPv6: on.
+Command line editing: on.
+Version: tnftp 20230507
+```
 
 > [!Related]
 > - [FTP protocol](/networking/protocols/FTP.md)
 
 > [!Resources]
 > - `man ftp`
+
