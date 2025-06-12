@@ -26,5 +26,10 @@ The notes I took while studying for the PNPT and OSCP are in their respective di
 If you find flaws and/or misinformation in topic notes you'd like me to correct, feel free to make a branch w/ your changes and submit a pull request so I can review them! I want these notes to be accurate and because I'm learning so much so quickly, I'm sure there are notes which need fixing!
 ## P.P.P.S. Pictures
 Each directory has a `/<dir-name>-pics` sub-directory which holds all of the images embedded into notes in the directory. I've named them based on the notepage they're embedded in incremented by 1 for each image (in the same note page). For instance, my notes on [buffer overflow](cybersecurity/TTPs/exploitation/binary-exploitation/buffer-overflow.md) include 13 pictures. So the [9th picture](cybersecurity/cybersecurity-pics/buffer-overflow-9.png) is saved as `/cybersecurity/cybersecurity-pics/buffer-overflow-9.png`.
+## P.P.P.P.S. Note Previews
+If viewing on GitHub, you may occasionally see something like "[See my notes on Windows enumeration](computers/windows/enumeration.md)" -- This usually means that I'm using Obsidian to [embed another note file](https://help.obsidian.md/embeds) directly into the note page. It's nice on Obsidian because it looks like this:
+![](OSCP/oscp-pics/README-2.png)
 
-> P.P.P.P.S. the commit history has been wiped due to insecure configuration. This repo was created in December '22
+On GitHub, however, it just looks like a link is embedded w/i the [LDAP-ADSI](OSCP/AD/manual-enumeration/LDAP-ADSI.md) notes. Because of that, I try to name the link something like "see my notes on LDAP ADsPath" so anyone ready on GitHub knows there is some additional content to reference.
+
+> P.P.P.P.P.S. the commit history has been wiped due to insecure configuration. This repo was created in December '22
