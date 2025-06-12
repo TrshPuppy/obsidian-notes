@@ -9,8 +9,8 @@ All of my notes pertaining to the Linux operating system.
 ## Table of Contents
 (may not be fully up to date, this is tedious)
 - [cli-cheat-sheet](cli-cheat-sheet.md)
-- [device-file](device-file.md)
-- [filesystem-hierarchy](filesystem-hierarchy.md)
+- [device-file](file-system/device-file.md)
+- [filesystem-hierarchy](file-system/filesystem-hierarchy.md)
 - [gcc](gcc.md)
 - [gdb](gdb.md)
 - [ioctl](ioctl.md)

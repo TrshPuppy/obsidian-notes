@@ -243,11 +243,10 @@ From the output, it appears `stephanie` should have permission to use `NetSessio
 In short, on Windows 11 (the OS of our executing machine) `NetSessionEnum` will *not be able to obtain* the info we want. This is because Microsoft at some point *changed the registry hive* (mentioned above).
 ##### Capability SIDs
 The output also shows a long string at the end which, according to [Microsoft's documentation](https://learn.microsoft.com/en-us/troubleshoot/windows-server/windows-security/sids-not-resolve-into-friendly-names) is a *Capability SID*.  Capability SIDs are [tokens](../../windows-privesc/security-mechanisms/access-tokens.md) of authority which are *unforgeable*. They grant access to various resources to either a "Windows component" or "Universal Windows Application." 
-### PSLoggedOn: Alternative to `Get-NetSession`
-Since we've established that `Get-NetSession` may not work on more up to date operating systems, we can try a similar tool called [_PsLoggedOn_](https://learn.microsoft.com/en-us/sysinternals/downloads/psloggedon). PsLoggedOn is an application from the [_SysInternals Suite_](https://learn.microsoft.com/en-us/sysinternals/) of tools
 
+--- 
 > [!Resources]
-> - [_PowerView_](https://powersploit.readthedocs.io/en/latest/Recon/)
+> - [PowerView.ps1 Script (GitHub)](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1)
 > - [PowerView Usage Docs](https://powersploit.readthedocs.io/en/latest/Recon/)
 > - [_OpenServiceW function_](https://learn.microsoft.com/en-us/windows/win32/api/winsvc/nf-winsvc-openservicew)
 > - [`NetWkstaUserEnum`](https://learn.microsoft.com/en-us/windows/win32/api/lmwksta/nf-lmwksta-netwkstauserenum)

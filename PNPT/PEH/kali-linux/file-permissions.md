@@ -1,3 +1,7 @@
+---
+aliases:
+  - linux file permissions
+---
 
 # Permissions and Privileges in Linux:
 The output of `ls -al` is a list of all the files and directories in the current/ parent directory *with the addition* of some metadata.

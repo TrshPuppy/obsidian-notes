@@ -21,8 +21,8 @@ ping 69.69.69.69 -c 1 > response.txt
 cat response.txt | grep "64 bytes from"
 64 bytes from 69.69.69.69: icmp_seq=1 ttl=56 time=24.2 ms
 ```
-### Using [cut](/computers/linux/filesystem-hierarchy.md)
-You can then pipe to `cut -d " " -f 4` ([cut](/computers/linux/filesystem-hierarchy.md) on spaces, get field 3) to get the IP address which responded to the ping.
+### Using [cut](../../../computers/linux/file-system/filesystem-hierarchy.md)
+You can then pipe to `cut -d " " -f 4` ([cut](../../../computers/linux/file-system/filesystem-hierarchy.md) on spaces, get field 3) to get the IP address which responded to the ping.
 ```bash
 ping 69.69.69.69 -c 1| grep "64 bytes from" | cut -d " " -f 4
 69.69.69.69:
