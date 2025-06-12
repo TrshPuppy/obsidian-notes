@@ -17,6 +17,7 @@ While both are capable of communicating w/i AD, the LDAP provider *offers more f
 We'll use the [LDAP ADSI Provider](https://learn.microsoft.com/en-us/windows/win32/adsi/adsi-ldap-provider) for our script. The ADSI objects w/i the LDAP ADSI provider are *compatible with LDAP* and exist within an LDAP-specific *namespace*.
 ### ADsPath & Namespaces
 In order to use the LDAP Provider to *bind* to specific objects in the AD, we need to provide the [LDAP ADsPath](https://learn.microsoft.com/en-us/windows/win32/adsi/ldap-adspath) to the objects we want to perform operations on. The ADsPath is basically just a *string which identifies a directory object in AD*. The LDAP ADsPath *has a specific format* which needs to be followed in order to work.
+
 ![Read my notes on LDAP ADsPath](../../../computers/windows/active-directory/ADSI.md#LDAP%20ADsPath)
 #### Distinguished Names
 In AD, every object has a unique [Distinguished Name](../../../computers/windows/active-directory/objects.md#Distinguished%20Names) which identifies it. An object's DN is made up of  [Relative Distinguished Names](../../../computers/windows/active-directory/objects.md#Relative%20Distinguished%20Names) separated by commas. These parts make up the *absolute path* to the object within the domain. In our scenario, the DN for the `stephanie` user object, likely resembles:
