@@ -36,7 +36,8 @@ Most attackers perform a lot of [OSINT](/cybersecurity/TTPs/recon/OSINT.md) rese
 	2. [Hunter.io](https://hunter.io/email-finder)
 - Finding who works for a target using LinkedIn, etc.
 ### Recon *once inside the target/system*
-*Note:* this part deviates from the original cyber kill chain.
+> [!Note]
+> This part deviates from the original cyber kill chain.
 
 Recon can also be done once you  have breached the target and have access to the system. After *persistence* has been established, further intelligence should be gathered which can be done quietly.
 

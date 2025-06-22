@@ -28,14 +28,14 @@ mimikatz # privilege::debug
 Privilege '20' OK
 ```
 ### Token Module
-Mimikatz' *token elevation function* allows Mimikatz to interact with Windows *authentication tokens*. With this module, mimikatz can grab tokens and then impersonate them. It has a few sub-modules. **P.S.**: you need to have the `SeImpersonatePrivilege` access right (all local Admins have it by default).
+Mimikatz' *token elevation function* allows Mimikatz to interact with Windows *[access tokens](../../../../OSCP/windows-privesc/security-mechanisms/access-tokens.md)*. With this module, mimikatz can grab tokens and then impersonate them. It has a few sub-modules. **P.S.**: you need to have the [`SeImpersonatePrivilege`](../privesc/token-abuse.md#`SeImpersonatePrivilege`) access right (all local Admins have it by default).
 #### `token::list`
 List all of the tokens on the current system:
 ![](../../../cybersecurity-pics/mimikatz-2.png)
 #### `token::whoami`
-Display your current identity and token
+Display your current identity and token.
 #### `token::elevate`
-You can use this sub-module to elevate your current permissions to those of another group/user. For example, if you want to escalate your privileges to `SYSTEM` or to `Administrator`:
+You can use this sub-module to elevate your current permissions to those of another group/ user. For example, if you want to escalate your privileges to `SYSTEM` or to `Administrator`:
 ![](../../../cybersecurity-pics/mimikatz-1.png)
 You can also give `::elevate` a specific credential to elevate to:
 ![](../../../cybersecurity-pics/mimikatz-3.png)
@@ -47,7 +47,6 @@ Executes a new process with its token. It has the following command line argumen
 - [`/id`](https://tools.thehacker.recipes/mimikatz/modules/token/run#id): Token id to use for the new process
 - [`/user`](https://tools.thehacker.recipes/mimikatz/modules/token/run#user): Execute the process with the tokens of this user (instead of specifying the token ID)..
 - [`/process`](https://tools.thehacker.recipes/mimikatz/modules/token/run#process): The process to run. By default, the command `whoami` is executed.
-
 
 > [!Resources]
 > - [Mimikatz Repo](https://github.com/gentilkiwi/mimikatz)

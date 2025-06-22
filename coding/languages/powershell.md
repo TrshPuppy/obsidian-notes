@@ -160,7 +160,7 @@ powershell ise test.ps1
 ## Useful Examples
 ### 1. Find a specific file
 ```PowerShell
- get-childitem -recurse -erroraction silentlycontinue -include interesting-file* -File
+get-childitem -recurse -erroraction silentlycontinue -include interesting-file* -File
 ```
 ### 2. Script to "count" number of matching items
 ```PowerShell
@@ -215,6 +215,19 @@ foreach($path in ($envpath).split(";")){if($path -like "R\CS50\Microsoft VS Code
 ```powershell
 1..1024 | % {echo ((New-Object Net.Sockets.TcpClient).Connect("192.168.50.151", $_)) "TCP port $_ is open"} 2>$null
 ```
+### 10. Encoding a command
+Let's say you've got a [SQLi](../../cybersecurity/TTPs/exploitation/injection/SQLi.md) and you want to avoid detection while using it to execute a PowerShell command, you can use PowerShell's `-enc` to encode the command:
+```powershell
+powershell.exe -enc 
+```
+**NOTE** that PS's `-enc` expects the command to be a base 64 encoded *unicode string* (`UTF-16LE` to be specific). So, you can't just pipe your command to `base64` in your linux CLI and expect PS to understand it. Instead, you can use `iconv` to first convert the command string to Unicode, and then pipe it to `base64`:
+```bash
+echo -n "iwr https://example.com" | iconv -f UTF-8 -t UTF-16LE | base64 -w 0
+```
+- `echo -n`: prevents the new line character from being added to the command string
+- `iconv -f UTF-8`: tells `iconv` that the input string is being encoded *from* UTF-8
+- `-t UTF-16LE`: tells `iconv` to encode the input *to* UTF-16LE
+- `base64 -w 0`: the `-w 0` disables wrapping
 
 >[!Resources]
 > - [THM PowerShell Room](https//tryhackme.com/room/powershell)

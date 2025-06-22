@@ -122,6 +122,23 @@ mysql> SHOW TABLES;
 +-----------------+
 1 row in set (0.00 sec)
 ```
+#### Using a specific table
+```bash
+MariaDB [(none)]> use creds;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MariaDB [creds]> show tables;
++-----------------+
+| Tables_in_creds |
++-----------------+
+| creds           |
++-----------------+
+1 row in set (0.092 sec)
+
+MariaDB [creds]>
+```
 #### Describe table in a database
 ```shell
 mysql> DESCRIBE logins;
@@ -140,3 +157,4 @@ mysql> DESCRIBE logins;
 
 > [!Resources]
 > - [Offsec](offsec.com)
+> - [Invicti: SQLi Cheat Sheet](https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/#UnionInjections)

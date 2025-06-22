@@ -270,6 +270,33 @@ database_admin@pgbackup1:~$
 - `--proxy 127.0.0.1:1080`: this is the address and port number for the SOCKS port *the chisel client established for us* on the Kali machine
 - `%h`: this is the host value for the SSH command - (filled in automatically by SSH
 - `%p`: the port value for the SSH command - (filled in automatically by SSH)
+### With ProxyChains
+To use the `chisel` tunnel with proxychains, you have to edit `/etc/proxychains4.conf` and add your SOCKS proxy address and port to the bottom (w/ the list of proxies to use):
+```bash
+┌──(root㉿kali)-[/home/trshpuppy/oscp/medtech]
+└─# tail /etc/proxychains4.conf
+#       proxy types: http, socks4, socks5, raw
+#         * raw: The traffic is simply forwarded to the proxy without modification.
+#        ( auth types supported: "basic"-http  "user/pass"-socks )
+#
+[ProxyList]
+# add proxy here ...
+# meanwile
+# defaults set to "tor"
+#socks4 	127.0.0.1 9050
+socks5  127.0.0.1 1080
+```
+**NOTE**: Make sure to use the port *of the SOCKS proxy* (`1080`). **ALSO**: You have to *start the server w/ the `--socks5` flag!*
+#### Server Command
+```bash
+┌──(root㉿kali)-[/home/trshpuppy/oscp/medtech]
+└─# chisel server --port 8080 --socks5 --reverse
+2025/06/17 10:32:41 server: Reverse tunnelling enabled
+2025/06/17 10:32:41 server: Fingerprint 3qAER/A+OPSUHDhXROLnaapbCtTwz5yf3VPtGxIM++4=
+2025/06/17 10:32:41 server: Listening on http://0.0.0.0:8081
+2025/06/17 10:33:46 server: session#1: tun: proxy#R:127.0.0.1:1080=>socks: Listening
+```
+
 
 > [!Resources]
 > - [_Chisel_](https://github.com/jpillora/chisel)
