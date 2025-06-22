@@ -76,7 +76,7 @@ Successfully processed 1 files; Failed processing 0 files
 ```
 **BINGO**! According to the output, `dave` has *full access* to the `mysqld.exe` service binary which means we can perform service hijacking on it by overwriting the file with our own executable
 ### Writing a Malicious Binary
-Now that we have a target service binary, we need to create the malcious binary we want to replace it with. We can write asimple binary using [C](../../../coding/languages/C.md) which creates a new user named `dave2` and adds that user to the local `Administrators` group. Then we'll cross compile it (on our Kali machine) to run on the Windows victim machine. 
+Now that we have a target service binary, we need to create the malcious binary we want to replace it with. We can write a simple binary using [C](../../../coding/languages/C.md) which creates a new user named `dave2` and adds that user to the local `Administrators` group. Then we'll cross compile it (on our Kali machine) to run on the Windows victim machine. 
 
 Here is our C code:
 ```c

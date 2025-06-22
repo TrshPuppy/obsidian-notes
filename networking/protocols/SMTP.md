@@ -174,5 +174,6 @@ Monitor network traffic patterns
 > - [Sam Login: SMTP Auth Command](https://www.samlogic.net/articles/smtp-commands-reference-auth.htm)
 
 >[!Related]
-> [RFC-5321](https://datatracker.ietf.org/doc/html/rfc5321#section-2.3.7)
-> `port 25`
+> - [RFC-5321](https://datatracker.ietf.org/doc/html/rfc5321#section-2.3.7)
+> - `port 25`
+> - `port 587`

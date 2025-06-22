@@ -36,6 +36,9 @@ The `CreateProcess` function interprets the value of `lpApplicationName` from le
 
 So, if `lpApplicationName` is set to the (unquoted) value `C:\My Folder\myExecutable.exe`, then the function will stop on the space in `My Folder` and first check for the executable at the path `C:\My\`. If no executable is there, then it will next check for it at the path `C:\My Folder\`. 
 ### My Own Testing
+> [!Note]
+> Shiz got borked with my local repo on my other machine so the content is locked. I'll fix it eventually... Sorry!
+
 So, if you create a service using `sc.exe` in a [PowerShell](../../../coding/languages/powershell.md) terminal, it's actually super hard to *QUOTE A SERVICE'S FILEPATH*. (fuck PS and Windows for real). 
 
 I made my own little test. First, I used `sc.exe` to create a file called `test` in a folder named `\test folder`:

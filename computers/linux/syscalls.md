@@ -7,7 +7,7 @@ Syscalls are implemented in Unix operating systems as a means to allow programs 
 There are 300+ system calls categorized by their function. In general, functionality includes: process mgmt, file operations, device I/O, networking, and memory allocation, etc..
 ## Example Syscalls
 ### [ioctl](ioctl.md)
-The `ioctl` syscall has to do with manipulating [device files](device-file.md). 
+The `ioctl` syscall has to do with manipulating [device files](file-system/device-file.md). 
 
 > [!Resources]
 > - [The Linux Code: Golang Syscall Examples](https://thelinuxcode.com/golang-syscall-examples/)

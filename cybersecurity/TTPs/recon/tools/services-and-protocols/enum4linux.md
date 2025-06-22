@@ -1,8 +1,6 @@
  
 # enum4linux CLI Enumeration tool
-Init.
-
-
+INIT
 ## Usage Examples
 ```bash
 └─$ enum4linux
@@ -58,6 +56,8 @@ NB: Samba servers often seem to have RIDs in the range 3000-3050.
 ```bash
 enum4linux <IP address>
 ```
+### Aggressive (`-A`)
+
 ### Loop through list of IPs
 ```bash
 for host in $cathosts; do enum4linux $host >> enum4output; done

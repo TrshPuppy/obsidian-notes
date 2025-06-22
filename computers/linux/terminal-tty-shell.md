@@ -13,7 +13,7 @@ These pieces of equipment used to look a lot like typewriters, hence the term 't
 ![](computers/computers-pics/ASR-33_Teletype_terminal_IMG_1658.jpg)
 > From [Wikipedia](https://en.wikipedia.org/wiki/Teleprinter#/media/File:ASR-33_Teletype_terminal_IMG_1658.jpg), a Model 33 ASR Teletype used for 'modem-based computing.'
 ## TTY
-In Unix a tty is a [device file](/computers/linux/device-file.md). Besides reading and writing, it also implements additional commands called *'ioctls'*
+In Unix a tty is a [device file](file-system/device-file.md). Besides reading and writing, it also implements additional commands called *'ioctls'*
 ### Termios
 Termios is a function/ interface which represents a terminal interface in Linux. Attached to the termios interface are flags which can be set to different values which then effect the properties and function of the terminal interface.
 #### Structure

