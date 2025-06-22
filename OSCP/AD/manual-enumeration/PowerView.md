@@ -12,7 +12,7 @@ Let's assume the script is already installed in `C:\Tools` and all we have to do
 PS C:\Tools> Import-Module .\PowerView.ps1
 ```
 ## Enumerating Objects
-For a full list of commands and functionality check out the [PowerView Usage Docs](https://powersploit.readthedocs.io/en/latest/Recon/). 
+For a full list of commands and functionality check out the [PoerView Usage Docs](https://powersploit.readthedocs.io/en/latest/Recon/). 
 ### `Get-NetDomain`
 We can start by using `Get-NetDomain` which will tell us basic info about the domain:
 ```powershell
