@@ -94,7 +94,7 @@ In the output, we can see that `FileZilla 3.63.1` is installed. This is a [FTP](
 
 If we can place a malicious file there in place of the original DLL, then when someone executes FileZilla, our DLL will be loaded *and adopt the permissions of the current user* who starts the program.
 ### Testing Permissions
-Before replacing the DLL with out malicious version, we should check to make sure we even have write permission to the installation directory. We can do that easily from the command line:
+Before replacing the DLL with our malicious version, we should check to make sure we even have write permission to the installation directory. We can do that easily from the command line:
 ```powershell
 PS C:\Users\steve> echo "test" > 'C:\FileZilla\FileZilla FTP Client\test.txt'
 

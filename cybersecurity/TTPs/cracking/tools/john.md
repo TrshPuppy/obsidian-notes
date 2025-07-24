@@ -78,9 +78,33 @@ john --wordlist=/usr/share/wordlists/rockyou.txt ssh.hashes
 ## Rulesets
 You can define ruleset for manipulating *words in the wordlist*. Useful for when you know what password complexity policies are in place:
 ![See my OSCP notes on using John's `--rules`](../../../../OSCP/password-attacks/cracking-SSH.md#Using%20John's%20`--rules`)
+## Examples which. worked!
+### Cracking a KeePass (`.kbdx`) File
+```bash
+┌──(root㉿kali)-[/home/trshpuppy/oscp/relia/exfil]
+└─# keepass2john Emma-Database.kdbx > EmmaKeePasshash.txt
+                                                                                                
+┌──(root㉿kali)-[/home/trshpuppy/oscp/relia/exfil]
+└─# john --wordlist=/usr/share/wordlists/rockyou.txt EmmaKeePasshash.txt 
+Created directory: /root/.john
+Using default input encoding: UTF-8
+Loaded 1 password hash (KeePass [SHA256 AES 32/64])
+Cost 1 (iteration count) is 60000 for all loaded hashes
+Cost 2 (version) is 2 for all loaded hashes
+Cost 3 (algorithm [0=AES 1=TwoFish 2=ChaCha]) is 0 for all loaded hashes
+Will run 2 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+welcome1         (Emma-Database)     
+1g 0:00:00:05 DONE (2025-07-11 12:05) 0.1680g/s 301.1p/s 301.1c/s 301.1C/s 2hot4u..divina
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed. 
+```
+
+
 
 > [!Resources]
 > - [freeCodeCamp: Crack Passwords Using John the Ripper](https://www.freecodecamp.org/news/crack-passwords-using-john-the-ripper-pentesting-tutorial/)
 > - [erev0s: Cracking /etc/shadow with John](https://erev0s.com/blog/cracking-etcshadow-john/)
+
 
 

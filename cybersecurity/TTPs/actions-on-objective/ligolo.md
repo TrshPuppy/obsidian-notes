@@ -49,7 +49,11 @@ ligolo-ng >> session ? Specify a session : 1 - <usr>@<hostname> - XX.XX.XX.XX:38
 ``` 
 once specified, we can see their configuration 
 ``` 
-[Agent : <usr>@<hostname>] >> ifconfig ┌────────────────────────────────────┐ │ Interface 0 │ ├──────────────┬─────────────────────┤ │ Name │ lo │ │ Hardware MAC │ │ │ MTU │ 65536 │ │ Flags │ up|loopback|running │ │ IPv4 Address │ 127.0.0.1/8 │ │ IPv6 Address │ ::1/128 │ └──────────────┴─────────────────────┘ 
+[Agent : <usr>@<hostname>] >> ifconfig 
+┌────────────────────────────────────┐ 
+│ Interface 0 │ 
+├──────────────┬─────────────────────┤ 
+│ Name │ lo │ │ Hardware MAC │ │ │ MTU │ 65536 │ │ Flags │ up|loopback|running │ │ IPv4 Address │ 127.0.0.1/8 │ │ IPv6 Address │ ::1/128 │ └──────────────┴─────────────────────┘ 
 ```
 in a new terminal 
 ```
@@ -79,3 +83,6 @@ listener_list listener_stop 0
 ```
 sudo ip link delete ligolo
 ```
+
+> [!Resources]
+> - [Ligolo-ng Docs](https://docs.ligolo.ng/)
