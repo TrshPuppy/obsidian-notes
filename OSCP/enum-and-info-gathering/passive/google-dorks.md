@@ -24,7 +24,7 @@ intitle:"index of" site:megacorpone.com
 ```
 ## Resources
 ### Google Hacking Database
-[Google Hacking Database](https://www.exploit-db.com/google-hacking-database) is a database hosted by [Exploit DB](../../../cybersecurity/TTPs/exploitation/tools/exploit-db.md) of tasty Google Dorks other people have discovered. Peruse it to find some you may want to use.
+[Google Hacking Database](https://www.exploit-db.com/google-hacking-database) is a database hosted by [Exploit DB](../../../cybersecurity/TTPs/exploitation/tools/ExploitDB.md) of tasty Google Dorks other people have discovered. Peruse it to find some you may want to use.
 ### [DorkSearch](https://dorksearch.com/)
 Provides a subset of pre-built quieies and a tool to build queries for searches. 
 

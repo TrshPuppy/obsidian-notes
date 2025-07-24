@@ -30,7 +30,7 @@ First, the OS will search for `myExecutable.exe` in `C:\My\`. If it doesn't find
 
 In Windows, this is considered normal behavior, but it serves as the basis for the [_Unquoted service paths_](https://www.tenable.com/sc-report-templates/microsoft-windows-unquoted-service-path-vulnerability) vulnerability. An attacker can exploit this vulnerability simply by *creating the `C:\My\` directory and placing a malicious file called `MyExecutable.exe` there*.   
 ## How the Vuln is Introduced
-When a [Windows Service](windows-services.md) is started the process for it is also created which means the [_CreateProcess_](https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) function is used. The first parameter defined for this function is called `IpApplicationName` and is used to specify the name and (optionally) *the path to the executable file*. 
+When a [Windows Service](README.md) is started the process for it is also created which means the [_CreateProcess_](https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessa) function is used. The first parameter defined for this function is called `IpApplicationName` and is used to specify the name and (optionally) *the path to the executable file*. 
 
 The `CreateProcess` function interprets the value of `lpApplicationName` from left to right. If the service's file path *is not quoted* and includes directories with spaces in their names, then when the function comes across a space, it has to determine whether the space indicates that the file path has ended and the next token is the first argument, or if the file path includes a space and the next token is still part of the file path.
 

@@ -175,7 +175,7 @@ Additionally, when the time does come for privilege escalation, it does not need
 
 There may be multiple avenues to the *crown jewels* so enumerating the current user and figuring out their permissions, the groups they're in etc. is an important tactic.
 ### `Find-LocalAdminAccess`
-This is a PowerView command which *scans the network* to find out if our *current user* has administrative permissions on any computers in the domain. The command uses the [_OpenServiceW function_](https://learn.microsoft.com/en-us/windows/win32/api/winsvc/nf-winsvc-openservicew) which connects to the [Service Control Manager](../../windows-privesc/windows-services/windows-services.md#Windows%20Services%20Overview) (SCM) on target machines.
+This is a PowerView command which *scans the network* to find out if our *current user* has administrative permissions on any computers in the domain. The command uses the [_OpenServiceW function_](https://learn.microsoft.com/en-us/windows/win32/api/winsvc/nf-winsvc-openservicew) which connects to the [Service Control Manager](../../windows-privesc/windows-services/README.md#Windows%20Services%20Overview) (SCM) on target machines.
 
 PowerView attempts to open the SCM database using the `SC_MANAGER_ALL_ACCESS` access right. This right *requires admin privileges*, so if the connection is successful, then PowerView deems the user account has admin privileges on that target machine:
 ```powershell

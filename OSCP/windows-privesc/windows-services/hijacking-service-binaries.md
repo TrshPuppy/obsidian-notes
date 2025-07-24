@@ -4,7 +4,7 @@ aliases:
 ---
 
 # Hijacking Service Binaries
-Each [windows service](windows-services.md) *has an associated binary* which executes when the service is started or transitioned to a running state. 
+Each [windows service](README.md) *has an associated binary* which executes when the service is started or transitioned to a running state. 
 
 When service binaries are created (by developers) there's the chance they *misconfigure* the binary's permissions. For example, they could accidentally allow read and write access to all members in the same group as the executing user. This would cause the binary to be vulnerable to *hijacking* where a lower-privileged user in the same group can replace (over*Write*) the binary with a malicious one.
 

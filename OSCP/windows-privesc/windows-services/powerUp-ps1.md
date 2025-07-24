@@ -15,7 +15,7 @@ PS C:\Users\dave> powershell -ep bypass
 PS C:\Users\dave>  . .\PowerUp.ps1
 ```
 ### `Get-ModifiableServiceFile`
-After importing the script, we can use `Get-ModifiableServiceFile` which is a function that displays [windows-services](windows-services.md) the current user *is allowed to modify*:
+After importing the script, we can use `Get-ModifiableServiceFile` which is a function that displays [README](README.md) the current user *is allowed to modify*:
 ```powershell
 PS C:\Users\dave> Get-ModifiableServiceFile
 

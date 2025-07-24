@@ -15,7 +15,7 @@ This file really is just here to make it easier to link Windows Privesc througho
 	- [powershell-logging](enumeration/powershell-logging.md)
 	- Finding [sensitive-files](enumeration/sensitive-files.md)
 - Exploiting Windows Services for Privesc
-	- [Windows Services](windows-services/windows-services.md) Overview
+	- [Windows Services](windows-services/README.md) Overview
 	- [Service Binary Hijacking](windows-services/hijacking-service-binaries.md)
 	- [PowerUp.ps1](windows-services/powerUp-ps1.md)
 	- [DLL Hijacking](windows-services/DLL-hijacking.md)
