@@ -1,0 +1,6 @@
+---
+aliases:
+  - bloodhound
+---
+INIT
+# BloodHound
