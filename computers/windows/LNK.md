@@ -19,3 +19,6 @@ The format of a `.lnk` file includes five structures, not all of which are requi
 > [!Resources]
 > - [Sustainability of Digital Formats: Microsoft Windows Shortcut File](https://www.loc.gov/preservation/digital/formats/fdd/fdd000596.shtml?loclr=blogsig)
 > - [ForensicsWiki: LNK (archive.org)](https://web.archive.org/web/20220519184752/https://forensicswiki.xyz/page/LNK)
+
+> [!Related]
+> - [OSCP Notes on Abusing .LNK files](../../OSCP/client-side-attacks/abusing-library-files.md)
