@@ -7,7 +7,7 @@ The processes started by the user or on their behalf while they're logged in *in
 Access tokens can be abused for [privesc](./README.md) because you can use them *to impersonate other users*. 
 ## Abusable Privileges
 ### `SeImpersonatePrivilege`
-This privilege is the "impersonate a client after authentication" user right and  it allows the user to *impersonate any token*, but does not allow the holder to create tokens.
+This privilege is the "impersonate a client after authentication" user right and it allows the user to *impersonate any token*, but does not allow the holder to create tokens.
 
 By default, members of the `Local Administrators` group and *all local Service accounts* are assigned this privilege. As long as the target account *has authenticated* users w/ this privilege can use it to impersonate that account.
 ![](../../../cybersecurity-pics/token-abuse-1.png)

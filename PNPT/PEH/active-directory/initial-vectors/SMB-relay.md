@@ -49,7 +49,7 @@ Regardless of the number of targets which come back as not requiring SMB signing
 Once we've found a good host, we're going to use a combination of Responder and `smbrelayx.py`to capture a hash and then relay if (using our own server) to the target.
 
 First, we have to update our Responder configuration so it doesn't act as the server (since the impacket script will do that for us).
-`/usr/share/responder/responder.conf`
+`/usr/share/responder/Responder.conf`
 ```bash
 [Responder Core]                                                           
 ; Servers to start                                                                
