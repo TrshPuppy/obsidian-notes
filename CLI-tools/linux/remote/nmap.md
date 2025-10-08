@@ -41,6 +41,11 @@ nmap -PA1-1000 $t
 Starting Nmap 7.94 ( https://nmap.org ) at...
 ```
 The `-PS` flag is similar to `-PA` but instead of sending an SYN packet, nmap *sends an ACK* packet. The reason for sending different packet types *is to test for [firewalls](cybersecurity/defense/firewalls.md)*.
+#### Large Network Host Discovery
+This command does a good job on host discovery for large networks. For example, if you need to scan a `/24` [CIDR](../../../networking/routing/CIDR.md) range:
+```bash
+nmap -iL scope.txt -PE -PP -PM -sn -T4 --max-retries 3 --max-rtt-timeout 300ms -oA nmap/disco -n --reason --open -PS21,22,23,25,135,139,445,3389,1433,80,443,8080,8443,90,3268,110,53,3306,1723,111,995,993,5900,1025,1720,465,548,5060,8000,515,2049,6000,389,5432
+```
 ### `-sT` TCP scan:
 TCP connect scan scans for [TCP](/networking/protocols/TCP.md) ports and performs the *entire three way handshake* with the target system. nmap reports the port status depending on the flags it exchanges with the target.
 #### Results:

