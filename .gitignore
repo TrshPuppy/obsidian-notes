@@ -17,7 +17,7 @@ nested-repos
 PNPT-old
 OSCP/OSCP-hidden
 OSCP/challenge-labs
-
+*hide-*
 
 # Submod specifics:
 /nested-repos/PNPT-study-guide/PNPT-hidden
