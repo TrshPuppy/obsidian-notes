@@ -24,9 +24,7 @@ In AD, every object has a unique [Distinguished Name](../../../computers/windows
 ```
 CN=Stephanie,CN=Users,DC=corp,DC=com
 ```
-`CN` stands for Common Name (CN) (attribute = `commonName`). The two CNs refer to the `stephanie` user account object, and then the `Users` group object.
-
-`DC` stands for Domain Component (DC) (attribute = `domainComponent`). The two DCs represent the *tops of LDAP trees*, which in this case is the DN of the *domain itself*.
+`CN` stands for Common Name (CN) (attribute = `commonName`). The two CNs refer to the `stephanie` user account object, and then the `Users` group object. `DC` stands for Domain Component (DC) (attribute = `domainComponent`). The two DCs represent the *tops of LDAP trees*, which in this case is the DN of the *domain itself*.
 
 When reading a DN, you should start *from the right* because the name denotes a hierarchy with each item being the next level *down* in the hierarchy. 
 ![](../../oscp-pics/AD-manual-enumeration-1.png)

@@ -185,6 +185,10 @@ C\
 ```PowerShell
 invoke-webrequest google.com
 ```
+ALSO
+```powershell
+iwr -uri 'http://address.com:PORT/file.txt' -Outfile file.txt
+```
 ### 6. Script to decode Base64 encoded text
 ```PowerShell
 $file = cat b64.txt

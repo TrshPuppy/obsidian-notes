@@ -49,7 +49,7 @@ PS C:\tools> .\mimikatz.exe
 mimikatz #
 ```
 Once you start it, it will give you a little repl shell thing. Now you can run mimikatz commands.
-#### Enabling Privileges
+##### Enabling Privileges
 There are a few commands for extracting passwords/tokens/hashes, etc. but a lot of them require the `SeDebugPrivilege` access right and `SYSTEM` level privileges. We can use `privilege::debug` to gain those:
 ```powershell
 mimikatz # privilege::debug

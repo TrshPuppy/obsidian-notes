@@ -2,7 +2,7 @@
 aliases:
   - DLL Hijacking
 ---
-# DLL Hijacking
+ DLL Hijacking
 Compared to [Service Binary Hijacking](hijacking-service-binaries.md), DLL Hijacking is a more advanced technique for [Windows privesc](../README.md). Keep this in your back pocket for *when the user account doesn't have the required permissions* to do service binary hijacking.
 ## DLL Overview
 [Dynamic Link Libraries](../../../computers/windows/DLL.md) (DLLs) are libraries on [Windows](../../../computers/windows/README.md) operating systems which provide resources like code, icon files, etc. for *other programs to use*. For developers, they provide an easy way to integrate functionality *which already exists* in the Windows OS so they don't have to re-write commonly used code and functions and resources. 
