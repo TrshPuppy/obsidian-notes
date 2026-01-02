@@ -65,6 +65,8 @@ Once you've gained access to the SMB server on the target, you're given a shell 
 ```smb
 <REMOTE_FILE_PATH>/<REMOTE_FILE_NAME> <LOCAL_FILE_PATH>/<LOCAL_FILE_NAME>
 ```
+**BONUS TIP BIOTCH**:
+If you want to recursively list all of the directories in a share, use `RECURSE ON` and then `PROMPT OFF` in the SMB repl. Then when you use `ls` it will list everything.
 
 > [!Resources]
 > - `man smbclient`

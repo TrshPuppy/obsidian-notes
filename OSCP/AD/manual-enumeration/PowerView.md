@@ -243,6 +243,22 @@ From the output, it appears `stephanie` should have permission to use `NetSessio
 In short, on Windows 11 (the OS of our executing machine) `NetSessionEnum` will *not be able to obtain* the info we want. This is because Microsoft at some point *changed the registry hive* (mentioned above).
 ##### Capability SIDs
 The output also shows a long string at the end which, according to [Microsoft's documentation](https://learn.microsoft.com/en-us/troubleshoot/windows-server/windows-security/sids-not-resolve-into-friendly-names) is a *Capability SID*.  Capability SIDs are [tokens](../../windows-privesc/security-mechanisms/access-tokens.md) of authority which are *unforgeable*. They grant access to various resources to either a "Windows component" or "Universal Windows Application." 
+## Enumerating Operating Systems
+With PowerView we can use `Get-NetComputer` to enumerate *computer objects* in the domain. We can cut down on the output by piping it to `select` and selecting for specific properties like `operatingsystem` and `dnshostname`, etc:
+```powershell
+PS C:\Tools> Get-NetComputer | select operatingsystem,dnshostname
+
+operatingsystem              dnshostname
+---------------              -----------
+Windows Server 2022 Standard DC1.corp.com
+Windows Server 2022 Standard web04.corp.com
+Windows Server 2022 Standard FILES04.corp.com
+Windows 11 Pro               client74.corp.com
+Windows 11 Pro               client75.corp.com
+Windows 10 Pro               CLIENT76.corp.com
+```
+From the output we can tell there are *6 computers*, three of which are servers. One of those servers is the DC.
+
 
 --- 
 > [!Resources]

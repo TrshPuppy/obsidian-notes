@@ -1,0 +1,4 @@
+# Files
+```
+wp-config.php
+```
