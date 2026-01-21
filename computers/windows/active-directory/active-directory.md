@@ -48,7 +48,7 @@ Domains and computers are represented *as objects (in the AD)* and as *nodes* in
 Data stored in an AD is stored in an *AD container object*. This object contains *2 other nested sub objects* and together they make up a *`dnsZone`* classed object. 
 
 Each `dnsZone` object contains a `dnsNode` object for *every unique name in the zone*. Each `dnsNode` object contains a `dnsRecord` attribute which stores the value of *every resource record associated w/ that DNS name*.
-![](computers/computers-pics/active-directory-2.png)
+![](/computers/computers-pics/active-directory-2.png)
 > I made this lol
 ### Data Store
 Every domain controller in a forest *has a data store*. Data stores are made up of several components which store and retrieve data in the directory.

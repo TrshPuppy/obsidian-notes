@@ -65,7 +65,7 @@ The `.` at the end of the first command points to the directory in which the Doc
 Docker allows you to mount volumes/ share directories b/w host and guest in a few different ways. These include volumes, tmpfs, and bind mounts. Of these, volumes are considered the best way to persist data beyond the life of the container.
 
 Volumes are preferred b/c, when used, a separate filesystem is created and maintained by Docker w/i the host's filesystem.
-![](computers/computers-pics/docker-1.png)
+![](/computers/computers-pics/docker-1.png)
 > [Docker](https://docs.docker.com/storage/volumes/)
 #### Create Volumes:
 If you start a container w/ a volume which doesn't exist yet, Docker will create it for you.

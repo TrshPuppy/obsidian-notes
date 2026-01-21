@@ -10,7 +10,9 @@ Minifilters attach in a specific order based on their *"altitudes"*. A minifilte
 A minifilter's altitude accomplished two things:
 - it ensures the minifilter instance *is always loaded* at the right location relative to other instances
 - it determines the order the instance is called *by the filter manager to handle I/O*
+<br>
 ![](../../computers-pics/filter-manager-1.png)
+<br>
 When the filter manager calls a specific minifilter to handle an I/O operation, it calls each minifilters' *callback routine* (for minifilters which registered to for the operation). Once one callback routine returns, the filter manager calls the callback routine *of the next minifilter*. 
 
 > [!Resources]

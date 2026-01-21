@@ -26,7 +26,7 @@ In this case, you need valid credentials.
 ## Enumeration
 To access Elasticsearch you have to use [HTTP](../../../www/HTTP.md) at port `9200`. Doing so on a target will bring you to the *Banner page* which has a lot of interesting information on it:
 `http://<target IP>:9200/`
-![](../../cybersecurity-pics/elasticsearch-1%201.png)
+![](../../cybersecurity-pics/elasticsearch-2.png)
 ### Listing roles
 ```bash
 #List all roles on the system:

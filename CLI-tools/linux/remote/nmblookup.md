@@ -41,7 +41,7 @@ Connection options:
 ```
 ### Output
 The output from `nmblookup` includes tags which tell you what type of service each found service is. 
-![](CLI-tools/CLI-tools-pics/nmblookup-1.png)
+![](/CLI-tools/CLI-tools-pics/nmblookup-1.png)
 > [Hacking Articles](https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/)
 
 In the above image, the tag `<00>` next to `DESKTOP-ANTONJ9` tells us that the service is a *Workstation Service* (Workgroup/ domain name). Other tags include:

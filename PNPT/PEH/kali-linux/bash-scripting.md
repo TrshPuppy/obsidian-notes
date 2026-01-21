@@ -5,7 +5,7 @@ Bash (Bourne Again Shell) is a Linux shell and command/ coding language. It's th
 A shell is an interpreter program in the command line which can be used to send commands to the operating system. It can be considered the OS's interactive interface, and the outer-most layer of the kernel. 
 
 It allows users and/ or programs to send messages and signals to the operating system and its low-level utilities.
-![](PNPT/PNPT-pics/bash-scripting-1.png)
+![](/PNPT/PNPT-pics/bash-scripting-1.png)
 ![](/PNPT-pics/bash-scripting-1.png)<br>
 -[Phoenix Nap: 8 Types of Linux Shells](https://phoenixnap.com/kb/linux-shells)
 ## Ping Sweeping:

@@ -105,7 +105,7 @@ enum4linux enumerates target information by using other common SMB commands. The
 This Nmap script is specific for enumerating NetBIOS names and MAC addresses on the target. It returns the name of the computer logged in as well as the user. If you *increase the verbosity* it can also return all the names it *thinks the system owns*.
 
 It will also give us the same flags that `nmblookup` gives us.
-![](PNPT/PNPT-pics/enumerating-SMB-1.png)
+![](/PNPT/PNPT-pics/enumerating-SMB-1.png)
 ![](/PNPT-study-guide/PNPT-pics/enumerating-SMB-1.png)
 > [Hacking Articles](https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/)
 ### Nmap `smb-os-discovery.nse` script
@@ -114,8 +114,7 @@ This Nmap script *initiates a connection with the target* via SMB using an anony
 This is possible because the SMB server *sends all of this information back when you initiate a connection* with it. Other info this script can return includes:
 - Forest name
 - FQDN
-![](PNPT/PNPT-pics/enumerating-SMB-2.png)
-![](/PNPT-study-guide/PNPT-pics/enumerating-SMB-2.png)
+![](/PNPT/PNPT-pics/enumerating-SMB-2.png)
 > [Hacking Articles](https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/)
 ## TIPS
 ### **CHECK /etc/samba/smb.conf**

@@ -119,7 +119,7 @@ This describes the ability of the organization to protect the information from b
 This describes the availability of the information to authorized users as they need it.
 ### Environmental Metric Impact
 In this example, a CVE has been given a CVSS of 9.9 (after the Base and Temporal metrics have been graded). With aggressive environmental controls and mitigations, the Environmental Metric is scored as a 3.2, bringing the overall CVSS *down from 9.9 to 3.2*.
-![](cybersecurity/cybersecurity-pics/CVSS-2.png)
+![](/cybersecurity/cybersecurity-pics/CVSS-2.png)
 > [Balbix](https://www.balbix.com/insights/environmental-cvss-scores/)
 
 > [!Resources]

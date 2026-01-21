@@ -95,7 +95,7 @@ For `TRUN` we'll do the same thing, except change the `s_string()` variable para
 generic_send_tcp $t 9999 trun.spk 0 0
 ```
 This time when we run the command, the immunity debugger shows that the vulnserver process pauses and shows an access violation. This means we were able to *crash vulnserver*. This tells us that the `TRUN` command is vulnerable.
-![](PNPT/PNPT-pics/spiking-1.png)
+![](/PNPT/PNPT-pics/spiking-1.png)
 In Immunity Debugger, if we look at the registers, we can see that the buffer allocated for the `TRUN` command *has been overflowed with out `A` characters.* The stack (`ESP`) and base (`EBP`) pointers have also been overflowed on the stack.
 
 And if we look at the value currently held in the `EIP` register, we see `41414141`. '41' is the char code for `A`, which means we've also managed to overflow the instruction pointer, which is our ultimate target.

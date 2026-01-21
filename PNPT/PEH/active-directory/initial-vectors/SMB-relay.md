@@ -11,7 +11,7 @@ The service on the client encrypts the challenge w/ the user's password and send
 An attacker can exploit this vulnerable exchange by capturing the traffic b/w the service and the server, modifying it, and essentially hijacking the authentication by the server of the service (the attacking machine gets authenticated instead).
 
 By hijacking the authentication, the attacker gains access *to the target server which sent the challenge*.
-![](PNPT/PNPT-pics/smbrelay.png)
+![](/PNPT/PNPT-pics/smbrelay.png)
 > [Cowdex](https://cowdex.github.io/posts/smb-relay-attack/)
 #### Requirements:
 - SMB Signing disabled

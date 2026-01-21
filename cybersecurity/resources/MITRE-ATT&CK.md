@@ -7,7 +7,7 @@ ATT&CK is an acronym which stands for Adversarial Tactics Techniques & Common Kn
 If you go to their website and click [CTI -> Groups](https://attack.mitre.org/groups/) you can see a list of groups including APTs (Advanced Persistent Threat) and other named associations.
 
 Each group has a *unique ID* to help track them since they're often given multiple pseudonyms. If you click on a group, you can see a list of *the techniques they've been noted using*.
-![](cybersecurity/cybersecurity-pics/mitre-attack-1.png)
+![](/cybersecurity/cybersecurity-pics/mitre-attack-1.png)
 > [MITRE ATT&CK](https://attack.mitre.org/groups/G0006/)
 ## Techniques
 The [front page] of MITRE ATT&CK has a table of techniques and sub-techniques. There are 14 major techniques which include:

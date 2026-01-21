@@ -54,7 +54,7 @@ Or by using the browser from your terminal:
 ```bash
 firefox http://10.0.3.5:80
 ```
-![](PNPT/PNPT-pics/enumerating-HTTP-HTTPS-1.png)
+![](/PNPT/PNPT-pics/enumerating-HTTP-HTTPS-1.png)
 ![](/PNPT-pics/enumerating-HTTP-HTTPS-1.png)
 > - Kioptrix VM
 ## Vulnerability Scanning (w/ [nikto](../../../cybersecurity/TTPs/recon/tools/vuln-scanning/nikto.md))
@@ -64,7 +64,7 @@ firefox http://10.0.3.5:80
 By investigating these ports, we can see a default page left up accidentally by the target. This indicates *poor hygiene* and can be included in a pen-test report as a finding.
 ### Information Disclosure
 The URLs included in the HTML can also tell us more about the target. For example, clicking the link to "DocumentRoot" takes us to another part of the website `http://10.0.3.5:80/manual/mod/core.html#document` where we see a `404` response error code.
-![](PNPT/PNPT-pics/enumerating-HTTP-HTTPS-2.png)
+![](/PNPT/PNPT-pics/enumerating-HTTP-HTTPS-2.png)
 ![](/PNPT-study-guide/PNPT-pics/enumerating-HTTP-HTTPS-2.png)
 This page not only tells us that this presumably once-working link is now broken (poor hygiene), we also see *Apache versioning*, and the target's *hostname* (in this case it's localhost). This information is considered *not for us* and can be included in the report under "information disclosure".
 

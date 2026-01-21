@@ -12,13 +12,16 @@ dig  [@server] [-b address] [-c class] [-f filename] [-k filename] [-m]
 dig <domain> @<dns-server-ip>
 ```
 Example:
+<br>
 ![](/CLI-tools/CLI-tools-pics/dig-1.png) 
 > [TryHackMe](https://tryhackme.com/room/dnsindetail)
 ### `ANSWER` section: 
 Contains the IP address you're looking for.
 ### `TTL` (Time to Live)
 When your computer queries a domain name, it stores the result in local cache. The TTL tells your computer *when to stop considering the record as valid* (when it should request the data again).
+<br>
 ![](/CLI-tools/CLI-tools-pics/dig-2.png)
+<br>
 The TTL is measured in seconds. So for this example, the record expires in 2 minutes and 30 seconds
 ## Usage Examples
 ### `+short`

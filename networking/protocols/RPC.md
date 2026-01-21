@@ -16,7 +16,7 @@ The RPC protocol used in remote procedure call communications allows a program t
 When a program on the client wants to make a RPC, it needs to know *where* to request the procedure and send the required parameters. To get this info, it sends a request to the rpcbind service running on `port 11`1. The request includes the *program number* it wants to call.
 
 The rpcbind service uses the program number to look up the port number of the requested service in its database. It then returns the port number to the client, which the client can use to send its RPC request.
-![](networking/networking-pics/RPC-1.png)
+![](/networking/networking-pics/RPC-1.png)
 >	[VMWare](https://www.slideserve.com/roz/network-file-systems-nfs-and-remote-procedure-calls-rpc-powerpoint-ppt-presentation)
 ## Security
 Exposing the rpcbind port/ `port 111` can be a security issue for a few reasons.

@@ -3,10 +3,14 @@
 Computing based on quantum physics. Most computers function using *'classical mechanics'* where the smallest form of information *is a single bit*. Quantum computing is based on *quantum mechanics* where the smallest form of information *is a qubit*. 
 ## Quantum Superposition
 Qubits can have a value of `1`, `0` or *any combination in between at the same time*. This is known as *Quantum Superposition*. So, any one qubit is effectively a zero and a one *at the same time*.
+<br>
 ![](../computers-pics/quantum-1.png)
+<br>
 ### Vs. Binary Calculations
 The following image shows *all the permutations* a collection of 4 bits can have. Since each can either be a one or a zero, there are `2^4` (16) possible values. Compare that to 4 qubits which can represent *all 16 permutations at the same time*:
+<br>
 ![](../computers-pics/quantum-2.png)
+<br>
 So, compared to binary computing, quantum computing can represent *more information per qubit* than can be represented by one binary bit.
 ## Advantages
 Because so much information can be stored/ represented by *far less units of info*, quantum computing presents a lot of advantages. For example, searching through a large database would be much faster because *you can index everything at the same time*.
