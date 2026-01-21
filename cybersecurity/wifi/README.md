@@ -10,4 +10,4 @@ There are four main types of authentication in wifi, each progressively more sec
 - WPA2: uses Advanced Encryption Standard ([AES](../../computers/concepts/cryptography/AES.md)) - used in most networks and provides strong protection
 - WPA3: the latest standard - adds individualized encryption, and more robust password-based authentication
 ## 802.11 Frames and Types
-![My notes on IEEE 802.11](../../networking/networking-pics/802.11.md)
+![My notes on IEEE 802.11](../../networking/wifi/802.11.md)
