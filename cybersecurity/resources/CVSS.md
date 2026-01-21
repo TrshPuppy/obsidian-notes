@@ -55,7 +55,7 @@ This sub-metric of the Temporal score describes whether this vulnerability and/o
 This score is important because *most exploits are theoretical* and not actually seen being used by attackers. It's important to capture this feature of the environment because *most hackers are very unskilled* and thus less likely to use complex, theoretical exploits.
 
 The impact of this metric on the Base Score can be drastic. For example:
-![](cybersecurity/cybersecurity-pics/CVSS-1.png)
+![](/cybersecurity/cybersecurity-pics/CVSS-1.png)
 > [Balbix](https://www.balbix.com/insights/temporal-cvss-scores/)
 
 This image shows a CVE with a base score of 6.8. Once it's been determined that the exploit code *doesn't exist* and the vendor *has released a widely-available patch* the score decreases to 5.5.
