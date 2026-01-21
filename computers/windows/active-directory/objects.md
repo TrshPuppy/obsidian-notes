@@ -42,7 +42,7 @@ When an object is created, its assigned a *128-bit unique* value called a Global
 ### SIDs & Security Principles
 Security Principles are a special category of objects which *can be authenticated* by the [operating system](../../concepts/operating-system.md). Users, computers, and Groups *are all security principles*.  In addition to having a GUID, security principles are assigned *a second unique identifier* called a Security Identifier (*SID*).
 ### Distinguished Names
-These are analogus to the *absolute path* of the object in a file system. It specified complete information *on the object's location* within the domain. The name itself includes:
+These are analogous to the *absolute path* of the object in a file system. It specified complete information *on the object's location* within the domain. The name itself includes:
 - the domain name
 - OUs it belongs to
 - the object's name

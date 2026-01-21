@@ -1,6 +1,6 @@
 
 # AlwaysInstallElevated
-MSI files are files used *to install applications*. They always fun with the permissions of the user who is installing them. Windows allows these applications to be run *w/ elevated/ admin privileges*. If the target system does this, then we can abuse this by generating a malicious MSI file that does what we want (like establish a revshell for instance).
+MSI files are files used *to install applications*. They always run with the permissions of the user who is installing them. Windows allows these applications to be run *w/ elevated/ admin privileges*. If the target system does this, then we can abuse this by generating a malicious MSI file that does what we want (like establish a revshell for instance).
 ## Enumeration
 There are two settings in the [registry](../../../computers/windows/registry.md) which *must be enabled* for this to work. The value for **AlwaysInstallElevated** must have be set to `1` for both the local machine and the current user.
 1. local machine: `HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer`

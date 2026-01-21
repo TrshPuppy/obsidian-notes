@@ -35,3 +35,25 @@ Search options:
 ```bash
 ldapsearch -D 'guest' -b 'DC=EGOTISTICAL-BANK,DC=LOCAL' -H ldap://egotistical-bank.local:389
 ```
+## Other Tips
+### Unauthenticated Checks
+#### Dump of all Objects
+```bash
+ldapsearch -LLL -x -H ldap://<domain fqdn> -b '' -s base '(objectclass=*)'
+```
+### Authenticated Checks
+#### Extract all User Objects
+```bash
+ldapsearch -x -h <IP Address> -D '<domain>\<username>' -w '<password>' -b "CN=Users,DC=<domain>,DC=<domain>"
+```
+#### Extract all Computer Objects
+```bash
+```ldapsearch -x -h <IP Address> -D '<domain>\<username>' -w '<password>' -b "CN=Computers,DC=<domain>,DC=<domain>"
+```
+#### Extract all Domain Admins
+```bash
+ldapsearch -x -h <IP Address> -D '<domain>\<username>' -w '<password>' -b "CN=Domain Admins,CN=Users,DC=<domain>,DC=<domain>"
+```
+
+> [!Resources]
+> - [curtishoughton: Pentesting Cheat Sheet - LDAP](https://github.com/curtishoughton/Penetration-Testing-Cheat-Sheet/blob/master/Enumeration/LDAP/LDAP.md)

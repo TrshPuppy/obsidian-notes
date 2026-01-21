@@ -46,3 +46,5 @@ This directory is LARGE and is organized based on the [Cyber Kill Chain](TTPs/cy
 - `/recon`
 ### [Vulnerabilities](/cybersecurity/vulnerabilities)
 This holds my notes on various specific vulnerabilities. For example [EternalBlue](vulnerabilities/EternalBlue.md) and [openfuck](/cybersecurity/vulnerabilities/openfuck.md).
+### [Wifi](wifi/README.md)
+I didn't know where to put wifi hacking stuff so its here.

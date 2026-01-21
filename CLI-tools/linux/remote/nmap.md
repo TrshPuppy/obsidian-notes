@@ -330,8 +330,19 @@ Nmap done: 0 IP addresses (0 hosts up) scanned in 0.54 seconds
 ![Vulners script](../../../OSCP/vuln-scanning/nmap-vuln-scanning.md#Vulners%20script)
 [Vulnerability Scanning w/ Nmap](../../../OSCP/vuln-scanning/nmap-vuln-scanning.md#Vulnerability%20Scanning%20w/%20Nmap)
 ## Examples which worked
+### -sS TCP SYN Scans
+#### All Scripts on Live Hosts
 ```bash
 nmap -sS -sC -sV -Pn -n -p- -vvv --open --min-hostgroup 256 --min-rate 1000 --max-rtt-timeout 300ms --max-retries 2 --script targets-xml --script -args newtargets,iX=nmap/livehosts-fulltcp.xml -oA nmap/livehosts-allports-scripts
+```
+#### All ports, all hosts
+```bash
+nmap -sS -sC -sV -Pn -n -p- -vvv --open --min-hostgroup 256 --min-rate 1000 --max-rtt-timeout 300ms --max-retries 2 -iL scope.txt -oA nmap/fullscope-SYN
+```
+### UDP Scans
+#### Top 100 UDP
+```bash
+nmap -sUV -vv -F -oA nmap/top-100-UDP -iL scope.txt
 ```
 ### How to actually run scripts you dingus
 Adding `+<script-title>` will force the script to run whether it's specific conditions are met or not.

