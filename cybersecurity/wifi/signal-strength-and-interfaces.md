@@ -1,7 +1,7 @@
 # WiFi Interfaces
 Wireless interfaces are the medium through with devices transmit and receive data from and on a wireless network. There are wifi interfaces which are capable of handling the 2.4GHz frequency or the 5GHz frequency or both ("dualband").
 ## Signal Strength 
-Wifi signal strength is measured in decibel-milliwatts (dBm) which is used to express the power ratio in decibels to milliwatt. The relationship b/w dBm and milliwatts is defined by the following formula:
+[Wifi](../../networking/wifi/802.11.md) signal strength is measured in decibel-milliwatts (dBm) which is used to express the power ratio in decibels to milliwatt. The relationship b/w dBm and milliwatts is defined by the following formula:
 ```
 dBm = 10 * log10(Power in mW)
 OR
@@ -98,10 +98,130 @@ wlan0     IEEE 802.11  ESSID:off/any
           Power Management:off
 ```
 Sometimes the above changes may not work. This can be due to a few reasons. First, it may be that the chip's manufacturer did not equip the device with the necessary heat sync to handle increased power output. Second, the [kernel](../../computers/concepts/kernel.md) itself may be patched *to prevent modification*. And lastly, the chip itself might not support increased power.
+## Driver Capabilities
+In wifi pen-testing, our ability to pen-test depends on the capability of the interface we're using to test with. To check for our current interface's capabilities, we can use the `iw list` linux command:
+```bash
+trshpuppy@htb[/htb]# iw list
 
+Wiphy phy5
+	wiphy index: 5
+	max # scan SSIDs: 4
+	max scan IEs length: 2186 bytes
+	max # sched scan SSIDs: 0
+	max # match sets: 0
+	max # scan plans: 1
+	max scan plan interval: -1
+	max scan plan iterations: 0
+	Retry short limit: 7
+	Retry long limit: 4
+	Coverage class: 0 (up to 0m)
+	Device supports RSN-IBSS.
+	Device supports AP-side u-APSD.
+	Device supports T-DLS.
+	Supported Ciphers:
+			* WEP40 (00-0f-ac:1)
+			* WEP104 (00-0f-ac:5)
+			<SNIP>
+			* GMAC-256 (00-0f-ac:12)
+	Available Antennas: TX 0 RX 0
+	Supported interface modes:
+			 * IBSS
+			 * managed
+			 * AP
+			 * AP/VLAN
+			 * monitor
+			 * mesh point
+			 * P2P-client
+			 * P2P-GO
+			 * P2P-device
+	Band 1:
+		<SNIP>
+		Frequencies:
+				* 2412 MHz [1] (20.0 dBm)
+				* 2417 MHz [2] (20.0 dBm)
+				<SNIP>
+				* 2472 MHz [13] (disabled)
+				* 2484 MHz [14] (disabled)
+	Band 2:
+		<SNIP>
+		Frequencies:
+				* 5180 MHz [36] (20.0 dBm)
+				<SNIP>
+				* 5260 MHz [52] (20.0 dBm) (radar detection)
+				<SNIP>
+				* 5700 MHz [140] (20.0 dBm) (radar detection)
+				<SNIP>
+				* 5825 MHz [165] (20.0 dBm)
+				* 5845 MHz [169] (disabled)
+	<SNIP>
+		Device supports TX status socket option.
+		Device supports HT-IBSS.
+		Device supports SAE with AUTHENTICATE command
+		Device supports low priority scan.
+	<SNIP>
+```
+From the output above, we can see that our testing interface supports the following:
+1. Almost all regular ciphers
+2. Both 2.4 and 5GHz bands
+3. Mesh networks and IBSS
+4. P2P peering
+5. SAE ([WPA3 authentication](../../networking/wifi/authentication.md))
+## Changing Channel & Frequency
+### Changing the Channel
+To see all of the channels available to our wireless interface, we can use the `iwlist` command:
+```bash
+trshpuppy@htb[/htb]# iwlist wlan0 channel
+
+wlan0     32 channels in total; available frequencies :
+          Channel 01 : 2.412 GHz
+          Channel 02 : 2.417 GHz
+          Channel 03 : 2.422 GHz
+          Channel 04 : 2.427 GHz
+          <SNIP>
+          Channel 140 : 5.7 GHz
+          Channel 149 : 5.745 GHz
+          Channel 153 : 5.765 GHz
+```
+Before changing the channel or frequency, we should *make sure the interface is not in use and can safely be configured* (by bringing it down before modifying it):
+```bash
+# sudo ifconfig wlan0 down
+```
+Once its down, we can use `iwconfig` with the `channel` option to change the channel. Let's change it to  64, then bring it back up:
+```bash
+trshpuppy@htb[/htb]# sudo iwconfig wlan0 channel 64
+trshpuppy@htb[/htb]# sudo ifconfig wlan0 up
+trshpuppy@htb[/htb]# iwlist wlan0 channel
+
+wlan0     32 channels in total; available frequencies :
+          Channel 01 : 2.412 GHz
+          Channel 02 : 2.417 GHz
+          Channel 03 : 2.422 GHz
+          Channel 04 : 2.427 GHz
+          <SNIP>
+          Channel 140 : 5.7 GHz
+          Channel 149 : 5.745 GHz
+          Channel 153 : 5.765 GHz
+          Current Frequency:5.32 GHz (Channel 64)
+```
+At the bottom of the output we can see that our new channel (64) operates in the 5.32GHz frequency.
+### Changing Frequency
+We can also just *change the freq directly* by using `iwlist` with the `frequency` option. Again, the interface should be *brought down/disabled first*:
+```bash
+trshpuppy@htb[/htb]# sudo ifconfig wlan0 down
+trshpuppy@htb[/htb]# sudo iwconfig wlan0 freq "5.52G"
+trshpuppy@htb[/htb]# sudo ifconfig wlan0 up
+```
+If we check the channel after doing this, we can see that it has automatically switched to channel 104:
+```bash
+trshpuppy@htb[/htb]# iwlist wlan0 frequency | grep Current
+
+          Current Frequency:5.52 GHz (Channel 104)
+```
 
 
 
 
 > [!Resources]
 > - [CLRN: dBm and Wifi](https://www.clrn.org/what-is-a-good-dbm-for-wifi/)
+> - [HTB Academy: Wifi Pentesting Basics](https://academy.hackthebox.com/module/222/section/2401)
+
