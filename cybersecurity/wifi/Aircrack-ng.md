@@ -98,7 +98,35 @@ phy0    wlan0mon        rt2800usb       Ralink Technology, Corp. RT2870/RT3070
                 (mac80211 station mode vif enabled on [phy0]wlan0)
                 (mac80211 monitor mode vif disabled for [phy0]wlan0)
 ```
+## Airodump-ng
+The Airodump tool is used for capturing 802.11 frames, specifically WEP IVs (Initialization Vectors) and WPA/WPA2 handshakes. `airodump-ng` generates multiple files containing info on all of the identified access points. To use airodump, the interface should be *in monitor mode*.
+### Fields
+The output from an `airodump-ng` command will include:
 
+| **Field** | **Description**                                                                          |
+| --------- | ---------------------------------------------------------------------------------------- |
+| `BSSID`   | Shows the MAC address of the access points                                               |
+| `PWR`     | Shows the "power" of the network. The higher the number, the better the signal strength. |
+| `Beacons` | Shows the number of announcement packets sent by the network.                            |
+| `#Data`   | Shows the number of captured data packets.                                               |
+| `#/s`     | Shows the number of data packets captured in the past ten seconds.                       |
+| `CH`      | Shows the "Channel" the network runs on.                                                 |
+| `MB`      | Shows the maximum speed supported by the network.                                        |
+| `ENC`     | Shows the encryption method used by the network.                                         |
+| `CIPHER`  | Shows the cipher used by the network.                                                    |
+| `AUTH`    | Shows the authentication used by the network.                                            |
+| `ESSID`   | Shows the name of the network.                                                           |
+| `STATION` | Shows the MAC address of the client connected to the network.                            |
+| `RATE`    | Shows the data transfer rate between the client and the access point.                    |
+| `LOST`    | Shows the number of data packets lost.                                                   |
+| `Packets` | Shows the number of data packets sent by the client.                                     |
+| `Notes`   | Shows additional information about the client, such as captured EAPOL or PMKID.          |
+| `PROBES`  | Shows the list of networks the client is probing for.                                    |
+### Get an Inventory
+Gets a list of all active SSIDs the card can see (in monitor mode). Should run this about 5 minutes to get a good idea of all of the APs active on the network. The output will also tells you what authentication type each SSID is using.
+```bash
+airodump-ng wlan0 --band abg -w <client>_<location>_SSIDinventory
+```
 
 
 > [!References]
