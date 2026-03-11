@@ -1,5 +1,5 @@
 # PMKID Attacks
-`PMKID` attacks exploit a vulnerability in the [WPA2](../../networking/wifi/WPA-WPA2.md) authentication process, specifically in the RSN (Robuset Security Network) handshake. During the RSN handshake, a [PMKID](../../networking/wifi/WPA-WPA2.md#PMKID) is generated using the `PSK`. Once the `PMKID` is created, its included in the *first frame of the handshake*.
+`PMKID` attacks exploit a vulnerability in the [WPA2](../../networking/wifi/WPA-WPA2.md) authentication process, specifically in the RSN (Robust Security Network) handshake. During the RSN handshake, a [PMKID](../../networking/wifi/WPA-WPA2.md#PMKID) is generated using the `PSK`. Once the `PMKID` is created, its included in the *first frame of the handshake*.
 
 An attacker who captures the frame containing the `PMKID` can perform offline brute force attacks to derive the PSK.
 ## PMKID Generation

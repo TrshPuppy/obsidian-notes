@@ -27,7 +27,6 @@ Retrieve your new IP address from the DHCP server:
 ```bash
 dhclient wlan2 -v
 ```
-
 To get a WPA handshake from a specific target:
 ```bash
 besside-ng -W -c 6 -b <MAC> wlan0mon

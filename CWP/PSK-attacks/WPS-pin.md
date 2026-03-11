@@ -34,6 +34,18 @@ sudo reaver -i wlan0mon -b <BSSID> -vv
 ```
 The output should look something like this if it works:
 ![](../CWP-pics/WPS-pin-1.png)
+#### 4. Connect to the network
+Create the following conf file for `wpa_supplicant`:
+```bash
+network={
+  ssid="wifi-event"
+  psk=@M<PASSWORD>!@
+}
+```
+Then connect by running:
+```bash
+sudo wpa_supplicant -c wpa.conf -i wlan2
+```
 
 > [!Resources]
 > - [GitHub - kimocoder/bully: Bully WPS Attack Tool · GitHub](https://github.com/kimocoder/bully)
