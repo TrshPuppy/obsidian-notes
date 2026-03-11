@@ -101,6 +101,9 @@ phy0    wlan0mon        rt2800usb       Ralink Technology, Corp. RT2870/RT3070
 
 
 
-> [!References]
+> [!Resources]
 > - [Aircrack-ng](https://github.com/aircrack-ng/aircrack-ng)
 > - [HTB Academy](https://academy.hackthebox.com/module/222/section/2922)
+
+> [!Related]
+> - [My notes from CWP](../../CWP/offensive-wifi-recon/packet-capture.md)
