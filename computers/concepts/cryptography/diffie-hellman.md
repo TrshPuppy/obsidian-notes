@@ -1,3 +1,7 @@
+---
+aliases:
+  - Diffie-Hellman
+---
 
 # Diffie-Hellman Key Exchange
 Diffie-Hellman key exchange is *one of the first asymmetric/public-key protocols*.
