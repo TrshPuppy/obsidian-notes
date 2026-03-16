@@ -1,3 +1,7 @@
+---
+aliases:
+  - SAE
+---
 # WPA3
 WPA3 is the most up to date standard for [WiFi](802.11.md) networks and was created as a more secure alternative to [WPA2](WPA-WPA2.md). According to Wikipedia:
 > The new standard uses an equivalent 192-bit cryptographic strength in WPA3-Enterprise mode ([AES-256](https://en.wikipedia.org/wiki/AES-256 "AES-256") in [GCM mode](https://en.wikipedia.org/wiki/Galois/Counter_Mode "Galois/Counter Mode") with [SHA-384](https://en.wikipedia.org/wiki/SHA-384 "SHA-384") as [HMAC](https://en.wikipedia.org/wiki/HMAC "HMAC")), and still mandates the use of [CCMP-128](https://en.wikipedia.org/wiki/CCMP_\(cryptography\) "CCMP (cryptography)") ([AES-128](https://en.wikipedia.org/wiki/AES-128 "AES-128") in [CCM mode](https://en.wikipedia.org/wiki/CCM_mode "CCM mode")) as the minimum encryption algorithm in WPA3-Personal mode. [TKIP](https://en.wikipedia.org/wiki/Temporal_Key_Integrity_Protocol "Temporal Key Integrity Protocol") is not allowed in WPA3.
