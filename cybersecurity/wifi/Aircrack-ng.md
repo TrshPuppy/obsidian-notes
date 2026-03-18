@@ -129,6 +129,9 @@ airodump-ng wlan0 --band abg -w <client>_<location>_SSIDinventory
 ```
 
 
-> [!References]
+> [!Resources]
 > - [Aircrack-ng](https://github.com/aircrack-ng/aircrack-ng)
 > - [HTB Academy](https://academy.hackthebox.com/module/222/section/2922)
+
+> [!Related]
+> - [My notes from CWP](../../CWP/offensive-wifi-recon/packet-capture.md)
