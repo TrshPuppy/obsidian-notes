@@ -46,6 +46,6 @@ The output should look something like this if it worked:
 > Then you need to export it to 22000 like we did above:
 > `hcxpcapngtool aux.pcpa -o hash.22000`
 
-> [!Resources]
+ [!Resources]
 > - [Wifi Challenge Academy](https://academy.wifichallenge.com/courses/take/certified-wifichallenge-professional-cwp/texts/57442980-introduction)
 > - My [own notes](https://github.com/trshpuppy/obsidian-notes) linked throughout the text.
