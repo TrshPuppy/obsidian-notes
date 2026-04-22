@@ -1,7 +1,7 @@
 # MGT Network Recon
 
 ## User Enumeration
-Because MGT/Enterprise networks use usernames and passwords for clients to login, they are vulnerable to username enumeration. When a client logs in, their identity is sent *before a proper [TLS](../../networking/protocols/TLS.md) tunnel is established*, meaning the identity travels in cleartext over the network.
+Because [MGT](../../networking/wifi/802.1X.md)/Enterprise networks use usernames and passwords for clients to login, they are vulnerable to username enumeration. When a client logs in, their identity is sent *before a proper [TLS](../../networking/protocols/TLS.md) tunnel is established*, meaning the identity travels in cleartext over the network.
 
 An attacker can passively listen to network traffic and capture the unencrypted packets containing the username. The only protection against this is if the *client* is configured to use an anonymous identity.
 
@@ -18,7 +18,7 @@ airodump-ng wlan0mon -w ./captures/mgt -c 44 --wps
 Then, use [wireshark](../../cybersecurity/TTPs/recon/tools/scanning/wireshark.md) to analyze the traffic and find transmitted usernames:
 ![](../CWP-pics/user-enumeration-1.png)
 ### Using `wifi_db`
-You can also use [wifi_db](../offensive-wifi-recon/wifi_db.md) to extract usernames *automagically* (point it at the directory where you your capture file is saved, in this case `./captures`)
+You can also use [wifi_db](../offensive-wifi-recon/wifi_db.md) to extract usernames *automagically* (point it at the directory where your capture file is saved, in this case `./captures`)
 ```bash
 python3 wifi_db.py -d wifidata.SQLITE ./captures
 ```
